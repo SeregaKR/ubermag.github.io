@@ -1,0 +1,6 @@
+micromagnetictests.calculatortests.test\_outputstep
+===================================================
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autofunction:: test_outputstep

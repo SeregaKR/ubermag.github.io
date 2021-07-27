@@ -1,0 +1,19 @@
+﻿micromagneticmodel.consts
+=========================
+
+.. automodule:: micromagneticmodel.consts
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

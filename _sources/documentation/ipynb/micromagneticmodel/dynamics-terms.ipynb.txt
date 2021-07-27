@@ -1,0 +1,646 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Dynamics terms and dynamics equation\n",
+    "\n",
+    "There are several different dynamics terms that are implemented in `micromagneticmodel`. Here, we will provide a short list of them, together with some basic properties.\n",
+    "\n",
+    "## Dynamics terms\n",
+    "\n",
+    "### 1. Precession\n",
+    "\n",
+    "The main parameter required for the precession term is the gyrotropic ratio `gamma`. Optionally, `name` can be given to the dynamics term."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import micromagneticmodel as mm\n",
+    "\n",
+    "precession = mm.Precession(gamma0=2.211e5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The values of its arguments are"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "221100.0"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "precession.gamma0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'precession'"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "precession.name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "String and LaTeX representations are"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Precession(gamma0=221100.0)'"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "repr(precession)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0}}{1 + \\alpha^{2}} \\mathbf{m} \\times \\mathbf{H}_\\text{eff}$"
+      ],
+      "text/plain": [
+       "Precession(gamma0=221100.0)"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "precession"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Damping\n",
+    "\n",
+    "Damping dynamics term requires Gilbert damping $\\alpha$ to be provided. Optionally, `name` can be given as well."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "damping = mm.Damping(alpha=0.1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The values of attributes are"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.1"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "damping.alpha"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'damping'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "damping.name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "String and LaTeX representations are"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Damping(alpha=0.1)'"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "repr(damping)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0} \\alpha}{1 + \\alpha^{2}} \\mathbf{m} \\times (\\mathbf{m} \\times \\mathbf{H}_\\text{eff})$"
+      ],
+      "text/plain": [
+       "Damping(alpha=0.1)"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "damping"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 3. Zhang-Li term\n",
+    "\n",
+    "This dynamics term requires the non-adiabatic factor $\\beta$ and velocity vector $\\mathbf{u}$ to be passed. As before, `name` is optional as well."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "zhangli = mm.ZhangLi(u=1e6, beta=0.5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The attributes are:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1000000.0"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "zhangli.u"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "zhangli.beta"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "String and LaTeX representations are"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'ZhangLi(u=1000000.0, beta=0.5)'"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "repr(zhangli)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-(\\mathbf{u} \\cdot \\boldsymbol\\nabla)\\mathbf{m} + \\beta\\mathbf{m} \\times \\big[(\\mathbf{u} \\cdot \\boldsymbol\\nabla)\\mathbf{m}\\big]$"
+      ],
+      "text/plain": [
+       "ZhangLi(u=1000000.0, beta=0.5)"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "zhangli"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Dynamics equation\n",
+    "\n",
+    "Dynamics equation of the micromagnetic system is the sum of dynamics terms. For instance, if we sum two dynamics terms, we get:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "micromagneticmodel.dynamics.dynamics.Dynamics"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(precession + damping)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If we assign this value to a separate variable, we can explore some of its properties."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dynamics = precession + damping"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The string representation is:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Precession(gamma0=221100.0) + Damping(alpha=0.1)'"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "repr(dynamics)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Similarly, the LaTeX representation is"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0}}{1 + \\alpha^{2}} \\mathbf{m} \\times \\mathbf{H}_\\text{eff}-\\frac{\\gamma_{0} \\alpha}{1 + \\alpha^{2}} \\mathbf{m} \\times (\\mathbf{m} \\times \\mathbf{H}_\\text{eff})$"
+      ],
+      "text/plain": [
+       "Precession(gamma0=221100.0) + Damping(alpha=0.1)"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This dynamics equation consists of two dynamics term. To add another term to it `+=` operator can be used."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dynamics += zhangli"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Dynamics equation is now"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0}}{1 + \\alpha^{2}} \\mathbf{m} \\times \\mathbf{H}_\\text{eff}-\\frac{\\gamma_{0} \\alpha}{1 + \\alpha^{2}} \\mathbf{m} \\times (\\mathbf{m} \\times \\mathbf{H}_\\text{eff})-(\\mathbf{u} \\cdot \\boldsymbol\\nabla)\\mathbf{m} + \\beta\\mathbf{m} \\times \\big[(\\mathbf{u} \\cdot \\boldsymbol\\nabla)\\mathbf{m}\\big]$"
+      ],
+      "text/plain": [
+       "Precession(gamma0=221100.0) + Damping(alpha=0.1) + ZhangLi(u=1000000.0, beta=0.5)"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Accesing individual dynamics terms from the dynamics equation\n",
+    "\n",
+    "There are two ways of retrieving an individual dynamics term from the dynamics equation. Let us say we want to change the value of the Gilbert damping constant $\\alpha$.\n",
+    "\n",
+    "If a dynamics term with name `mydynamicsterm` was added to the Hamiltonian, that term can be accessed by typing `hamiltonian.nydynamicsterm`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0} \\alpha}{1 + \\alpha^{2}} \\mathbf{m} \\times (\\mathbf{m} \\times \\mathbf{H}_\\text{eff})$"
+      ],
+      "text/plain": [
+       "Damping(alpha=0.1)"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics.damping"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.1"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics.damping.alpha"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dynamics.damping.alpha = 5e-3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.005"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics.damping.alpha"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Similarly, the precession term is"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/latex": [
+       "$-\\frac{\\gamma_{0}}{1 + \\alpha^{2}} \\mathbf{m} \\times \\mathbf{H}_\\text{eff}$"
+      ],
+      "text/plain": [
+       "Precession(gamma0=221100.0)"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dynamics.precession"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {},
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

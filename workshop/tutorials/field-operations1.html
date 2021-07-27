@@ -1,0 +1,1972 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Field operations 1 &#8212; ubermag  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="8. Field operations 2" href="field-operations2.html" />
+    <link rel="prev" title="6. Energy term computations" href="energy-term-computations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption" role="heading">
+ <span class="caption-text">
+  Session 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first-ubermag-simulation.html">
+   1. Our first ubermag simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-basics.html">
+   2. Python basics
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetisation-field.html">
+   1. Magnetisation field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-equation.html">
+   2. Energy equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamics-equation.html">
+   3. Dynamics equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vortex-dynamics.html">
+   4. Vortex dynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spatially-varying-parameters1.html">
+   5. Spatially varying parameters 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spatially-varying-parameters2.html">
+   6. Spatially varying parameters 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="periodic-boundary-conditions.html">
+   7. Periodic boundary conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="driving-dw.html">
+   8. Current induced domain wall motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dw-pair-conversion.html">
+   9. Exercise: Domain wall pair conversion
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 3
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="choosing-runner.html">
+   1. Choosing runner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multiple-terms.html">
+   2. Multiple energy terms of the same class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rkky.html">
+   3. RKKY energy term
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-dependent-field.html">
+   4. Time-varying field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="negative-A.html">
+   5. Negative exchange energy constant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-term-computations.html">
+   6. Energy term computations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Field operations 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-operations2.html">
+   8. Field operations 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file-formats.html">
+   9. Saving and reading fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="line.html">
+   10. Line object
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-basics.html">
+   11. Table basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-visualisation.html">
+   12. Table visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-interactive-plot.html">
+   13. Table interactive plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="region-visualisation.html">
+   14. Region visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mesh-visualisation.html">
+   15. Mesh visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mpl-visualisation.html">
+   16.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+   visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="k3d-visualisation.html">
+   17. Visualising fields using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     k3d
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interactive-plotting.html">
+   18. Interactive plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="various-topics.html">
+   19. Various topics
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="angle-hls-plot.html">
+   1. Angle and HLS plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hysteresis.html">
+   2. Hysteresis simulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dirname.html">
+   3. Custom directory name
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed-subregions.html">
+   4. Fixed subregions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="parallel.html">
+   5. Running simulations in parallel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mindriver-steps.html">
+   6.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     MinDriver
+    </span>
+   </code>
+   steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subfields.html">
+   7. Subfields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="space-time-field.html">
+   8. Both spatially and time varying field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sine-hysteresis.html">
+   9. Sine-hysteresis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integrals.html">
+   10. Integrals
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Algebra-operations">
+   7.1. Algebra operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#+-operation">
+     7.1.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       +
+      </span>
+     </code>
+     operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#--operation">
+     7.1.2.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       -
+      </span>
+     </code>
+     operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#*-operation">
+     7.1.3.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       *
+      </span>
+     </code>
+     operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#/-operation">
+     7.1.4.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       /
+      </span>
+     </code>
+     operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#**-operator">
+     7.1.5.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       **
+      </span>
+     </code>
+     operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Compund-operations">
+     7.1.6. Compund operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Vector-products">
+   7.2. Vector products
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Dot-product">
+     7.2.1. Dot product
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Cross-product">
+     7.2.2. Cross product
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Vector-calculus">
+   7.3. Vector calculus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Gradient-(\nabla-f)">
+     7.3.1. Gradient
+     <span class="math notranslate nohighlight">
+      \((\nabla f)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Divergence-(\nabla-\cdot-f)">
+     7.3.2. Divergence
+     <span class="math notranslate nohighlight">
+      \((\nabla \cdot f)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Curl-(\nabla-\times-f)">
+     7.3.3. Curl
+     <span class="math notranslate nohighlight">
+      \((\nabla \times f)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Laplace-operator-(\nabla^{2}-f)">
+     7.3.4. Laplace operator
+     <span class="math notranslate nohighlight">
+      \((\nabla^{2} f)\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Integrals">
+   7.4. Integrals
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Volume-integral-\left(\int_{V}fdV\right)">
+     7.4.1. Volume integral
+     <span class="math notranslate nohighlight">
+      \(\left(\int_{V}fdV\right)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Surface-integral">
+     7.4.2. Surface integral
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Operation-pipelines">
+   7.5. Operation pipelines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Example">
+   7.6. Example
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Field-operations-1">
+<h1><span class="section-number">7. </span>Field operations 1<a class="headerlink" href="#Field-operations-1" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we show some mathematical operations that can be performed on field objects in Ubermag. Fot that, we are going to use a skyrmion example.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">mc</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">),</span> <span class="n">bc</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;skyrmion&#39;</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span>
+               <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">4e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv&#39;</span><span class="p">)</span>
+               <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">0.2e6</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+               <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">m_init</span><span class="p">(</span><span class="n">point</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">point</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">&lt;</span> <span class="mf">10e-9</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_init</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1.1e6</span><span class="p">)</span>
+
+<span class="c1"># minimize the energy</span>
+<span class="n">md</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="c1"># Plot relaxed configuration: vectors in z-plane</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:20]... (0.9 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/workshop_tutorials_field-operations1_1_1.png" src="../../_images/workshop_tutorials_field-operations1_1_1.png" />
+</div>
+</div>
+<p>The magnetisation field is in <code class="docutils literal notranslate"><span class="pre">system.m</span></code>. To access a numpy array of a magnetisation field:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">array</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([[[[   1577.02187148,    1577.02187148, 1099997.73909042],
+         [   1577.02187148,    1577.02187148, 1099997.73909042]],
+
+        [[   2131.76340308,    4844.39135015, 1099987.26695232],
+         [   2131.76340308,    4844.39135015, 1099987.26695232]],
+
+        [[   3355.14454314,    8389.23388145, 1099962.89199226],
+         [   3355.14454314,    8389.23388145, 1099962.89199226]],
+
+        ...,
+
+        [[   3355.14454314,   -8389.23388145, 1099962.89199226],
+         [   3355.14454314,   -8389.23388145, 1099962.89199226]],
+
+        [[   2131.76340308,   -4844.39135015, 1099987.26695232],
+         [   2131.76340308,   -4844.39135015, 1099987.26695232]],
+
+        [[   1577.02187148,   -1577.02187148, 1099997.73909042],
+         [   1577.02187148,   -1577.02187148, 1099997.73909042]]],
+
+
+       [[[   4844.39135015,    2131.76340308, 1099987.26695232],
+         [   4844.39135015,    2131.76340308, 1099987.26695232]],
+
+        [[   6624.80399474,    6624.80399474, 1099960.10106915],
+         [   6624.80399474,    6624.80399474, 1099960.10106915]],
+
+        [[  10591.69444994,   11725.78946667, 1099886.50408579],
+         [  10591.69444994,   11725.78946667, 1099886.50408579]],
+
+        ...,
+
+        [[  10591.69444994,  -11725.78946667, 1099886.50408579],
+         [  10591.69444994,  -11725.78946667, 1099886.50408579]],
+
+        [[   6624.80399474,   -6624.80399474, 1099960.10106915],
+         [   6624.80399474,   -6624.80399474, 1099960.10106915]],
+
+        [[   4844.39135015,   -2131.76340308, 1099987.26695232],
+         [   4844.39135015,   -2131.76340308, 1099987.26695232]]],
+
+
+       [[[   8389.23388145,    3355.14454314, 1099962.89199226],
+         [   8389.23388145,    3355.14454314, 1099962.89199226]],
+
+        [[  11725.78946667,   10591.69444994, 1099886.50408579],
+         [  11725.78946667,   10591.69444994, 1099886.50408579]],
+
+        [[  19301.89901006,   19301.89901006, 1099661.25392741],
+         [  19301.89901006,   19301.89901006, 1099661.25392741]],
+
+        ...,
+
+        [[  19301.89901006,  -19301.89901006, 1099661.25392741],
+         [  19301.89901006,  -19301.89901006, 1099661.25392741]],
+
+        [[  11725.78946667,  -10591.69444994, 1099886.50408579],
+         [  11725.78946667,  -10591.69444994, 1099886.50408579]],
+
+        [[   8389.23388145,   -3355.14454314, 1099962.89199226],
+         [   8389.23388145,   -3355.14454314, 1099962.89199226]]],
+
+
+       ...,
+
+
+       [[[  -8389.23388145,    3355.14454314, 1099962.89199226],
+         [  -8389.23388145,    3355.14454314, 1099962.89199226]],
+
+        [[ -11725.78946667,   10591.69444994, 1099886.50408579],
+         [ -11725.78946667,   10591.69444994, 1099886.50408579]],
+
+        [[ -19301.89901006,   19301.89901006, 1099661.25392741],
+         [ -19301.89901006,   19301.89901006, 1099661.25392741]],
+
+        ...,
+
+        [[ -19301.89901006,  -19301.89901006, 1099661.25392741],
+         [ -19301.89901006,  -19301.89901006, 1099661.25392741]],
+
+        [[ -11725.78946667,  -10591.69444994, 1099886.50408579],
+         [ -11725.78946667,  -10591.69444994, 1099886.50408579]],
+
+        [[  -8389.23388145,   -3355.14454314, 1099962.89199226],
+         [  -8389.23388145,   -3355.14454314, 1099962.89199226]]],
+
+
+       [[[  -4844.39135015,    2131.76340308, 1099987.26695232],
+         [  -4844.39135015,    2131.76340308, 1099987.26695232]],
+
+        [[  -6624.80399474,    6624.80399474, 1099960.10106915],
+         [  -6624.80399474,    6624.80399474, 1099960.10106915]],
+
+        [[ -10591.69444994,   11725.78946667, 1099886.50408579],
+         [ -10591.69444994,   11725.78946667, 1099886.50408579]],
+
+        ...,
+
+        [[ -10591.69444994,  -11725.78946667, 1099886.50408579],
+         [ -10591.69444994,  -11725.78946667, 1099886.50408579]],
+
+        [[  -6624.80399474,   -6624.80399474, 1099960.10106915],
+         [  -6624.80399474,   -6624.80399474, 1099960.10106915]],
+
+        [[  -4844.39135015,   -2131.76340308, 1099987.26695232],
+         [  -4844.39135015,   -2131.76340308, 1099987.26695232]]],
+
+
+       [[[  -1577.02187148,    1577.02187148, 1099997.73909042],
+         [  -1577.02187148,    1577.02187148, 1099997.73909042]],
+
+        [[  -2131.76340308,    4844.39135015, 1099987.26695232],
+         [  -2131.76340308,    4844.39135015, 1099987.26695232]],
+
+        [[  -3355.14454314,    8389.23388145, 1099962.89199226],
+         [  -3355.14454314,    8389.23388145, 1099962.89199226]],
+
+        ...,
+
+        [[  -3355.14454314,   -8389.23388145, 1099962.89199226],
+         [  -3355.14454314,   -8389.23388145, 1099962.89199226]],
+
+        [[  -2131.76340308,   -4844.39135015, 1099987.26695232],
+         [  -2131.76340308,   -4844.39135015, 1099987.26695232]],
+
+        [[  -1577.02187148,   -1577.02187148, 1099997.73909042],
+         [  -1577.02187148,   -1577.02187148, 1099997.73909042]]]])
+</pre></div></div>
+</div>
+<p>This exposes the field to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and all operations present in numpy can be used. However, there are a lot of convenience functions, which are part of the <code class="docutils literal notranslate"><span class="pre">Field</span></code> object.</p>
+<p>To get an individual component:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(-5e-08, -5e-08, 0.0), p2=(5e-08, 5e-08, 1e-08)), n=(20, 20, 2), bc=&#39;xy&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/workshop_tutorials_field-operations1_6_0.png" src="../../_images/workshop_tutorials_field-operations1_6_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(-5e-08, -5e-08, 0.0), p2=(5e-08, 5e-08, 1e-08)), n=(20, 20, 2), bc=&#39;xy&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/workshop_tutorials_field-operations1_8_0.png" src="../../_images/workshop_tutorials_field-operations1_8_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(-5e-08, -5e-08, 0.0), p2=(5e-08, 5e-08, 1e-08)), n=(20, 20, 2), bc=&#39;xy&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/workshop_tutorials_field-operations1_10_0.png" src="../../_images/workshop_tutorials_field-operations1_10_0.png" />
+</div>
+</div>
+<p>The magnetisation is by default not normalised.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(-9.35290245251963e-11, 5.183551365917083e-12, 750239.400026488)
+</pre></div></div>
+</div>
+<p>To get normalised magnetisation:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{m} = \frac{\mathbf{M}}{M_\text{s}}\]</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">orientation</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(-5e-08, -5e-08, 0.0), p2=(5e-08, 5e-08, 1e-08)), n=(20, 20, 2), bc=&#39;xy&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(-5.702903427273753e-19, -1.5579985218616698e-18, 0.6820358182059002)
+</pre></div></div>
+</div>
+<p>Just like we can get the normalised magnetisation, we can get the norm itself.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">abs</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(-5e-08, -5e-08, 0.0), p2=(5e-08, 5e-08, 1e-08)), n=(20, 20, 2), bc=&#39;xy&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+<div class="section" id="Algebra-operations">
+<h2><span class="section-number">7.1. </span>Algebra operations<a class="headerlink" href="#Algebra-operations" title="Permalink to this headline">¶</a></h2>
+<p>Let us define two fields:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">f1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(1.0, 1.0, 0.0)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f2</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2.0, 1.0, 3.0)
+</pre></div></div>
+</div>
+<div class="section" id="+-operation">
+<h3><span class="section-number">7.1.1. </span><code class="docutils literal notranslate"><span class="pre">+</span></code> operation<a class="headerlink" href="#+-operation" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span><span class="p">)</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(3.0, 2.0, 3.0)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="--operation">
+<h3><span class="section-number">7.1.2. </span><code class="docutils literal notranslate"><span class="pre">-</span></code> operation<a class="headerlink" href="#--operation" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">-</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="p">(</span><span class="n">f1</span> <span class="o">-</span> <span class="n">f2</span><span class="p">)</span><span class="o">.</span><span class="n">average</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(-1.0, 0.0, -3.0)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="*-operation">
+<h3><span class="section-number">7.1.3. </span><code class="docutils literal notranslate"><span class="pre">*</span></code> operation<a class="headerlink" href="#*-operation" title="Permalink to this headline">¶</a></h3>
+<p>Basic multiplication is not defined between vector fields. In that case, we perform either dot or cross product, which we are going to discuss later.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_SKIP</span>
+<span class="n">f1</span> <span class="o">*</span> <span class="n">f2</span>  <span class="c1"># both are vector fields</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-20-9b9ff71a608e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># NBVAL_SKIP</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>f1 <span class="ansi-blue-fg">*</span> f2  <span class="ansi-red-fg"># both are vector fields</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__mul__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1199</span>                 msg = (f&#39;Cannot apply operator * on {self.dim=} &#39;
+<span class="ansi-green-intense-fg ansi-bold">   1200</span>                        f&#39;and {other.dim=} fields.&#39;)
+<span class="ansi-green-fg">-&gt; 1201</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1202</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>mesh <span class="ansi-blue-fg">!=</span> other<span class="ansi-blue-fg">.</span>mesh<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1203</span>                 msg = (&#39;Cannot apply operator * on fields &#39;
+
+<span class="ansi-red-fg">ValueError</span>: Cannot apply operator * on self.dim=3 and other.dim=3 fields.
+</pre></div></div>
+</div>
+<p>Scalar with vector field:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<p>Scalar with vector field:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">f2</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="/-operation">
+<h3><span class="section-number">7.1.4. </span><code class="docutils literal notranslate"><span class="pre">/</span></code> operation<a class="headerlink" href="#/-operation" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_SKIP</span>
+<span class="n">f1</span> <span class="o">/</span> <span class="n">f2</span>  <span class="c1"># both are vector fields</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-23-f0aba336fde7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># NBVAL_SKIP</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>f1 <span class="ansi-blue-fg">/</span> f2  <span class="ansi-red-fg"># both are vector fields</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__truediv__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1287</span>
+<span class="ansi-green-intense-fg ansi-bold">   1288</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">-&gt; 1289</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self <span class="ansi-blue-fg">*</span> other<span class="ansi-blue-fg">**</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1290</span>
+<span class="ansi-green-intense-fg ansi-bold">   1291</span>     <span class="ansi-green-fg">def</span> __rtruediv__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__pow__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    972</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>dim <span class="ansi-blue-fg">!=</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    973</span>             msg <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">f&#39;Cannot apply ** operator on {self.dim=} field.&#39;</span>
+<span class="ansi-green-fg">--&gt; 974</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    975</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> numbers<span class="ansi-blue-fg">.</span>Real<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    976</span>             msg = (f&#39;Unsupported operand type(s) for **: &#39;
+
+<span class="ansi-red-fg">ValueError</span>: Cannot apply ** operator on self.dim=3 field.
+</pre></div></div>
+</div>
+<p>Dividing vector field by a scalar field:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">/</span> <span class="n">f2</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<p>Scalar field divided by vector field is not allowed:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_SKIP</span>
+<span class="n">f2</span><span class="o">.</span><span class="n">x</span> <span class="o">/</span> <span class="n">f1</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-25-13b94bf3bf8f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># NBVAL_SKIP</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>f2<span class="ansi-blue-fg">.</span>x <span class="ansi-blue-fg">/</span> f1
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__truediv__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1287</span>
+<span class="ansi-green-intense-fg ansi-bold">   1288</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">-&gt; 1289</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self <span class="ansi-blue-fg">*</span> other<span class="ansi-blue-fg">**</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1290</span>
+<span class="ansi-green-intense-fg ansi-bold">   1291</span>     <span class="ansi-green-fg">def</span> __rtruediv__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__pow__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    972</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>dim <span class="ansi-blue-fg">!=</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    973</span>             msg <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">f&#39;Cannot apply ** operator on {self.dim=} field.&#39;</span>
+<span class="ansi-green-fg">--&gt; 974</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    975</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> numbers<span class="ansi-blue-fg">.</span>Real<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    976</span>             msg = (f&#39;Unsupported operand type(s) for **: &#39;
+
+<span class="ansi-red-fg">ValueError</span>: Cannot apply ** operator on self.dim=3 field.
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="**-operator">
+<h3><span class="section-number">7.1.5. </span><code class="docutils literal notranslate"><span class="pre">**</span></code> operator<a class="headerlink" href="#**-operator" title="Permalink to this headline">¶</a></h3>
+<p>This operator is allowed only on scalar fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_SKIP</span>
+<span class="n">f1</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-26-174f25cfa6b7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># NBVAL_SKIP</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>f1 <span class="ansi-blue-fg">**</span> <span class="ansi-cyan-fg">2</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/ubermag/lib/python3.8/site-packages/discretisedfield/field.py</span> in <span class="ansi-cyan-fg">__pow__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    972</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>dim <span class="ansi-blue-fg">!=</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    973</span>             msg <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">f&#39;Cannot apply ** operator on {self.dim=} field.&#39;</span>
+<span class="ansi-green-fg">--&gt; 974</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span>msg<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    975</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> numbers<span class="ansi-blue-fg">.</span>Real<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    976</span>             msg = (f&#39;Unsupported operand type(s) for **: &#39;
+
+<span class="ansi-red-fg">ValueError</span>: Cannot apply ** operator on self.dim=3 field.
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Compund-operations">
+<h3><span class="section-number">7.1.6. </span>Compund operations<a class="headerlink" href="#Compund-operations" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">+=</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">-=</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">*=</span> <span class="n">f2</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f2</span> <span class="o">/=</span> <span class="n">f2</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="Vector-products">
+<h2><span class="section-number">7.2. </span>Vector products<a class="headerlink" href="#Vector-products" title="Permalink to this headline">¶</a></h2>
+<p>As the title says, these products are applied between vector fields only.</p>
+<div class="section" id="Dot-product">
+<h3><span class="section-number">7.2.1. </span>Dot product<a class="headerlink" href="#Dot-product" title="Permalink to this headline">¶</a></h3>
+<p>Dot product is implemented through <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">@</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Cross-product">
+<h3><span class="section-number">7.2.2. </span>Cross product<a class="headerlink" href="#Cross-product" title="Permalink to this headline">¶</a></h3>
+<p>Cross product between vector fields is performed using <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span> <span class="o">&amp;</span> <span class="n">f2</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Vector-calculus">
+<h2><span class="section-number">7.3. </span>Vector calculus<a class="headerlink" href="#Vector-calculus" title="Permalink to this headline">¶</a></h2>
+<p>### Directional derivative <span class="math notranslate nohighlight">\(\left(\frac{\partial}{\partial x_{i}}f\right)\)</span></p>
+<p>Defined on both scalar and vector fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<div class="section" id="Gradient-(\nabla-f)">
+<h3><span class="section-number">7.3.1. </span>Gradient <span class="math notranslate nohighlight">\((\nabla f)\)</span><a class="headerlink" href="#Gradient-(\nabla-f)" title="Permalink to this headline">¶</a></h3>
+<p>Defined on scalar fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">grad</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Divergence-(\nabla-\cdot-f)">
+<h3><span class="section-number">7.3.2. </span>Divergence <span class="math notranslate nohighlight">\((\nabla \cdot f)\)</span><a class="headerlink" href="#Divergence-(\nabla-\cdot-f)" title="Permalink to this headline">¶</a></h3>
+<p>Defined on vector fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">div</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Curl-(\nabla-\times-f)">
+<h3><span class="section-number">7.3.3. </span>Curl <span class="math notranslate nohighlight">\((\nabla \times f)\)</span><a class="headerlink" href="#Curl-(\nabla-\times-f)" title="Permalink to this headline">¶</a></h3>
+<p>Defined on vector fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">curl</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Laplace-operator-(\nabla^{2}-f)">
+<h3><span class="section-number">7.3.4. </span>Laplace operator <span class="math notranslate nohighlight">\((\nabla^{2} f)\)</span><a class="headerlink" href="#Laplace-operator-(\nabla^{2}-f)" title="Permalink to this headline">¶</a></h3>
+<p>Defined on both vector and scalar fields:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">laplace</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=3)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">f1</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">laplace</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-08, 1e-08, 1e-08)), n=(10, 10, 10), bc=&#39;&#39;, subregions={}), dim=1)
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Integrals">
+<h2><span class="section-number">7.4. </span>Integrals<a class="headerlink" href="#Integrals" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Volume-integral-\left(\int_{V}fdV\right)">
+<h3><span class="section-number">7.4.1. </span>Volume integral <span class="math notranslate nohighlight">\(\left(\int_{V}fdV\right)\)</span><a class="headerlink" href="#Volume-integral-\left(\int_{V}fdV\right)" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="n">f1</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">dV</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(1.999999999999995e-24, 1.999999999999995e-24, 0.0)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Surface-integral">
+<h3><span class="section-number">7.4.2. </span>Surface integral<a class="headerlink" href="#Surface-integral" title="Permalink to this headline">¶</a></h3>
+<p>In order to compute a surface integral, we have to define the surface (<code class="docutils literal notranslate"><span class="pre">plane</span></code>):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="n">f1</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dS</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2.0000000000000027e-16, 2.0000000000000027e-16, 0.0)
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Operation-pipelines">
+<h2><span class="section-number">7.5. </span>Operation pipelines<a class="headerlink" href="#Operation-pipelines" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">df</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="n">f1</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">grad</span><span class="o">.</span><span class="n">curl</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">grad</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">dV</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(0.0, 0.0, 0.0)
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Example">
+<h2><span class="section-number">7.6. </span>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h2>
+<p>Here we implement skyrmion number calculations using operations on fields:</p>
+<div class="math notranslate nohighlight">
+\[S = \frac{1}{4\pi} \int \mathbf{m} \cdot \left(\frac{\partial \mathbf{m}}{\partial x} \times \frac{\partial \mathbf{m}}{\partial y}\right) dxdy\]</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="n">m</span> <span class="o">@</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">m</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">))</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">dx</span><span class="o">*</span><span class="n">df</span><span class="o">.</span><span class="n">dy</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">S</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-0.9244762913641907
+</pre></div></div>
+</div>
+<p>Or using Ubermag function:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">discretisedfield.tools</span> <span class="k">as</span> <span class="nn">dft</span>
+<span class="n">dft</span><span class="o">.</span><span class="n">topological_charge</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-0.9244762913641908
+</pre></div></div>
+</div>
+<p>Using Berg-Luescher method</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">dft</span><span class="o">.</span><span class="n">topological_charge</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;berg-luescher&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-0.9997455664834572
+</pre></div></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"01f3cb3ff47d453989aefc17b43cf5b6": {"buffers": [{"data": "eNrbUOTDAAAEsgFv", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYDjhxIABsIkpODIwLHBAFWuwBwCEoAQV", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNpjYAADRjBgQAKMcIApAhdlZMQUxCLGyIgpiEWMcYAAse4j2r9YwwprmGIP+9H4GDTxAQDgCQJ5", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": []}, "compression_level": 0, "id": 140003097961936, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "0277fba6dbc7478baea72e2144a87c32": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "35653cb08d67444d978963e6587604e7": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_0277fba6dbc7478baea72e2144a87c32", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "e950460a4f264181bf2d9d0d221458c1", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "39970ce704f94f41ab57d0d030c959bc": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3f156ef6c8a5426d8cf6cecbd9e9cb62": {"buffers": [{"data": "eNrbUOTDENRylwEADvwDIg==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYDjhxIABsIkpODIwLHBAFWuwBwCEoAQV", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNpjZMQATIyjYBSMAjAAAOn5AyI=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140003133784336, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "6d94ac3c67344ae2922bcec71cba5896": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYDjhxIABsIkpODIwLHBAFWuwBwCEoAQV", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNptkD2Og0AMhUkkCqSU9BScgFvQpaNKT82V4AQUXICONl1ER0MDQWRgYP7jIburXa3dzOjp+dn+HOcowjhnxPlVC1faGK348q28mDJfpdjrI0nrkUJ83kNkGn77PAzzDqpmNksZLUjXVFXTEaGNgkxujCSPIo3jtHgQaQx3CNj2rriGvh9ei24HI4E0OTdpeHHdS5g2s4REaBVDFfvu6eT6cTUIaMY0rBebge2C7ozdhjLAWKFMcfaO81woXZ5/lE0qrZXcftSB2om2tKTDR7JjleBc2JcdIrWHrGPfj6s9g9osIMGnti7Lup04UILMTRsx3fMsSbL8PgmjN2tTa5vfoiCIbnm7KjACFjHWWeR7nh9l9SgADNWG92USeOezFyRlz42mmIb1YjOwXdCdsdtQBhgrlOk/9m/2cAYT", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140003058170384, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "87a90ba6f4d44a4cb772fad40ac2dc9e": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_ea7319d7c41e47eb89499565fc2deae5", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "8b80c53c7793471f9e8b8779dd858292", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "8b80c53c7793471f9e8b8779dd858292": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [118.14829249574892, -177.84743865980434, 16.589829186617465, -0.2499999664723873, -0.2499999664723873, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_a373ef35b68540948f69e1bb0a184607", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140003058170384], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "a373ef35b68540948f69e1bb0a184607": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a88ec0ce389a46eb91ed18c1c43ef705": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b8f58650387a4f7eaf95508897982416": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_39970ce704f94f41ab57d0d030c959bc", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f1899b8340144717b5610edb0ced820b", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "e950460a4f264181bf2d9d0d221458c1": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [118.14829249574892, -177.84743865980434, 16.589829186617465, -0.2499999664723873, -0.2499999664723873, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_a88ec0ce389a46eb91ed18c1c43ef705", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140003133784336], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "ea7319d7c41e47eb89499565fc2deae5": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f1899b8340144717b5610edb0ced820b": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [118.14829249574892, -177.84743865980434, 16.589829186617465, -0.2499999664723873, -0.2499999664723873, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_fe5d513ad1dc4c8ba393ecc325daf388", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140003097961936], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "fe5d513ad1dc4c8ba393ecc325daf388": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="energy-term-computations.html" title="previous page"><span class="section-number">6. </span>Energy term computations</a>
+    <a class='right-next' id="next-link" href="field-operations2.html" title="next page"><span class="section-number">8. </span>Field operations 2</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

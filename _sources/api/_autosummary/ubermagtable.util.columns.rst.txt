@@ -1,0 +1,6 @@
+ubermagtable.util.columns
+=========================
+
+.. currentmodule:: ubermagtable.util
+
+.. autofunction:: columns

@@ -1,0 +1,66 @@
+SpinXferEvolver
+===============
+
+.. currentmodule:: oommfc
+
+.. autoclass:: SpinXferEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~SpinXferEvolver.__dir__
+      
+      
+         ~SpinXferEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~SpinXferEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~SpinXferEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~SpinXferEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

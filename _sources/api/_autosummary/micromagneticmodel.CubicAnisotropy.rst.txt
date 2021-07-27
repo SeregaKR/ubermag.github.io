@@ -1,0 +1,81 @@
+CubicAnisotropy
+===============
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: CubicAnisotropy
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~CubicAnisotropy.__add__
+      
+      
+      
+         ~CubicAnisotropy.__dir__
+      
+      
+         ~CubicAnisotropy.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~CubicAnisotropy.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~CubicAnisotropy.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~CubicAnisotropy.density
+      
+      
+         ~CubicAnisotropy.effective_field
+      
+      
+         ~CubicAnisotropy.energy
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~CubicAnisotropy.K
+      ~CubicAnisotropy.name
+      ~CubicAnisotropy.u1
+      ~CubicAnisotropy.u2
+   
+   
+
+   .. raw:: html
+
+      <hr>

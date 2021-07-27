@@ -1,0 +1,6 @@
+ubermagtable.util.units
+=======================
+
+.. currentmodule:: ubermagtable.util
+
+.. autofunction:: units

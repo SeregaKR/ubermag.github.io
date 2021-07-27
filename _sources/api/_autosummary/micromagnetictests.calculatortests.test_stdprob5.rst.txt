@@ -1,0 +1,6 @@
+micromagnetictests.calculatortests.test\_stdprob5
+=================================================
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autofunction:: test_stdprob5

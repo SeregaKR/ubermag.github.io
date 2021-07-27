@@ -1,0 +1,71 @@
+ExeOOMMFRunner
+==============
+
+.. currentmodule:: oommfc.oommf
+
+.. autoclass:: ExeOOMMFRunner
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~ExeOOMMFRunner.__dir__
+      
+      
+         ~ExeOOMMFRunner.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExeOOMMFRunner.__repr__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExeOOMMFRunner.call
+      
+      
+         ~ExeOOMMFRunner.errors
+      
+      
+         ~ExeOOMMFRunner.platform
+      
+      
+         ~ExeOOMMFRunner.version
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

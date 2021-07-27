@@ -1,0 +1,27 @@
+﻿ubermag
+=======
+
+.. automodule:: ubermag
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test
+   
+   
+
+   
+   
+   

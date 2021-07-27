@@ -1,0 +1,29 @@
+﻿ubermagutil
+===========
+
+.. automodule:: ubermagutil
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      hysteresis_values
+      inherit_docs
+      test
+   
+   
+
+   
+   
+   

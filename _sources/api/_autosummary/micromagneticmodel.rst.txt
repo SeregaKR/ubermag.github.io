@@ -1,0 +1,54 @@
+﻿micromagneticmodel
+==================
+
+.. automodule:: micromagneticmodel
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      CubicAnisotropy
+      DMI
+      Damping
+      Demag
+      Driver
+      Dynamics
+      DynamicsTerm
+      Energy
+      EnergyTerm
+      Evolver
+      Exchange
+      MagnetoElastic
+      Precession
+      RKKY
+      Slonczewski
+      System
+      UniaxialAnisotropy
+      Zeeman
+      ZhangLi
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test
+   
+   
+
+   
+   
+   

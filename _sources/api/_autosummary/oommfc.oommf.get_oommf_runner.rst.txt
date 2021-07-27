@@ -1,0 +1,6 @@
+oommfc.oommf.get\_oommf\_runner
+===============================
+
+.. currentmodule:: oommfc.oommf
+
+.. autofunction:: get_oommf_runner

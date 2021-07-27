@@ -1,0 +1,6 @@
+micromagneticmodel.examples.macrospin
+=====================================
+
+.. currentmodule:: micromagneticmodel.examples
+
+.. autofunction:: macrospin

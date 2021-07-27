@@ -1,0 +1,28 @@
+﻿ubermagutil.units
+=================
+
+.. automodule:: ubermagutil.units
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      si_max_multiplier
+      si_multiplier
+   
+   
+
+   
+   
+   

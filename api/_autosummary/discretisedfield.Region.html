@@ -1,0 +1,1674 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Region &#8212; ubermag  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="discretisedfield.integral" href="discretisedfield.integral.html" />
+    <link rel="prev" title="Mesh" href="discretisedfield.Mesh.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../workshop/index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption" role="heading">
+ <span class="caption-text">
+  Packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../discretisedfield.html">
+   discretisedfield
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="discretisedfield.html">
+     discretisedfield
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.DValue.html">
+       DValue
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.Field.html">
+       Field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.Line.html">
+       Line
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.Mesh.html">
+       Mesh
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Region
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.integral.html">
+       discretisedfield.integral
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.interact.html">
+       discretisedfield.interact
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.test.html">
+       discretisedfield.test
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="discretisedfield.tools.html">
+     discretisedfield.tools
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.count_bps.html">
+       discretisedfield.tools.count_bps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.count_large_cell_angle_regions.html">
+       discretisedfield.tools.count_large_cell_angle_regions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.emergent_magnetic_field.html">
+       discretisedfield.tools.emergent_magnetic_field
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.max_neigbouring_cell_angle.html">
+       discretisedfield.tools.max_neigbouring_cell_angle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.neigbouring_cell_angle.html">
+       discretisedfield.tools.neigbouring_cell_angle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.topological_charge.html">
+       discretisedfield.tools.topological_charge
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.tools.topological_charge_density.html">
+       discretisedfield.tools.topological_charge_density
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="discretisedfield.ovf2vtk.html">
+     discretisedfield.ovf2vtk
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.ovf2vtk.ovf2vtk.html">
+       discretisedfield.ovf2vtk.ovf2vtk
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagneticdata.html">
+     micromagneticdata
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticdata.Data.html">
+       Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticdata.Drive.html">
+       Drive
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticdata.test.html">
+       micromagneticdata.test
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../micromagneticmodel.html">
+   micromagneticmodel
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagneticmodel.html">
+     micromagneticmodel
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.CubicAnisotropy.html">
+       CubicAnisotropy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.DMI.html">
+       DMI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Damping.html">
+       Damping
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Demag.html">
+       Demag
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Driver.html">
+       Driver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Dynamics.html">
+       Dynamics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.DynamicsTerm.html">
+       DynamicsTerm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Energy.html">
+       Energy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.EnergyTerm.html">
+       EnergyTerm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Evolver.html">
+       Evolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Exchange.html">
+       Exchange
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.MagnetoElastic.html">
+       MagnetoElastic
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Precession.html">
+       Precession
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.RKKY.html">
+       RKKY
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Slonczewski.html">
+       Slonczewski
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.System.html">
+       System
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.UniaxialAnisotropy.html">
+       UniaxialAnisotropy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.Zeeman.html">
+       Zeeman
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.ZhangLi.html">
+       ZhangLi
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.test.html">
+       micromagneticmodel.test
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagneticmodel.abstract.html">
+     micromagneticmodel.abstract
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.abstract.Abstract.html">
+       Abstract
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.abstract.Container.html">
+       Container
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.abstract.Term.html">
+       Term
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.consts.html">
+     micromagneticmodel.consts
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagneticmodel.examples.html">
+     micromagneticmodel.examples
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.examples.macrospin.html">
+       micromagneticmodel.examples.macrospin
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../micromagnetictests.html">
+   micromagnetictests
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagnetictests.html">
+     micromagnetictests
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.get_tests.html">
+       micromagnetictests.get_tests
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.test.html">
+       micromagnetictests.test
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="micromagnetictests.calculatortests.html">
+     micromagnetictests.calculatortests
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestCompute.html">
+       TestCompute
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestCubicAnisotropy.html">
+       TestCubicAnisotropy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestDMI.html">
+       TestDMI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestDamping.html">
+       TestDamping
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestDemag.html">
+       TestDemag
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestDynamics.html">
+       TestDynamics
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestEnergy.html">
+       TestEnergy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestExchange.html">
+       TestExchange
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestFixedSubregions.html">
+       TestFixedSubregions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestHysteresisDriver.html">
+       TestHysteresisDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestMesh.html">
+       TestMesh
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestMinDriver.html">
+       TestMinDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestPrecession.html">
+       TestPrecession
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestRKKY.html">
+       TestRKKY
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestSlonczewski.html">
+       TestSlonczewski
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestThreads.html">
+       TestThreads
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestTimeDriver.html">
+       TestTimeDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestUniaxialAnisotropy.html">
+       TestUniaxialAnisotropy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestZeeman.html">
+       TestZeeman
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.TestZhangLi.html">
+       TestZhangLi
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_dirname.html">
+       micromagnetictests.calculatortests.test_dirname
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_info_file.html">
+       micromagnetictests.calculatortests.test_info_file
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_multiple_drives.html">
+       micromagnetictests.calculatortests.test_multiple_drives
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_outputstep.html">
+       micromagnetictests.calculatortests.test_outputstep
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
+       micromagnetictests.calculatortests.test_stdprob3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob4.html">
+       micromagnetictests.calculatortests.test_stdprob4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob5.html">
+       micromagnetictests.calculatortests.test_stdprob5
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../oommfc.html">
+   oommfc
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="oommfc.html">
+     oommfc
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.CGEvolver.html">
+       CGEvolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.Driver.html">
+       Driver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.EulerEvolver.html">
+       EulerEvolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.HysteresisDriver.html">
+       HysteresisDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.MinDriver.html">
+       MinDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.RungeKuttaEvolver.html">
+       RungeKuttaEvolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.SpinTEvolver.html">
+       SpinTEvolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.SpinXferEvolver.html">
+       SpinXferEvolver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.TimeDriver.html">
+       TimeDriver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.compute.html">
+       oommfc.compute
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.delete.html">
+       oommfc.delete
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.test.html">
+       oommfc.test
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.test_docker.html">
+       oommfc.test_docker
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="oommfc.oommf.html">
+     oommfc.oommf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.DockerOOMMFRunner.html">
+       DockerOOMMFRunner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.ExeOOMMFRunner.html">
+       ExeOOMMFRunner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.OOMMFRunner.html">
+       OOMMFRunner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.TclOOMMFRunner.html">
+       TclOOMMFRunner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.get_oommf_runner.html">
+       oommfc.oommf.get_oommf_runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.overhead.html">
+       oommfc.oommf.overhead
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.status.html">
+       oommfc.oommf.status
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ubermag.html">
+   ubermag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermag.html">
+     ubermag
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermag.test.html">
+       ubermag.test
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ubermagtable.html">
+   ubermagtable
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermagtable.html">
+     ubermagtable
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.Table.html">
+       Table
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.interact.html">
+       ubermagtable.interact
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.test.html">
+       ubermagtable.test
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermagtable.util.html">
+     ubermagtable.util
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.util.columns.html">
+       ubermagtable.util.columns
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.util.data.html">
+       ubermagtable.util.data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagtable.util.units.html">
+       ubermagtable.util.units
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ubermagutil.html">
+   ubermagutil
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermagutil.html">
+     ubermagutil
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+    <label for="toctree-checkbox-23">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.hysteresis_values.html">
+       ubermagutil.hysteresis_values
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.inherit_docs.html">
+       ubermagutil.inherit_docs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.test.html">
+       ubermagutil.test
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermagutil.typesystem.html">
+     ubermagutil.typesystem
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Descriptor.html">
+       Descriptor
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Dictionary.html">
+       Dictionary
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Name.html">
+       Name
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Parameter.html">
+       Parameter
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Scalar.html">
+       Scalar
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Subset.html">
+       Subset
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Typed.html">
+       Typed
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.Vector.html">
+       Vector
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.typesystem.typesystem.html">
+       ubermagutil.typesystem.typesystem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="ubermagutil.units.html">
+     ubermagutil.units
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.units.si_max_multiplier.html">
+       ubermagutil.units.si_max_multiplier
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ubermagutil.units.si_multiplier.html">
+       ubermagutil.units.si_multiplier
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="region">
+<h1>Region<a class="headerlink" href="#region" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="discretisedfield.Region">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region" title="Permalink to this definition">¶</a></dt>
+<dd><p>A cuboid region.</p>
+<p>A cuboid region spans between two corner points <span class="math notranslate nohighlight">\(\mathbf{p}_{1}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{p}_{2}\)</span>. Points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> can be any two diagonally
+opposite points. If any of the edge lengths of the cuboid region is zero,
+<code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>p2</strong> (<em>p1 /</em>) – Diagonnaly opposite corner points <span class="math notranslate nohighlight">\(\mathbf{p}_{i} = (p_{x},
+p_{y}, p_{z})\)</span>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If any region’s edge length is zero.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Defining a nano-sized region.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">25e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mf">25e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span>
+<span class="go">Region(...)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>An attempt to define a region, where one of the edge lengths is zero.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># The edge length in the z-direction is zero.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+    <span class="o">...</span>
+<span class="gr">ValueError</span>: <span class="n">...</span>
+</pre></div>
+</div>
+<hr><p class="rubric">Methods</p>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.__contains__" title="discretisedfield.Region.__contains__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__contains__</span></code></a></p></td>
+<td><p>Determine if a point or another region belong to the region.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
+<td><p>Default dir() implementation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.__eq__" title="discretisedfield.Region.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a></p></td>
+<td><p>Relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.__or__" title="discretisedfield.Region.__or__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__or__</span></code></a></p></td>
+<td><p>Facing surface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.__repr__" title="discretisedfield.Region.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Representation string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.k3d" title="discretisedfield.Region.k3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">k3d</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.mpl" title="discretisedfield.Region.mpl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mpl</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.random_point" title="discretisedfield.Region.random_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random_point</span></code></a></p></td>
+<td><p>Generate a random point in the region.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Properties</p>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.centre" title="discretisedfield.Region.centre"><code class="xref py py-obj docutils literal notranslate"><span class="pre">centre</span></code></a></p></td>
+<td><p>Centre point.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.edges" title="discretisedfield.Region.edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges</span></code></a></p></td>
+<td><p>Edge lengths of the region.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">p1</span></code></p></td>
+<td><p>Descriptor allowing setting attributes only with vectors (<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, or <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>), whose elements are of <code class="docutils literal notranslate"><span class="pre">numbers.Real</span></code> type.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">p2</span></code></p></td>
+<td><p>Descriptor allowing setting attributes only with vectors (<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, or <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>), whose elements are of <code class="docutils literal notranslate"><span class="pre">numbers.Real</span></code> type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.pmax" title="discretisedfield.Region.pmax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pmax</span></code></a></p></td>
+<td><p>Point with maximum coordinates in the region.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.pmin" title="discretisedfield.Region.pmin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pmin</span></code></a></p></td>
+<td><p>Point with minimum coordinates in the region.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.volume" title="discretisedfield.Region.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<td><p>Region volume.</p></td>
+</tr>
+</tbody>
+</table>
+<hr><dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.__contains__">
+<span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a point or another region belong to the region.</p>
+<p>Point is considered to be in the region if</p>
+<div class="math notranslate nohighlight">
+\[p^\text{min}_{i} \le p_{i} \le p^\text{max}_{i}, \text{for}\,
+i = x, y, z.\]</div>
+<p>Similarly, if the second operand is <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code> object,
+it is considered to be in the region if both its <code class="docutils literal notranslate"><span class="pre">pmin</span></code> and <code class="docutils literal notranslate"><span class="pre">pmax</span></code>
+belong to the region.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<em>(</em><em>3</em><em>,</em><em>) </em><em>array_like</em><em> or </em><a class="reference internal" href="#discretisedfield.Region" title="discretisedfield.Region"><em>discretisedfield.Region</em></a>) – The point coordinate <span class="math notranslate nohighlight">\((p_{x}, p_{y}, p_{z})\)</span> or a region
+object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">other</span></code> is inside the region and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<ol class="arabic simple">
+<li><p>Check if point is inside the region.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># corner points are considered to be in the region</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Check if another region belongs to the region.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Region is considered to be in itself</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="ow">in</span> <span class="n">region</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.__eq__">
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
+<p>Two regions are considered to be equal if they have the same minimum
+and maximum coordinate points: <span class="math notranslate nohighlight">\(\mathbf{p}^\text{max}_{1} =
+\mathbf{p}^\text{max}_{2}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}^\text{min}_{1} =
+\mathbf{p}^\text{min}_{2}\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#discretisedfield.Region" title="discretisedfield.Region"><em>discretisedfield.Region</em></a>) – Second operand.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if two regions are equal and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Check if regions are equal.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region3</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">==</span> <span class="n">region2</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">!=</span> <span class="n">region2</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">==</span> <span class="n">region3</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">!=</span> <span class="n">region3</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.__or__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Facing surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#discretisedfield.Region" title="discretisedfield.Region"><em>discretisedfield.Region</em></a>) – Second operand.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>tuple</strong> – The first element is the axis facing surfaces are perpendicular to.
+If we start moving along that axis (e.g. from minus infinity) the
+first region we are going to enter is the region which is the
+second element of the tuple. When we leave that region, we enter
+the second region, which is the third element of the tuple.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Find facing surfaces.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p11</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p12</span> <span class="o">=</span> <span class="p">(</span><span class="mf">100e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">20e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p11</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p12</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p21</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">20e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p22</span> <span class="o">=</span> <span class="p">(</span><span class="mf">100e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">30e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p21</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p22</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">region1</span> <span class="o">|</span> <span class="n">region2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;z&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">region1</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="n">region2</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representation string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Representation string.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<ol class="arabic simple">
+<li><p>Getting representation string.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">repr</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
+<span class="go">&#39;Region(p1=(0, 0, 0), p2=(2, 2, 1))&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.k3d">
+<span class="sig-name descname"><span class="pre">k3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5010096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.k3d" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> plot.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">plot</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">k3d.Plot</span></code> object is created
+automatically. The colour of the region can be specified using
+<code class="docutils literal notranslate"><span class="pre">color</span></code> argument.</p>
+<p>For details about <code class="docutils literal notranslate"><span class="pre">multiplier</span></code>, please refer to
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Region.mpl</span></code>.</p>
+<p>This method is based on <code class="docutils literal notranslate"><span class="pre">k3d.voxels</span></code>, so any keyword arguments
+accepted by it can be passed (e.g. <code class="docutils literal notranslate"><span class="pre">wireframe</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plot</strong> (<em>k3d.Plot</em><em>, </em><em>optional</em>) – Plot to which the plot is added. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> - plot is
+created internally.</p></li>
+<li><p><strong>color</strong> (<em>int</em><em>, </em><em>optional</em>) – Colour of the region. Defaults to the default color palette.</p></li>
+<li><p><strong>multiplier</strong> (<em>numbers.Real</em><em>, </em><em>optional</em>) – Axes multiplier. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Visualising the region using <code class="docutils literal notranslate"><span class="pre">k3d</span></code>.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
+<span class="go">Plot(...)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.mpl">
+<span class="sig-name descname"><span class="pre">mpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#4c72b0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.mpl" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> object is created
+automatically and the size of a figure can be specified using
+<code class="docutils literal notranslate"><span class="pre">figsize</span></code>. The colour of lines depicting the region can be specified
+using <code class="docutils literal notranslate"><span class="pre">color</span></code> argument, which must be a valid <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> color.
+The plot is saved in PDF-format if <code class="docutils literal notranslate"><span class="pre">filename</span></code> is passed.</p>
+<p>It is often the case that the object size is either small (e.g. on a
+nanoscale) or very large (e.g. in units of kilometers). Accordingly,
+<code class="docutils literal notranslate"><span class="pre">multiplier</span></code> can be passed as <span class="math notranslate nohighlight">\(10^{n}\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is a
+multiple of 3 (…, -6, -3, 0, 3, 6,…). According to that value, the
+axes will be scaled and appropriate units shown. For instance, if
+<code class="docutils literal notranslate"><span class="pre">multiplier=1e-9</span></code> is passed, all axes will be divided by
+<span class="math notranslate nohighlight">\(1\,\text{nm}\)</span> and <span class="math notranslate nohighlight">\(\text{nm}\)</span> units will be used as
+axis labels. If <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> is not passed, the best one is
+calculated internally.</p>
+<p>This method is based on <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code>, so any keyword
+arguments accepted by it can be passed (for instance, <code class="docutils literal notranslate"><span class="pre">linewidth</span></code>,
+<code class="docutils literal notranslate"><span class="pre">linestyle</span></code>, etc.).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes</em><em>, </em><em>optional</em>) – Axes to which the plot is added. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code> - axes are
+created internally.</p></li>
+<li><p><strong>figsize</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>tuple</em><em>, </em><em>optional</em>) – The size of a created figure if <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed. Defaults to
+<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>color</strong> (<em>int</em><em>, </em><em>str</em><em>, </em><em>tuple</em><em>, </em><em>optional</em>) – A valid <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> color for lines depicting the region.
+Defaults to the default color palette.</p></li>
+<li><p><strong>multiplier</strong> (<em>numbers.Real</em><em>, </em><em>optional</em>) – Axes multiplier. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – If filename is passed, the plot is saved. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Visualising the region using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Region.random_point">
+<span class="sig-name descname"><span class="pre">random_point</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region.random_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random point in the region.</p>
+<p>The use of this function is mostly for writing tests. This method is
+not a property and it is called as
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Region.random_point()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Random point coordinates <span class="math notranslate nohighlight">\(\mathbf{p}_\text{r} =
+(p_{x}^\text{r}, p_{y}^\text{r}, p_{z}^\text{r})\)</span>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Generating a random point.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">200e-9</span><span class="p">,</span> <span class="mf">200e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">random_point</span><span class="p">()</span>
+<span class="go">(...)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this example, ellipsis is used instead of an exact tuple because
+the result differs each time
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Region.random_point</span></code> method is called.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Region.centre">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">centre</span></span><a class="headerlink" href="#discretisedfield.Region.centre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Centre point.</p>
+<p>It is computed as the middle point between minimum and maximum point
+coordinates:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_\text{centre} = \frac{1}{2} (\mathbf{p}_\text{min}
++ \mathbf{p}_\text{max}).\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Centre point <span class="math notranslate nohighlight">\((p_{c}^{x}, p_{c}^{y}, p_{c}^{z})\)</span>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting the centre point.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">centre</span>
+<span class="go">(2.5, 7.5, 10.0)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Region.edges">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">edges</span></span><a class="headerlink" href="#discretisedfield.Region.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge lengths of the region.</p>
+<p>Edge length is computed from the points between which the region spans
+<span class="math notranslate nohighlight">\(\mathbf{p}_{1}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_{2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{l} = (|p_{2}^{x} - p_{1}^{x}|, |p_{2}^{y} - p_{1}^{y}|,
+|p_{2}^{z} - p_{1}^{z}|).\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Edge lengths <span class="math notranslate nohighlight">\((l_{x}, l_{y}, l_{z})\)</span>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting edge lengths of the region.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">edges</span>
+<span class="go">(5, 15, 20)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Region.pmax">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pmax</span></span><a class="headerlink" href="#discretisedfield.Region.pmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point with maximum coordinates in the region.</p>
+<p>The <span class="math notranslate nohighlight">\(i\)</span>-th component of <span class="math notranslate nohighlight">\(\mathbf{p}_\text{max}\)</span> is
+computed from points <span class="math notranslate nohighlight">\(p_{1}\)</span> and <span class="math notranslate nohighlight">\(p_{2}\)</span> between which the
+cuboid region spans: <span class="math notranslate nohighlight">\(p_\text{max}^{i} = \text{max}(p_{1}^{i},
+p_{2}^{i})\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Point with maximum coordinates <span class="math notranslate nohighlight">\((p_{x}^\text{max},
+p_{y}^\text{max}, p_{z}^\text{max})\)</span>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting the maximum coordinate point.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">pmax</span>
+<span class="go">(5.0, 2.9, 0.0)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#discretisedfield.Region.pmin" title="discretisedfield.Region.pmin"><code class="xref py py-func docutils literal notranslate"><span class="pre">pmin()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Region.pmin">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pmin</span></span><a class="headerlink" href="#discretisedfield.Region.pmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point with minimum coordinates in the region.</p>
+<p>The <span class="math notranslate nohighlight">\(i\)</span>-th component of <span class="math notranslate nohighlight">\(\mathbf{p}_\text{min}\)</span> is
+computed from points <span class="math notranslate nohighlight">\(p_{1}\)</span> and <span class="math notranslate nohighlight">\(p_{2}\)</span> between which the
+cuboid region spans: <span class="math notranslate nohighlight">\(p_\text{min}^{i} = \text{min}(p_{1}^{i},
+p_{2}^{i})\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Point with minimum coordinates <span class="math notranslate nohighlight">\((p_{x}^\text{min},
+p_{y}^\text{min}, p_{z}^\text{min})\)</span>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (3,)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting the minimum coordinate point.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">pmin</span>
+<span class="go">(-1.1, 0.0, -0.1)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#discretisedfield.Region.pmax" title="discretisedfield.Region.pmax"><code class="xref py py-func docutils literal notranslate"><span class="pre">pmax()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Region.volume">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#discretisedfield.Region.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Region volume.</p>
+<p>It is computed by multiplying edge lengths of the region:</p>
+<div class="math notranslate nohighlight">
+\[V = l_{x} l_{y} l_{z}.\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Volume of the region.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numbers.Real</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Computing the volume of the region.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">region</span><span class="o">.</span><span class="n">volume</span>
+<span class="go">100.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="discretisedfield.Mesh.html" title="previous page">Mesh</a>
+    <a class='right-next' id="next-link" href="discretisedfield.integral.html" title="next page">discretisedfield.integral</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

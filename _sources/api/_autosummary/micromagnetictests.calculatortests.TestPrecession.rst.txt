@@ -1,0 +1,70 @@
+TestPrecession
+==============
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autoclass:: TestPrecession
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~TestPrecession.__dir__
+      
+      
+         ~TestPrecession.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~TestPrecession.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~TestPrecession.setup
+      
+      
+         ~TestPrecession.test_dict
+      
+      
+         ~TestPrecession.test_field
+      
+      
+         ~TestPrecession.test_scalar
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

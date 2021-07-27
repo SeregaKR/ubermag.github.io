@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubermag - Features and packages &#8212; ubermag  documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="#">
+  <img src="_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="workshop/index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="documentation/index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <div class="col-12 col-md-1 col-xl-2 bd-sidebar no-sidebar"></div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Ubermag - Features and packages
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finite-difference-fields-discretisedfield">
+     Finite-difference fields –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       discretisedfield
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#micromagnetic-problem-description-micromagneticmodel">
+     Micromagnetic problem description –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       micromagneticmodel
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oommf-based-micromagnetic-simulations-oommfc">
+     OOMMF-based micromagnetic simulations –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       oommfc
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-micromagnetic-simulations-micromagneticdata">
+     Analysis of micromagnetic simulations –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       micromagneticdata
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-scalar-simulation-data-files-ubermagtable">
+     Reading scalar simulation data files -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ubermagtable
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#micromagnetictests">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       micromagnetictests
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typesystem-and-utilities-ubermagutil">
+     Typesystem and utilities -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ubermagutil
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-ubermag">
+     What is
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ubermag
+      </span>
+     </code>
+     ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-and-tutorials">
+   Documentation and tutorials
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubermag-in-the-cloud">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     ubermag
+    </span>
+   </code>
+   in the cloud
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-cite">
+   How to cite
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-11 col-xl-8 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="ubermag-features-and-packages">
+<h1>Ubermag - Features and packages<a class="headerlink" href="#ubermag-features-and-packages" title="Permalink to this headline">¶</a></h1>
+<p>Ubermag is a collection of several independent packages that can be used
+independently as well as in combination. The whole set of packages – the
+<code class="docutils literal notranslate"><span class="pre">ubermag</span></code> meta-package – is tight to micromagnetic simulations. The
+individual sub-packages can be used in other fields, e.g. fluid dynamics.</p>
+<div class="section" id="finite-difference-fields-discretisedfield">
+<h2>Finite-difference fields – <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code><a class="headerlink" href="#finite-difference-fields-discretisedfield" title="Permalink to this headline">¶</a></h2>
+<img alt="examples for a field visualisation" src="_images/field-examples.svg" /><ul class="simple">
+<li><p>Three-dimensional finite-different scalar or vector fields independent of the underlying physics</p></li>
+<li><p>It provides common field operations such as</p>
+<ul>
+<li><p>Mathematical operations (standard operations, derivatives, integration, …)</p></li>
+<li><p>Specific tools, e.g. topological charge density (<code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code>)</p></li>
+<li><p>Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">k3d</span></code></p></li>
+<li><p>Reading and writing <code class="docutils literal notranslate"><span class="pre">vtk</span></code>, <code class="docutils literal notranslate"><span class="pre">ovf</span></code>, and <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> files</p></li>
+</ul>
+</li>
+<li><p>Possible applications are amongs others</p>
+<ul>
+<li><p>Micromagnetics</p></li>
+<li><p>Fluid dynamics</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="micromagnetic-problem-description-micromagneticmodel">
+<h2>Micromagnetic problem description – <code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code><a class="headerlink" href="#micromagnetic-problem-description-micromagneticmodel" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Physics of the micromagnetic system</p></li>
+<li><p>Energy equation (Exchange energy, Zeeman energy, DMI, …)</p></li>
+<li><p>Dynamics equation (damping, precession, currents, …)</p></li>
+</ul>
+<div class="figure align-default" id="id5">
+<img alt="_images/interoperability.png" src="_images/interoperability.png" />
+<p class="caption"><span class="caption-text">Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="oommf-based-micromagnetic-simulations-oommfc">
+<h2>OOMMF-based micromagnetic simulations – <code class="docutils literal notranslate"><span class="pre">oommfc</span></code><a class="headerlink" href="#oommf-based-micromagnetic-simulations-oommfc" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/oommfc-examples.svg" src="_images/oommfc-examples.svg" /><ul class="simple">
+<li><p>An Object Oriented MicroMagnetic Framework OOMMF calculator for computational
+magnetism models defined with <code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="analysis-of-micromagnetic-simulations-micromagneticdata">
+<h2>Analysis of micromagnetic simulations – <code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code><a class="headerlink" href="#analysis-of-micromagnetic-simulations-micromagneticdata" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/analysis-examples.svg" src="_images/analysis-examples.svg" /></div>
+<div class="section" id="reading-scalar-simulation-data-files-ubermagtable">
+<h2>Reading scalar simulation data files - <code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code><a class="headerlink" href="#reading-scalar-simulation-data-files-ubermagtable" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Reading scalar data files (OOMMF <code class="docutils literal notranslate"><span class="pre">.odt</span></code> and mumax3 <code class="docutils literal notranslate"><span class="pre">.txt</span></code>)</p></li>
+<li><p>Merging multiple tables</p></li>
+<li><p>Visualisation of scalar table data</p></li>
+</ul>
+</div>
+<div class="section" id="micromagnetictests">
+<h2><code class="docutils literal notranslate"><span class="pre">micromagnetictests</span></code><a class="headerlink" href="#micromagnetictests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>tests for <code class="docutils literal notranslate"><span class="pre">oommfc</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="typesystem-and-utilities-ubermagutil">
+<h2>Typesystem and utilities - <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code><a class="headerlink" href="#typesystem-and-utilities-ubermagutil" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Definition of typesystem descriptors and decorators</p></li>
+<li><p>Documentation inheritance decorators</p></li>
+<li><p>Determining SI prefixes</p></li>
+<li><p>Various convenience functions</p></li>
+</ul>
+</div>
+<div class="section" id="what-is-ubermag">
+<h2>What is <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>?<a class="headerlink" href="#what-is-ubermag" title="Permalink to this headline">¶</a></h2>
+<p>As a whole, <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> is a level of (Python) utilities sitting above (“<em>über</em>”)
+existing micromagnetic simulation packages, such as OOMMF and mumax3. We refer
+to packages such as OOMMF and mumax3 as the <em>computational backends</em>, or as
+(micromagnetic) <em>calculators</em>.</p>
+<p>By exposing micromagnetic simulations to the Python ecosystem and integration
+into Jupyter, all the popular tools used in scientific computing for data
+analysis, numerical analysis, visualisation, machine learning, etc. become
+readily available.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> Python packages allow to specify a micromagnetic problem (without
+making use of any micromagnetic calculator). Only when the micromagnetic problem
+needs to be solved, the task is delegated to the computational backend.</p>
+<p>Design objectives of Ubermag are:</p>
+<ol class="arabic simple">
+<li><p>Work towards a common interface (domain spacific language) to multiple simulation packages,</p></li>
+<li><p>Expose micromagnetic simulations to Python ecosystem,</p></li>
+<li><p>Make it easier to compare simulation results obtained with different simulation packages, and</p></li>
+<li><p>Allow execution of micromagnetic simulation in the cloud.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="documentation-and-tutorials">
+<h1>Documentation and tutorials<a class="headerlink" href="#documentation-and-tutorials" title="Permalink to this headline">¶</a></h1>
+<p>The examples shown in <a class="reference external" href="quickstart.html">quickstart</a> and the <a class="reference external" href="workshop/index.html">workshop</a> are tight to micromagnetic simulations.
+Only the more commonly used features are covered in there.
+<a class="reference external" href="documentation/index.html">Documentation</a> and <a class="reference external" href="api/index.html">API
+Reference</a> provide the full documentation for the
+individual packages.</p>
+<p>If you are new and plan to use Ubermag for micromagnetic simulations please
+start with the <a class="reference external" href="workshop/index.html">workshop</a> or the <a class="reference external" href="quickstart.html">quickstart</a> example.</p>
+<p>Otherwise, please directly refer to the <a class="reference external" href="documentation/index.html">documentation</a> or the <a class="reference external" href="api/index.html">API reference</a>.</p>
+</div>
+<div class="section" id="ubermag-in-the-cloud">
+<h1><code class="docutils literal notranslate"><span class="pre">ubermag</span></code> in the cloud<a class="headerlink" href="#ubermag-in-the-cloud" title="Permalink to this headline">¶</a></h1>
+<p>If you do not want to install <cite>ubermag</cite> on your machine, you can use it in the
+cloud via Binder. This does not require you to have anything installed on your
+machine and no files will be created. To access it, please use the following
+badge:</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/ubermag/ubermag/master?filepath=docs%2Fipynb%2Findex.ipynb"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" /></a>
+<p>You can setup your own simulation from scratch or upload the notebook you
+prepared previouly. Please remember to download the notebook after you are done,
+so that you can upload it again when you start a new online session.</p>
+</div>
+<div class="section" id="authors">
+<h1>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h1>
+<p>Marijan Beg<sup>1, 2</sup>, Martin Lang<sup>2, 3</sup>, Ryan A. Pepper<sup>2</sup>,
+Thomas Kluyver<sup>4</sup>, Jeroen Mulkers<sup>5</sup>, Jonathan Leliaert<sup>5</sup>,
+and Hans Fangohr<sup>2, 3, 6</sup></p>
+<ul class="simple">
+<li><p><sup>1</sup> Department of Earth Science and Engineering, Imperial College London,
+London SW7 2AZ, United Kingdom</p></li>
+<li><p><sup>2</sup> Faculty of Engineering and Physical Sciences, University of
+Southampton, Southampton SO17 1BJ, United Kingdom</p></li>
+<li><p><sup>3</sup> Max Planck Institute for the Structure and Dynamics of Matter,
+Luruper Chaussee 149, 22761 Hamburg, Germany</p></li>
+<li><p><sup>4</sup> European XFEL GmbH, Holzkoppel 4, 22869 Schenefeld, Germany</p></li>
+<li><p><sup>5</sup> Faculty of Sciences, Ghent University, Krijgslaan 281, S12, 9000
+Ghent, Belgium</p></li>
+<li><p><sup>6</sup> Center for Free-Electron Laser Science, Luruper Chaussee 149, 22761
+Hamburg, Germany.</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-cite">
+<h1>How to cite<a class="headerlink" href="#how-to-cite" title="Permalink to this headline">¶</a></h1>
+<p>If you use Ubermag or any of its sub-packages for your research please cite:</p>
+<p>M. Beg, M. Lang and H. Fangohr, “Ubermag: Towards more effective micromagnetic
+workflows,” in <a class="reference external" href="https://doi.org/10.1109/TMAG.2021.3078896">IEEE Transactions on Magnetics</a>.</p>
+<div class="highlight-bib notranslate"><div class="highlight"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">beg2021</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Beg, Marijan and Lang, Martin and Fangohr, Hans}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Magnetics}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Ubermag: Towards more effective micromagnetic workflows}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{1-1}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/TMAG.2021.3078896}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="license">
+<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
+<p>Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please refer to the LICENSE file.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h1>
+<p>Ubermag is a part of the Horizon 2020 European Research Infrastructure
+<a class="reference external" href="https://opendreamkit.org">OpenDreamKit</a> project (Project ID 676541). This work was supported by the Fonds
+Wetenschappelijk Onderzoek (FWO-Vlaanderen) through Project No. G098917N (Jeroen
+Mulkers) and with a postdoctoral fellowship (Jonathan Leliaert).</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='right-next' id="next-link" href="installation.html" title="next page">Installation</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

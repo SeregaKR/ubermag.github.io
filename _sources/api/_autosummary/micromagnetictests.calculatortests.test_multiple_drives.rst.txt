@@ -1,0 +1,6 @@
+micromagnetictests.calculatortests.test\_multiple\_drives
+=========================================================
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autofunction:: test_multiple_drives

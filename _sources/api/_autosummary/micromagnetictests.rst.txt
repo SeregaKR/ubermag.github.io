@@ -1,0 +1,28 @@
+﻿micromagnetictests
+==================
+
+.. automodule:: micromagnetictests
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_tests
+      test
+   
+   
+
+   
+   
+   

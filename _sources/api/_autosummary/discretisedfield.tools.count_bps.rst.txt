@@ -1,0 +1,6 @@
+discretisedfield.tools.count\_bps
+=================================
+
+.. currentmodule:: discretisedfield.tools
+
+.. autofunction:: count_bps

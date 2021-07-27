@@ -1,0 +1,66 @@
+Evolver
+=======
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Evolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Evolver.__dir__
+      
+      
+         ~Evolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Evolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Evolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Evolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

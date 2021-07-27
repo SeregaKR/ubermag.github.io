@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial 03: Uniaxial anisotropy energy term &#8212; ubermag  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tutorial 04: Dzyaloshinskii-Moriya energy term" href="04-tutorial-dmi.html" />
+    <link rel="prev" title="Tutorial 02: Exchange energy term" href="02-tutorial-exchange.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../workshop/index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption" role="heading">
+ <span class="caption-text">
+  Packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../discretisedfield.html">
+   discretisedfield
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-basics.html">
+     Region basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-visualisation.html">
+     Region visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-facing-surfaces.html">
+     Region facing surfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-basics.html">
+     Mesh basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-visualisation.html">
+     Mesh visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-line-plane.html">
+     Mesh plane and line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-subregions.html">
+     Mesh subregions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-widgets.html">
+     Mesh widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-pad.html">
+     Mesh pad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-bc.html">
+     Mesh boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-definition.html">
+     Defining a uniform field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-spatially-varying.html">
+     Spatially varying fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-normalisation.html">
+     Field normalisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-operations.html">
+     Field operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-matplotlib-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-k3d-visualisation.html">
+     Field visualisation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       k3d
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-read-write.html">
+     Reading and writing fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-tools.html">
+     Field tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/ovf2vtk.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ovf2vtk
+      </span>
+     </code>
+     tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/dev-test.html">
+     Dev test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticmodel.html">
+   micromagneticmodel
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-energy-term.html">
+     Deriving an energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-dynamics-term.html">
+     Deriving a dynamics term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/term-parameters.html">
+     Term parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/energy-terms.html">
+     Energy terms and energy equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/dynamics-terms.html">
+     Dynamics terms and dynamics equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/same-class-terms.html">
+     Multiple energy terms of the same class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/evolver-driver.html">
+     Deriving evolver and driver classes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/system.html">
+     Defining micromagnetic system
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/constants.html">
+     Constants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagnetictests.html">
+   micromagnetictests
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagnetictests/usage.html">
+     Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../oommfc.html">
+   oommfc
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01-tutorial-zeeman.html">
+     Tutorial 01: Zeeman energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02-tutorial-exchange.html">
+     Tutorial 02: Exchange energy term
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Tutorial 03: Uniaxial anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-tutorial-dmi.html">
+     Tutorial 04: Dzyaloshinskii-Moriya energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05-tutorial-cubicanisotropy.html">
+     Tutorial 05: Cubic anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07-tutorial-standard-problem3.html">
+     Standard problem 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08-tutorial-standard-problem4.html">
+     Tutorial 08: Standard problem 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="09-tutorial-standard-problem5.html">
+     Tutorial 09: Standard problem 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
+     Tutorial 10: FMR standard problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11-tutorial-deriving-fields.html">
+     Tutorial 11: Deriving energy values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12-tutorial-stray-field.html">
+     Tutorial 12: Calculating a stray field using an airbox method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13-tutorial-skyrmion.html">
+     Skyrmion in a disk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagtable.html">
+   ubermagtable
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-basics.html">
+     Table basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-merge.html">
+     Table merge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-visualisation.html">
+     Table visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-widgets.html">
+     Table widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-interactive-plot.html">
+     Table interactive plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagutil.html">
+   ubermagutil
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/imposing-typesystem.html">
+     Imposing
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       typesystem
+      </span>
+     </code>
+     on a class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/constant-attributes.html">
+     Constant attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/parameter-descriptor.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Parameter
+      </span>
+     </code>
+     descriptor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/otherwise-type.html">
+     Defining
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       otherwise
+      </span>
+     </code>
+     type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/si-prefix.html">
+     Extracting the SI prefix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/inherit-docs.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inherit_docs
+      </span>
+     </code>
+     decorator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/hysteresis.html">
+     Hysteresis values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Spatially-constant-K-and-\mathbf{u}">
+   Spatially constant
+   <span class="math notranslate nohighlight">
+    \(K\)
+   </span>
+   and
+   <span class="math notranslate nohighlight">
+    \(\mathbf{u}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Spatially-varying-\mathbf{K}">
+   Spatially varying
+   <span class="math notranslate nohighlight">
+    \(\mathbf{K}\)
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Dictionary">
+     Dictionary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discretisedfield.Field">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       discretisedfield.Field
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Higher-order-uniaxial-anisotropy">
+   Higher-order uniaxial anisotropy
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Tutorial-03:-Uniaxial-anisotropy-energy-term">
+<h1>Tutorial 03: Uniaxial anisotropy energy term<a class="headerlink" href="#Tutorial-03:-Uniaxial-anisotropy-energy-term" title="Permalink to this headline">¶</a></h1>
+<p>Uniaxial anisotropy energy density is computed as</p>
+<div class="math notranslate nohighlight">
+\[w_\text{ua} = -K (\mathbf{m}\cdot\mathbf{u})^{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> is the normalised (<span class="math notranslate nohighlight">\(|\mathbf{m}|=1\)</span>) magnetisation, <span class="math notranslate nohighlight">\(K\)</span> is the uniaxial anisotropy constant, and <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is the anisotropy axis. Uniaxial anisotropy energy term tends to align all magnetic moments parallel or antiparallel to the anisotropy axis.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>, <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> is a part of the magnetisation field <code class="docutils literal notranslate"><span class="pre">system.m</span></code>. Therefore, only uniaxial anisotropy constant <span class="math notranslate nohighlight">\(K\)</span> and axis <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> should be provided as input parameters to uniquely define the energy term. Both <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> can be constant in space or spatially varying.</p>
+<div class="section" id="Spatially-constant-K-and-\mathbf{u}">
+<h2>Spatially constant <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u}\)</span><a class="headerlink" href="#Spatially-constant-K-and-\mathbf{u}" title="Permalink to this headline">¶</a></h2>
+<p>Let us start by assembling a simple simple simulation where neither <span class="math notranslate nohighlight">\(K\)</span> nor <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vary in space. The sample is a “one-dimensional” chain of magnetic moments.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The mesh is</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2b2a8cbc6567413c84f1d1a74038749d", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>The system has a Hamiltonian, which consists of only uniaxial anisotropy energy term.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">K</span> <span class="o">=</span> <span class="mf">1e5</span>  <span class="c1"># uniaxial anisotropy constant (J/m**3)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># uniaxial anisotropy axis</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;uniaxialanisotropy_constant_K_u&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We are going to minimise the system’s energy using <code class="docutils literal notranslate"><span class="pre">oommfc.MinDriver</span></code> later. Therefore, we do not have to define the system’s dynamics equation. Finally, we need to define the system’s magnetisation (<code class="docutils literal notranslate"><span class="pre">system.m</span></code>). We are going to make it random with <span class="math notranslate nohighlight">\(M_\text{s}=8\times10^{5} \,\text{Am}^{-1}\)</span></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+
+<span class="n">Ms</span> <span class="o">=</span> <span class="mf">8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
+
+<span class="k">def</span> <span class="nf">m_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The magnetisation, we set is</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e2bf6bf584704a0bb5781c3a4031ae83", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>Now, we can minimise the system’s energy by using <code class="docutils literal notranslate"><span class="pre">oommfc.MinDriver</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2020/07/10 10:17]... (2.4 s)
+</pre></div></div>
+</div>
+<p>We expect that now all magnetic moments are aligned parallel or antiparallel to the anisotropy axis (in the <span class="math notranslate nohighlight">\(z\)</span>-direction).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "39b53b8538c7442eb7168ea489473059", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</div>
+<div class="section" id="Spatially-varying-\mathbf{K}">
+<h2>Spatially varying <span class="math notranslate nohighlight">\(\mathbf{K}\)</span><a class="headerlink" href="#Spatially-varying-\mathbf{K}" title="Permalink to this headline">¶</a></h2>
+<p>There are two different ways how a parameter can be made spatially varying, by using: 1. Dictionary 2. <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code></p>
+<div class="section" id="Dictionary">
+<h3>Dictionary<a class="headerlink" href="#Dictionary" title="Permalink to this headline">¶</a></h3>
+<p>In order to define a parameter using a dictionary, regions must be defined in the mesh. Regions are defined as a dictionary, whose keys are the strings and values are <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code> objects, which take two corner points of the region as input parameters.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">subregions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;region1&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)),</span>
+              <span class="s1">&#39;region2&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">))}</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="n">subregions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2e8412e401214fc58802db6af354cf18", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>Let us say that there is no uniaxial anisotropy (<span class="math notranslate nohighlight">\(K=0\)</span>) in region 1, whereas in region 2 it is <span class="math notranslate nohighlight">\(K=10^{5} \,\text{Jm}^{-3}\)</span>. <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is in the <span class="math notranslate nohighlight">\(z\)</span>-direction. <code class="docutils literal notranslate"><span class="pre">K</span></code> is now defined as a dictionary:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">K</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;region1&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;region2&#39;</span><span class="p">:</span> <span class="mf">1e5</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The system object is</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;uniaxialanisotropy_dict_K&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Its magnetisation is</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d898a7db951d401a80f9abe49b8eaa1f", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>After we minimise the energy</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2020/07/10 10:17]... (2.8 s)
+</pre></div></div>
+</div>
+<p>The magnetisation is as we expected.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "53f05d18bb3d44a9b945888fc4ec8723", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</div>
+<div class="section" id="discretisedfield.Field">
+<h3><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this headline">¶</a></h3>
+<p>Let us define the spatailly varying uniaxial anisotropy, so that</p>
+<p>$:nbsphinx-math:<cite>mathbf{u}`(x, y, z) = :nbsphinx-math:</cite>left`{</p>
+<p><span class="math">\right</span>. $</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">u</span></code> for the spatially varying anisotropy is set using a Python function.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">u_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The uniaxial anisotropy parameters are</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">K</span> <span class="o">=</span> <span class="mf">1e5</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">u_fun</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The system is</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;uniaxialanisotropy_field_u&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>and its magnetisation is</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b3e0cfbdbfa74c3ca982348a41bfe207", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>After the energy minimisation, the magnetisation is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2020/07/10 10:17]... (2.7 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "733dc96b7717412798a4794d4a2ad822", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</div>
+</div>
+<div class="section" id="Higher-order-uniaxial-anisotropy">
+<h2>Higher-order uniaxial anisotropy<a class="headerlink" href="#Higher-order-uniaxial-anisotropy" title="Permalink to this headline">¶</a></h2>
+<p>In order to define higher-order anisotropy term:</p>
+<div class="math notranslate nohighlight">
+\[w_\text{ua} = -K_{1} (\mathbf{m}\cdot\mathbf{u})^{2} - K_{2} (\mathbf{m}\cdot\mathbf{u})^{4}\]</div>
+<p>anisotropy constants <code class="docutils literal notranslate"><span class="pre">K1</span></code> and <code class="docutils literal notranslate"><span class="pre">K2</span></code> must be passed. Similar to previous example, all parameters (<code class="docutils literal notranslate"><span class="pre">K1</span></code>, <code class="docutils literal notranslate"><span class="pre">K2</span></code>, and <code class="docutils literal notranslate"><span class="pre">u</span></code>) can be spatially varying (dictionary or field).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">K1</span> <span class="o">=</span> <span class="mf">1e5</span>
+<span class="n">K2</span> <span class="o">=</span> <span class="mf">1e3</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">u_fun</span><span class="p">)</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;uniaxialanisotropy_higher_order&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K1</span><span class="o">=</span><span class="n">K1</span><span class="p">,</span> <span class="n">K2</span><span class="o">=</span><span class="n">K2</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">k3d_vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2020/07/10 10:17]... (2.4 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "db96653d2037416490773a8c11548f50", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"019fcd6fb7784dc49546df797efc68e8": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "02638df88da6463b96a7e820f3da41dc": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_d532e77e28ce44d08ee8f7634611896c", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "269ed847f2824b848bafef8bf07c7987", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "06e814e391d14453bace9b7206d07b0a": {"buffers": [{"data": "aC0AAGgtAABtXFUAbVxVAFrH2wBax9sAbFNJAGxTSQB4f4EAeH+BAHA1EgBwNRIAdHNyAHRzcgBsT0QAbE9EAE4iAABOIgAAbqm3AG6ptwBG2PAARtjwAETa8gBE2vIAbUEtAG1BLQBwNRIAcDUSAHeOlAB3jpQAOOj+ADjo/gB1l58AdZefAHBpZgBwaWYAXSkAAF0pAAB4iI0AeIiNAA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "T+MTwaAq2z5K7G8/S7kAwdrhHD9X+zQ/UHH5wDDMND58wW8+emTHwOF2Wz937j8/YoSrwMBtDDwSBgk/oECOwMzONT7H62Q/V6p+wOqeJz8aEBg/g8gvwDb8Wz8x50Q/cUyzv91Txz4efH0/Wc5Nv3Ql7z0BIbI+htVgPqKraj6wyys+j5ruP74EHz/0jSQ+7q4IQK/Dwj6g8FY/IblSQJTXej5tjmQ/ZGuAQAzgJz8tcu8+xR+0QCh1UD8Q1O49AADAQHGQ1D7WLNs+o0X8QNr0Tj8KXCQ/EPQHQbrPjD4AzXU/hPwUQQBNwjyfYPw+", "encoding": "base64", "path": ["origins", "data"]}, {"data": "JJYDv4BVEz6T2F+/odZov84OZ75d7dO++xQXP+iZJT9CHwg/YrgJv8LtNr/buf++wHOPvpKcez8hYZC9L7DfvZoYJT+O10m/t1J1P6h7nr7QgEC+LYj8Pmv4N79izgm/8ThLvoywYj47+Hq/spwbP6M2RD/+vZs+PZUPPy+qCj8oGio/PWo6v/MleL4GuS0/j4g6P0TxdD5A4S2/6W3UPjaUAj/aHEm/xEl5PzGAn76YboQ9q/iDvk/qIL/8SkQ/AACAPz2+LT6pTBM+KVpEv7XpHb8qcJG+Zwe/O41g5j4Bmmu/4N7APjDbcz9U2Gc8", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140327003735232, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "13d344e609694adebaecd88d24e05512": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "150ff348453148b8992d0ddaccf221ec": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_da243cb031724a8c83495aeae7c23548", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "bbd24010062e47438f7e3889a0684c21", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "15ed7e6d44f940dbb8eb46c965097f0f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1a8e7fab3f67404691b803f21ba37f16": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140167733782032, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "1afc7068aee54d81833d95bc2d7729bf": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140168895971536, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "1f3a513cc35d48cc932ccedc1cc47c77": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.513896925893096, -23.989595388839643, 2.132639691844285, 0.1875, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_695efc8b563a4a32b76b443c81036a09", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140327004257920, 140327004255664], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "200535726ed24ae0a812a1577618a48e": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e5232c41cb8f4022b5f8b960f1e1c234", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "30e99ce0c7f4483f8dddd5c96eb72804", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "23645e271a834e16b70f760bef37304a": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_b73662a0890047a4bd05fd5f2168e820", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "dd20b1f9b02a4a6faa5615d159fb0928", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "2389feff2bd7491ab115ad5ff6e26d77": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_9ed0980a6d324aa9a69d98c25afd3734", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f3404f98d0a44f7b9d6816ebe5a30885", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "246671875cdd4d7a9b44c45f78a7e3a7": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AACgQQAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAD8AAAAAAAAAAAAAgD8AAAA/AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140326988812496, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [1, 1, 20]}, "wireframe": false}}, "2525b145b63b4effbca3bad1c7b3a876": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.14473529379362, -23.96254509364507, 2.1308363544154343, -0.16362810134887695, 0.4999999990686774, 0.5000000149011612, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_2c1f6c0124da428eb403312d55d850d1", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140327003440512, 140327004162368], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "25d8813fba9d4f25a620aaf551c6abda": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140326963666032, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "269ed847f2824b848bafef8bf07c7987": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.707952969879074, -24.636929444760327, 2.175795296317352, -0.04999999329447746, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_019fcd6fb7784dc49546df797efc68e8", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167834326672], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "295618cc596341e2950b268c414b9079": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2a7993b6478c4fa9a722c96604361ebb": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.161464937205277, -23.79368866633648, 2.1195792732934455, -0.03432750701904297, 0.5, 0.5000000288709998, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_6387de02704343ebbf7daae123000ee2", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140327003735232, 140326963664208], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "2b954f5a29e245e08213af080f633c19": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_7219ef779f9146408b8e556864800831", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "d9fa7be23c1a4f2db1ca34791067766d", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "2c1f6c0124da428eb403312d55d850d1": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2d68c9a11d43426da3f4f3d5d6a366b6": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140167700028432, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "30e99ce0c7f4483f8dddd5c96eb72804": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.07513773875665, -23.707111067134615, 2.113807403730599, -0.06293630599975586, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_549c517a6e0449018bfd322bc8161413", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140327003608304, 140327003734560], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "388c12078484467581575c21af6a2bd5": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140167733783632, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "3e8fca4198634917b67b71716aab43ed": {"buffers": [{"data": "c6CqAHOgqgA46P4AOOj+AF7C1QBewtUAcqGsAHKhrABtXlgAbV5YAG1BLgBtQS4AcDMIAHAzCAB0nKUAdJylAFzF2QBcxdkAb2NfAG9jXwBG2PAARtjwAFLP5QBSz+UAbFdQAGxXUAB4jpMAeI6TAE4iAABOIgAAY7zOAGO8zgBB3PUAQdz1AHRzcgB0c3IAa6++AGuvvgBbxtoAW8baAA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "cTwfwZzXND+jVJc+I8sFwTFesz6AOCM7PPn8wLW/AD8KmhY+Uw7bwCRzFj5MgZM+dg+xwGXcgj8AVx8/qyWVwHiWhT0uqEU/QnBawFUvZz8iSFg/hOk1wEr+Az5gmKE+GHXnv9bTPj9Emgk+nbosvwAAAAAreRc/OzndPoZqUD6gpGg9jSXKP+zOVz8IGMA97lw/QH7Wrz4a4yc/lVlBQFwtkz77isI+eQWGQME2/j7SFHA/Nrm3QHCpGD6iMjA+GQbZQO+iAD9Any09U6n/QEJYjj4e5AI/knQCQYCuRj5mJWc+2XsZQRhu9D3KJAc+", "encoding": "base64", "path": ["origins", "data"]}, {"data": "JI5nP25e0766VtE+TDeNvp5DmT6PuX4/wZNPP+a0v7v7sjQ/LOUwP27GND9p/dg+zbqHPcq4hb8BuHq+WrWkPmKaXj9dUAu/w/cxvqpeTr9FkDC/IkwvP9sAPj9Bz7w+YtQdP1ZP+77eMjs/deqyPgAAgD9byTu+FBsLPr3KFz9s62I/1VgivtidL7/++U8/bOd6vwNToD5mjJ++WTN1P0il2T4V1HU+aagfP3ef5DujKWC/wyb3vkirMz+v5ic/jGEQvxXvorsYTGo/NZV6v3xP4z5yB7m8s20xP8CoHD9NbQw/sew9vnrkQj+bbTw/", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140327003440512, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "40e48778bb8443f79b8d0fd60772625c": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.513896925893096, -23.989595388839646, 2.1326396918442487, 0.1875, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_13d344e609694adebaecd88d24e05512", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140168505153232, 140168505155472], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "460ef5ed839f4a2e86465cfbfaa4c156": {"buffers": [{"data": "OOj+ADjo/gA46P4AOOj+AE4iAABOIgAAOOj+ADjo/gBOIgAATiIAADjo/gA46P4AOOj+ADjo/gA46P4AOOj+ADjo/gA46P4AOOj+ADjo/gBOIgAATiIAADjo/gA46P4AOOj+ADjo/gA46P4AOOj+AE4iAABOIgAATiIAAE4iAABOIgAATiIAADjo/gA46P4ATiIAAE4iAAA46P4AOOj+AA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AAAYwQAAAD8AAAAAAAAIwQAAAD8AAAAAAADwwAAAAD8AAIA/AADQwAAAAD8AAAAAAACwwAAAAD8AAIA/AACQwAAAAD8AAAAAAABgwAAAAD8AAAAAAAAgwAAAAD8AAAAAAADAvwAAAD8AAAAAAAAAvwAAAD8AAAAAAAAAPwAAAD8AAIA/AADAPwAAAD8AAAAAAAAgQAAAAD8AAAAAAABgQAAAAD8AAAAAAACQQAAAAD8AAIA/AACwQAAAAD8AAIA/AADQQAAAAD8AAIA/AADwQAAAAD8AAAAAAAAIQQAAAD8AAIA/AAAYQQAAAD8AAAAA", "encoding": "base64", "path": ["origins", "data"]}, {"data": "3BHpsaSXprEAAIA/M6y5NLVpYjIAAIA/kgqtMZ0zN7EAAIC/J7PPMTlvMzIAAIA/5lvqMfURBzIAAIC/SpkpM8TQYjIAAIA/nSFCMkgsvDEAAIA/zd1gMQmlxDAAAIA/Uq9esndgojIAAIA/dMqnsa45ljAAAIA/CnOuMZ+HzzEAAIC/L7GEsjnY7DIAAIA/hRbZrz6zwLAAAIA/NU+BsIaeXC8AAIA/rPDssTOaMjEAAIC/RA0gsBxwIjEAAIC/MvgLMZBRnzAAAIC/F9xGL8+PYC4AAIA/F1AaMQpuGDIAAIC/H7O0r05GJjEAAIA/", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140327003609408, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "4add2eccd745459c92ad06c8e3b33c2f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "510ff9df99134161852d494810ec0b93": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "549c517a6e0449018bfd322bc8161413": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "5b1c35f4e57347539b114e351a2f50b6": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140167834326672, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 1, 20]}, "wireframe": false}}, "5baf08fe4cef431693d2568b4a1cf424": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "5e2937c109934074858dbfa87bdf77f4": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f6db340fc6004d439a77b65ee277dc09", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "e69e384bdba84e70beac8eb02523ace7", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "6387de02704343ebbf7daae123000ee2": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "695efc8b563a4a32b76b443c81036a09": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "6fd32a1f1a8d4333a394a53acac476ff": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.10238085385279, -23.815915021242446, 2.121061000671102, -0.10822916030883789, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_295618cc596341e2950b268c414b9079", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140168895971536, 140167769580624], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "707cbd08d2c243858c403cc2e7b2da72": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "70faf3b04c514bae84d21af1c7fc5c7a": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_b0949c2742c04e3e956cca7ee0cf202b", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f1337f9148194f7e89d9a2d756b6bd35", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "7219ef779f9146408b8e556864800831": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "73cbdb8a4b3c4450b1132e7c03ef8870": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140327003734560, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "747745742293451d8d04e7be9abbe623": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e2eaee171cd444a294b0b5941aa397df", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "8f27695dd7ab4745b7888cfc174df06b", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "799c75e5ad24481baba20c5ca1c47ac0": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.015294166555943, -23.522941249833917, 2.1015294159105333, 0, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_7e4740f2020141a3a8b1d69a2d05d10c", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167733783632, 140167699882896], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "7e4740f2020141a3a8b1d69a2d05d10c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "80edea68028d4f31a5aaaeb3ad454c55": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "83027e45c6a34006b53d7186ff99943b": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140327004162368, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "89cdeca226b246dfa580b0e7fa07c8d4": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_eedf33c90ff142dea35b38727bc21054", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "40e48778bb8443f79b8d0fd60772625c", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "8a1dfb49b55444fe802d7123e5de7239": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8dceef62298341808c65423b73679d2d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8f27695dd7ab4745b7888cfc174df06b": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.015294166555943, -23.522941249833913, 2.1015294159105595, 0, 0.5, 0.49999999925494193, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_d5284f80cd214abd9dcd78734cc2d327", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140327003609408, 140327003792480], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "8f45815c6f864be48e79d69d92c7ae96": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_def2b3b2d0214fb7898ed8d70fede04a", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "2525b145b63b4effbca3bad1c7b3a876", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "9436f45076cf4bad92dd16f5bd7bdbfc": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "99685fe1a4714e4cab9db15a0de37929": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_9e29b35268ca42879d48f9a48e9ef69d", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "e589b19522af45caaa88936e1eaf4f82", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "9e29b35268ca42879d48f9a48e9ef69d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9ed0980a6d324aa9a69d98c25afd3734": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a2c90822ec184b9bb0fd36d6ce700851": {"buffers": [{"data": "arHAAGqxwAB4e3wAeHt8AHA3FgBwNxYAcKWxAHClsQBsSDkAbEg5AHiLkQB4i5EAcaWwAHGlsABTzuQAU87kAHaVnQB2lZ0AXcPWAF3D1gBtQCsAbUArAHeQlgB3kJYANOP9ADTj/QA46P4AOOj+AG4/KQBuPykATyMAAE8jAABOIgAATiIAAHZ3dwB2d3cAbUQzAG1EMwBF2fEARdnxAA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AZwdwS5lfz7mWWA+gpH/wF8CBT9k2vM+4gXlwBQHoz6ybFY/G57IwEILZj+Sroo+LZCmwFQFVz+Fyz8/lbmAwFHbKD/pm8k++FNFwOy0Mz+SWo0+s0cNwLC9ID+86MU9zH/jv3qKZz8qfrA+BpVcv/W4FD8qrxI+4hhGP7ljUz9C/Uk/Ic+gP7BYbz/xHr8+dfwcQExkqj7AgYE80m5YQIt0Bj8AAAAAHHiDQEPIJT9FlUw/BgyuQLttPz8NWHI/Q+vWQHmAHz9rQ3M/g9f/QFrHIz8Hqv8+o7kJQfQPbT8ic0Q/B3MXQRTcQD+YsVs9", "encoding": "base64", "path": ["origins", "data"]}, {"data": "H4AzP2lNAD8N0w8/8nODv9lLIL28WUI926Evv9nxuT5k2Sy/oTzsvoQWTL/douo+Mf0Wv6kKLr8ULv++s2Z0v0Nto75dkFk+PWBVv7LTzr7bSuU+ZsIVv8L2gr7RhU4/Mf8NP/QUT7+sA58+DCo5P6vHJb5rqDY/wzEMv3LHJr+E+hO/+ob5PmGxXr8ewoE+ouLAPWc3qz7k53c/tCVyPmORTr0AAIA/QH5IPw0hl76KKhm/1vz5Pey2/b4asGS/aGjdvsoDfL7Whma/NHh9v2cdj75K8as6ttFcvucfWr9F5gi/HfmMPSm4Ab/NiWQ/", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140326963521184, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "a42619013e7d4c9583d9fcb21f7ce613": {"buffers": [{"data": "OOj+ADjo/gA46P4AOOj+ADjo/gA46P4AOOj+ADjo/gBOIgAATiIAAE4iAABOIgAATiIAAE4iAAA46P4AOOj+ADjo/gA46P4ATiIAAE4iAAB4fH0AeHx9AHh7fAB4e3wAeHt8AHh7fAB4fH0AeHx9AHh7fAB4e3wAeHx9AHh8fQB4fH0AeHx9AHh7fAB4e3wAeHx9AHh8fQB4e3wAeHt8AA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AAAYwQAAAD8AAAAAAAAIwQAAAD8AAAAAAADwwAAAAD8AAAAAAADQwAAAAD8AAAAAAACwwAAAAD8AAIA/AACQwAAAAD8AAIA/AABgwAAAAD8AAIA/AAAgwAAAAD8AAAAAAADAvwAAAD8AAAAAAAAAvwAAAD8AAIA/AAAAAAAAAD8AAAA/AAAAQAAAAD8AAAA/AABAQAAAAD8AAAA/AABAQAAAAD8AAAA/AACAQAAAAD8AAAA/AADAQAAAAD8AAAA/AADgQAAAAD8AAAA/AAAAQQAAAD8AAAA/AAAAQQAAAD8AAAA/AAAgQQAAAD8AAAA/", "encoding": "base64", "path": ["origins", "data"]}, {"data": "2nVuMQms2bAAAIA/LGSvr+xavi8AAIA/WrXXMFg3R60AAIA/Rr8vMRWaMzEAAIA/AExvL8bBa7EAAIC/XPJzMMTYJDEAAIC/Fx+/r2Kf3bAAAIC/impFMUr6VTEAAIA/deqbMD1DeLAAAIA/YMY8sakNB7IAAIC/AACAPz6u7jAMaDIxAACAvygVdjKotpGyAACAv5jwyy/088qvAACAP5ODDzD2GKIvAACAP2Q6jS0LeQqxAACAvzRmGjFRSRAxAACAvwBeZq3+oSUxAACAv+fdEDBQ1+utAACAP9UTpzAIxJUwAACAv2zxt7GH17Gx", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140327004257920, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "a7717cdffe7b498a8558139ebbec1472": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_510ff9df99134161852d494810ec0b93", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "6fd32a1f1a8d4333a394a53acac476ff", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "a8e2a9c284d047429071c73c22331daa": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140167733694352, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 1, 20]}, "wireframe": false}}, "a9756547e58f4c2081c69368c5568498": {"buffers": [{"data": "bzAAAG8wAABsV08AbFdPAGuvvgBrr74AbE9EAGxPRAB1dXUAdXV1AHA2FABwNhQAcWpoAHFqaABsTEAAbExAAFYmAABWJgAAdZigAHWYoAA46P4AOOj+ADjo/gA46P4ATiIAAE4iAABOIgAATiIAADjo/gA46P4AOOj+ADjo/gA46P4AOOj+AE4iAABOIgAATiIAAE4iAAA46P4AOOj+AA==", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "bPwTwZgL3D6yQG0/vOUAwXIxHD++tzM/ozf5wBazPD5IQHY+DJnHwD5IWT/9Zz4/w5+rwEBDpjz1zgg/TEuOwIavPT5hg2I/C+99wOysJj8ifRc/HGgvwGTKWT9aQkM/BZqzvwGuyD6wfXo/IfNLv5DvAD6e/LM+AAAAPwAAAD8AAAAAAADAPwAAAD8AAAAAAAAgQAAAAD8AAIA/AABgQAAAAD8AAIA/AACQQAAAAD8AAAAAAACwQAAAAD8AAAAAAADQQAAAAD8AAAAAAADwQAAAAD8AAIA/AAAIQQAAAD8AAIA/AAAYQQEAAD8AAAAA", "encoding": "base64", "path": ["origins", "data"]}, {"data": "cnIAv6DRDz5jgVq/hEhjv5GLYb753s6+N3oTP3WmIT/c3wQ/Om8Gv3uQMr/0n/m+lQeMvsybdT9N74y99VnavT0oIT/CBkW/WnhvP6+zmr4P6Tu+yIH2PseUM7+zhAa/t19Gvv1HXT5h+3S/QuYXPziIPz/DBpg+NPhArxZcOq8AAIA/cIJyL9dooS4AAIA/BFNyr/0Zn64AAIC/8dnbriUkB68AAIC/xp0nsnp9VjEAAIA/dOeNLsgGLS8AAIA/Ui5Rsb/3DbAAAIA/aNFrMBOnPTAAAIC/n2aZq5v/uK4AAIC/TBMms0X60bMAAIA/", "encoding": "base64", "path": ["vectors", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140327003608304, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "ac22167277de40bb8a5977fcb879ea58": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140168505109520, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "ac46427a99f543b8bb1249dd518cbad3": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140167769580624, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "b0949c2742c04e3e956cca7ee0cf202b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b73662a0890047a4bd05fd5f2168e820": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b799730cec0a417f8c523b0a13eb5fba": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140327004255664, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "b990520c00f648faafd6cf9ecfc78bd9": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140167825918032, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "bbd24010062e47438f7e3889a0684c21": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.707952969879074, -24.636929444760327, 2.175795296317352, -0.04999999329447746, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_707cbd08d2c243858c403cc2e7b2da72", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167733694352], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "bf513e73f047443b82ed2ae3a540a3ed": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140168505155472, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "c9c4b950e6df4b6fb0516c1eb0100c2a": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_4add2eccd745459c92ad06c8e3b33c2f", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "2a7993b6478c4fa9a722c96604361ebb", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "cc29b8f284984533a26c6b31831c23b0": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140168505153232, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "cec39cf01619462b87a56732c60f1d2c": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140167699882896, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "d0b87029440f45cdbc45fe6ec105e117": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140168896354960, "mesh_detail": 2, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"compressed_buffer": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "d3be95f804754503bcf2d4f654694481": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d3dbe775c800488e81e463f8049b0e03": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_9436f45076cf4bad92dd16f5bd7bdbfc", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "799c75e5ad24481baba20c5ca1c47ac0", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "d5284f80cd214abd9dcd78734cc2d327": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d532e77e28ce44d08ee8f7634611896c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d6e3e220ea034d99bf55605c6de3cb8d": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AACgQQAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAD8AAAAAAAAAAAAAgD8AAAA/AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140326963666080, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [1, 1, 20]}, "wireframe": false}}, "d9fa7be23c1a4f2db1ca34791067766d": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.271799264135247, -23.84190681246264, 2.122793802398667, 0.04386138916015625, 0.5, 0.5000000149011612, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_5baf08fe4cef431693d2568b4a1cf424", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167825918032, 140168896354960], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "da243cb031724a8c83495aeae7c23548": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "dd20b1f9b02a4a6faa5615d159fb0928": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.707952969879074, -24.636929444760327, 2.1757952963173697, -0.04999999329447746, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_8a1dfb49b55444fe802d7123e5de7239", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140326963666080], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "def2b3b2d0214fb7898ed8d70fede04a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e101a3f6b01247e0afd9f3e5d44b108e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e2eaee171cd444a294b0b5941aa397df": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e5232c41cb8f4022b5f8b960f1e1c234": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e589b19522af45caaa88936e1eaf4f82": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.104426451465905, -23.825829875381913, 2.1217219897053297, -0.1127934455871582, 0.4999999701976776, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_15ed7e6d44f940dbb8eb46c965097f0f", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140326963521184, 140326963666032], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "e69e384bdba84e70beac8eb02523ace7": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.339572380584755, -24.048078940216122, 2.136538596014405, -0.025813579559326172, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_80edea68028d4f31a5aaaeb3ad454c55", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167733782032, 140167700028432], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "e9dc4e62c6304ee582241813b8899b15": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_8dceef62298341808c65423b73679d2d", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "1f3a513cc35d48cc932ccedc1cc47c77", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "ec17e21ebe9347f19ea07eac785a849e": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140327003792480, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}, "eedf33c90ff142dea35b38727bc21054": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f1337f9148194f7e89d9a2d756b6bd35": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [16.390031714087243, -23.92358787185776, 2.1282391924505917, 0.10763978958129883, 0.5000000149011612, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_d3be95f804754503bcf2d4f654694481", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140167733693136, 140168505109520], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "f3404f98d0a44f7b9d6816ebe5a30885": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "PlotModel", "state": {"_backend_version": "2.8.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.707952969879074, -24.636929444760327, 2.1757952963173697, -0.04999999329447746, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_e101a3f6b01247e0afd9f3e5d44b108e", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140326988812496], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "f6db340fc6004d439a77b65ee277dc09": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f8f27ca11fd346a593c96c517e312a11": {"model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "colors": {"compressed_buffer": {}, "dtype": "uint32", "shape": [20, 2]}, "compression_level": 0, "head_color": 255, "head_size": 1, "id": 140167733693136, "label_size": 1, "labels": [], "line_width": 0.01, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Vectors #1", "origin_color": 255, "origins": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "type": "Vectors", "use_head": true, "vectors": {"compressed_buffer": {}, "dtype": "float32", "shape": [20, 3]}, "visible": true}}, "ffefab44d0ed4241b824b314a41cd53d": {"buffers": [{"data": "", "encoding": "base64", "path": ["colors", "data"]}, {"data": "AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "", "encoding": "base64", "path": ["opacities", "data"]}, {"data": "AAAYwQAAAD8AAAA/AAAIwQAAAD8AAAA/AADwwAAAAD8AAAA/AADQwAAAAD8AAAA/AACwwAAAAD8AAAA/AACQwAAAAD8AAAA/AABgwAAAAD8AAAA/AAAgwAAAAD8AAAA/AADAvwAAAD8AAAA/AAAAvwAAAD8AAAA/AAAAPwAAAD8AAAA/AADAPwAAAD8AAAA/AAAgQAAAAD8AAAA/AABgQAAAAD8AAAA/AACQQAAAAD8AAAA/AACwQAAAAD8AAAA/AADQQAAAAD8AAAA/AADwQAAAAD8AAAA/AAAIQQAAAD8AAAA/AAAYQQAAAD8AAAA/", "encoding": "base64", "path": ["positions", "data"]}], "model_module": "k3d", "model_module_version": "2.8.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color": 5010096, "colorLegend": false, "colors": {"data": {}, "dtype": "uint32", "shape": [0]}, "compression_level": 0, "id": 140326963664208, "mesh_detail": 2, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Points #1", "opacities": {"data": {}, "dtype": "float32", "shape": [0]}, "opacity": 1, "point_size": 0.25, "positions": {"data": {}, "dtype": "float32", "shape": [20, 3]}, "shader": "3dSpecular", "type": "Points", "visible": true}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="02-tutorial-exchange.html" title="previous page">Tutorial 02: Exchange energy term</a>
+    <a class='right-next' id="next-link" href="04-tutorial-dmi.html" title="next page">Tutorial 04: Dzyaloshinskii-Moriya energy term</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

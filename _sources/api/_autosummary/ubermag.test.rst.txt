@@ -1,0 +1,6 @@
+ubermag.test
+============
+
+.. currentmodule:: ubermag
+
+.. autofunction:: test

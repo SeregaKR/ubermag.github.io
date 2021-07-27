@@ -1,0 +1,82 @@
+Table
+=====
+
+.. currentmodule:: ubermagtable
+
+.. autoclass:: Table
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Table.__dir__
+      
+      
+         ~Table.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Table.__lshift__
+      
+      
+      
+      
+      
+      
+      
+         ~Table.__repr__
+      
+      
+      
+      
+      
+      
+         ~Table.fromfile
+      
+      
+         ~Table.mpl
+      
+      
+         ~Table.selector
+      
+      
+         ~Table.slider
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Table.data
+      ~Table.units
+      ~Table.x
+      ~Table.xmax
+      ~Table.y
+   
+   
+
+   .. raw:: html
+
+      <hr>

@@ -1,0 +1,66 @@
+CGEvolver
+=========
+
+.. currentmodule:: oommfc
+
+.. autoclass:: CGEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~CGEvolver.__dir__
+      
+      
+         ~CGEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~CGEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~CGEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~CGEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

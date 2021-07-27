@@ -1,0 +1,47 @@
+﻿oommfc
+======
+
+.. automodule:: oommfc
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      CGEvolver
+      Driver
+      EulerEvolver
+      HysteresisDriver
+      MinDriver
+      RungeKuttaEvolver
+      SpinTEvolver
+      SpinXferEvolver
+      TimeDriver
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      compute
+      delete
+      test
+      test_docker
+   
+   
+
+   
+   
+   

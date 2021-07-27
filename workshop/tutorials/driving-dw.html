@@ -1,0 +1,1025 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. Current induced domain wall motion &#8212; ubermag  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="9. Exercise: Domain wall pair conversion" href="dw-pair-conversion.html" />
+    <link rel="prev" title="7. Periodic boundary conditions" href="periodic-boundary-conditions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption" role="heading">
+ <span class="caption-text">
+  Session 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first-ubermag-simulation.html">
+   1. Our first ubermag simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-basics.html">
+   2. Python basics
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetisation-field.html">
+   1. Magnetisation field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-equation.html">
+   2. Energy equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamics-equation.html">
+   3. Dynamics equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vortex-dynamics.html">
+   4. Vortex dynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spatially-varying-parameters1.html">
+   5. Spatially varying parameters 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spatially-varying-parameters2.html">
+   6. Spatially varying parameters 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="periodic-boundary-conditions.html">
+   7. Periodic boundary conditions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Current induced domain wall motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dw-pair-conversion.html">
+   9. Exercise: Domain wall pair conversion
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="choosing-runner.html">
+   1. Choosing runner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multiple-terms.html">
+   2. Multiple energy terms of the same class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rkky.html">
+   3. RKKY energy term
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-dependent-field.html">
+   4. Time-varying field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="negative-A.html">
+   5. Negative exchange energy constant
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-term-computations.html">
+   6. Energy term computations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-operations1.html">
+   7. Field operations 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-operations2.html">
+   8. Field operations 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file-formats.html">
+   9. Saving and reading fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="line.html">
+   10. Line object
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-basics.html">
+   11. Table basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-visualisation.html">
+   12. Table visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="table-interactive-plot.html">
+   13. Table interactive plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="region-visualisation.html">
+   14. Region visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mesh-visualisation.html">
+   15. Mesh visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mpl-visualisation.html">
+   16.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+   visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="k3d-visualisation.html">
+   17. Visualising fields using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     k3d
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interactive-plotting.html">
+   18. Interactive plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="various-topics.html">
+   19. Various topics
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Session 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="angle-hls-plot.html">
+   1. Angle and HLS plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hysteresis.html">
+   2. Hysteresis simulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dirname.html">
+   3. Custom directory name
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fixed-subregions.html">
+   4. Fixed subregions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="parallel.html">
+   5. Running simulations in parallel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mindriver-steps.html">
+   6.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     MinDriver
+    </span>
+   </code>
+   steps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="subfields.html">
+   7. Subfields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="space-time-field.html">
+   8. Both spatially and time varying field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sine-hysteresis.html">
+   9. Sine-hysteresis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="integrals.html">
+   10. Integrals
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Exercise">
+   8.1. Exercise
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Current-induced-domain-wall-motion">
+<h1><span class="section-number">8. </span>Current induced domain wall motion<a class="headerlink" href="#Current-induced-domain-wall-motion" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we show how Zhang-Li spin transfer torque (STT) can be included in micromagnetic simulations. To illustrate that, we will try to move a domain wall pair using spin-polarised current.</p>
+<p>Let us simulate a two-dimensional sample with length <span class="math notranslate nohighlight">\(L = 500 \,\text{nm}\)</span>, width <span class="math notranslate nohighlight">\(w = 20 \,\text{nm}\)</span> and discretisation cell <span class="math notranslate nohighlight">\((2.5 \,\text{nm}, 2.5 \,\text{nm}, 2.5 \,\text{nm})\)</span>. The material parameters are:</p>
+<ul class="simple">
+<li><p>exchange energy constant <span class="math notranslate nohighlight">\(A = 15 \,\text{pJ}\,\text{m}^{-1}\)</span>,</p></li>
+<li><p>Dzyaloshinskii-Moriya energy constant <span class="math notranslate nohighlight">\(D = 3 \,\text{mJ}\,\text{m}^{-2}\)</span>,</p></li>
+<li><p>uniaxial anisotropy constant <span class="math notranslate nohighlight">\(K = 0.5 \,\text{MJ}\,\text{m}^{-3}\)</span> with easy axis <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in the out of plane direction <span class="math notranslate nohighlight">\((0, 0, 1)\)</span>,</p></li>
+<li><p>gyrotropic ratio <span class="math notranslate nohighlight">\(\gamma = 2.211 \times 10^{5} \,\text{m}\,\text{A}^{-1}\,\text{s}^{-1}\)</span>, and</p></li>
+<li><p>Gilbert damping <span class="math notranslate nohighlight">\(\alpha=0.3\)</span>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">mc</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+
+<span class="c1"># Definition of parameters</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">500e-9</span>  <span class="c1"># sample length (m)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">20e-9</span>  <span class="c1"># sample width (m)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">2.5e-9</span>  <span class="c1"># discretisation cell size (m)</span>
+<span class="n">Ms</span> <span class="o">=</span> <span class="mf">5.8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">15e-12</span>  <span class="c1"># exchange energy constant (J/)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">3e-3</span>  <span class="c1"># Dzyaloshinkii-Moriya energy constant (J/m**2)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mf">0.5e6</span>  <span class="c1"># uniaxial anisotropy constant (J/m**3)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># easy axis</span>
+<span class="n">gamma0</span> <span class="o">=</span> <span class="mf">2.211e5</span>  <span class="c1"># gyromagnetic ratio (m/As)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Gilbert damping</span>
+
+<span class="c1"># Mesh definition</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+
+<span class="c1"># Micromagnetic system definition</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;domain_wall_pair&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;Cnv&quot;</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="n">gamma0</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Because we want to move a DW pair, we need to initialise the magnetisation in an appropriate way before we relax the system.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">m_value</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="mf">20e-9</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">40e-9</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_value</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f9ca1fa5eaa44656a7b2402e100121e7", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>Now, we can relax the magnetisation.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">md</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:12]... (4.6 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c73bdcf7d6454378b10a8281d3b59fdd", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>Now we can add the STT term to the dynamics equation.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ux</span> <span class="o">=</span> <span class="mi">400</span>  <span class="c1"># velocity in x-direction (m/s)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># non-adiabatic STT parameter</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">+=</span> <span class="n">mm</span><span class="o">.</span><span class="n">ZhangLi</span><span class="p">(</span><span class="n">u</span><span class="o">=</span><span class="n">ux</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">)</span>  <span class="c1"># please notice the use of `+=` operator</span>
+</pre></div>
+</div>
+</div>
+<p>And drive the system for <span class="math notranslate nohighlight">\(0.5 \,\text{ns}\)</span>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">td</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">()</span>
+<span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.5e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:12]... (3.4 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c7aa6cdfd9b746888128975ff317eb45", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>We see that the DW pair has moved to the positive <span class="math notranslate nohighlight">\(x\)</span> direction. Now, let us visualise the motion using interactive plot.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">k3d</span>
+<span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">plot</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">slider</span><span class="p">())</span>
+<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">interactive_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9dce1cf8d3124c7bb0b545ee02f0d284", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1a48f02a655f4fb4a124dbc5e42abbe5", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="section" id="Exercise">
+<h2><span class="section-number">8.1. </span>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h2>
+<p>Modify the previous code to obtain one domain wall instead of a domain wall pair and move it using the same current.</p>
+<p><strong>Solution</strong></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Definition of parameters</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">500e-9</span>  <span class="c1"># sample length (m)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">20e-9</span>  <span class="c1"># sample width (m)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">2.5e-9</span>  <span class="c1"># discretisation cell size (m)</span>
+<span class="n">Ms</span> <span class="o">=</span> <span class="mf">5.8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">15e-12</span>  <span class="c1"># exchange energy constant (J/)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">3e-3</span>  <span class="c1"># Dzyaloshinkii-Moriya energy constant (J/m**2)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mf">0.5e6</span>  <span class="c1"># uniaxial anisotropy constant (J/m**3)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># easy axis</span>
+<span class="n">gamma0</span> <span class="o">=</span> <span class="mf">2.211e5</span>  <span class="c1"># gyromagnetic ratio (m/As)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Gilbert damping</span>
+
+<span class="c1"># Mesh definition</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+
+<span class="c1"># Micromagnetic system definition</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;domain_wall&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv&#39;</span><span class="p">)</span> <span class="o">+</span> \
+                <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="n">gamma0</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">m_value</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="c1"># Modify the following line</span>
+    <span class="k">if</span> <span class="mf">20e-9</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># We have added the y-component of 1e-8 to the magnetisation to be able to</span>
+    <span class="c1"># plot the vector field. This will not be necessary in the long run.</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_value</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "7bca1070750545a9b91e00097a9aefa1", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">md</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:12]... (2.7 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "fb979d5067eb465aa2628465408693e0", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ux</span> <span class="o">=</span> <span class="mi">400</span>  <span class="c1"># velocity in x direction (m/s)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># non-adiabatic STT parameter</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">+=</span> <span class="n">mm</span><span class="o">.</span><span class="n">ZhangLi</span><span class="p">(</span><span class="n">u</span><span class="o">=</span><span class="n">ux</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">)</span>
+
+<span class="n">td</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">()</span>
+<span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.5e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d_scalar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:12]... (3.5 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bc5664dd2ee745a6894c17e2d26efd61", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"0123d9c40e2846be9ca2e48d6d5d7bd5": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e02b95f2735e41dbb073eaa3fdd4a087", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "8cff0968f2ae405285816b60db45e4e1", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "0456166f6aaf4b9f9144ba21726c687c": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4401729344, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "04f6a8a8d0aa42f693925405edbbb665": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_95d7b0164e8d47ea9f312f1af74a4e56", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "2e4ba19c13224af2841882d9c68e2244", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "05467e3795a74e3e977869dcbda80426": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "05d53fe496204442ba29c61434ec6528": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "07ab63c5f32e4f92a86e3af03f5bd03f": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140685695444560, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "0bd6509781a149ebbb817d533670c71d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "0c5a344d9bd94783adcba90b2900bd6b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "0e38ae06aaa94264a17b82522107a14d": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4401729488, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "0ff6ebe166f044b68bc757a485c17cb2": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_0bd6509781a149ebbb817d533670c71d", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "ec249499d4c64e81995c4814478c1e43", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "10c2a4f3bd3c4aa3bc3a90ac87f51aef": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_b6df7d2ac32e4b92af4f3e24052eb069", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "7a99bffc31c14ac299881ad0fdff850b", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "12fb562439664650bdb25c3ab2f917e6": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "144016378ff5488cafadf186fc214be2": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "16c3d5d79d824741b0b70db23b1dd116": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "191b6cd556c6457a8eba5fe5859a7477": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1922a35ec15249148f803ac9003f6825": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1989c10d3ab44287bc068c2c39c30d5e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1d0a194ce8a7451e867eca154d23c7c9": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "22591fd405d8428a8ae06aaad17058f9": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_ea460d4485c54d69b92ec2d51ed49be2", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140686828110928], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "2369e5932eaa4b3192571e09f2801723": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1d0a194ce8a7451e867eca154d23c7c9", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "88e26064f13740c199f34dbd225806f2", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "248fe3bd2c0f4e2d8b6e46087a534bee": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGIc4+D/qj1F/jPpj1B+j/qArAAD/P0XB", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4875167680, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "29fb11c459134668a8d226049bc1c60a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2e4ba19c13224af2841882d9c68e2244": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_9cccf105e90b495a8af3339a2fcb64b5", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4722925472], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "2f2d82bf181240e1b7257f6553a62b70": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2feab89f915b4e1fb2d2f8f8f0a9022e": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_12fb562439664650bdb25c3ab2f917e6", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4909656096], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "31ea48f3c278494f8fcf66c97bdeeaf1": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_1922a35ec15249148f803ac9003f6825", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4874849152], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "349e2276601440d5aef85f1dbf06fbfc": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "34a36ba890e54ca2b0842571cd82ce46": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "36011f815ffb4cb0a249cb5996e3ff70": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4722925472, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "37eda187ac4b46e9bd2cd79d565f67bd": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757366480, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "386774c13ae04a9aa7de8af979e06131": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3b23a13b982341a6903ca55ab21adb46": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_386774c13ae04a9aa7de8af979e06131", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "3f1e753e3ae641a6acf422d59aaf6d84", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "3c276f8e225d4ef6856d195f78c865f7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3c4fedf085c442368627112566cced41": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_c721aa81e0dc47f8b47528cbf63bab1e", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757364944], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "3d8d21f3d9ac44c5abbe5774319fdee7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3f1e753e3ae641a6acf422d59aaf6d84": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_797fc9c1d3db42c2bdf55f90fee820dc", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140686562462352], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "41bccf306d924475ba99e58c45b4de2c": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzF1TwFQi+fHh2fkm2lZwQLzcQ8Ax2wMsv9vH7r9+Y4OfX15eXZplL8bKzDgXAxsn/+dffv//Qwd8/399cWZZpJsHNysw0+AEzMxvvl99///1HB//+/HgL9gcXKxMT46AHTMysPMPFH8MlXQ2XfP5qmJS7ABso79M=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757436592, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "41fd182c07c94750aa587b47228d5977": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "4400d9c0f58f4d149576cb3082a9a078": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_9612b5f40aae4495b2b77836ba6e7020", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140685695444560], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "46976fac3d6b469f9a9991189675bd49": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e48a7f2a631d49ee84b7cc9d4dbd8570", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "2feab89f915b4e1fb2d2f8f8f0a9022e", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "4792cf0f06d945f8975e2ebb502a0979": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "4fd3b09deac5469c97311d1ee490a767": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4909656096, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "50aca44ec5c445c395169da12137d4cb": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_e0773e58ad5141bd914cce6fcaa8122d", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4402128256], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "54eec8afd8e94c23b8b1ff388e4d8e35": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_191b6cd556c6457a8eba5fe5859a7477", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140686562459728], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "5628933520a046dda499a983233292fc": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_05d53fe496204442ba29c61434ec6528", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "22591fd405d8428a8ae06aaad17058f9", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "572846796a21424880632e3caea94c20": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzF1TwFQi+fHh2fkm2lZwQLzcQ8Ax2wMsv9vH7r9+Y4OfX15eXZplL8bKzDgXAxsn/+dffv//Qwd8/399cWZZpJsHNysw0+AEzMxvvl99///1HB//+/HgL9gcXKxMT46AHTMysPMPFH8MlXQ2XfP5qmJS7ABso79M=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4874849152, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "5997f240165e4e9091a08bb3871284ed": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [302.59660638629975, -279.48363557240316, 226.30516026449712, 249.87499991897494, 9.874999970197678, 1.25, -0.24414843660406907, 0.5208424257067558, 0.8179943205717822], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_a237ceea5c6d40bc88452e6ca2640d80", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757436592], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "5c2f9149ffe44d30a7ca46bf15d6c691": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_29fb11c459134668a8d226049bc1c60a", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140685657200016], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "5dfd5a628cb94520bfa786110526d884": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_1989c10d3ab44287bc068c2c39c30d5e", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4401729488], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "6634dc40b67544aaa5291a0faac25974": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140685657200016, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "69488d3b18734cc28723b8586c2ef428": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "6b78a8449f2a4cf3bee33ba7fc4a4359": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_4792cf0f06d945f8975e2ebb502a0979", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4402128496], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "6c72e20f621347088ad8b256c30138f0": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_05467e3795a74e3e977869dcbda80426", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "6d50d83840f647b3a4fd961c3571ab19", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "6d50d83840f647b3a4fd961c3571ab19": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [589.3951098827881, -499.40516497552187, 436.4112798422772, 249.87499991897494, 9.874999970197678, 1.25, -0.29588331525308786, 0.44382497287963135, 0.8458560499300317], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_f24fb5e6c9a54adeac4dbb1b9d42136b", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757010272], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "6d7ff9e577604f2f836fd1642d5c5dc5": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "6ed04c9a081f4bde8683d645da0b2bea": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_2f2d82bf181240e1b7257f6553a62b70", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "fb5619367abe4e27a6e44d73a65954b9", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "710eb40e9e3040dbb1f25b94ac34458a": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_16c3d5d79d824741b0b70db23b1dd116", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "5dfd5a628cb94520bfa786110526d884", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "718fa50a0b264513a3a875f75211cd44": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757364944, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "7223b52c09c54c9baa7625f4d1fd9c33": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_898dbe729e4c4051b0fa97e7db7d816f", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "81d9cf339d944efdbfbd5ef42d403193", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "77aef1aa258f4df79e6acf58968742c8": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_3d8d21f3d9ac44c5abbe5774319fdee7", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "5c2f9149ffe44d30a7ca46bf15d6c691", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "797fc9c1d3db42c2bdf55f90fee820dc": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "7a99bffc31c14ac299881ad0fdff850b": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [321.12110345714035, -334.8844978750366, 193.68876375213927, 249.87499991897494, 9.874999970197678, 1.25, -0.1856401344486261, 0.39852761214714255, 0.8981723013087142], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_f842ba7baf3e492d8e21d3e8071b7f8c", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757297568], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "7b3216cef86e417ab540a9d740fc3cc9": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "7c9180eaa4cc46ddb2efadf870fc4f29": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "812b5caac9ee4a8b8c2d93a7d6871506": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_144016378ff5488cafadf186fc214be2", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "4400d9c0f58f4d149576cb3082a9a078", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "81d9cf339d944efdbfbd5ef42d403193": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_41fd182c07c94750aa587b47228d5977", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4875167680], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "84b2e61c859e4e82b53b74ddb740b5c6": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8796b3e4898f4150b35ec9e628f5d2ff": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "88e26064f13740c199f34dbd225806f2": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_ec64f52829e04bfeaa1d33f740cdef3c", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4909594368], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "898dbe729e4c4051b0fa97e7db7d816f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "89bd39f3d61f4b2abdef92e85fa9445c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8a0ea05ce2754a5996b4de9fa3d59d8c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_69488d3b18734cc28723b8586c2ef428", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "9c04402102b741f5a70ceb5247b9c752", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "8cff0968f2ae405285816b60db45e4e1": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_3c276f8e225d4ef6856d195f78c865f7", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4874846896], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "8fdfee1437ab44098995468871091993": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4402128256, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "911bdf6875ff4395a14222bb1883a969": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9268f8a4ecf34f65ae48d116d9080577": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_349e2276601440d5aef85f1dbf06fbfc", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "6b78a8449f2a4cf3bee33ba7fc4a4359", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "95d7b0164e8d47ea9f312f1af74a4e56": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9612b5f40aae4495b2b77836ba6e7020": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "97a4561627564f4fb7d5ea204996948f": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757366240, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "98e32c413e434344b0f99be1a89e7abb": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGIc4+D/qj1F/jPpj1B+j/qArAAD/P0XB", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757297568, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "9b0639f1bcf341a580ea8d450e1634bc": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_8796b3e4898f4150b35ec9e628f5d2ff", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4401729344], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "9c04402102b741f5a70ceb5247b9c752": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [396.6940980973133, -206.65167015708275, 207.36730924250898, 249.87499991897494, 9.874999970197678, 1.25, -0.31851602059813067, 0.47803630876950115, 0.8185528890183958], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_911bdf6875ff4395a14222bb1883a969", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757368064], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "9cccf105e90b495a8af3339a2fcb64b5": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a187ea22717b43e4b4d9f51d0341db5b": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp78ubDp8+fP38ZHODr16/fvv/48f3z0+NT40zlRQX4eHl58ANubi4uLh6ht19+/Pz16/dgAX+A4O+fX58f7e8M0BTl4WBnYyUEWFhYWNl5Pv74/ffvv8EF/v78cGdzlbOiAAcrMzMTEYCZlevTT6Av/g8q8O/P9zeXlmaZS/GwMjMxEgOYWLg+//o72Lzx9/eXZyemRumKcLIQ6Q1mVm6QPwZXovr7+8eH+3tavVX42YlKVMBkxcIGyh+gvPVn0OT0Xz9/fHl1bX2ZgywvGwszCygXEwBsbOxcAq8/f/327RuwvBskJe/nz58+vH54amGmhRQvJwcHJxc3Nzf+gpeXl5dPUAIA0C23aQ==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4909594368, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "a237ceea5c6d40bc88452e6ca2640d80": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a3f643c033204a02986a496da538d328": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a6c3c9ef875a4267829ef35d0f4c3148": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_7c9180eaa4cc46ddb2efadf870fc4f29", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "3c4fedf085c442368627112566cced41", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "b6df7d2ac32e4b92af4f3e24052eb069": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "bb85bf0be8934be48ff5318c4af74207": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f7aab4941fcb4a229a159afe74aee6b8", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "50aca44ec5c445c395169da12137d4cb", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "bd1933371bf54e69aa76a9d9588f2243": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140686828110928, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "bdaa955242ae4b43823b565b5ea22178": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140685739841168, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "c0fdfe4d70ab4bc9b08d63b206ab429f": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_a3f643c033204a02986a496da538d328", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "9b0639f1bcf341a580ea8d450e1634bc", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c263ede511554301949ffec17703d5a2": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757368064, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "c721aa81e0dc47f8b47528cbf63bab1e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "cec178839aa24f4aacb89fdd2aa4ea0a": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4909656864, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "d19d66ac32904b239d57768574b92b08": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_d7e71bca1370427bb90e12555bca6e40", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "54eec8afd8e94c23b8b1ff388e4d8e35", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "d250e8d39da940c6a4cb2810943988d3": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140686562459728, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "d7b1955e88e44854bdf10db8f3b667d1": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d7e71bca1370427bb90e12555bca6e40": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d86ea35914544665b48c5879c8c1b4ec": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNr7/x8CGKHg/xAHo/4Y9ceoP0b9MeoP+gAAToT6jA==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4874846896, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "d9b60ac0b4a14254bdbad723f13fb028": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_84b2e61c859e4e82b53b74ddb740b5c6", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140685739841168], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "de75ea6719f14407a43a3222d1e5d268": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrNlb1Lw0AYxrGXpNcmaQutYFFa6KLoWOqkoJsOOiroXDqLiKuIOGt3EV0VxE1BNyu6KXRRKFSIoK3amMvn5UMvpbapf8H9pruX9+B94H2ekz5kBSGkUoGmabphmoYi3eyv5DOpREwUhR6iGEukMvnVckVS/DZd0/xXCCmtt0/VtDC2KcEhuA5W6lc7C6MpAYY5NggXhsLg2OLu9QvCpI/QfoUtXf42bdf1qMK1Wk9nGzPZOGQBCAUBgIXx7Ozm+bNsBYYmylXFL/zQhOcYjYejYmGIZ0FooJ8QYPl0oXT82DSc3tSeZ2sIu5TJcLEqVfaWxpOQ+S+DCGFgcmK5fPuqBuf2HN3XQdVSubbZql1szeViXP9SdVaLi+fmty9rctAPrq0Tfzhdw1AAtkz0Xj1ZmxoWOAYwhK7L/QtgOGFkev202kAkn/6ywbbUJtJ0nQSYRkfykgyVm/W7g2IhLUYgjER5nu+kLjlF/ZKYniwd3teb/n/Rzmoyv/r1C/DlQAE=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4402128496, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "e02b95f2735e41dbb073eaa3fdd4a087": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e06f1c68f29a4cab8c1e9fce967dce41": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp78ubDp8+fP38ZHODr16/fvv/48f3z0+NT40zlRQX4eHl58ANubi4uLh6ht19+/Pz16/dgAX+A4O+fX58f7e8M0BTl4WBnYyUEWFhYWNl5Pv74/ffvv8EF/v78cGdzlbOiAAcrMzMTEYCZlevTT6Av/g8q8O/P9zeXlmaZS/GwMjMxEgOYWLg+//o72Lzx9/eXZyemRumKcLIQ6Q1mVm6QPwZXovr7+8eH+3tavVX42YlKVMBkxcIGyh+gvPVn0OT0Xz9/fHl1bX2ZgywvGwszCygXEwBsbOxcAq8/f/327RuwvBskJe/nz58+vH54amGmhRQvJwcHJxc3Nzf+gpeXl5dPUAIA0C23aQ==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 4757010272, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "e0773e58ad5141bd914cce6fcaa8122d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e48a7f2a631d49ee84b7cc9d4dbd8570": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "e6144b2151c943689d74f918b732fc46": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e92362b98e7a492cbc0958bb5d049bcf", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "d9b60ac0b4a14254bdbad723f13fb028", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "e92362b98e7a492cbc0958bb5d049bcf": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "ea460d4485c54d69b92ec2d51ed49be2": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "ea8ab1128afe4a3fa8137d36a3626f82": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_d7b1955e88e44854bdf10db8f3b667d1", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "fb52b9a5cd80488eb9ebaf3d6b222fef", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "ec249499d4c64e81995c4814478c1e43": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.84421012353145, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_89bd39f3d61f4b2abdef92e85fa9445c", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4909656864], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "ec64f52829e04bfeaa1d33f740cdef3c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f24fb5e6c9a54adeac4dbb1b9d42136b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f361faf7f2b84da2b37f8733472eb748": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_0c5a344d9bd94783adcba90b2900bd6b", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "31ea48f3c278494f8fcf66c97bdeeaf1", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f6f1a984686c4c2d9d79e701378645b3": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYPjlzAAHVVD2AkcIreCIkFNwAIrbM6CABnsAu2IFOw==", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNp79fHzFxTwFQi+fHh6ZkGauawgLzcQ8CAAmCsgqR8x8fCDd5/BSgcD+Pzx1cfvv35jgJ9fX15YmGoiwcPOignYuES0wycde/r5x+/BAn59//j519+//9DA39/fX19clGoszsXKzIQOmFk4hLXCJh1/9vUXhsYBAn///vr85ffff//RwL8/MH+wMDGiAyYWDiGIP37/w9A5MAAY8F+Giz+GS7oaLvn81TApdwGUQj/2", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140686562462352, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 8, 200]}, "wireframe": false}}, "f7aab4941fcb4a229a159afe74aee6b8": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f842ba7baf3e492d8e21d3e8071b7f8c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f966343015c241338448a482c7ecc967": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_7b3216cef86e417ab540a9d740fc3cc9", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "5997f240165e4e9091a08bb3871284ed", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "fb52b9a5cd80488eb9ebaf3d6b222fef": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [310.7726881927099, -282.8488465102198, 183.45792875451198, 249.87499991897494, 9.874999970197678, 1.25, -0.2146705547468107, 0.4337856165836355, 0.8750694782529274], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_34a36ba890e54ca2b0842571cd82ce46", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757366480], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "fb5619367abe4e27a6e44d73a65954b9": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [665.8171011542858, -614.0381518827686, 42.844210123531006, 249.87499991897494, 9.874999970197678, 1.25, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_6d7ff9e577604f2f836fd1642d5c5dc5", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [4757366240], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="periodic-boundary-conditions.html" title="previous page"><span class="section-number">7. </span>Periodic boundary conditions</a>
+    <a class='right-next' id="next-link" href="dw-pair-conversion.html" title="next page"><span class="section-number">9. </span>Exercise: Domain wall pair conversion</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

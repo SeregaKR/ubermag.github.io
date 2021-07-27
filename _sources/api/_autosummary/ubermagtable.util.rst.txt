@@ -1,0 +1,29 @@
+﻿ubermagtable.util
+=================
+
+.. automodule:: ubermagtable.util
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      columns
+      data
+      units
+   
+   
+
+   
+   
+   

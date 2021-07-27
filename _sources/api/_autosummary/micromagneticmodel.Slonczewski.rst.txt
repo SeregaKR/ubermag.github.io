@@ -1,0 +1,77 @@
+Slonczewski
+===========
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Slonczewski
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Slonczewski.__add__
+      
+      
+      
+         ~Slonczewski.__dir__
+      
+      
+         ~Slonczewski.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Slonczewski.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Slonczewski.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~Slonczewski.dmdt
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Slonczewski.J
+      ~Slonczewski.Lambda
+      ~Slonczewski.P
+      ~Slonczewski.eps_prime
+      ~Slonczewski.mp
+      ~Slonczewski.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

@@ -1,0 +1,83 @@
+Region
+======
+
+.. currentmodule:: discretisedfield
+
+.. autoclass:: Region
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Region.__contains__
+      
+      
+      
+         ~Region.__dir__
+      
+      
+         ~Region.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Region.__or__
+      
+      
+      
+      
+         ~Region.__repr__
+      
+      
+      
+      
+      
+      
+         ~Region.k3d
+      
+      
+         ~Region.mpl
+      
+      
+         ~Region.random_point
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Region.centre
+      ~Region.edges
+      ~Region.p1
+      ~Region.p2
+      ~Region.pmax
+      ~Region.pmin
+      ~Region.volume
+   
+   
+
+   .. raw:: html
+
+      <hr>

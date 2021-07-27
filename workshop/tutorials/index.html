@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 1 &#8212; ubermag  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Session 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Session-2">
+   Session 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Session-3">
+   Session 3
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Session-4">
+   Session 4
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <p><img alt="2a7be5c6add449ef84217453c33cbdd8" class="no-scaled-link" src="../../_images/logo.png" style="width: 100px;" /></p>
+<div class="section" id="Session-1">
+<h1>Session 1<a class="headerlink" href="#Session-1" title="Permalink to this headline">¶</a></h1>
+<p>In this session, we are going to familiarise ourselves with micromagnetics, Python, and Jupyter and we are going to spend most of the time looking at slides. Slides can be found in <code class="docutils literal notranslate"><span class="pre">slides</span></code> directory in the workshop <a class="reference external" href="https://github.com/ubermag/workshop">repository</a>. After slides, we are going to write our first Ubermag simulation and have a look at some Python basics.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="first-ubermag-simulation.html"><span class="doc">First Ubermag simulation</span></a></p></li>
+<li><p><a class="reference internal" href="python-basics.html"><span class="doc">Python basics</span></a></p></li>
+</ol>
+<p>We believe we do not need much Python knowledge in order to run ubermag. However, more you feel confident writing Python, more benefits you can get from ubermag. There are many resources online you can choose from. We can recommend the online one by Hans Fangohr:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fangohr.github.io/teaching/python/book.html">https://fangohr.github.io/teaching/python/book.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="Session-2">
+<h1>Session 2<a class="headerlink" href="#Session-2" title="Permalink to this headline">¶</a></h1>
+<p>In the previous session, we introduced some very basic concepts of Ubermag simulations, had a look at some basic Python syntax, and familiarised ourselves with Jupyter environment. In session 2, we are going to have a look into more details of Ubermag simulations, so we can start simulating some real-world problems. In the first half of the session, we are going to analyse the skeleton of Ubermag simulation and quickly go through the three main concepts (magnetisation field, energy equation, and
+dynamics equation). In each tutorial, we introduce some data analysis and visualisation concepts, which are then going to be the main focus of session 3. After the break, we are going to simulate vortex dynamics, drive domain walls with a spin-polarised current, and have a look at the exercise.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="magnetisation-field.html"><span class="doc">Magnetisation field</span></a></p></li>
+<li><p><a class="reference internal" href="energy-equation.html"><span class="doc">Energy equation</span></a></p></li>
+<li><p><a class="reference internal" href="dynamics-equation.html"><span class="doc">Dynamics equation</span></a></p></li>
+<li><p><a class="reference internal" href="vortex-dynamics.html"><span class="doc">Vortex dynamics</span></a></p></li>
+<li><p><a class="reference internal" href="spatially-varying-parameters1.html"><span class="doc">Spatially varying parameters 1</span></a></p></li>
+<li><p><a class="reference internal" href="spatially-varying-parameters2.html"><span class="doc">Spatially varying parameters 2</span></a></p></li>
+<li><p><a class="reference internal" href="periodic-boundary-conditions.html"><span class="doc">Periodic boundary conditions</span></a></p></li>
+<li><p><a class="reference internal" href="driving-dw.html"><span class="doc">Current induced domain wall motion</span></a></p></li>
+<li><p><a class="reference internal" href="dw-pair-conversion.html"><span class="doc">Exercise</span></a></p></li>
+</ol>
+</div>
+<div class="section" id="Session-3">
+<h1>Session 3<a class="headerlink" href="#Session-3" title="Permalink to this headline">¶</a></h1>
+<p>The main topic of this session is going to be data analysis and visualisation. However, similar to the previous sessions, we are going to go through tutorials, which are going to introduce a mixture of simulation techniques and micromagnetic concepts as well.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="choosing-runner.html"><span class="doc">Choosing runner</span></a></p></li>
+<li><p><a class="reference internal" href="multiple-terms.html"><span class="doc">Multiple energy terms of the same class</span></a></p></li>
+<li><p><a class="reference internal" href="rkky.html"><span class="doc">RKKY energy term</span></a></p></li>
+<li><p><a class="reference internal" href="time-dependent-field.html"><span class="doc">Time-dependent field</span></a></p></li>
+<li><p><a class="reference internal" href="negative-A.html"><span class="doc">Negative exchange energy constant</span></a></p></li>
+<li><p><a class="reference internal" href="energy-term-computations.html"><span class="doc">Energy term computations</span></a></p></li>
+<li><p><a class="reference internal" href="field-operations1.html"><span class="doc">Field operations 1</span></a></p></li>
+<li><p><a class="reference internal" href="field-operations2.html"><span class="doc">Field operations 2</span></a></p></li>
+<li><p><a class="reference internal" href="file-formats.html"><span class="doc">Field file formats</span></a></p></li>
+<li><p><a class="reference internal" href="line.html"><span class="doc">Line basics and visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="table-basics.html"><span class="doc">Table basics</span></a></p></li>
+<li><p><a class="reference internal" href="table-visualisation.html"><span class="doc">Table visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="table-interactive-plot.html"><span class="doc">Table interactive plots</span></a></p></li>
+<li><p><a class="reference internal" href="region-visualisation.html"><span class="doc">Region visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="mesh-visualisation.html"><span class="doc">Mesh visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="mpl-visualisation.html"><span class="doc">Field mpl visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="k3d-visualisation.html"><span class="doc">Field k3d visualisation</span></a></p></li>
+<li><p><a class="reference internal" href="interactive-plotting.html"><span class="doc">Interactive plotting</span></a></p></li>
+<li><p><a class="reference internal" href="various-topics.html"><span class="doc">Various topics</span></a></p></li>
+</ol>
+</div>
+<div class="section" id="Session-4">
+<h1>Session 4<a class="headerlink" href="#Session-4" title="Permalink to this headline">¶</a></h1>
+<p>Here we look at some new features of Ubermag regarding data analysis as well as simulation techniques.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="angle-hls-plot.html"><span class="doc">Angle and HLS plots</span></a></p></li>
+<li><p><a class="reference internal" href="hysteresis.html"><span class="doc">Hysteresis simulations and data analysis</span></a></p></li>
+<li><p><a class="reference internal" href="dirname.html"><span class="doc">Choosing directory</span></a></p></li>
+<li><p><a class="reference internal" href="fixed-subregions.html"><span class="doc">Fixed subregions</span></a></p></li>
+<li><p><a class="reference internal" href="parallel.html"><span class="doc">Running simulations in parallel</span></a></p></li>
+<li><p><a class="reference internal" href="mindriver-steps.html"><span class="doc">MinDriver steps and data analysis</span></a></p></li>
+<li><p><a class="reference internal" href="subfields.html"><span class="doc">Getting subfields</span></a></p></li>
+<li><p><a class="reference internal" href="space-time-field.html"><span class="doc">Both space and time varying fields</span></a></p></li>
+<li><p><a class="reference internal" href="sine-hysteresis.html"><span class="doc">“Sine-hysteresis”</span></a></p></li>
+<li><p><a class="reference internal" href="integrals.html"><span class="doc">Computing integrals</span></a></p></li>
+</ol>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

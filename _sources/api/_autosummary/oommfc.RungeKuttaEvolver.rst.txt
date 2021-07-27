@@ -1,0 +1,66 @@
+RungeKuttaEvolver
+=================
+
+.. currentmodule:: oommfc
+
+.. autoclass:: RungeKuttaEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~RungeKuttaEvolver.__dir__
+      
+      
+         ~RungeKuttaEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~RungeKuttaEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~RungeKuttaEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~RungeKuttaEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

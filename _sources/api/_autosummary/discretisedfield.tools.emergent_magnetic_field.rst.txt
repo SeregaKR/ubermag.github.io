@@ -1,0 +1,6 @@
+discretisedfield.tools.emergent\_magnetic\_field
+================================================
+
+.. currentmodule:: discretisedfield.tools
+
+.. autofunction:: emergent_magnetic_field

@@ -1,0 +1,1344 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesh subregions &#8212; ubermag  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    <link rel="shortcut icon" href="../../../_static/logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Mesh widgets" href="mesh-widgets.html" />
+    <link rel="prev" title="Mesh plane and line" href="mesh-line-plane.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logoL.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../quickstart.html">
+  Quickstart
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../workshop/index.html">
+  Workshop
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p class="caption" role="heading">
+ <span class="caption-text">
+  Packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../discretisedfield.html">
+   discretisedfield
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="region-basics.html">
+     Region basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="region-visualisation.html">
+     Region visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="region-facing-surfaces.html">
+     Region facing surfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-basics.html">
+     Mesh basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-visualisation.html">
+     Mesh visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-line-plane.html">
+     Mesh plane and line
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Mesh subregions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-widgets.html">
+     Mesh widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-pad.html">
+     Mesh pad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mesh-bc.html">
+     Mesh boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-definition.html">
+     Defining a uniform field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-spatially-varying.html">
+     Spatially varying fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-normalisation.html">
+     Field normalisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-operations.html">
+     Field operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-matplotlib-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-k3d-visualisation.html">
+     Field visualisation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       k3d
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-read-write.html">
+     Reading and writing fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-tools.html">
+     Field tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ovf2vtk.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ovf2vtk
+      </span>
+     </code>
+     tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/dev-test.html">
+     Dev test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticmodel.html">
+   micromagneticmodel
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-energy-term.html">
+     Deriving an energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-dynamics-term.html">
+     Deriving a dynamics term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/term-parameters.html">
+     Term parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/energy-terms.html">
+     Energy terms and energy equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/dynamics-terms.html">
+     Dynamics terms and dynamics equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/same-class-terms.html">
+     Multiple energy terms of the same class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/evolver-driver.html">
+     Deriving evolver and driver classes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/system.html">
+     Defining micromagnetic system
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/constants.html">
+     Constants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagnetictests.html">
+   micromagnetictests
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagnetictests/usage.html">
+     Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../oommfc.html">
+   oommfc
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/01-tutorial-zeeman.html">
+     Tutorial 01: Zeeman energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/02-tutorial-exchange.html">
+     Tutorial 02: Exchange energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/03-tutorial-uniaxialanisotropy.html">
+     Tutorial 03: Uniaxial anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/04-tutorial-dmi.html">
+     Tutorial 04: Dzyaloshinskii-Moriya energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/05-tutorial-cubicanisotropy.html">
+     Tutorial 05: Cubic anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/07-tutorial-standard-problem3.html">
+     Standard problem 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/08-tutorial-standard-problem4.html">
+     Tutorial 08: Standard problem 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/09-tutorial-standard-problem5.html">
+     Tutorial 09: Standard problem 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/10-tutorial-standard-problem-fmr.html">
+     Tutorial 10: FMR standard problem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/11-tutorial-deriving-fields.html">
+     Tutorial 11: Deriving energy values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/12-tutorial-stray-field.html">
+     Tutorial 12: Calculating a stray field using an airbox method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/13-tutorial-skyrmion.html">
+     Skyrmion in a disk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagtable.html">
+   ubermagtable
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-basics.html">
+     Table basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-merge.html">
+     Table merge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-visualisation.html">
+     Table visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-widgets.html">
+     Table widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-interactive-plot.html">
+     Table interactive plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagutil.html">
+   ubermagutil
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/imposing-typesystem.html">
+     Imposing
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       typesystem
+      </span>
+     </code>
+     on a class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/constant-attributes.html">
+     Constant attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/parameter-descriptor.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Parameter
+      </span>
+     </code>
+     descriptor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/otherwise-type.html">
+     Defining
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       otherwise
+      </span>
+     </code>
+     type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/si-prefix.html">
+     Extracting the SI prefix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/inherit-docs.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inherit_docs
+      </span>
+     </code>
+     decorator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/hysteresis.html">
+     Hysteresis values
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Mesh-subregions-visualisation">
+   Mesh subregions visualisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mpl">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k3d">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       k3d
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Mesh-subregions">
+<h1>Mesh subregions<a class="headerlink" href="#Mesh-subregions" title="Permalink to this headline">¶</a></h1>
+<p>Often we need to define subregions in the mesh. For instance, this can be if when we have two or more different materials in our mesh and it can make our life easier later when start defining fields and assigning different parameters to different subregions.</p>
+<p>As before, the region of the mesh we are going to use as an example is:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_{1} = (0, 0, 0)\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{p}_{2} = (l_{x}, l_{y}, l_{z})\]</div>
+<p>with <span class="math notranslate nohighlight">\(l_{x} = 100 \,\text{nm}\)</span>, <span class="math notranslate nohighlight">\(l_{y} = 50 \,\text{nm}\)</span>, and <span class="math notranslate nohighlight">\(l_{z} = 20 \,\text{nm}\)</span>, and we discretise it with cell <span class="math notranslate nohighlight">\((5\,\text{nm}, 5\,\text{nm}, 5\,\text{nm})\)</span>.</p>
+<p>Subregions in the mesh are defined by passing <code class="docutils literal notranslate"><span class="pre">subregions</span></code> attribute. It is a Python dictionary, whose keys are the names of subregions, whereas the values are the subregion objects. Names of subregions must be valid Python variable name strings (no spaces, no dashes, etc.) and the subregions are the region objects we introduced already.</p>
+<p>As an example, let us say we have two subregions of the same size, stacked on top of each other in the z-direction. More precisely, points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> of two subregions would be:</p>
+<p><strong>Subregion 1:</strong></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{p}_{1} = (0, 0, 0)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{p}_{2} = (l_{x}, l_{y}, l_{z}/2)\)</span></p>
+<p><strong>Subregion 2:</strong></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{p}_{1} = (0, 0, l_{z}/2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathbf{p}_{2} = (l_{x}, l_{y}, l_{z})\)</span></p>
+<p>Let us name our subregions 1 and 2 to be “bottom_subregion” and “top_subregion”. Accordingly, subregions dictionary is:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+
+<span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span> <span class="o">=</span> <span class="mf">100e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">20e-9</span>
+
+<span class="n">subregions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom_region&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span>
+              <span class="s1">&#39;top_region&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lz</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span><span class="p">))}</span>
+</pre></div>
+</div>
+</div>
+<p>Having the subregions dictionary, we can now pass it to our mesh:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">)</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="n">subregions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The mesh with two subregions is now defined. Please note that it is your responsibility that the subregions are well defined and “make sense”. If they overlap or do not cover the entire mesh region, no errors or warnings will be raised. This gives a lot of freedom to users how they can define the subregions, but also some responisibilites.</p>
+<p>Regarding the mesh operations we can perform, all the ones we showed before are still there, but now we can use subregion-specific ones as well. We can ask for the mesh subregions:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">subregions</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;bottom_region&#39;: Region(p1=(0.0, 0.0, 0.0), p2=(1e-07, 5e-08, 1e-08)),
+ &#39;top_region&#39;: Region(p1=(0.0, 0.0, 1e-08), p2=(1e-07, 5e-08, 2e-08))}
+</pre></div></div>
+</div>
+<p>This is simply a dictionary we used at the mesh definition. From the mesh we can extract a subregion mesh, by “indexing” it with the subregion name.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;bottom_region&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-07, 5e-08, 1e-08)), n=(20, 10, 2), bc=&#39;&#39;, subregions={})
+</pre></div></div>
+</div>
+<p>This returns a mesh defined on a subregion and with the same cell size we used at the mesh definition. So, we expect that one half of the total number of cells belong to each subregion:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>  <span class="c1"># total number of cells</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+800
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;bottom_region&#39;</span><span class="p">])</span>  <span class="c1"># number of cells in the bottom_region</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+400
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">len</span><span class="p">(</span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;bottom_region&#39;</span><span class="p">])</span>  <span class="c1"># number of cells in the top_region</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+400
+</pre></div></div>
+</div>
+<p>The object indexing operator returns is a mesh and we can perform all the typical mesh operations on it. For example, let us say we want to get the centre point of the <code class="docutils literal notranslate"><span class="pre">bottom_region</span></code>. First we need to extract the subregion (<code class="docutils literal notranslate"><span class="pre">[]</span></code>), then access its region (<code class="docutils literal notranslate"><span class="pre">.region</span></code>) and finally ask for its centre point (<code class="docutils literal notranslate"><span class="pre">.centre</span></code>):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="p">[</span><span class="s1">&#39;bottom_region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">centre</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(5e-08, 2.5e-08, 5e-09)
+</pre></div></div>
+</div>
+<div class="section" id="Mesh-subregions-visualisation">
+<h2>Mesh subregions visualisation<a class="headerlink" href="#Mesh-subregions-visualisation" title="Permalink to this headline">¶</a></h2>
+<p>Similar to region and mesh, subregions can be plotted either using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (<code class="docutils literal notranslate"><span class="pre">mpl_subregions</span></code>) or <code class="docutils literal notranslate"><span class="pre">k3d</span></code> (<code class="docutils literal notranslate"><span class="pre">k3d_subregions</span></code>).</p>
+<div class="section" id="mpl">
+<h3><code class="docutils literal notranslate"><span class="pre">mpl</span></code><a class="headerlink" href="#mpl" title="Permalink to this headline">¶</a></h3>
+<p>Defaults <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_15_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_15_0.png" />
+</div>
+</div>
+<p>If we want to change the figure size, we can pass <code class="docutils literal notranslate"><span class="pre">figsize</span></code> parameter. Its value must be a lenth-2 tuple, with the first element being the size in the horizontal direction, whereas the second element is the size in the vertical direction.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_17_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_17_0.png" />
+</div>
+</div>
+<p>The color of the lines depicting subregions we can choose by passing <code class="docutils literal notranslate"><span class="pre">color</span></code> argument. <code class="docutils literal notranslate"><span class="pre">color</span></code> must be a list which consists of valid <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colours. Elements of the list can be RGB hex-strings (<a class="reference external" href="http://www.javascripter.net/faq/rgbtohex.htm">online converter</a>). If the number of colours in <code class="docutils literal notranslate"><span class="pre">color</span></code> is smaller than the number of subregions, the values of <code class="docutils literal notranslate"><span class="pre">color</span></code> will be used in cycle.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;#f33f00&#39;</span><span class="p">,</span> <span class="s1">&#39;#0000cf&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_19_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_19_0.png" />
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> automatically chooses the SI prefix (nano, micro, etc.) it is going to use to divide the axes with and show those units on the axes. Sometimes (e.g. for thin films), <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> does not choose the SI prefix we expected. In those cases, we can explicitly pass it using <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> argument. <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> can be passed as <span class="math notranslate nohighlight">\(10^{n}\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is a multiple of 3 (…, -6, -3, 0, 3, 6,…). For instance, if <code class="docutils literal notranslate"><span class="pre">multiplier=1e-6</span></code> is passed, all axes will be
+divided by <span class="math notranslate nohighlight">\(1\,\mu\text{m}\)</span> and <span class="math notranslate nohighlight">\(\mu\text{m}\)</span> units will be used as axis labels.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">multiplier</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_21_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_21_0.png" />
+</div>
+</div>
+<p>If we want to save the plot, we pass <code class="docutils literal notranslate"><span class="pre">filename</span></code>, mesh plot is going to be shown and the plot saved in our working directory as a PDF.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;my-subregions-plot.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_23_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_23_0.png" />
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">mpl</span></code> subregions plot is based on <code class="docutils literal notranslate"><span class="pre">`matplotlib.pyplot.plot</span></code> function &lt;<a class="reference external" href="https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.plot.html">https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.plot.html</a>&gt;`__. Therefore, any parameter accepted by it can be passed. For instance:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_25_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_25_0.png" />
+</div>
+</div>
+<p>Finally, we show how to expose the axes on which the subregions are plotted, so that we can customise them. We do that by creating the axes ourselves and then passing them to <code class="docutils literal notranslate"><span class="pre">mpl</span></code> function.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Create the axes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add the region to the axes</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># Customise the axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;length&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Text(0.5, 0, &#39;height&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_27_1.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_27_1.png" />
+</div>
+</div>
+<p>This way, by exposing the axes and passing any allowed <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code> argument, we can customise the plot any way we like (as long as it is allowed by <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>).</p>
+<p>Sometimes it is not necessary to define subregions that alltogether cover the whole mesh. Then, it can be usefull to also show the whole region to better visualise the arangement of subregions. This can be done by specifying <code class="docutils literal notranslate"><span class="pre">show_region=True</span></code>. Customisation of the visualisation of the whole region is currently not supported.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span> <span class="o">=</span> <span class="mf">100e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">20e-9</span>
+
+<span class="n">subregions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;bottom_subregion&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mf">20e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">40e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">)),</span>
+              <span class="s1">&#39;top_subregion&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mf">80e-9</span><span class="p">,</span> <span class="mf">40e-9</span><span class="p">,</span> <span class="n">lz</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span><span class="p">))}</span>
+
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">)</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">lz</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="n">subregions</span><span class="p">)</span>
+
+<span class="n">mesh</span><span class="o">.</span><span class="n">mpl_subregions</span><span class="p">(</span><span class="n">show_region</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_29_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_29_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="k3d">
+<h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#k3d" title="Permalink to this headline">¶</a></h3>
+<p>Default k3d plot is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "cb5710e2ce264add9d2f0725430187b0", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>The colour of subregions we can change by passing <code class="docutils literal notranslate"><span class="pre">color</span></code> argument. <code class="docutils literal notranslate"><span class="pre">color</span></code> must be a list which consists of valid <code class="docutils literal notranslate"><span class="pre">int</span></code> colours. If the number of colours in <code class="docutils literal notranslate"><span class="pre">color</span></code> is smaller than the number of subregions, the values of <code class="docutils literal notranslate"><span class="pre">color</span></code> will be used in cycle.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;12345&#39;</span><span class="p">,</span> <span class="s1">&#39;54321&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "4e68a13e68d8429695c8fd8f277c6985", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>Similar to the <code class="docutils literal notranslate"><span class="pre">mpl</span></code> plot, we can change the axes multiplier.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">(</span><span class="n">multiplier</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0c5608e8d0da4ac2957ba91a55216c73", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> plot is based on <a class="reference external" href="https://k3d-jupyter.org/k3d.html#k3d.factory.voxels">k3d.voxels</a>, so any parameter accepted by it can be passed. For instance:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">(</span><span class="n">wireframe</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "560c021c1cd3412883405d1353ac20e2", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>We can also expose <code class="docutils literal notranslate"><span class="pre">k3d.Plot</span></code> object and customise it.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<span class="kn">import</span> <span class="nn">k3d</span>
+
+<span class="c1"># Expose plot object</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+
+<span class="c1"># Add region to the plot</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">k3d_subregions</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+
+<span class="c1"># Customise the plot</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;\text</span><span class="si">{length}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\text</span><span class="si">{width}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\text</span><span class="si">{height}</span><span class="s1">&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8b6080e9ac93479d9d96e532c6b69003", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<p>This way, we can modify the plot however we want (as long as <code class="docutils literal notranslate"><span class="pre">k3d</span></code> allows it).</p>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"01416f2448054b31bce52da5827a9759": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(um)}", "y\\,\\text{(um)}", "z\\,\\text{(um)}"], "axes_helper": 1, "background_color": 16777215, "camera": [0.14473012183263145, -0.11772018118432526, 0.019248011828243136, 0.04975000077486038, 0.024750000402331353, 0.009749999722465874, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_3c56e6a9d1014ef1b8508dc72b8621e4", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400932992], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "1d931c9027934702acb78c8711ad1f31": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1ffe6039d52b43418f9d0e6126814171": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "23770d576b7b4398a03a2171d537ed02": {"buffers": [{"data": "OTAAADHUAAA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140308400895408, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "29798e8398144d40a77f111041d159b8": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3a1399d8c55d4452bbe4e418d52ad576": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3c56e6a9d1014ef1b8508dc72b8621e4": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "45a214f342ec4476868b99843a1dd381": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "49ec2d16b50d46faab38eb45ab0fd195": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_29798e8398144d40a77f111041d159b8", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400932944], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "8a51da2c817a47c680a794a51785f5e7": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["\\text{length}", "\\text{width}", "\\text{height}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_e016fe47b9b64d9f9aad314c671f8de0", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308404911984], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "a3756c594fd34a1098801e639dd31236": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1d931c9027934702acb78c8711ad1f31", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "01416f2448054b31bce52da5827a9759", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c4b4d3136e854832a7ebb53c2f262c47": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "zczMPQAAAAAAAAAAzcxMPQAAAADNzEw9AAAAAM3MzDwAAAAAAAAAAArXozwK1yM8AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308400932992, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "c70ae721eba94a2fab713b6d4e0e6e63": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f46981f93a97429986ec1469d3fc044b", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f8d64a5da3824c7096e942861297ed2f", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c7e872c6d6134b81a33a7eaaf358562a": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_fd4e814863a64b1089358ccd09b0d995", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308404851280], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "d2ae58c891bb4190a8396cccc2f7bc8a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d2d1d7269a3a42ceb687a51cc2aa491f": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308404911984, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "dc0e17a6bf1d4afb9d42c06332e8fcf3": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308400932944, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "e016fe47b9b64d9f9aad314c671f8de0": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f0135dfb2c3b4fe9a4366e7d2e4d5694": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_45a214f342ec4476868b99843a1dd381", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "8a51da2c817a47c680a794a51785f5e7", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f35dde068fdf4b9ab4dc38cea459caab": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_d2ae58c891bb4190a8396cccc2f7bc8a", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "49ec2d16b50d46faab38eb45ab0fd195", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f46981f93a97429986ec1469d3fc044b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f70ccd067c8d4bb494492f3ce05957af": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308404851280, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": true}}, "f8d64a5da3824c7096e942861297ed2f": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_3a1399d8c55d4452bbe4e418d52ad576", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400895408], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "faae8b8a290f4d4aa656087f69dbc29c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1ffe6039d52b43418f9d0e6126814171", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "c7e872c6d6134b81a33a7eaaf358562a", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "fd4e814863a64b1089358ccd09b0d995": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="mesh-line-plane.html" title="previous page">Mesh plane and line</a>
+    <a class='right-next' id="next-link" href="mesh-widgets.html" title="next page">Mesh widgets</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
