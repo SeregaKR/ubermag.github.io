@@ -234,6 +234,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-installation">
+   Development installation
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -505,6 +510,39 @@ used in the Docker container. (The required docker image will be downloaded
 if necessary.)</p></li>
 </ol>
 </div>
+</div>
+<div class="section" id="development-installation">
+<h1>Development installation<a class="headerlink" href="#development-installation" title="Permalink to this headline">¶</a></h1>
+<p>In the following we explain how to install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> and all subpackages for
+development. This information is only intended for people developing Ubermag or
+planning to contribute. For normal users we <strong>highly</strong> recommend following the
+steps under <a class="reference internal" href="#standard-installation-recommended">Standard installation – recommended</a>.</p>
+<p>We expect a working Python environment <code class="docutils literal notranslate"><span class="pre">python&gt;=3.8</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> being
+available. The installation of OOMMF is not fully covered in this sections. The
+easiest solution is to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to install OOMMF and other dependencies (as
+described below). Possible options to get OOMMF are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code> (default, see step 1 below)</p></li>
+<li><p>Installation from source: <a class="reference external" href="https://github.com/fangohr/oommf">https://github.com/fangohr/oommf</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spack</span></code> (currently under development: <a class="reference external" href="https://github.com/fangohr/oommf-in-spack/">https://github.com/fangohr/oommf-in-spack/</a>)</p></li>
+</ul>
+<p>The installation process consists of two steps. Two scripts can be downloaded
+from the <a class="reference external" href="https://github.com/ubermag/devtools">devtools repository</a> (links
+given below). Cloning the entire repository is generally not required.</p>
+<ol class="arabic">
+<li><p>Install dependencies. In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment this can be done using the
+following script:
+<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/conda-setup.sh">https://github.com/ubermag/devtools/blob/master/conda-setup.sh</a>
+The OOMMF conda package is part of these dependencies.</p>
+<p><em>NOTE</em>: The script does not create or activate a new conda environment. This
+should be done separately (steps outlined under <a class="reference internal" href="#standard-installation-recommended">Standard installation –
+recommended</a>).</p>
+</li>
+<li><p>Install all packages in editable mode. Use the following script:
+<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh">https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh</a>
+The correct order of installation is important and using this script is
+therefore highly recommended.</p></li>
+</ol>
 </div>
 
 
