@@ -270,7 +270,8 @@ installation for users doing micromagnetic simulations we provide a metapackage
 called <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>. During installation of this packages all individual
 subpackages and additionally <a class="reference external" href="https://math.nist.gov/oommf/">OOMMF</a> are
 installed.</p>
-<p>To install any of the packages please follow the guidelines below and replace <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> with one of the actual package names:</p>
+<p>To install any of the packages please follow the guidelines below and replace
+<code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> with one of the actual package names:</p>
 <ul class="simple">
 <li><p>ubermag (includes all packages listed below + OOMMF)</p></li>
 <li><p>discretisedfield</p></li>
@@ -287,7 +288,7 @@ installed.</p>
 <h1>Standard installation – recommended<a class="headerlink" href="#standard-installation-recommended" title="Permalink to this headline">¶</a></h1>
 <p>We recommend installation using <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. If you do not already
 have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python
-3+ for your operating system and follow the instructions to install it. After
+3.8+ for your operating system and follow the instructions to install it. After
 the installation is complete, in Terminal (Linux and MacOS) or in Anaconda
 Prompt (Windows), create a new conda environment and activate it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n ENVIRONMENT_NAME <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
@@ -296,13 +297,20 @@ Prompt (Windows), create a new conda environment and activate it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate ENVIRONMENT_NAME
 </pre></div>
 </div>
+<div class="topic">
+<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">ENVIRONMENT_NAME=ubermag</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n ubermag <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
+$ conda activate ubermag
+</pre></div>
+</div>
+</div>
 <p>Instead of <code class="docutils literal notranslate"><span class="pre">ENVIRONMENT_NAME</span></code>, choose the name you want. Finally, you can
 install any <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge PACKAGE
 </pre></div>
 </div>
 <div class="topic">
-<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">ubermag</span></code></p>
+<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge ubermag
 </pre></div>
 </div>
@@ -322,12 +330,12 @@ workshop: <a class="reference external" href="workshop/tutorials/choosing-runner
 </pre></div>
 </div>
 <div class="topic">
-<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">ubermag</span></code></p>
+<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -c <span class="s2">&quot;import ubermag; ubermag.test()&quot;</span>
 </pre></div>
 </div>
 </div>
-<p>If no errors are reported, the installation was sucessful.</p>
+<p>If no errors are reported, the installation was successful.</p>
 </div>
 <div class="section" id="update">
 <h2>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
@@ -336,7 +344,7 @@ workshop: <a class="reference external" href="workshop/tutorials/choosing-runner
 </pre></div>
 </div>
 <div class="topic">
-<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">ubermag</span></code></p>
+<p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda update ubermag
 </pre></div>
 </div>
@@ -515,33 +523,57 @@ if necessary.)</p></li>
 <h1>Development installation<a class="headerlink" href="#development-installation" title="Permalink to this headline">¶</a></h1>
 <p>In the following we explain how to install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> and all subpackages for
 development. This information is only intended for people developing Ubermag or
-planning to contribute. For normal users we <strong>highly</strong> recommend following the
-steps under <a class="reference internal" href="#standard-installation-recommended">Standard installation – recommended</a>.</p>
-<p>We expect a working Python environment <code class="docutils literal notranslate"><span class="pre">python&gt;=3.8</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> being
-available. The installation of OOMMF is not fully covered in this sections. The
-easiest solution is to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to install OOMMF and other dependencies (as
-described below). Possible options to get OOMMF are:</p>
+planning to contribute. For normal users we recommend following the steps under
+<a class="reference internal" href="#standard-installation-recommended">Standard installation – recommended</a>.</p>
+<p>We expect a working Python environment <code class="docutils literal notranslate"><span class="pre">python&gt;=3.8</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span></code>, and <code class="docutils literal notranslate"><span class="pre">pip</span></code>
+being available. The installation of OOMMF is not fully covered in this
+sections. The easiest solution is to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to install OOMMF and other
+dependencies (as described below). Possible options to get OOMMF are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code> (default, see step 1 below)</p></li>
 <li><p>Installation from source: <a class="reference external" href="https://github.com/fangohr/oommf">https://github.com/fangohr/oommf</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spack</span></code> (currently under development: <a class="reference external" href="https://github.com/fangohr/oommf-in-spack/">https://github.com/fangohr/oommf-in-spack/</a>)</p></li>
 </ul>
-<p>The installation process consists of two steps. Two scripts can be downloaded
-from the <a class="reference external" href="https://github.com/ubermag/devtools">devtools repository</a> (links
-given below). Cloning the entire repository is generally not required.</p>
+<p>The installation process consists of two steps. Two utility files can be
+downloaded from the <a class="reference external" href="https://github.com/ubermag/devtools/installation">devtools repository</a> (precise links given below).
+Cloning the entire repository is generally not required.</p>
 <ol class="arabic">
-<li><p>Install dependencies. In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment this can be done using the
-following script:
-<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/conda-setup.sh">https://github.com/ubermag/devtools/blob/master/conda-setup.sh</a>
-The OOMMF conda package is part of these dependencies.</p>
-<p><em>NOTE</em>: The script does not create or activate a new conda environment. This
-should be done separately (steps outlined under <a class="reference internal" href="#standard-installation-recommended">Standard installation –
-recommended</a>).</p>
+<li><p>Install dependencies in a conda environment.</p>
+<p>The easiest way to install all required development dependencies is to use
+<code class="docutils literal notranslate"><span class="pre">conda</span></code> and <a class="reference external" href="https://github.com/ubermag/devtools/blob/master/installation/environment.yml">this environment file</a>.
+This can either be done in an existing environment or a new environment can
+be created.</p>
+<ul>
+<li><p>Using an existing environment (has to be activated first):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env update --file environment.yml
+</pre></div>
+</div>
 </li>
-<li><p>Install all packages in editable mode. Use the following script:
-<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh">https://github.com/ubermag/devtools/blob/master/clone-and-install-repos.sh</a>
-The correct order of installation is important and using this script is
-therefore highly recommended.</p></li>
+<li><p>Creating a new environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env create -n ENVIRONMENT_NAME -f environment.yml
+$ conda activate ENVIRONMENT_NAME
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Install all packages in editable mode.</p>
+<p>Use the <a class="reference external" href="https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-repos.bat">clone-and-install-repos.bat script</a>.</p>
+<ul>
+<li><p>on Mac/Linux:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sh clone-and-install-repos.bat
+</pre></div>
+</div>
+</li>
+<li><p>on Windows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ call clone-and-install-repos.bat
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The correct order of installation is important and using this script is therefore
+recommended.</p>
+</li>
 </ol>
 </div>
 
