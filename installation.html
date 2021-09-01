@@ -525,8 +525,8 @@ if necessary.)</p></li>
 development. This information is only intended for people developing Ubermag or
 planning to contribute. For normal users we recommend following the steps under
 <a class="reference internal" href="#standard-installation-recommended">Standard installation – recommended</a>.</p>
-<p>We expect a working Python environment <code class="docutils literal notranslate"><span class="pre">python&gt;=3.8</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span></code>, and <code class="docutils literal notranslate"><span class="pre">pip</span></code>
-being available. The installation of OOMMF is not fully covered in this
+<p>We expect a working Python environment <code class="docutils literal notranslate"><span class="pre">python&gt;=3.8</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span></code>, <code class="docutils literal notranslate"><span class="pre">pip</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">git</span></code> being available. The installation of OOMMF is not fully covered in this
 sections. The easiest solution is to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to install OOMMF and other
 dependencies (as described below). Possible options to get OOMMF are:</p>
 <ul class="simple">
@@ -558,15 +558,18 @@ $ conda activate ENVIRONMENT_NAME
 </ul>
 </li>
 <li><p>Install all packages in editable mode.</p>
-<p>Use the <a class="reference external" href="https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-repos.bat">clone-and-install-repos.bat script</a>.</p>
+<p>We provide a script to clone and install all packages in editable mode. You
+have to replace <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> either with <code class="docutils literal notranslate"><span class="pre">https</span></code> (<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-https.bat">https script</a>)
+or with <code class="docutils literal notranslate"><span class="pre">ssh</span></code> (<a class="reference external" href="https://github.com/ubermag/devtools/blob/master/installation/clone-and-install-ssh.bat">ssh script</a>)
+in the following command. (If you don’t know which method to choose use <code class="docutils literal notranslate"><span class="pre">https</span></code>.)</p>
 <ul>
 <li><p>on Mac/Linux:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sh clone-and-install-repos.bat
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sh clone-and-install-METHOD.bat
 </pre></div>
 </div>
 </li>
 <li><p>on Windows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ call clone-and-install-repos.bat
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ call clone-and-install-METHOD.bat
 </pre></div>
 </div>
 </li>
