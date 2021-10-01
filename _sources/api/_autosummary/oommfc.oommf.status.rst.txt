@@ -1,6 +1,0 @@
-oommfc.oommf.status
-===================
-
-.. currentmodule:: oommfc.oommf
-
-.. autofunction:: status

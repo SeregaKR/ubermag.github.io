@@ -49,10 +49,19 @@ Table
       
       
       
+         ~Table.apply
+      
+      
          ~Table.fromfile
       
       
+         ~Table.irfft
+      
+      
          ~Table.mpl
+      
+      
+         ~Table.rfft
       
       
          ~Table.selector
@@ -70,6 +79,7 @@ Table
    .. autosummary::
    
       ~Table.data
+      ~Table.dx
       ~Table.units
       ~Table.x
       ~Table.xmax

@@ -15,14 +15,30 @@
       :template: class-template.rst
       :nosignatures:
    
-      Descriptor
-      Dictionary
-      Name
-      Parameter
-      Scalar
-      Subset
-      Typed
-      Vector
+      
+         Descriptor
+      
+      
+         Dictionary
+      
+      
+         Name
+      
+      
+         Parameter
+      
+      
+         Scalar
+      
+      
+         Subset
+      
+      
+         Typed
+      
+      
+         Vector
+      
    
    
 

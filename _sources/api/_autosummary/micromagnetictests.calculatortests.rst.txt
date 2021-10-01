@@ -15,26 +15,66 @@
       :template: class-template.rst
       :nosignatures:
    
-      TestCompute
-      TestCubicAnisotropy
-      TestDMI
-      TestDamping
-      TestDemag
-      TestDynamics
-      TestEnergy
-      TestExchange
-      TestFixedSubregions
-      TestHysteresisDriver
-      TestMesh
-      TestMinDriver
-      TestPrecession
-      TestRKKY
-      TestSlonczewski
-      TestThreads
-      TestTimeDriver
-      TestUniaxialAnisotropy
-      TestZeeman
-      TestZhangLi
+      
+         TestCompute
+      
+      
+         TestCubicAnisotropy
+      
+      
+         TestDMI
+      
+      
+         TestDamping
+      
+      
+         TestDemag
+      
+      
+         TestDynamics
+      
+      
+         TestEnergy
+      
+      
+         TestExchange
+      
+      
+         TestFixedSubregions
+      
+      
+         TestHysteresisDriver
+      
+      
+         TestMesh
+      
+      
+         TestMinDriver
+      
+      
+         TestPrecession
+      
+      
+         TestRKKY
+      
+      
+         TestSlonczewski
+      
+      
+         TestThreads
+      
+      
+         TestTimeDriver
+      
+      
+         TestUniaxialAnisotropy
+      
+      
+         TestZeeman
+      
+      
+         TestZhangLi
+      
    
    
 

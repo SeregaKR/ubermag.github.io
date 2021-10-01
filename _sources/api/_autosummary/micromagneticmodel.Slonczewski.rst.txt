@@ -69,6 +69,8 @@ Slonczewski
       ~Slonczewski.eps_prime
       ~Slonczewski.mp
       ~Slonczewski.name
+      ~Slonczewski.tcl_strings
+      ~Slonczewski.tstep
    
    
 

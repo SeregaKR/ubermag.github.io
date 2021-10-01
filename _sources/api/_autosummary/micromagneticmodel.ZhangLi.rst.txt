@@ -65,6 +65,8 @@ ZhangLi
    
       ~ZhangLi.beta
       ~ZhangLi.name
+      ~ZhangLi.tcl_strings
+      ~ZhangLi.tstep
       ~ZhangLi.u
    
    

@@ -107,6 +107,7 @@ Mesh
 
    .. autosummary::
    
+      ~Mesh.attributes
       ~Mesh.bc
       ~Mesh.cell
       ~Mesh.dS

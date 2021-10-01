@@ -64,6 +64,12 @@ TestCompute
       
          ~TestCompute.test_invalid_func
       
+      
+         ~TestCompute.test_slonczewski
+      
+      
+         ~TestCompute.test_zhang_li
+      
    
    
 

@@ -1,0 +1,66 @@
+K3d
+===
+
+.. currentmodule:: discretisedfield.plotting
+
+.. autoclass:: K3d
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~K3d.__dir__
+      
+      
+         ~K3d.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~K3d.__repr__
+      
+      
+      
+      
+      
+      
+         ~K3d.nonzero
+      
+      
+         ~K3d.scalar
+      
+      
+         ~K3d.vector
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

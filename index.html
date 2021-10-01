@@ -243,6 +243,16 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulations-of-experimental-measurements-mag2exp">
+     Simulations of experimental measurements -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mag2exp
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-ubermag">
      What is
      <code class="docutils literal notranslate">
@@ -365,6 +375,7 @@ magnetism models defined with <code class="docutils literal notranslate"><span c
 <li><p>Merging multiple tables</p></li>
 <li><p>Visualisation of scalar table data</p></li>
 </ul>
+<img alt="_images/ubermagtable.png" src="_images/ubermagtable.png" />
 </div>
 <div class="section" id="micromagnetictests">
 <h2><code class="docutils literal notranslate"><span class="pre">micromagnetictests</span></code><a class="headerlink" href="#micromagnetictests" title="Permalink to this headline">¶</a></h2>
@@ -374,11 +385,29 @@ magnetism models defined with <code class="docutils literal notranslate"><span c
 </div>
 <div class="section" id="typesystem-and-utilities-ubermagutil">
 <h2>Typesystem and utilities - <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code><a class="headerlink" href="#typesystem-and-utilities-ubermagutil" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/ubermagutil.png" src="_images/ubermagutil.png" />
 <ul class="simple">
 <li><p>Definition of typesystem descriptors and decorators</p></li>
 <li><p>Documentation inheritance decorators</p></li>
 <li><p>Determining SI prefixes</p></li>
 <li><p>Various convenience functions</p></li>
+</ul>
+</div>
+<div class="section" id="simulations-of-experimental-measurements-mag2exp">
+<h2>Simulations of experimental measurements - <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code><a class="headerlink" href="#simulations-of-experimental-measurements-mag2exp" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/mag2exp-examples.svg" src="_images/mag2exp-examples.svg" /><ul class="simple">
+<li><p>Simulations of experimental techniques used to study magnetism</p></li>
+<li><p>Provides techniques such as</p>
+<ul>
+<li><p>Lorentz Transmission Electron Microscopy</p></li>
+<li><p>Magnetic Force Microscopy</p></li>
+<li><p>DC and Torque Magnetometry</p></li>
+<li><p>X-ray Holography</p></li>
+<li><p>Small Angle X-ray Scattering</p></li>
+<li><p>Small Angle Neutron Scattering</p></li>
+<li><p>Magneto-Optical Kerr Effect Microscopy</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="what-is-ubermag">
@@ -401,9 +430,10 @@ needs to be solved, the task is delegated to the computational backend.</p>
 <li><p>Make it easier to compare simulation results obtained with different simulation packages, and</p></li>
 <li><p>Allow execution of micromagnetic simulation in the cloud.</p></li>
 </ol>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id1">
 <img alt="_images/interoperability.png" src="_images/interoperability.png" />
-<p class="caption"><span class="caption-text">Magnetic systems (left-to-right): Skyrmions, vortex, Bloch point [renderings created with Blender]</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Magnetic systems (left-to-right): <a class="reference external" href="https://github.com/lang-m/ubermag-skyrmion-demo">Skyrmions</a>, vortex, Bloch point
+[renderings created with Blender]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -431,9 +461,9 @@ so that you can upload it again when you start a new online session.</p>
 </div>
 <div class="section" id="authors">
 <h1>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h1>
-<p>Marijan Beg<sup>1, 2</sup>, Martin Lang<sup>2, 3</sup>, Ryan A. Pepper<sup>2</sup>,
-Thomas Kluyver<sup>4</sup>, Jeroen Mulkers<sup>5</sup>, Jonathan Leliaert<sup>5</sup>,
-and Hans Fangohr<sup>2, 3, 6</sup></p>
+<p>Marijan Beg<sup>1, 2</sup>, Martin Lang<sup>2, 3</sup>, Samuel Holt<sup>2, 4</sup>,
+Ryan A. Pepper<sup>2</sup>, Thomas Kluyver<sup>5</sup>, James Loudon<sup>6</sup>,
+Thomas Hicken<sup>7</sup>, David Cortés Ortuño<sup>2</sup>, Jeroen Mulkers<sup>8</sup>, Jonathan Leliaert<sup>8</sup>, and Hans Fangohr<sup>2, 3, 9</sup></p>
 <ul class="simple">
 <li><p><sup>1</sup> Department of Earth Science and Engineering, Imperial College London,
 London SW7 2AZ, United Kingdom</p></li>
@@ -441,10 +471,16 @@ London SW7 2AZ, United Kingdom</p></li>
 Southampton, Southampton SO17 1BJ, United Kingdom</p></li>
 <li><p><sup>3</sup> Max Planck Institute for the Structure and Dynamics of Matter,
 Luruper Chaussee 149, 22761 Hamburg, Germany</p></li>
-<li><p><sup>4</sup> European XFEL GmbH, Holzkoppel 4, 22869 Schenefeld, Germany</p></li>
-<li><p><sup>5</sup> Faculty of Sciences, Ghent University, Krijgslaan 281, S12, 9000
+<li><p><sup>4</sup> Department of Physics, University of Warwick, Coventry CV4 7AL,
+United Kingdom</p></li>
+<li><p><sup>5</sup> European XFEL GmbH, Holzkoppel 4, 22869 Schenefeld, Germany</p></li>
+<li><p><sup>6</sup> Department of Materials Science and Metallurgy, University of
+Cambridge, Cambridge, CB3 0FS, United Kingdom</p></li>
+<li><p><sup>7</sup> Department of Physics, Durham University, Durham, DH1 3LE, United
+Kingdom</p></li>
+<li><p><sup>8</sup> Faculty of Sciences, Ghent University, Krijgslaan 281, S12, 9000
 Ghent, Belgium</p></li>
-<li><p><sup>6</sup> Center for Free-Electron Laser Science, Luruper Chaussee 149, 22761
+<li><p><sup>9</sup> Center for Free-Electron Laser Science, Luruper Chaussee 149, 22761
 Hamburg, Germany.</p></li>
 </ul>
 </div>

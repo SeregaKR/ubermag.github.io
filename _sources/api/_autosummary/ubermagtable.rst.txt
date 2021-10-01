@@ -15,7 +15,9 @@
       :template: class-template.rst
       :nosignatures:
    
-      Table
+      
+         Table
+      
    
    
 

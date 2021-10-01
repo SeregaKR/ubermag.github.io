@@ -1,0 +1,66 @@
+Xf\_ThermSpinXferEvolver
+========================
+
+.. currentmodule:: oommfc
+
+.. autoclass:: Xf_ThermSpinXferEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Xf_ThermSpinXferEvolver.__dir__
+      
+      
+         ~Xf_ThermSpinXferEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Xf_ThermSpinXferEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Xf_ThermSpinXferEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Xf_ThermSpinXferEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

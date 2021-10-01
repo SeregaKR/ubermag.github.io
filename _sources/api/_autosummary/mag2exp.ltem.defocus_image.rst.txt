@@ -1,0 +1,6 @@
+mag2exp.ltem.defocus\_image
+===========================
+
+.. currentmodule:: mag2exp.ltem
+
+.. autofunction:: defocus_image

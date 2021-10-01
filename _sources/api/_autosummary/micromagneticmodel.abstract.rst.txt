@@ -15,9 +15,15 @@
       :template: class-template.rst
       :nosignatures:
    
-      Abstract
-      Container
-      Term
+      
+         Abstract
+      
+      
+         Container
+      
+      
+         Term
+      
    
    
 

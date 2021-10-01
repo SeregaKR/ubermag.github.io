@@ -53,16 +53,18 @@ TclOOMMFRunner
       
          ~TclOOMMFRunner.errors
       
-      
-         ~TclOOMMFRunner.platform
-      
-      
-         ~TclOOMMFRunner.version
-      
    
    
 
    
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~TclOOMMFRunner.platform
+      ~TclOOMMFRunner.status
+      ~TclOOMMFRunner.version
    
    
 

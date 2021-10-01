@@ -18,6 +18,7 @@
       :toctree:
       :nosignatures:
    
+      setup_logging
       test
    
    

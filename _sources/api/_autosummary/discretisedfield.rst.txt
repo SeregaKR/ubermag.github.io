@@ -15,11 +15,24 @@
       :template: class-template.rst
       :nosignatures:
    
-      DValue
-      Field
-      Line
-      Mesh
-      Region
+      
+         DValue
+      
+      
+         Field
+      
+      
+         FieldRotator
+      
+      
+         Line
+      
+      
+         Mesh
+      
+      
+         Region
+      
    
    
 

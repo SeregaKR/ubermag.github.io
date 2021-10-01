@@ -177,7 +177,29 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   0.5.1
+   0.60.0
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general">
+     General
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new-functionality">
+     New functionality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bug-fixes">
+     Bug fixes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   0.51
   </a>
  </li>
 </ul>
@@ -206,10 +228,103 @@
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>0.5.1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>0.60.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>New subpackage <cite>discretisedfield.tools</cite> containing functions to operate on <cite>discretisedfield.Field</cite> objects</p></li>
-<li><p>New integration syntax</p></li>
+<li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
+<li><p>Versions in sync across all packages</p></li>
+<li><p>Switch to Jupyter lab 3 (should improve situation with <code class="docutils literal notranslate"><span class="pre">K3d</span></code> inside Jupyter lab).</p></li>
+</ul>
+</div>
+<div class="section" id="new-functionality">
+<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
+<li><p>Custom labels for vector components in <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>
+(<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.components">reference</a>).</p></li>
+<li><p>New plotting interface for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> and
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code> for both <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">K3d</span></code>. Plotting
+functions can be accessed as <code class="docutils literal notranslate"><span class="pre">Field.mpl.*</span></code> (and for convenience
+<code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code>) for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and similarly for <code class="docutils literal notranslate"><span class="pre">K3d</span></code>.</p></li>
+<li><p>Improved lightness plotting and new contour line plot.</p></li>
+<li><p>Full support for complex values in <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>.</p></li>
+<li><p>Rotations of <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects (<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/discretisedfield/field-rotations.html">documentation</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> now supports all <code class="docutils literal notranslate"><span class="pre">numpy</span> <span class="pre">ufuncs</span></code>.</p></li>
+<li><p>Calculation of the demag tensor and demag field in
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.tools.demag_tensor.html">reference</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mag2exp</span></code></dt><dd><ul class="simple">
+<li><p>New subpackage <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> to simulate experimental measurement
+(<a class="reference external" href="https://ubermag.github.io/documentation/mag2exp.html">documentation</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code></dt><dd><ul class="simple">
+<li><p>Generalisation of OOMMF extensions <code class="docutils literal notranslate"><span class="pre">DMI_Cnv</span></code> and <code class="docutils literal notranslate"><span class="pre">DMI_D2d</span></code> to support
+grains oriented along <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, or <code class="docutils literal notranslate"><span class="pre">z</span></code> (new names, e.g. <code class="docutils literal notranslate"><span class="pre">DMI_Cnv_z</span></code>)
+(<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/micromagneticmodel/energy-terms.html#5.-Dzyaloshinskii-Moriya-energy">documentation</a>).</p></li>
+<li><p>Support for arbitrary time-dependence for external magnetic fields
+(<code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Zeeman</span></code>) and spin-polarised currents
+(<code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Slonczewski</span></code> and <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.ZhangLi</span></code>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Support for OOMMF extension <code class="docutils literal notranslate"><span class="pre">Xf_ThermHeunEvolver</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Xf_ThermSpinXferEvolver</span></code>, and <code class="docutils literal notranslate"><span class="pre">UHH_ThetaEvolve</span></code> for simulations at finite
+temperature.</p></li>
+<li><p>Control over the default runner in <code class="docutils literal notranslate"><span class="pre">oommfc</span></code> via <code class="docutils literal notranslate"><span class="pre">oommfc.runner</span></code> object
+(<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/oommfc/controlling-default-runner.html">documentation</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ubermag</span></code></dt><dd><ul class="simple">
+<li><p>Convenient control over logging of all subpackages via
+<code class="docutils literal notranslate"><span class="pre">ubermag.setup_logging</span></code> (<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/ubermag/logging.html">documentation</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code></dt><dd><ul class="simple">
+<li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code> (<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/ubermagtable/table-fft.html">documentation</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing
+multiple subplots.</p></li>
+<li><p>Fixed aspect ratio for <code class="docutils literal notranslate"><span class="pre">quiver</span></code> plots in <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>.</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code></dt><dd><ul class="simple">
+<li><p>Creating a term <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Slonczewski</span></code> twice with the same
+dictionary for <code class="docutils literal notranslate"><span class="pre">P</span></code> or <code class="docutils literal notranslate"><span class="pre">Lambda</span></code> results in a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code></p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Removing a current term and driving the system caused a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> (<a class="reference external" href="https://github.com/ubermag/help/issues/135">#135</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oommfc.compute</span></code> now works when current terms are specified in
+<code class="docutils literal notranslate"><span class="pre">system.dynamics</span></code> (<a class="reference external" href="https://github.com/ubermag/help/issues/139">#139</a>).</p></li>
+<li><p>Wrong compute number in <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oommfc</span></code> is choosing the wrong runner when using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> (<a class="reference external" href="https://github.com/ubermag/help/issues/172">#172</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code></dt><dd><ul class="simple">
+<li><p>Error in reading ODT files when using magnetoelastic extension (<a class="reference external" href="https://github.com/ubermag/ubermagtable/issues/14">#14</a>).</p></li>
+<li><p>Multiple columns with the same name in <code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code> (<a class="reference external" href="https://github.com/ubermag/help/issues/118">#118</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>0.51<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>New subpackage <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> containing functions to operate on
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p></li>
+<li><p>New integration syntax.</p></li>
 </ul>
 </div>
 </div>

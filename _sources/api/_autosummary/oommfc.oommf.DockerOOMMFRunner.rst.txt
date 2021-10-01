@@ -53,16 +53,18 @@ DockerOOMMFRunner
       
          ~DockerOOMMFRunner.errors
       
-      
-         ~DockerOOMMFRunner.platform
-      
-      
-         ~DockerOOMMFRunner.version
-      
    
    
 
    
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~DockerOOMMFRunner.platform
+      ~DockerOOMMFRunner.status
+      ~DockerOOMMFRunner.version
    
    
 

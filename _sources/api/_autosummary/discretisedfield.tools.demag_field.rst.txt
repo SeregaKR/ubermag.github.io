@@ -1,0 +1,6 @@
+discretisedfield.tools.demag\_field
+===================================
+
+.. currentmodule:: discretisedfield.tools
+
+.. autofunction:: demag_field

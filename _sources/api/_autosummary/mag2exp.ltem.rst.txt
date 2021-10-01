@@ -1,0 +1,30 @@
+﻿mag2exp.ltem
+============
+
+.. automodule:: mag2exp.ltem
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      defocus_image
+      integrated_magnetic_flux_density
+      phase
+      relativistic_wavelength
+   
+   
+
+   
+   
+   

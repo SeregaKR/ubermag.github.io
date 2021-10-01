@@ -73,6 +73,8 @@ Zeeman
       ~Zeeman.f
       ~Zeeman.name
       ~Zeeman.t0
+      ~Zeeman.tcl_strings
+      ~Zeeman.tstep
       ~Zeeman.wave
    
    

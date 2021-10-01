@@ -1,0 +1,6 @@
+mag2exp.quick\_plots.saxs
+=========================
+
+.. currentmodule:: mag2exp.quick_plots
+
+.. autofunction:: saxs

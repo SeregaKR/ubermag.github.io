@@ -37,6 +37,9 @@ Region
       
       
       
+         ~Region.__mul__
+      
+      
       
       
          ~Region.__or__
@@ -51,10 +54,8 @@ Region
       
       
       
-         ~Region.k3d
       
-      
-         ~Region.mpl
+         ~Region.__truediv__
       
       
          ~Region.random_point
@@ -70,10 +71,14 @@ Region
    
       ~Region.centre
       ~Region.edges
+      ~Region.k3d
+      ~Region.mpl
+      ~Region.multiplier
       ~Region.p1
       ~Region.p2
       ~Region.pmax
       ~Region.pmin
+      ~Region.unit
       ~Region.volume
    
    

@@ -15,10 +15,18 @@
       :template: class-template.rst
       :nosignatures:
    
-      DockerOOMMFRunner
-      ExeOOMMFRunner
-      OOMMFRunner
-      TclOOMMFRunner
+      
+         DockerOOMMFRunner
+      
+      
+         ExeOOMMFRunner
+      
+      
+         OOMMFRunner
+      
+      
+         TclOOMMFRunner
+      
    
    
 
@@ -30,9 +38,7 @@
       :toctree:
       :nosignatures:
    
-      get_oommf_runner
       overhead
-      status
    
    
 

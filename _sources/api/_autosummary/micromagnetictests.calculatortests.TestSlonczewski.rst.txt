@@ -58,6 +58,9 @@ TestSlonczewski
       
          ~TestSlonczewski.test_single_values
       
+      
+         ~TestSlonczewski.test_single_values_finite_temperature
+      
    
    
 

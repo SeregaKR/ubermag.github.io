@@ -1,0 +1,76 @@
+Mpl
+===
+
+.. currentmodule:: discretisedfield.plotting
+
+.. autoclass:: Mpl
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Mpl.__call__
+      
+      
+      
+         ~Mpl.__dir__
+      
+      
+         ~Mpl.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Mpl.__repr__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Mpl.contour
+      
+      
+         ~Mpl.lightness
+      
+      
+         ~Mpl.scalar
+      
+      
+         ~Mpl.vector
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

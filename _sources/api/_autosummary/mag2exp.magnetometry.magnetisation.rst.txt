@@ -1,0 +1,6 @@
+mag2exp.magnetometry.magnetisation
+==================================
+
+.. currentmodule:: mag2exp.magnetometry
+
+.. autofunction:: magnetisation

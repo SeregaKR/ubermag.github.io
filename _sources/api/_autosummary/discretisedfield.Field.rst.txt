@@ -28,6 +28,9 @@ Field
          ~Field.__and__
       
       
+         ~Field.__array_ufunc__
+      
+      
          ~Field.__call__
       
       
@@ -103,6 +106,7 @@ Field
       
       
       
+      
          ~Field.allclose
       
       
@@ -115,25 +119,7 @@ Field
          ~Field.integral
       
       
-         ~Field.k3d_nonzero
-      
-      
-         ~Field.k3d_scalar
-      
-      
-         ~Field.k3d_vector
-      
-      
          ~Field.line
-      
-      
-         ~Field.mpl
-      
-      
-         ~Field.mpl_scalar
-      
-      
-         ~Field.mpl_vector
       
       
          ~Field.pad
@@ -159,14 +145,25 @@ Field
       ~Field.angle
       ~Field.array
       ~Field.average
+      ~Field.components
+      ~Field.conjugate
       ~Field.curl
       ~Field.dim
       ~Field.div
+      ~Field.fftn
       ~Field.grad
+      ~Field.ifftn
+      ~Field.imag
+      ~Field.irfftn
+      ~Field.k3d
       ~Field.laplace
       ~Field.mesh
+      ~Field.mpl
       ~Field.norm
       ~Field.orientation
+      ~Field.phase
+      ~Field.real
+      ~Field.rfftn
       ~Field.value
       ~Field.zero
    

@@ -65,6 +65,9 @@ TestTimeDriver
          ~TestTimeDriver.test_noevolver_nodriver
       
       
+         ~TestTimeDriver.test_noevolver_nodriver_finite_temperature
+      
+      
          ~TestTimeDriver.test_noprecession
       
       
@@ -72,6 +75,12 @@ TestTimeDriver
       
       
          ~TestTimeDriver.test_rungekutta_evolver_nodriver
+      
+      
+         ~TestTimeDriver.test_therm_heun_evolver_nodriver
+      
+      
+         ~TestTimeDriver.test_theta_evolver_nodriver
       
       
          ~TestTimeDriver.test_wrong_evolver

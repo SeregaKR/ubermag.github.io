@@ -1,0 +1,27 @@
+﻿mag2exp
+=======
+
+.. automodule:: mag2exp
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test
+   
+   
+
+   
+   
+   

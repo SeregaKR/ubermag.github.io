@@ -53,16 +53,18 @@ ExeOOMMFRunner
       
          ~ExeOOMMFRunner.errors
       
-      
-         ~ExeOOMMFRunner.platform
-      
-      
-         ~ExeOOMMFRunner.version
-      
    
    
 
    
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~ExeOOMMFRunner.platform
+      ~ExeOOMMFRunner.status
+      ~ExeOOMMFRunner.version
    
    
 
