@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Energy terms and energy equation &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Dynamics terms and dynamics equation" href="dynamics-terms.html" />
     <link rel="prev" title="Term parameters" href="term-parameters.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -1025,12 +1029,12 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Energy-terms-and-energy-equation">
+<section id="Energy-terms-and-energy-equation">
 <h1>Energy terms and energy equation<a class="headerlink" href="#Energy-terms-and-energy-equation" title="Permalink to this headline">¶</a></h1>
 <p>There are several different energy terms that are implemented in <code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code>. Here, we will provide a short list of them, together with some basic properties.</p>
-<div class="section" id="Energy-terms">
+<section id="Energy-terms">
 <h2>Energy terms<a class="headerlink" href="#Energy-terms" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="1.-Exchange-energy">
+<section id="1.-Exchange-energy">
 <h3>1. Exchange energy<a class="headerlink" href="#1.-Exchange-energy" title="Permalink to this headline">¶</a></h3>
 <p>The main parameter required for the exchange energy is the exchange energy constant <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
 <div class="nbinput nblast docutils container">
@@ -1117,10 +1121,10 @@ div.rendered_html tbody tr:hover {
 <div class="math notranslate nohighlight">
 $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 </div>
-</div>
-<div class="section" id="2.-Zeeman-energy">
+</section>
+<section id="2.-Zeeman-energy">
 <h3>2. Zeeman energy<a class="headerlink" href="#2.-Zeeman-energy" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="Time-independent">
+<section id="Time-independent">
 <h4>Time-independent<a class="headerlink" href="#Time-independent" title="Permalink to this headline">¶</a></h4>
 <p>Zeeman energy requires the external magnetic field vector to be provided. Optionally, <code class="docutils literal notranslate"><span class="pre">name</span></code> can be given to the energy term.</p>
 <div class="nbinput nblast docutils container">
@@ -1223,8 +1227,8 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}$</div></div>
 ubermagutil.typesystem.descriptors.Subset
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Time-dependent">
+</section>
+<section id="Time-dependent">
 <h4>Time-dependent<a class="headerlink" href="#Time-dependent" title="Permalink to this headline">¶</a></h4>
 <p>In order to define a time-dependent field, either sine or sinc wave can be used, which multiplies <code class="docutils literal notranslate"><span class="pre">H</span></code>. For instance, in order to define a time-dependent external field, which is a sine wave with <span class="math notranslate nohighlight">\(1 \,\text{GHz}\)</span> frequency and <span class="math notranslate nohighlight">\(t_{0} = 2\,\text{ps}\)</span> shift.</p>
 <div class="nbinput nblast docutils container">
@@ -1283,9 +1287,9 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="math notranslate nohighlight">
 $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]$</div></div>
 </div>
-</div>
-</div>
-<div class="section" id="3.-Uniaxial-anisotropy">
+</section>
+</section>
+<section id="3.-Uniaxial-anisotropy">
 <h3>3. Uniaxial anisotropy<a class="headerlink" href="#3.-Uniaxial-anisotropy" title="Permalink to this headline">¶</a></h3>
 <p>This energy term requires the anisotropy constant <span class="math notranslate nohighlight">\(K_{1}\)</span> and uniaxial anisotropy axis <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> to be passed. As before, <code class="docutils literal notranslate"><span class="pre">name</span></code> is optional as well.</p>
 <div class="nbinput nblast docutils container">
@@ -1397,8 +1401,8 @@ $-K (\mathbf{m} \cdot \mathbf{u})^{2}$</div></div>
 <div class="math notranslate nohighlight">
 $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^{4}$</div></div>
 </div>
-</div>
-<div class="section" id="4.-Demagnetisation-energy">
+</section>
+<section id="4.-Demagnetisation-energy">
 <h3>4. Demagnetisation energy<a class="headerlink" href="#4.-Demagnetisation-energy" title="Permalink to this headline">¶</a></h3>
 <p>Demagnetisation energy does not require any input parameters. If needed, <code class="docutils literal notranslate"><span class="pre">name</span></code> can be passed.</p>
 <div class="nbinput nblast docutils container">
@@ -1465,8 +1469,8 @@ $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^
 <div class="math notranslate nohighlight">
 $-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{m} \cdot \mathbf{H}_\text{d}$</div></div>
 </div>
-</div>
-<div class="section" id="5.-Dzyaloshinskii-Moriya-energy">
+</section>
+<section id="5.-Dzyaloshinskii-Moriya-energy">
 <h3>5. Dzyaloshinskii-Moriya energy<a class="headerlink" href="#5.-Dzyaloshinskii-Moriya-energy" title="Permalink to this headline">¶</a></h3>
 <p>DM energy takes two mandatory input parameters: DM constant <span class="math notranslate nohighlight">\(D\)</span> and the crystallographic class <code class="docutils literal notranslate"><span class="pre">crystalclass</span></code>. The allowed crystallographic classes are 1. <code class="docutils literal notranslate"><span class="pre">Cnv</span></code> 2. <code class="docutils literal notranslate"><span class="pre">T</span></code> or <code class="docutils literal notranslate"><span class="pre">O</span></code> 3. <code class="docutils literal notranslate"><span class="pre">D2d</span></code></p>
 <p>For <code class="docutils literal notranslate"><span class="pre">Cnv</span></code> and <code class="docutils literal notranslate"><span class="pre">D2d</span></code> the normal axis must also be specified. Allowed values for <code class="docutils literal notranslate"><span class="pre">crystalclass</span></code> are: 1. <code class="docutils literal notranslate"><span class="pre">Cnv_x</span></code>, <code class="docutils literal notranslate"><span class="pre">Cnv_y</span></code>, or <code class="docutils literal notranslate"><span class="pre">Cnv_z</span></code> 2. <code class="docutils literal notranslate"><span class="pre">D2d_x</span></code>, <code class="docutils literal notranslate"><span class="pre">D2d_y</span></code>, or <code class="docutils literal notranslate"><span class="pre">D2d_z</span></code></p>
@@ -1643,8 +1647,8 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial z} \times \hat{z} 
 <div class="math notranslate nohighlight">
 $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} - \frac{\partial \mathbf{m}}{\partial y} \times \hat{y} \right)$</div></div>
 </div>
-</div>
-<div class="section" id="6.-Cubic-anisotropy">
+</section>
+<section id="6.-Cubic-anisotropy">
 <h3>6. Cubic anisotropy<a class="headerlink" href="#6.-Cubic-anisotropy" title="Permalink to this headline">¶</a></h3>
 <p>Cubic anisotropy energy term requires the anisotropy constant <span class="math notranslate nohighlight">\(K_{1}\)</span> and two mutually perpendicular anisotropy axes <span class="math notranslate nohighlight">\(\mathbf{u}_{1}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u}_{2}\)</span>. Argument <code class="docutils literal notranslate"><span class="pre">name</span></code> is optional.</p>
 <div class="nbinput nblast docutils container">
@@ -1747,8 +1751,8 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="math notranslate nohighlight">
 $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+(\mathbf{m} \cdot \mathbf{u}_{2})^{2}(\mathbf{m} \cdot \mathbf{u}_{3})^{2}+(\mathbf{m} \cdot \mathbf{u}_{3})^{2}(\mathbf{m} \cdot \mathbf{u}_{1})^{2}]$</div></div>
 </div>
-</div>
-<div class="section" id="7.-RKKY">
+</section>
+<section id="7.-RKKY">
 <h3>7. RKKY<a class="headerlink" href="#7.-RKKY" title="Permalink to this headline">¶</a></h3>
 <p>RKKY energy term requires the sigma constant <span class="math notranslate nohighlight">\(\sigma\)</span> and optionally <span class="math notranslate nohighlight">\(\sigma_{2}\)</span>. In addition, two subregions defined in the mesh must be passed as a list.</p>
 <div class="nbinput nblast docutils container">
@@ -1833,9 +1837,9 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="math notranslate nohighlight">
 $\text{RKKY}(\text{subregion1}, \text{subregion2})$</div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Energy-equation">
+</section>
+</section>
+<section id="Energy-equation">
 <h2>Energy equation<a class="headerlink" href="#Energy-equation" title="Permalink to this headline">¶</a></h2>
 <p>The energy equation of the micromagnetic system is the sum of energy terms. For instance, if we sum two energy terms, we get:</p>
 <div class="nbinput docutils container">
@@ -1931,7 +1935,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}+ D ( \mathbf{m} \cdot \nabla m_{z} -
 <div class="math notranslate nohighlight">
 $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}+ D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}$</div></div>
 </div>
-<div class="section" id="Accesing-the-individual-energy-terms-from-the-energy-equation">
+<section id="Accesing-the-individual-energy-terms-from-the-energy-equation">
 <h3>Accesing the individual energy terms from the energy equation<a class="headerlink" href="#Accesing-the-individual-energy-terms-from-the-energy-equation" title="Permalink to this headline">¶</a></h3>
 <p>There are two ways of retrieving an individual energy term from the energy equation. Let us say we want to change the value of the Dzyaloshinkii-Moriya constant <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <p>If an energy term with name <code class="docutils literal notranslate"><span class="pre">myenergy</span></code> was added to the Hamiltonian, that term can be accessed by typing <code class="docutils literal notranslate"><span class="pre">energy.myenergy</span></code>. In the case of DMI:</p>
@@ -2036,20 +2040,31 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script></div>
-</div>
-</div>
+</script></section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="term-parameters.html" title="previous page">Term parameters</a>
-    <a class='right-next' id="next-link" href="dynamics-terms.html" title="next page">Dynamics terms and dynamics equation</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="term-parameters.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Term parameters</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="dynamics-terms.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dynamics terms and dynamics equation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -2057,20 +2072,19 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>9. Exercise: Domain wall pair conversion &#8212; ubermag  documentation</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="1. Choosing runner" href="choosing-runner.html" />
     <link rel="prev" title="8. Current induced domain wall motion" href="driving-dw.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Session 1
  </span>
@@ -175,7 +179,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Session 2
  </span>
@@ -227,7 +231,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Session 3
  </span>
@@ -340,7 +344,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Session 4
  </span>
@@ -719,7 +723,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Exercise:-Domain-wall-pair-conversion">
+<section id="Exercise:-Domain-wall-pair-conversion">
 <h1><span class="section-number">9. </span>Exercise: Domain wall pair conversion<a class="headerlink" href="#Exercise:-Domain-wall-pair-conversion" title="Permalink to this headline">¶</a></h1>
 <p>We want to simulate a domain wall conversion in a two-dimensional thin film sample with:</p>
 <ul class="simple">
@@ -732,17 +736,17 @@ div.rendered_html tbody tr:hover {
 <p>Please carry out the following steps:</p>
 <ol class="arabic">
 <li><p>Create the following geometry with discretisation cell size <span class="math notranslate nohighlight">\((2 \,\text{nm}, 2 \,\text{nm}, 2 \,\text{nm})\)</span>.</p>
-<p><img alt="dcdbb2c1b4eb41efabb11e8e01dbae01" class="no-scaled-link" src="../../_images/dw_pair_conversion_geometry1.png" style="width: 400px;" /></p>
+<p><img alt="b0357a9c06664c0db3021107dd087eeb" class="no-scaled-link" src="../../_images/dw_pair_conversion_geometry1.png" style="width: 400px;" /></p>
 </li>
 <li><p>Initialise the magnetisation so that when relaxes, a domain pair is present in the narrower part of the geometry.</p></li>
 <li><p>Relax the system. Is a domain wall pair contained in the constrained part?</p></li>
 <li><p>Apply the spin polarised current in the positive <span class="math notranslate nohighlight">\(x\)</span> direction with velocity <span class="math notranslate nohighlight">\(\mathbf{u} = (400, 0, 0) \,\text{m}\,\text{s}^{-1}\)</span>, with <span class="math notranslate nohighlight">\(\beta=0.5\)</span>.</p></li>
 <li><p>Evolve the system over <span class="math notranslate nohighlight">\(0.2 \,\text{ns}\)</span>. What did you get? [1]</p></li>
 </ol>
-<div class="section" id="References">
+<section id="References">
 <h2><span class="section-number">9.1. </span>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
 <p>[1] Zhou, Y., &amp; Ezawa, M. (2014). A reversible conversion between a skyrmion and a domain-wall pair in a junction geometry. <em>Nature Communications</em> <strong>5</strong>, 8. <a class="reference external" href="https://doi.org/10.1038/ncomms5652">https://doi.org/10.1038/ncomms5652</a></p>
-<div class="section" id="Solution">
+<section id="Solution">
 <h3><span class="section-number">9.1.1. </span>Solution<a class="headerlink" href="#Solution" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -887,20 +891,31 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:14]... (3.6 s)
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {"0a0f485aa87848149b55fca53fc686fb": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYBBzZoCDaU4Q2gNKn3BEyDE4MDA02DOggAZ7AIx6BIM=", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNqdlT2I1EAUx1cLBQVBLBTUTisRQQ7Uwl4bmxNBsREREUSwthAFT7G5SixEC+XQAxFRUWzvuuydX4WnZ3PLXvZ29zbJJJnMZCaT6Esy+brLhMN/NxPeLzPvvfm/VkuhTn9kWiiXncoBublgkewiZBnDZRWpNUSYEEqpXxGLxaWSRbJNieesKlGm5zMeFBKZwpLSHfjKGUFKlE15NQwUSf1NJBcpM/AdJcplQREbVSFlSV7AXCWKcBHWB2fh5XUoGlAsJtVzQpEkr/Q9igDV6RsWklWWcl3sERUpuQv1MPYoZKBIG6AGUHOaVVmKQ+VEpCJx6ox63e7KyIHC5CxAGdjnpUpnxVYmKeTE7P7UZme1hWWT8LCEsuL0rq9ULQgiwoCaS+13TyYnn76f61g0kCz4hYvilSpy/aEEc/S56buXx89euff6i+4wUaBsX4QbBMUBghqLHyfOjR04eOzCw89/TPr/qMAbfJ+6fnzPtu17T96c/jEk8oY5KtpgrmJUf/7ZpcM7Nm3eefTq8699r4SCXIk1r1OkJaxHkcG3F9fGdm3ZuvvEjZfVU4EBlC0jb6zaDoW0U+P3hztnDu3bf2R84tNiOVd4gKC3McbSybJ2V3R7FDJXb0/dOn/q9MXbr+Z1lxXNgBveYC1KUGtJe/Po/oPHb9vVvlKjSFB/rIAifUGbmdF+6SgnNaMwryltaifYGvZ6QwsXSYgaUY4vrW+thQKMg6Ozyq9gT41ClFdeedYm6dmishsnhtxgfQamfjFS5LRJ7Ce9VZRaYD59iK1ErZi2U0w6OQNjU6RyEsEtYWYlbRQ3k736D5veoyQ=", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 139690593385552, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 25, 75]}, "wireframe": false}}, "139dc580e29a4ff2a7a1d44348318214": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1dca148fb5d14573978d4ffdc2830c89": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "209d7704bab541eebc5d1b24cc6a715f": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [206.4820910752125, -172.47313652667142, 14.158209101430517, 74.9000000609085, 24.899999994784594, 1, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_fe32f085f5a74531839165706f13e28e", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [139689427045648], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "374c81dcfd4f4dc2b0661e5d87bae62e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "41757a2532e648f3a0f89840dbdf3bf5": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "4ff2547974e14096bee3ae7309dd9959": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYBBzZoCDaU4Q2gNKn3BEyDE4MDA02DOggAZ7AIx6BIM=", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNpjYMABnr758PETEHyEgQ/oAC7zEajo/ZunuExieP3p248fP3/+IBJ8+/wGp1Hvvv78/fsPDPzGDhDSP7+9x23Ut19//hIN/vz+8RGnUW++Ao36Ryz4i8+oF59+gIz6TwwAGvXnxyecRj149+03sUb9Bxn18e2nr9++fn778NTSMi9tSQEeLi4efnE157xFF158+fWHJKM+//j1+9ePT0/PLi/zUBflZmdlZeMSVLBJm3ns0UeQD0kw6utvYPj/+vL83PIydzVhTlZmZhZ2PhnzhIn77r77/psko74BPfHv95fn50FGCXGwMDExs/FKGUd177z55htpRn3/8+//v99fYUYxMzIysfJIGoZ3bLv++is1jDIIa9t67fXXXwPlKiqGFRVjkIrpioqpnYp5kB4lAxXLKyqWolQs26lY45BeDwIAHfNIbw==", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 139690593740496, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 25, 75]}, "wireframe": false}}, "5b55cca841d04f798491e14c8b95399b": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYBBzZoCDaU4Q2gNKn3BEyDE4MDA02DOggAZ7AIx6BIM=", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNpjYMAB/pMMGEaNGuJGoQFGEPhPFTBq1KhRw9io0UJm1Cg4AADbo7jF", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 139689427045648, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [1, 25, 75]}, "wireframe": false}}, "5f0b1e9932634f099d661a0e3376fe24": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [206.4820910752125, -172.47313652667142, 14.158209101430378, 74.9000000609085, 24.899999994784594, 1, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_139dc580e29a4ff2a7a1d44348318214", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [139690593740496], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "a144235cc5bc4a2cbafd2115fb0f4686": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "c62ec5c924cd405b9418e0c0e28414ad": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_41757a2532e648f3a0f89840dbdf3bf5", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "209d7704bab541eebc5d1b24cc6a715f", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "d28ded989b764139ad617ef7e54e949f": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_374c81dcfd4f4dc2b0661e5d87bae62e", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f524d7dc6ce94076a4ca75e9f94e32f4", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f524d7dc6ce94076a4ca75e9f94e32f4": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [206.4820910752125, -172.47313652667142, 14.158209101430378, 74.9000000609085, 24.899999994784594, 1, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_a144235cc5bc4a2cbafd2115fb0f4686", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [139690593385552], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "fdd8c457a27f4b69909bb68de66e8eaf": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1dca148fb5d14573978d4ffdc2830c89", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "5f0b1e9932634f099d661a0e3376fe24", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "fe32f085f5a74531839165706f13e28e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
-</script></div>
-</div>
-</div>
+</script></section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="driving-dw.html" title="previous page"><span class="section-number">8. </span>Current induced domain wall motion</a>
-    <a class='right-next' id="next-link" href="choosing-runner.html" title="next page"><span class="section-number">1. </span>Choosing runner</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="driving-dw.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Current induced domain wall motion</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="choosing-runner.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Choosing runner</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -908,20 +923,19 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:14]... (3.6 s)
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

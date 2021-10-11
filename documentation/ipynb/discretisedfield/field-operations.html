@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Field operations &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Visualising field using matplotlib" href="field-matplotlib-visualisation.html" />
     <link rel="prev" title="Field normalisation" href="field-normalisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -999,7 +1003,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Field-operations">
+<section id="Field-operations">
 <h1>Field operations<a class="headerlink" href="#Field-operations" title="Permalink to this headline">¶</a></h1>
 <p>There are several convenience methods that can be used to analyse the field. Let us first define the mesh we are going to work with.</p>
 <div class="nbinput nblast docutils container">
@@ -1041,7 +1045,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="section" id="1.-Sampling-the-field">
+<section id="1.-Sampling-the-field">
 <h2>1. Sampling the field<a class="headerlink" href="#1.-Sampling-the-field" title="Permalink to this headline">¶</a></h2>
 <p>As we have shown previously, a field can be sampled by calling it. The argument must be a 3-length iterable and it contains the coordinates of the point.</p>
 <div class="nbinput docutils container">
@@ -1085,8 +1089,8 @@ div.rendered_html tbody tr:hover {
 Exception raised.
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="2.-Extracting-the-component-of-a-vector-field">
+</section>
+<section id="2.-Extracting-the-component-of-a-vector-field">
 <h2>2. Extracting the component of a vector field<a class="headerlink" href="#2.-Extracting-the-component-of-a-vector-field" title="Permalink to this headline">¶</a></h2>
 <p>A three-dimensional vector field can be understood as three separate scalar fields, where each scalar field is a component of a vector field value. A scalar field of a component can be extracted by accessing <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, or <code class="docutils literal notranslate"><span class="pre">z</span></code> attribute of the field.</p>
 <div class="nbinput docutils container">
@@ -1216,8 +1220,8 @@ Field(mesh=Mesh(region=Region(p1=(-50, -50, -50), p2=(50, 50, 50)), n=(2, 2, 2),
 1.0
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="3.-Computing-the-average">
+</section>
+<section id="3.-Computing-the-average">
 <h2>3. Computing the average<a class="headerlink" href="#3.-Computing-the-average" title="Permalink to this headline">¶</a></h2>
 <p>The average of the field can be obtained by calling <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.average</span></code> property.</p>
 <div class="nbinput docutils container">
@@ -1257,8 +1261,8 @@ Field(mesh=Mesh(region=Region(p1=(-50, -50, -50), p2=(50, 50, 50)), n=(2, 2, 2),
 0.0
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="4.-Iterating-through-the-field">
+</section>
+<section id="4.-Iterating-through-the-field">
 <h2>4. Iterating through the field<a class="headerlink" href="#4.-Iterating-through-the-field" title="Permalink to this headline">¶</a></h2>
 <p>The field object itself is an iterable. That means that it can be iterated through. As a result it returns a tuple, where the first element is the coordinate of the mesh point, whereas the second one is its value.</p>
 <div class="nbinput docutils container">
@@ -1286,8 +1290,8 @@ Field(mesh=Mesh(region=Region(p1=(-50, -50, -50), p2=(50, 50, 50)), n=(2, 2, 2),
 (25.0, 25.0, 25.0) (625.0, 1250.0, 15625.0)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="5.-Sampling-the-field-along-the-line">
+</section>
+<section id="5.-Sampling-the-field-along-the-line">
 <h2>5. Sampling the field along the line<a class="headerlink" href="#5.-Sampling-the-field-along-the-line" title="Permalink to this headline">¶</a></h2>
 <p>To sample the points of the field which are on a certain line, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.line</span></code> method is used. It takes two points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> that define the line and an integer <code class="docutils literal notranslate"><span class="pre">n</span></code> which defines how many mesh coordinates on that line are required. The default value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is 100.</p>
 <div class="nbinput nblast docutils container">
@@ -1299,8 +1303,8 @@ Field(mesh=Mesh(region=Region(p1=(-50, -50, -50), p2=(50, 50, 50)), n=(2, 2, 2),
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="6.-Intersecting-the-field-with-a-plane">
+</section>
+<section id="6.-Intersecting-the-field-with-a-plane">
 <h2>6. Intersecting the field with a plane<a class="headerlink" href="#6.-Intersecting-the-field-with-a-plane" title="Permalink to this headline">¶</a></h2>
 <p>If we intersect the field with a plane, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.plane</span></code> will return a new field object which contains only discretisation cells that belong to that plane. The planes allowed are the planes perpendicular to the axes of the Cartesian coordinate system. For instance, a plane parallel to the <span class="math notranslate nohighlight">\(yz\)</span>-plane (perpendicular to the <span class="math notranslate nohighlight">\(x\)</span>-axis) which intesects the <span class="math notranslate nohighlight">\(x\)</span>-axis at 1, can be written as</p>
 <div class="math notranslate nohighlight">
@@ -1342,8 +1346,8 @@ Field(mesh=Mesh(region=Region(p1=(-24.0, -50.0, -50.0), p2=(26.0, 50.0, 50.0)), 
 Field(mesh=Mesh(region=Region(p1=(-25.0, -50.0, -50.0), p2=(25.0, 50.0, 50.0)), n=(1, 2, 2), bc=&#39;&#39;, subregions={}, attributes={&#39;unit&#39;: &#39;m&#39;, &#39;fourierspace&#39;: False, &#39;isplane&#39;: True, &#39;planeaxis&#39;: 0, &#39;point&#39;: 0.0, &#39;axis1&#39;: 1, &#39;axis2&#39;: 2}), dim=3, components=[&#39;x&#39;, &#39;y&#39;, &#39;z&#39;])
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="7.-Cascading-the-operations">
+</section>
+<section id="7.-Cascading-the-operations">
 <h2>7. Cascading the operations<a class="headerlink" href="#7.-Cascading-the-operations" title="Permalink to this headline">¶</a></h2>
 <p>Let us say we want to compute the average of an <span class="math notranslate nohighlight">\(x\)</span> component of the field on the plane <span class="math notranslate nohighlight">\(y=10\)</span>. In order to do that, we can cascade several operation in a single line.</p>
 <div class="nbinput docutils container">
@@ -1383,25 +1387,36 @@ Field(mesh=Mesh(region=Region(p1=(-25.0, -50.0, -50.0), p2=(25.0, 50.0, 50.0)), 
 0.0
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Other">
+</section>
+<section id="Other">
 <h2>Other<a class="headerlink" href="#Other" title="Permalink to this headline">¶</a></h2>
 <p>Full description of all existing functionality can be found in the <a class="reference external" href="https://discretisedfield.readthedocs.io/en/latest/_autosummary/discretisedfield.Field.html">API Reference</a>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="field-normalisation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Field normalisation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="field-matplotlib-visualisation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Visualising field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="field-normalisation.html" title="previous page">Field normalisation</a>
-    <a class='right-next' id="next-link" href="field-matplotlib-visualisation.html" title="next page">Visualising field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a>
-
-              </div>
               
           </main>
           
@@ -1409,20 +1424,19 @@ Field(mesh=Mesh(region=Region(p1=(-25.0, -50.0, -50.0), p2=(25.0, 50.0, 50.0)), 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

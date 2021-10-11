@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Tutorial 10: FMR standard problem &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Tutorial 11: Deriving energy values" href="11-tutorial-deriving-fields.html" />
     <link rel="prev" title="Tutorial 09: Standard problem 5" href="09-tutorial-standard-problem5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -984,9 +988,9 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Tutorial-10:-FMR-standard-problem">
+<section id="Tutorial-10:-FMR-standard-problem">
 <h1>Tutorial 10: FMR standard problem<a class="headerlink" href="#Tutorial-10:-FMR-standard-problem" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Problem-specification">
+<section id="Problem-specification">
 <h2>Problem specification<a class="headerlink" href="#Problem-specification" title="Permalink to this headline">¶</a></h2>
 <p>We choose a cuboidal thin film permalloy sample measuring <span class="math notranslate nohighlight">\(120 \times 120 \times 10 \,\text{nm}^{3}\)</span>. The choice of a cuboid is important as it ensures that the finite difference method employed by OOMMF does not introduce errors due to irregular boundaries that cannot be discretized well. We choose the thin film geometry to be thin enough so that the variation of magnetization dynamics along the out-of-film direction can be neglected. Material parameters based on permalloy are:</p>
 <ul class="simple">
@@ -998,8 +1002,8 @@ div.rendered_html tbody tr:hover {
 well-converged equilibrium magnetization configuration. We refer to this stage of simulation as the relaxation stage, and its final relaxed magnetization configuration is saved to serve as the initial configuration for the next dynamic stage. Because we want to use a well defined method that is supported by all simulation tools, we minimize the system’s energy by integrating the LLG equation with a large, quasistatic Gilbert damping <span class="math notranslate nohighlight">\(\alpha = 1\)</span> for <span class="math notranslate nohighlight">\(5 \,\text{ns}\)</span>. In the next step
 (dynamic stage), a simulation is started using the equilibrium magnetisation configuration from the relaxation stage as the initial configuration. Now, the direction of an external magnetic field is altered to <span class="math notranslate nohighlight">\(e = (1, 0.7, 0)\)</span>. This simulation stage runs for <span class="math notranslate nohighlight">\(T = 20 \,\text{ns}\)</span> while the (average and spatially resolved) magnetization <span class="math notranslate nohighlight">\(M(t)\)</span> is recorded every <span class="math notranslate nohighlight">\(\Delta t = 5 \,\text{ps}\)</span>. The Gilbert damping in this dynamic simulation stage is <span class="math notranslate nohighlight">\(\alpha = 0.008\)</span>.</p>
 <p>Details of this standard problem specification can be found in Ref. 1.</p>
-</div>
-<div class="section" id="Relaxation-stage">
+</section>
+<section id="Relaxation-stage">
 <h2>Relaxation stage<a class="headerlink" href="#Relaxation-stage" title="Permalink to this headline">¶</a></h2>
 <p>Firstly, all required modules are imported.</p>
 <div class="nbinput nblast docutils container">
@@ -1089,8 +1093,8 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <img alt="../../../_images/documentation_ipynb_oommfc_10-tutorial-standard-problem-fmr_9_0.png" src="../../../_images/documentation_ipynb_oommfc_10-tutorial-standard-problem-fmr_9_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="Dynamic-stage">
+</section>
+<section id="Dynamic-stage">
 <h2>Dynamic stage<a class="headerlink" href="#Dynamic-stage" title="Permalink to this headline">¶</a></h2>
 <p>In the dynamic stage, we use the relaxed state from the relaxation stage.</p>
 <div class="nbinput nblast docutils container">
@@ -1130,8 +1134,8 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 (177.4 s)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Postprocessing">
+</section>
+<section id="Postprocessing">
 <h2>Postprocessing<a class="headerlink" href="#Postprocessing" title="Permalink to this headline">¶</a></h2>
 <p>From the obtained vector field samples, we can compute the average of magnetisation <span class="math notranslate nohighlight">\(y\)</span> component and plot its time evolution.</p>
 <div class="nbinput docutils container">
@@ -1188,25 +1192,36 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <img alt="../../../_images/documentation_ipynb_oommfc_10-tutorial-standard-problem-fmr_19_0.png" src="../../../_images/documentation_ipynb_oommfc_10-tutorial-standard-problem-fmr_19_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="References">
+</section>
+<section id="References">
 <h2>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
 <p>[1] A. Baker, M. Beg, G. Ashton, M. Albert, D. Chernyshenko, W. Wang, S. Zhang, M.-A. Bisotti, M. Franchin, C.L. Hu, R. Stamps, T. Hesjedal, and H. Fangohr, <em>J. Magn. Magn. Mater.</em> <strong>421</strong>, 428 (2017).</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="09-tutorial-standard-problem5.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial 09: Standard problem 5</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="11-tutorial-deriving-fields.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial 11: Deriving energy values</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="09-tutorial-standard-problem5.html" title="previous page">Tutorial 09: Standard problem 5</a>
-    <a class='right-next' id="next-link" href="11-tutorial-deriving-fields.html" title="next page">Tutorial 11: Deriving energy values</a>
-
-              </div>
               
           </main>
           
@@ -1214,20 +1229,19 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

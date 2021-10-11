@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Tutorial: Small Angle Neutron Scattering &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Tutorial: Unit Conversions" href="Unit_converter.html" />
     <link rel="prev" title="Tutorial: Small Angle X-ray Scattering" href="SAXS.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -974,19 +978,19 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Tutorial:-Small-Angle-Neutron-Scattering">
+<section id="Tutorial:-Small-Angle-Neutron-Scattering">
 <h1>Tutorial: Small Angle Neutron Scattering<a class="headerlink" href="#Tutorial:-Small-Angle-Neutron-Scattering" title="Permalink to this headline">¶</a></h1>
 <p>Small Angle Neutron Scattering (SANS) is a powerful reciprocal space technique that can be used to investigate magnetic structures on mesoscopic length scales. In SANS the atomic structure generally has a minimal impact hence the sample can be approximated by a continuous magnetisation vector field [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>].</p>
 <p>The differential scattering cross section <span class="math notranslate nohighlight">\(d\Sigma/d\Omega\)</span> can be used as a function of the scattering vector <span class="math notranslate nohighlight">\({\bf q}\)</span> to predict the scattering patterns produced.</p>
-<div class="section" id="SANS-Reference-frame">
+<section id="SANS-Reference-frame">
 <h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this headline">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="ee2c9286b08e4fc1bb473a3cfe4ed959" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="cf456be67cb04aefad1e6d6deb208c3d" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>
-</div>
-<div class="section" id="The-micromagnetic-simulation">
+</section>
+<section id="The-micromagnetic-simulation">
 <h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-Dimentional magntic structure with periodic boundary conditions in the <span class="math notranslate nohighlight">\(xy\)</span> plane.</p>
 <div class="nbinput docutils container">
@@ -1077,57 +1081,41 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
 </div>
 </div>
 <p>Now we have a magnetisation texture we can compute the SANS scattering cross sections.</p>
-</div>
-<div class="section" id="Computing-SANS-Cross-sections">
+</section>
+<section id="Computing-SANS-Cross-sections">
 <h2>Computing SANS Cross-sections<a class="headerlink" href="#Computing-SANS-Cross-sections" title="Permalink to this headline">¶</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package to calculate the cross sections. The scattering can be calculated with the use of the magnetic interaction vector <span class="math notranslate nohighlight">\({\bf Q}\)</span> [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>] where</p>
-<dl class="simple">
-<dt>:nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>begin{equation}</dt><dd><p>{bf Q} = hat{bf q} times left[ widetilde{bf M} times hat{bf q} right],</p>
-</dd>
-</dl>
-<p>end{equation}` where <span class="math notranslate nohighlight">\(\hat{\bf q}\)</span> is the unit scattering vector and <span class="math notranslate nohighlight">\(\widetilde{\bf M}\)</span> is the Fourier transform of the magnetisation.</p>
-<dl class="simple">
-<dt>The scattering vector is defined as :nbsphinx-math:<a href="#id3"><span class="problematic" id="id4">`</span></a>begin{equation}</dt><dd><p>{bf q} = {bf k}_1 - {bf k}_0</p>
-</dd>
-</dl>
-<p>end{equation}` where <span class="math notranslate nohighlight">\({\bf k}_0\)</span> and <span class="math notranslate nohighlight">\({\bf k}_1\)</span> are the incident and scattered wavevectors respectively.</p>
+<p><span class="math">\begin{equation}
+{\bf Q} = \hat{\bf q} \times \left[ \widetilde{\bf M} \times \hat{\bf q} \right],
+\end{equation}</span> where <span class="math notranslate nohighlight">\(\hat{\bf q}\)</span> is the unit scattering vector and <span class="math notranslate nohighlight">\(\widetilde{\bf M}\)</span> is the Fourier transform of the magnetisation.</p>
+<p>The scattering vector is defined as <span class="math">\begin{equation}
+{\bf q} = {\bf k}_1 - {\bf k}_0
+\end{equation}</span> where <span class="math notranslate nohighlight">\({\bf k}_0\)</span> and <span class="math notranslate nohighlight">\({\bf k}_1\)</span> are the incident and scattered wavevectors respectively.</p>
 <p>From this the magnetic contribution to the cross sections can be calculated as</p>
-<dl class="simple">
-<dt>:nbsphinx-math:<a href="#id5"><span class="problematic" id="id6">`</span></a>begin{equation}</dt><dd><p>frac{dsum}{dOmega} sim <a href="#id7"><span class="problematic" id="id8">|</span></a>{bf Q} cdot {bf sigma}|^2,</p>
-</dd>
-<dt>end{equation}` where <span class="math notranslate nohighlight">\({\bf \sigma}\)</span> is the Pauli vector :nbsphinx-math:<a href="#id9"><span class="problematic" id="id10">`</span></a>begin{equation}</dt><dd><p>{bf sigma} = begin{bmatrix} sigma_x \ sigma_y \ sigma_z end{bmatrix},</p>
-</dd>
-<dt>end{equation}` and :nbsphinx-math:<a href="#id11"><span class="problematic" id="id12">`</span></a>begin{align}</dt><dd><p>sigma_x &amp;= begin{pmatrix} 0 &amp; 1 \ 1 &amp; 0 end{pmatrix}, \
-sigma_y &amp;= begin{pmatrix} 0 &amp; -i \ i &amp; 0 end{pmatrix}, \
-sigma_z &amp;= begin{pmatrix} 1 &amp; 0 \ 0 &amp; -1 end{pmatrix}.</p>
-</dd>
-</dl>
-<p>end{align}`</p>
+<p><span class="math">\begin{equation}
+\frac{d\sum}{d\Omega} \sim |{\bf Q} \cdot {\bf \sigma}|^2,
+\end{equation}</span> where <span class="math notranslate nohighlight">\({\bf \sigma}\)</span> is the Pauli vector <span class="math">\begin{equation}
+{\bf \sigma} = \begin{bmatrix} \sigma_x \\ \sigma_y \\ \sigma_z \end{bmatrix},
+\end{equation}</span> and <span class="math">\begin{align}
+\sigma_x &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \\
+\sigma_y &= \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \\
+\sigma_z &= \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\end{align}</span></p>
 <p>For a polarisation in an arbitrary direction the Pauli vector can be rotated.</p>
-<dl>
-<dt>This takes the form :nbsphinx-math:<a href="#id13"><span class="problematic" id="id14">`</span></a>begin{equation}</dt><dd><dl>
-<dt>frac{dsum}{dOmega} = begin{pmatrix}</dt><dd><blockquote>
-<div><p>frac{dsum^{++}}{dOmega} &amp; frac{dsum^{-+}}{dOmega}\
-frac{dsum^{+-}}{dOmega} &amp; frac{dsum^{–}}{dOmega}</p>
-</div></blockquote>
-<p>end{pmatrix}</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>end{equation}`</p>
+<p>This takes the form <span class="math">\begin{equation}
+\frac{d\sum}{d\Omega} = \begin{pmatrix}
+\frac{d\sum^{++}}{d\Omega} & \frac{d\sum^{-+}}{d\Omega}\\
+\frac{d\sum^{+-}}{d\Omega} & \frac{d\sum^{--}}{d\Omega}
+\end{pmatrix}
+\end{equation}</span></p>
 <p>These then be combined in order to get the half and unpolarised cross sections.</p>
-<dl>
-<dt>:nbsphinx-math:<a href="#id15"><span class="problematic" id="id16">`</span></a>begin{align}</dt><dd><p>frac{dsum^{+}}{dOmega} &amp;= frac{dsum^{++}}{dOmega} + frac{dsum^{+-}}{dOmega} \
-frac{dsum^{-}}{dOmega} &amp;= frac{dsum^{–}}{dOmega} + frac{dsum^{-+}}{dOmega} \
-frac{dsum}{dOmega} &amp;= frac{1}{2} left( frac{dsum^{+}}{dOmega} + frac{dsum^{-}}{dOmega} right) \
-frac{dsum}{dOmega} &amp;= frac{1}{2} left( frac{dsum^{++}}{dOmega} + frac{dsum^{+-}}{dOmega} +</p>
-<blockquote>
-<div><p>frac{dsum^{–}}{dOmega} + frac{dsum^{-+}}{dOmega} right)</p>
-</div></blockquote>
-</dd>
-</dl>
-<p>end{align}`</p>
+<p><span class="math">\begin{align}
+\frac{d\sum^{+}}{d\Omega} &= \frac{d\sum^{++}}{d\Omega} + \frac{d\sum^{+-}}{d\Omega} \\
+\frac{d\sum^{-}}{d\Omega} &= \frac{d\sum^{--}}{d\Omega} + \frac{d\sum^{-+}}{d\Omega} \\
+\frac{d\sum}{d\Omega} &= \frac{1}{2} \left( \frac{d\sum^{+}}{d\Omega} + \frac{d\sum^{-}}{d\Omega} \right) \\
+\frac{d\sum}{d\Omega} &= \frac{1}{2} \left( \frac{d\sum^{++}}{d\Omega} + \frac{d\sum^{+-}}{d\Omega} +
+\frac{d\sum^{--}}{d\Omega} + \frac{d\sum^{-+}}{d\Omega} \right)
+\end{align}</span></p>
 <p>For example the unpolarised cross section calculated with the polarisation along the <span class="math notranslate nohighlight">\(z\)</span> direction.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -1355,19 +1343,30 @@ frac{dsum}{dOmega} &amp;= frac{1}{2} left( frac{dsum^{++}}{dOmega} + frac{dsum^{
 <img alt="../../../_images/documentation_ipynb_mag2exp_SANS_32_0.png" src="../../../_images/documentation_ipynb_mag2exp_SANS_32_0.png" />
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="SAXS.html" title="previous page">Tutorial: Small Angle X-ray Scattering</a>
-    <a class='right-next' id="next-link" href="Unit_converter.html" title="next page">Tutorial: Unit Conversions</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="SAXS.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial: Small Angle X-ray Scattering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Unit_converter.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial: Unit Conversions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -1375,20 +1374,19 @@ frac{dsum}{dOmega} &amp;= frac{1}{2} left( frac{dsum^{++}}{dOmega} + frac{dsum^{
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

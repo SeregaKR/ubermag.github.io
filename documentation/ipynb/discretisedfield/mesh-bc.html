@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Mesh boundary conditions &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Defining a uniform field" href="field-definition.html" />
     <link rel="prev" title="Mesh pad" href="mesh-pad.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -969,7 +973,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Mesh-boundary-conditions">
+<section id="Mesh-boundary-conditions">
 <h1>Mesh boundary conditions<a class="headerlink" href="#Mesh-boundary-conditions" title="Permalink to this headline">¶</a></h1>
 <p>In Ubermag, boundary conditions are set by passing <code class="docutils literal notranslate"><span class="pre">bc</span></code> argument to the mesh. The value of the <code class="docutils literal notranslate"><span class="pre">bc</span></code> argument is a string. The following boudary conditions (BC) are allowed:</p>
 <ol class="arabic simple">
@@ -1053,7 +1057,7 @@ div.rendered_html tbody tr:hover {
 </pre></div></div>
 </div>
 <p>we get only three neighbouring cell indices.</p>
-<div class="section" id="Periodic-boundary-conditions">
+<section id="Periodic-boundary-conditions">
 <h2>Periodic boundary conditions<a class="headerlink" href="#Periodic-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>Now, let us define a mesh with periodic boundary conditions. The periodic boudary conditions are defined by passing a string to <code class="docutils literal notranslate"><span class="pre">bc</span></code>. String consists of characters <code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, and/or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>, depending on the directions in which the mesh is periodic. For instance, if our mesh is periodic in x and y directions, we pass <code class="docutils literal notranslate"><span class="pre">bc='xy'</span></code>.</p>
 <div class="nbinput nblast docutils container">
@@ -1110,8 +1114,8 @@ div.rendered_html tbody tr:hover {
 <li><p>1 in the z-direction <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code>,</p></li>
 </ul>
 <p>because our mesh is not periodic in the z-direction.</p>
-</div>
-<div class="section" id="Experimental:-Neumann-and-Dirichet-boundary-conditions">
+</section>
+<section id="Experimental:-Neumann-and-Dirichet-boundary-conditions">
 <h2>Experimental: Neumann and Dirichet boundary conditions<a class="headerlink" href="#Experimental:-Neumann-and-Dirichet-boundary-conditions" title="Permalink to this headline">¶</a></h2>
 <p>Neumann and Dirichlet BC are defined by passing <code class="docutils literal notranslate"><span class="pre">bc='neumann'</span></code> or <code class="docutils literal notranslate"><span class="pre">bc='dirichet'</span></code>, respectively.</p>
 <p><strong>IMPORTANT:</strong> At the moment, only Neumann BC with zero value are supported and defining BC in a more general way will be included in the future releases of <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>.</p>
@@ -1129,19 +1133,30 @@ div.rendered_html tbody tr:hover {
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="mesh-pad.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mesh pad</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="field-definition.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Defining a uniform field</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="mesh-pad.html" title="previous page">Mesh pad</a>
-    <a class='right-next' id="next-link" href="field-definition.html" title="next page">Defining a uniform field</a>
-
-              </div>
               
           </main>
           
@@ -1149,20 +1164,19 @@ div.rendered_html tbody tr:hover {
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Spatially varying fields &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Field normalisation" href="field-normalisation.html" />
     <link rel="prev" title="Defining a uniform field" href="field-definition.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -986,7 +990,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Spatially-varying-fields">
+<section id="Spatially-varying-fields">
 <h1>Spatially varying fields<a class="headerlink" href="#Spatially-varying-fields" title="Permalink to this headline">¶</a></h1>
 <p>There are several different ways how a spatially varying field can be defined. Let us first define a mesh we are going to use to define the fields.</p>
 <div class="nbinput nblast docutils container">
@@ -1003,7 +1007,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="section" id="Using-a-Python-function">
+<section id="Using-a-Python-function">
 <h2>Using a Python function<a class="headerlink" href="#Using-a-Python-function" title="Permalink to this headline">¶</a></h2>
 <p>One of the ways how a spatially varying field can be defined is by using a Python function, which can be passed as <code class="docutils literal notranslate"><span class="pre">value</span></code> argument to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>. It should satisfy three main criteria: 1. It takes one argument. <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> is going to pass the coordinates of discertisation cells as tuples of length 3 to this argument. 2. Function should be able to return a value for any coordinate in the mesh 3. The value returned must be of the same dimension as the dimension
 of the field.</p>
@@ -1107,7 +1111,7 @@ array([[[[0.],
          [1.]]]])
 </pre></div></div>
 </div>
-<div class="section" id="Value-property">
+<section id="Value-property">
 <h3>Value property<a class="headerlink" href="#Value-property" title="Permalink to this headline">¶</a></h3>
 <p>It is not very informative to look at <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.array</span></code> to understand what is the actual value of the field. Therefore, if a unique representation value exists, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.value</span></code> is going to return it. For instance:</p>
 <div class="nbinput docutils container">
@@ -1347,9 +1351,9 @@ array([[[[   -25.,    625., -15625.],
          [    25.,    625.,  15625.]]]])
 </pre></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="Using-mesh-regions">
+</section>
+</section>
+<section id="Using-mesh-regions">
 <h2>Using mesh regions<a class="headerlink" href="#Using-mesh-regions" title="Permalink to this headline">¶</a></h2>
 <p>If regions were defined as a part of the mesh, and we want to set the value of the field differently in those regions, we can employ some of the functionality of regions. Let us assume that in the mesh we defined we want to have two regions. Region 1 is going to include all cells with negative <span class="math notranslate nohighlight">\(y\)</span> coordinate and region 2 cells with positive <span class="math notranslate nohighlight">\(y\)</span> coordinate. Our mesh would be:</p>
 <div class="nbinput nblast docutils container">
@@ -1568,8 +1572,8 @@ array([[[[   -25.,    625., -15625.],
 (2.0, 2.0, 1.0)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Using-another-Field-object">
+</section>
+<section id="Using-another-Field-object">
 <h2>Using another Field object<a class="headerlink" href="#Using-another-Field-object" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is necessary to “resample” the field using a different mesh. Another field can be passed as a value to the new field. If our new mesh is:</p>
 <div class="nbinput nblast docutils container">
@@ -1679,25 +1683,36 @@ array([[[[2., 2., 1.],
 (2.0, 2.0, 1.0)
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Other">
+</section>
+<section id="Other">
 <h2>Other<a class="headerlink" href="#Other" title="Permalink to this headline">¶</a></h2>
 <p>Full description of all existing functionality can be found in the <a class="reference external" href="https://discretisedfield.readthedocs.io/en/latest/_autosummary/discretisedfield.Field.html">API Reference</a>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="field-definition.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Defining a uniform field</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="field-normalisation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Field normalisation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="field-definition.html" title="previous page">Defining a uniform field</a>
-    <a class='right-next' id="next-link" href="field-normalisation.html" title="next page">Field normalisation</a>
-
-              </div>
               
           </main>
           
@@ -1705,20 +1720,19 @@ array([[[[2., 2., 1.],
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

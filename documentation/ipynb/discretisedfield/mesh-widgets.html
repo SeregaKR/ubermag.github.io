@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Mesh widgets &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Mesh pad" href="mesh-pad.html" />
     <link rel="prev" title="Mesh subregions" href="mesh-subregions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -969,7 +973,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Mesh-widgets">
+<section id="Mesh-widgets">
 <h1>Mesh widgets<a class="headerlink" href="#Mesh-widgets" title="Permalink to this headline">¶</a></h1>
 <p>In order to control interactive plots, sometimes we need to vary certain parameters which depend on the mesh. Therefore, mesh object has several widgets, which can be used for that purpose.</p>
 <p>The mesh we are going to use as an example is:</p>
@@ -989,7 +993,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="section" id="Slider">
+<section id="Slider">
 <h2>Slider<a class="headerlink" href="#Slider" title="Permalink to this headline">¶</a></h2>
 <p>Slider widget allows us to navigate through the coordinates of the mesh along the certain axis. For instance, if we want to “slide through” the x-axis, the widget is:</p>
 <div class="nbinput docutils container">
@@ -1057,8 +1061,8 @@ div.rendered_html tbody tr:hover {
 <div class="output_area docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "8e49d914b912478e85ad0bb8029d290d", "version_major": 2, "version_minor": 0}</script></div>
 </div>
-</div>
-<div class="section" id="Axis-selector">
+</section>
+<section id="Axis-selector">
 <h2>Axis selector<a class="headerlink" href="#Axis-selector" title="Permalink to this headline">¶</a></h2>
 <p>A simple widget, which allows us to select the axis we want can be obtained as:</p>
 <div class="nbinput docutils container">
@@ -1110,19 +1114,30 @@ div.rendered_html tbody tr:hover {
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {"0b089bd6c5f64706a02a4fe57187f4fe": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "13a1319ba6fa415d8a175cc41088d0c2": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "1e06d156da4f4f67bd093e4405983bbc": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["0.002", "0.008", "0.013", "0.018", "0.023", "0.028", "0.033", "0.038", "0.043", "0.048", "0.053", "0.058", "0.063", "0.068", "0.073", "0.078", "0.083", "0.088", "0.093", "0.098"], "description": "x (um)", "index": 10, "layout": "IPY_MODEL_2eceaa08c5524163a753e764eced359b", "style": "IPY_MODEL_8f0bb05a4b554d45868b7343cef1322c"}}, "2545ea4346d34144a38fcf9bf1d826ff": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2eceaa08c5524163a753e764eced359b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "30e481d189ec43e5acd3094f03d60425": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_options_labels": ["x", "y", "z"], "description": "axis", "index": 1, "layout": "IPY_MODEL_649aea1dad564b6195247338d333c522", "style": "IPY_MODEL_a6a412611ca54322993f2ecc288c468a"}}, "4bef515689b24a69bcdbaf1e5b41badf": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "5bde1710bcbe480ebff9203f09574154": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "5c4643f4b1f74f5e8cc52e4b6c4c2ca8": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "649aea1dad564b6195247338d333c522": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "66078cf2ba314fc390898fb3e7660b1b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "RadioButtonsModel", "state": {"_options_labels": ["x", "y", "z"], "description": "axis", "index": 2, "layout": "IPY_MODEL_5bde1710bcbe480ebff9203f09574154", "style": "IPY_MODEL_5c4643f4b1f74f5e8cc52e4b6c4c2ca8"}}, "665864758eb04226ad9905ba89c0bf1b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "692df39fc4bc42ceb41634e69d53b9ff": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["2.5", "7.5", "12.5", "17.5", "22.5", "27.5", "32.5", "37.5", "42.5", "47.5", "52.5", "57.5", "62.5", "67.5", "72.5", "77.5", "82.5", "87.5", "92.5", "97.5"], "description": "my slider", "index": 10, "layout": "IPY_MODEL_2545ea4346d34144a38fcf9bf1d826ff", "style": "IPY_MODEL_0b089bd6c5f64706a02a4fe57187f4fe"}}, "6b6ef70a065d40bd9ff7e0ac216b48a5": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "72a65201663d4871bfcab3cd67d5adf5": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "7e5ef394d45b42fd8a0da4d0a69a3dc5": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_options_labels": ["x", "y", "z"], "description": "axis", "index": 2, "layout": "IPY_MODEL_4bef515689b24a69bcdbaf1e5b41badf", "style": "IPY_MODEL_f572876c06574cdb82e63459427e3058"}}, "845dbd05ae664ce0ba66bcdc44a18ac4": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8e49d914b912478e85ad0bb8029d290d": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["2.5", "7.5", "12.5", "17.5", "22.5", "27.5", "32.5", "37.5", "42.5", "47.5", "52.5", "57.5", "62.5", "67.5", "72.5", "77.5", "82.5", "87.5", "92.5", "97.5"], "description": "x (nm)", "index": 11, "layout": "IPY_MODEL_845dbd05ae664ce0ba66bcdc44a18ac4", "orientation": "vertical", "style": "IPY_MODEL_665864758eb04226ad9905ba89c0bf1b"}}, "8f0bb05a4b554d45868b7343cef1322c": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "97989794845e4bb9beb2adcd1197f1ae": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "97f33e9a04b04f3dac5baee756ac8e64": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9d3fc9c4ed7b4bb1a85d6d04fa826a0d": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["2500.0", "7500.0", "12500.0", "17500.0", "22500.0", "27500.0", "32500.0", "37500.0", "42500.0", "47500.0", "52500.0", "57500.0", "62500.0", "67500.0", "72500.0", "77500.0", "82500.0", "87500.0", "92500.0", "97500.0"], "description": "x (pm)", "index": 0, "layout": "IPY_MODEL_9e19f9d35a65497db0d96b3d6638c4b0", "style": "IPY_MODEL_6b6ef70a065d40bd9ff7e0ac216b48a5"}}, "9e19f9d35a65497db0d96b3d6638c4b0": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a1230cddd55b48d2b059152a765d0c4b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_options_labels": ["x", "y", "z"], "description": "my selector", "index": 2, "layout": "IPY_MODEL_72a65201663d4871bfcab3cd67d5adf5", "style": "IPY_MODEL_97989794845e4bb9beb2adcd1197f1ae"}}, "a35b99c509b246beabe1bf93a12d81f0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["2.5", "7.5", "12.5", "17.5", "22.5", "27.5", "32.5", "37.5", "42.5", "47.5", "52.5", "57.5", "62.5", "67.5", "72.5", "77.5", "82.5", "87.5", "92.5", "97.5"], "description": "x (nm)", "index": 19, "layout": "IPY_MODEL_bb2762dc4a3f4a5fa12c49904fe5b339", "style": "IPY_MODEL_f58adbfb442a4070a705c53eb0ca2845"}}, "a6a412611ca54322993f2ecc288c468a": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "bb2762dc4a3f4a5fa12c49904fe5b339": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "df3f325c308f4c2aa04ccb7ee15abbca": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["2500.0", "7500.0", "12500.0", "17500.0", "22500.0", "27500.0", "32500.0", "37500.0", "42500.0", "47500.0", "52500.0", "57500.0", "62500.0", "67500.0", "72500.0", "77500.0", "82500.0", "87500.0", "92500.0", "97500.0"], "description": "x (pm)", "index": 10, "layout": "IPY_MODEL_97f33e9a04b04f3dac5baee756ac8e64", "style": "IPY_MODEL_13a1319ba6fa415d8a175cc41088d0c2"}}, "f572876c06574cdb82e63459427e3058": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "f58adbfb442a4070a705c53eb0ca2845": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="mesh-subregions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mesh subregions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="mesh-pad.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mesh pad</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="mesh-subregions.html" title="previous page">Mesh subregions</a>
-    <a class='right-next' id="next-link" href="mesh-pad.html" title="next page">Mesh pad</a>
-
-              </div>
               
           </main>
           
@@ -1130,20 +1145,19 @@ div.rendered_html tbody tr:hover {
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

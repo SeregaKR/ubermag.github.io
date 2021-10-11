@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Mesh subregions &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Mesh widgets" href="mesh-widgets.html" />
     <link rel="prev" title="Mesh plane and line" href="mesh-line-plane.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -984,7 +988,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Mesh-subregions">
+<section id="Mesh-subregions">
 <h1>Mesh subregions<a class="headerlink" href="#Mesh-subregions" title="Permalink to this headline">¶</a></h1>
 <p>Often we need to define subregions in the mesh. For instance, this can be if when we have two or more different materials in our mesh and it can make our life easier later when start defining fields and assigning different parameters to different subregions.</p>
 <p>As before, the region of the mesh we are going to use as an example is:</p>
@@ -1143,10 +1147,10 @@ Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-07, 5e-08, 1e-08)), n=(20, 10, 2),
 (5e-08, 2.5e-08, 5e-09)
 </pre></div></div>
 </div>
-<div class="section" id="Mesh-subregions-visualisation">
+<section id="Mesh-subregions-visualisation">
 <h2>Mesh subregions visualisation<a class="headerlink" href="#Mesh-subregions-visualisation" title="Permalink to this headline">¶</a></h2>
 <p>Similar to region and mesh, subregions can be plotted either using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (<code class="docutils literal notranslate"><span class="pre">mpl_subregions</span></code>) or <code class="docutils literal notranslate"><span class="pre">k3d</span></code> (<code class="docutils literal notranslate"><span class="pre">k3d_subregions</span></code>).</p>
-<div class="section" id="mpl">
+<section id="mpl">
 <h3><code class="docutils literal notranslate"><span class="pre">mpl</span></code><a class="headerlink" href="#mpl" title="Permalink to this headline">¶</a></h3>
 <p>Defaults <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot is:</p>
 <div class="nbinput docutils container">
@@ -1317,8 +1321,8 @@ Text(0.5, 0, &#39;height&#39;)
 <img alt="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_29_0.png" src="../../../_images/documentation_ipynb_discretisedfield_mesh-subregions_29_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="k3d">
+</section>
+<section id="k3d">
 <h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#k3d" title="Permalink to this headline">¶</a></h3>
 <p>Default k3d plot is:</p>
 <div class="nbinput docutils container">
@@ -1418,20 +1422,31 @@ Text(0.5, 0, &#39;height&#39;)
 <p>This way, we can modify the plot however we want (as long as <code class="docutils literal notranslate"><span class="pre">k3d</span></code> allows it).</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {"01416f2448054b31bce52da5827a9759": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(um)}", "y\\,\\text{(um)}", "z\\,\\text{(um)}"], "axes_helper": 1, "background_color": 16777215, "camera": [0.14473012183263145, -0.11772018118432526, 0.019248011828243136, 0.04975000077486038, 0.024750000402331353, 0.009749999722465874, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_3c56e6a9d1014ef1b8508dc72b8621e4", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400932992], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "1d931c9027934702acb78c8711ad1f31": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1ffe6039d52b43418f9d0e6126814171": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "23770d576b7b4398a03a2171d537ed02": {"buffers": [{"data": "OTAAADHUAAA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140308400895408, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "29798e8398144d40a77f111041d159b8": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3a1399d8c55d4452bbe4e418d52ad576": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3c56e6a9d1014ef1b8508dc72b8621e4": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "45a214f342ec4476868b99843a1dd381": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "49ec2d16b50d46faab38eb45ab0fd195": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_29798e8398144d40a77f111041d159b8", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400932944], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "8a51da2c817a47c680a794a51785f5e7": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["\\text{length}", "\\text{width}", "\\text{height}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_e016fe47b9b64d9f9aad314c671f8de0", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308404911984], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "a3756c594fd34a1098801e639dd31236": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1d931c9027934702acb78c8711ad1f31", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "01416f2448054b31bce52da5827a9759", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c4b4d3136e854832a7ebb53c2f262c47": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "zczMPQAAAAAAAAAAzcxMPQAAAADNzEw9AAAAAM3MzDwAAAAAAAAAAArXozwK1yM8AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308400932992, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "c70ae721eba94a2fab713b6d4e0e6e63": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f46981f93a97429986ec1469d3fc044b", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "f8d64a5da3824c7096e942861297ed2f", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c7e872c6d6134b81a33a7eaaf358562a": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_fd4e814863a64b1089358ccd09b0d995", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308404851280], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "d2ae58c891bb4190a8396cccc2f7bc8a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d2d1d7269a3a42ceb687a51cc2aa491f": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308404911984, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "dc0e17a6bf1d4afb9d42c06332e8fcf3": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308400932944, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": false}}, "e016fe47b9b64d9f9aad314c671f8de0": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f0135dfb2c3b4fe9a4366e7d2e4d5694": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_45a214f342ec4476868b99843a1dd381", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "8a51da2c817a47c680a794a51785f5e7", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f35dde068fdf4b9ab4dc38cea459caab": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_d2ae58c891bb4190a8396cccc2f7bc8a", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "49ec2d16b50d46faab38eb45ab0fd195", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "f46981f93a97429986ec1469d3fc044b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f70ccd067c8d4bb494492f3ce05957af": {"buffers": [{"data": "sHJMAFKE3QBoqFUAUk7EALNygQBgeJMAw4vaAIyMjAB0ucwAzbVkAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAABIQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAoEEAACBBAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.9.1", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"data": {}, "dtype": "uint32", "shape": [10]}, "compression_level": 0, "id": 140308404851280, "model_matrix": {"data": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"data": {}, "dtype": "uint8", "shape": [4, 10, 20]}, "wireframe": true}}, "f8d64a5da3824c7096e942861297ed2f": {"model_module": "k3d", "model_module_version": "2.9.1", "model_name": "PlotModel", "state": {"_backend_version": "2.9.1", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [144.73011978974733, -117.72017960080197, 19.248011916017482, 49.75000003352761, 24.750000033527613, 9.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_3a1399d8c55d4452bbe4e418d52ad576", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140308400895408], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_include_js": true, "time": 0, "voxel_paint_color": 0}}, "faae8b8a290f4d4aa656087f69dbc29c": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_1ffe6039d52b43418f9d0e6126814171", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "c7e872c6d6134b81a33a7eaaf358562a", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "fd4e814863a64b1089358ccd09b0d995": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
-</script></div>
-</div>
-</div>
+</script></section>
+</section>
+</section>
 
 
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="mesh-line-plane.html" title="previous page">Mesh plane and line</a>
-    <a class='right-next' id="next-link" href="mesh-widgets.html" title="next page">Mesh widgets</a>
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="mesh-line-plane.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mesh plane and line</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="mesh-widgets.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mesh widgets</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
               
           </main>
           
@@ -1439,20 +1454,19 @@ Text(0.5, 0, &#39;height&#39;)
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

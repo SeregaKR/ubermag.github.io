@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Table widgets &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,11 +24,11 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -45,7 +46,10 @@
     <link rel="next" title="Table interactive plot" href="table-interactive-plot.html" />
     <link rel="prev" title="Table visualisation" href="table-visualisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -158,7 +162,7 @@
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <p class="caption" role="heading">
+    <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Packages
  </span>
@@ -969,7 +973,7 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<div class="section" id="Table-widgets">
+<section id="Table-widgets">
 <h1>Table widgets<a class="headerlink" href="#Table-widgets" title="Permalink to this headline">¶</a></h1>
 <p>In order to control interactive plots, sometimes we need to vary certain parameters which depend on the data stored in the table. Therefore, table object has several widgets, which can be used for that purpose.</p>
 <p>The table we are going to use as an example is:</p>
@@ -989,7 +993,7 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="section" id="Slider">
+<section id="Slider">
 <h2>Slider<a class="headerlink" href="#Slider" title="Permalink to this headline">¶</a></h2>
 <p>Slider widget allows us to restrict the time values shown in an interactive plot. Slider widget is:</p>
 <div class="nbinput docutils container">
@@ -1073,8 +1077,8 @@ div.rendered_html tbody tr:hover {
 <div class="output_area docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "34f5424734b04199a60046f707618ae0", "version_major": 2, "version_minor": 0}</script></div>
 </div>
-</div>
-<div class="section" id="Value-selector">
+</section>
+<section id="Value-selector">
 <h2>Value selector<a class="headerlink" href="#Value-selector" title="Permalink to this headline">¶</a></h2>
 <p>A simple widget, which allows us to select the columns from data table can be obtained using <code class="docutils literal notranslate"><span class="pre">selector</span></code>.</p>
 <div class="nbinput docutils container">
@@ -1095,19 +1099,30 @@ div.rendered_html tbody tr:hover {
 <p>This returns a selection widget with all data columns present in the table. This method is based on <code class="docutils literal notranslate"><span class="pre">ipywidgets.SelectMultiple</span></code>, so any keyword argument accepted by it can be passed.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {"0a902569d29145febb0e8580b488900a": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionRangeSliderModel", "state": {"_model_name": "SelectionRangeSliderModel", "_options_labels": ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "10.0", "11.0", "12.0", "13.0", "14.0", "15.0", "16.0", "17.0", "18.0", "19.0", "20.0", "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0", "30.0", "31.0", "32.0", "33.0", "34.0", "35.0", "36.0", "37.0", "38.0", "39.0", "40.0", "41.0", "42.0", "43.0", "44.0", "45.0", "46.0", "47.0", "48.0", "49.0", "50.0", "51.0", "52.0", "53.0", "54.0", "55.0", "56.0", "57.0", "58.0", "59.0", "60.0", "61.0", "62.0", "63.0", "64.0", "65.0", "66.0", "67.0", "68.0", "69.0", "70.0", "71.0", "72.0", "73.0", "74.0", "75.0", "76.0", "77.0", "78.0", "79.0", "80.0", "81.0", "82.0", "83.0", "84.0", "85.0", "86.0", "87.0", "88.0", "89.0", "90.0", "91.0", "92.0", "93.0", "94.0", "95.0", "96.0", "97.0", "98.0", "99.0", "100.0", "101.0", "102.0", "103.0", "104.0", "105.0", "106.0", "107.0", "108.0", "109.0", "110.0", "111.0", "112.0", "113.0", "114.0", "115.0", "116.0", "117.0", "118.0", "119.0", "120.0", "121.0", "122.0", "123.0", "124.0", "125.0", "126.0", "127.0", "128.0", "129.0", "130.0", "131.0", "132.0", "133.0", "134.0", "135.0", "136.0", "137.0", "138.0", "139.0", "140.0", "141.0", "142.0", "143.0", "144.0", "145.0", "146.0", "147.0", "148.0", "149.0", "150.0", "151.0", "152.0", "153.0", "154.0", "155.0", "156.0", "157.0", "158.0", "159.0", "160.0", "161.0", "162.0", "163.0", "164.0", "165.0", "166.0", "167.0", "168.0", "169.0", "170.0", "171.0", "172.0", "173.0", "174.0", "175.0", "176.0", "177.0", "178.0", "179.0", "180.0", "181.0", "182.0", "183.0", "184.0", "185.0", "186.0", "187.0", "188.0", "189.0", "190.0", "191.0", "192.0", "193.0", "194.0", "195.0", "196.0", "197.0", "198.0", "199.0", "200.0"], "_view_name": "SelectionRangeSliderView", "description": "my slider", "index": [0, 199], "layout": "IPY_MODEL_eca5eef8fc844a82ad7e135b1de3f4f7", "style": "IPY_MODEL_f19c3ba55f31463faf8b5a59548873da"}}, "0d5d38481b35460293fb9e6ab964b412": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "0fae275ca26948c0b9145748ff9237cf": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "1634f122f215430686e46d883105b98e": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "2465e3154649491c9a276190b62dc15a": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionRangeSliderModel", "state": {"_model_name": "SelectionRangeSliderModel", "_options_labels": ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "10.0", "11.0", "12.0", "13.0", "14.0", "15.0", "16.0", "17.0", "18.0", "19.0", "20.0", "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0", "30.0", "31.0", "32.0", "33.0", "34.0", "35.0", "36.0", "37.0", "38.0", "39.0", "40.0", "41.0", "42.0", "43.0", "44.0", "45.0", "46.0", "47.0", "48.0", "49.0", "50.0", "51.0", "52.0", "53.0", "54.0", "55.0", "56.0", "57.0", "58.0", "59.0", "60.0", "61.0", "62.0", "63.0", "64.0", "65.0", "66.0", "67.0", "68.0", "69.0", "70.0", "71.0", "72.0", "73.0", "74.0", "75.0", "76.0", "77.0", "78.0", "79.0", "80.0", "81.0", "82.0", "83.0", "84.0", "85.0", "86.0", "87.0", "88.0", "89.0", "90.0", "91.0", "92.0", "93.0", "94.0", "95.0", "96.0", "97.0", "98.0", "99.0", "100.0", "101.0", "102.0", "103.0", "104.0", "105.0", "106.0", "107.0", "108.0", "109.0", "110.0", "111.0", "112.0", "113.0", "114.0", "115.0", "116.0", "117.0", "118.0", "119.0", "120.0", "121.0", "122.0", "123.0", "124.0", "125.0", "126.0", "127.0", "128.0", "129.0", "130.0", "131.0", "132.0", "133.0", "134.0", "135.0", "136.0", "137.0", "138.0", "139.0", "140.0", "141.0", "142.0", "143.0", "144.0", "145.0", "146.0", "147.0", "148.0", "149.0", "150.0", "151.0", "152.0", "153.0", "154.0", "155.0", "156.0", "157.0", "158.0", "159.0", "160.0", "161.0", "162.0", "163.0", "164.0", "165.0", "166.0", "167.0", "168.0", "169.0", "170.0", "171.0", "172.0", "173.0", "174.0", "175.0", "176.0", "177.0", "178.0", "179.0", "180.0", "181.0", "182.0", "183.0", "184.0", "185.0", "186.0", "187.0", "188.0", "189.0", "190.0", "191.0", "192.0", "193.0", "194.0", "195.0", "196.0", "197.0", "198.0", "199.0", "200.0"], "_view_name": "SelectionRangeSliderView", "description": "t (ps):", "index": [0, 199], "layout": "IPY_MODEL_c3b46aaa299540128d5a3faf4c181859", "orientation": "vertical", "style": "IPY_MODEL_0fae275ca26948c0b9145748ff9237cf"}}, "348c4ac778bd4279af25ca083e0d34a0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionRangeSliderModel", "state": {"_model_name": "SelectionRangeSliderModel", "_options_labels": ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "10.0", "11.0", "12.0", "13.0", "14.0", "15.0", "16.0", "17.0", "18.0", "19.0", "20.0", "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0", "30.0", "31.0", "32.0", "33.0", "34.0", "35.0", "36.0", "37.0", "38.0", "39.0", "40.0", "41.0", "42.0", "43.0", "44.0", "45.0", "46.0", "47.0", "48.0", "49.0", "50.0", "51.0", "52.0", "53.0", "54.0", "55.0", "56.0", "57.0", "58.0", "59.0", "60.0", "61.0", "62.0", "63.0", "64.0", "65.0", "66.0", "67.0", "68.0", "69.0", "70.0", "71.0", "72.0", "73.0", "74.0", "75.0", "76.0", "77.0", "78.0", "79.0", "80.0", "81.0", "82.0", "83.0", "84.0", "85.0", "86.0", "87.0", "88.0", "89.0", "90.0", "91.0", "92.0", "93.0", "94.0", "95.0", "96.0", "97.0", "98.0", "99.0", "100.0", "101.0", "102.0", "103.0", "104.0", "105.0", "106.0", "107.0", "108.0", "109.0", "110.0", "111.0", "112.0", "113.0", "114.0", "115.0", "116.0", "117.0", "118.0", "119.0", "120.0", "121.0", "122.0", "123.0", "124.0", "125.0", "126.0", "127.0", "128.0", "129.0", "130.0", "131.0", "132.0", "133.0", "134.0", "135.0", "136.0", "137.0", "138.0", "139.0", "140.0", "141.0", "142.0", "143.0", "144.0", "145.0", "146.0", "147.0", "148.0", "149.0", "150.0", "151.0", "152.0", "153.0", "154.0", "155.0", "156.0", "157.0", "158.0", "159.0", "160.0", "161.0", "162.0", "163.0", "164.0", "165.0", "166.0", "167.0", "168.0", "169.0", "170.0", "171.0", "172.0", "173.0", "174.0", "175.0", "176.0", "177.0", "178.0", "179.0", "180.0", "181.0", "182.0", "183.0", "184.0", "185.0", "186.0", "187.0", "188.0", "189.0", "190.0", "191.0", "192.0", "193.0", "194.0", "195.0", "196.0", "197.0", "198.0", "199.0", "200.0"], "_view_name": "SelectionRangeSliderView", "description": "t (ps):", "index": [0, 199], "layout": "IPY_MODEL_a6c2503473e64430993d575e2147a86f", "style": "IPY_MODEL_f5238305712947f2b53220d13fb69b64"}}, "34f5424734b04199a60046f707618ae0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionRangeSliderModel", "state": {"_model_name": "SelectionRangeSliderModel", "_options_labels": ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "10.0", "11.0", "12.0", "13.0", "14.0", "15.0", "16.0", "17.0", "18.0", "19.0", "20.0", "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0", "30.0", "31.0", "32.0", "33.0", "34.0", "35.0", "36.0", "37.0", "38.0", "39.0", "40.0", "41.0", "42.0", "43.0", "44.0", "45.0", "46.0", "47.0", "48.0", "49.0", "50.0", "51.0", "52.0", "53.0", "54.0", "55.0", "56.0", "57.0", "58.0", "59.0", "60.0", "61.0", "62.0", "63.0", "64.0", "65.0", "66.0", "67.0", "68.0", "69.0", "70.0", "71.0", "72.0", "73.0", "74.0", "75.0", "76.0", "77.0", "78.0", "79.0", "80.0", "81.0", "82.0", "83.0", "84.0", "85.0", "86.0", "87.0", "88.0", "89.0", "90.0", "91.0", "92.0", "93.0", "94.0", "95.0", "96.0", "97.0", "98.0", "99.0", "100.0", "101.0", "102.0", "103.0", "104.0", "105.0", "106.0", "107.0", "108.0", "109.0", "110.0", "111.0", "112.0", "113.0", "114.0", "115.0", "116.0", "117.0", "118.0", "119.0", "120.0", "121.0", "122.0", "123.0", "124.0", "125.0", "126.0", "127.0", "128.0", "129.0", "130.0", "131.0", "132.0", "133.0", "134.0", "135.0", "136.0", "137.0", "138.0", "139.0", "140.0", "141.0", "142.0", "143.0", "144.0", "145.0", "146.0", "147.0", "148.0", "149.0", "150.0", "151.0", "152.0", "153.0", "154.0", "155.0", "156.0", "157.0", "158.0", "159.0", "160.0", "161.0", "162.0", "163.0", "164.0", "165.0", "166.0", "167.0", "168.0", "169.0", "170.0", "171.0", "172.0", "173.0", "174.0", "175.0", "176.0", "177.0", "178.0", "179.0", "180.0", "181.0", "182.0", "183.0", "184.0", "185.0", "186.0", "187.0", "188.0", "189.0", "190.0", "191.0", "192.0", "193.0", "194.0", "195.0", "196.0", "197.0", "198.0", "199.0", "200.0"], "_view_name": "SelectionRangeSliderView", "description": "mx:", "index": [0, 199], "layout": "IPY_MODEL_573e6a2895704302bc43e8e819f532fa", "style": "IPY_MODEL_f805af2e0bc64dd0ae892410be049522"}}, "3bfd46a8e5b14034b02f1eaca5ade8ae": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "435594b3eb794ddfb4e243cf0e24a328": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionRangeSliderModel", "state": {"_model_name": "SelectionRangeSliderModel", "_options_labels": ["1.0", "2.0", "3.0", "4.0", "5.0", "6.0", "7.0", "8.0", "9.0", "10.0", "11.0", "12.0", "13.0", "14.0", "15.0", "16.0", "17.0", "18.0", "19.0", "20.0", "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0", "30.0", "31.0", "32.0", "33.0", "34.0", "35.0", "36.0", "37.0", "38.0", "39.0", "40.0", "41.0", "42.0", "43.0", "44.0", "45.0", "46.0", "47.0", "48.0", "49.0", "50.0", "51.0", "52.0", "53.0", "54.0", "55.0", "56.0", "57.0", "58.0", "59.0", "60.0", "61.0", "62.0", "63.0", "64.0", "65.0", "66.0", "67.0", "68.0", "69.0", "70.0", "71.0", "72.0", "73.0", "74.0", "75.0", "76.0", "77.0", "78.0", "79.0", "80.0", "81.0", "82.0", "83.0", "84.0", "85.0", "86.0", "87.0", "88.0", "89.0", "90.0", "91.0", "92.0", "93.0", "94.0", "95.0", "96.0", "97.0", "98.0", "99.0", "100.0", "101.0", "102.0", "103.0", "104.0", "105.0", "106.0", "107.0", "108.0", "109.0", "110.0", "111.0", "112.0", "113.0", "114.0", "115.0", "116.0", "117.0", "118.0", "119.0", "120.0", "121.0", "122.0", "123.0", "124.0", "125.0", "126.0", "127.0", "128.0", "129.0", "130.0", "131.0", "132.0", "133.0", "134.0", "135.0", "136.0", "137.0", "138.0", "139.0", "140.0", "141.0", "142.0", "143.0", "144.0", "145.0", "146.0", "147.0", "148.0", "149.0", "150.0", "151.0", "152.0", "153.0", "154.0", "155.0", "156.0", "157.0", "158.0", "159.0", "160.0", "161.0", "162.0", "163.0", "164.0", "165.0", "166.0", "167.0", "168.0", "169.0", "170.0", "171.0", "172.0", "173.0", "174.0", "175.0", "176.0", "177.0", "178.0", "179.0", "180.0", "181.0", "182.0", "183.0", "184.0", "185.0", "186.0", "187.0", "188.0", "189.0", "190.0", "191.0", "192.0", "193.0", "194.0", "195.0", "196.0", "197.0", "198.0", "199.0", "200.0"], "_view_name": "SelectionRangeSliderView", "description": "t (ps):", "index": [0, 199], "layout": "IPY_MODEL_0d5d38481b35460293fb9e6ab964b412", "style": "IPY_MODEL_3bfd46a8e5b14034b02f1eaca5ade8ae"}}, "55f5c0fdd22e466c9ade31ed1288d282": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectMultipleModel", "state": {"_options_labels": ["E", "E_calc_count", "max_dmdt", "dE/dt", "delta_E", "average_u", "E_exchange", "max_spin_ang_exchange", "stage_max_spin_ang_exchange", "run_max_spin_ang_exchange", "E_dmi", "E_uniaxialanisotropy", "iteration", "stage_iteration", "stage", "mx", "my", "mz", "last_time_step"], "description": "y-axis:", "index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], "layout": "IPY_MODEL_b7ebba4284b44f32a75add2fe9b39ed4", "rows": 5, "style": "IPY_MODEL_1634f122f215430686e46d883105b98e"}}, "573e6a2895704302bc43e8e819f532fa": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a6c2503473e64430993d575e2147a86f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b7ebba4284b44f32a75add2fe9b39ed4": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "c3b46aaa299540128d5a3faf4c181859": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "eca5eef8fc844a82ad7e135b1de3f4f7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f19c3ba55f31463faf8b5a59548873da": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "f5238305712947f2b53220d13fb69b64": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "f805af2e0bc64dd0ae892410be049522": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}}, "version_major": 2, "version_minor": 0}
-</script></div>
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="table-visualisation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Table visualisation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="table-interactive-plot.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Table interactive plot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-
-
-              </div>
-              
-              
-              <div class='prev-next-bottom'>
-                
-    <a class='left-prev' id="prev-link" href="table-visualisation.html" title="previous page">Table visualisation</a>
-    <a class='right-next' id="next-link" href="table-interactive-plot.html" title="next page">Table interactive plot</a>
-
-              </div>
               
           </main>
           
@@ -1115,20 +1130,19 @@ div.rendered_html tbody tr:hover {
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  <footer class="footer mt-5 mt-md-0">
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br/>
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     
