@@ -679,18 +679,91 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Plotting-using-mpl">
+  <a class="reference internal nav-link" href="#Plotting-using-Field.mpl()">
    Plotting using
    <code class="docutils literal notranslate">
     <span class="pre">
-     mpl
+     Field.mpl()
     </span>
    </code>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Available-plotting-functions">
+   Available plotting functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Scalar-field-visualisation-–-mpl.scalar">
+     Scalar field visualisation –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl.scalar
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Vector-field-visualisation-–-mpl.vector">
+     Vector field visualisation –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl.vector
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Contour-line-plots-–-mpl.contour">
+     Contour line plots –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl.contour
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#HSL-plots-–-mpl.lightness">
+     HSL plots –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl.lightness
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#colorwheel">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         colorwheel
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Combining-scalar-and-vector-plots-–-mpl()">
+     Combining scalar and vector plots –
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mpl()
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Building-a-custom-plot">
    Building a custom plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#Interactive-plots">
+   Interactive plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -985,7 +1058,10 @@ div.rendered_html tbody tr:hover {
 </style>
 <section id="Visualising-field-using-matplotlib">
 <h1>Visualising field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#Visualising-field-using-matplotlib" title="Permalink to this headline">¶</a></h1>
-<p>There are two ways how a field can be visualised, using: - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> - <code class="docutils literal notranslate"><span class="pre">k3d</span></code></p>
+<p>There are two ways how a field can be visualised, using:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> -<code class="docutils literal notranslate"><span class="pre">k3d</span></code></p></li>
+</ul>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> provides two-dimensional plots of fields. This means that the field can be visualised only if was firstly intersected with a plane.</p>
 <p>Let us say we have a sample, which is a nanocylinder of diametre <span class="math notranslate nohighlight">\(30\,\text{nm}\)</span> and <span class="math notranslate nohighlight">\(50 \,\text{nm}\)</span> height. The value of the field at <span class="math notranslate nohighlight">\((x, y, z)\)</span> point is <span class="math notranslate nohighlight">\((-cy, cx, cz)\)</span>, with <span class="math notranslate nohighlight">\(c=10^{9}\)</span>. The norm of the field inside the cylinder is <span class="math notranslate nohighlight">\(10^{6}\)</span>.</p>
 <p>Let us firstly build that field. We start by creating a rectangular mesh which can contain the cylinder we described.</p>
@@ -995,17 +1071,16 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">15e-6</span><span class="p">,</span> <span class="o">-</span><span class="mf">15e-6</span><span class="p">,</span> <span class="o">-</span><span class="mf">25e-6</span><span class="p">)</span>
-<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">15e-6</span><span class="p">,</span> <span class="mf">15e-6</span><span class="p">,</span> <span class="mf">25e-6</span><span class="p">)</span>
-<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-6</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">15e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">15e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">25e-9</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">15e-9</span><span class="p">,</span> <span class="mf">15e-9</span><span class="p">,</span> <span class="mf">25e-9</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<p>Please not that we activated inline plotting <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> right after we imported <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>. This is necessary if we want to draw plots in the Jupyter notebook.</p>
-<p>Secondly, we want to define the norm. When we define the nanocylinder, the norm of the vector field outside the cylinder should be zero and outside <span class="math notranslate nohighlight">\(M_\text{s}\)</span>. The Python function is</p>
+<p>Secondly, we want to define the norm. When we define the nanocylinder, the norm of the vector field outside the cylinder should be zero and inside <span class="math notranslate nohighlight">\(M_\text{s}\)</span>. The Python function is</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -1013,7 +1088,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">norm_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mf">15e-6</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mf">15e-9</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
         <span class="k">return</span> <span class="mf">1e6</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -1028,7 +1103,7 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">value_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="mf">1e6</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mf">1e9</span>
     <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1040,11 +1115,12 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_fun</span><span class="p">)</span>
+<span class="n">vortex_field</span> <span class="o">=</span> <span class="n">field</span>
 </pre></div>
 </div>
 </div>
-<section id="Plotting-using-mpl">
-<h2>Plotting using <code class="docutils literal notranslate"><span class="pre">mpl</span></code><a class="headerlink" href="#Plotting-using-mpl" title="Permalink to this headline">¶</a></h2>
+<section id="Plotting-using-Field.mpl()">
+<h2>Plotting using <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code><a class="headerlink" href="#Plotting-using-Field.mpl()" title="Permalink to this headline">¶</a></h2>
 <p>The main function used to visualise the field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is <code class="docutils literal notranslate"><span class="pre">discertisedfield.Field.mpl</span></code>. Let us try to run it.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -1053,8 +1129,8 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">try</span><span class="p">:</span>
     <span class="n">field</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception raised.&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception raised:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1063,17 +1139,17 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Exception raised.
+Exception raised: The field must be sliced before it can be plotted.
 </pre></div></div>
 </div>
-<p>The exception was raised because <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plotting is available only for two-dimensional planes. Therefore, we have to first intersect the field with a plane and then plot it. Let us intersect it with <span class="math notranslate nohighlight">\(z=10\)</span> plane and then call the <code class="docutils literal notranslate"><span class="pre">mpl</span></code> method.</p>
+<p>The exception was raised because <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plotting is available only for two-dimensional planes. Therefore, we have to first intersect the field with a plane and then plot it. Let us intersect it with <span class="math notranslate nohighlight">\(z=10\,\mathrm{nm}\)</span> plane and then call the <code class="docutils literal notranslate"><span class="pre">mpl</span></code> method.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1091,7 +1167,7 @@ Exception raised.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">field</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">field</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1102,8 +1178,8 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_13_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_13_0.png" />
 </div>
 </div>
-<p>Now, we can see that we plotted the <span class="math notranslate nohighlight">\(z\)</span>-plane intersection by looking at the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> dimensions on the horizontal and vertical axes, respectively. Secondly, we see that there are two overlapped plots: a coloured plot (<code class="docutils literal notranslate"><span class="pre">imshow</span></code>) and a vector plot (<code class="docutils literal notranslate"><span class="pre">quiver</span></code>). <code class="docutils literal notranslate"><span class="pre">quiver</span></code> plot can only plot two-dimensional vector fields. More precisely, it plots the projection of a vector on the plane we intersected the field with. However, we then lose the information about the
-out-of-plane component of the vector field. Because of that, there is a scalar (<code class="docutils literal notranslate"><span class="pre">imshow</span></code>) field, together with a colorbar, whose colour depicts the <span class="math notranslate nohighlight">\(z\)</span> component of the field. We can also notice, that all discretisation cells where the norm of the field is zero, are not plotted.</p>
+<p>Now, we can see that we plotted the <span class="math notranslate nohighlight">\(z\)</span>-plane intersection by looking at the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> dimensions on the horizontal and vertical axes, respectively. Secondly, we see that there are two overlapped plots: a coloured plot (<code class="docutils literal notranslate"><span class="pre">scalar</span></code>) and a vector plot (<code class="docutils literal notranslate"><span class="pre">vector</span></code>). <code class="docutils literal notranslate"><span class="pre">vector</span></code> plot can only plot two-dimensional vector fields. More precisely, it plots the projection of a vector on the plane we intersected the field with. However, we then lose the information about the
+out-of-plane component of the vector field. Because of that, there is a scalar (<code class="docutils literal notranslate"><span class="pre">scalar</span></code>) field, together with a colorbar, whose colour depicts the <span class="math notranslate nohighlight">\(z\)</span> component of the field. We can also notice, that all discretisation cells where the norm of the field is zero, are not plotted.</p>
 <p>Similarly, we can plot a different plane</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1141,117 +1217,74 @@ out-of-plane component of the vector field. Because of that, there is a scalar (
 </div>
 </div>
 </section>
-<section id="Building-a-custom-plot">
-<h2>Building a custom plot<a class="headerlink" href="#Building-a-custom-plot" title="Permalink to this headline">¶</a></h2>
-<p>So far, we showed the default behaviour of the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl()</span></code>. However, it is often required that a custom plot is built. Here we show several ways how a custom plot can be built. There are three basic methods that can be used: - <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.imshow()</span></code> for plotting scalar fields - <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.quiver()</span></code> for plotting vector fields - <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.colorbar()</span></code> for adding a colorbar</p>
-<p>Let us start with some basic functionalities of <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.imshow()</span></code>. Subsequently, we will build a custom plotting function step-by-step. This way, we will show some basic functionality of different plotting methods and how they can be modified. Firstly, we have to create <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span> <span class="pre">object</span></code>.</p>
-<div class="nbinput docutils container">
+<section id="Available-plotting-functions">
+<h2>Available plotting functions<a class="headerlink" href="#Available-plotting-functions" title="Permalink to this headline">¶</a></h2>
+<p>So far, we showed the default behaviour of <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl()</span></code>, a convenience function for simple plots. However, it is often required that a custom plot is built. Here, we show the different available plotting functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.scalar</span></code> for plotting scalar fields</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.vector</span></code> for plotting vector fields</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.contour</span></code> for plotting contour lines of scalar fields</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.lightness</span></code> for HSL plots of scalar or vector fields</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl()</span></code> internally combines <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.scalar</span></code> and <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.vector</span></code>.</p>
+<p>In the following we will always plot the field on one of two different planes. To simplify the subsequent calls we first define the planes.</p>
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">)</span>
+<span class="n">plane_yz</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_19_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_19_0.png" />
-</div>
-</div>
-<p>After we created the axes object, we can now add the <code class="docutils literal notranslate"><span class="pre">imshow</span></code>. We need to pass the axes object we created.</p>
+<section id="Scalar-field-visualisation-–-mpl.scalar">
+<h3>Scalar field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code><a class="headerlink" href="#Scalar-field-visualisation-–-mpl.scalar" title="Permalink to this headline">¶</a></h3>
+<p>First, we simply try to plot the full field using <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception raised.&#39;</span><span class="p">)</span>
+<span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception raised:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Exception raised.
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_21_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_21_1.png" />
+<div class="highlight"><pre>
+Exception raised: Cannot plot self.field.dim=3 field.
+</pre></div></div>
 </div>
-</div>
-<p>An exception was raised because <code class="docutils literal notranslate"><span class="pre">discertisedfield.Field.imshow()</span></code> can only plot scalar fields. Therefore, we are going to extract the <span class="math notranslate nohighlight">\(z\)</span> component of the field.</p>
+<p>An exception was raised because <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> can only plot scalar fields. Therefore, we are going to extract the <span class="math notranslate nohighlight">\(z\)</span> component of the field.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception raised.&#39;</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Exception raised.
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_23_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_23_1.png" />
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_23_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_23_0.png" />
 </div>
 </div>
-<p>This time, an exception was raised because only “sliced” fields can be plotted. We can slice the field using <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.plane()</span></code> function.</p>
+<p>Now, we got a plot of the field’s <span class="math notranslate nohighlight">\(z\)</span> component. However, discretisation cells, which are outside the cylinder, are also plotted. This is because norm cannot be reconstructed from the scalar field passed to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code>. In order to remove the cells where field is zero from the plot, <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> must be passed.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1262,20 +1295,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_25_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_25_0.png" />
 </div>
 </div>
-<p>Now, we got a plot of the field’s <span class="math notranslate nohighlight">\(z\)</span> component. However, discretisation cells, which are outside the cylinder, are also plotted. This is because norm cannot be reconstructed from the scalar field passed to the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.imshow()</span></code>. Therefore, we can pass the norm of the field as an argument.</p>
+<p>Colorbar is added to the plot by default. However, we can remove it from the plot.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1286,20 +1312,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_27_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_27_0.png" />
 </div>
 </div>
-<p>To modify this plot, we can pass any keyword argument that is accepted by the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code> function. For its functionality, please refer to the <a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.imshow.html">documentation</a>. Let us, for example, change the colormap, by passing <code class="docutils literal notranslate"><span class="pre">cmap='plasma'</span></code>. The available colormaps are shown in the <a class="reference external" href="https://matplotlib.org/examples/color/colormaps_reference.html#color-example-code-colormaps-reference-py">matplotlib gallery</a>.</p>
+<p>Similarly, we can change the colorbar label.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1310,21 +1329,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_29_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_29_0.png" />
 </div>
 </div>
-<p>In the next step, we can add the vector plot (<code class="docutils literal notranslate"><span class="pre">quiver</span></code>). Similar to <code class="docutils literal notranslate"><span class="pre">imshow</span></code>, we need to pass the axes object.</p>
+<p>As already seen, we can change the size of the plot.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1335,21 +1346,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_31_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_31_0.png" />
 </div>
 </div>
-<p>We can now reduce the number of plotted vectors, by passing the <code class="docutils literal notranslate"><span class="pre">n</span></code> tuple to the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.plane</span></code> function.</p>
+<p>Sometimes it is necessary to adjust the limits on the colorbar:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1360,21 +1363,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_33_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_33_0.png" />
 </div>
 </div>
-<p>Please note that the vectors outside the cylinder were not plotted because their norm is zero and this was reconstructed from the vector field passed. All vectors plotted are black. They can be coloured by passing a scalar field according to which the vectors will be coloured. Let us colour them according to their <span class="math notranslate nohighlight">\(x\)</span> component.</p>
+<p>If we have data (symmetrically) arround zero it can be useful to have a symmetric colour bar, i.e. to asign the value zero to the central color. We can do this (without specifying limits manually) by passing <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">symmetric_clim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1385,21 +1380,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_35_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_35_0.png" />
 </div>
 </div>
-<p>Like previously, all keyword argument that can be accepted by <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.quiver()</span></code> can be passed. For more information, please refer to its <a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.quiver.html">documentation</a>. As an example, let us change the width of arrow heads, by passing <code class="docutils literal notranslate"><span class="pre">headwidth</span></code> argument.</p>
+<p>Multiplier used for axis labels is computed internally, but it can be explicitly changed using <code class="docutils literal notranslate"><span class="pre">multiplier</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">multiplier</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1410,21 +1397,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_37_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_37_0.png" />
 </div>
 </div>
-<p>Now, we can add a colorbar to the plot. For that, we need to pass <code class="docutils literal notranslate"><span class="pre">colorbar=True</span></code>.</p>
+<p>In order to save the plot, we pass <code class="docutils literal notranslate"><span class="pre">filename</span></code> and the plot is saved as PDF.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;scalar.pdf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1435,25 +1414,13 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_39_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_39_0.png" />
 </div>
 </div>
-<p>Finally, we can add some annotations to the plot. All accepted modifications of axes can be found in <a class="reference external" href="https://matplotlib.org/3.1.1/api/axes_api.html#the-axes-class">documentation</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpl_scalar</span></code> is based on <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.imshow</span></code>, so any argument accepted by it can be passed. For its functionality, please refer to the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html">documentation</a>. The available colormaps and additional information on the use of colormaps are shown in this <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">matplotlib tutorial</a>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;My $x$ axis in m&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;My $y$ axis in m&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;custom plot&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-
-<span class="n">my_plot</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;something&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1464,23 +1431,744 @@ Exception raised.
 <img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_41_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_41_0.png" />
 </div>
 </div>
-<p>By modifying the steps we showed in this tutorial, numerous different plots can be obtained.</p>
-</section>
-<section id="Plotting-field-values-along-the-line">
-<h2>Plotting field values along the line<a class="headerlink" href="#Plotting-field-values-along-the-line" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes it is necessary to explore the field values along a certain line. More precisely, to plot the field values along a line defined between two points. Firstly, we need to obtain <span class="math notranslate nohighlight">\(z\)</span> values of the field on a line between <span class="math notranslate nohighlight">\((-15, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((15, 0, 0)\)</span> at <span class="math notranslate nohighlight">\(n=20\)</span> points.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">line</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">15e-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">15e-6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_42_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_42_0.png" />
+</div>
+</div>
+</section>
+<section id="Vector-field-visualisation-–-mpl.vector">
+<h3>Vector field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code><a class="headerlink" href="#Vector-field-visualisation-–-mpl.vector" title="Permalink to this headline">¶</a></h3>
+<p>The default plot is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_44_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_44_0.png" />
+</div>
+</div>
+<p>By default color is used to show the out-of-plane component. We can reduce the number of vectors.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_46_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_46_0.png" />
+</div>
+</div>
+<p>We can turn of automatic coloring based on one vector component.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">use_color</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_48_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_48_0.png" />
+</div>
+</div>
+<p>Without automatic colouring, we can additionally specify a uniform color.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">use_color</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_50_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_50_0.png" />
+</div>
+</div>
+<p>Turn of colorbar.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_52_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_52_0.png" />
+</div>
+</div>
+<p>Use a different scalar field for coloring.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_54_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_54_0.png" />
+</div>
+</div>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> we can</p>
+<ul class="simple">
+<li><p>add a colourbar label,</p></li>
+<li><p>change the colormap,</p></li>
+<li><p>change the colormap limit,</p></li>
+<li><p>change the multiplier,</p></li>
+<li><p>change the figure size,</p></li>
+<li><p>and save the plot.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+                                           <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;x-component of the field&#39;</span><span class="p">,</span>
+                                           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span>
+                                           <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span>
+                                           <span class="n">multiplier</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span>
+                                           <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+                                           <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;vector.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_56_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_56_0.png" />
+</div>
+</div>
+<p>We can pass additional keyword arguments to change the quiver style (see <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.quiver</span></code> <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.quiver.html">documentation</a> for details and available arguments).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">headwidth</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_58_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_58_0.png" />
+</div>
+</div>
+<p>Scale of quivers.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1e7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_60_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_60_0.png" />
+</div>
+</div>
+</section>
+<section id="Contour-line-plots-–-mpl.contour">
+<h3>Contour line plots – <code class="docutils literal notranslate"><span class="pre">mpl.contour</span></code><a class="headerlink" href="#Contour-line-plots-–-mpl.contour" title="Permalink to this headline">¶</a></h3>
+<p>Scalar fields can be plotted as contour line plots.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_yz</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_62_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_62_0.png" />
+</div>
+</div>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> it is possible to - change the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> - specify a <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> - specify a <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> - save the figure by passing <code class="docutils literal notranslate"><span class="pre">filename</span></code> - control <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> and <code class="docutils literal notranslate"><span class="pre">colorbar_label</span></code>.</p>
+<p>Additional keyword arguments can be passed, as <code class="docutils literal notranslate"><span class="pre">mpl.contour</span></code> is based on <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.contour</span></code> (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html">documentation</a>).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_yz</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;turbo&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_64_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_64_0.png" />
+</div>
+</div>
+</section>
+<section id="HSL-plots-–-mpl.lightness">
+<h3>HSL plots – <code class="docutils literal notranslate"><span class="pre">mpl.lightness</span></code><a class="headerlink" href="#HSL-plots-–-mpl.lightness" title="Permalink to this headline">¶</a></h3>
+<p>A common way to plot full vector fields is to use the HSV/HSL color scheme. The angle of the in-plane component is then shown by colour, the out-of-plane component by the lightness.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpl.lighness</span></code> can be used for fields with <code class="docutils literal notranslate"><span class="pre">dim=1</span></code>, <code class="docutils literal notranslate"><span class="pre">dim=2</span></code>, or <code class="docutils literal notranslate"><span class="pre">dim=3</span></code>. For <code class="docutils literal notranslate"><span class="pre">dim=3</span></code> vector fields the out-of-plane component is used for the lightness, otherwise the <code class="docutils literal notranslate"><span class="pre">norm</span></code> is used by default.</p>
+<p><em>NOTE: ``filter_field`` is currently not supported, specifying this option has no effect.</em></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_67_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_67_0.png" />
+</div>
+</div>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> it is possible to - change the <code class="docutils literal notranslate"><span class="pre">figsize</span></code> - specify a <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> - ~specify a <code class="docutils literal notranslate"><span class="pre">filter_field</span></code>~ - save the figure by passing <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
+<p>Instead of a <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> a colorwheel is shown by default. It is possible to show additional labels.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">(</span><span class="n">colorwheel_xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$m_x$&#39;</span><span class="p">,</span> <span class="n">colorwheel_ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$m_y$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_69_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_69_0.png" />
+</div>
+</div>
+<p>Not showing the <code class="docutils literal notranslate"><span class="pre">colorwheel</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">(</span><span class="n">colorwheel</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_71_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_71_0.png" />
+</div>
+</div>
+<p>Specifying a different <code class="docutils literal notranslate"><span class="pre">lighness_field</span></code> (suffering from the missing <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> option).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">(</span><span class="n">lightness_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_73_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_73_0.png" />
+</div>
+</div>
+<p>Change the lightness range.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">(</span><span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_75_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_75_0.png" />
+</div>
+</div>
+<section id="colorwheel">
+<h4><code class="docutils literal notranslate"><span class="pre">colorwheel</span></code><a class="headerlink" href="#colorwheel" title="Permalink to this headline">¶</a></h4>
+<p>We can pass additional keyword arguments to <code class="docutils literal notranslate"><span class="pre">colorwheel_args</span></code> in the <code class="docutils literal notranslate"><span class="pre">lighness</span></code> plot.</p>
+<p>To get more control over the colorwheel the function to draw the colorwheel is exposed an can be used separatly. We have to explicitly give an axis to <code class="docutils literal notranslate"><span class="pre">add_colorwheel</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">add_colorwheel</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;AxesHostAxes:&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_77_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_77_1.png" />
+</div>
+</div>
+<p>We can specify <code class="docutils literal notranslate"><span class="pre">widht</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">loc</span></code> and additional keyword arguments that can be used for <code class="docutils literal notranslate"><span class="pre">mpl_toolkits.axes_grid1.inset_locator.inset_axes</span></code> (<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/mpl_toolkits.axes_grid1.inset_locator.inset_axes.html">documentation</a>).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">add_colorwheel</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;AxesHostAxes:&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_79_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_79_1.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="Combining-scalar-and-vector-plots-–-mpl()">
+<h3>Combining scalar and vector plots – <code class="docutils literal notranslate"><span class="pre">mpl()</span></code><a class="headerlink" href="#Combining-scalar-and-vector-plots-–-mpl()" title="Permalink to this headline">¶</a></h3>
+<p>In the beginning, we have briefly seen, that we can use the convenience function <code class="docutils literal notranslate"><span class="pre">mpl()</span></code> to generate plots. We can adjust these plots by passing <code class="docutils literal notranslate"><span class="pre">scalar_kwargs</span></code> or <code class="docutils literal notranslate"><span class="pre">vector_kwargs</span></code> that are internally passed to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> and <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code>, respectivly. All arguments allowed for <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> or <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code> can be specified. By default <code class="docutils literal notranslate"><span class="pre">use_color=False</span></code> for the quiver plot.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plane_xy</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+             <span class="n">scalar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cmap&#39;</span><span class="p">:</span> <span class="s1">&#39;turbo&#39;</span><span class="p">},</span>
+             <span class="n">vector_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cmap&#39;</span><span class="p">:</span> <span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="s1">&#39;use_color&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;color_field&#39;</span><span class="p">:</span> <span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;colorbar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                            <span class="s1">&#39;colorbar_label&#39;</span><span class="p">:</span> <span class="s1">&#39;x-component&#39;</span><span class="p">},</span>
+             <span class="n">multiplier</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span>
+             <span class="c1">#filename=&#39;mplplot.pdf&#39;</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_81_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_81_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="Building-a-custom-plot">
+<h2>Building a custom plot<a class="headerlink" href="#Building-a-custom-plot" title="Permalink to this headline">¶</a></h2>
+<p>We can build custom plots by combining the different available plots. This is done via passing axes to the plotting functions. In the following we start with a step-by-step example and then show some additional examples.</p>
+<p>First, we manually create the combined <code class="docutils literal notranslate"><span class="pre">scalar</span></code>-<code class="docutils literal notranslate"><span class="pre">vector</span></code> plot similar to the one show in the cell above. We start by creating figure and axes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_83_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_83_0.png" />
+</div>
+</div>
+<p>Then we can add the scalar plot of the z-component and pass <code class="docutils literal notranslate"><span class="pre">ax</span></code> as additional argument. We have to manually specify the <code class="docutils literal notranslate"><span class="pre">filter_field</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">)</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;turbo&#39;</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_85_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_85_0.png" />
+</div>
+</div>
+<p>In the last step we can add the quiver plot using <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code>. As we now have separate control over <code class="docutils literal notranslate"><span class="pre">scalar</span></code> and <code class="docutils literal notranslate"><span class="pre">vector</span></code> we can reduce the number of <code class="docutils literal notranslate"><span class="pre">quivers</span></code> independently.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">)</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;turbo&#39;</span><span class="p">,</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;z-component&#39;</span><span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">colorbar_label</span><span class="o">=</span><span class="s1">&#39;x-component&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_87_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_87_0.png" />
+</div>
+</div>
+<p>We can combine different plots in different subplots.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plane_xy</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">use_color</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">plane_yz</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">scalar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;colorbar_label&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;cmap&#39;</span><span class="p">:</span> <span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="s1">&#39;symmetric_clim&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+             <span class="n">vector_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">})</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;xy plane&#39;</span><span class="p">);</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;yz plane&#39;</span><span class="p">);</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;vortex state&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;xx-large&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_89_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_89_0.png" />
+</div>
+</div>
+<p>By exposing axes we can also combine the other plotting functions, e.g. <code class="docutils literal notranslate"><span class="pre">lightness</span></code>, <code class="docutils literal notranslate"><span class="pre">vector</span></code> and <code class="docutils literal notranslate"><span class="pre">contour</span></code>. We use a new field to show this functionality.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">init_m</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">p</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="mi">5</span><span class="p">),</span> <span class="n">z</span><span class="o">/</span><span class="mi">5</span>
+
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">init_m</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="c1">#init_norm)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">lightness</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;spline16&#39;</span><span class="p">,</span> <span class="n">colorwheel_args</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">.75</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">.75</span><span class="p">),</span>
+                               <span class="n">colorwheel_xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$m_x$&#39;</span><span class="p">,</span> <span class="n">colorwheel_ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$m_y$&#39;</span><span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">use_color</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;#bfbfbf&#39;</span><span class="p">,</span> <span class="n">colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_92_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_92_0.png" />
+</div>
+</div>
+</section>
+<section id="Interactive-plots">
+<h2>Interactive plots<a class="headerlink" href="#Interactive-plots" title="Permalink to this headline">¶</a></h2>
+<p>We can create interactive plots based on <code class="docutils literal notranslate"><span class="pre">Ipython</span> <span class="pre">Widgets</span></code>. We define a new field to demonstrate the different interactive plots.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">5e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">5e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">2e-9</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+
+<span class="n">value_fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">pos</span><span class="p">:</span> <span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">norm_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mf">5e-9</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_fun</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_95_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_95_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_96_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_96_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_97_0.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_97_0.png" />
+</div>
+</div>
+<p><em>NOTE</em>:</p>
+<ul class="simple">
+<li><p>Interactive plots cannot be displayed on the static website</p></li>
+<li><p>Widgets work best in Jupyter notebook. For Jupyter lab <code class="docutils literal notranslate"><span class="pre">jupyterlab_widgets</span></code> has to be installed manually via <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8fe5546aa81a4b59bf4a1c9ba18e03a8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_99_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_99_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2ee9cfb2ce8545509e4ababe3350e284", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_100_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_100_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+             <span class="n">component</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">())</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
+    <span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5d38b38b920e44abbc7308a62827da32", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_101_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_101_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+             <span class="n">component</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="s1">&#39;radiobuttons&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;component&#39;</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">component</span><span class="p">):</span>
+    <span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d36f659d568d450e8aa06fe461ca2067", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_102_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_102_1.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "59aa26ac68054493b970e378c6bb2773", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_103_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_103_1.png" />
+</div>
+</div>
+</section>
+<section id="Plotting-field-values-along-the-line">
+<h2>Plotting field values along the line<a class="headerlink" href="#Plotting-field-values-along-the-line" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it is necessary to explore the field values along a certain line. More precisely, to plot the field values along a line defined between two points. We again use the vortex field. Firstly, we need to obtain <span class="math notranslate nohighlight">\(z\)</span> values of the field on a line between <span class="math notranslate nohighlight">\((-15\,\mathrm{nm}, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((15\,\mathrm{nm}, 0, 0)\)</span> at <span class="math notranslate nohighlight">\(n=20\)</span> points.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">line</span> <span class="o">=</span> <span class="n">vortex_field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">15e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">15e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">field_values</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">parameter</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">point</span>
     <span class="n">parameter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># remember x-position for plot</span>
-    <span class="n">field_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">field</span><span class="p">(</span><span class="n">point</span><span class="p">))</span>
+    <span class="n">field_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vortex_field</span><span class="p">(</span><span class="n">point</span><span class="p">))</span>
 
 <span class="c1"># extract mx, my, mz as lists from lists of (mx, my, mz):</span>
 <span class="n">mx</span><span class="p">,</span> <span class="n">my</span><span class="p">,</span> <span class="n">mz</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">field_values</span><span class="p">)</span>
@@ -1489,7 +2177,7 @@ Exception raised.
 </div>
 <p>Now, we can plot the field values along the line:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1506,23 +2194,23 @@ Exception raised.
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.legend.Legend at 0x7ff004621880&gt;
+&lt;matplotlib.legend.Legend at 0x7fb38b8c5190&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_45_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_45_1.png" />
+<img alt="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_107_1.png" src="../../../_images/documentation_ipynb_discretisedfield_field-matplotlib-visualisation_107_1.png" />
 </div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {}, "version_major": 2, "version_minor": 0}
+{"state": {"04cf4bd444b74ef8a22335f6c89cd944": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "10a0c2d31fd6444bb4e8f8c52b5d637d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "16bb2eba382548cf9f9ad8a72a41fc68": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "description": "z (nm)", "index": 7, "layout": "IPY_MODEL_b48141b504f5467192c105696b34087b", "style": "IPY_MODEL_88a81050debb4c66b75fc21827b5e03b"}}, "23f2ebab83ca4872b24cab9531406872": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "28a8a0c9116342b18991fa6c0acb182c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "2ee9cfb2ce8545509e4ababe3350e284": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_f4c8c23782994dd1b15d493e30ca9659", "IPY_MODEL_3818d444051f409d8cfeb2a8654614a1"], "layout": "IPY_MODEL_95380ed894d540e0bf8dae9c61eddb3c"}}, "34795503c375470995ef6ab915cc3eb8": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "3818d444051f409d8cfeb2a8654614a1": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_b74417480cfd41828a9933cf77bab354"}}, "3c9481eba6324e299b85de3d3466bc6d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3d92d8438ef444999c4a23554ef70903": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3f3f016998164d74b9c2b0108edb882e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "3f4a00edd9954d13939451329dd4a548": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "4a787f70eada4d3db04fd8b885ae2c4b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "4c900ad30e9d4212b4678fdf58a18d13": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "52536b9de7ec427c8e4616a463e564b7": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_16bb2eba382548cf9f9ad8a72a41fc68", "IPY_MODEL_5eef73c05d9a43f8a0f7b745320e9242"], "layout": "IPY_MODEL_d9b03632ef104a26b93664b534e0f01b"}}, "55dabae1eb9f4159a1d44c686de45c93": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "59aa26ac68054493b970e378c6bb2773": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_6d9e5f49870d461896e491e3b895b508", "IPY_MODEL_f5bda39dcbe741a286ed98fe078f1882"], "layout": "IPY_MODEL_eda1f98d239942a9b0bb41106d06f4ee"}}, "5d38b38b920e44abbc7308a62827da32": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_7f77451b7eca4b3a8776ce258faec41e", "IPY_MODEL_9de76e6e112146b78e76d3e0fcd012f4", "IPY_MODEL_861fa3bfa31a4450bd8be3eb3717f519"], "layout": "IPY_MODEL_55dabae1eb9f4159a1d44c686de45c93"}}, "5eef73c05d9a43f8a0f7b745320e9242": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_ee72b5706123411b94d4b6dfb11bf62f"}}, "625502054a2a4ff7a809c3acd123fbe2": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "62fb37f9ab454e58bfa6939afebec640": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "6d9e5f49870d461896e491e3b895b508": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "continuous_update": false, "description": "z (nm)", "index": 6, "layout": "IPY_MODEL_9e9b7a9d9b10414a984550c5f741ac1c", "style": "IPY_MODEL_23f2ebab83ca4872b24cab9531406872"}}, "7032bf6166fa42f5be5abc163b69bf3e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "7317e4bd13b4442c90fa521dbfe4a193": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "description": "z (nm)", "index": 6, "layout": "IPY_MODEL_28a8a0c9116342b18991fa6c0acb182c", "style": "IPY_MODEL_625502054a2a4ff7a809c3acd123fbe2"}}, "79738076cc1b448eb78149966feab9c5": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "continuous_update": false, "description": "z (nm)", "index": 6, "layout": "IPY_MODEL_f9a35c75d61446eab1299ba7e131ab19", "style": "IPY_MODEL_62fb37f9ab454e58bfa6939afebec640"}}, "7f77451b7eca4b3a8776ce258faec41e": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "continuous_update": false, "description": "z (nm)", "index": 6, "layout": "IPY_MODEL_3f3f016998164d74b9c2b0108edb882e", "style": "IPY_MODEL_34795503c375470995ef6ab915cc3eb8"}}, "861fa3bfa31a4450bd8be3eb3717f519": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_4c900ad30e9d4212b4678fdf58a18d13"}}, "88a81050debb4c66b75fc21827b5e03b": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "8fe5546aa81a4b59bf4a1c9ba18e03a8": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_7317e4bd13b4442c90fa521dbfe4a193", "IPY_MODEL_da6f84b6c726461fb24a1d5c653a2ec3"], "layout": "IPY_MODEL_7032bf6166fa42f5be5abc163b69bf3e"}}, "95380ed894d540e0bf8dae9c61eddb3c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9de76e6e112146b78e76d3e0fcd012f4": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_options_labels": ["x", "y", "z"], "description": "axis", "index": 2, "layout": "IPY_MODEL_d22abc6e2da94d03b55d726d1b0f1c72", "style": "IPY_MODEL_bd4d32208ea0423597296360a4aded81"}}, "9e9b7a9d9b10414a984550c5f741ac1c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a36725e98a5646609b6c6a42aea641f6": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_3c9481eba6324e299b85de3d3466bc6d"}}, "a56f2a0f2d1e4a2d82e36d81900d58a8": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b48141b504f5467192c105696b34087b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b74417480cfd41828a9933cf77bab354": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "bd4d32208ea0423597296360a4aded81": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "be80b943dac04bb6b73505b5ee1930a8": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"description_width": ""}}, "d076973ced1c4b89964d8e663a1131f0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "RadioButtonsModel", "state": {"_options_labels": ["x", "y", "z"], "description": "component", "index": 2, "layout": "IPY_MODEL_10a0c2d31fd6444bb4e8f8c52b5d637d", "style": "IPY_MODEL_4a787f70eada4d3db04fd8b885ae2c4b"}}, "d22abc6e2da94d03b55d726d1b0f1c72": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "d36f659d568d450e8aa06fe461ca2067": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_79738076cc1b448eb78149966feab9c5", "IPY_MODEL_d076973ced1c4b89964d8e663a1131f0", "IPY_MODEL_a36725e98a5646609b6c6a42aea641f6"], "layout": "IPY_MODEL_3f4a00edd9954d13939451329dd4a548"}}, "d9b03632ef104a26b93664b534e0f01b": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "da6f84b6c726461fb24a1d5c653a2ec3": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_3d92d8438ef444999c4a23554ef70903"}}, "eda1f98d239942a9b0bb41106d06f4ee": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "ee72b5706123411b94d4b6dfb11bf62f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "f4c8c23782994dd1b15d493e30ca9659": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SelectionSliderModel", "state": {"_options_labels": ["-1.5", "-0.5", "0.5", "1.5", "2.5", "3.5", "4.5", "5.5", "6.5", "7.5", "8.5", "9.5"], "continuous_update": false, "description": "z (nm)", "index": 6, "layout": "IPY_MODEL_a56f2a0f2d1e4a2d82e36d81900d58a8", "style": "IPY_MODEL_be80b943dac04bb6b73505b5ee1930a8"}}, "f5bda39dcbe741a286ed98fe078f1882": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_04cf4bd444b74ef8a22335f6c89cd944"}}, "f9a35c75d61446eab1299ba7e131ab19": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
 </script></section>
 </section>
 

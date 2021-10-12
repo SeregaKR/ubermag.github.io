@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>10. Integrals &#8212; ubermag  documentation</title>
+    <title>9. Integrals &#8212; ubermag  documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Documentation" href="../../documentation/index.html" />
-    <link rel="prev" title="9. Sine-hysteresis" href="sine-hysteresis.html" />
+    <link rel="prev" title="8. Sine-hysteresis" href="sine-hysteresis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -313,19 +313,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="mpl-visualisation.html">
-   16.
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     matplotlib
-    </span>
-   </code>
-   visualisation
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="k3d-visualisation.html">
-   17. Visualising fields using
+   16. Visualising fields using
    <code class="docutils literal notranslate">
     <span class="pre">
      k3d
@@ -334,13 +323,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="interactive-plotting.html">
-   18. Interactive plotting
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="various-topics.html">
-   19. Various topics
+   17. Various topics
   </a>
  </li>
 </ul>
@@ -351,33 +335,28 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="angle-hls-plot.html">
-   1. Angle and HLS plots
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="hysteresis.html">
-   2. Hysteresis simulations
+   1. Hysteresis simulations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dirname.html">
-   3. Custom directory name
+   2. Custom directory name
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="fixed-subregions.html">
-   4. Fixed subregions
+   3. Fixed subregions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="parallel.html">
-   5. Running simulations in parallel
+   4. Running simulations in parallel
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mindriver-steps.html">
-   6.
+   5.
    <code class="docutils literal notranslate">
     <span class="pre">
      MinDriver
@@ -388,22 +367,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="subfields.html">
-   7. Subfields
+   6. Subfields
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="space-time-field.html">
-   8. Both spatially and time varying field
+   7. Both spatially and time varying field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sine-hysteresis.html">
-   9. Sine-hysteresis
+   8. Sine-hysteresis
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   10. Integrals
+   9. Integrals
   </a>
  </li>
 </ul>
@@ -428,27 +407,27 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Volume-integral">
-   10.1. Volume integral
+   9.1. Volume integral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Surface-integral">
-   10.2. Surface integral
+   9.2. Surface integral
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Line-integrals">
-   10.3. Line integrals
+   9.3. Line integrals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Improper-integrals">
-   10.4. Improper integrals
+   9.4. Improper integrals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Example">
-   10.5. Example
+   9.5. Example
   </a>
  </li>
 </ul>
@@ -737,7 +716,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Integrals">
-<h1><span class="section-number">10. </span>Integrals<a class="headerlink" href="#Integrals" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Integrals<a class="headerlink" href="#Integrals" title="Permalink to this headline">¶</a></h1>
 <p>In the most recent version of <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>, computing integrals is generalised to accomodate the calculation of different types of integrals. Instead of giving the “theory” behind how it was implemented, we are going to show several examples which hopefully are going to give you an idea how you can compute different integrals.</p>
 <p>Let us first create a field:</p>
 <div class="nbinput nblast docutils container">
@@ -757,7 +736,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Volume-integral">
-<h2><span class="section-number">10.1. </span>Volume integral<a class="headerlink" href="#Volume-integral" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Volume integral<a class="headerlink" href="#Volume-integral" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\int_{V}\mathbf{f}(\mathbf{r})\text{d}V\]</div>
 <div class="nbinput docutils container">
@@ -819,7 +798,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Surface-integral">
-<h2><span class="section-number">10.2. </span>Surface integral<a class="headerlink" href="#Surface-integral" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Surface integral<a class="headerlink" href="#Surface-integral" title="Permalink to this headline">¶</a></h2>
 <p>There is <code class="docutils literal notranslate"><span class="pre">disretisedfield.dS</span></code> value which is a vector field perpendicular to the surface with magnitude equal to the area of <span class="math notranslate nohighlight">\(\text{d}S\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\int_{S}\mathbf{f}(\mathbf{r}) \cdot \text{d}\mathbf{S}\]</div>
@@ -885,7 +864,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Line-integrals">
-<h2><span class="section-number">10.3. </span>Line integrals<a class="headerlink" href="#Line-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Line integrals<a class="headerlink" href="#Line-integrals" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\int_{0}^{x_\text{max}}\mathbf{f}(\mathbf{r}) \text{d}x\]</div>
 <div class="nbinput docutils container">
@@ -928,7 +907,7 @@ Field(mesh=Mesh(region=Region(p1=(0.0, 4.8999999999999995e-08, 0.0), p2=(1e-07, 
 </div>
 </section>
 <section id="Improper-integrals">
-<h2><span class="section-number">10.4. </span>Improper integrals<a class="headerlink" href="#Improper-integrals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Improper integrals<a class="headerlink" href="#Improper-integrals" title="Permalink to this headline">¶</a></h2>
 <div class="math notranslate nohighlight">
 \[\int_{0}^{y}\mathbf{f}(\mathbf{r}) \text{d}y'\]</div>
 <div class="nbinput docutils container">
@@ -951,7 +930,7 @@ Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-07, 1e-07, 1e-07)), n=(
 </div>
 </section>
 <section id="Example">
-<h2><span class="section-number">10.5. </span>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h2>
 <p>We have showed how to compute an integral when integrand is just a field. It is important to have in mind that this can be any field after some operations have been applied on it. For instance:</p>
 <div class="math notranslate nohighlight">
 \[\int_{V}\nabla\cdot\mathbf{f}(\mathbf{r})\text{d}V\]</div>
@@ -986,7 +965,7 @@ Field(mesh=Mesh(region=Region(p1=(0.0, 0.0, 0.0), p2=(1e-07, 1e-07, 1e-07)), n=(
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>Sine-hysteresis</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Sine-hysteresis</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../../documentation/index.html" title="next page">
