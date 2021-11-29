@@ -38,7 +38,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -1343,7 +1343,7 @@
 <h1>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Mesh">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subregions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'unit':</span> <span class="pre">'m'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subregions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'unit':</span> <span class="pre">'m'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finite-difference mesh.</p>
 <p>Mesh discretises cubic <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code>, passed as <code class="docutils literal notranslate"><span class="pre">region</span></code>,
 using a regular finite-difference mesh. Since cubic region spans between
@@ -2480,12 +2480,12 @@ argument accepted by it can be passed.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Mesh.__hash__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Mesh.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.dS">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dS</span></span><a class="headerlink" href="#discretisedfield.Mesh.dS" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dS</span></span><a class="headerlink" href="#discretisedfield.Mesh.dS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Surface vector field.</p>
 <p>If the mesh is sliced, <code class="docutils literal notranslate"><span class="pre">dS</span></code> is a vector field with vectors
 perpendicular to the surface and with magnitude equal to the
@@ -2518,7 +2518,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.dV">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dV</span></span><a class="headerlink" href="#discretisedfield.Mesh.dV" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dV</span></span><a class="headerlink" href="#discretisedfield.Mesh.dV" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discretisation cell volume.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2547,7 +2547,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.indices">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">indices</span></span><a class="headerlink" href="#discretisedfield.Mesh.indices" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">indices</span></span><a class="headerlink" href="#discretisedfield.Mesh.indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generator yielding indices of all mesh cells.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Yields</dt>
@@ -2576,7 +2576,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.subregions">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">subregions</span></span><a class="headerlink" href="#discretisedfield.Mesh.subregions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subregions</span></span><a class="headerlink" href="#discretisedfield.Mesh.subregions" title="Permalink to this definition">¶</a></dt>
 <dd><p>“Subregions of the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2635,7 +2635,7 @@ Defaults to an empty dictionary.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     

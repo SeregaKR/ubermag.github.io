@@ -38,7 +38,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -1343,7 +1343,7 @@
 <h1>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ubermagtable.Table">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ubermagtable.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ubermagtable.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ubermagtable.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ubermagtable.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tabular data class.</p>
 <p>This class builds some functionality around <cite>pandas.DataFrame</cite> to make it
 convenient for the analysis and visualisation of time-dependent scalar
@@ -1571,7 +1571,7 @@ applied to all dependent variable columns i.e. <code class="docutils literal not
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ubermagtable.Table.fromfile">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ubermagtable.Table.fromfile" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ubermagtable.Table.fromfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads an OOMMF <code class="docutils literal notranslate"><span class="pre">.odt</span></code> or mumax3 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> scalar data file and
 returns a <code class="docutils literal notranslate"><span class="pre">ubermagtable.Table</span></code> object.</p>
 <dl class="field-list simple">
@@ -1834,13 +1834,13 @@ the optimum one is computed internally. Defaults to <code class="docutils litera
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ubermagtable.Table.dx">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dx</span></span><a class="headerlink" href="#ubermagtable.Table.dx" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dx</span></span><a class="headerlink" href="#ubermagtable.Table.dx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spacing of independent variable.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ubermagtable.Table.x">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#ubermagtable.Table.x" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#ubermagtable.Table.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Independent variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1854,7 +1854,7 @@ the optimum one is computed internally. Defaults to <code class="docutils litera
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ubermagtable.Table.xmax">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">xmax</span></span><a class="headerlink" href="#ubermagtable.Table.xmax" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xmax</span></span><a class="headerlink" href="#ubermagtable.Table.xmax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum value of independent variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1883,7 +1883,7 @@ the optimum one is computed internally. Defaults to <code class="docutils litera
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ubermagtable.Table.y">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#ubermagtable.Table.y" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#ubermagtable.Table.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dependent variable(s).</p>
 <p>This property returns all data column names that are not specified as
 independent.</p>
@@ -1956,7 +1956,7 @@ independent.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     

@@ -38,7 +38,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -985,7 +985,7 @@ div.rendered_html tbody tr:hover {
 <section id="SANS-Reference-frame">
 <h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this headline">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="1f0ed9b7a91b42388088139736ae13c7" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="82d48072dfbe43ec82811b5b793cd80e" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>
@@ -1386,7 +1386,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     

@@ -240,11 +240,56 @@ has been answered already.</p>
 <section id="how-to-ask">
 <h3>How to ask<a class="headerlink" href="#how-to-ask" title="Permalink to this headline">¶</a></h3>
 <p>Please provide:</p>
-<ul class="simple">
+<ul>
 <li><p>A detailed description of your problem</p></li>
 <li><p>Explain what you have tried already</p></li>
 <li><p>Ideally, upload a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">notebook</span></code> (zipped) containing what you have
 achieved so far (<strong>NOTE: remove any confidential information</strong>)</p></li>
+<li><p>Please enclose inline-code snippets with single backticks and multi-line
+(code) blocks with lines containing three backticks (optionally specifying the
+programming language) as shown in the following examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Here is some `inline_code`.
+</pre></div>
+</div>
+<div class="admonition-rendered-output-is-similar-to admonition">
+<p class="admonition-title">rendered output is similar to</p>
+<p>Here is some <code class="docutils literal notranslate"><span class="pre">inline_code</span></code>.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>To get the current ubermag version, we can use:
+```python
+# multi-line python
+import ubermag
+print(ubermag.__version__)
+```
+In a notebook cell `print` can be omitted.
+</pre></div>
+</div>
+<div class="admonition-rendered-output-is-similar-to admonition">
+<p class="admonition-title">rendered output is similar to</p>
+<p>To get the current ubermag version, we can use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># multi-line python</span>
+<span class="kn">import</span> <span class="nn">ubermag</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ubermag</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In a notebook cell <code class="docutils literal notranslate"><span class="pre">print</span></code> can be omitted.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Here is a second multi-line block without specifying a programming language
+```
+# any other code
+# e.g. mif-file excerpt
+```
+</pre></div>
+</div>
+<div class="admonition-rendered-output-is-similar-to admonition">
+<p class="admonition-title">rendered output is similar to</p>
+<p>Here is a second multi-line block without specifying a programming language</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># any other code</span>
+<span class="c1"># e.g. mif-file excerpt</span>
+</pre></div>
+</div>
+</div>
+</li>
 </ul>
 <p>By providing the above listed information you greatly enhance the chance to get
 help. Please be patient if we do not reply immediately.</p>
@@ -319,7 +364,7 @@ get in touch beforehand (e.g. by opening an issue).</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     

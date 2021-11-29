@@ -38,7 +38,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -1343,7 +1343,7 @@
 <h1>Region<a class="headerlink" href="#region" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Region">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'m'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'m'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region.</p>
 <p>A cuboid region spans between two corner points <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span> and
 <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span>. Points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> can be any two
@@ -1759,12 +1759,12 @@ the result differs each time
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="discretisedfield.Region.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Region.__hash__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Region.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.centre">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">centre</span></span><a class="headerlink" href="#discretisedfield.Region.centre" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">centre</span></span><a class="headerlink" href="#discretisedfield.Region.centre" title="Permalink to this definition">¶</a></dt>
 <dd><p>Centre point.</p>
 <p>Centre point is computed as the middle point between region’s points
 with minimum and maximum coordinates:</p>
@@ -1797,7 +1797,7 @@ with minimum and maximum coordinates:</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.edges">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">edges</span></span><a class="headerlink" href="#discretisedfield.Region.edges" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edges</span></span><a class="headerlink" href="#discretisedfield.Region.edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region’s edge lengths.</p>
 <p>Edge length is computed from the points between which the region spans
 <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span>:</p>
@@ -1829,13 +1829,13 @@ with minimum and maximum coordinates:</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.multiplier">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">multiplier</span></span><a class="headerlink" href="#discretisedfield.Region.multiplier" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">multiplier</span></span><a class="headerlink" href="#discretisedfield.Region.multiplier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute multiplier for the region.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.pmax">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pmax</span></span><a class="headerlink" href="#discretisedfield.Region.pmax" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pmax</span></span><a class="headerlink" href="#discretisedfield.Region.pmax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point with maximum coordinates in the region.</p>
 <p>The <span class="math notranslate nohighlight">\(i\)</span>-th component of <span class="math notranslate nohighlight">\(\mathbf{p}_\text{max}\)</span> is computed
 from points <span class="math notranslate nohighlight">\(p_1\)</span> and <span class="math notranslate nohighlight">\(p_2\)</span>, between which the region
@@ -1871,7 +1871,7 @@ p_y^\text{max}, p_z^\text{max})\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.pmin">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pmin</span></span><a class="headerlink" href="#discretisedfield.Region.pmin" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pmin</span></span><a class="headerlink" href="#discretisedfield.Region.pmin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point with minimum coordinates in the region.</p>
 <p>The <span class="math notranslate nohighlight">\(i\)</span>-th component of <span class="math notranslate nohighlight">\(\mathbf{p}_\text{min}\)</span> is computed
 from points <span class="math notranslate nohighlight">\(p_1\)</span> and <span class="math notranslate nohighlight">\(p_2\)</span>, between which the region
@@ -1907,7 +1907,7 @@ p_y^\text{min}, p_z^\text{min})\)</span>.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Region.volume">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#discretisedfield.Region.volume" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">volume</span></span><a class="headerlink" href="#discretisedfield.Region.volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region’s volume.</p>
 <p>It is computed by multiplying edge lengths of the region:</p>
 <div class="math notranslate nohighlight">
@@ -1980,7 +1980,7 @@ p_y^\text{min}, p_z^\text{min})\)</span>.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
 </p>
     </div>
     
