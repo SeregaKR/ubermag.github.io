@@ -8,28 +8,28 @@
 
     <title>Tutorial: Unit Conversions &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -38,8 +38,8 @@
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -134,10 +134,8 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -160,7 +158,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -662,6 +661,9 @@
 
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -1022,7 +1024,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -1072,8 +1074,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="o">!</span>pip install astropy
 </pre></div>
 </div>
@@ -1093,8 +1094,7 @@ Requirement already satisfied: numpy&gt;=1.17 in /opt/miniconda3/envs/ubermagdev
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1104,8 +1104,7 @@ Requirement already satisfied: numpy&gt;=1.17 in /opt/miniconda3/envs/ubermagdev
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">field</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
 <span class="n">field</span>
 </pre></div>
 </div>
@@ -1123,8 +1122,7 @@ $100 \; \mathrm{G}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">field2</span> <span class="o">=</span> <span class="n">field</span> <span class="o">*</span> <span class="mi">10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field2</span> <span class="o">=</span> <span class="n">field</span> <span class="o">*</span> <span class="mi">10</span>
 <span class="n">field2</span>
 </pre></div>
 </div>
@@ -1142,8 +1140,7 @@ $1000 \; \mathrm{G}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">field2</span><span class="o">.</span><span class="n">si</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field2</span><span class="o">.</span><span class="n">si</span>
 </pre></div>
 </div>
 </div>
@@ -1160,8 +1157,7 @@ $0.1 \; \mathrm{T}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">magnetic_moment</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">erg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magnetic_moment</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">erg</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
 <span class="n">magnetic_moment</span>
 </pre></div>
 </div>
@@ -1179,8 +1175,7 @@ $1 \; \mathrm{\frac{erg}{G}}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">magnetic_moment</span><span class="o">.</span><span class="n">si</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magnetic_moment</span><span class="o">.</span><span class="n">si</span>
 </pre></div>
 </div>
 </div>
@@ -1197,8 +1192,7 @@ $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">magnetic_moment</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magnetic_moment</span><span class="o">.</span><span class="n">si</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 </div>
 </div>
@@ -1219,8 +1213,7 @@ $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">t_k</span> <span class="o">=</span> <span class="mf">4.15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_k</span> <span class="o">=</span> <span class="mf">4.15</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span>
 <span class="n">t_k</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">J</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">temperature_energy</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -1238,8 +1231,7 @@ $5.7296934 \times 10^{-23} \; \mathrm{J}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
 <span class="n">induction_field</span> <span class="o">=</span> <span class="p">[(</span><span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">A</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span>
                     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">const</span><span class="o">.</span><span class="n">mu0</span><span class="p">,</span>
                     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">const</span><span class="o">.</span><span class="n">mu0</span> <span class="o">/</span> <span class="n">x</span><span class="p">)]</span>
@@ -1250,8 +1242,7 @@ $5.7296934 \times 10^{-23} \; \mathrm{J}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">field</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">Gauss</span>
 <span class="n">field</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">A</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">induction_field</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1283,8 +1274,7 @@ J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">constants</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">constants</span>
 <span class="k">def</span> <span class="nf">Tc_to_J</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Tc</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="n">constants</span><span class="o">.</span><span class="n">k</span><span class="o">/</span><span class="p">(</span><span class="n">e</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
@@ -1295,8 +1285,7 @@ J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Tc</span> <span class="o">=</span> <span class="mi">100</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tc</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mf">0.808</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="n">J</span> <span class="o">=</span> <span class="n">Tc_to_J</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
@@ -1323,8 +1312,7 @@ A = \frac{zJl^2}{12V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">J</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1333,8 +1321,7 @@ A = \frac{zJl^2}{12V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">l</span> <span class="o">=</span> <span class="mf">6.84e-10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="mf">6.84e-10</span>
 <span class="n">V</span> <span class="o">=</span> <span class="mf">2.24e-28</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">J_to_A</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
@@ -1357,8 +1344,7 @@ A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Tc</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">k</span> <span class="o">*</span> <span class="n">l</span> <span class="o">*</span> <span class="n">l</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">e</span><span class="o">*</span> <span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1367,8 +1353,7 @@ A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
 </pre></div>
 </div>
@@ -1401,8 +1386,7 @@ D = \frac{zdl}{12V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">d</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="n">V</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1411,8 +1395,7 @@ D = \frac{zdl}{12V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">d</span> <span class="o">=</span> <span class="mf">2.01e-23</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="mf">2.01e-23</span>
 <span class="n">D</span> <span class="o">=</span> <span class="n">d_to_D</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">D</span>
 </pre></div>
@@ -1434,8 +1417,7 @@ P = \frac{4\pi A}{|D|},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">P_to_D</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">P_to_D</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">A</span><span class="o">/</span><span class="n">P</span>
 
 <span class="k">def</span> <span class="nf">D_to_P</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
@@ -1448,8 +1430,7 @@ P = \frac{4\pi A}{|D|},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">A</span> <span class="o">=</span> <span class="mf">6e-14</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mf">6e-14</span>
 <span class="n">D</span> <span class="o">=</span> <span class="n">P_to_D</span><span class="p">(</span><span class="mf">20e-9</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
 <span class="n">D</span>
 </pre></div>
@@ -1480,8 +1461,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">Ms_muB_to_Am</span><span class="p">(</span><span class="n">Ms</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ms_muB_to_Am</span><span class="p">(</span><span class="n">Ms</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">constants</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s1">&#39;Bohr magneton&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">Ms</span><span class="o">/</span><span class="n">V</span>
 </pre></div>
 </div>
@@ -1490,8 +1470,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Ms</span> <span class="o">=</span> <span class="n">Ms_muB_to_Am</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">2.24375e-28</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="n">Ms_muB_to_Am</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">2.24375e-28</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Ms</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1514,8 +1493,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">Ms_to_mu</span><span class="p">(</span><span class="n">Ms</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Ms_to_mu</span><span class="p">(</span><span class="n">Ms</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Ms</span><span class="o">*</span><span class="n">V</span>
 </pre></div>
 </div>
@@ -1524,8 +1502,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Ms</span> <span class="o">=</span> <span class="mf">6e5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="mf">6e5</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="n">Ms_to_mu</span><span class="p">(</span><span class="n">Ms</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">mu</span>
 </pre></div>
@@ -1557,8 +1534,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">K_to_k</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">K_to_k</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Ms</span><span class="o">*</span><span class="n">V</span>
 </pre></div>
 </div>
@@ -1567,8 +1543,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">K</span> <span class="o">=</span> <span class="mf">1.2e6</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="mf">1.2e6</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">K_to_k</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">k</span>
 </pre></div>
@@ -1594,8 +1569,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">4.6995e-10</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">4.6995e-10</span>
 <span class="n">l</span> <span class="o">=</span> <span class="mf">2.881e-10</span>
 <span class="n">Ms_orig</span> <span class="o">=</span> <span class="mf">1.07</span>
 <span class="n">Tc</span> <span class="o">=</span> <span class="mi">278</span>
@@ -1608,8 +1582,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">V</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
 <span class="n">V</span>
 </pre></div>
 </div>
@@ -1628,8 +1601,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">Ms</span> <span class="o">=</span> <span class="n">Ms_muB_to_Am</span><span class="p">(</span><span class="n">Ms_orig</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="n">Ms_muB_to_Am</span><span class="p">(</span><span class="n">Ms_orig</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">Ms</span>
 </pre></div>
 </div>
@@ -1648,8 +1620,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">e</span> <span class="o">=</span> <span class="mf">0.644</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="mf">0.644</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">Tc_to_A</span><span class="p">(</span><span class="n">Tc</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
 <span class="n">A</span>
 </pre></div>
@@ -1669,8 +1640,7 @@ k = K V,
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">D</span> <span class="o">=</span> <span class="n">P_to_D</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">P_to_D</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
 <span class="n">D</span>
 </pre></div>
 </div>
@@ -1693,7 +1663,7 @@ k = K V,
               
               
               <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="SANS.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1716,8 +1686,8 @@ k = K V,
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1728,7 +1698,7 @@ k = K V,
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

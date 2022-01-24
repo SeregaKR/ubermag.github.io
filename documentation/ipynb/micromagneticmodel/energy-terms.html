@@ -8,28 +8,28 @@
 
     <title>Energy terms and energy equation &#8212; ubermag  documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -38,8 +38,8 @@
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -134,10 +134,8 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -160,7 +158,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -662,6 +661,9 @@
 
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -991,7 +993,7 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
@@ -1041,8 +1043,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
 
 <span class="n">exchange</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1e-11</span><span class="p">)</span>
 </pre></div>
@@ -1053,8 +1054,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">exchange</span><span class="o">.</span><span class="n">A</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exchange</span><span class="o">.</span><span class="n">A</span>
 </pre></div>
 </div>
 </div>
@@ -1071,8 +1071,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">exchange</span><span class="o">.</span><span class="n">name</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exchange</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
@@ -1090,8 +1089,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">exchange</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">exchange</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1108,8 +1106,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">exchange</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exchange</span>
 </pre></div>
 </div>
 </div>
@@ -1131,8 +1128,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1141,8 +1137,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span>
 </pre></div>
 </div>
 </div>
@@ -1159,8 +1154,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman</span><span class="o">.</span><span class="n">name</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
@@ -1178,8 +1172,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">zeeman</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">zeeman</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1196,8 +1189,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman</span>
 </pre></div>
 </div>
 </div>
@@ -1213,8 +1205,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">type</span><span class="p">(</span><span class="n">zeeman</span><span class="o">.</span><span class="n">wave</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">zeeman</span><span class="o">.</span><span class="n">wave</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1235,8 +1226,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman_sin</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sin</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1245,8 +1235,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">zeeman_sin</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">zeeman_sin</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1264,8 +1253,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman_sinc</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sinc</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1274,8 +1262,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">zeeman_sinc</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sinc</span>
 </pre></div>
 </div>
 </div>
@@ -1296,8 +1283,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1306,8 +1292,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">K</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">K</span>
 </pre></div>
 </div>
 </div>
@@ -1324,8 +1309,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">u</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">u</span>
 </pre></div>
 </div>
 </div>
@@ -1343,8 +1327,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">uniaxialanisotropy</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">uniaxialanisotropy</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1361,8 +1344,7 @@ $-\mu_{0}M_\text{s} \mathbf{m} \cdot \mathbf{H}\, \text{sinc}[2 \pi f (t-t_{0})]
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span>
 </pre></div>
 </div>
 </div>
@@ -1379,8 +1361,7 @@ $-K (\mathbf{m} \cdot \mathbf{u})^{2}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K1</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">K2</span><span class="o">=</span><span class="mf">1e3</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K1</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">K2</span><span class="o">=</span><span class="mf">1e3</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1388,8 +1369,7 @@ $-K (\mathbf{m} \cdot \mathbf{u})^{2}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">uniaxialanisotropy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uniaxialanisotropy</span>
 </pre></div>
 </div>
 </div>
@@ -1409,8 +1389,7 @@ $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">demag</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demag</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1419,8 +1398,7 @@ $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">demag</span><span class="o">.</span><span class="n">name</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demag</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
@@ -1438,8 +1416,7 @@ $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">demag</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">demag</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1456,8 +1433,7 @@ $-K_{1} (\mathbf{m} \cdot \mathbf{u})^{2} - K_{2} (\mathbf{m} \cdot \mathbf{u})^
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">demag</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">demag</span>
 </pre></div>
 </div>
 </div>
@@ -1479,8 +1455,7 @@ $-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{m} \cdot \mathbf{H}_\text{d}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_x&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_x&#39;</span><span class="p">)</span>
 <span class="n">dmi_cnv_y</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_y&#39;</span><span class="p">)</span>
 <span class="n">dmi_cnv_z</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_z&#39;</span><span class="p">)</span>
 <span class="n">dmi_t</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
@@ -1495,8 +1470,7 @@ $-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{m} \cdot \mathbf{H}_\text{d}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_x</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_cnv_y</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_cnv_z</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_t</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_x</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_y</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_z</span><span class="o">.</span><span class="n">D</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_cnv_y</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_cnv_z</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_t</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_x</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_y</span><span class="o">.</span><span class="n">D</span> <span class="o">==</span> <span class="n">dmi_d2d_z</span><span class="o">.</span><span class="n">D</span>
 </pre></div>
 </div>
 </div>
@@ -1513,8 +1487,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_x</span><span class="o">.</span><span class="n">crystalclass</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span><span class="o">.</span><span class="n">crystalclass</span>
 </pre></div>
 </div>
 </div>
@@ -1532,8 +1505,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_x</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span>
 </pre></div>
 </div>
 </div>
@@ -1549,8 +1521,7 @@ $D ( \mathbf{m} \cdot \nabla m_{x} - m_{x} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_y</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_y</span>
 </pre></div>
 </div>
 </div>
@@ -1566,8 +1537,7 @@ $D ( \mathbf{m} \cdot \nabla m_{y} - m_{y} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_cnv_z</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_z</span>
 </pre></div>
 </div>
 </div>
@@ -1583,8 +1553,7 @@ $D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_t</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_t</span>
 </pre></div>
 </div>
 </div>
@@ -1600,8 +1569,7 @@ $D \mathbf{m} \cdot (\nabla \times \mathbf{m})$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_d2d_x</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_d2d_x</span>
 </pre></div>
 </div>
 </div>
@@ -1617,8 +1585,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial y} \times \hat{y} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_d2d_y</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_d2d_y</span>
 </pre></div>
 </div>
 </div>
@@ -1634,8 +1601,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial z} \times \hat{z} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">dmi_d2d_z</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_d2d_z</span>
 </pre></div>
 </div>
 </div>
@@ -1655,8 +1621,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cubicanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">CubicAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">u1</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">u2</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubicanisotropy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">CubicAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">u1</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">u2</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1665,8 +1630,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">K</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">K</span>
 </pre></div>
 </div>
 </div>
@@ -1683,8 +1647,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">u1</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">u1</span>
 </pre></div>
 </div>
 </div>
@@ -1701,8 +1664,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">u2</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubicanisotropy</span><span class="o">.</span><span class="n">u2</span>
 </pre></div>
 </div>
 </div>
@@ -1720,8 +1682,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">cubicanisotropy</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">cubicanisotropy</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1738,8 +1699,7 @@ $D\mathbf{m} \cdot \left( \frac{\partial \mathbf{m}}{\partial x} \times \hat{x} 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cubicanisotropy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubicanisotropy</span>
 </pre></div>
 </div>
 </div>
@@ -1759,8 +1719,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">rkky</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">RKKY</span><span class="p">(</span><span class="n">sigma</span><span class="o">=-</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;subregion1&#39;</span><span class="p">,</span> <span class="s1">&#39;subregion2&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">RKKY</span><span class="p">(</span><span class="n">sigma</span><span class="o">=-</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;subregion1&#39;</span><span class="p">,</span> <span class="s1">&#39;subregion2&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1769,8 +1728,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">rkky</span><span class="o">.</span><span class="n">sigma</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span><span class="o">.</span><span class="n">sigma</span>
 </pre></div>
 </div>
 </div>
@@ -1787,8 +1745,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">rkky</span><span class="o">.</span><span class="n">subregions</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span><span class="o">.</span><span class="n">subregions</span>
 </pre></div>
 </div>
 </div>
@@ -1806,8 +1763,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">rkky</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">rkky</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1824,8 +1780,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">rkky</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span>
 </pre></div>
 </div>
 </div>
@@ -1846,8 +1801,7 @@ $\text{RKKY}(\text{subregion1}, \text{subregion2})$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">type</span><span class="p">(</span><span class="n">exchange</span> <span class="o">+</span> <span class="n">dmi_cnv_z</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">exchange</span> <span class="o">+</span> <span class="n">dmi_cnv_z</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1865,8 +1819,7 @@ micromagneticmodel.energy.energy.Energy
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span> <span class="o">=</span> <span class="n">exchange</span> <span class="o">+</span> <span class="n">dmi_cnv_z</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span> <span class="o">=</span> <span class="n">exchange</span> <span class="o">+</span> <span class="n">dmi_cnv_z</span>
 </pre></div>
 </div>
 </div>
@@ -1875,8 +1828,7 @@ micromagneticmodel.energy.energy.Energy
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">repr</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="n">energy</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1894,8 +1846,7 @@ micromagneticmodel.energy.energy.Energy
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span>
 </pre></div>
 </div>
 </div>
@@ -1912,8 +1863,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}+ D ( \mathbf{m} \cdot \nabla m_{z} -
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span> <span class="o">+=</span> <span class="n">zeeman</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span> <span class="o">+=</span> <span class="n">zeeman</span>
 </pre></div>
 </div>
 </div>
@@ -1922,8 +1872,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}+ D ( \mathbf{m} \cdot \nabla m_{z} -
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span>
 </pre></div>
 </div>
 </div>
@@ -1943,8 +1892,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}+ D ( \mathbf{m} \cdot \nabla m_{z} -
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span>
 </pre></div>
 </div>
 </div>
@@ -1960,8 +1908,7 @@ $D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span>
 </pre></div>
 </div>
 </div>
@@ -1978,8 +1925,7 @@ $D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span> <span class="o">=</span> <span class="mf">5e-3</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span> <span class="o">=</span> <span class="mf">5e-3</span>
 </pre></div>
 </div>
 </div>
@@ -1987,8 +1933,7 @@ $D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">dmi</span><span class="o">.</span><span class="n">D</span>
 </pre></div>
 </div>
 </div>
@@ -2006,8 +1951,7 @@ $D ( \mathbf{m} \cdot \nabla m_{z} - m_{z} \nabla \cdot \mathbf{m} )$</div></div
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">energy</span><span class="o">.</span><span class="n">exchange</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy</span><span class="o">.</span><span class="n">exchange</span>
 </pre></div>
 </div>
 </div>
@@ -2024,8 +1968,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">exchange</span><span class="o">.</span><span class="n">name</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exchange</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
@@ -2049,7 +1992,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
               
               
               <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="term-parameters.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2072,8 +2015,8 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -2084,7 +2027,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}$</div></div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     
