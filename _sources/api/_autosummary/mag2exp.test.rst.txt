@@ -1,6 +1,0 @@
-mag2exp.test
-============
-
-.. currentmodule:: mag2exp
-
-.. autofunction:: test

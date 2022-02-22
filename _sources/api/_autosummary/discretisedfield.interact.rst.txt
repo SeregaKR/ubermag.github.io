@@ -1,6 +1,0 @@
-discretisedfield.interact
-=========================
-
-.. currentmodule:: discretisedfield
-
-.. autofunction:: interact

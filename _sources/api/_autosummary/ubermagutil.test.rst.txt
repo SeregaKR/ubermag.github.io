@@ -1,6 +1,0 @@
-ubermagutil.test
-================
-
-.. currentmodule:: ubermagutil
-
-.. autofunction:: test

@@ -1,6 +1,0 @@
-oommfc.test
-===========
-
-.. currentmodule:: oommfc
-
-.. autofunction:: test

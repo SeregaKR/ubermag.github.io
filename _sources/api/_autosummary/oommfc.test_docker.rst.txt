@@ -1,6 +1,0 @@
-oommfc.test\_docker
-===================
-
-.. currentmodule:: oommfc
-
-.. autofunction:: test_docker

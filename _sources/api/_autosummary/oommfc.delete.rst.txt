@@ -1,6 +1,0 @@
-oommfc.delete
-=============
-
-.. currentmodule:: oommfc
-
-.. autofunction:: delete

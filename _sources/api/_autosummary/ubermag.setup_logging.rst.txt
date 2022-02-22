@@ -1,6 +1,0 @@
-ubermag.setup\_logging
-======================
-
-.. currentmodule:: ubermag
-
-.. autofunction:: setup_logging

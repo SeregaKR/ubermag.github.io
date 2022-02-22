@@ -1,6 +1,0 @@
-micromagnetictests.test
-=======================
-
-.. currentmodule:: micromagnetictests
-
-.. autofunction:: test

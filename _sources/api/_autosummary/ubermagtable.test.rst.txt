@@ -1,6 +1,0 @@
-ubermagtable.test
-=================
-
-.. currentmodule:: ubermagtable
-
-.. autofunction:: test
