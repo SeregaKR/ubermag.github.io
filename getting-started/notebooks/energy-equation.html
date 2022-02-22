@@ -6,45 +6,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Energy equation &#8212; ubermag  documentation</title>
+    <title>3. Energy equation &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
     
     <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
   
     
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Dynamics equation" href="dynamics-equation.html" />
+    <link rel="prev" title="2. Magnetisation field" href="magnetisation-field.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -63,8 +65,8 @@
     
     
 
-<a class="navbar-brand" href="../../../index.html">
-  <img src="../../../_static/logoL.png" class="logo" alt="logo">
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.png" class="logo" alt="logo">
 </a>
 
 
@@ -82,49 +84,49 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../installation.html">
+ <a class="reference internal nav-link" href="../../installation.html">
   Installation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../demo.html">
+ <a class="reference internal nav-link" href="../../demo.html">
   Demo
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../index.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
   Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../examples/index.html">
+ <a class="reference internal nav-link" href="../../examples/index.html">
   Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../documentation/index.html">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
   Package documentation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   API
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../changelog.html">
+ <a class="reference internal nav-link" href="../../changelog.html">
   Changelog
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../help.html">
+ <a class="reference internal nav-link" href="../../help.html">
   Help
  </a>
 </li>
@@ -147,7 +149,7 @@
       </div>
       
       <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
@@ -167,7 +169,46 @@
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-basics.html">
+   Python basics
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first-ubermag-simulation.html">
+   1. Our first ubermag simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetisation-field.html">
+   2. Magnetisation field
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Energy equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamics-equation.html">
+   4. Dynamics equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="driving-dw.html">
+   5. Exercise: Current induced domain wall motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dw-pair-conversion.html">
+   6. Exercise: Domain wall pair conversion
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -191,37 +232,37 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Zeeman-energy">
-   Zeeman energy
+   3.1. Zeeman energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Uniaxial-anisotropy">
-   Uniaxial anisotropy
+   3.2. Uniaxial anisotropy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exchange-energy">
-   Exchange energy
+   3.3. Exchange energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Dzyaloshinskii-Moriya-energy">
-   Dzyaloshinskii-Moriya energy
+   3.4. Dzyaloshinskii-Moriya energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exchange-and-Zeeman-energies">
-   Exchange and Zeeman energies
+   3.5. Exchange and Zeeman energies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Competition-of-DMI-and-exchange">
-   Competition of DMI and exchange
+   3.6. Competition of DMI and exchange
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Skyrmion-in-a-disk">
-   Skyrmion in a disk
+   3.7. Skyrmion in a disk
   </a>
  </li>
 </ul>
@@ -232,12 +273,12 @@
 <div class="tocsection onthispace pt-5 bp-3">
     <h5>Try online:</h5>
     
-    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/notebooks/energy-equation.ipynb"  target="_blank" rel="noopener noreferrer">
+    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/getting-started/energy-equation.ipynb"  target="_blank" rel="noopener noreferrer">
     
         <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,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">
     </a>
     <h5>Try locally:</h5>
-    <a href="https://ubermag.github.io/_sources/getting-started/notebooks/getting-started/energy-equation.ipynb.txt" download="energy-equation.ipynb">
+    <a href="https://ubermag.github.io/_sources/getting-started/notebooks/energy-equation.ipynb.txt" download="energy-equation.ipynb">
         <img src="https://img.shields.io/badge/download-notebook-blue">
     </a>
 </div>
@@ -509,11 +550,11 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Energy-equation">
-<h1>Energy equation<a class="headerlink" href="#Energy-equation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Energy equation<a class="headerlink" href="#Energy-equation" title="Permalink to this headline">¶</a></h1>
 <p>The energy of a magnetic system can be computed using Hamiltonian, which consists of different energy terms. In addition, the effective field which affects the magnetisation dynamics in the LLG equation, is also computed from the system’s Hamiltonian.</p>
 <p>In this tutorial, we explore different energy terms that can occur in the Hamiltonian.</p>
 <section id="Zeeman-energy">
-<h2>Zeeman energy<a class="headerlink" href="#Zeeman-energy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Zeeman energy<a class="headerlink" href="#Zeeman-energy" title="Permalink to this headline">¶</a></h2>
 <p>The Zeeman energy tends to align all magnetic moments parallel to the external magnetic field <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>, so that the energy density <span class="math notranslate nohighlight">\(w_\text{z} = -\mu_{0}M_\text{s}\mathbf{m}\cdot\mathbf{H}\)</span> is minimum, where <span class="math notranslate nohighlight">\(\mu_{0}\)</span> is the magnetic constant and <span class="math notranslate nohighlight">\(M_\text{s}\)</span> is the magnetisation saturation.</p>
 <p>To demonstrate the effect of Zeeman energy we will apply an external magnetic field <span class="math notranslate nohighlight">\(H = 10^{6} \,\text{A}\,\text{m}^{-1}\)</span> in the positive <span class="math notranslate nohighlight">\(z\)</span>-direction to the one-dimensional array of magnetic moments. For the initial magnetisation configuration, we will take the <span class="math notranslate nohighlight">\((1, 0, 1)\)</span> direction with <span class="math notranslate nohighlight">\(M_\text{s} = 8 \times 10^{6} \,\text{A}\,\text{m}^{-1}\)</span>.</p>
 <div class="nbinput nblast docutils container">
@@ -560,7 +601,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_4_0.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_4_0.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_4_0.png" src="../../_images/getting-started_notebooks_energy-equation_4_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -582,7 +623,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_5_0.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_5_0.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_5_0.png" src="../../_images/getting-started_notebooks_energy-equation_5_0.png" />
 </div>
 </div>
 <p>After we defined our system, we can minimize its energy using <code class="docutils literal notranslate"><span class="pre">MinDriver</span></code>.</p>
@@ -609,7 +650,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.5 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_7_1.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_7_1.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_7_1.png" src="../../_images/getting-started_notebooks_energy-equation_7_1.png" />
 </div>
 </div>
 <p>We can see that after applying the magnetic field, all magnetic moments align parallel to <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>.</p>
@@ -636,12 +677,12 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_9_1.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_9_1.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_9_1.png" src="../../_images/getting-started_notebooks_energy-equation_9_1.png" />
 </div>
 </div>
 </section>
 <section id="Uniaxial-anisotropy">
-<h2>Uniaxial anisotropy<a class="headerlink" href="#Uniaxial-anisotropy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Uniaxial anisotropy<a class="headerlink" href="#Uniaxial-anisotropy" title="Permalink to this headline">¶</a></h2>
 <p>Uniaxial anisotropy energy tends to align magnetic moments to be on the anisotropy axis either parallel or antiparallel without a preferred direction. Its energy density is <span class="math notranslate nohighlight">\(w_\text{a} = -K(\mathbf{m} \cdot \mathbf{u})^{2}\)</span>, where <span class="math notranslate nohighlight">\(K\)</span> is the anisotropy constant and <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is the anisotropy axis.</p>
 <p>Let’s assume our anisotropy axis is in the <span class="math notranslate nohighlight">\((1, 0, 1)\)</span> direction with <span class="math notranslate nohighlight">\(K = 6 \times 10^{6} \,\text{J}\,\text{m}^{-3}\)</span> and the initial magnetisation is defined as</p>
 <div class="math notranslate nohighlight">
@@ -671,7 +712,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_11_0.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_11_0.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_11_0.png" src="../../_images/getting-started_notebooks_energy-equation_11_0.png" />
 </div>
 </div>
 <p>We can now relax the magnetisation.</p>
@@ -696,13 +737,13 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_13_1.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_13_1.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_13_1.png" src="../../_images/getting-started_notebooks_energy-equation_13_1.png" />
 </div>
 </div>
 <p>We see that in the relaxed state, all magnetic moments are aligned with the aniostropy axis. The initial configuration affects which orientation along the anisotropy direction is chosen.</p>
 </section>
 <section id="Exchange-energy">
-<h2>Exchange energy<a class="headerlink" href="#Exchange-energy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Exchange energy<a class="headerlink" href="#Exchange-energy" title="Permalink to this headline">¶</a></h2>
 <p>The Zeeman and uniaxial anisotropy are <em>local</em> energy terms; they only depend on the magnetisation at a given location. In contrast, the exchange energy represents a short range interaction and tends to align all spins parallel to each other without a preferential direction.</p>
 <p>The exchange energy density is <span class="math notranslate nohighlight">\(w_\text{ex} = A[(\nabla m_{x})^{2} + (\nabla m_{y})^{2} + (\nabla m_{z})^{2}]\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the exchange energy constant. To demonstrate how it affects the magnetisation configuration, we will use <span class="math notranslate nohighlight">\(A = 8 \,\text{pJ}\,\text{m}^{-1}\)</span> on a non-uniform magnetisation configuration.</p>
 <div class="nbinput docutils container">
@@ -756,7 +797,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.6 s)
 </div>
 </section>
 <section id="Dzyaloshinskii-Moriya-energy">
-<h2>Dzyaloshinskii-Moriya energy<a class="headerlink" href="#Dzyaloshinskii-Moriya-energy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Dzyaloshinskii-Moriya energy<a class="headerlink" href="#Dzyaloshinskii-Moriya-energy" title="Permalink to this headline">¶</a></h2>
 <p>While the exchange interaction aims to align (neighbouring) magnetic moments parallel to each other, the Dzyaloshinskii-Moriya (DM) energy wants to align them perpendicular to each other.</p>
 <p>The (interfacial) DMI energy density is <span class="math notranslate nohighlight">\(w_\text{dmi} = D[m_{z}\nabla\cdot\mathbf{m} - (\mathbf{m}\cdot\nabla)m_{z}]\)</span> (crystallographic class <span class="math notranslate nohighlight">\(C_\text{nv}\)</span>), with <span class="math notranslate nohighlight">\(D\)</span> being the DM constant. Again, we demonstrate its effect by starting from a uniform configuration, with <span class="math notranslate nohighlight">\(D = 3\times10^{3} \,\text{J}\,\text{m}^{-2}\)</span>.</p>
 <div class="nbinput docutils container">
@@ -790,7 +831,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <p>Ubermag supports crystalographic classes: <code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">O</span></code>, <code class="docutils literal notranslate"><span class="pre">Cnv</span></code>, or <code class="docutils literal notranslate"><span class="pre">D2d</span></code>.</p>
 </section>
 <section id="Exchange-and-Zeeman-energies">
-<h2>Exchange and Zeeman energies<a class="headerlink" href="#Exchange-and-Zeeman-energies" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Exchange and Zeeman energies<a class="headerlink" href="#Exchange-and-Zeeman-energies" title="Permalink to this headline">¶</a></h2>
 <p>So far, we investigated the effect of individual energy terms in the Hamiltonian. Now, we look at how multiple energies in the Hamiltoninan contribute to the final magnetisation configuration. We start with the simplest example where only exchange and Zeeman energies are present. As we showed before, exchange energy wants to align all magnetic moments parallel to each other without a preferential direction, while Zeeman energy wants them to be parallel to the external magnetic field. Therefore,
 we can expect that the minimum energy configuration is going to be the uniform state in the direction of an applied field <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>.</p>
 <div class="nbinput docutils container">
@@ -819,7 +860,7 @@ we can expect that the minimum energy configuration is going to be the uniform s
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_22_0.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_22_0.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_22_0.png" src="../../_images/getting-started_notebooks_energy-equation_22_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -843,13 +884,13 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_23_1.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_23_1.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_23_1.png" src="../../_images/getting-started_notebooks_energy-equation_23_1.png" />
 </div>
 </div>
 <p>Both energies are minimal in the above relaxed state: the magnetisation is uniform (minimising the exchange energy) and is aligned with the external field (minimising the Zeeman energy).</p>
 </section>
 <section id="Competition-of-DMI-and-exchange">
-<h2>Competition of DMI and exchange<a class="headerlink" href="#Competition-of-DMI-and-exchange" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>Competition of DMI and exchange<a class="headerlink" href="#Competition-of-DMI-and-exchange" title="Permalink to this headline">¶</a></h2>
 <p>Here, we study the competition of the exchange and (interfacial) DMI energy.</p>
 <p>We relax a one-dimensional chain of magnetic moments of length <span class="math notranslate nohighlight">\(L = 20 \,\text{nm}\)</span> with discretisation cell size of <span class="math notranslate nohighlight">\((d, d, d)\)</span>, with <span class="math notranslate nohighlight">\(d = 1 \,\text{nm}\)</span>. The Hamiltonian should consist of:</p>
 <ul class="simple">
@@ -923,7 +964,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_29_0.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_29_0.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_29_0.png" src="../../_images/getting-started_notebooks_energy-equation_29_0.png" />
 </div>
 </div>
 <p>We can now double the strength of <code class="docutils literal notranslate"><span class="pre">D</span></code> to see how the system will change.</p>
@@ -953,7 +994,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.3 s)
 </div>
 </section>
 <section id="Skyrmion-in-a-disk">
-<h2>Skyrmion in a disk<a class="headerlink" href="#Skyrmion-in-a-disk" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>Skyrmion in a disk<a class="headerlink" href="#Skyrmion-in-a-disk" title="Permalink to this headline">¶</a></h2>
 <p>We can assemble the appropriate energy equation in order to obtain a skyrmion state in a disk with <span class="math notranslate nohighlight">\(100 \,\text{nm}\)</span> diameter and <span class="math notranslate nohighlight">\(5 \,\text{nm}\)</span> thickness. In addition, we choose the appropriate initial magnetisation state.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -1004,7 +1045,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.7 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_energy-equation_33_1.png" src="../../../_images/getting-started_notebooks_getting-started_energy-equation_33_1.png" />
+<img alt="../../_images/getting-started_notebooks_energy-equation_33_1.png" src="../../_images/getting-started_notebooks_energy-equation_33_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -1032,6 +1073,20 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.7 s)
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="magnetisation-field.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Magnetisation field</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="dynamics-equation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Dynamics equation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>
@@ -1040,7 +1095,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:35]... (0.7 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
   <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

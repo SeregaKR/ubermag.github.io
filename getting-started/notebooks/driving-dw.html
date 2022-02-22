@@ -6,45 +6,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercise: Current induced domain wall motion &#8212; ubermag  documentation</title>
+    <title>5. Exercise: Current induced domain wall motion &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
     
     <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
   
     
       
   
     
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Exercise: Domain wall pair conversion" href="dw-pair-conversion.html" />
+    <link rel="prev" title="4. Dynamics equation" href="dynamics-equation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -63,8 +65,8 @@
     
     
 
-<a class="navbar-brand" href="../../../index.html">
-  <img src="../../../_static/logoL.png" class="logo" alt="logo">
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/logoL.png" class="logo" alt="logo">
 </a>
 
 
@@ -82,49 +84,49 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../installation.html">
+ <a class="reference internal nav-link" href="../../installation.html">
   Installation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../demo.html">
+ <a class="reference internal nav-link" href="../../demo.html">
   Demo
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../index.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../index.html">
   Getting started
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../examples/index.html">
+ <a class="reference internal nav-link" href="../../examples/index.html">
   Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../documentation/index.html">
+ <a class="reference internal nav-link" href="../../documentation/index.html">
   Package documentation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../api/index.html">
+ <a class="reference internal nav-link" href="../../api/index.html">
   API
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../changelog.html">
+ <a class="reference internal nav-link" href="../../changelog.html">
   Changelog
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../help.html">
+ <a class="reference internal nav-link" href="../../help.html">
   Help
  </a>
 </li>
@@ -147,7 +149,7 @@
       </div>
       
       <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form>
@@ -167,7 +169,46 @@
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-basics.html">
+   Python basics
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first-ubermag-simulation.html">
+   1. Our first ubermag simulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="magnetisation-field.html">
+   2. Magnetisation field
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-equation.html">
+   3. Energy equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamics-equation.html">
+   4. Dynamics equation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Exercise: Current induced domain wall motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dw-pair-conversion.html">
+   6. Exercise: Domain wall pair conversion
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -191,7 +232,7 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exercise">
-   Exercise
+   5.1. Exercise
   </a>
  </li>
 </ul>
@@ -202,12 +243,12 @@
 <div class="tocsection onthispace pt-5 bp-3">
     <h5>Try online:</h5>
     
-    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/notebooks/driving-dw.ipynb"  target="_blank" rel="noopener noreferrer">
+    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/getting-started/driving-dw.ipynb"  target="_blank" rel="noopener noreferrer">
     
         <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,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">
     </a>
     <h5>Try locally:</h5>
-    <a href="https://ubermag.github.io/_sources/getting-started/notebooks/getting-started/driving-dw.ipynb.txt" download="driving-dw.ipynb">
+    <a href="https://ubermag.github.io/_sources/getting-started/notebooks/driving-dw.ipynb.txt" download="driving-dw.ipynb">
         <img src="https://img.shields.io/badge/download-notebook-blue">
     </a>
 </div>
@@ -479,7 +520,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Exercise:-Current-induced-domain-wall-motion">
-<h1>Exercise: Current induced domain wall motion<a class="headerlink" href="#Exercise:-Current-induced-domain-wall-motion" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Exercise: Current induced domain wall motion<a class="headerlink" href="#Exercise:-Current-induced-domain-wall-motion" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial we show how Zhang-Li spin transfer torque (STT) can be included in micromagnetic simulations. To illustrate that, we will try to move a domain wall pair using spin-polarised current.</p>
 <p>Let us simulate a two-dimensional sample with length <span class="math notranslate nohighlight">\(L = 500 \,\text{nm}\)</span>, width <span class="math notranslate nohighlight">\(w = 20 \,\text{nm}\)</span> and discretisation cell <span class="math notranslate nohighlight">\((2.5 \,\text{nm}, 2.5 \,\text{nm}, 2.5 \,\text{nm})\)</span>. The material parameters are:</p>
 <ul class="simple">
@@ -547,7 +588,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_driving-dw_3_0.png" src="../../../_images/getting-started_notebooks_getting-started_driving-dw_3_0.png" />
+<img alt="../../_images/getting-started_notebooks_driving-dw_3_0.png" src="../../_images/getting-started_notebooks_driving-dw_3_0.png" />
 </div>
 </div>
 <p>Now, we can relax the magnetisation.</p>
@@ -574,7 +615,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (5.0 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_driving-dw_5_1.png" src="../../../_images/getting-started_notebooks_getting-started_driving-dw_5_1.png" />
+<img alt="../../_images/getting-started_notebooks_driving-dw_5_1.png" src="../../_images/getting-started_notebooks_driving-dw_5_1.png" />
 </div>
 </div>
 <p>Now we can add the STT term to the dynamics equation.</p>
@@ -613,7 +654,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (3.4 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_driving-dw_9_1.png" src="../../../_images/getting-started_notebooks_getting-started_driving-dw_9_1.png" />
+<img alt="../../_images/getting-started_notebooks_driving-dw_9_1.png" src="../../_images/getting-started_notebooks_driving-dw_9_1.png" />
 </div>
 </div>
 <p>We see that the DW pair has moved to the positive <span class="math notranslate nohighlight">\(x\)</span> direction. Now, let us visualise the motion using interactive plot.</p>
@@ -649,7 +690,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (3.4 s)
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "d501b487a7c346579f91f9766e8ed22d", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <section id="Exercise">
-<h2>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h2>
 <p>Modify the previous code to obtain one domain wall instead of a domain wall pair and move it using the same current.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -702,7 +743,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (3.4 s)
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../../_images/getting-started_notebooks_getting-started_driving-dw_13_0.png" src="../../../_images/getting-started_notebooks_getting-started_driving-dw_13_0.png" />
+<img alt="../../_images/getting-started_notebooks_driving-dw_13_0.png" src="../../_images/getting-started_notebooks_driving-dw_13_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -771,6 +812,20 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (3.1 s)
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="dynamics-equation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Dynamics equation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="dw-pair-conversion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Exercise: Domain wall pair conversion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>
@@ -779,7 +834,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:01]... (3.1 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
   <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
