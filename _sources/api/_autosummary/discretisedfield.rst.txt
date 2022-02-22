@@ -1,0 +1,43 @@
+﻿discretisedfield
+================
+
+.. automodule:: discretisedfield
+
+   
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      DValue
+      Field
+      FieldRotator
+      Line
+      Mesh
+      Region
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      integral
+      interact
+      test
+
+   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    ovf2vtk
+    plotting
+    tools

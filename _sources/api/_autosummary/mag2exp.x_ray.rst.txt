@@ -1,0 +1,20 @@
+mag2exp.x\_ray
+==============
+
+.. automodule:: mag2exp.x_ray
+
+   
+
+   
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      holography
+      saxs
+
+   
+

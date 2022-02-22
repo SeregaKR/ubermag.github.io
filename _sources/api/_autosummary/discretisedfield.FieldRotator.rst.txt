@@ -1,0 +1,74 @@
+FieldRotator
+============
+
+.. currentmodule:: discretisedfield
+
+.. autoclass:: FieldRotator
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~FieldRotator.__dir__
+      
+      
+         ~FieldRotator.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~FieldRotator.__repr__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~FieldRotator.clear_rotation
+      
+      
+         ~FieldRotator.rotate
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~FieldRotator.field
+   
+   
+
+   .. raw:: html
+
+      <hr>

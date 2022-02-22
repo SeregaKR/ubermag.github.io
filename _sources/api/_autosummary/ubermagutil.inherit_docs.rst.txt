@@ -1,0 +1,6 @@
+ubermagutil.inherit\_docs
+=========================
+
+.. currentmodule:: ubermagutil
+
+.. autofunction:: inherit_docs

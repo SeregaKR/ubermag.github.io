@@ -1,0 +1,85 @@
+Zeeman
+======
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Zeeman
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Zeeman.__add__
+      
+      
+      
+         ~Zeeman.__dir__
+      
+      
+         ~Zeeman.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Zeeman.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Zeeman.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~Zeeman.density
+      
+      
+         ~Zeeman.effective_field
+      
+      
+         ~Zeeman.energy
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Zeeman.H
+      ~Zeeman.dt
+      ~Zeeman.f
+      ~Zeeman.func
+      ~Zeeman.name
+      ~Zeeman.t0
+      ~Zeeman.tcl_strings
+      ~Zeeman.wave
+   
+   
+
+   .. raw:: html
+
+      <hr>

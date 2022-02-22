@@ -1,0 +1,78 @@
+Demag
+=====
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Demag
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Demag.__add__
+      
+      
+      
+         ~Demag.__dir__
+      
+      
+         ~Demag.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Demag.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Demag.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~Demag.density
+      
+      
+         ~Demag.effective_field
+      
+      
+         ~Demag.energy
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Demag.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

@@ -1,0 +1,29 @@
+discretisedfield.plotting
+=========================
+
+.. automodule:: discretisedfield.plotting
+
+   
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      K3dField
+      K3dRegion
+      MplField
+      MplRegion
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      add_colorwheel
+
+   
+

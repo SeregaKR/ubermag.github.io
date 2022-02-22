@@ -1,0 +1,20 @@
+mag2exp.sans
+============
+
+.. automodule:: mag2exp.sans
+
+   
+
+   
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      chiral_function
+      cross_section
+
+   
+

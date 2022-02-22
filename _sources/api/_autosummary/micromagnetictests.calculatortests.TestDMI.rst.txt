@@ -1,0 +1,73 @@
+TestDMI
+=======
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autoclass:: TestDMI
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~TestDMI.__dir__
+      
+      
+         ~TestDMI.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~TestDMI.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~TestDMI.random_m
+      
+      
+         ~TestDMI.setup
+      
+      
+         ~TestDMI.test_crystalclass
+      
+      
+         ~TestDMI.test_dict
+      
+      
+         ~TestDMI.test_scalar
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

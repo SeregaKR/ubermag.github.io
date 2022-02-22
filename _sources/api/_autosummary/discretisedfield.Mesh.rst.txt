@@ -1,0 +1,128 @@
+Mesh
+====
+
+.. currentmodule:: discretisedfield
+
+.. autoclass:: Mesh
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Mesh.__dir__
+      
+      
+         ~Mesh.__eq__
+      
+      
+      
+      
+         ~Mesh.__getattr__
+      
+      
+      
+         ~Mesh.__getitem__
+      
+      
+      
+      
+      
+         ~Mesh.__iter__
+      
+      
+      
+         ~Mesh.__len__
+      
+      
+      
+      
+      
+         ~Mesh.__or__
+      
+      
+      
+      
+         ~Mesh.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~Mesh.axis_points
+      
+      
+         ~Mesh.axis_selector
+      
+      
+         ~Mesh.index2point
+      
+      
+         ~Mesh.k3d
+      
+      
+         ~Mesh.k3d_subregions
+      
+      
+         ~Mesh.line
+      
+      
+         ~Mesh.mpl
+      
+      
+         ~Mesh.mpl_subregions
+      
+      
+         ~Mesh.neighbours
+      
+      
+         ~Mesh.pad
+      
+      
+         ~Mesh.plane
+      
+      
+         ~Mesh.point2index
+      
+      
+         ~Mesh.region2slices
+      
+      
+         ~Mesh.slider
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Mesh.attributes
+      ~Mesh.bc
+      ~Mesh.cell
+      ~Mesh.dS
+      ~Mesh.dV
+      ~Mesh.indices
+      ~Mesh.n
+      ~Mesh.region
+      ~Mesh.subregions
+   
+   
+
+   .. raw:: html
+
+      <hr>

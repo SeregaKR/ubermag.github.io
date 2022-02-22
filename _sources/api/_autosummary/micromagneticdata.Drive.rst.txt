@@ -1,0 +1,83 @@
+Drive
+=====
+
+.. currentmodule:: micromagneticdata
+
+.. autoclass:: Drive
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Drive.__dir__
+      
+      
+         ~Drive.__eq__
+      
+      
+      
+      
+      
+         ~Drive.__getitem__
+      
+      
+      
+      
+      
+      
+         ~Drive.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Drive.__repr__
+      
+      
+      
+      
+      
+      
+         ~Drive.ovf2vtk
+      
+      
+         ~Drive.slider
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Drive.dirname
+      ~Drive.info
+      ~Drive.m0
+      ~Drive.mif
+      ~Drive.n
+      ~Drive.name
+      ~Drive.number
+      ~Drive.table
+      ~Drive.x
+   
+   
+
+   .. raw:: html
+
+      <hr>

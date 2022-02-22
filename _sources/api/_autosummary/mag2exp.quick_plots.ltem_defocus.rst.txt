@@ -1,0 +1,6 @@
+mag2exp.quick\_plots.ltem\_defocus
+==================================
+
+.. currentmodule:: mag2exp.quick_plots
+
+.. autofunction:: ltem_defocus

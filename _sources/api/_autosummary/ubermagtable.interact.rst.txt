@@ -1,0 +1,6 @@
+ubermagtable.interact
+=====================
+
+.. currentmodule:: ubermagtable
+
+.. autofunction:: interact

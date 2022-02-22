@@ -1,0 +1,22 @@
+micromagneticmodel.abstract
+===========================
+
+.. automodule:: micromagneticmodel.abstract
+
+   
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      Abstract
+      Container
+      Term
+
+   
+
+   
+

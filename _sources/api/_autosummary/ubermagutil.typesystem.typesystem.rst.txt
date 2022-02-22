@@ -1,0 +1,6 @@
+ubermagutil.typesystem.typesystem
+=================================
+
+.. currentmodule:: ubermagutil.typesystem
+
+.. autofunction:: typesystem

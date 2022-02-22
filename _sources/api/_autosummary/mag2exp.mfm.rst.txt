@@ -1,0 +1,19 @@
+mag2exp.mfm
+===========
+
+.. automodule:: mag2exp.mfm
+
+   
+
+   
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      phase_shift
+
+   
+

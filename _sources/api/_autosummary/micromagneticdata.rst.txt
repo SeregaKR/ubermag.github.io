@@ -1,0 +1,27 @@
+﻿micromagneticdata
+=================
+
+.. automodule:: micromagneticdata
+
+   
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class-template.rst
+      :nosignatures:
+   
+      Data
+      Drive
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test
+
+   
+

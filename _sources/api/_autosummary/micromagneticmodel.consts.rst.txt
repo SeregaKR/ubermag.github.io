@@ -1,0 +1,27 @@
+micromagneticmodel.consts
+=========================
+
+.. automodule:: micromagneticmodel.consts
+
+   .. rubric:: Module attributes
+
+   .. autosummary::
+      :toctree:
+   
+      mu0
+      e
+      me
+      kB
+      h
+      g
+      hbar
+      gamma
+      muB
+      gamma0
+
+   
+
+   
+
+   
+

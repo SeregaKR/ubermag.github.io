@@ -1,0 +1,6 @@
+oommfc.compute
+==============
+
+.. currentmodule:: oommfc
+
+.. autofunction:: compute

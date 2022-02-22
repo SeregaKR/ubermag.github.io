@@ -1,0 +1,66 @@
+EulerEvolver
+============
+
+.. currentmodule:: oommfc
+
+.. autoclass:: EulerEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~EulerEvolver.__dir__
+      
+      
+         ~EulerEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~EulerEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~EulerEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~EulerEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

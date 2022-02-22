@@ -1,0 +1,6 @@
+micromagneticmodel.consts.hbar
+==============================
+
+.. currentmodule:: micromagneticmodel.consts
+
+.. autodata:: hbar

@@ -1,0 +1,66 @@
+UHH\_ThetaEvolver
+=================
+
+.. currentmodule:: oommfc
+
+.. autoclass:: UHH_ThetaEvolver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~UHH_ThetaEvolver.__dir__
+      
+      
+         ~UHH_ThetaEvolver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~UHH_ThetaEvolver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~UHH_ThetaEvolver.__repr__
+      
+      
+      
+      
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~UHH_ThetaEvolver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

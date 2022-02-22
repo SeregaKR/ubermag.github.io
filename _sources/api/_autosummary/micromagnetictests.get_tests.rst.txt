@@ -1,0 +1,6 @@
+micromagnetictests.get\_tests
+=============================
+
+.. currentmodule:: micromagnetictests
+
+.. autofunction:: get_tests

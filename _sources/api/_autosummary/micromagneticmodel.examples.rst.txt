@@ -1,0 +1,19 @@
+micromagneticmodel.examples
+===========================
+
+.. automodule:: micromagneticmodel.examples
+
+   
+
+   
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      macrospin
+
+   
+

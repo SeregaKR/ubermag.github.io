@@ -1,0 +1,6 @@
+discretisedfield.test
+=====================
+
+.. currentmodule:: discretisedfield
+
+.. autofunction:: test

@@ -1,0 +1,6 @@
+discretisedfield.tools.topological\_charge\_density
+===================================================
+
+.. currentmodule:: discretisedfield.tools
+
+.. autofunction:: topological_charge_density

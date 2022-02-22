@@ -1,0 +1,175 @@
+Field
+=====
+
+.. currentmodule:: discretisedfield
+
+.. autoclass:: Field
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Field.__abs__
+      
+      
+         ~Field.__add__
+      
+      
+         ~Field.__and__
+      
+      
+         ~Field.__array_ufunc__
+      
+      
+         ~Field.__call__
+      
+      
+      
+         ~Field.__dir__
+      
+      
+         ~Field.__eq__
+      
+      
+      
+      
+         ~Field.__getattr__
+      
+      
+      
+         ~Field.__getitem__
+      
+      
+      
+      
+      
+         ~Field.__iter__
+      
+      
+      
+         ~Field.__lshift__
+      
+      
+      
+         ~Field.__matmul__
+      
+      
+         ~Field.__mul__
+      
+      
+      
+         ~Field.__neg__
+      
+      
+      
+         ~Field.__pos__
+      
+      
+         ~Field.__pow__
+      
+      
+      
+      
+      
+      
+         ~Field.__repr__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Field.__sub__
+      
+      
+      
+         ~Field.__truediv__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Field.allclose
+      
+      
+         ~Field.derivative
+      
+      
+         ~Field.fromfile
+      
+      
+         ~Field.integral
+      
+      
+         ~Field.line
+      
+      
+         ~Field.pad
+      
+      
+         ~Field.plane
+      
+      
+         ~Field.project
+      
+      
+         ~Field.write
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Field.angle
+      ~Field.array
+      ~Field.average
+      ~Field.components
+      ~Field.conjugate
+      ~Field.curl
+      ~Field.dim
+      ~Field.div
+      ~Field.fftn
+      ~Field.grad
+      ~Field.ifftn
+      ~Field.imag
+      ~Field.irfftn
+      ~Field.k3d
+      ~Field.laplace
+      ~Field.mesh
+      ~Field.mpl
+      ~Field.norm
+      ~Field.orientation
+      ~Field.phase
+      ~Field.real
+      ~Field.rfftn
+      ~Field.value
+      ~Field.zero
+   
+   
+
+   .. raw:: html
+
+      <hr>

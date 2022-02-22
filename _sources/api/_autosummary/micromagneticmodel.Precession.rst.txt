@@ -1,0 +1,73 @@
+Precession
+==========
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Precession
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Precession.__add__
+      
+      
+      
+         ~Precession.__dir__
+      
+      
+         ~Precession.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Precession.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~Precession.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~Precession.dmdt
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Precession.gamma0
+      ~Precession.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

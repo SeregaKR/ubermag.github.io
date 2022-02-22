@@ -1,0 +1,6 @@
+micromagnetictests.calculatortests.test\_info\_file
+===================================================
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autofunction:: test_info_file

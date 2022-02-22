@@ -1,0 +1,6 @@
+discretisedfield.plotting.add\_colorwheel
+=========================================
+
+.. currentmodule:: discretisedfield.plotting
+
+.. autofunction:: add_colorwheel

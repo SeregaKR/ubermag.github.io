@@ -1,0 +1,75 @@
+Dynamics
+========
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: Dynamics
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+         ~Dynamics.__add__
+      
+      
+         ~Dynamics.__contains__
+      
+      
+      
+         ~Dynamics.__dir__
+      
+      
+         ~Dynamics.__eq__
+      
+      
+      
+      
+         ~Dynamics.__getattr__
+      
+      
+      
+      
+      
+      
+         ~Dynamics.__iter__
+      
+      
+      
+         ~Dynamics.__len__
+      
+      
+      
+      
+      
+      
+      
+         ~Dynamics.__repr__
+      
+      
+      
+      
+      
+         ~Dynamics.__sub__
+      
+      
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

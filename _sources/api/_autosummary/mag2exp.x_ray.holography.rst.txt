@@ -1,0 +1,6 @@
+mag2exp.x\_ray.holography
+=========================
+
+.. currentmodule:: mag2exp.x_ray
+
+.. autofunction:: holography

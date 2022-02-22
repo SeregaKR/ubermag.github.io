@@ -1,0 +1,6 @@
+oommfc.runner
+=============
+
+.. currentmodule:: oommfc
+
+.. autodata:: runner

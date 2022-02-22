@@ -1,0 +1,70 @@
+TestZeeman
+==========
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autoclass:: TestZeeman
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~TestZeeman.__dir__
+      
+      
+         ~TestZeeman.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~TestZeeman.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~TestZeeman.setup
+      
+      
+         ~TestZeeman.test_dict
+      
+      
+         ~TestZeeman.test_field
+      
+      
+         ~TestZeeman.test_vector
+      
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

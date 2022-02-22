@@ -1,0 +1,20 @@
+mag2exp.magnetometry
+====================
+
+.. automodule:: mag2exp.magnetometry
+
+   
+
+   
+
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      magnetisation
+      torque
+
+   
+
