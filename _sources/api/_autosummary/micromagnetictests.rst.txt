@@ -2,16 +2,11 @@
 ==================
 
 .. automodule:: micromagnetictests
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,14 @@
    
       get_tests
       test
-   
-   
 
    
-   
-   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    calculatortests

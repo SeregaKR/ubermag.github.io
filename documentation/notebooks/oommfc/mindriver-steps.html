@@ -1,0 +1,1569 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>MinDriver steps &#8212; ubermag  documentation</title>
+    
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Custom directory name" href="dirname.html" />
+    <link rel="prev" title="Tutorial 05: Cubic anisotropy energy term" href="cubicanisotropy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logoL.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../demo.html">
+  Demo
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting-started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Package documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../discretisedfield.html">
+   discretisedfield
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-basics.html">
+     Region basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-visualisation.html">
+     Region visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-facing-surfaces.html">
+     Region facing surfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-basics.html">
+     Mesh basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-visualisation.html">
+     Mesh visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-line-plane.html">
+     Mesh plane and line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-subregions.html">
+     Mesh subregions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-widgets.html">
+     Mesh widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-pad.html">
+     Mesh pad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-bc.html">
+     Mesh boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-definition.html">
+     Defining a uniform field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-spatially-varying.html">
+     Spatially varying fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-normalisation.html">
+     Field normalisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-operations.html">
+     Field operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-matplotlib-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-k3d-visualisation.html">
+     Field visualisation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       k3d
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-read-write.html">
+     Reading and writing fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-rotations.html">
+     Field rotation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-tools.html">
+     Field tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/line.html">
+     Line object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/ovf2vtk.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ovf2vtk
+      </span>
+     </code>
+     tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mag2exp.html">
+   mag2exp
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/DC_magnetometry.html">
+     Tutorial: DC magnetometry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Torque_magnetometry.html">
+     Tutorial: Torque magnetometry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Lorentz_TEM.html">
+     Tutorial: Lorentz Transmission Electron Microscopy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Rotations_Lorentz_Microscopy.html">
+     Tutorial: Using Rotations with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mag2exp
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Magnetic_Force_Microscopy.html">
+     Tutorial: Magnetic Force Microscopy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/X_ray_Holography.html">
+     Tutorial: X-ray Holography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/SAXS.html">
+     Tutorial: Small Angle X-ray Scattering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/SANS.html">
+     Tutorial: Small Angle Neutron Scattering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Unit_converter.html">
+     Tutorial: Unit Conversions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/dev-test.html">
+     Dev test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticmodel.html">
+   micromagneticmodel
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-energy-term.html">
+     Deriving an energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-dynamics-term.html">
+     Deriving a dynamics term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/term-parameters.html">
+     Term parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/energy-terms.html">
+     Energy terms and energy equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/dynamics-terms.html">
+     Dynamics terms and dynamics equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/same-class-terms.html">
+     Multiple energy terms of the same class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/evolver-driver.html">
+     Deriving evolver and driver classes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/system.html">
+     Defining micromagnetic system
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/constants.html">
+     Constants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagnetictests.html">
+   micromagnetictests
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagnetictests/usage.html">
+     Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../oommfc.html">
+   oommfc
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="zeeman.html">
+     Tutorial 01: Zeeman energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exchange.html">
+     Tutorial 02: Exchange energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="uniaxialanisotropy.html">
+     Tutorial 03: Uniaxial anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dmi.html">
+     Tutorial 04: Dzyaloshinskii-Moriya energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cubicanisotropy.html">
+     Tutorial 05: Cubic anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MinDriver
+      </span>
+     </code>
+     steps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dirname.html">
+     Custom directory name
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="controlling-default-runner.html">
+     Controlling the default runner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="parallel.html">
+     Running simulations in parallel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagtable.html">
+   ubermagtable
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-basics.html">
+     Table basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-merge.html">
+     Table merge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-visualisation.html">
+     Table visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-widgets.html">
+     Table widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-interactive-plot.html">
+     Table interactive plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagtable/table-fft.html">
+     Table FFT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagutil.html">
+   ubermagutil
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/imposing-typesystem.html">
+     Imposing
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       typesystem
+      </span>
+     </code>
+     on a class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/constant-attributes.html">
+     Constant attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/parameter-descriptor.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Parameter
+      </span>
+     </code>
+     descriptor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/otherwise-type.html">
+     Defining
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       otherwise
+      </span>
+     </code>
+     type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/si-prefix.html">
+     Extracting the SI prefix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/inherit-docs.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inherit_docs
+      </span>
+     </code>
+     decorator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/hysteresis.html">
+     Hysteresis values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermag/logging.html">
+     Logging control
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#micromagneticdata-analysis">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     micromagneticdata
+    </span>
+   </code>
+   analysis
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+
+<div class="tocsection onthispace pt-5 bp-3">
+    <h5>Try online:</h5>
+    
+        <a href="https://mybinder.org/v2/gh/ubermag/oommfc/latest?urlpath=lab/tree/docs/mindriver-steps.ipynb" target="_blank" rel="noopener noreferrer">
+    
+        <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,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">
+    </a>
+    <h5>Try locally:</h5>
+    <a href="https://ubermag.github.io/_sources/documentation/notebooks/oommfc/mindriver-steps.ipynb.txt" download="mindriver-steps.ipynb">
+        <img src="https://img.shields.io/badge/download-notebook-blue">
+    </a>
+</div>
+
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="MinDriver-steps">
+<h1><code class="docutils literal notranslate"><span class="pre">MinDriver</span></code> steps<a class="headerlink" href="#MinDriver-steps" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial, we show how we can save individual steps during minimisation as well as how we can analyse them. We are going to minimise a simple system object. For details on how to define a system object, please have a look at other tutorials.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">mc</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">50e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">))</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;mindriver_steps&#39;</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e5</span><span class="p">))</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1.1e6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We now have a system object and we can minimise it using <code class="docutils literal notranslate"><span class="pre">MinDriver</span></code>. By default, <code class="docutils literal notranslate"><span class="pre">MinDriver</span></code> saves only the data of the last step in the relexation. However, if we want to save all individual steps in between, we have to pass <code class="docutils literal notranslate"><span class="pre">output_step=True</span></code> to the <code class="docutils literal notranslate"><span class="pre">drive</span></code> method.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">output_step</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner)[2022/02/18 18:12]... (0.5 s)
+</pre></div></div>
+</div>
+<p>If we have a look at the table, we can see that multiple steps are saved:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>max_mxHxm</th>
+      <th>E</th>
+      <th>delta_E</th>
+      <th>bracket_count</th>
+      <th>line_min_count</th>
+      <th>conjugate_cycle_count</th>
+      <th>cycle_count</th>
+      <th>cycle_sub_count</th>
+      <th>energy_calc_count</th>
+      <th>E_zeeman</th>
+      <th>iteration</th>
+      <th>stage_iteration</th>
+      <th>stage</th>
+      <th>mx</th>
+      <th>my</th>
+      <th>mz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.000000e+05</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.000000e+00</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.000000e+00</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>9.999996e+04</td>
+      <td>-1.206285e-20</td>
+      <td>-1.206285e-20</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>-1.206285e-20</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>9.999996e-01</td>
+      <td>0.0</td>
+      <td>0.000873</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9.848078e+04</td>
+      <td>-2.400340e-18</td>
+      <td>-2.388277e-18</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>-2.400340e-18</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>9.848078e-01</td>
+      <td>0.0</td>
+      <td>0.173648</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>9.396926e+04</td>
+      <td>-4.727747e-18</td>
+      <td>-2.327407e-18</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>-4.727747e-18</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>9.396926e-01</td>
+      <td>0.0</td>
+      <td>0.342020</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.660254e+04</td>
+      <td>-6.911504e-18</td>
+      <td>-2.183757e-18</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>-6.911504e-18</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>8.660254e-01</td>
+      <td>0.0</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7.660444e+04</td>
+      <td>-8.885258e-18</td>
+      <td>-1.973754e-18</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>-8.885258e-18</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>7.660444e-01</td>
+      <td>0.0</td>
+      <td>0.642788</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6.427876e+04</td>
+      <td>-1.058904e-17</td>
+      <td>-1.703780e-18</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>-1.058904e-17</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>6.427876e-01</td>
+      <td>0.0</td>
+      <td>0.766044</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.000000e+04</td>
+      <td>-1.197108e-17</td>
+      <td>-1.382038e-18</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>-1.197108e-17</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>5.000000e-01</td>
+      <td>0.0</td>
+      <td>0.866025</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>3.464669e+04</td>
+      <td>-1.296684e-17</td>
+      <td>-9.957653e-19</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>-1.296684e-17</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>3.464669e-01</td>
+      <td>0.0</td>
+      <td>0.938062</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>3.420201e+04</td>
+      <td>-1.298938e-17</td>
+      <td>-2.253721e-20</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>10.0</td>
+      <td>-1.298938e-17</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>3.420201e-01</td>
+      <td>0.0</td>
+      <td>0.939693</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1.981052e+04</td>
+      <td>-1.354905e-17</td>
+      <td>-5.596679e-19</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>11.0</td>
+      <td>-1.354905e-17</td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>1.981052e-01</td>
+      <td>0.0</td>
+      <td>0.980181</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1.736482e+04</td>
+      <td>-1.361301e-17</td>
+      <td>-6.395896e-20</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>-1.361301e-17</td>
+      <td>11.0</td>
+      <td>11.0</td>
+      <td>0.0</td>
+      <td>1.736482e-01</td>
+      <td>0.0</td>
+      <td>0.984808</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>6.305027e+03</td>
+      <td>-1.379550e-17</td>
+      <td>-1.824996e-19</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>13.0</td>
+      <td>-1.379550e-17</td>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>6.305027e-02</td>
+      <td>0.0</td>
+      <td>0.998010</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>1.366695e-11</td>
+      <td>-1.382301e-17</td>
+      <td>-2.750291e-20</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>14.0</td>
+      <td>-1.382301e-17</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>1.366695e-16</td>
+      <td>0.0</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>Using all the utility of the <code class="docutils literal notranslate"><span class="pre">Table</span></code> object, we can analyse the data. For instance, we can plot the energy.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_notebooks_oommfc_mindriver-steps_7_0.png" src="../../../_images/documentation_notebooks_oommfc_mindriver-steps_7_0.png" />
+</div>
+</div>
+<p>By fecault, iteration is showed on the <span class="math notranslate nohighlight">\(x\)</span>-axis. We can change that by passing <code class="docutils literal notranslate"><span class="pre">x</span></code> variable. For example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/documentation_notebooks_oommfc_mindriver-steps_9_0.png" src="../../../_images/documentation_notebooks_oommfc_mindriver-steps_9_0.png" />
+</div>
+</div>
+<section id="micromagneticdata-analysis">
+<h2><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> analysis<a class="headerlink" href="#micromagneticdata-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Similar to all other drivers, we can use <code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> package to analyse the data. We start by creationg the data object:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We can have a look at all drives we did so far:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>drive_number</th>
+      <th>date</th>
+      <th>time</th>
+      <th>driver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2022-02-16</td>
+      <td>17:38:17</td>
+      <td>MinDriver</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2022-02-18</td>
+      <td>18:12:56</td>
+      <td>MinDriver</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>There is only one drive and we can get it by passing <code class="docutils literal notranslate"><span class="pre">0</span></code> (ot <code class="docutils literal notranslate"><span class="pre">-1</span></code>) as an index:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>We can now plot the magnetisation at individual iterations, by indexing it again with the step number and do all usual operations allowed by <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<strong>Field</strong>
+<ul>
+
+  <li><strong>Mesh</strong>
+<ul>
+  <li><strong>Region</strong>
+<ul>
+  <li>p1 = (-5e-08, -5e-08, 0.0)</li>
+  <li>p2 = (5e-08, 5e-08, 1e-08)</li>
+</ul></li>
+  <li>n = (20, 20, 2)</li>
+  <li>attributes:
+    <ul>
+      <li>unit: m</li>
+      <li>fourierspace: False</li>
+      <li>isplane: False</li>
+      </ul>
+  </li>
+</ul></li>
+  <li>dim = 3</li>
+  <li>components:
+      <ul><li>x</li>
+        <li>y</li>
+        <li>z</li>
+        </ul>
+    </li>
+  </ul></div>
+</div>
+<p>The number of steps in the drive is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drive</span><span class="o">.</span><span class="n">n</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+14
+</pre></div></div>
+</div>
+<p>Let us now create an interactive plot. For details on how to create custom interactive plots, please have a look at other tutorials.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="n">drive</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">my_plot</span><span class="p">(</span><span class="n">step</span><span class="p">):</span>
+    <span class="n">drive</span><span class="p">[</span><span class="n">step</span><span class="p">]</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b808f9d0c464468e8cf04bcc17406799", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"3f92185845364abe9dee4d6ded1f1014": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "IntSliderModel", "state": {"continuous_update": false, "description": "step", "layout": "IPY_MODEL_affdc24d88474003b02f5f0261db2c4a", "max": 13, "style": "IPY_MODEL_f3aa6826d6d14d649c9705466ce777cf"}}, "635c501c459e49d683bf81d672255554": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "ac969f6c79be4d589e325f2f2a8ddbe4": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f86cb858abdf47a5982287bc25b3f568", "outputs": [{"data": {"image/png": "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hx9+iMOHD+Ojjz7yatletviJiIgkbu7cuYiNjUVubi6CgoIAAG+99RYSEhLw5ptvelUXEz8REUkSu/qv2b17N/79738LZvMHBwfj+eefR15enld1saufiIikiV39DiaTCUql0qm8qqrKad3+G2GLn4iIJErm563puPvuu7Fs2TJBkr969SoyMjLQp08fr+pqlMR/+PBhwfaHer0e48aNwx133IGBAwdi7dq1jXFaREREkvTyyy9j//79GDBgACorKzF+/HgMHDgQv/76K1588UWv6rqpXf02mw3r16/H3LlzERAQ4Ch/9dVXodFosGvXLpw4cQLPPPMMYmNjkZiYeDNPj4iIpIRd/Q7t27fHpk2bsHnzZhw7dgxKpRIxMTFITU11TPbzlNeJ/+rVq5DJZE7bAnri/fffx5dffon09HQsW7YMAFBRUYHt27fj66+/RlBQEHr27ImUlBRs3LiRiZ+IqDlj4hdQq9UYPny43/XcMPGXl5dj7dq12LlzJw4dOgSz2QwAUKlUuP3223HvvffioYce8uiHwN/+9jekp6djz549jrKzZ89CoVCgc+fOjrLIyEhs27bNl/dDRERNRRObme+PS5cuITMzE3l5eaiqqnJ6/Ouvv/a4LreJ32q1YunSpVi2bBnCw8MxcOBADB8+HLfccgssFguuXLmC/Px8rF27FosWLcLTTz+NZ555BgqF+98Sbdu2dSozGAxQqVSCMpVKBZPJ5LaeyEULPHlvRER0k+gmPN/gdXKt/mv+85//ID8/H3/9618REhLiV11us/SIESOg1Wrx2WefITo62uUxDz30EADg+PHj+OijjzBixAhs2LDBqxNQq9WorKwUlJlMJmg0Gq/qISIiaqpyc3Px4Ycfonfv3n7X5Tbxz5071+MlAHv06IE5c+bg1KlTXp9AREQEzGYzCgsLER4eDgDQ6XReLT9IRERNEFv8DiEhIQgNDW2QutxezudL4o2NjfX6OcHBwRg8eDAWLFgAo9GIw4cPY/PmzRg6dKjXdRERURNik/l3a0JGjhyJzMxMGI1Gv+vyaFa/2WzG+vXrcerUKZeTCmbNmuXXScyaNQvTp09HcnIyNBoNpkyZ4th3mIiImicZW/wOBw4cwO7du3HnnXeiTZs2gqV7gQaa3FfXiy++iG3btiEuLs7pekGZzPtfVX369MHu3bsd91u1aoVF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\n", "text/plain": "<Figure size 576x432 with 2 Axes>"}, "metadata": {}, "output_type": "display_data"}]}}, "affdc24d88474003b02f5f0261db2c4a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b808f9d0c464468e8cf04bcc17406799": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_3f92185845364abe9dee4d6ded1f1014", "IPY_MODEL_ac969f6c79be4d589e325f2f2a8ddbe4"], "layout": "IPY_MODEL_635c501c459e49d683bf81d672255554"}}, "f3aa6826d6d14d649c9705466ce777cf": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SliderStyleModel", "state": {"description_width": ""}}, "f86cb858abdf47a5982287bc25b3f568": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
+</script></section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="cubicanisotropy.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Tutorial 05: Cubic anisotropy energy term</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="dirname.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Custom directory name</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

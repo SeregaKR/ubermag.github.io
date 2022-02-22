@@ -1,13 +1,10 @@
-﻿micromagneticmodel.abstract
+micromagneticmodel.abstract
 ===========================
 
 .. automodule:: micromagneticmodel.abstract
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,22 +12,11 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         Abstract
-      
-      
-         Container
-      
-      
-         Term
-      
-   
+      Abstract
+      Container
+      Term
+
    
 
    
-   
-   
 
-   
-   
-   

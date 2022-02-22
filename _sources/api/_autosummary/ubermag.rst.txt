@@ -2,16 +2,11 @@
 =======
 
 .. automodule:: ubermag
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,6 @@
    
       setup_logging
       test
-   
-   
 
    
-   
-   
+

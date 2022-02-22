@@ -2,12 +2,9 @@
 ============
 
 .. automodule:: ubermagtable
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,14 +12,8 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         Table
-      
-   
-   
+      Table
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -31,9 +22,14 @@
    
       interact
       test
-   
-   
 
    
-   
-   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    util

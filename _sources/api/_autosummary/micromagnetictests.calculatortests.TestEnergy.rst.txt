@@ -64,6 +64,9 @@ TestEnergy
       
          ~TestEnergy.test_exchange_zeeman
       
+      
+         ~TestEnergy.test_zeeman_zeeman
+      
    
    
 

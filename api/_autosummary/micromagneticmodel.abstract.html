@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
@@ -36,6 +37,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
@@ -92,20 +94,26 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../workshop/index.html">
-  Workshop
+ <a class="reference internal nav-link" href="../../getting-started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../examples/index.html">
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../documentation/index.html">
-  Documentation
+  Package documentation
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="../index.html">
-  API Reference
+  API
  </a>
 </li>
 
@@ -161,12 +169,12 @@
   <div class="bd-toc-item active">
     <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Packages
+  packages
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../discretisedfield.html">
+  <a class="reference internal" href="discretisedfield.html">
    discretisedfield
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -175,9 +183,54 @@
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.DValue.html">
+     DValue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.Field.html">
+     Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.FieldRotator.html">
+     FieldRotator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.Line.html">
+     Line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.Mesh.html">
+     Mesh
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.Region.html">
+     Region
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.integral.html">
+     discretisedfield.integral
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.interact.html">
+     discretisedfield.interact
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="discretisedfield.test.html">
+     discretisedfield.test
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="discretisedfield.html">
-     discretisedfield
+    <a class="reference internal" href="discretisedfield.ovf2vtk.html">
+     discretisedfield.ovf2vtk
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -186,48 +239,8 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.DValue.html">
-       DValue
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.Field.html">
-       Field
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.FieldRotator.html">
-       FieldRotator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.Line.html">
-       Line
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.Mesh.html">
-       Mesh
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.Region.html">
-       Region
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.integral.html">
-       discretisedfield.integral
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.interact.html">
-       discretisedfield.interact
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.test.html">
-       discretisedfield.test
+      <a class="reference internal" href="discretisedfield.ovf2vtk.ovf2vtk.html">
+       discretisedfield.ovf2vtk.ovf2vtk
       </a>
      </li>
     </ul>
@@ -243,8 +256,8 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.plotting.K3d.html">
-       K3d
+      <a class="reference internal" href="discretisedfield.plotting.K3dField.html">
+       K3dField
       </a>
      </li>
      <li class="toctree-l3">
@@ -253,8 +266,8 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.plotting.Mpl.html">
-       Mpl
+      <a class="reference internal" href="discretisedfield.plotting.MplField.html">
+       MplField
       </a>
      </li>
      <li class="toctree-l3">
@@ -326,58 +339,29 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="discretisedfield.ovf2vtk.html">
-     discretisedfield.ovf2vtk
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="discretisedfield.ovf2vtk.ovf2vtk.html">
-       discretisedfield.ovf2vtk.ovf2vtk
-      </a>
-     </li>
-    </ul>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../mag2exp.html">
+  <a class="reference internal" href="mag2exp.html">
    mag2exp
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="mag2exp.html">
-     mag2exp
+   <li class="toctree-l2">
+    <a class="reference internal" href="mag2exp.test.html">
+     mag2exp.test
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.test.html">
-       mag2exp.test
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="mag2exp.ltem.html">
      mag2exp.ltem
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -405,72 +389,11 @@
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="mag2exp.x_ray.html">
-     mag2exp.x_ray
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.x_ray.holography.html">
-       mag2exp.x_ray.holography
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.x_ray.saxs.html">
-       mag2exp.x_ray.saxs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="mag2exp.sans.html">
-     mag2exp.sans
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.sans.chiral_function.html">
-       mag2exp.sans.chiral_function
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.sans.cross_section.html">
-       mag2exp.sans.cross_section
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="mag2exp.mfm.html">
-     mag2exp.mfm
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="mag2exp.mfm.phase_shift.html">
-       mag2exp.mfm.phase_shift
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
     <a class="reference internal" href="mag2exp.magnetometry.html">
      mag2exp.magnetometry
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -488,11 +411,28 @@
     </ul>
    </li>
    <li class="toctree-l2 has-children">
+    <a class="reference internal" href="mag2exp.mfm.html">
+     mag2exp.mfm
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mag2exp.mfm.phase_shift.html">
+       mag2exp.mfm.phase_shift
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="mag2exp.quick_plots.html">
      mag2exp.quick_plots
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -544,175 +484,195 @@
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../micromagneticdata.html">
-   micromagneticdata
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="micromagneticdata.html">
-     micromagneticdata
+    <a class="reference internal" href="mag2exp.sans.html">
+     mag2exp.sans
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticdata.Data.html">
-       Data
+      <a class="reference internal" href="mag2exp.sans.chiral_function.html">
+       mag2exp.sans.chiral_function
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticdata.Drive.html">
-       Drive
+      <a class="reference internal" href="mag2exp.sans.cross_section.html">
+       mag2exp.sans.cross_section
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="mag2exp.x_ray.html">
+     mag2exp.x_ray
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mag2exp.x_ray.holography.html">
+       mag2exp.x_ray.holography
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticdata.test.html">
-       micromagneticdata.test
+      <a class="reference internal" href="mag2exp.x_ray.saxs.html">
+       mag2exp.x_ray.saxs
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.Data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.Drive.html">
+     Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.test.html">
+     micromagneticdata.test
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../micromagneticmodel.html">
+  <a class="reference internal" href="micromagneticmodel.html">
    micromagneticmodel
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="micromagneticmodel.html">
-     micromagneticmodel
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.CubicAnisotropy.html">
+     CubicAnisotropy
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.CubicAnisotropy.html">
-       CubicAnisotropy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.DMI.html">
-       DMI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Damping.html">
-       Damping
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Demag.html">
-       Demag
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Driver.html">
-       Driver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Dynamics.html">
-       Dynamics
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.DynamicsTerm.html">
-       DynamicsTerm
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Energy.html">
-       Energy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.EnergyTerm.html">
-       EnergyTerm
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Evolver.html">
-       Evolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Exchange.html">
-       Exchange
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.MagnetoElastic.html">
-       MagnetoElastic
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Precession.html">
-       Precession
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.RKKY.html">
-       RKKY
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Slonczewski.html">
-       Slonczewski
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.System.html">
-       System
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.UniaxialAnisotropy.html">
-       UniaxialAnisotropy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.Zeeman.html">
-       Zeeman
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.ZhangLi.html">
-       ZhangLi
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagneticmodel.test.html">
-       micromagneticmodel.test
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.DMI.html">
+     DMI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Damping.html">
+     Damping
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Demag.html">
+     Demag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Driver.html">
+     Driver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Dynamics.html">
+     Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.DynamicsTerm.html">
+     DynamicsTerm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Energy.html">
+     Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.EnergyTerm.html">
+     EnergyTerm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Evolver.html">
+     Evolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Exchange.html">
+     Exchange
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.MagnetoElastic.html">
+     MagnetoElastic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Precession.html">
+     Precession
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.RKKY.html">
+     RKKY
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Slonczewski.html">
+     Slonczewski
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.System.html">
+     System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.UniaxialAnisotropy.html">
+     UniaxialAnisotropy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.Zeeman.html">
+     Zeeman
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.ZhangLi.html">
+     ZhangLi
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.test.html">
+     micromagneticmodel.test
+    </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
      micromagneticmodel.abstract
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -734,17 +694,74 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="micromagneticmodel.consts.html">
      micromagneticmodel.consts
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.mu0.html">
+       micromagneticmodel.consts.mu0
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.e.html">
+       micromagneticmodel.consts.e
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.me.html">
+       micromagneticmodel.consts.me
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.kB.html">
+       micromagneticmodel.consts.kB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.h.html">
+       micromagneticmodel.consts.h
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.g.html">
+       micromagneticmodel.consts.g
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.hbar.html">
+       micromagneticmodel.consts.hbar
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.gamma.html">
+       micromagneticmodel.consts.gamma
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.muB.html">
+       micromagneticmodel.consts.muB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="micromagneticmodel.consts.gamma0.html">
+       micromagneticmodel.consts.gamma0
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="micromagneticmodel.examples.html">
      micromagneticmodel.examples
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-    <label for="toctree-checkbox-19">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -759,43 +776,31 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../micromagnetictests.html">
+  <a class="reference internal" href="micromagnetictests.html">
    micromagnetictests
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="micromagnetictests.html">
-     micromagnetictests
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagnetictests.get_tests.html">
+     micromagnetictests.get_tests
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-    <label for="toctree-checkbox-21">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagnetictests.get_tests.html">
-       micromagnetictests.get_tests
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="micromagnetictests.test.html">
-       micromagnetictests.test
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagnetictests.test.html">
+     micromagnetictests.test
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="micromagnetictests.calculatortests.html">
      micromagnetictests.calculatortests
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-    <label for="toctree-checkbox-22">
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -906,6 +911,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_format.html">
+       micromagnetictests.calculatortests.test_format
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_info_file.html">
        micromagnetictests.calculatortests.test_info_file
       </a>
@@ -940,113 +950,106 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../oommfc.html">
+  <a class="reference internal" href="oommfc.html">
    oommfc
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-  <label for="toctree-checkbox-23">
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="oommfc.html">
-     oommfc
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.runner.html">
+     oommfc.runner
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-    <label for="toctree-checkbox-24">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.CGEvolver.html">
-       CGEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.Driver.html">
-       Driver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.EulerEvolver.html">
-       EulerEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.HysteresisDriver.html">
-       HysteresisDriver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.MinDriver.html">
-       MinDriver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.RungeKuttaEvolver.html">
-       RungeKuttaEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.SpinTEvolver.html">
-       SpinTEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.SpinXferEvolver.html">
-       SpinXferEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.TimeDriver.html">
-       TimeDriver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.UHH_ThetaEvolver.html">
-       UHH_ThetaEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.Xf_ThermHeunEvolver.html">
-       Xf_ThermHeunEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.Xf_ThermSpinXferEvolver.html">
-       Xf_ThermSpinXferEvolver
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.compute.html">
-       oommfc.compute
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.delete.html">
-       oommfc.delete
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.test.html">
-       oommfc.test
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="oommfc.test_docker.html">
-       oommfc.test_docker
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.CGEvolver.html">
+     CGEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.Driver.html">
+     Driver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.EulerEvolver.html">
+     EulerEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.HysteresisDriver.html">
+     HysteresisDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.MinDriver.html">
+     MinDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.RungeKuttaEvolver.html">
+     RungeKuttaEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.SpinTEvolver.html">
+     SpinTEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.SpinXferEvolver.html">
+     SpinXferEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.TimeDriver.html">
+     TimeDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.UHH_ThetaEvolver.html">
+     UHH_ThetaEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.Xf_ThermHeunEvolver.html">
+     Xf_ThermHeunEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.Xf_ThermSpinXferEvolver.html">
+     Xf_ThermSpinXferEvolver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.compute.html">
+     oommfc.compute
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.delete.html">
+     oommfc.delete
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.test.html">
+     oommfc.test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="oommfc.test_docker.html">
+     oommfc.test_docker
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="oommfc.oommf.html">
      oommfc.oommf
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-    <label for="toctree-checkbox-25">
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1067,6 +1070,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="oommfc.oommf.Runner.html">
+       Runner
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="oommfc.oommf.TclOOMMFRunner.html">
        TclOOMMFRunner
       </a>
@@ -1081,82 +1089,58 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ubermag.html">
+  <a class="reference internal" href="ubermag.html">
    ubermag
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
-  <label for="toctree-checkbox-26">
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="ubermag.html">
-     ubermag
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermag.setup_logging.html">
+     ubermag.setup_logging
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
-    <label for="toctree-checkbox-27">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermag.setup_logging.html">
-       ubermag.setup_logging
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermag.test.html">
-       ubermag.test
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermag.test.html">
+     ubermag.test
+    </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ubermagtable.html">
+  <a class="reference internal" href="ubermagtable.html">
    ubermagtable
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
-  <label for="toctree-checkbox-28">
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="ubermagtable.html">
-     ubermagtable
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagtable.Table.html">
+     Table
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
-    <label for="toctree-checkbox-29">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagtable.Table.html">
-       Table
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagtable.interact.html">
-       ubermagtable.interact
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagtable.test.html">
-       ubermagtable.test
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagtable.interact.html">
+     ubermagtable.interact
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagtable.test.html">
+     ubermagtable.test
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="ubermagtable.util.html">
      ubermagtable.util
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
-    <label for="toctree-checkbox-30">
+    <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+    <label for="toctree-checkbox-23">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1181,48 +1165,36 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ubermagutil.html">
+  <a class="reference internal" href="ubermagutil.html">
    ubermagutil
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
-  <label for="toctree-checkbox-31">
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="ubermagutil.html">
-     ubermagutil
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.hysteresis_values.html">
+     ubermagutil.hysteresis_values
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
-    <label for="toctree-checkbox-32">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagutil.hysteresis_values.html">
-       ubermagutil.hysteresis_values
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagutil.inherit_docs.html">
-       ubermagutil.inherit_docs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ubermagutil.test.html">
-       ubermagutil.test
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.inherit_docs.html">
+     ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.test.html">
+     ubermagutil.test
+    </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="ubermagutil.typesystem.html">
      ubermagutil.typesystem
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
-    <label for="toctree-checkbox-33">
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1278,8 +1250,8 @@
     <a class="reference internal" href="ubermagutil.units.html">
      ubermagutil.units
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
-    <label for="toctree-checkbox-34">
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
      <i class="fas fa-chevron-down">
      </i>
     </label>

@@ -70,11 +70,12 @@ Zeeman
    .. autosummary::
    
       ~Zeeman.H
+      ~Zeeman.dt
       ~Zeeman.f
+      ~Zeeman.func
       ~Zeeman.name
       ~Zeeman.t0
       ~Zeeman.tcl_strings
-      ~Zeeman.tstep
       ~Zeeman.wave
    
    

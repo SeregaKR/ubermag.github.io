@@ -1,17 +1,12 @@
-﻿mag2exp.quick\_plots
+mag2exp.quick\_plots
 ====================
 
 .. automodule:: mag2exp.quick_plots
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -27,9 +22,6 @@
       sans_cross_section
       saxs
       x_ray_holography
-   
-   
 
    
-   
-   
+

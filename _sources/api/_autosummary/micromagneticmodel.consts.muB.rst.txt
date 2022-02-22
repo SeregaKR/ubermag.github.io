@@ -1,0 +1,6 @@
+micromagneticmodel.consts.muB
+=============================
+
+.. currentmodule:: micromagneticmodel.consts
+
+.. autodata:: muB

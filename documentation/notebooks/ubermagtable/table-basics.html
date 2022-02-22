@@ -1,0 +1,1871 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Table basics &#8212; ubermag  documentation</title>
+    
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Table merge" href="table-merge.html" />
+    <link rel="prev" title="ubermagtable" href="../../ubermagtable.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logoL.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../demo.html">
+  Demo
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting-started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Package documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Packages
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../discretisedfield.html">
+   discretisedfield
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-basics.html">
+     Region basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-visualisation.html">
+     Region visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/region-facing-surfaces.html">
+     Region facing surfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-basics.html">
+     Mesh basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-visualisation.html">
+     Mesh visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-line-plane.html">
+     Mesh plane and line
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-subregions.html">
+     Mesh subregions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-widgets.html">
+     Mesh widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-pad.html">
+     Mesh pad
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/mesh-bc.html">
+     Mesh boundary conditions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-definition.html">
+     Defining a uniform field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-spatially-varying.html">
+     Spatially varying fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-normalisation.html">
+     Field normalisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-operations.html">
+     Field operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-matplotlib-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-k3d-visualisation.html">
+     Field visualisation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       k3d
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-read-write.html">
+     Reading and writing fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-rotations.html">
+     Field rotation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-tools.html">
+     Field tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/line.html">
+     Line object
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/ovf2vtk.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ovf2vtk
+      </span>
+     </code>
+     tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mag2exp.html">
+   mag2exp
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/DC_magnetometry.html">
+     Tutorial: DC magnetometry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Torque_magnetometry.html">
+     Tutorial: Torque magnetometry
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Lorentz_TEM.html">
+     Tutorial: Lorentz Transmission Electron Microscopy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Rotations_Lorentz_Microscopy.html">
+     Tutorial: Using Rotations with
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mag2exp
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Magnetic_Force_Microscopy.html">
+     Tutorial: Magnetic Force Microscopy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/X_ray_Holography.html">
+     Tutorial: X-ray Holography
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/SAXS.html">
+     Tutorial: Small Angle X-ray Scattering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/SANS.html">
+     Tutorial: Small Angle Neutron Scattering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mag2exp/Unit_converter.html">
+     Tutorial: Unit Conversions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticdata.html">
+   micromagneticdata
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/dev-test.html">
+     Dev test
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagneticmodel.html">
+   micromagneticmodel
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-energy-term.html">
+     Deriving an energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/deriving-dynamics-term.html">
+     Deriving a dynamics term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/term-parameters.html">
+     Term parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/energy-terms.html">
+     Energy terms and energy equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/dynamics-terms.html">
+     Dynamics terms and dynamics equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/same-class-terms.html">
+     Multiple energy terms of the same class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/evolver-driver.html">
+     Deriving evolver and driver classes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/system.html">
+     Defining micromagnetic system
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticmodel/constants.html">
+     Constants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../micromagnetictests.html">
+   micromagnetictests
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagnetictests/usage.html">
+     Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../oommfc.html">
+   oommfc
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/zeeman.html">
+     Tutorial 01: Zeeman energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/exchange.html">
+     Tutorial 02: Exchange energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/uniaxialanisotropy.html">
+     Tutorial 03: Uniaxial anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/dmi.html">
+     Tutorial 04: Dzyaloshinskii-Moriya energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/cubicanisotropy.html">
+     Tutorial 05: Cubic anisotropy energy term
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/mindriver-steps.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MinDriver
+      </span>
+     </code>
+     steps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/dirname.html">
+     Custom directory name
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/controlling-default-runner.html">
+     Controlling the default runner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/parallel.html">
+     Running simulations in parallel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../ubermagtable.html">
+   ubermagtable
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Table basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-merge.html">
+     Table merge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-visualisation.html">
+     Table visualisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-widgets.html">
+     Table widgets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-interactive-plot.html">
+     Table interactive plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="table-fft.html">
+     Table FFT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermagutil.html">
+   ubermagutil
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/imposing-typesystem.html">
+     Imposing
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       typesystem
+      </span>
+     </code>
+     on a class
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/constant-attributes.html">
+     Constant attributes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/parameter-descriptor.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Parameter
+      </span>
+     </code>
+     descriptor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/otherwise-type.html">
+     Defining
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       otherwise
+      </span>
+     </code>
+     type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/si-prefix.html">
+     Extracting the SI prefix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/inherit-docs.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       inherit_docs
+      </span>
+     </code>
+     decorator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermagutil/hysteresis.html">
+     Hysteresis values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ubermag/logging.html">
+     Logging control
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+
+
+<div class="tocsection onthispace pt-5 bp-3">
+    <h5>Try online:</h5>
+    
+        <a href="https://mybinder.org/v2/gh/ubermag/ubermagtable/latest?urlpath=lab/tree/docs/table-basics.ipynb" target="_blank" rel="noopener noreferrer">
+    
+        <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABZCAMAAABi1XidAAAB8lBMVEX///9XmsrmZYH1olJXmsr1olJXmsrmZYH1olJXmsr1olJXmsrmZYH1olL1olJXmsr1olJXmsrmZYH1olL1olJXmsrmZYH1olJXmsr1olL1olJXmsrmZYH1olL1olJXmsrmZYH1olL1olL0nFf1olJXmsrmZYH1olJXmsq8dZb1olJXmsrmZYH1olJXmspXmspXmsr1olL1olJXmsrmZYH1olJXmsr1olL1olJXmsrmZYH1olL1olLeaIVXmsrmZYH1olL1olL1olJXmsrmZYH1olLna31Xmsr1olJXmsr1olJXmsrmZYH1olLqoVr1olJXmsr1olJXmsrmZYH1olL1olKkfaPobXvviGabgadXmsqThKuofKHmZ4Dobnr1olJXmsr1olJXmspXmsr1olJXmsrfZ4TuhWn1olL1olJXmsqBi7X1olJXmspZmslbmMhbmsdemsVfl8ZgmsNim8Jpk8F0m7R4m7F5nLB6jbh7jbiDirOEibOGnKaMhq+PnaCVg6qWg6qegKaff6WhnpKofKGtnomxeZy3noG6dZi+n3vCcpPDcpPGn3bLb4/Mb47UbIrVa4rYoGjdaIbeaIXhoWHmZYHobXvpcHjqdHXreHLroVrsfG/uhGnuh2bwj2Hxk17yl1vzmljzm1j0nlX1olL3AJXWAAAAbXRSTlMAEBAQHx8gICAuLjAwMDw9PUBAQEpQUFBXV1hgYGBkcHBwcXl8gICAgoiIkJCQlJicnJ2goKCmqK+wsLC4usDAwMjP0NDQ1NbW3Nzg4ODi5+3v8PDw8/T09PX29vb39/f5+fr7+/z8/Pz9/v7+zczCxgAABC5JREFUeAHN1ul3k0UUBvCb1CTVpmpaitAGSLSpSuKCLWpbTKNJFGlcSMAFF63iUmRccNG6gLbuxkXU66JAUef/9LSpmXnyLr3T5AO/rzl5zj137p136BISy44fKJXuGN/d19PUfYeO67Znqtf2KH33Id1psXoFdW30sPZ1sMvs2D060AHqws4FHeJojLZqnw53cmfvg+XR8mC0OEjuxrXEkX5ydeVJLVIlV0e10PXk5k7dYeHu7Cj1j+49uKg7uLU61tGLw1lq27ugQYlclHC4bgv7VQ+TAyj5Zc/UjsPvs1sd5cWryWObtvWT2EPa4rtnWW3JkpjggEpbOsPr7F7EyNewtpBIslA7p43HCsnwooXTEc3UmPmCNn5lrqTJxy6nRmcavGZVt/3Da2pD5NHvsOHJCrdc1G2r3DITpU7yic7w/7Rxnjc0kt5GC4djiv2Sz3Fb2iEZg41/ddsFDoyuYrIkmFehz0HR2thPgQqMyQYb2OtB0WxsZ3BeG3+wpRb1vzl2UYBog8FfGhttFKjtAclnZYrRo9ryG9uG/FZQU4AEg8ZE9LjGMzTmqKXPLnlWVnIlQQTvxJf8ip7VgjZjyVPrjw1te5otM7RmP7xm+sK2Gv9I8Gi++BRbEkR9EBw8zRUcKxwp73xkaLiqQb+kGduJTNHG72zcW9LoJgqQxpP3/Tj//c3yB0tqzaml05/+orHLksVO+95kX7/7qgJvnjlrfr2Ggsyx0eoy9uPzN5SPd86aXggOsEKW2Prz7du3VID3/tzs/sSRs2w7ovVHKtjrX2pd7ZMlTxAYfBAL9jiDwfLkq55Tm7ifhMlTGPyCAs7RFRhn47JnlcB9RM5T97ASuZXIcVNuUDIndpDbdsfrqsOppeXl5Y+XVKdjFCTh+zGaVuj0d9zy05PPK3QzBamxdwtTCrzyg/2Rvf2EstUjordGwa/kx9mSJLr8mLLtCW8HHGJc2R5hS219IiF6PnTusOqcMl57gm0Z8kanKMAQg0qSyuZfn7zItsbGyO9QlnxY0eCuD1XL2ys/MsrQhltE7Ug0uFOzufJFE2PxBo/YAx8XPPdDwWN0MrDRYIZF0mSMKCNHgaIVFoBbNoLJ7tEQDKxGF0kcLQimojCZopv0OkNOyWCCg9XMVAi7ARJzQdM2QUh0gmBozjc3Skg6dSBRqDGYSUOu66Zg+I2fNZs/M3/f/Grl/XnyF1Gw3VKCez0PN5IUfFLqvgUN4C0qNqYs5YhPL+aVZYDE4IpUk57oSFnJm4FyCqqOE0jhY2SMyLFoo56zyo6becOS5UVDdj7Vih0zp+tcMhwRpBeLyqtIjlJKAIZSbI8SGSF3k0pA3mR5tHuwPFoa7N7reoq2bqCsAk1HqCu5uvI1n6JuRXI+S1Mco54YmYTwcn6Aeic+kssXi8XpXC4V3t7/ADuTNKaQJdScAAAAAElFTkSuQmCC">
+    </a>
+    <h5>Try locally:</h5>
+    <a href="https://ubermag.github.io/_sources/documentation/notebooks/ubermagtable/table-basics.ipynb.txt" download="table-basics.ipynb">
+        <img src="https://img.shields.io/badge/download-notebook-blue">
+    </a>
+</div>
+
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="Table-basics">
+<h1>Table basics<a class="headerlink" href="#Table-basics" title="Permalink to this headline">¶</a></h1>
+<p>OOMMF saves the scalar data of micromagnetic simulations in <code class="docutils literal notranslate"><span class="pre">.odt</span></code> files, whereas mumax<span class="math notranslate nohighlight">\(^{3}\)</span> saves it in <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files. <code class="docutils literal notranslate"><span class="pre">ubermagtable</span></code> is a convenience tool which provides functions for reading, manipulating, and visualising data from those files.</p>
+<p>Reading data from OOMMF and mumax3 table files is done using <code class="docutils literal notranslate"><span class="pre">ubermagtable.Table.fromfile</span></code> class method. It takes filename as an input argument.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ubermagtable</span> <span class="k">as</span> <span class="nn">ut</span>
+
+<span class="c1"># Sample OOMMF .odt file</span>
+<span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;ubermagtable&#39;</span><span class="p">,</span> <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="n">odtfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s1">&#39;oommf-new-file2.odt&#39;</span><span class="p">)</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">odtfile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Table data is now loaded into <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> and it can be accessed via <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>E</th>
+      <th>E_calc_count</th>
+      <th>max_dmdt</th>
+      <th>dE/dt</th>
+      <th>delta_E</th>
+      <th>average_u</th>
+      <th>E_exchange</th>
+      <th>max_spin_ang_exchange</th>
+      <th>stage_max_spin_ang_exchange</th>
+      <th>run_max_spin_ang_exchange</th>
+      <th>E_dmi</th>
+      <th>E_uniaxialanisotropy</th>
+      <th>iteration</th>
+      <th>stage_iteration</th>
+      <th>stage</th>
+      <th>mx</th>
+      <th>my</th>
+      <th>mz</th>
+      <th>last_time_step</th>
+      <th>t</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-3.138757e-19</td>
+      <td>61.0</td>
+      <td>5105.786662</td>
+      <td>1.131548e-09</td>
+      <td>1.234439e-22</td>
+      <td>400.0</td>
+      <td>7.819720e-19</td>
+      <td>24.981919</td>
+      <td>24.981919</td>
+      <td>24.981919</td>
+      <td>-1.791404e-18</td>
+      <td>6.955566e-19</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>-0.004356</td>
+      <td>0.001711</td>
+      <td>0.779309</td>
+      <td>1.146802e-13</td>
+      <td>1.000000e-12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-3.123365e-19</td>
+      <td>92.0</td>
+      <td>5393.820357</td>
+      <td>1.881778e-09</td>
+      <td>2.714936e-22</td>
+      <td>400.0</td>
+      <td>7.859070e-19</td>
+      <td>25.999114</td>
+      <td>25.999114</td>
+      <td>25.999114</td>
+      <td>-1.795166e-18</td>
+      <td>6.969222e-19</td>
+      <td>14.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>-0.007399</td>
+      <td>0.002527</td>
+      <td>0.779212</td>
+      <td>1.481817e-13</td>
+      <td>2.000000e-12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-3.101629e-19</td>
+      <td>129.0</td>
+      <td>5478.105937</td>
+      <td>2.410525e-09</td>
+      <td>1.525909e-22</td>
+      <td>400.0</td>
+      <td>7.908188e-19</td>
+      <td>26.839540</td>
+      <td>26.839540</td>
+      <td>26.839540</td>
+      <td>-1.800156e-18</td>
+      <td>6.991741e-19</td>
+      <td>21.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>-0.010058</td>
+      <td>0.002596</td>
+      <td>0.779103</td>
+      <td>6.371456e-14</td>
+      <td>3.000000e-12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-3.075651e-19</td>
+      <td>172.0</td>
+      <td>5775.596117</td>
+      <td>2.750961e-09</td>
+      <td>2.026333e-22</td>
+      <td>400.0</td>
+      <td>7.963184e-19</td>
+      <td>27.523018</td>
+      <td>27.523018</td>
+      <td>27.523018</td>
+      <td>-1.806035e-18</td>
+      <td>7.021517e-19</td>
+      <td>28.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>-0.012243</td>
+      <td>0.002078</td>
+      <td>0.779037</td>
+      <td>7.397143e-14</td>
+      <td>4.000000e-12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-3.046980e-19</td>
+      <td>209.0</td>
+      <td>6099.408455</td>
+      <td>2.938665e-09</td>
+      <td>1.417659e-22</td>
+      <td>400.0</td>
+      <td>8.020796e-19</td>
+      <td>27.968494</td>
+      <td>27.968494</td>
+      <td>27.968494</td>
+      <td>-1.812650e-18</td>
+      <td>7.058726e-19</td>
+      <td>35.0</td>
+      <td>6.0</td>
+      <td>4.0</td>
+      <td>-0.013915</td>
+      <td>0.001139</td>
+      <td>0.779058</td>
+      <td>4.838847e-14</td>
+      <td>5.000000e-12</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>-4.666219e-20</td>
+      <td>7786.0</td>
+      <td>6419.713717</td>
+      <td>2.798949e-10</td>
+      <td>1.373560e-23</td>
+      <td>400.0</td>
+      <td>1.222876e-18</td>
+      <td>29.279242</td>
+      <td>29.396487</td>
+      <td>33.740702</td>
+      <td>-1.937412e-18</td>
+      <td>6.678731e-19</td>
+      <td>1372.0</td>
+      <td>6.0</td>
+      <td>195.0</td>
+      <td>-0.007893</td>
+      <td>-0.008017</td>
+      <td>0.899229</td>
+      <td>5.094469e-14</td>
+      <td>1.960000e-10</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>-4.634379e-20</td>
+      <td>7829.0</td>
+      <td>6444.188876</td>
+      <td>2.763562e-10</td>
+      <td>1.564748e-23</td>
+      <td>400.0</td>
+      <td>1.222846e-18</td>
+      <td>29.358338</td>
+      <td>29.358338</td>
+      <td>33.740702</td>
+      <td>-1.936677e-18</td>
+      <td>6.674871e-19</td>
+      <td>1379.0</td>
+      <td>6.0</td>
+      <td>196.0</td>
+      <td>-0.007885</td>
+      <td>-0.008007</td>
+      <td>0.899298</td>
+      <td>6.044352e-14</td>
+      <td>1.970000e-10</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>-4.601751e-20</td>
+      <td>7866.0</td>
+      <td>6397.295744</td>
+      <td>2.905618e-10</td>
+      <td>1.926693e-23</td>
+      <td>400.0</td>
+      <td>1.222790e-18</td>
+      <td>29.418283</td>
+      <td>29.418283</td>
+      <td>33.740702</td>
+      <td>-1.935846e-18</td>
+      <td>6.670387e-19</td>
+      <td>1386.0</td>
+      <td>6.0</td>
+      <td>197.0</td>
+      <td>-0.007876</td>
+      <td>-0.007998</td>
+      <td>0.899383</td>
+      <td>7.101084e-14</td>
+      <td>1.980000e-10</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>-4.568193e-20</td>
+      <td>7909.0</td>
+      <td>6374.587944</td>
+      <td>3.124776e-10</td>
+      <td>1.795553e-23</td>
+      <td>400.0</td>
+      <td>1.222710e-18</td>
+      <td>29.397007</td>
+      <td>29.419861</td>
+      <td>33.740702</td>
+      <td>-1.934920e-18</td>
+      <td>6.665281e-19</td>
+      <td>1393.0</td>
+      <td>6.0</td>
+      <td>198.0</td>
+      <td>-0.007866</td>
+      <td>-0.007989</td>
+      <td>0.899482</td>
+      <td>5.961504e-14</td>
+      <td>1.990000e-10</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>-4.533615e-20</td>
+      <td>7946.0</td>
+      <td>6479.674566</td>
+      <td>3.377564e-10</td>
+      <td>2.490729e-23</td>
+      <td>400.0</td>
+      <td>1.222607e-18</td>
+      <td>29.301311</td>
+      <td>29.397007</td>
+      <td>33.740702</td>
+      <td>-1.933899e-18</td>
+      <td>6.659556e-19</td>
+      <td>1400.0</td>
+      <td>6.0</td>
+      <td>199.0</td>
+      <td>-0.007854</td>
+      <td>-0.007981</td>
+      <td>0.899595</td>
+      <td>7.547542e-14</td>
+      <td>2.000000e-10</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 20 columns</p>
+</div></div>
+</div>
+<p>Apart from the data, units for individual columns are stored in <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">units</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;E&#39;: &#39;J&#39;,
+ &#39;E_calc_count&#39;: &#39;&#39;,
+ &#39;max_dmdt&#39;: &#39;deg/ns&#39;,
+ &#39;dE/dt&#39;: &#39;J/s&#39;,
+ &#39;delta_E&#39;: &#39;J&#39;,
+ &#39;average_u&#39;: &#39;m/s&#39;,
+ &#39;E_exchange&#39;: &#39;J&#39;,
+ &#39;max_spin_ang_exchange&#39;: &#39;deg&#39;,
+ &#39;stage_max_spin_ang_exchange&#39;: &#39;deg&#39;,
+ &#39;run_max_spin_ang_exchange&#39;: &#39;deg&#39;,
+ &#39;E_dmi&#39;: &#39;J&#39;,
+ &#39;E_uniaxialanisotropy&#39;: &#39;J&#39;,
+ &#39;iteration&#39;: &#39;&#39;,
+ &#39;stage_iteration&#39;: &#39;&#39;,
+ &#39;stage&#39;: &#39;&#39;,
+ &#39;mx&#39;: &#39;&#39;,
+ &#39;my&#39;: &#39;&#39;,
+ &#39;mz&#39;: &#39;&#39;,
+ &#39;last_time_step&#39;: &#39;s&#39;,
+ &#39;t&#39;: &#39;s&#39;}
+</pre></div></div>
+</div>
+<p>This returns a dictionary, whose keys are column names and its values are the units.</p>
+<p>By default, column names from OOMMF <code class="docutils literal notranslate"><span class="pre">.odt</span></code> and mumax3 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files are shortened. This can be changed by passing <code class="docutils literal notranslate"><span class="pre">rename=False</span></code> to the <code class="docutils literal notranslate"><span class="pre">Table.fromfile</span></code> class method:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_not_renamed</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">odtfile</span><span class="p">,</span> <span class="n">rename</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The column names are now:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_not_renamed</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SpinTEvolve:evolver:Total energy</th>
+      <th>SpinTEvolve:evolver:Energy calc count</th>
+      <th>SpinTEvolve:evolver:Max dm/dt</th>
+      <th>SpinTEvolve:evolver:dE/dt</th>
+      <th>SpinTEvolve:evolver:Delta E</th>
+      <th>SpinTEvolve:evolver:average u</th>
+      <th>UniformExchange:exchange:Energy</th>
+      <th>UniformExchange:exchange:Max Spin Ang</th>
+      <th>UniformExchange:exchange:Stage Max Spin Ang</th>
+      <th>UniformExchange:exchange:Run Max Spin Ang</th>
+      <th>DMI_Cnv:dmi:Energy</th>
+      <th>UniaxialAnisotropy:uniaxialanisotropy:Energy</th>
+      <th>TimeDriver::Iteration</th>
+      <th>TimeDriver::Stage iteration</th>
+      <th>TimeDriver::Stage</th>
+      <th>TimeDriver::mx</th>
+      <th>TimeDriver::my</th>
+      <th>TimeDriver::mz</th>
+      <th>TimeDriver::Last time step</th>
+      <th>TimeDriver::Simulation time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-3.138757e-19</td>
+      <td>61.0</td>
+      <td>5105.786662</td>
+      <td>1.131548e-09</td>
+      <td>1.234439e-22</td>
+      <td>400.0</td>
+      <td>7.819720e-19</td>
+      <td>24.981919</td>
+      <td>24.981919</td>
+      <td>24.981919</td>
+      <td>-1.791404e-18</td>
+      <td>6.955566e-19</td>
+      <td>8.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>-0.004356</td>
+      <td>0.001711</td>
+      <td>0.779309</td>
+      <td>1.146802e-13</td>
+      <td>1.000000e-12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-3.123365e-19</td>
+      <td>92.0</td>
+      <td>5393.820357</td>
+      <td>1.881778e-09</td>
+      <td>2.714936e-22</td>
+      <td>400.0</td>
+      <td>7.859070e-19</td>
+      <td>25.999114</td>
+      <td>25.999114</td>
+      <td>25.999114</td>
+      <td>-1.795166e-18</td>
+      <td>6.969222e-19</td>
+      <td>14.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>-0.007399</td>
+      <td>0.002527</td>
+      <td>0.779212</td>
+      <td>1.481817e-13</td>
+      <td>2.000000e-12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-3.101629e-19</td>
+      <td>129.0</td>
+      <td>5478.105937</td>
+      <td>2.410525e-09</td>
+      <td>1.525909e-22</td>
+      <td>400.0</td>
+      <td>7.908188e-19</td>
+      <td>26.839540</td>
+      <td>26.839540</td>
+      <td>26.839540</td>
+      <td>-1.800156e-18</td>
+      <td>6.991741e-19</td>
+      <td>21.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>-0.010058</td>
+      <td>0.002596</td>
+      <td>0.779103</td>
+      <td>6.371456e-14</td>
+      <td>3.000000e-12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-3.075651e-19</td>
+      <td>172.0</td>
+      <td>5775.596117</td>
+      <td>2.750961e-09</td>
+      <td>2.026333e-22</td>
+      <td>400.0</td>
+      <td>7.963184e-19</td>
+      <td>27.523018</td>
+      <td>27.523018</td>
+      <td>27.523018</td>
+      <td>-1.806035e-18</td>
+      <td>7.021517e-19</td>
+      <td>28.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>-0.012243</td>
+      <td>0.002078</td>
+      <td>0.779037</td>
+      <td>7.397143e-14</td>
+      <td>4.000000e-12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-3.046980e-19</td>
+      <td>209.0</td>
+      <td>6099.408455</td>
+      <td>2.938665e-09</td>
+      <td>1.417659e-22</td>
+      <td>400.0</td>
+      <td>8.020796e-19</td>
+      <td>27.968494</td>
+      <td>27.968494</td>
+      <td>27.968494</td>
+      <td>-1.812650e-18</td>
+      <td>7.058726e-19</td>
+      <td>35.0</td>
+      <td>6.0</td>
+      <td>4.0</td>
+      <td>-0.013915</td>
+      <td>0.001139</td>
+      <td>0.779058</td>
+      <td>4.838847e-14</td>
+      <td>5.000000e-12</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>-4.666219e-20</td>
+      <td>7786.0</td>
+      <td>6419.713717</td>
+      <td>2.798949e-10</td>
+      <td>1.373560e-23</td>
+      <td>400.0</td>
+      <td>1.222876e-18</td>
+      <td>29.279242</td>
+      <td>29.396487</td>
+      <td>33.740702</td>
+      <td>-1.937412e-18</td>
+      <td>6.678731e-19</td>
+      <td>1372.0</td>
+      <td>6.0</td>
+      <td>195.0</td>
+      <td>-0.007893</td>
+      <td>-0.008017</td>
+      <td>0.899229</td>
+      <td>5.094469e-14</td>
+      <td>1.960000e-10</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>-4.634379e-20</td>
+      <td>7829.0</td>
+      <td>6444.188876</td>
+      <td>2.763562e-10</td>
+      <td>1.564748e-23</td>
+      <td>400.0</td>
+      <td>1.222846e-18</td>
+      <td>29.358338</td>
+      <td>29.358338</td>
+      <td>33.740702</td>
+      <td>-1.936677e-18</td>
+      <td>6.674871e-19</td>
+      <td>1379.0</td>
+      <td>6.0</td>
+      <td>196.0</td>
+      <td>-0.007885</td>
+      <td>-0.008007</td>
+      <td>0.899298</td>
+      <td>6.044352e-14</td>
+      <td>1.970000e-10</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>-4.601751e-20</td>
+      <td>7866.0</td>
+      <td>6397.295744</td>
+      <td>2.905618e-10</td>
+      <td>1.926693e-23</td>
+      <td>400.0</td>
+      <td>1.222790e-18</td>
+      <td>29.418283</td>
+      <td>29.418283</td>
+      <td>33.740702</td>
+      <td>-1.935846e-18</td>
+      <td>6.670387e-19</td>
+      <td>1386.0</td>
+      <td>6.0</td>
+      <td>197.0</td>
+      <td>-0.007876</td>
+      <td>-0.007998</td>
+      <td>0.899383</td>
+      <td>7.101084e-14</td>
+      <td>1.980000e-10</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>-4.568193e-20</td>
+      <td>7909.0</td>
+      <td>6374.587944</td>
+      <td>3.124776e-10</td>
+      <td>1.795553e-23</td>
+      <td>400.0</td>
+      <td>1.222710e-18</td>
+      <td>29.397007</td>
+      <td>29.419861</td>
+      <td>33.740702</td>
+      <td>-1.934920e-18</td>
+      <td>6.665281e-19</td>
+      <td>1393.0</td>
+      <td>6.0</td>
+      <td>198.0</td>
+      <td>-0.007866</td>
+      <td>-0.007989</td>
+      <td>0.899482</td>
+      <td>5.961504e-14</td>
+      <td>1.990000e-10</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>-4.533615e-20</td>
+      <td>7946.0</td>
+      <td>6479.674566</td>
+      <td>3.377564e-10</td>
+      <td>2.490729e-23</td>
+      <td>400.0</td>
+      <td>1.222607e-18</td>
+      <td>29.301311</td>
+      <td>29.397007</td>
+      <td>33.740702</td>
+      <td>-1.933899e-18</td>
+      <td>6.659556e-19</td>
+      <td>1400.0</td>
+      <td>6.0</td>
+      <td>199.0</td>
+      <td>-0.007854</td>
+      <td>-0.007981</td>
+      <td>0.899595</td>
+      <td>7.547542e-14</td>
+      <td>2.000000e-10</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 20 columns</p>
+</div></div>
+</div>
+<p>We can specify the name of an independent variable in the table.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;t&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>If we already knew what the independent variable was going to be when we loaded the file, we could have passed it to <code class="docutils literal notranslate"><span class="pre">fromfile</span></code> method.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">ut</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">fromfile</span><span class="p">(</span><span class="n">odtfile</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>If table data was obtained by using time driver, table data store different values which are all a function of time. Column names of all time-dependent data can be obtained using <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;E&#39;,
+ &#39;E_calc_count&#39;,
+ &#39;max_dmdt&#39;,
+ &#39;dE/dt&#39;,
+ &#39;delta_E&#39;,
+ &#39;average_u&#39;,
+ &#39;E_exchange&#39;,
+ &#39;max_spin_ang_exchange&#39;,
+ &#39;stage_max_spin_ang_exchange&#39;,
+ &#39;run_max_spin_ang_exchange&#39;,
+ &#39;E_dmi&#39;,
+ &#39;E_uniaxialanisotropy&#39;,
+ &#39;iteration&#39;,
+ &#39;stage_iteration&#39;,
+ &#39;stage&#39;,
+ &#39;mx&#39;,
+ &#39;my&#39;,
+ &#39;mz&#39;,
+ &#39;last_time_step&#39;]
+</pre></div></div>
+</div>
+<p>Similarly, column name storing independent variable:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;t&#39;
+</pre></div></div>
+</div>
+<p>The maximum value of <code class="docutils literal notranslate"><span class="pre">x</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">.</span><span class="n">xmax</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2e-10
+</pre></div></div>
+</div>
+<p>Finally, the representation string of the table is:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+                E  E_calc_count     max_dmdt         dE/dt       delta_E  \
+0   -3.138757e-19          61.0  5105.786662  1.131548e-09  1.234439e-22
+1   -3.123365e-19          92.0  5393.820357  1.881778e-09  2.714936e-22
+2   -3.101629e-19         129.0  5478.105937  2.410525e-09  1.525909e-22
+3   -3.075651e-19         172.0  5775.596117  2.750961e-09  2.026333e-22
+4   -3.046980e-19         209.0  6099.408455  2.938665e-09  1.417659e-22
+..            ...           ...          ...           ...           ...
+195 -4.666219e-20        7786.0  6419.713717  2.798949e-10  1.373560e-23
+196 -4.634379e-20        7829.0  6444.188876  2.763562e-10  1.564748e-23
+197 -4.601751e-20        7866.0  6397.295744  2.905618e-10  1.926693e-23
+198 -4.568193e-20        7909.0  6374.587944  3.124776e-10  1.795553e-23
+199 -4.533615e-20        7946.0  6479.674566  3.377564e-10  2.490729e-23
+
+     average_u    E_exchange  max_spin_ang_exchange  \
+0        400.0  7.819720e-19              24.981919
+1        400.0  7.859070e-19              25.999114
+2        400.0  7.908188e-19              26.839540
+3        400.0  7.963184e-19              27.523018
+4        400.0  8.020796e-19              27.968494
+..         ...           ...                    ...
+195      400.0  1.222876e-18              29.279242
+196      400.0  1.222846e-18              29.358338
+197      400.0  1.222790e-18              29.418283
+198      400.0  1.222710e-18              29.397007
+199      400.0  1.222607e-18              29.301311
+
+     stage_max_spin_ang_exchange  run_max_spin_ang_exchange         E_dmi  \
+0                      24.981919                  24.981919 -1.791404e-18
+1                      25.999114                  25.999114 -1.795166e-18
+2                      26.839540                  26.839540 -1.800156e-18
+3                      27.523018                  27.523018 -1.806035e-18
+4                      27.968494                  27.968494 -1.812650e-18
+..                           ...                        ...           ...
+195                    29.396487                  33.740702 -1.937412e-18
+196                    29.358338                  33.740702 -1.936677e-18
+197                    29.418283                  33.740702 -1.935846e-18
+198                    29.419861                  33.740702 -1.934920e-18
+199                    29.397007                  33.740702 -1.933899e-18
+
+     E_uniaxialanisotropy  iteration  stage_iteration  stage        mx  \
+0            6.955566e-19        8.0              8.0    0.0 -0.004356
+1            6.969222e-19       14.0              5.0    1.0 -0.007399
+2            6.991741e-19       21.0              6.0    2.0 -0.010058
+3            7.021517e-19       28.0              6.0    3.0 -0.012243
+4            7.058726e-19       35.0              6.0    4.0 -0.013915
+..                    ...        ...              ...    ...       ...
+195          6.678731e-19     1372.0              6.0  195.0 -0.007893
+196          6.674871e-19     1379.0              6.0  196.0 -0.007885
+197          6.670387e-19     1386.0              6.0  197.0 -0.007876
+198          6.665281e-19     1393.0              6.0  198.0 -0.007866
+199          6.659556e-19     1400.0              6.0  199.0 -0.007854
+
+           my        mz  last_time_step             t
+0    0.001711  0.779309    1.146802e-13  1.000000e-12
+1    0.002527  0.779212    1.481817e-13  2.000000e-12
+2    0.002596  0.779103    6.371456e-14  3.000000e-12
+3    0.002078  0.779037    7.397143e-14  4.000000e-12
+4    0.001139  0.779058    4.838847e-14  5.000000e-12
+..        ...       ...             ...           ...
+195 -0.008017  0.899229    5.094469e-14  1.960000e-10
+196 -0.008007  0.899298    6.044352e-14  1.970000e-10
+197 -0.007998  0.899383    7.101084e-14  1.980000e-10
+198 -0.007989  0.899482    5.961504e-14  1.990000e-10
+199 -0.007981  0.899595    7.547542e-14  2.000000e-10
+
+[200 rows x 20 columns]
+</pre></div></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../../ubermagtable.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ubermagtable</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="table-merge.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Table merge</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+micromagneticmodel.consts.gamma0
+================================
+
+.. currentmodule:: micromagneticmodel.consts
+
+.. autodata:: gamma0

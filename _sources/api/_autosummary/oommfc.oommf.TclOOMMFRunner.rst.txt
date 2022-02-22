@@ -19,6 +19,9 @@ TclOOMMFRunner
       :nosignatures:
    
       
+         ~TclOOMMFRunner.__del__
+      
+      
       
          ~TclOOMMFRunner.__dir__
       

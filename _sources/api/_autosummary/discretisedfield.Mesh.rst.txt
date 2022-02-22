@@ -60,6 +60,7 @@ Mesh
       
       
       
+      
          ~Mesh.axis_points
       
       
@@ -94,6 +95,9 @@ Mesh
       
       
          ~Mesh.point2index
+      
+      
+         ~Mesh.region2slices
       
       
          ~Mesh.slider

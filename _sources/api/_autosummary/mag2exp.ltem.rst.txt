@@ -1,17 +1,12 @@
-﻿mag2exp.ltem
+mag2exp.ltem
 ============
 
 .. automodule:: mag2exp.ltem
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -22,9 +17,6 @@
       integrated_magnetic_flux_density
       phase
       relativistic_wavelength
-   
-   
 
    
-   
-   
+

@@ -1,13 +1,10 @@
-﻿ubermagutil.typesystem
+ubermagutil.typesystem
 ======================
 
 .. automodule:: ubermagutil.typesystem
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,35 +12,15 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         Descriptor
-      
-      
-         Dictionary
-      
-      
-         Name
-      
-      
-         Parameter
-      
-      
-         Scalar
-      
-      
-         Subset
-      
-      
-         Typed
-      
-      
-         Vector
-      
-   
-   
+      Descriptor
+      Dictionary
+      Name
+      Parameter
+      Scalar
+      Subset
+      Typed
+      Vector
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -51,9 +28,6 @@
       :nosignatures:
    
       typesystem
-   
-   
 
    
-   
-   
+

@@ -2,12 +2,9 @@
 =================
 
 .. automodule:: micromagneticdata
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,17 +12,9 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         Data
-      
-      
-         Drive
-      
-   
-   
+      Data
+      Drive
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -33,9 +22,6 @@
       :nosignatures:
    
       test
-   
-   
 
    
-   
-   
+

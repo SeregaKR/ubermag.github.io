@@ -1,17 +1,12 @@
-﻿micromagneticmodel.examples
+micromagneticmodel.examples
 ===========================
 
 .. automodule:: micromagneticmodel.examples
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -19,9 +14,6 @@
       :nosignatures:
    
       macrospin
-   
-   
 
    
-   
-   
+

@@ -1,17 +1,12 @@
-﻿discretisedfield.ovf2vtk
+discretisedfield.ovf2vtk
 ========================
 
 .. automodule:: discretisedfield.ovf2vtk
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -19,9 +14,6 @@
       :nosignatures:
    
       ovf2vtk
-   
-   
 
    
-   
-   
+

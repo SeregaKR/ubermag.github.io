@@ -1,17 +1,12 @@
-﻿discretisedfield.tools
+discretisedfield.tools
 ======================
 
 .. automodule:: discretisedfield.tools
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -27,9 +22,6 @@
       neigbouring_cell_angle
       topological_charge
       topological_charge_density
-   
-   
 
    
-   
-   
+

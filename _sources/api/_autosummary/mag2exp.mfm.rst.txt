@@ -1,17 +1,12 @@
-﻿mag2exp.mfm
+mag2exp.mfm
 ===========
 
 .. automodule:: mag2exp.mfm
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -19,9 +14,6 @@
       :nosignatures:
    
       phase_shift
-   
-   
 
    
-   
-   
+

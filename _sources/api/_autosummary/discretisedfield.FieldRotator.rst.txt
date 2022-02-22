@@ -50,6 +50,7 @@ FieldRotator
       
       
       
+      
          ~FieldRotator.clear_rotation
       
       

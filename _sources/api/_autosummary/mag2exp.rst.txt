@@ -2,16 +2,11 @@
 =======
 
 .. automodule:: mag2exp
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -19,9 +14,19 @@
       :nosignatures:
    
       test
-   
-   
 
    
-   
-   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    ltem
+    magnetometry
+    mfm
+    quick_plots
+    sans
+    x_ray

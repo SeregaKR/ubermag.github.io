@@ -64,9 +64,10 @@ ZhangLi
    .. autosummary::
    
       ~ZhangLi.beta
+      ~ZhangLi.dt
+      ~ZhangLi.func
       ~ZhangLi.name
       ~ZhangLi.tcl_strings
-      ~ZhangLi.tstep
       ~ZhangLi.u
    
    

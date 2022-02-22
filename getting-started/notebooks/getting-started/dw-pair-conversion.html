@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exercise: Domain wall pair conversion &#8212; ubermag  documentation</title>
+    
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/logoL.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../demo.html">
+  Demo
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples/index.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../documentation/index.html">
+  Package documentation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api/index.html">
+  API
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../changelog.html">
+  Changelog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../help.html">
+  Help
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#References">
+   References
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+
+<div class="tocsection onthispace pt-5 bp-3">
+    <h5>Try online:</h5>
+    
+    <a href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/notebooks/dw-pair-conversion.ipynb"  target="_blank" rel="noopener noreferrer">
+    
+        <img src="https://img.shields.io/badge/launch-binder-579aca.svg?logo=data:image/png;base64,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">
+    </a>
+    <h5>Try locally:</h5>
+    <a href="https://ubermag.github.io/_sources/getting-started/notebooks/getting-started/dw-pair-conversion.ipynb.txt" download="dw-pair-conversion.ipynb">
+        <img src="https://img.shields.io/badge/download-notebook-blue">
+    </a>
+</div>
+
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="Exercise:-Domain-wall-pair-conversion">
+<h1>Exercise: Domain wall pair conversion<a class="headerlink" href="#Exercise:-Domain-wall-pair-conversion" title="Permalink to this headline">¶</a></h1>
+<p>We want to simulate a domain wall conversion in a two-dimensional thin film sample with:</p>
+<ul class="simple">
+<li><p>exchange energy constant <span class="math notranslate nohighlight">\(A = 15 \,\text{pJ}\,\text{m}^{-1}\)</span>,</p></li>
+<li><p>Dzyaloshinskii-Moriya energy constant <span class="math notranslate nohighlight">\(D = 3 \,\text{mJ}\,\text{m}^{-2}\)</span>,</p></li>
+<li><p>uniaxial anisotropy constant <span class="math notranslate nohighlight">\(K = 0.5 \,\text{MJ}\,\text{m}^{-3}\)</span> with <span class="math notranslate nohighlight">\(\hat{\mathbf{u}} = (0, 0, 1)\)</span> in the out of plane direction,</p></li>
+<li><p>gyrotropic ratio <span class="math notranslate nohighlight">\(\gamma = 2.211 \times 10^{5} \,\text{m}\,\text{A}^{-1}\,\text{s}^{-1}\)</span>, and</p></li>
+<li><p>Gilbert damping <span class="math notranslate nohighlight">\(\alpha=0.3\)</span>.</p></li>
+</ul>
+<p>Please carry out the following steps:</p>
+<ol class="arabic">
+<li><p>Create the following geometry with discretisation cell size <span class="math notranslate nohighlight">\((2 \,\text{nm}, 2 \,\text{nm}, 2 \,\text{nm})\)</span>.</p>
+<p><img alt="93d7096246ce400ba35cf43d7fc1c6ce" class="no-scaled-link" src="../../../_images/dw_pair_conversion_geometry.png" style="width: 400px;" /></p>
+</li>
+<li><p>Initialise the magnetisation so that when relaxes, a domain pair is present in the narrower part of the geometry.</p></li>
+<li><p>Relax the system. Is a domain wall pair contained in the constrained part?</p></li>
+<li><p>Apply the spin polarised current in the positive <span class="math notranslate nohighlight">\(x\)</span> direction with velocity <span class="math notranslate nohighlight">\(\mathbf{u} = (400, 0, 0) \,\text{m}\,\text{s}^{-1}\)</span>, with <span class="math notranslate nohighlight">\(\beta=0.5\)</span>.</p></li>
+<li><p>Evolve the system over <span class="math notranslate nohighlight">\(0.2 \,\text{ns}\)</span>. What did you get? [1]</p></li>
+</ol>
+<section id="References">
+<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">¶</a></h2>
+<p>[1] Zhou, Y., &amp; Ezawa, M. (2014). A reversible conversion between a skyrmion and a domain-wall pair in a junction geometry. <em>Nature Communications</em> <strong>5</strong>, 8. <a class="reference external" href="https://doi.org/10.1038/ncomms5652">https://doi.org/10.1038/ncomms5652</a></p>
+<section id="Solution">
+<h3>Solution<a class="headerlink" href="#Solution" title="Permalink to this headline">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
+<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+
+<span class="n">Ms</span> <span class="o">=</span> <span class="mf">5.8e5</span>  <span class="c1"># saturation magnetisation (A/m)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">15e-12</span>  <span class="c1"># exchange energy constant (J/)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">3e-3</span>  <span class="c1"># Dzyaloshinkii-Moriya energy constant (J/m**2)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mf">0.5e6</span>  <span class="c1"># uniaxial anisotropy constant (J/m**3)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># easy axis</span>
+<span class="n">gamma0</span> <span class="o">=</span> <span class="mf">2.211e5</span>  <span class="c1"># gyromagnetic ratio (m/As)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Gilbert damping</span>
+
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;dw_pair_conversion&#39;</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_z&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="mf">2.211e5</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">150e-9</span><span class="p">,</span> <span class="mf">50e-9</span><span class="p">,</span> <span class="mf">2e-9</span><span class="p">)</span>
+<span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2e-9</span><span class="p">,</span> <span class="mf">2e-9</span><span class="p">,</span> <span class="mf">2e-9</span><span class="p">)</span>
+
+<span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">Ms_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">50e-9</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mf">15e-9</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mf">35e-9</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Ms</span>
+
+<span class="k">def</span> <span class="nf">m_init</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="k">if</span> <span class="mf">30e-9</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mf">40e-9</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_init</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms_fun</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_1_0.png" src="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_1_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:02]... (1.1 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_2_1.png" src="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_2_1.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ux</span> <span class="o">=</span> <span class="mi">400</span>  <span class="c1"># velocity in x direction (m/s)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># non-adiabatic STT parameter</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">+=</span> <span class="n">mm</span><span class="o">.</span><span class="n">ZhangLi</span><span class="p">(</span><span class="n">u</span><span class="o">=</span><span class="n">ux</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">td</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">()</span>
+<span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">0.2e-9</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:02]... (2.7 s)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_4_1.png" src="../../../_images/getting-started_notebooks_getting-started_dw-pair-conversion_4_1.png" />
+</div>
+</div>
+<p>As a result, we got a skyrmion formed in the wider region.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> package to create an interactive plot.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">filter_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "265875e6738e4c799acc88b6cd667117", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"1289871dd6e04d1686825ed20674e37d": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1dd7ed038f3b457b8c321f15cd5fc42e": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "265875e6738e4c799acc88b6cd667117": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "children": ["IPY_MODEL_afa9bf2f54344e898c20432c7b1673d0", "IPY_MODEL_52b6e6e922dc48c7af9e55fd7f7d089d"], "layout": "IPY_MODEL_1289871dd6e04d1686825ed20674e37d"}}, "3d771454723541ffbee45432a6d4dc43": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{ (nm)}", "y\\,\\text{ (nm)}", "z\\,\\text{ (nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [206.48209107302378, -172.4731365178586, 14.15820910087414, 74.90000006428454, 24.899999995250255, 1, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_7874331403ab4eea962f79e508f95dd3", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140199325411504], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "52b6e6e922dc48c7af9e55fd7f7d089d": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_e1071d4bbdd74db2a0fb0b81349cdbc9", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "c7d8d8d46ad9473295f5fb909c9089ca", "version_major": 2, "version_minor": 0}, "text/plain": "Output()"}, "metadata": {}, "output_type": "display_data"}]}}, "7874331403ab4eea962f79e508f95dd3": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8cf15803ecf8401fa1adda4dac02c466": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "SliderStyleModel", "state": {"description_width": ""}}, "a031bb7be24541538f7050e869a8c6d9": {"buffers": [{"data": "TiIAAE8jAABRJAAAUyUAAFQlAABWJgAAWCcAAFkoAABbKAAAXSkAAF8qAABhKgAAYisAAGQsAABmLAAAaC0AAGouAABsLgAAbS8AAG8wAABwMAAAcDEAAHExAABxMgEAcTMFAHAzCABwNAwAcDUPAHA1EgBwNhQAcDcWAG83GABvOBoAbzkcAG86HgBvOiAAbjshAG48IwBuPCQAbj0mAG4+JwBuPykAbT8qAG1AKwBtQS0AbUEuAG1CLwBtQzEAbUMyAG1EMwBsRTQAbEU1AGxGNgBsRzgAbEg5AGxIOgBsSTsAbEo8AGxKPQBsSz4AbEw/AGxMQABsTUEAbE5CAGxOQwBsT0QAbFBFAGxRRgBsUUcAbFJIAGxTSQBsU0oAbFRLAGxVTABsVU0AbFZOAGxXTwBsV1AAbVhRAG1ZUgBtWlMAbVpUAG1bVQBtXFUAbVxWAG1dVwBtXlgAbl5ZAG5fWgBuYFsAbmFcAG5hXQBuYl4Ab2NeAG9jXwBvZGAAb2VhAG9lYgBwZmMAcGdkAHBoZQBwaGUAcGlmAHFqZwBxamgAcWtpAHFsagBybWsAcm1sAHJubAByb20Ac29uAHNwbwBzcXAAdHJxAHRycgB0c3IAdXRzAHV0dAB1dXUAdnZ2AHZ3dwB3d3cAd3h4AHd5eQB4enoAeHp7AHh7fAB4fH0AeHx+AHh9fgB4fn8AeH+AAHh/gQB5gIIAeYGDAHmChAB5goUAeYOGAHiEhwB4hYgAeIWJAHiGigB4h4sAeIiMAHiIjQB4iY4AeIqPAHiLkAB4i5EAeIySAHiNkgB4jpMAd46UAHePlQB3kJYAd5GXAHeSmAB3kpkAdpOaAHaUmwB2lZwAdpWdAHaWngB1l58AdZigAHWZoQB1maIAdJqjAHSbpAB0nKUAdJymAHOdpwBznqgAc5+pAHOgqgByoKsAcqGsAHKirQBxo64AcaSvAHGlsABwpbEAcKazAG+ntABvqLUAb6m2AG6ptwBuqrgAbau5AG2sugBtrbsAbK68AGyuvQBrr74Aa7C/AGqxwABqssEAabPCAGmzwwBotMQAaLXFAGe2xgBnt8cAZrjIAGW5yQBlucsAZLrMAGO7zQBjvM4AYr3PAGK+0ABhv9EAYMDSAF/A0wBfwdQAXsLVAF3D1gBcxNcAXMXZAFvG2gBax9sAWcjcAFjI3QBYyd4AV8rfAFbL4ABVzOEAVM3iAFPO5ABSz+UAUdDmAFDR5wBP0ugATtPpAEzT6gBL1OsAStXtAEnW7gBI1+8ARtjwAEXZ8QBE2vIAQtvzAEHc9QA/3fYAPt73ADzf+AA64PkAOOH7ADbi/AA04/0ANOT+ADXl/gA25v4AOOj+AA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AAAWQwAAAAAAAAAAAACWQgAAAAAAAEhCAAAAAAAAyEEAAAAAAAAAAAAAAEAAAIA/AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOTr7/Hy8vLy8fHx8fHx8fHx8PDw8PDw8PDw8PDw8PDw8PDx8fHx8fHx8fHx8vLx8O3nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOry9ff4+fn5+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj49/TuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO30+Pr7/Pz8/Pz8/Pz8/Pv7+/v7+/v7+/v7+/v7+/v7+/v7+/v8/Pz8/Pz8/Pz7+vfxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO31+fv9/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f38+/jyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOv0+fz9/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v79/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAObx+Pv9/v7//////////////////////////////////////////////////v79/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN3s9fr9/v7///////////////////////////////////////////////////7+/Pnz6/H09vX07+XRr4FTMRwSDQsKCw4VIjxlmcvk8vn8/v7///////////////////////////////////////////////////7+/Pnz8ff6+/v59OnUsIFRLRgNCAUFBgkPHDVdkL/d7vf7/f7///////////////////////////////////////////////////7+/Pnz9Pr8/f379urVsYFQLBYLBQMDAwYMGTBWh7bY6/b7/f7///////////////////////////////////////////////////7+/Pnz9fv+/v789uvVsYBQLBYKBQICAgULFy1RgbDU6fT6/f7///////////////////////////////////////////////////7+/Pny9vv+//789uvVsYBQKxUKBAIBAgQKFStOfa3R6PT6/f7+//////////////////////////////////////////////////7+/Pny9vz+//789uvVsYBQKxUKBAIBAgQKFSpNfKzR5/P6/P7+//////////////////////////////////////////////////7+/Pny9vv+//789uvVsYBQKxUKBAIBAgQKFStOfa3R6PT6/f7+//////////////////////////////////////////////////7+/Pny9fv+/v789uvVsYBQKxUKBAIBAgULFi1RgbDU6fT6/f7///////////////////////////////////////////////////7+/Pny9Pr8/f379erUsIBQLBYLBQMCAwYMGDBWh7bY6/b7/f7///////////////////////////////////////////////////7+/Pnz8ff6+/r48+jTsIBQLRcNBwUFBggPHDRcj77d7vf7/f7///////////////////////////////////////////////////7+/Pnz6/H09fXz7uTQrYBSMBwRDAoKCw4UIjtjl8rk8vn8/v7///////////////////////////////////////////////////7+/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANzs9fr9/v7///////////////////////////////////////////////////7+/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAObx9/v9/v7//////////////////////////////////////////////////v79/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOr0+fz9/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v79/PnzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO31+fv9/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f38+/jyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO30+Pr7/Pz8/Pz8/Pz8+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7/Pz8/Pz8/Pv7+vfxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOry9vf4+fn4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj49vTuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOTr7/Hy8vLy8fHx8fHx8fHx8PDw8PDw8PDw8PDw8PDw8PDw8fHx8fHx8fHx8fHx8O3n", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140199325411504, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [1, 25, 75]}, "wireframe": false}}, "afa9bf2f54344e898c20432c7b1673d0": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "IntSliderModel", "state": {"continuous_update": false, "description": "step", "layout": "IPY_MODEL_1dd7ed038f3b457b8c321f15cd5fc42e", "max": 199, "style": "IPY_MODEL_8cf15803ecf8401fa1adda4dac02c466"}}, "bd9a89e23e8a49bdac46555c920b52e7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "c7d8d8d46ad9473295f5fb909c9089ca": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_bd9a89e23e8a49bdac46555c920b52e7", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "3d771454723541ffbee45432a6d4dc43", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "e1071d4bbdd74db2a0fb0b81349cdbc9": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
+</script></section>
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

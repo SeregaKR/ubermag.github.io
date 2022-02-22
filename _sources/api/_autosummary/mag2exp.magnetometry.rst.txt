@@ -1,17 +1,12 @@
-﻿mag2exp.magnetometry
+mag2exp.magnetometry
 ====================
 
 .. automodule:: mag2exp.magnetometry
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,6 @@
    
       magnetisation
       torque
-   
-   
 
    
-   
-   
+

@@ -1,17 +1,12 @@
-﻿ubermagutil.units
+ubermagutil.units
 =================
 
 .. automodule:: ubermagutil.units
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,6 @@
    
       si_max_multiplier
       si_multiplier
-   
-   
 
    
-   
-   
+

@@ -1,13 +1,10 @@
-﻿oommfc.oommf
+oommfc.oommf
 ============
 
 .. automodule:: oommfc.oommf
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,23 +12,12 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         DockerOOMMFRunner
-      
-      
-         ExeOOMMFRunner
-      
-      
-         OOMMFRunner
-      
-      
-         TclOOMMFRunner
-      
-   
-   
+      DockerOOMMFRunner
+      ExeOOMMFRunner
+      OOMMFRunner
+      Runner
+      TclOOMMFRunner
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -39,9 +25,6 @@
       :nosignatures:
    
       overhead
-   
-   
 
    
-   
-   
+

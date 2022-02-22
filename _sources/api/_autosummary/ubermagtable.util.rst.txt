@@ -1,17 +1,12 @@
-﻿ubermagtable.util
+ubermagtable.util
 =================
 
 .. automodule:: ubermagtable.util
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -21,9 +16,6 @@
       columns
       data
       units
-   
-   
 
    
-   
-   
+

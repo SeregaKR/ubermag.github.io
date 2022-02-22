@@ -1,17 +1,12 @@
-﻿mag2exp.sans
+mag2exp.sans
 ============
 
 .. automodule:: mag2exp.sans
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,6 @@
    
       chiral_function
       cross_section
-   
-   
 
    
-   
-   
+

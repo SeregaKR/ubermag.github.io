@@ -2,12 +2,9 @@
 ==================
 
 .. automodule:: micromagneticmodel
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,68 +12,26 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         CubicAnisotropy
-      
-      
-         DMI
-      
-      
-         Damping
-      
-      
-         Demag
-      
-      
-         Driver
-      
-      
-         Dynamics
-      
-      
-         DynamicsTerm
-      
-      
-         Energy
-      
-      
-         EnergyTerm
-      
-      
-         Evolver
-      
-      
-         Exchange
-      
-      
-         MagnetoElastic
-      
-      
-         Precession
-      
-      
-         RKKY
-      
-      
-         Slonczewski
-      
-      
-         System
-      
-      
-         UniaxialAnisotropy
-      
-      
-         Zeeman
-      
-      
-         ZhangLi
-      
-   
-   
+      CubicAnisotropy
+      DMI
+      Damping
+      Demag
+      Driver
+      Dynamics
+      DynamicsTerm
+      Energy
+      EnergyTerm
+      Evolver
+      Exchange
+      MagnetoElastic
+      Precession
+      RKKY
+      Slonczewski
+      System
+      UniaxialAnisotropy
+      Zeeman
+      ZhangLi
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -84,9 +39,16 @@
       :nosignatures:
    
       test
-   
-   
 
    
-   
-   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    abstract
+    consts
+    examples

@@ -66,11 +66,12 @@ Slonczewski
       ~Slonczewski.J
       ~Slonczewski.Lambda
       ~Slonczewski.P
+      ~Slonczewski.dt
       ~Slonczewski.eps_prime
+      ~Slonczewski.func
       ~Slonczewski.mp
       ~Slonczewski.name
       ~Slonczewski.tcl_strings
-      ~Slonczewski.tstep
    
    
 

@@ -1,17 +1,12 @@
-﻿mag2exp.x\_ray
+mag2exp.x\_ray
 ==============
 
 .. automodule:: mag2exp.x_ray
-   
-   
+
    
 
    
-   
-   
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -20,9 +15,6 @@
    
       holography
       saxs
-   
-   
 
    
-   
-   
+

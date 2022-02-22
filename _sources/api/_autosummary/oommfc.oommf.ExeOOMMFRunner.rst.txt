@@ -19,6 +19,9 @@ ExeOOMMFRunner
       :nosignatures:
    
       
+         ~ExeOOMMFRunner.__del__
+      
+      
       
          ~ExeOOMMFRunner.__dir__
       

@@ -2,12 +2,9 @@
 ================
 
 .. automodule:: discretisedfield
-   
-   
-   
 
    
-   
+
    .. rubric:: Classes
 
    .. autosummary::
@@ -15,29 +12,13 @@
       :template: class-template.rst
       :nosignatures:
    
-      
-         DValue
-      
-      
-         Field
-      
-      
-         FieldRotator
-      
-      
-         Line
-      
-      
-         Mesh
-      
-      
-         Region
-      
-   
-   
+      DValue
+      Field
+      FieldRotator
+      Line
+      Mesh
+      Region
 
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -47,9 +28,16 @@
       integral
       interact
       test
-   
-   
 
    
-   
-   
+
+.. rubric:: Submodules
+
+.. autosummary::
+    :toctree:
+    :template: module-template.rst
+    :recursive:
+
+    ovf2vtk
+    plotting
+    tools

@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
     <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
@@ -36,6 +37,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -92,20 +94,26 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="workshop/index.html">
-  Workshop
+ <a class="reference internal nav-link" href="getting-started/index.html">
+  Getting started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples/index.html">
+  Examples
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="documentation/index.html">
-  Documentation
+  Package documentation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="api/index.html">
-  API Reference
+  API
  </a>
 </li>
 
@@ -182,8 +190,8 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   0.60.0
+  <a class="reference internal nav-link" href="#feb-22-2022">
+   0.61.0 (Feb 22, 2022)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -197,6 +205,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#backwards-incompatible-changes">
+     Backwards-incompatible changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bug-fixes">
      Bug fixes
     </a>
@@ -204,8 +217,30 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   0.51
+  <a class="reference internal nav-link" href="#oct-1-2021">
+   0.60.0 (Oct 1, 2021)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     General
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     New functionality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Bug fixes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#feb-10-2021">
+   0.51 (Feb 10, 2021)
   </a>
  </li>
 </ul>
@@ -233,18 +268,153 @@
                 
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<section id="id1">
-<h2>0.60.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="feb-22-2022">
+<h2>0.61.0 (Feb 22, 2022)<a class="headerlink" href="#feb-22-2022" title="Permalink to this headline">¶</a></h2>
 <section id="general">
 <h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
+(MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS
+and Linux.</p></li>
+</ul>
+</section>
+<section id="new-functionality">
+<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul>
+<li><p>Support for <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> in plotting method <code class="docutils literal notranslate"><span class="pre">Field.mpl.lighness</span></code>.</p></li>
+<li><p>HTML representation for <code class="docutils literal notranslate"><span class="pre">Region</span></code>, <code class="docutils literal notranslate"><span class="pre">Mesh</span></code>, <code class="docutils literal notranslate"><span class="pre">Field</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code> inside Jupyter notebook (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/105">#105</a>).</p></li>
+<li><p>Datatype for <code class="docutils literal notranslate"><span class="pre">Field</span></code> can be specified (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/114">#114</a>, <a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/118">#118</a>).</p></li>
+<li><p>New implementation for the Field initialisation significantly improves
+performance when initialising a field with a dictionary. Speedups of up to
+~10_000 can be obtained if the dictionary does not contain callables. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/114">#114</a>, <a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/117">#117</a>)</p></li>
+<li><p>New implementation for reading and writing <code class="docutils literal notranslate"><span class="pre">ovf</span></code> (<code class="docutils literal notranslate"><span class="pre">omf</span></code>) files with huge
+performance improvements. For a <code class="docutils literal notranslate"><span class="pre">Field</span></code> containing 1 million cells we
+obtained the following execution times (on a standard notebook):</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p>mode</p></th>
+<th class="head" rowspan="2"><p>filesize</p></th>
+<th class="head" colspan="3"><p>reading</p></th>
+<th class="head" colspan="3"><p>writing</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>old</p></th>
+<th class="head"><p>new</p></th>
+<th class="head"><p>speedup</p></th>
+<th class="head"><p>old</p></th>
+<th class="head"><p>new</p></th>
+<th class="head"><p>speedup</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>bin4</p></td>
+<td><p>2.9M</p></td>
+<td><p>1730 ms</p></td>
+<td><p>21 ms</p></td>
+<td><p>82</p></td>
+<td><p>63000 ms</p></td>
+<td><p>56 ms</p></td>
+<td><p>1125</p></td>
+</tr>
+<tr class="row-even"><td><p>bin8</p></td>
+<td><p>5.8M</p></td>
+<td><p>1860 ms</p></td>
+<td><p>52 ms</p></td>
+<td><p>52</p></td>
+<td><p>64000 ms</p></td>
+<td><p>84 ms</p></td>
+<td><p>762</p></td>
+</tr>
+<tr class="row-odd"><td><p>text</p></td>
+<td><p>15M</p></td>
+<td><p>4920 ms</p></td>
+<td><p>401 ms</p></td>
+<td><p>12</p></td>
+<td><p>69000 ms</p></td>
+<td><p>4510 ms</p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+<p>The new default is <code class="docutils literal notranslate"><span class="pre">bin8</span></code> (binary represenation with double precision)
+instead of <code class="docutils literal notranslate"><span class="pre">txt</span></code> (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/121">#121</a>).</p>
+</li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Enables Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
+(MEL) extensions on Windows hosts (no more need for Docker).
+<code class="docutils literal notranslate"><span class="pre">ExeOOMMFRunner</span></code> can be used on Windows. <em>Limitation</em>: On Windows it is
+not possible to run multiple simulations in parallel without using Docker.</p></li>
+<li><p>OOMMF output is now by default written in binary format (double precision).
+There is a new option in the driver’s <code class="docutils literal notranslate"><span class="pre">drive</span></code> method (<code class="docutils literal notranslate"><span class="pre">ovf_format</span></code>) to
+change the output format (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/77">#77</a>).</p></li>
+<li><p>OOMMF can now run silently without anything printed. To use it pass the
+option <code class="docutils literal notranslate"><span class="pre">verbose=0</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;DRIVER&gt;.drive</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">verbose=1</span></code>
+which prints one summary line about the used runner and the runtime. This is
+the old behaviour. (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/80">#80</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="backwards-incompatible-changes">
+<h3>Backwards-incompatible changes<a class="headerlink" href="#backwards-incompatible-changes" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Keywords for <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> and <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code>
+(<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/108">#108</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code></dt><dd><ul class="simple">
+<li><p>Variable names for time-dependent fields and currents changed (for
+consistency reasons).</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="bug-fixes">
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Simultaneous use of <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> and <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code> in
+<code class="docutils literal notranslate"><span class="pre">Field.mpl.scalar</span></code> resulted in wrong colorbar limits (<a class="reference external" href="https://github.com/ubermag/discretisedfield/issues/106">#106</a>).</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Specifying two Zeeman fields with H defined via a <code class="docutils literal notranslate"><span class="pre">df.Field</span></code> broke the
+simulation (<a class="reference external" href="https://github.com/ubermag/help/issues/191">#191</a>)</p></li>
+<li><p>The name of the hysteresis field of the <code class="docutils literal notranslate"><span class="pre">HysteresisDriver</span></code> has been
+renamed to <code class="docutils literal notranslate"><span class="pre">B_hysteresis</span></code>. This solves an issue of having two magnetic
+fields with the same name if a hysteresis simulation is performed with an
+additional zeeman field.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="oct-1-2021">
+<h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3>General<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
 <li><p>Versions in sync across all packages</p></li>
 <li><p>Switch to Jupyter lab 3 (should improve situation with <code class="docutils literal notranslate"><span class="pre">K3d</span></code> inside Jupyter lab).</p></li>
 </ul>
 </section>
-<section id="new-functionality">
-<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h3>New functionality<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
@@ -273,7 +443,8 @@ grains oriented along <code class="docutils literal notranslate"><span class="pr
 (<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/micromagneticmodel/energy-terms.html#5.-Dzyaloshinskii-Moriya-energy">documentation</a>).</p></li>
 <li><p>Support for arbitrary time-dependence for external magnetic fields
 (<code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Zeeman</span></code>) and spin-polarised currents
-(<code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Slonczewski</span></code> and <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.ZhangLi</span></code>).</p></li>
+(<code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Slonczewski</span></code> and <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.ZhangLi</span></code>)
+(<a class="reference external" href="https://ubermag.github.io/documentation/ipynb/oommfc/time-dependent-field-current.html">documentation</a>).</p></li>
 </ul>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
@@ -295,8 +466,8 @@ temperature.</p></li>
 </dd>
 </dl>
 </section>
-<section id="bug-fixes">
-<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h3>Bug fixes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing
@@ -325,8 +496,8 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
 </dl>
 </section>
 </section>
-<section id="id2">
-<h2>0.51<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="feb-10-2021">
+<h2>0.51 (Feb 10, 2021)<a class="headerlink" href="#feb-10-2021" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>New subpackage <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> containing functions to operate on
 <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p></li>
