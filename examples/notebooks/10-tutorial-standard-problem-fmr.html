@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 10: FMR standard problem &#8212; ubermag  documentation</title>
+    <title>FMR standard problem &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorial 11: Deriving energy values" href="11-tutorial-deriving-fields.html" />
-    <link rel="prev" title="Tutorial 09: Standard problem 5" href="09-tutorial-standard-problem5.html" />
+    <link rel="next" title="Deriving energy values" href="11-tutorial-deriving-fields.html" />
+    <link rel="prev" title="Standard problem 5" href="09-tutorial-standard-problem5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -607,8 +607,8 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<section id="Tutorial-10:-FMR-standard-problem">
-<h1>Tutorial 10: FMR standard problem<a class="headerlink" href="#Tutorial-10:-FMR-standard-problem" title="Permalink to this headline">¶</a></h1>
+<section id="FMR-standard-problem">
+<h1>FMR standard problem<a class="headerlink" href="#FMR-standard-problem" title="Permalink to this headline">¶</a></h1>
 <section id="Problem-specification">
 <h2>Problem specification<a class="headerlink" href="#Problem-specification" title="Permalink to this headline">¶</a></h2>
 <p>We choose a cuboidal thin film permalloy sample measuring <span class="math notranslate nohighlight">\(120 \times 120 \times 10 \,\text{nm}^{3}\)</span>. The choice of a cuboid is important as it ensures that the finite difference method employed by OOMMF does not introduce errors due to irregular boundaries that cannot be discretized well. We choose the thin film geometry to be thin enough so that the variation of magnetization dynamics along the out-of-film direction can be neglected. Material parameters based on permalloy are:</p>
@@ -674,8 +674,7 @@ well-converged equilibrium magnetization configuration. We refer to this stage o
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
 <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -685,9 +684,7 @@ well-converged equilibrium magnetization configuration. We refer to this stage o
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
-(1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (0.6 s)
 </pre></div></div>
 </div>
 <p>We can now load the relaxed state to the Field object and plot the <span class="math notranslate nohighlight">\(z\)</span> slice of magnetisation.</p>
@@ -695,8 +692,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -726,8 +722,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mf">20e-9</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mf">20e-9</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">4000</span>
 
 <span class="n">td</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">()</span>
@@ -740,10 +735,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
- &lt;3&gt; mmarchive killed
-(177.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (61.0 s)
 </pre></div></div>
 </div>
 </section>
@@ -754,8 +746,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 <span class="n">my</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -781,8 +772,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="kn">import</span> <span class="nn">scipy.fftpack</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.fftpack</span>
 
 <span class="n">psd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">my</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">f_axis</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">20e-9</span><span class="o">/</span><span class="mi">4000</span><span class="p">)</span>
@@ -821,13 +811,13 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:08]...  &lt;1&gt; mmarchive killed
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial 09: Standard problem 5</p>
+            <p class="prev-next-title">Standard problem 5</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="11-tutorial-deriving-fields.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial 11: Deriving energy values</p>
+        <p class="prev-next-title">Deriving energy values</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Field operations 2" href="field-operations2.html" />
-    <link rel="prev" title="Tutorial 12: Calculating a stray field using an airbox method" href="12-tutorial-stray-field.html" />
+    <link rel="prev" title="Calculating a stray field using an airbox method" href="12-tutorial-stray-field.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -605,8 +605,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -614,7 +613,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5c7e2bceb8304f0e96e218529f6d1ecc", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1d456dd333c14d148b45007e5a83d1c0", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Now, we can define the system object by first setting up the Hamiltonian:</p>
 <div class="nbinput nblast docutils container">
@@ -682,8 +681,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -691,15 +689,14 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "44c61aa384ab4f928075a1fa05282457", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c11d84fa813f4d02b5a79af5516bcec7", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>and the initial magnetsation is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -708,9 +705,9 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/opt/miniconda3/envs/ubermagdev/lib/python3.8/site-packages/matplotlib/quiver.py:679: RuntimeWarning: divide by zero encountered in double_scalars
+/opt/miniconda3/envs/ubermagdev/lib/python3.8/site-packages/matplotlib/quiver.py:689: RuntimeWarning: divide by zero encountered in double_scalars
   length = a * (widthu_per_lenu / (self.scale * self.width))
-/opt/miniconda3/envs/ubermagdev/lib/python3.8/site-packages/matplotlib/quiver.py:679: RuntimeWarning: invalid value encountered in multiply
+/opt/miniconda3/envs/ubermagdev/lib/python3.8/site-packages/matplotlib/quiver.py:689: RuntimeWarning: invalid value encountered in multiply
   length = a * (widthu_per_lenu / (self.scale * self.width))
 </pre></div></div>
 </div>
@@ -726,8 +723,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># minimize the energy</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># minimize the energy</span>
 <span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
 <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
 
@@ -741,9 +737,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
-(1.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:06]... (0.8 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -757,8 +751,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># Plot z-component only:</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot z-component only:</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -774,8 +767,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># 3d-plot of z-component</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3d-plot of z-component</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -784,15 +776,14 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c8b0f94cf9924e84af71ca7b3766b49b", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ffa960ef8e2740a28430926fe4f24a81", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Finally we can sample and plot the magnetisation along the line:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">49e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">49e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">49e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">49e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -804,7 +795,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
 </div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"17841ead875a40dcac1f0af68a44cee6": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [118.1482925020046, -177.84743868082938, 16.589829187708908, -0.2499999711290002, -0.2499999711290002, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_9a0b832520084077851d6fc718900012", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140614488194016], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "2a1862e8c37649148386b0d63e81b7e7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "4173992e72ab49a2a408400826eb7197": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{ (nm)}", "y\\,\\text{ (nm)}", "z\\,\\text{ (nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [118.1482925020046, -177.84743868082938, 16.589829187708908, -0.2499999711290002, -0.2499999711290002, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_6a59a9b939114fbd99733afe16abb043", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140614488194736], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "44c61aa384ab4f928075a1fa05282457": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_a9cc2e65dde747158d2f152a74bfdf4f", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "4173992e72ab49a2a408400826eb7197", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "5c7e2bceb8304f0e96e218529f6d1ecc": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_2a1862e8c37649148386b0d63e81b7e7", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "17841ead875a40dcac1f0af68a44cee6", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "6a59a9b939114fbd99733afe16abb043": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "6dc132dc56f74770a3aea547aafde9ee": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAAAAAAAAAAAAAMhCAAAAAAAAAAAAAAAAAAAAAAAAIEEAAKBAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQIBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140614488194016, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "7dc66df9b6324f1ab370cddca0b4be96": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9a0b832520084077851d6fc718900012": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "a9cc2e65dde747158d2f152a74bfdf4f": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "af568bcadfa54fbb8fb10e6cfe184ba9": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "c32c6afbbf034bd7965a806782c0b88f": {"buffers": [{"data": "TiIAAE8jAABRJAAAUyUAAFQlAABWJgAAWCcAAFkoAABbKAAAXSkAAF8qAABhKgAAYisAAGQsAABmLAAAaC0AAGouAABsLgAAbS8AAG8wAABwMAAAcDEAAHExAABxMgEAcTMFAHAzCABwNAwAcDUPAHA1EgBwNhQAcDcWAG83GABvOBoAbzkcAG86HgBvOiAAbjshAG48IwBuPCQAbj0mAG4+JwBuPykAbT8qAG1AKwBtQS0AbUEuAG1CLwBtQzEAbUMyAG1EMwBsRTQAbEU1AGxGNgBsRzgAbEg5AGxIOgBsSTsAbEo8AGxKPQBsSz4AbEw/AGxMQABsTUEAbE5CAGxOQwBsT0QAbFBFAGxRRgBsUUcAbFJIAGxTSQBsU0oAbFRLAGxVTABsVU0AbFZOAGxXTwBsV1AAbVhRAG1ZUgBtWlMAbVpUAG1bVQBtXFUAbVxWAG1dVwBtXlgAbl5ZAG5fWgBuYFsAbmFcAG5hXQBuYl4Ab2NeAG9jXwBvZGAAb2VhAG9lYgBwZmMAcGdkAHBoZQBwaGUAcGlmAHFqZwBxamgAcWtpAHFsagBybWsAcm1sAHJubAByb20Ac29uAHNwbwBzcXAAdHJxAHRycgB0c3IAdXRzAHV0dAB1dXUAdnZ2AHZ3dwB3d3cAd3h4AHd5eQB4enoAeHp7AHh7fAB4fH0AeHx+AHh9fgB4fn8AeH+AAHh/gQB5gIIAeYGDAHmChAB5goUAeYOGAHiEhwB4hYgAeIWJAHiGigB4h4sAeIiMAHiIjQB4iY4AeIqPAHiLkAB4i5EAeIySAHiNkgB4jpMAd46UAHePlQB3kJYAd5GXAHeSmAB3kpkAdpOaAHaUmwB2lZwAdpWdAHaWngB1l58AdZigAHWZoQB1maIAdJqjAHSbpAB0nKUAdJymAHOdpwBznqgAc5+pAHOgqgByoKsAcqGsAHKirQBxo64AcaSvAHGlsABwpbEAcKazAG+ntABvqLUAb6m2AG6ptwBuqrgAbau5AG2sugBtrbsAbK68AGyuvQBrr74Aa7C/AGqxwABqssEAabPCAGmzwwBotMQAaLXFAGe2xgBnt8cAZrjIAGW5yQBlucsAZLrMAGO7zQBjvM4AYr3PAGK+0ABhv9EAYMDSAF/A0wBfwdQAXsLVAF3D1gBcxNcAXMXZAFvG2gBax9sAWcjcAFjI3QBYyd4AV8rfAFbL4ABVzOEAVM3iAFPO5ABSz+UAUdDmAFDR5wBP0ugATtPpAEzT6gBL1OsAStXtAEnW7gBI1+8ARtjwAEXZ8QBE2vIAQtvzAEHc9QA/3fYAPt73ADzf+AA64PkAOOH7ADbi/AA04/0ANOT+ADXl/gA25v4AOOj+AA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAAAAAAAAAAAAAMhCAAAAAAAAAAAAAAAAAAAAAAAAIEEAAKBAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AAAAAAAAAPP5+vr58wAAAAAAAAAAAAAAAPT6/f7///79+vQAAAAAAAAAAPL5/f///////////fnyAAAAAADy/P7///78+/v8/v///vzyAAAAAPn+//78+PHs7PH4/P7//vkAAAD0/f/++/PiybW1yeLz+/7//fQAAPr///zz2aNnSEhno9nz/P//+gDz/f/++OKjTyMUFCNPo+L4/v/98/n+//zxyWcjDAUFDCNnyfH8//75+v//++y1SBQFAQEFFEi17Pv///r6///77LVIFAUBAQUUSLXs+///+vn+//zxyWcjDAUFDCNnyfH8//758/3//vjio08jFBQjT6Pi+P7//fMA+v///PPZo2dISGej2fP8///6AAD0/f/++/PiybW1yeLz+/7//fQAAAD5/v/+/Pjx7Ozx+Pz+//75AAAAAPL8/v///vz7+/z+///+/PIAAAAAAPL5/f///////////fnyAAAAAAAAAAD0+v3+///+/fr0AAAAAAAAAAAAAAAA8/n6+vnzAAAAAAAAAAAAAAAAAADu9Pb29O4AAAAAAAAAAAAAAADu9/z9/v79/PfuAAAAAAAAAADs9vz+/////////vz27AAAAAAA7Pn9///9+/r6+/3///357AAAAAD2/f/++/Xt5+ft9fv+//32AAAA7vz//vrv28KxscLb7/r+//zuAAD3/v/779KicVZWcaLS7/v//vcA7vz//fXbolwxHx8xXKLb9f3//O70/f/77cJxMRQJCRQxccLt+//99Pb+//rnsVYfCQICCR9Wsef6//729v7/+uexVh8JAgIJH1ax5/r//vb0/f/77cJxMRQJCRQxccLt+//99O78//3126JcMR8fMVyi2/X9//zuAPf+//vv0qJxVlZxotLv+//+9wAA7vz//vrv28KxscLb7/r+//zuAAAA9v3//vv17efn7fX7/v/99gAAAADs+f3///37+vr7/f///fnsAAAAAADs9vz+/////////vz27AAAAAAAAAAA7vf8/f7+/fz37gAAAAAAAAAAAAAAAO709vb07gAAAAAAAAA=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140615424477216, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "c82324b3a88f4061a125ee258e9bf4a5": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{ (nm)}", "y\\,\\text{ (nm)}", "z\\,\\text{ (nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [118.1482925020046, -177.84743868082938, 16.589829187708908, -0.2499999711290002, -0.2499999711290002, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_af568bcadfa54fbb8fb10e6cfe184ba9", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140615424477216], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "c8b0f94cf9924e84af71ca7b3766b49b": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_7dc66df9b6324f1ab370cddca0b4be96", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "c82324b3a88f4061a125ee258e9bf4a5", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "ed97b61f68cb46c094a571b965dd61df": {"buffers": [{"data": "sHJMAA==", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AADIQgAAAAAAAAAAAAAAAAAAAAAAAMhCAAAAAAAAAAAAAAAAAAAAAAAAIEEAAKBAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AAAAAAAAAAEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQEBAQEAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAAAAAAABAQEBAQEBAQEBAQEBAQEBAAAAAAEBAQEBAQEBAQEBAQEBAQEAAAABAQEBAQEBAQEBAQEBAQEBAQEAAAEBAQEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAAABAQEBAQEBAQEBAQEBAQEBAQEAAAABAQEBAQEBAQEBAQEBAQEBAAAAAAEBAQEBAQEBAQEBAQEBAQEAAAAAAAEBAQEBAQEBAQEBAQEBAAAAAAAAAAABAQEBAQEBAQEBAAAAAAAAAAAAAAAAAQEBAQEBAAAAAAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAAAAABAQEBAQEBAQEBAAAAAAAAAAABAQEBAQEBAQEBAQEBAQAAAAAAAQEBAQEBAQEBAQEBAQEBAQAAAAABAQEBAQEBAQEBAQEBAQEBAAAAAQEBAQEBAQEBAQEBAQEBAQEBAAABAQEBAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQEBAQAAAQEBAQEBAQEBAQEBAQEBAQEBAAAAAQEBAQEBAQEBAQEBAQEBAQAAAAABAQEBAQEBAQEBAQEBAQEBAAAAAAABAQEBAQEBAQEBAQEBAQAAAAAAAAAAAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAEBAQEBAQAAAAAAAAA=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": []}, "compression_level": 0, "id": 140614488194736, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}}, "version_major": 2, "version_minor": 0}
+{"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
 
 
@@ -817,7 +808,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:10]...  &lt;1&gt; mmarchive killed
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial 12: Calculating a stray field using an airbox method</p>
+            <p class="prev-next-title">Calculating a stray field using an airbox method</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="field-operations2.html" title="next page">

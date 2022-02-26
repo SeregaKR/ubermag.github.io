@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -616,12 +616,12 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9d6d85e051704c57ba51f3b708c2ae2c", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "93248f08beec4e7dadcb7a2e48c18a7d", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Now, we can define the system object and add a time-dependent sine-wave field to our energy equation. We need to pass:</p>
 <ul class="simple">
 <li><p>Field <code class="docutils literal notranslate"><span class="pre">H</span></code> which is multiplied by time-dependent function at each time step,</p></li>
-<li><p>wave shape <code class="docutils literal notranslate"><span class="pre">wave='sin'</span></code></p></li>
+<li><p>wave shape <code class="docutils literal notranslate"><span class="pre">func='sin'</span></code></p></li>
 <li><p>frequency <code class="docutils literal notranslate"><span class="pre">f</span></code>, and</p></li>
 <li><p>time shift <code class="docutils literal notranslate"><span class="pre">t0</span></code>.</p></li>
 </ul>
@@ -634,7 +634,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;time_dependent_field&#39;</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">2e6</span><span class="p">,</span> <span class="mf">3e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">2e6</span><span class="p">,</span> <span class="mf">3e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">)</span>
 <span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">gamma0</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
 
 <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1.1e6</span><span class="p">)</span>
@@ -656,7 +656,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:16]... (2.7 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (2.4 s)
 </pre></div></div>
 </div>
 <p>In the system table, there are columns with field values:</p>
@@ -1016,7 +1016,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:16]... (2.7 s)
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;time_dependent_field&#39;</span><span class="p">)</span>
 
 <span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span> <span class="o">+</span>
-                 <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">2e6</span><span class="p">,</span> <span class="mf">3e6</span><span class="p">),</span> <span class="n">wave</span><span class="o">=</span><span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">5e-9</span><span class="p">))</span>
+                 <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">2e6</span><span class="p">,</span> <span class="mf">3e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">5e-9</span><span class="p">))</span>
 <span class="n">system</span><span class="o">.</span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="n">mm</span><span class="o">.</span><span class="n">consts</span><span class="o">.</span><span class="n">gamma0</span><span class="p">)</span> <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
 
 <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1.1e6</span><span class="p">)</span>
@@ -1033,7 +1033,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:16]... (2.7 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:16]... (2.0 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (1.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1044,7 +1044,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:16]... (2.0 s)
 </div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"8ff66df849444027a09f2505c160d8e7": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9ca076dd2f624d909f5ad3c00f9dba15": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "b103e5927d7040488e3e9c641e449e37": {"model_module": "k3d", "model_module_version": "2.7.4", "model_name": "PlotModel", "state": {"_backend_version": "2.7.4", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x (nm)", "y (nm)", "z (nm)"], "axes_helper": 1, "background_color": 16777215, "camera": [141.0506683940143, -212.2010025072024, 18.880066776443996, -0.2499999664723873, -0.2499999664723873, 4.749999940395355, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_fov": 60, "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "clipping_planes": [], "colorbar_object_id": -1, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_visible": true, "height": 512, "layout": "IPY_MODEL_9ca076dd2f624d909f5ad3c00f9dba15", "lighting": 1.5, "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140045066807504], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "time": 0, "voxel_paint_color": 0}}, "b93f42b8060d44bb87e6ede0ba464673": {"buffers": [{"data": "eNolw2dslWUYgOHbHyb8MDExxhhjjAqCgIDQQSmlpaUtXXSP073X6fuNs7/D3puy9yqjQNl7j7KLbMqQPQREjTuuqI3PiVdypX4MaZ0howtkfQLZMrcr2LpB/qdQKIu7Q2kPKJcVPaHqM6iRdb3A3huU1PqA8TmYgX3BEdjvNRxBr2MGdcIMfgMz5E35Fmbo25j938Ho/y5G2HsYA97HCP9Afog+8CP0iM6yC/qgruiR3dCjuqNF9UAb3BMtupfsjRbTB21IX9kPLTYIFRcsQ1DxoaihYaiEATIclTgQlRQhB6GSI1EpUXIwalg0KjVGDkGlxaLS41AZ8XIoKjMBlZUok1DZyaicFDkMlZuKykuT6Wi2DLT8TLSCLJmNVpiDVhSYi1ach1ZiQy/JRy8tQC8rRC8vksXoFSUYlYGlGFVlGNXlsgKzphKztgqzrvr/9TU47LWyDkdDPQ5lx6k1SIVTl4aGy9BxmQYuh4nb6ZBO3C4nHrdLuvF4PHi9Xrw+H75Ay8Ln92MNHy5HYI0YiTVylByNNUqOHoM1Zqwch3/sePzjJuAfP1FOwj9hMtbEKViTpsppWJOnY02ZgTV1ppyFNa0Ra/psrBlz5FysmfOwZsnG+fgaF+CbvRDfnEX45i7GN2+JXIp3/jK8C5bjXbhCrsS7aBWexavxLGnCs3SNXIt72Trcy9fjXtEsN+BauRHXqk24VrfgatqMs2kLzjVbca7dhmPddhzrd+Bo3onZvAtzwx6MjXsxNu3DaNmP3nIAffNBtC2H0LYeRtt2BLX9qDxGw47jNOw8gX1XK/bdJ6nfc0qepm7vGer2naV2/zlqD5yn5mAb1YcuyItUHb5E5ZHLVB69QsWxq1Qcv0b5ieuUtd6gtLWd0pM3KTl1i+LTtyk6c4eis3cpPHePgvP3yW97gK3tIbYLj8j74jG5F5+Qc+kp2ZefkXXlOZlXX5Bx7SXp178m7cYrUtu/IaX9W5JvfkfSre9JvP0DCXd+JP7Ln4i7+zOx934h5v6vRD/4jaiHvxP56A8iHv9J+JO/CHv6N6HP/iH4q38Jft5ByIsOQl92EPaqg/8ABrdj6Q==", "encoding": "base64", "path": ["color_map", "compressed_buffer"]}, {"data": "eNpjYDjhxIABsIkpODIwLHBAFWuwBwCEoAQV", "encoding": "base64", "path": ["model_matrix", "compressed_buffer"]}, {"data": "eNrtkbENxCAMRRUU0TABRXrGYQAWYRVmYBEmoGAC6iAowM5JOd1FJ/mKSEkXl0/f8vf/23ZqEAEQfwj0VkrrcFAcNccQYq4Dv2hN3hpjfVo/EGpyWkmptEsV3rKevV4E52LRPvddiC1aJWbGZqFsbDuDEozkbJoYlyYU+MeoXeoG5YX0TP1GZkBmdf08fdzcxwvqtYlX", "encoding": "base64", "path": ["voxels", "compressed_buffer"]}], "model_module": "k3d", "model_module_version": "2.7.4", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"compressed_buffer": {}, "dtype": "uint32", "shape": [256]}, "compression_level": 0, "id": 140045066807504, "model_matrix": {"compressed_buffer": {}, "dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"compressed_buffer": {}, "dtype": "uint8", "shape": [2, 20, 20]}, "wireframe": false}}, "f92e416a943b432c8141e3f65c0959d1": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_8ff66df849444027a09f2505c160d8e7", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "b103e5927d7040488e3e9c641e449e37", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0\u2026"}, "metadata": {}, "output_type": "display_data"}]}}}, "version_major": 2, "version_minor": 0}
+{"state": {"36b1143ad2074b2f94146d6acb72c07d": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [16.707952970489703, -24.636929447073253, 2.175795296471578, -0.04999999422580004, 0.5, 0.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_4ce1ae59488e4b64aff1f0a5debc2faf", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140707767223248], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "4ce1ae59488e4b64aff1f0a5debc2faf": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "93248f08beec4e7dadcb7a2e48c18a7d": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_f02a47e9c03d4ce3a9cf748a8119faae", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "36b1143ad2074b2f94146d6acb72c07d", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "c21454fd193f432e84e0d720cbe04cf7": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AACgQQAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAD8AAAAAAAAAAAAAgD8AAAA/AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQI=", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140707767223248, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [1, 1, 20]}, "wireframe": false}}, "f02a47e9c03d4ce3a9cf748a8119faae": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
 </script></section>
 
 

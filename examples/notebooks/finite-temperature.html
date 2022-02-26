@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -655,8 +655,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -707,8 +706,7 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">5e-10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">td</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mf">5e-10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -717,10 +715,7 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:12]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
- &lt;3&gt; mmarchive killed
-(6.0 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (4.1 s)
 </pre></div></div>
 </div>
 <p>We can now plot the magnetisation after time driving.</p>
@@ -728,8 +723,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:12]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -883,8 +877,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:12]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mx&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;mz&#39;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 11: Deriving energy values &#8212; ubermag  documentation</title>
+    <title>Deriving energy values &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorial 12: Calculating a stray field using an airbox method" href="12-tutorial-stray-field.html" />
-    <link rel="prev" title="Tutorial 10: FMR standard problem" href="10-tutorial-standard-problem-fmr.html" />
+    <link rel="next" title="Calculating a stray field using an airbox method" href="12-tutorial-stray-field.html" />
+    <link rel="prev" title="FMR standard problem" href="10-tutorial-standard-problem-fmr.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -602,14 +602,14 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<section id="Tutorial-11:-Deriving-energy-values">
-<h1>Tutorial 11: Deriving energy values<a class="headerlink" href="#Tutorial-11:-Deriving-energy-values" title="Permalink to this headline">¶</a></h1>
+<section id="Deriving-energy-values">
+<h1>Deriving energy values<a class="headerlink" href="#Deriving-energy-values" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial, we show how derived fields and values can be computed afetr the micromagnetic system is defined.</p>
 <section id="Simulation">
 <h2>Simulation<a class="headerlink" href="#Simulation" title="Permalink to this headline">¶</a></h2>
 <p>First of all, as usual, we import <code class="docutils literal notranslate"><span class="pre">oommfc</span></code> and <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
@@ -620,7 +620,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>We define the cube mesh with edge length <span class="math notranslate nohighlight">\(10 \,\text{nm}\)</span> and cell discretisation edge <span class="math notranslate nohighlight">\(1 \,\text{nm}\)</span>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">10e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">,</span> <span class="mf">10e-9</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="mf">1e-9</span><span class="p">))</span>
@@ -632,11 +632,11 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9aedf61a628b4388b7c4d10222243c6f", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "94d538ae68064df19d2c296b69afeb62", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Now we define the system object and its Hamiltonian.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system&#39;</span><span class="p">)</span>
@@ -655,7 +655,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -664,7 +664,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </div>
 <p>We will now intialise the system in <span class="math notranslate nohighlight">\((0, 0, 1)\)</span> direction with <span class="math notranslate nohighlight">\(M_\text{s} = 8\times 10^{5} \,\text{A/m}\)</span> and relax the magnetisation.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ms</span> <span class="o">=</span> <span class="mf">8e5</span>
@@ -682,7 +682,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </ol>
 <p>Total effective field is:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">effective_field</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
@@ -694,7 +694,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.8 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -706,7 +706,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.5 s)
 </div>
 <p>Similarly, the individual exchange effective field is:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Hex_eff</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">exchange</span><span class="o">.</span><span class="n">effective_field</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
@@ -718,12 +718,12 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.5 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.4 s)
 </pre></div></div>
 </div>
 <p>Because we initialised the system with the uniform state, we expect this effective field to be zero.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Hex_eff</span><span class="o">.</span><span class="n">average</span>
@@ -731,7 +731,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.4 s)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -741,7 +741,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.4 s)
 </div>
 <p>The energy density is:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">density</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
@@ -754,7 +754,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:44]... (0.4 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.4 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -766,7 +766,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.4 s)
 </div>
 <p>Similarly, the energy (volume integral of energy density) is:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
@@ -779,7 +779,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.4 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.3 s)
 The energy of the system is 1.3470795322e-19 J.
 </pre></div></div>
 </div>
@@ -787,7 +787,7 @@ The energy of the system is 1.3470795322e-19 J.
 <section id="Relax-the-system">
 <h2>Relax the system<a class="headerlink" href="#Relax-the-system" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>
@@ -800,12 +800,12 @@ The energy of the system is 1.3470795322e-19 J.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.7 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.8 s)
 </pre></div></div>
 </div>
 <p>Compute the energy (and demonstrate that the energy decreased) and plot its magnetisation:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
@@ -820,7 +820,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:45]... (0.7 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.7 s)
 The system&#39;s energy is 5.35285533145e-20 J.
 </pre></div></div>
 </div>
@@ -836,7 +836,7 @@ The system&#39;s energy is 5.35285533145e-20 J.
 <h2>Computing energies of individual term<a class="headerlink" href="#Computing-energies-of-individual-term" title="Permalink to this headline">¶</a></h2>
 <p>For instance, the exchange energy is:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oc</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">exchange</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="n">system</span><span class="p">)</span>
@@ -848,11 +848,11 @@ The system&#39;s energy is 5.35285533145e-20 J.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.7 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -862,7 +862,7 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
 </div>
 <p>We can also chack the sum of all individual energy terms and check if it the same as the total energy.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_energy</span> <span class="o">=</span> <span class="mi">0</span>
@@ -879,17 +879,17 @@ Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.3 s)
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.3 s)
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.4 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.7 s)
 The sum of energy terms is 5.352855331441701e-20 J.
-Running OOMMF (ExeOOMMFRunner) [2022/02/16 12:46]... (0.3 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:05]... (0.5 s)
 The system&#39;s energy is 5.35285533145e-20 J.
 </pre></div></div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"038f3ce5465e4162a5553069a13d0827": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [19.483307408319007, -16.84996109804301, 6.403330746028705, 4.9500000057742, 4.9500000057742, 4.9500000057742, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_97a2682e76af4c8ba5cbf0178fad72ab", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140085415186240], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "3f9c342b11924d74a1eba6b0695fb938": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_71d4cea114034264a946e97d9b1d0d25", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "6b543113eddb4a9b8390e4178e6fb131": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [20.36859384107297, -18.177890747173954, 6.491859389304103, 4.9500000057742, 4.9500000057742, 4.9500000057742, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_ce8d45e591df482d85a9ffad68f0b540", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [140085415126736], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}, "71d4cea114034264a946e97d9b1d0d25": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "8431b91af84f42ddadedea4674db6afa": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AAAgQQAAAAAAAAAAAACgQAAAAAAAACBBAAAAAAAAoEAAAAAAAAAAAAAAIEEAAKBAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140085415186240, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [10, 10, 10]}, "wireframe": false}}, "95fb1333703444d1af46cbfab40597fc": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "97a2682e76af4c8ba5cbf0178fad72ab": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "9aedf61a628b4388b7c4d10222243c6f": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_95fb1333703444d1af46cbfab40597fc", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "038f3ce5465e4162a5553069a13d0827", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "ce80a38aa4754d94bf919399c6806e15": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AAAgQQAAAAAAAAAAAACgQAAAAAAAACBBAAAAAAAAoEAAAAAAAAAAAAAAIEEAAKBAAAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "colorLegend": false, "color_map": {"dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 140085415126736, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [10, 10, 10]}, "wireframe": false}}, "ce8d45e591df482d85a9ffad68f0b540": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}}, "version_major": 2, "version_minor": 0}
+{"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
 </section>
 
@@ -903,13 +903,13 @@ The system&#39;s energy is 5.35285533145e-20 J.
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial 10: FMR standard problem</p>
+            <p class="prev-next-title">FMR standard problem</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="12-tutorial-stray-field.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial 12: Calculating a stray field using an airbox method</p>
+        <p class="prev-next-title">Calculating a stray field using an airbox method</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

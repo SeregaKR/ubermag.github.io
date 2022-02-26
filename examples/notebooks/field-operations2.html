@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08-tutorial-standard-problem4.html">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -740,7 +740,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (0.9 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.5 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -760,7 +760,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (0.9 s)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">orientation</span>
 
-<span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">scalar_clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">(</span><span class="n">scalar_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;clim&#39;</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)})</span>
 </pre></div>
 </div>
 </div>
@@ -818,7 +818,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (0.9 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.4 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -850,10 +850,10 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.0 s)
-df: -1.0347218596171425e-18
-mc: -1.03472185962e-18
-rerr: -2.7616138887262385e-10 %
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
+df: -1.0347218596939451e-18
+mc: -1.03472185969e-18
+rerr: -3.8126911702142893e-10 %
 </pre></div></div>
 </div>
 </section>
@@ -874,7 +874,7 @@ rerr: -2.7616138887262385e-10 %
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -934,7 +934,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -966,10 +966,10 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
-df: 2.0433559013957953e-19
-mc: 2.0433559014e-19
-rerr: 2.0577847198381775e-10 %
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.4 s)
+df: 2.043355901311158e-19
+mc: 2.04335590131e-19
+rerr: 5.668156582818925e-11 %
 </pre></div></div>
 </div>
 </section>
@@ -990,7 +990,7 @@ rerr: 2.0577847198381775e-10 %
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1050,7 +1050,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1082,10 +1082,10 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
-df: 1.7438374238436996e-18
-mc: 1.74383742384e-18
-rerr: 2.121591940040556e-10 %
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
+df: 1.7438374238126347e-18
+mc: 1.74383742381e-18
+rerr: 1.510847357640387e-10 %
 </pre></div></div>
 </div>
 </section>
@@ -1106,7 +1106,7 @@ rerr: 2.121591940040556e-10 %
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.0 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1166,7 +1166,7 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1198,10 +1198,10 @@ True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
-df: -4.350588324175006e-18
-mc: -4.35058832418e-18
-rerr: -1.1479646336641249e-10 %
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
+df: -4.350588324058675e-18
+mc: -4.35058832406e-18
+rerr: -3.045656594100094e-11 %
 </pre></div></div>
 </div>
 </section>
@@ -1222,7 +1222,7 @@ rerr: -1.1479646336641249e-10 %
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/01/04 11:23]... (1.1 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:08]... (0.3 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1237,7 +1237,7 @@ True
 <section id="(Oversimplified)-micromagnetic-calculator">
 <h4>(Oversimplified) micromagnetic calculator<a class="headerlink" href="#(Oversimplified)-micromagnetic-calculator" title="Permalink to this headline">¶</a></h4>
 <p>Here we try to implement an (oversimplified) micromagnetic calculator we had a look at in the first session:</p>
-<p><img alt="9b64418888b247cf802507d733386f8a" class="no-scaled-link" src="../../_images/algorithm.png" style="width: 600px;" /></p>
+<p><img alt="e7f939e2fc0a41c1a2da859e3f1f6360" class="no-scaled-link" src="../../_images/algorithm.png" style="width: 600px;" /></p>
 <p>We start by defining some basic parameters:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
@@ -1339,7 +1339,9 @@ True
 <img alt="../../_images/examples_notebooks_field-operations2_37_0.png" src="../../_images/examples_notebooks_field-operations2_37_0.png" />
 </div>
 </div>
-</section>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></section>
 </section>
 </section>
 </section>

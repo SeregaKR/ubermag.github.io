@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 08: Standard problem 4 &#8212; ubermag  documentation</title>
+    <title>Standard problem 4 &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorial 09: Standard problem 5" href="09-tutorial-standard-problem5.html" />
+    <link rel="next" title="Standard problem 5" href="09-tutorial-standard-problem5.html" />
     <link rel="prev" title="Standard problem 3" href="07-tutorial-standard-problem3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -177,27 +177,27 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tutorial 08: Standard problem 4
+   Standard problem 4
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09-tutorial-standard-problem5.html">
-   Tutorial 09: Standard problem 5
+   Standard problem 5
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10-tutorial-standard-problem-fmr.html">
-   Tutorial 10: FMR standard problem
+   FMR standard problem
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11-tutorial-deriving-fields.html">
-   Tutorial 11: Deriving energy values
+   Deriving energy values
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12-tutorial-stray-field.html">
-   Tutorial 12: Calculating a stray field using an airbox method
+   Calculating a stray field using an airbox method
   </a>
  </li>
  <li class="toctree-l1">
@@ -617,8 +617,8 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<section id="Tutorial-08:-Standard-problem-4">
-<h1>Tutorial 08: Standard problem 4<a class="headerlink" href="#Tutorial-08:-Standard-problem-4" title="Permalink to this headline">¶</a></h1>
+<section id="Standard-problem-4">
+<h1>Standard problem 4<a class="headerlink" href="#Standard-problem-4" title="Permalink to this headline">¶</a></h1>
 <section id="Problem-specification">
 <h2>Problem specification<a class="headerlink" href="#Problem-specification" title="Permalink to this headline">¶</a></h2>
 <p>The sample is a thin film cuboid with dimensions:</p>
@@ -706,8 +706,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">k3d</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -715,7 +714,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "95bb4d9e812c49a28eefe02b3999d480", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e3e8ae29d2dd4e55a16752b6041aa7ab", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p><strong>Hamiltonian:</strong> In the second step, we define the system’s Hamiltonian. In this standard problem, the Hamiltonian contains only exchange and demagnetisation energy terms. Please note that in the first simulation stage, there is no applied external magnetic field. Therefore, we do not add Zeeman energy term to the Hamiltonian.</p>
 <div class="nbinput nblast docutils container">
@@ -777,8 +776,7 @@ $-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\fra
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>  <span class="c1"># create energy minimisation driver</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">MinDriver</span><span class="p">()</span>  <span class="c1"># create energy minimisation driver</span>
 <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>  <span class="c1"># minimise the system&#39;s energy</span>
 </pre></div>
 </div>
@@ -788,9 +786,7 @@ $-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\fra
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
-(1.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:02]... (1.2 s)
 </pre></div></div>
 </div>
 <p>The system is now relaxed. We can plot it in various ways. We start with simple plot using default settings:</p>
@@ -798,8 +794,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># x-component</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x-component</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -815,8 +810,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># y-component</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># y-component</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -832,8 +826,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># vectors</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vectors</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -850,8 +843,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># vectors</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vectors</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># make figure larger</span>
@@ -877,8 +869,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average magnetisation is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">average</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average magnetisation is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">average</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnetisation at the mesh centre </span><span class="si">{}</span><span class="se">\n</span><span class="s1">is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
         <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">centre</span><span class="p">,</span> <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">centre</span><span class="p">)))</span>
@@ -890,9 +881,9 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The average magnetisation is (773766.2112982363, 99856.85903387987, -0.0031582950032270226).
+The average magnetisation is (773766.2113000217, 99856.85902016422, -0.0031607521877565227).
 The magnetisation at the mesh centre (2.5e-07, 6.25e-08, 1.5e-09)
-is (799979.276019411, -5758.29310286091, -0.00502716060164508).
+is (799979.2760196766, -5758.293066036878, -0.005025602440378236).
 </pre></div></div>
 </div>
 </section>
@@ -931,8 +922,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mf">1e-9</span>  <span class="c1"># simulation time (s)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mf">1e-9</span>  <span class="c1"># simulation time (s)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># number of data saving steps</span>
 
 <span class="n">td</span> <span class="o">=</span> <span class="n">oc</span><span class="o">.</span><span class="n">TimeDriver</span><span class="p">()</span>  <span class="c1"># create time driver</span>
@@ -945,10 +935,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
- &lt;2&gt; mmarchive killed
- &lt;3&gt; mmarchive killed
-(5.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:02]... (2.8 s)
 </pre></div></div>
 </div>
 <section id="Postprocessing">
@@ -959,8 +946,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1013,13 +999,13 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <th>195</th>
       <td>-2.676342e-18</td>
       <td>3736.0</td>
-      <td>1162.487258</td>
+      <td>1162.551057</td>
       <td>-1.697359e-09</td>
-      <td>-2.278389e-21</td>
+      <td>-2.278388e-21</td>
       <td>9.548545e-20</td>
-      <td>3.913574</td>
-      <td>4.281320</td>
-      <td>29.612836</td>
+      <td>3.913555</td>
+      <td>4.281298</td>
+      <td>29.612838</td>
       <td>8.530166e-19</td>
       <td>-3.624844e-18</td>
       <td>784.0</td>
@@ -1028,20 +1014,20 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <td>-0.984260</td>
       <td>-0.010971</td>
       <td>0.033987</td>
-      <td>1.374339e-12</td>
+      <td>1.374338e-12</td>
       <td>9.800000e-10</td>
     </tr>
     <tr>
       <th>196</th>
       <td>-2.685463e-18</td>
       <td>3755.0</td>
-      <td>1260.306669</td>
+      <td>1260.313987</td>
       <td>-1.935225e-09</td>
-      <td>-2.621614e-21</td>
+      <td>-2.621609e-21</td>
       <td>8.637446e-20</td>
-      <td>4.157982</td>
-      <td>4.157982</td>
-      <td>29.612836</td>
+      <td>4.157990</td>
+      <td>4.157990</td>
+      <td>29.612838</td>
       <td>8.844369e-19</td>
       <td>-3.656275e-18</td>
       <td>788.0</td>
@@ -1050,20 +1036,20 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <td>-0.987086</td>
       <td>0.021592</td>
       <td>0.039286</td>
-      <td>1.373847e-12</td>
+      <td>1.373844e-12</td>
       <td>9.850000e-10</td>
     </tr>
     <tr>
       <th>197</th>
       <td>-2.695498e-18</td>
       <td>3774.0</td>
-      <td>1384.781292</td>
+      <td>1384.782639</td>
       <td>-2.057789e-09</td>
-      <td>-2.813915e-21</td>
+      <td>-2.813911e-21</td>
       <td>8.039753e-20</td>
-      <td>4.727709</td>
-      <td>4.727709</td>
-      <td>29.612836</td>
+      <td>4.727732</td>
+      <td>4.727732</td>
+      <td>29.612838</td>
       <td>9.074607e-19</td>
       <td>-3.683357e-18</td>
       <td>792.0</td>
@@ -1072,20 +1058,20 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <td>-0.988092</td>
       <td>0.057824</td>
       <td>0.042604</td>
-      <td>1.373938e-12</td>
+      <td>1.373936e-12</td>
       <td>9.900000e-10</td>
     </tr>
     <tr>
       <th>198</th>
       <td>-2.705827e-18</td>
       <td>3793.0</td>
-      <td>1351.610175</td>
+      <td>1351.611579</td>
       <td>-2.053171e-09</td>
-      <td>-2.832076e-21</td>
+      <td>-2.832074e-21</td>
       <td>7.586011e-20</td>
-      <td>4.669418</td>
-      <td>4.772032</td>
-      <td>29.612836</td>
+      <td>4.669397</td>
+      <td>4.772022</td>
+      <td>29.612838</td>
       <td>9.220444e-19</td>
       <td>-3.703732e-18</td>
       <td>796.0</td>
@@ -1094,20 +1080,20 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <td>-0.986964</td>
       <td>0.095870</td>
       <td>0.043794</td>
-      <td>1.374356e-12</td>
+      <td>1.374355e-12</td>
       <td>9.950000e-10</td>
     </tr>
     <tr>
       <th>199</th>
       <td>-2.715833e-18</td>
       <td>3812.0</td>
-      <td>1191.097687</td>
-      <td>-1.931644e-09</td>
-      <td>-2.687311e-21</td>
+      <td>1191.084437</td>
+      <td>-1.931645e-09</td>
+      <td>-2.687310e-21</td>
       <td>7.141300e-20</td>
-      <td>4.354490</td>
-      <td>4.669418</td>
-      <td>29.612836</td>
+      <td>4.354487</td>
+      <td>4.669397</td>
+      <td>29.612838</td>
       <td>9.291427e-19</td>
       <td>-3.716389e-18</td>
       <td>800.0</td>
@@ -1116,7 +1102,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
       <td>-0.983765</td>
       <td>0.133793</td>
       <td>0.042832</td>
-      <td>1.375197e-12</td>
+      <td>1.375196e-12</td>
       <td>1.000000e-09</td>
     </tr>
   </tbody>
@@ -1128,8 +1114,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">myplot</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myplot</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;my&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1145,8 +1130,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="c1"># vectors</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vectors</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># make figure larger</span>
@@ -1174,7 +1158,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
 <p>[1] µMAG Site Directory: <a class="reference external" href="http://www.ctcms.nist.gov/~rdm/mumag.org.html">http://www.ctcms.nist.gov/~rdm/mumag.org.html</a></p>
 <p>[2] Pandas: <a class="reference external" href="http://pandas.pydata.org/">http://pandas.pydata.org/</a></p>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"121fd010faeb4264af23b81d2ae7d13a": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "1b50db9677994d96982cb8323b11d5f7": {"buffers": [{"data": "sHJMAFKE3QA=", "encoding": "base64", "path": ["color_map", "data"]}, {"data": "AAD6QwAAAAAAAAAAAAB6QwAAAAAAAPpCAAAAAAAAekIAAAAAAAAAAAAAQEAAAMA/AAAAAAAAAAAAAAAAAACAPw==", "encoding": "base64", "path": ["model_matrix", "data"]}, {"data": "AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==", "encoding": "base64", "path": ["voxels", "data"]}], "model_module": "k3d", "model_module_version": "2.11.0", "model_name": "ObjectModel", "state": {"_view_count": null, "_view_module": null, "_view_module_version": "", "_view_name": null, "color_map": {"dtype": "uint32", "shape": [2]}, "compression_level": 0, "id": 139965619875264, "model_matrix": {"dtype": "float32", "shape": [4, 4]}, "name": "Voxels #1", "opacity": 1, "outlines": false, "outlines_color": 0, "type": "Voxels", "visible": true, "voxels": {"dtype": "uint8", "shape": [1, 25, 100]}, "wireframe": false}}, "322a890fc01849469d585e2fd491707c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {}}, "95bb4d9e812c49a28eefe02b3999d480": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"layout": "IPY_MODEL_121fd010faeb4264af23b81d2ae7d13a", "outputs": [{"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "ea9ded387ab84b8795f3910a8c24240c", "version_major": 2, "version_minor": 0}, "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera_animation=[], camer\u2026"}, "metadata": {}, "output_type": "display_data"}]}}, "ea9ded387ab84b8795f3910a8c24240c": {"model_module": "k3d", "model_module_version": "2.11.0", "model_name": "PlotModel", "state": {"_backend_version": "2.11.0", "_dom_classes": [], "_view_count": null, "antialias": 3, "auto_rendering": true, "axes": ["x\\,\\text{(nm)}", "y\\,\\text{(nm)}", "z\\,\\text{(nm)}"], "axes_helper": 1, "background_color": 16777215, "camera": [856.64305831426, -848.0895883951457, 62.1893058922191, 249.7499993920792, 62.24999998812564, 1.5, 0, 0, 1], "camera_animation": [], "camera_auto_fit": true, "camera_damping_factor": 0, "camera_fov": 60, "camera_mode": "trackball", "camera_no_pan": false, "camera_no_rotate": false, "camera_no_zoom": false, "camera_pan_speed": 0.3, "camera_rotate_speed": 1, "camera_zoom_speed": 1.2, "clipping_planes": [], "colorbar_object_id": -1, "colorbar_scientific": false, "fps": 25, "fps_meter": false, "grid": [-1, -1, -1, 1, 1, 1], "grid_auto_fit": true, "grid_color": 15132390, "grid_visible": true, "height": 512, "label_color": 4473924, "layout": "IPY_MODEL_322a890fc01849469d585e2fd491707c", "lighting": 1.5, "manipulate_mode": "translate", "menu_visibility": true, "mode": "view", "name": null, "object_ids": [139965619875264], "rendering_steps": 1, "screenshot": "", "screenshot_scale": 2, "snapshot": "", "snapshot_type": "full", "time": 0, "voxel_paint_color": 0}}}, "version_major": 2, "version_minor": 0}
+{"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
 </section>
 
@@ -1194,7 +1178,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 14:06]...  &lt;1&gt; mmarchive killed
     <a class='right-next' id="next-link" href="09-tutorial-standard-problem5.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial 09: Standard problem 5</p>
+        <p class="prev-next-title">Standard problem 5</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
