@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Magnetisation field &#8212; ubermag  documentation</title>
+    <title>Magnetisation field &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Energy equation" href="energy-equation.html" />
-    <link rel="prev" title="1. Our first ubermag simulation" href="first-ubermag-simulation.html" />
+    <link rel="next" title="Energy equation" href="energy-equation.html" />
+    <link rel="prev" title="Our first ubermag simulation" href="first-ubermag-simulation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,32 +179,32 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="first-ubermag-simulation.html">
-   1. Our first ubermag simulation
+   Our first ubermag simulation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Magnetisation field
+   Magnetisation field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="energy-equation.html">
-   3. Energy equation
+   Energy equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dynamics-equation.html">
-   4. Dynamics equation
+   Dynamics equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="driving-dw.html">
-   5. Exercise: Current induced domain wall motion
+   Exercise: Current induced domain wall motion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dw-pair-conversion.html">
-   6. Exercise: Domain wall pair conversion
+   Exercise: Domain wall pair conversion
   </a>
  </li>
 </ul>
@@ -232,27 +232,27 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Region">
-   2.1. Region
+   Region
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Mesh">
-   2.2. Mesh
+   Mesh
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Field">
-   2.3. Field
+   Field
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#Spatially-varying-field-value">
-     2.3.1. Spatially varying field value
+     Spatially varying field value
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#Spatially-varying-M_\mathrm{s}">
-     2.3.2. Spatially varying
+     Spatially varying
      <span class="math notranslate nohighlight">
       \(M_\mathrm{s}\)
      </span>
@@ -262,12 +262,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Example">
-   2.4. Example
+   Example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exercise">
-   2.5. Exercise
+   Exercise
   </a>
  </li>
 </ul>
@@ -555,7 +555,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Magnetisation-field">
-<h1><span class="section-number">2. </span>Magnetisation field<a class="headerlink" href="#Magnetisation-field" title="Permalink to this headline">¶</a></h1>
+<h1>Magnetisation field<a class="headerlink" href="#Magnetisation-field" title="Permalink to this headline">¶</a></h1>
 <p>One of the main objects, which we have to be specify as a part of the micromagnetic system is the magnetisation field <span class="math notranslate nohighlight">\(\mathbf{M}\)</span>. In Ubermag, by defining the magnetisation field, the mesh, the geometry of the sample, as well as the magnetisation saturation <span class="math notranslate nohighlight">\(M_\text{s}\)</span> are defined.</p>
 <p>The Ubermag package we use to define finite difference regions, meshes, and fields is <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> and we have to import it before we use it.</p>
 <div class="nbinput nblast docutils container">
@@ -567,7 +567,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Region">
-<h2><span class="section-number">2.1. </span>Region<a class="headerlink" href="#Region" title="Permalink to this headline">¶</a></h2>
+<h2>Region<a class="headerlink" href="#Region" title="Permalink to this headline">¶</a></h2>
 <p>In finite differences, the region on which the mesh and the field are specified is always “cubic”. In order to define a mesh, two points <span class="math notranslate nohighlight">\(p_{1}\)</span> and <span class="math notranslate nohighlight">\(p_{2}\)</span> must be passed to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code>. Those points correspond to two points between which the region spans.</p>
 <p>For instance, if we want to define the following region:</p>
 <div class="math notranslate nohighlight">
@@ -694,7 +694,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Mesh">
-<h2><span class="section-number">2.2. </span>Mesh<a class="headerlink" href="#Mesh" title="Permalink to this headline">¶</a></h2>
+<h2>Mesh<a class="headerlink" href="#Mesh" title="Permalink to this headline">¶</a></h2>
 <p>After the region is defined, we need to discretise it in order to define a mesh. There are two ways how a region can be discretised - by passing:</p>
 <ol class="arabic simple">
 <li><p>Discretisation cell size (<code class="docutils literal notranslate"><span class="pre">cell</span></code>), or</p></li>
@@ -795,7 +795,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Field">
-<h2><span class="section-number">2.3. </span>Field<a class="headerlink" href="#Field" title="Permalink to this headline">¶</a></h2>
+<h2>Field<a class="headerlink" href="#Field" title="Permalink to this headline">¶</a></h2>
 <p>After we defined the mesh, we can define a finite difference field. For that, we use <code class="docutils literal notranslate"><span class="pre">Field</span></code> class. We must provide the following 3 mandatory parameters:</p>
 <ol class="arabic simple">
 <li><p>mesh (<code class="docutils literal notranslate"><span class="pre">mesh</span></code> as <code class="docutils literal notranslate"><span class="pre">discretisedfield.Mesh</span></code>),</p></li>
@@ -889,7 +889,7 @@ div.rendered_html tbody tr:hover {
 </pre></div></div>
 </div>
 <section id="Spatially-varying-field-value">
-<h3><span class="section-number">2.3.1. </span>Spatially varying field value<a class="headerlink" href="#Spatially-varying-field-value" title="Permalink to this headline">¶</a></h3>
+<h3>Spatially varying field value<a class="headerlink" href="#Spatially-varying-field-value" title="Permalink to this headline">¶</a></h3>
 <p>When we defined a uniform vector field, we used a tuple <code class="docutils literal notranslate"><span class="pre">value=(1,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> to define its value. However, we can also pass a callable (e.g. Python function) if we want to define a non-uniform field. This function takes the coordinate of the mesh cell as an input, and returns a value that the field should have at that point. The function must be defined at all points in the mesh.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -978,7 +978,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Spatially-varying-M_\mathrm{s}">
-<h3><span class="section-number">2.3.2. </span>Spatially varying <span class="math notranslate nohighlight">\(M_\mathrm{s}\)</span><a class="headerlink" href="#Spatially-varying-M_\mathrm{s}" title="Permalink to this headline">¶</a></h3>
+<h3>Spatially varying <span class="math notranslate nohighlight">\(M_\mathrm{s}\)</span><a class="headerlink" href="#Spatially-varying-M_\mathrm{s}" title="Permalink to this headline">¶</a></h3>
 <p>By defining a norm of a field, we can specify different geometries. More precisely, we can set <span class="math notranslate nohighlight">\(M_\text{s}=0\)</span> where no magnetic material is present. For instance, let us assume we want to define a sphere of radius <span class="math notranslate nohighlight">\(r=50\,\text{nm}\)</span>, disrectised by 10 cells in each direction, and magnetise it in the negative <span class="math notranslate nohighlight">\(y\)</span>-direction.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
@@ -1027,7 +1027,7 @@ div.rendered_html tbody tr:hover {
 </section>
 </section>
 <section id="Example">
-<h2><span class="section-number">2.4. </span>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h2>
+<h2>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h2>
 <p>Let us define a thin-film disk sample of thickness <span class="math notranslate nohighlight">\(t = 10 \,\text{nm}\)</span> and diameter <span class="math notranslate nohighlight">\(d = 120 \,\text{nm}\)</span>. The saturation magnetisation <span class="math notranslate nohighlight">\(M_\mathrm{s} = 10^{7}\mathrm{A/m}\)</span>. The disk is centred at the origin (0, 0, 0) and the magnetisation is <span class="math notranslate nohighlight">\(\mathbf{m} = (1, 0, 0)\)</span> at all mesh points.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
@@ -1090,9 +1090,9 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Exercise">
-<h2><span class="section-number">2.5. </span>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h2>
+<h2>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h2>
 <p>Define the following sample with <span class="math notranslate nohighlight">\(10\,\text{nm}\)</span> thickness:</p>
-<p><img alt="804959e45a8d4001b96c77a4afc1d30f" class="no-scaled-link" src="../../_images/geometry_exercise2.png" style="width: 400px;" /></p>
+<p><img alt="f3b531fdfd8e43dd9948978c3f30723b" class="no-scaled-link" src="../../_images/geometry_exercise2.png" style="width: 400px;" /></p>
 <p>The magnetisation saturation is <span class="math notranslate nohighlight">\(M_\mathrm{s} = 8 \times 10^{6} \,\mathrm{A}\,\mathrm{m}^{-1}\)</span> and the magnetisation direction is as shown in the figure.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -1147,13 +1147,13 @@ div.rendered_html tbody tr:hover {
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Our first ubermag simulation</p>
+            <p class="prev-next-title">Our first ubermag simulation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="energy-equation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Energy equation</p>
+        <p class="prev-next-title">Energy equation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

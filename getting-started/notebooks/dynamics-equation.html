@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Dynamics equation &#8212; ubermag  documentation</title>
+    <title>Dynamics equation &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5. Exercise: Current induced domain wall motion" href="driving-dw.html" />
-    <link rel="prev" title="3. Energy equation" href="energy-equation.html" />
+    <link rel="next" title="Exercise: Current induced domain wall motion" href="driving-dw.html" />
+    <link rel="prev" title="Energy equation" href="energy-equation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,32 +179,32 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="first-ubermag-simulation.html">
-   1. Our first ubermag simulation
+   Our first ubermag simulation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="magnetisation-field.html">
-   2. Magnetisation field
+   Magnetisation field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="energy-equation.html">
-   3. Energy equation
+   Energy equation
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. Dynamics equation
+   Dynamics equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="driving-dw.html">
-   5. Exercise: Current induced domain wall motion
+   Exercise: Current induced domain wall motion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dw-pair-conversion.html">
-   6. Exercise: Domain wall pair conversion
+   Exercise: Domain wall pair conversion
   </a>
  </li>
 </ul>
@@ -231,19 +231,36 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Exercise-1">
-   4.1. Exercise 1
+  <a class="reference internal nav-link" href="#Macrospin">
+   Macrospin
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Exercise-2">
-   4.2. Exercise 2
+  <a class="reference internal nav-link" href="#Dynamics-simulation">
+   Dynamics simulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#Exercise-3">
-   4.3. Exercise 3
+  <a class="reference internal nav-link" href="#Simulation-results">
+   Simulation results
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Exercise-2">
+     Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#Exercise-3">
+     Exercise 3
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -530,11 +547,13 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Dynamics-equation">
-<h1><span class="section-number">4. </span>Dynamics equation<a class="headerlink" href="#Dynamics-equation" title="Permalink to this headline">¶</a></h1>
+<h1>Dynamics equation<a class="headerlink" href="#Dynamics-equation" title="Permalink to this headline">¶</a></h1>
 <p>The dynamics of magnetisation field <span class="math notranslate nohighlight">\(\mathbf{m}\)</span>, without external excitations (e.g. spin-polarised current) is governed by the Landau-Lifshitz-Gilbert (LLG) equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{d\mathbf{m}}{dt} = \underbrace{-\gamma_{0}(\mathbf{m} \times \mathbf{H}_\text{eff})}_\text{precession} + \underbrace{\alpha\left(\mathbf{m} \times \frac{d\mathbf{m}}{dt}\right)}_\text{damping},\]</div>
 <p>where <span class="math notranslate nohighlight">\(\gamma_{0} = \mu_{0}\gamma\)</span> is the gyromagnetic ratio, <span class="math notranslate nohighlight">\(\alpha\)</span> is the Gilbert damping, and <span class="math notranslate nohighlight">\(\mathbf{H}_\text{eff} = -\frac{1}{\mu_{0}M_\text{s}}\frac{\delta w(\mathbf{m})}{\delta \mathbf{m}}\)</span> is the effective field. It consists of two terms: precession and damping. In this tutorial, we will explore some basic properties of this equation to understand how to define it in simulations.</p>
+<section id="Macrospin">
+<h2>Macrospin<a class="headerlink" href="#Macrospin" title="Permalink to this headline">¶</a></h2>
 <p>We will study the simplest “zero-dimensional” case - macrospin. In the first step, after we import necessary modules and create the mesh which consists of a single discretisation cell.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -576,6 +595,9 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
+</section>
+<section id="Dynamics-simulation">
+<h2>Dynamics simulation<a class="headerlink" href="#Dynamics-simulation" title="Permalink to this headline">¶</a></h2>
 <p>In the next step we can define the system’s dynamics. Let us assume we have <span class="math notranslate nohighlight">\(\gamma_{0} = 2.211 \times 10^{5} \,\text{m}\,\text{A}^{-1}\,\text{s}^{-1}\)</span> and <span class="math notranslate nohighlight">\(\alpha=0.1\)</span>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -635,6 +657,9 @@ $-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\fra
 Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.5 s)
 </pre></div></div>
 </div>
+</section>
+<section id="Simulation-results">
+<h2>Simulation results<a class="headerlink" href="#Simulation-results" title="Permalink to this headline">¶</a></h2>
 <p>How different system parameters vary with time, we can inspect by showing the system’s datatable.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -910,7 +935,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.5 s)
 </div>
 <p>We can see that after some time the macrospin aligns parallel to the external magnetic field in the <span class="math notranslate nohighlight">\(z\)</span> direction. We can also have a look at the dynamics using an interactive plot.</p>
 <section id="Exercise-1">
-<h2><span class="section-number">4.1. </span>Exercise 1<a class="headerlink" href="#Exercise-1" title="Permalink to this headline">¶</a></h2>
+<h3>Exercise 1<a class="headerlink" href="#Exercise-1" title="Permalink to this headline">¶</a></h3>
 <p>Modify Gilbert damping and set it to <span class="math notranslate nohighlight">\(\alpha=0.005\)</span> and see what happens with the dynamics.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -943,7 +968,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.3 s)
 </div>
 </section>
 <section id="Exercise-2">
-<h2><span class="section-number">4.2. </span>Exercise 2<a class="headerlink" href="#Exercise-2" title="Permalink to this headline">¶</a></h2>
+<h3>Exercise 2<a class="headerlink" href="#Exercise-2" title="Permalink to this headline">¶</a></h3>
 <p>Repeat the simulation with <span class="math notranslate nohighlight">\(\alpha=0.1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H} = (0, 0, -2\times 10^{6})\,\text{A}\,\text{m}^{-1}\)</span>.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -977,7 +1002,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.6 s)
 </div>
 </section>
 <section id="Exercise-3">
-<h2><span class="section-number">4.3. </span>Exercise 3<a class="headerlink" href="#Exercise-3" title="Permalink to this headline">¶</a></h2>
+<h3>Exercise 3<a class="headerlink" href="#Exercise-3" title="Permalink to this headline">¶</a></h3>
 <p>Keep using <span class="math notranslate nohighlight">\(\alpha=0.1\)</span>. Change the field from <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">-2e6)</span></code> to <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">-1.41e6,</span> <span class="pre">-1.41e6)</span></code>, and plot <span class="math notranslate nohighlight">\(m_x(t)\)</span>, <span class="math notranslate nohighlight">\(m_y(t)\)</span> and <span class="math notranslate nohighlight">\(m_z(t)\)</span> as above. Can you explain the (initially non-intuitive) output?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1010,6 +1035,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.4 s)
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
 </section>
+</section>
 
 
               </div>
@@ -1021,13 +1047,13 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.4 s)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Energy equation</p>
+            <p class="prev-next-title">Energy equation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="driving-dw.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Exercise: Current induced domain wall motion</p>
+        <p class="prev-next-title">Exercise: Current induced domain wall motion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

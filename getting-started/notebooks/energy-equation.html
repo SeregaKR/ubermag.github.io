@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Energy equation &#8212; ubermag  documentation</title>
+    <title>Energy equation &#8212; ubermag  documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Dynamics equation" href="dynamics-equation.html" />
-    <link rel="prev" title="2. Magnetisation field" href="magnetisation-field.html" />
+    <link rel="next" title="Dynamics equation" href="dynamics-equation.html" />
+    <link rel="prev" title="Magnetisation field" href="magnetisation-field.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,32 +179,32 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="first-ubermag-simulation.html">
-   1. Our first ubermag simulation
+   Our first ubermag simulation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="magnetisation-field.html">
-   2. Magnetisation field
+   Magnetisation field
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Energy equation
+   Energy equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dynamics-equation.html">
-   4. Dynamics equation
+   Dynamics equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="driving-dw.html">
-   5. Exercise: Current induced domain wall motion
+   Exercise: Current induced domain wall motion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dw-pair-conversion.html">
-   6. Exercise: Domain wall pair conversion
+   Exercise: Domain wall pair conversion
   </a>
  </li>
 </ul>
@@ -232,37 +232,37 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Zeeman-energy">
-   3.1. Zeeman energy
+   Zeeman energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Uniaxial-anisotropy">
-   3.2. Uniaxial anisotropy
+   Uniaxial anisotropy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exchange-energy">
-   3.3. Exchange energy
+   Exchange energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Dzyaloshinskii-Moriya-energy">
-   3.4. Dzyaloshinskii-Moriya energy
+   Dzyaloshinskii-Moriya energy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Exchange-and-Zeeman-energies">
-   3.5. Exchange and Zeeman energies
+   Exchange and Zeeman energies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Competition-of-DMI-and-exchange">
-   3.6. Competition of DMI and exchange
+   Competition of DMI and exchange
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#Skyrmion-in-a-disk">
-   3.7. Skyrmion in a disk
+   Skyrmion in a disk
   </a>
  </li>
 </ul>
@@ -550,11 +550,11 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Energy-equation">
-<h1><span class="section-number">3. </span>Energy equation<a class="headerlink" href="#Energy-equation" title="Permalink to this headline">¶</a></h1>
+<h1>Energy equation<a class="headerlink" href="#Energy-equation" title="Permalink to this headline">¶</a></h1>
 <p>The energy of a magnetic system can be computed using Hamiltonian, which consists of different energy terms. In addition, the effective field which affects the magnetisation dynamics in the LLG equation, is also computed from the system’s Hamiltonian.</p>
 <p>In this tutorial, we explore different energy terms that can occur in the Hamiltonian.</p>
 <section id="Zeeman-energy">
-<h2><span class="section-number">3.1. </span>Zeeman energy<a class="headerlink" href="#Zeeman-energy" title="Permalink to this headline">¶</a></h2>
+<h2>Zeeman energy<a class="headerlink" href="#Zeeman-energy" title="Permalink to this headline">¶</a></h2>
 <p>The Zeeman energy tends to align all magnetic moments parallel to the external magnetic field <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>, so that the energy density <span class="math notranslate nohighlight">\(w_\text{z} = -\mu_{0}M_\text{s}\mathbf{m}\cdot\mathbf{H}\)</span> is minimum, where <span class="math notranslate nohighlight">\(\mu_{0}\)</span> is the magnetic constant and <span class="math notranslate nohighlight">\(M_\text{s}\)</span> is the magnetisation saturation.</p>
 <p>To demonstrate the effect of Zeeman energy we will apply an external magnetic field <span class="math notranslate nohighlight">\(H = 10^{6} \,\text{A}\,\text{m}^{-1}\)</span> in the positive <span class="math notranslate nohighlight">\(z\)</span>-direction to the one-dimensional array of magnetic moments. For the initial magnetisation configuration, we will take the <span class="math notranslate nohighlight">\((1, 0, 1)\)</span> direction with <span class="math notranslate nohighlight">\(M_\text{s} = 8 \times 10^{6} \,\text{A}\,\text{m}^{-1}\)</span>.</p>
 <div class="nbinput nblast docutils container">
@@ -682,7 +682,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.3 s)
 </div>
 </section>
 <section id="Uniaxial-anisotropy">
-<h2><span class="section-number">3.2. </span>Uniaxial anisotropy<a class="headerlink" href="#Uniaxial-anisotropy" title="Permalink to this headline">¶</a></h2>
+<h2>Uniaxial anisotropy<a class="headerlink" href="#Uniaxial-anisotropy" title="Permalink to this headline">¶</a></h2>
 <p>Uniaxial anisotropy energy tends to align magnetic moments to be on the anisotropy axis either parallel or antiparallel without a preferred direction. Its energy density is <span class="math notranslate nohighlight">\(w_\text{a} = -K(\mathbf{m} \cdot \mathbf{u})^{2}\)</span>, where <span class="math notranslate nohighlight">\(K\)</span> is the anisotropy constant and <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is the anisotropy axis.</p>
 <p>Let’s assume our anisotropy axis is in the <span class="math notranslate nohighlight">\((1, 0, 1)\)</span> direction with <span class="math notranslate nohighlight">\(K = 6 \times 10^{6} \,\text{J}\,\text{m}^{-3}\)</span> and the initial magnetisation is defined as</p>
 <div class="math notranslate nohighlight">
@@ -743,7 +743,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.3 s)
 <p>We see that in the relaxed state, all magnetic moments are aligned with the aniostropy axis. The initial configuration affects which orientation along the anisotropy direction is chosen.</p>
 </section>
 <section id="Exchange-energy">
-<h2><span class="section-number">3.3. </span>Exchange energy<a class="headerlink" href="#Exchange-energy" title="Permalink to this headline">¶</a></h2>
+<h2>Exchange energy<a class="headerlink" href="#Exchange-energy" title="Permalink to this headline">¶</a></h2>
 <p>The Zeeman and uniaxial anisotropy are <em>local</em> energy terms; they only depend on the magnetisation at a given location. In contrast, the exchange energy represents a short range interaction and tends to align all spins parallel to each other without a preferential direction.</p>
 <p>The exchange energy density is <span class="math notranslate nohighlight">\(w_\text{ex} = A[(\nabla m_{x})^{2} + (\nabla m_{y})^{2} + (\nabla m_{z})^{2}]\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the exchange energy constant. To demonstrate how it affects the magnetisation configuration, we will use <span class="math notranslate nohighlight">\(A = 8 \,\text{pJ}\,\text{m}^{-1}\)</span> on a non-uniform magnetisation configuration.</p>
 <div class="nbinput docutils container">
@@ -797,7 +797,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.4 s)
 </div>
 </section>
 <section id="Dzyaloshinskii-Moriya-energy">
-<h2><span class="section-number">3.4. </span>Dzyaloshinskii-Moriya energy<a class="headerlink" href="#Dzyaloshinskii-Moriya-energy" title="Permalink to this headline">¶</a></h2>
+<h2>Dzyaloshinskii-Moriya energy<a class="headerlink" href="#Dzyaloshinskii-Moriya-energy" title="Permalink to this headline">¶</a></h2>
 <p>While the exchange interaction aims to align (neighbouring) magnetic moments parallel to each other, the Dzyaloshinskii-Moriya (DM) energy wants to align them perpendicular to each other.</p>
 <p>The (interfacial) DMI energy density is <span class="math notranslate nohighlight">\(w_\text{dmi} = D[m_{z}\nabla\cdot\mathbf{m} - (\mathbf{m}\cdot\nabla)m_{z}]\)</span> (crystallographic class <span class="math notranslate nohighlight">\(C_\text{nv}\)</span>), with <span class="math notranslate nohighlight">\(D\)</span> being the DM constant. Again, we demonstrate its effect by starting from a uniform configuration, with <span class="math notranslate nohighlight">\(D = 3\times10^{3} \,\text{J}\,\text{m}^{-2}\)</span>.</p>
 <div class="nbinput docutils container">
@@ -831,7 +831,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.4 s)
 <p>Ubermag supports crystalographic classes: <code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">O</span></code>, <code class="docutils literal notranslate"><span class="pre">Cnv</span></code>, or <code class="docutils literal notranslate"><span class="pre">D2d</span></code>.</p>
 </section>
 <section id="Exchange-and-Zeeman-energies">
-<h2><span class="section-number">3.5. </span>Exchange and Zeeman energies<a class="headerlink" href="#Exchange-and-Zeeman-energies" title="Permalink to this headline">¶</a></h2>
+<h2>Exchange and Zeeman energies<a class="headerlink" href="#Exchange-and-Zeeman-energies" title="Permalink to this headline">¶</a></h2>
 <p>So far, we investigated the effect of individual energy terms in the Hamiltonian. Now, we look at how multiple energies in the Hamiltoninan contribute to the final magnetisation configuration. We start with the simplest example where only exchange and Zeeman energies are present. As we showed before, exchange energy wants to align all magnetic moments parallel to each other without a preferential direction, while Zeeman energy wants them to be parallel to the external magnetic field. Therefore,
 we can expect that the minimum energy configuration is going to be the uniform state in the direction of an applied field <span class="math notranslate nohighlight">\(\mathbf{H}\)</span>.</p>
 <div class="nbinput docutils container">
@@ -890,7 +890,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.5 s)
 <p>Both energies are minimal in the above relaxed state: the magnetisation is uniform (minimising the exchange energy) and is aligned with the external field (minimising the Zeeman energy).</p>
 </section>
 <section id="Competition-of-DMI-and-exchange">
-<h2><span class="section-number">3.6. </span>Competition of DMI and exchange<a class="headerlink" href="#Competition-of-DMI-and-exchange" title="Permalink to this headline">¶</a></h2>
+<h2>Competition of DMI and exchange<a class="headerlink" href="#Competition-of-DMI-and-exchange" title="Permalink to this headline">¶</a></h2>
 <p>Here, we study the competition of the exchange and (interfacial) DMI energy.</p>
 <p>We relax a one-dimensional chain of magnetic moments of length <span class="math notranslate nohighlight">\(L = 20 \,\text{nm}\)</span> with discretisation cell size of <span class="math notranslate nohighlight">\((d, d, d)\)</span>, with <span class="math notranslate nohighlight">\(d = 1 \,\text{nm}\)</span>. The Hamiltonian should consist of:</p>
 <ul class="simple">
@@ -994,7 +994,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.7 s)
 </div>
 </section>
 <section id="Skyrmion-in-a-disk">
-<h2><span class="section-number">3.7. </span>Skyrmion in a disk<a class="headerlink" href="#Skyrmion-in-a-disk" title="Permalink to this headline">¶</a></h2>
+<h2>Skyrmion in a disk<a class="headerlink" href="#Skyrmion-in-a-disk" title="Permalink to this headline">¶</a></h2>
 <p>We can assemble the appropriate energy equation in order to obtain a skyrmion state in a disk with <span class="math notranslate nohighlight">\(100 \,\text{nm}\)</span> diameter and <span class="math notranslate nohighlight">\(5 \,\text{nm}\)</span> thickness. In addition, we choose the appropriate initial magnetisation state.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -1077,13 +1077,13 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (0.5 s)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Magnetisation field</p>
+            <p class="prev-next-title">Magnetisation field</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="dynamics-equation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Dynamics equation</p>
+        <p class="prev-next-title">Dynamics equation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
