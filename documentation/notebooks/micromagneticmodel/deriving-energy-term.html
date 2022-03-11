@@ -988,6 +988,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
 
+
 <span class="k">class</span> <span class="nc">SpecialEnergy</span><span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">EnergyTerm</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
@@ -1050,8 +1051,8 @@ $$U\mathbf{m}\cdot\mathbf{m}$$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ubermagutil.typesystem</span> <span class="k">as</span> <span class="nn">ts</span>
-<span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="kn">import</span> <span class="nn">ubermagutil.typesystem</span> <span class="k">as</span> <span class="nn">ts</span>
 
 
 <span class="nd">@ts</span><span class="o">.</span><span class="n">typesystem</span><span class="p">(</span><span class="n">U</span><span class="o">=</span><span class="n">ts</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">descriptor</span><span class="o">=</span><span class="n">ts</span><span class="o">.</span><span class="n">Scalar</span><span class="p">(</span><span class="n">unsigned</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">otherwise</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">))</span>

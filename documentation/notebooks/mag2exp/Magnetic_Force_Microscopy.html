@@ -996,7 +996,7 @@ of an MFM is a complicated magnetic object but usually it can be characterised b
 <section id="MFM-Reference-frame">
 <h2>MFM Reference frame<a class="headerlink" href="#MFM-Reference-frame" title="Permalink to this headline">¶</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental reference for MFM is defined by cantilever oscillating in the <span class="math notranslate nohighlight">\(z\)</span> direction.</p>
-<p><img alt="1231538b0006402285ff9489c9e370f8" class="no-scaled-link" src="../../../_images/MFM_1.png" style="width: 600px;" /></p>
+<p><img alt="504e7cae55b04d4db7987ea67049874c" class="no-scaled-link" src="../../../_images/MFM_1.png" style="width: 600px;" /></p>
 </section>
 <section id="The-micromagnetic-simulation">
 <h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
@@ -1008,11 +1008,12 @@ when defining and relaxing the system as this is the process by which the stray 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
 <span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
 <span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
 <span class="kn">import</span> <span class="nn">ubermagutil.units</span> <span class="k">as</span> <span class="nn">uu</span>
+
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">100e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">100e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">50e-9</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">100e-9</span><span class="p">,</span> <span class="mf">100e-9</span><span class="p">,</span> <span class="mf">100e-9</span><span class="p">))</span>
@@ -1308,6 +1309,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:21]... (3.1 s)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">colors</span>
+
 <span class="n">sub_region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">100e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">100e-9</span><span class="p">,</span><span class="mf">6e-9</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">100e-9</span><span class="p">,</span> <span class="mf">100e-9</span><span class="p">,</span> <span class="mf">100e-9</span><span class="p">))</span>
 <span class="n">sub_phase</span> <span class="o">=</span> <span class="n">phase_shift</span><span class="p">[</span><span class="n">sub_region</span><span class="p">]</span>
 

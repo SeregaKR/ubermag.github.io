@@ -982,7 +982,7 @@ to the absorption edges of the different elements present in the sample allowing
 <section id="SAXS-Reference-frame">
 <h2>SAXS Reference frame<a class="headerlink" href="#SAXS-Reference-frame" title="Permalink to this headline">¶</a></h2>
 <p>For <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the SAXS experimental reference frame is defined with the beam propagating in the <span class="math notranslate nohighlight">\(z\)</span> direction.</p>
-<p><img alt="394b3bce496549beb1b38964934db04a" class="no-scaled-link" src="../../../_images/SAXS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="b47ac1dfebb04d7dae7193246e7d8867" class="no-scaled-link" src="../../../_images/SAXS.png" style="width: 900px; height: 600px;" /></p>
 </section>
 <section id="The-micromagnetic-simulation">
 <h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
@@ -992,11 +992,12 @@ to the absorption edges of the different elements present in the sample allowing
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
 <span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
 <span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">oommfc</span> <span class="k">as</span> <span class="nn">oc</span>
 <span class="kn">import</span> <span class="nn">ubermagutil.units</span> <span class="k">as</span> <span class="nn">uu</span>
+
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">region</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">300e-9</span><span class="p">,</span> <span class="o">-</span><span class="mf">150e-9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mf">300e-9</span><span class="p">,</span> <span class="mf">300e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">))</span>
@@ -1102,6 +1103,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:52]... (145.2 s)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">colors</span>
+
 <span class="n">cross_section</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
                          <span class="n">colorbar_label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Intensity&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">1e40</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">cross_section</span><span class="o">.</span><span class="n">real</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">max</span><span class="p">()))</span>
 </pre></div>
