@@ -8,29 +8,26 @@
 
     <title>Visualising field using matplotlib &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1051,7 +1048,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Visualising-field-using-matplotlib">
-<h1>Visualising field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#Visualising-field-using-matplotlib" title="Permalink to this headline">¶</a></h1>
+<h1>Visualising field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#Visualising-field-using-matplotlib" title="Permalink to this headline">#</a></h1>
 <p>There are two ways how a field can be visualised, using:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> -<code class="docutils literal notranslate"><span class="pre">k3d</span></code></p></li>
@@ -1111,7 +1108,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Plotting-using-Field.mpl()">
-<h2>Plotting using <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code><a class="headerlink" href="#Plotting-using-Field.mpl()" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting using <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code><a class="headerlink" href="#Plotting-using-Field.mpl()" title="Permalink to this headline">#</a></h2>
 <p>The main function used to visualise the field using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is <code class="docutils literal notranslate"><span class="pre">discertisedfield.Field.mpl</span></code>. Let us try to run it.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -1204,7 +1201,7 @@ out-of-plane component of the vector field. Because of that, there is a scalar (
 </div>
 </section>
 <section id="Available-plotting-functions">
-<h2>Available plotting functions<a class="headerlink" href="#Available-plotting-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Available plotting functions<a class="headerlink" href="#Available-plotting-functions" title="Permalink to this headline">#</a></h2>
 <p>So far, we showed the default behaviour of <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl()</span></code>, a convenience function for simple plots. However, it is often required that a custom plot is built. Here, we show the different available plotting functions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.mpl.scalar</span></code> for plotting scalar fields</p></li>
@@ -1224,7 +1221,7 @@ out-of-plane component of the vector field. Because of that, there is a scalar (
 </div>
 </div>
 <section id="Scalar-field-visualisation-–-mpl.scalar">
-<h3>Scalar field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code><a class="headerlink" href="#Scalar-field-visualisation-–-mpl.scalar" title="Permalink to this headline">¶</a></h3>
+<h3>Scalar field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code><a class="headerlink" href="#Scalar-field-visualisation-–-mpl.scalar" title="Permalink to this headline">#</a></h3>
 <p>First, we simply try to plot the full field using <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1433,7 +1430,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </section>
 <section id="Vector-field-visualisation-–-mpl.vector">
-<h3>Vector field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code><a class="headerlink" href="#Vector-field-visualisation-–-mpl.vector" title="Permalink to this headline">¶</a></h3>
+<h3>Vector field visualisation – <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code><a class="headerlink" href="#Vector-field-visualisation-–-mpl.vector" title="Permalink to this headline">#</a></h3>
 <p>The default plot is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
@@ -1603,7 +1600,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </section>
 <section id="Contour-line-plots-–-mpl.contour">
-<h3>Contour line plots – <code class="docutils literal notranslate"><span class="pre">mpl.contour</span></code><a class="headerlink" href="#Contour-line-plots-–-mpl.contour" title="Permalink to this headline">¶</a></h3>
+<h3>Contour line plots – <code class="docutils literal notranslate"><span class="pre">mpl.contour</span></code><a class="headerlink" href="#Contour-line-plots-–-mpl.contour" title="Permalink to this headline">#</a></h3>
 <p>Scalar fields can be plotted as contour line plots.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
@@ -1648,7 +1645,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </section>
 <section id="HSL-plots-–-mpl.lightness">
-<h3>HSL plots – <code class="docutils literal notranslate"><span class="pre">mpl.lightness</span></code><a class="headerlink" href="#HSL-plots-–-mpl.lightness" title="Permalink to this headline">¶</a></h3>
+<h3>HSL plots – <code class="docutils literal notranslate"><span class="pre">mpl.lightness</span></code><a class="headerlink" href="#HSL-plots-–-mpl.lightness" title="Permalink to this headline">#</a></h3>
 <p>A common way to plot full vector fields is to use the HSV/HSL color scheme. The angle of the in-plane component is then shown by colour, the out-of-plane component by the lightness.</p>
 <p><code class="docutils literal notranslate"><span class="pre">mpl.lighness</span></code> can be used for fields with <code class="docutils literal notranslate"><span class="pre">dim=1</span></code>, <code class="docutils literal notranslate"><span class="pre">dim=2</span></code>, or <code class="docutils literal notranslate"><span class="pre">dim=3</span></code>. For <code class="docutils literal notranslate"><span class="pre">dim=3</span></code> vector fields the out-of-plane component is used for the lightness, otherwise the <code class="docutils literal notranslate"><span class="pre">norm</span></code> is used by default. If no <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> is specified, the norm is used as filter field by default.</p>
 <div class="nbinput docutils container">
@@ -1743,7 +1740,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </div>
 <section id="colorwheel">
-<h4><code class="docutils literal notranslate"><span class="pre">colorwheel</span></code><a class="headerlink" href="#colorwheel" title="Permalink to this headline">¶</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">colorwheel</span></code><a class="headerlink" href="#colorwheel" title="Permalink to this headline">#</a></h4>
 <p>We can pass additional keyword arguments to <code class="docutils literal notranslate"><span class="pre">colorwheel_args</span></code> in the <code class="docutils literal notranslate"><span class="pre">lighness</span></code> plot.</p>
 <p>To get more control over the colorwheel the function to draw the colorwheel is exposed an can be used separatly. We have to explicitly give an axis to <code class="docutils literal notranslate"><span class="pre">add_colorwheel</span></code>.</p>
 <div class="nbinput docutils container">
@@ -1802,7 +1799,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </section>
 </section>
 <section id="Combining-scalar-and-vector-plots-–-mpl()">
-<h3>Combining scalar and vector plots – <code class="docutils literal notranslate"><span class="pre">mpl()</span></code><a class="headerlink" href="#Combining-scalar-and-vector-plots-–-mpl()" title="Permalink to this headline">¶</a></h3>
+<h3>Combining scalar and vector plots – <code class="docutils literal notranslate"><span class="pre">mpl()</span></code><a class="headerlink" href="#Combining-scalar-and-vector-plots-–-mpl()" title="Permalink to this headline">#</a></h3>
 <p>In the beginning, we have briefly seen, that we can use the convenience function <code class="docutils literal notranslate"><span class="pre">mpl()</span></code> to generate plots. We can adjust these plots by passing <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> or <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code> that are internally passed to <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> and <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code>, respectivly. All arguments allowed for <code class="docutils literal notranslate"><span class="pre">mpl.scalar</span></code> or <code class="docutils literal notranslate"><span class="pre">mpl.vector</span></code> can be specified. By default <code class="docutils literal notranslate"><span class="pre">use_color=False</span></code> for the quiver plot. To disable automatic filtering add <code class="docutils literal notranslate"><span class="pre">scalar_kw={'filter_field':</span> <span class="pre">None}</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
@@ -1832,7 +1829,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </section>
 </section>
 <section id="Building-a-custom-plot">
-<h2>Building a custom plot<a class="headerlink" href="#Building-a-custom-plot" title="Permalink to this headline">¶</a></h2>
+<h2>Building a custom plot<a class="headerlink" href="#Building-a-custom-plot" title="Permalink to this headline">#</a></h2>
 <p>We can build custom plots by combining the different available plots. This is done via passing axes to the plotting functions. In the following we start with a step-by-step example and then show some additional examples.</p>
 <p>First, we manually create the combined <code class="docutils literal notranslate"><span class="pre">scalar</span></code>-<code class="docutils literal notranslate"><span class="pre">vector</span></code> plot similar to the one show in the cell above. We start by creating figure and axes.</p>
 <div class="nbinput docutils container">
@@ -1952,7 +1949,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </section>
 <section id="Interactive-plots">
-<h2>Interactive plots<a class="headerlink" href="#Interactive-plots" title="Permalink to this headline">¶</a></h2>
+<h2>Interactive plots<a class="headerlink" href="#Interactive-plots" title="Permalink to this headline">#</a></h2>
 <p>We can create interactive plots based on <code class="docutils literal notranslate"><span class="pre">Ipython</span> <span class="pre">Widgets</span></code>. We define a new field to demonstrate the different interactive plots.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
@@ -2118,7 +2115,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
 </div>
 </section>
 <section id="Plotting-field-values-along-the-line">
-<h2>Plotting field values along the line<a class="headerlink" href="#Plotting-field-values-along-the-line" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting field values along the line<a class="headerlink" href="#Plotting-field-values-along-the-line" title="Permalink to this headline">#</a></h2>
 <p>Sometimes it is necessary to explore the field values along a certain line. More precisely, to plot the field values along a line defined between two points. We again use the vortex field. Firstly, we need to obtain <span class="math notranslate nohighlight">\(z\)</span> values of the field on a line between <span class="math notranslate nohighlight">\((-15\,\mathrm{nm}, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((15\,\mathrm{nm}, 0, 0)\)</span> at <span class="math notranslate nohighlight">\(n=20\)</span> points.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
@@ -2203,8 +2200,9 @@ Exception raised: Cannot plot self.field.dim=3 field.
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -2215,7 +2213,7 @@ Exception raised: Cannot plot self.field.dim=3 field.
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -8,29 +8,26 @@
 
     <title>Dynamics equation &#8212; ubermag  documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -547,13 +544,13 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Dynamics-equation">
-<h1>Dynamics equation<a class="headerlink" href="#Dynamics-equation" title="Permalink to this headline">¶</a></h1>
+<h1>Dynamics equation<a class="headerlink" href="#Dynamics-equation" title="Permalink to this headline">#</a></h1>
 <p>The dynamics of magnetisation field <span class="math notranslate nohighlight">\(\mathbf{m}\)</span>, without external excitations (e.g. spin-polarised current) is governed by the Landau-Lifshitz-Gilbert (LLG) equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{d\mathbf{m}}{dt} = \underbrace{-\gamma_{0}(\mathbf{m} \times \mathbf{H}_\text{eff})}_\text{precession} + \underbrace{\alpha\left(\mathbf{m} \times \frac{d\mathbf{m}}{dt}\right)}_\text{damping},\]</div>
 <p>where <span class="math notranslate nohighlight">\(\gamma_{0} = \mu_{0}\gamma\)</span> is the gyromagnetic ratio, <span class="math notranslate nohighlight">\(\alpha\)</span> is the Gilbert damping, and <span class="math notranslate nohighlight">\(\mathbf{H}_\text{eff} = -\frac{1}{\mu_{0}M_\text{s}}\frac{\delta w(\mathbf{m})}{\delta \mathbf{m}}\)</span> is the effective field. It consists of two terms: precession and damping. In this tutorial, we will explore some basic properties of this equation to understand how to define it in simulations.</p>
 <section id="Macrospin">
-<h2>Macrospin<a class="headerlink" href="#Macrospin" title="Permalink to this headline">¶</a></h2>
+<h2>Macrospin<a class="headerlink" href="#Macrospin" title="Permalink to this headline">#</a></h2>
 <p>We will study the simplest “zero-dimensional” case - macrospin. In the first step, after we import necessary modules and create the mesh which consists of a single discretisation cell.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -597,7 +594,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Dynamics-simulation">
-<h2>Dynamics simulation<a class="headerlink" href="#Dynamics-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>Dynamics simulation<a class="headerlink" href="#Dynamics-simulation" title="Permalink to this headline">#</a></h2>
 <p>In the next step we can define the system’s dynamics. Let us assume we have <span class="math notranslate nohighlight">\(\gamma_{0} = 2.211 \times 10^{5} \,\text{m}\,\text{A}^{-1}\,\text{s}^{-1}\)</span> and <span class="math notranslate nohighlight">\(\alpha=0.1\)</span>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -659,7 +656,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.5 s)
 </div>
 </section>
 <section id="Simulation-results">
-<h2>Simulation results<a class="headerlink" href="#Simulation-results" title="Permalink to this headline">¶</a></h2>
+<h2>Simulation results<a class="headerlink" href="#Simulation-results" title="Permalink to this headline">#</a></h2>
 <p>How different system parameters vary with time, we can inspect by showing the system’s datatable.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -935,7 +932,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.5 s)
 </div>
 <p>We can see that after some time the macrospin aligns parallel to the external magnetic field in the <span class="math notranslate nohighlight">\(z\)</span> direction. We can also have a look at the dynamics using an interactive plot.</p>
 <section id="Exercise-1">
-<h3>Exercise 1<a class="headerlink" href="#Exercise-1" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 1<a class="headerlink" href="#Exercise-1" title="Permalink to this headline">#</a></h3>
 <p>Modify Gilbert damping and set it to <span class="math notranslate nohighlight">\(\alpha=0.005\)</span> and see what happens with the dynamics.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -968,7 +965,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.3 s)
 </div>
 </section>
 <section id="Exercise-2">
-<h3>Exercise 2<a class="headerlink" href="#Exercise-2" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 2<a class="headerlink" href="#Exercise-2" title="Permalink to this headline">#</a></h3>
 <p>Repeat the simulation with <span class="math notranslate nohighlight">\(\alpha=0.1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{H} = (0, 0, -2\times 10^{6})\,\text{A}\,\text{m}^{-1}\)</span>.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -1002,7 +999,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.6 s)
 </div>
 </section>
 <section id="Exercise-3">
-<h3>Exercise 3<a class="headerlink" href="#Exercise-3" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 3<a class="headerlink" href="#Exercise-3" title="Permalink to this headline">#</a></h3>
 <p>Keep using <span class="math notranslate nohighlight">\(\alpha=0.1\)</span>. Change the field from <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">-2e6)</span></code> to <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">-1.41e6,</span> <span class="pre">-1.41e6)</span></code>, and plot <span class="math notranslate nohighlight">\(m_x(t)\)</span>, <span class="math notranslate nohighlight">\(m_y(t)\)</span> and <span class="math notranslate nohighlight">\(m_z(t)\)</span> as above. Can you explain the (initially non-intuitive) output?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1065,8 +1062,9 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.4 s)
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1077,7 +1075,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:52]... (1.4 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

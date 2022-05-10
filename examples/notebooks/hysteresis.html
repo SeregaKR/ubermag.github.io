@@ -8,29 +8,26 @@
 
     <title>Hysteresis simulations &#8212; ubermag  documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -598,7 +595,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Hysteresis-simulations">
-<h1>Hysteresis simulations<a class="headerlink" href="#Hysteresis-simulations" title="Permalink to this headline">¶</a></h1>
+<h1>Hysteresis simulations<a class="headerlink" href="#Hysteresis-simulations" title="Permalink to this headline">#</a></h1>
 <p>In this tutorial, we summarise some of the convenience methods offered by Ubermag that can be used for simulating hysteresis. Let us first define a simple system object. For details on how to define simulations, please refer to other tutorials.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -943,7 +940,7 @@ Name: B_hysteresis, dtype: float64
 </pre></div></div>
 </div>
 <section id="Plotting-hysteresis-loop">
-<h2>Plotting hysteresis loop<a class="headerlink" href="#Plotting-hysteresis-loop" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting hysteresis loop<a class="headerlink" href="#Plotting-hysteresis-loop" title="Permalink to this headline">#</a></h2>
 <p>Using <code class="docutils literal notranslate"><span class="pre">Table</span></code> object, we can plot different values as a function of external magnetic field. For that, as usual, we use <code class="docutils literal notranslate"><span class="pre">mpl</span></code> method. We have to specify to that method what do we want to have on the <span class="math notranslate nohighlight">\(y\)</span>-axis.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -994,7 +991,7 @@ Name: B_hysteresis, dtype: float64
 </div>
 </section>
 <section id="micromagneticdata-analysis">
-<h2><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> analysis<a class="headerlink" href="#micromagneticdata-analysis" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> analysis<a class="headerlink" href="#micromagneticdata-analysis" title="Permalink to this headline">#</a></h2>
 <p>We can also analyse magnetisation fields at different values of external magnetic field as well as building interactive plots using <code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code> package.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1172,8 +1169,9 @@ Name: B_hysteresis, dtype: float64
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1184,7 +1182,7 @@ Name: B_hysteresis, dtype: float64
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

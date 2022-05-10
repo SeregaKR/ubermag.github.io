@@ -8,29 +8,26 @@
 
     <title>Changelog &#8212; ubermag  documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -52,7 +49,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -255,6 +252,22 @@
    0.51 (Feb 10, 2021)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compatibility-ubermag-oommf">
+   Compatibility
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     ubermag
+    </span>
+   </code>
+   -
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     OOMMF
+    </span>
+   </code>
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -279,11 +292,11 @@
               <div>
                 
   <section id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">#</a></h1>
 <section id="mar-17-2022">
-<h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Permalink to this headline">¶</a></h2>
+<h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Permalink to this headline">#</a></h2>
 <section id="bug-fixes">
-<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
 <li><p>The old docker image of oommf (2.0a2 was used by default (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/84">#84</a>).</p></li>
@@ -295,9 +308,9 @@ in a runtime error (<a class="reference external" href="https://github.com/uberm
 </section>
 </section>
 <section id="feb-22-2022">
-<h2>0.61.0 (Feb 22, 2022)<a class="headerlink" href="#feb-22-2022" title="Permalink to this headline">¶</a></h2>
+<h2>0.61.0 (Feb 22, 2022)<a class="headerlink" href="#feb-22-2022" title="Permalink to this headline">#</a></h2>
 <section id="general">
-<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Support Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
 (MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS
@@ -305,7 +318,7 @@ and Linux.</p></li>
 </ul>
 </section>
 <section id="new-functionality">
-<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">¶</a></h3>
+<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">#</a></h3>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul>
 <li><p>Support for <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> in plotting method <code class="docutils literal notranslate"><span class="pre">Field.mpl.lighness</span></code>.</p></li>
@@ -395,7 +408,7 @@ the old behaviour. (<a class="reference external" href="https://github.com/uberm
 </dl>
 </section>
 <section id="backwards-incompatible-changes">
-<h3>Backwards-incompatible changes<a class="headerlink" href="#backwards-incompatible-changes" title="Permalink to this headline">¶</a></h3>
+<h3>Backwards-incompatible changes<a class="headerlink" href="#backwards-incompatible-changes" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Keywords for <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> and <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code>
@@ -410,7 +423,7 @@ consistency reasons).</p></li>
 </dl>
 </section>
 <section id="id1">
-<h3>Bug fixes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Bug fixes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Simultaneous use of <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> and <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code> in
@@ -430,9 +443,9 @@ additional zeeman field.</p></li>
 </section>
 </section>
 <section id="oct-1-2021">
-<h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this headline">¶</a></h2>
+<h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this headline">#</a></h2>
 <section id="id2">
-<h3>General<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>General<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
 <li><p>Versions in sync across all packages</p></li>
@@ -440,7 +453,7 @@ additional zeeman field.</p></li>
 </ul>
 </section>
 <section id="id3">
-<h3>New functionality<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>New functionality<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
@@ -493,7 +506,7 @@ temperature.</p></li>
 </dl>
 </section>
 <section id="id4">
-<h3>Bug fixes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>Bug fixes<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing
@@ -523,12 +536,58 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
 </section>
 </section>
 <section id="feb-10-2021">
-<h2>0.51 (Feb 10, 2021)<a class="headerlink" href="#feb-10-2021" title="Permalink to this headline">¶</a></h2>
+<h2>0.51 (Feb 10, 2021)<a class="headerlink" href="#feb-10-2021" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>New subpackage <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> containing functions to operate on
 <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p></li>
 <li><p>New integration syntax.</p></li>
 </ul>
+</section>
+<section id="compatibility-ubermag-oommf">
+<h2>Compatibility <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> - <code class="docutils literal notranslate"><span class="pre">OOMMF</span></code><a class="headerlink" href="#compatibility-ubermag-oommf" title="Permalink to this headline">#</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 33%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ubermag</p></th>
+<th class="head"><p>Ubermag release date</p></th>
+<th class="head"><p>oommfc</p></th>
+<th class="head"><p>OOMMF</p></th>
+<th class="head"><p>OOMMF Docker image</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.61.2</p></td>
+<td><p>2022-03-17</p></td>
+<td><p>0.61.1</p></td>
+<td><p>2.0a3</p></td>
+<td><p>oommf/oommf:20a3</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.61.0</p></td>
+<td><p>2022-02-22</p></td>
+<td><p>0.61.0</p></td>
+<td><p>2.0a3</p></td>
+<td><p>oommf/oommf:20a3</p></td>
+</tr>
+<tr class="row-even"><td><p>0.60.0</p></td>
+<td><p>2021-10-01</p></td>
+<td><p>0.60.0</p></td>
+<td><p>2.0a2</p></td>
+<td><p>oommf/oommf:20a2</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.51</p></td>
+<td><p>2021-02-10</p></td>
+<td><p>0.10.1</p></td>
+<td><p>2.0a1</p></td>
+<td><p>ubermag/oommf</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -560,8 +619,9 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -572,7 +632,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

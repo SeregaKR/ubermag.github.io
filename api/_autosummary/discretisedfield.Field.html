@@ -8,29 +8,26 @@
 
     <title>Field &#8212; ubermag  documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1314,10 +1311,10 @@
               <div>
                 
   <section id="field">
-<h1>Field<a class="headerlink" href="#field" title="Permalink to this headline">¶</a></h1>
+<h1>Field<a class="headerlink" href="#field" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Field">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this definition">#</a></dt>
 <dd><p>Finite-difference field.</p>
 <p>This class specifies a finite-difference field and defines operations for
 its analysis and visualisation. The field is defined on a finite-difference
@@ -1409,7 +1406,7 @@ film.</p>
 <p><a class="reference internal" href="discretisedfield.Mesh.html#discretisedfield.Mesh" title="discretisedfield.Mesh"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mesh()</span></code></a></p>
 </div>
 <hr><p class="rubric">Methods</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1502,7 +1499,7 @@ film.</p>
 </tbody>
 </table>
 <p class="rubric">Properties</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1584,7 +1581,7 @@ film.</p>
 </table>
 <hr><dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__abs__">
-<span class="sig-name descname"><span class="pre">__abs__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__abs__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__abs__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__abs__" title="Permalink to this definition">#</a></dt>
 <dd><p>Field norm.</p>
 <p>This is a convenience operator and it returns
 <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.norm</span></code>. For details, please refer to
@@ -1621,7 +1618,7 @@ film.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__add__">
-<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__add__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
 <p>It can be applied between two <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects or
 between a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object and a “constant”. For
@@ -1680,7 +1677,7 @@ same mesh and have the same dimensions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__and__">
-<span class="sig-name descname"><span class="pre">__and__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__and__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__and__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__and__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator, defined as cross product.</p>
 <p>This method computes the cross product between two fields. Both fields
 must be three-dimensional (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) and defined on the same mesh.</p>
@@ -1721,13 +1718,13 @@ must be three-dimensional (<code class="docutils literal notranslate"><span clas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__array_ufunc__">
-<span class="sig-name descname"><span class="pre">__array_ufunc__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ufunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__array_ufunc__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__array_ufunc__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ufunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__array_ufunc__" title="Permalink to this definition">#</a></dt>
 <dd><p>Field class support for numpy <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__call__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Sample the field value at <code class="docutils literal notranslate"><span class="pre">point</span></code>.</p>
 <p>It returns the value of the field in the discretisation cell to which
 <code class="docutils literal notranslate"><span class="pre">point</span></code> belongs to. It returns a tuple, whose length is the same as
@@ -1765,7 +1762,7 @@ p_{z})\)</span>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__dir__">
-<span class="sig-name descname"><span class="pre">__dir__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__dir__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__dir__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__dir__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extension of the <code class="docutils literal notranslate"><span class="pre">dir(self)</span></code> list.</p>
 <p>Adds component labels to the <code class="docutils literal notranslate"><span class="pre">dir(self)</span></code> list. Similarly, adds or
 removes methods (<code class="docutils literal notranslate"><span class="pre">grad</span></code>, <code class="docutils literal notranslate"><span class="pre">div</span></code>,…) depending on the dimension of
@@ -1782,7 +1779,7 @@ the field.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__eq__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__eq__" title="Permalink to this definition">#</a></dt>
 <dd><p>Relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
 <p>Two fields are considered to be equal if:</p>
 <blockquote>
@@ -1832,7 +1829,7 @@ the field.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__getattr__">
-<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__getattr__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__getattr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extract the component of the vector field.</p>
 <p>This method provides access to individual field components for fields
 with dimension &gt; 1. Component labels are defined in the <code class="docutils literal notranslate"><span class="pre">components</span></code>
@@ -1911,7 +1908,7 @@ access to individual vector components.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__getitem__">
-<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__getitem__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__getitem__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extracts the field on a subregion.</p>
 <p>If subregions were defined by passing <code class="docutils literal notranslate"><span class="pre">subregions</span></code> dictionary when
 the mesh was created, this method returns a field in a subregion
@@ -1984,7 +1981,7 @@ object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__iter__">
-<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__iter__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__iter__" title="Permalink to this definition">#</a></dt>
 <dd><p>Generator yielding coordinates and values of all mesh
 discretisation cells.</p>
 <dl class="field-list simple">
@@ -2021,7 +2018,7 @@ discretisation cells.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__lshift__">
-<span class="sig-name descname"><span class="pre">__lshift__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__lshift__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__lshift__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__lshift__" title="Permalink to this definition">#</a></dt>
 <dd><p>Stacks multiple scalar fields in a single vector field.</p>
 <p>This method takes a list of scalar (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>) fields and returns a
 vector field, whose components are defined by the scalar fields passed.
@@ -2075,7 +2072,7 @@ field is equal to the length of the passed list.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__matmul__">
-<span class="sig-name descname"><span class="pre">__matmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__matmul__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__matmul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__matmul__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator, defined as dot product.</p>
 <p>This method computes the dot product between two fields. Both fields
 must be three-dimensional (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) and defined on the same mesh.</p>
@@ -2114,7 +2111,7 @@ must be three-dimensional (<code class="docutils literal notranslate"><span clas
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__mul__">
-<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__mul__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__mul__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__mul__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">*</span></code> operator.</p>
 <p>It can be applied between:</p>
 <ol class="arabic simple">
@@ -2180,7 +2177,7 @@ defined on the same mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__neg__">
-<span class="sig-name descname"><span class="pre">__neg__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__neg__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__neg__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__neg__" title="Permalink to this definition">#</a></dt>
 <dd><p>Unary <code class="docutils literal notranslate"><span class="pre">-</span></code> operator.</p>
 <p>This method negates the value of each discretisation cell. It is
 equivalent to multiplication with -1:</p>
@@ -2226,7 +2223,7 @@ equivalent to multiplication with -1:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__pos__">
-<span class="sig-name descname"><span class="pre">__pos__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__pos__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__pos__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__pos__" title="Permalink to this definition">#</a></dt>
 <dd><p>Unary <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
 <p>This method defines the unary operator <code class="docutils literal notranslate"><span class="pre">+</span></code>. It returns the field
 itself:</p>
@@ -2265,7 +2262,7 @@ itself:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__pow__">
-<span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__pow__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__pow__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__pow__" title="Permalink to this definition">#</a></dt>
 <dd><p>Unary <code class="docutils literal notranslate"><span class="pre">**</span></code> operator.</p>
 <p>This method defines the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator for scalar (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>) fields
 only. This operator is not defined for vector (<code class="docutils literal notranslate"><span class="pre">dim&gt;1</span></code>) fields, and
@@ -2329,7 +2326,7 @@ only. This operator is not defined for vector (<code class="docutils literal not
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__repr__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__repr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Representation string.</p>
 <p>Internally <cite>self._repr_html_()</cite> is called and all html tags are removed
 from this string.</p>
@@ -2361,7 +2358,7 @@ from this string.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__sub__">
-<span class="sig-name descname"><span class="pre">__sub__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__sub__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__sub__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__sub__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">-</span></code> operator.</p>
 <p>It can be applied between two <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects or
 between a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object and a “constant”. For
@@ -2416,7 +2413,7 @@ same mesh and have the same dimensions.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.__truediv__">
-<span class="sig-name descname"><span class="pre">__truediv__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__truediv__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__truediv__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.__truediv__" title="Permalink to this definition">#</a></dt>
 <dd><p>Binary <code class="docutils literal notranslate"><span class="pre">/</span></code> operator.</p>
 <p>It can be applied between:</p>
 <ol class="arabic simple">
@@ -2481,7 +2478,7 @@ defined on the same mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.allclose">
-<span class="sig-name descname"><span class="pre">allclose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.allclose" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">allclose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rtol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.allclose" title="Permalink to this definition">#</a></dt>
 <dd><p>Allclose method.</p>
 <p>This method determines whether two fields are:</p>
 <blockquote>
@@ -2533,7 +2530,7 @@ defined on the same mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.derivative">
-<span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.derivative" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.derivative" title="Permalink to this definition">#</a></dt>
 <dd><p>Directional derivative.</p>
 <p>This method computes a directional derivative of the field and returns
 a field. The direction in which the derivative is computed is passed
@@ -2617,7 +2614,7 @@ second-order derivatives in all directions are expected to be zero.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.fromfile">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.fromfile" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.fromfile" title="Permalink to this definition">#</a></dt>
 <dd><p>Read the field from an OVF (1.0 or 2.0), VTK, or HDF5 file.</p>
 <dl class="simple">
 <dt>The extension of the <code class="docutils literal notranslate"><span class="pre">filename</span></code> should correspond to either:</dt><dd><ul class="simple">
@@ -2693,7 +2690,7 @@ second-order derivatives in all directions are expected to be zero.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.integral">
-<span class="sig-name descname"><span class="pre">integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'xyz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">improper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.integral" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'xyz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">improper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.integral" title="Permalink to this definition">#</a></dt>
 <dd><p>Integral.</p>
 <p>This method integrates the field over the mesh along the specified
 direction(s), which can ce specified using <code class="docutils literal notranslate"><span class="pre">direction</span></code>. Field must be
@@ -2801,7 +2798,7 @@ the dimension of the field.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.line">
-<span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.line" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.line" title="Permalink to this definition">#</a></dt>
 <dd><p>Sample the field along the line.</p>
 <p>Given two points <span class="math notranslate nohighlight">\(p_{1}\)</span> and <span class="math notranslate nohighlight">\(p_{2}\)</span>, <span class="math notranslate nohighlight">\(n\)</span> position
 coordinates are generated and the corresponding field values.</p>
@@ -2845,7 +2842,7 @@ coordinates are generated and the corresponding field values.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.pad">
-<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pad_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.pad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pad_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.pad" title="Permalink to this definition">#</a></dt>
 <dd><p>Field padding.</p>
 <p>This method pads the field by adding more cells in chosen direction and
 assigning to them the values as specified by the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument.
@@ -2897,7 +2894,7 @@ added in the positive direction.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.plane">
-<span class="sig-name descname"><span class="pre">plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.plane" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.plane" title="Permalink to this definition">#</a></dt>
 <dd><p>Extracts field on the plane mesh.</p>
 <p>If one of the axes (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) is passed as a
 string, a plane mesh perpendicular to that axis is extracted,
@@ -2956,7 +2953,7 @@ two dimensions on the plane can be defined using <code class="docutils literal n
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.project">
-<span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.project" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.project" title="Permalink to this definition">#</a></dt>
 <dd><p>Projects the field along one direction and averages it out along
 that direction.</p>
 <p>One of the axes (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) is passed and the field
@@ -2999,7 +2996,7 @@ the field which has only one discretisation cell in the z-direction.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bin8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_scalar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.write" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bin8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_scalar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.write" title="Permalink to this definition">#</a></dt>
 <dd><p>Write the field to OVF, HDF5, or VTK file.</p>
 <p>If the extension of <code class="docutils literal notranslate"><span class="pre">filename</span></code> is <code class="docutils literal notranslate"><span class="pre">.vtk</span></code>, a VTK file is written
 (<code class="xref py py-func docutils literal notranslate"><span class="pre">_writevtk()</span></code>).</p>
@@ -3079,12 +3076,12 @@ precisely, if the value at a cell is 3, that cell will be saved as
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="discretisedfield.Field.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Field.__hash__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Field.__hash__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.angle">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle</span></span><a class="headerlink" href="#discretisedfield.Field.angle" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle</span></span><a class="headerlink" href="#discretisedfield.Field.angle" title="Permalink to this definition">#</a></dt>
 <dd><p>In-plane angle of the vector field.</p>
 <p>This method can be applied only on sliced fields, when a plane is
 defined. This method then returns a scalar field which is an angle
@@ -3123,7 +3120,7 @@ axis. The angle is computed in radians and all values are in <span class="math n
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.array">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">array</span></span><a class="headerlink" href="#discretisedfield.Field.array" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">array</span></span><a class="headerlink" href="#discretisedfield.Field.array" title="Permalink to this definition">#</a></dt>
 <dd><p>Field value as <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>.</p>
 <p>The shape of the array is <code class="docutils literal notranslate"><span class="pre">(*mesh.n,</span> <span class="pre">dim)</span></code>.</p>
 <dl class="field-list simple">
@@ -3175,7 +3172,7 @@ axis. The angle is computed in radians and all values are in <span class="math n
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.average">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">average</span></span><a class="headerlink" href="#discretisedfield.Field.average" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">average</span></span><a class="headerlink" href="#discretisedfield.Field.average" title="Permalink to this definition">#</a></dt>
 <dd><p>Field average.</p>
 <p>It computes the average of the field over the entire volume of the
 mesh. It returns a tuple with the length same as the dimension
@@ -3216,19 +3213,19 @@ mesh. It returns a tuple with the length same as the dimension
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.components">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">components</span></span><a class="headerlink" href="#discretisedfield.Field.components" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">components</span></span><a class="headerlink" href="#discretisedfield.Field.components" title="Permalink to this definition">#</a></dt>
 <dd><p>Vector components of the field.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.conjugate">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">conjugate</span></span><a class="headerlink" href="#discretisedfield.Field.conjugate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">conjugate</span></span><a class="headerlink" href="#discretisedfield.Field.conjugate" title="Permalink to this definition">#</a></dt>
 <dd><p>Complex conjugate of complex field.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.curl">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">curl</span></span><a class="headerlink" href="#discretisedfield.Field.curl" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">curl</span></span><a class="headerlink" href="#discretisedfield.Field.curl" title="Permalink to this definition">#</a></dt>
 <dd><p>Curl.</p>
 <p>This method computes the curl of a vector (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) field and returns
 a vector (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) as a result:</p>
@@ -3292,7 +3289,7 @@ the curl to be to be a constant vector field <span class="math notranslate nohig
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.div">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">div</span></span><a class="headerlink" href="#discretisedfield.Field.div" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">div</span></span><a class="headerlink" href="#discretisedfield.Field.div" title="Permalink to this definition">#</a></dt>
 <dd><p>Divergence.</p>
 <p>This method computes the divergence of a vector (<code class="docutils literal notranslate"><span class="pre">dim=2</span></code> or
 <code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) field and returns a scalar (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>) field as a result.</p>
@@ -3353,7 +3350,7 @@ the divergence to be to be a constant scalar field <span class="math notranslate
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.fftn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fftn</span></span><a class="headerlink" href="#discretisedfield.Field.fftn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fftn</span></span><a class="headerlink" href="#discretisedfield.Field.fftn" title="Permalink to this definition">#</a></dt>
 <dd><p>Fourier transform.</p>
 <p>Computes 3D FFT for “normal” fields, 2D FFT if the field is sliced.</p>
 <dl class="field-list simple">
@@ -3365,7 +3362,7 @@ the divergence to be to be a constant scalar field <span class="math notranslate
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.grad">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grad</span></span><a class="headerlink" href="#discretisedfield.Field.grad" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grad</span></span><a class="headerlink" href="#discretisedfield.Field.grad" title="Permalink to this definition">#</a></dt>
 <dd><p>Gradient.</p>
 <p>This method computes the gradient of a scalar (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>) field and
 returns a vector field:</p>
@@ -3434,7 +3431,7 @@ to be a constant vector field <span class="math notranslate nohighlight">\(\\nab
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.ifftn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ifftn</span></span><a class="headerlink" href="#discretisedfield.Field.ifftn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ifftn</span></span><a class="headerlink" href="#discretisedfield.Field.ifftn" title="Permalink to this definition">#</a></dt>
 <dd><p>Inverse Fourier transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -3445,13 +3442,13 @@ to be a constant vector field <span class="math notranslate nohighlight">\(\\nab
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.imag">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imag</span></span><a class="headerlink" href="#discretisedfield.Field.imag" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imag</span></span><a class="headerlink" href="#discretisedfield.Field.imag" title="Permalink to this definition">#</a></dt>
 <dd><p>Imaginary part of complex field.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.irfftn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">irfftn</span></span><a class="headerlink" href="#discretisedfield.Field.irfftn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">irfftn</span></span><a class="headerlink" href="#discretisedfield.Field.irfftn" title="Permalink to this definition">#</a></dt>
 <dd><p>Inverse real Fourier transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -3462,13 +3459,13 @@ to be a constant vector field <span class="math notranslate nohighlight">\(\\nab
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.k3d">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k3d</span></span><a class="headerlink" href="#discretisedfield.Field.k3d" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k3d</span></span><a class="headerlink" href="#discretisedfield.Field.k3d" title="Permalink to this definition">#</a></dt>
 <dd><p>Plot interface, k3d based.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.laplace">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">laplace</span></span><a class="headerlink" href="#discretisedfield.Field.laplace" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">laplace</span></span><a class="headerlink" href="#discretisedfield.Field.laplace" title="Permalink to this definition">#</a></dt>
 <dd><p>Laplace operator.</p>
 <p>This method computes the laplacian of a scalar (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>) or a vector
 (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) field and returns a resulting field:</p>
@@ -3528,7 +3525,7 @@ the Laplacian to be a constant vector field <span class="math notranslate nohigh
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.mpl">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mpl</span></span><a class="headerlink" href="#discretisedfield.Field.mpl" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mpl</span></span><a class="headerlink" href="#discretisedfield.Field.mpl" title="Permalink to this definition">#</a></dt>
 <dd><p>Plot interface, matplotlib based.</p>
 <p>This property provides access to the different plotting methods. It is
 also callable to quickly generate plots. For more details and the
@@ -3562,7 +3559,7 @@ available methods refer to the documentation linked below.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.norm">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">norm</span></span><a class="headerlink" href="#discretisedfield.Field.norm" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">norm</span></span><a class="headerlink" href="#discretisedfield.Field.norm" title="Permalink to this definition">#</a></dt>
 <dd><p>Norm of the field.</p>
 <p>Computes the norm of the field and returns <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>
 with <code class="docutils literal notranslate"><span class="pre">dim=1</span></code>. Norm of a scalar field is interpreted as an absolute
@@ -3631,7 +3628,7 @@ contains zero values, norm cannot be set and <code class="docutils literal notra
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.orientation">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientation</span></span><a class="headerlink" href="#discretisedfield.Field.orientation" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orientation</span></span><a class="headerlink" href="#discretisedfield.Field.orientation" title="Permalink to this definition">#</a></dt>
 <dd><p>Orientation field.</p>
 <p>This method computes the orientation (direction) of a vector field and
 returns <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> with the same dimension. More
@@ -3672,19 +3669,19 @@ case of a scalar (<code class="docutils literal notranslate"><span class="pre">d
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.phase">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phase</span></span><a class="headerlink" href="#discretisedfield.Field.phase" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">phase</span></span><a class="headerlink" href="#discretisedfield.Field.phase" title="Permalink to this definition">#</a></dt>
 <dd><p>Phase of complex field.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.real">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">real</span></span><a class="headerlink" href="#discretisedfield.Field.real" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">real</span></span><a class="headerlink" href="#discretisedfield.Field.real" title="Permalink to this definition">#</a></dt>
 <dd><p>Real part of complex field.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.rfftn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rfftn</span></span><a class="headerlink" href="#discretisedfield.Field.rfftn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rfftn</span></span><a class="headerlink" href="#discretisedfield.Field.rfftn" title="Permalink to this definition">#</a></dt>
 <dd><p>Real Fourier transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -3695,7 +3692,7 @@ case of a scalar (<code class="docutils literal notranslate"><span class="pre">d
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#discretisedfield.Field.value" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#discretisedfield.Field.value" title="Permalink to this definition">#</a></dt>
 <dd><p>Field value representation.</p>
 <p>This property returns a representation of the field value if it exists.
 Otherwise, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.array</span></code> containing all field values
@@ -3816,7 +3813,7 @@ True</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Field.zero">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zero</span></span><a class="headerlink" href="#discretisedfield.Field.zero" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zero</span></span><a class="headerlink" href="#discretisedfield.Field.zero" title="Permalink to this definition">#</a></dt>
 <dd><p>Zero field.</p>
 <p>This method returns a zero field defined on the same mesh and with the
 same value dimension.</p>
@@ -3879,8 +3876,9 @@ same value dimension.</p>
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -3891,7 +3889,7 @@ same value dimension.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

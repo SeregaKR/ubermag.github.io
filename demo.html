@@ -8,29 +8,26 @@
 
     <title>Demo &#8212; ubermag  documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -506,9 +503,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Demo">
-<h1>Demo<a class="headerlink" href="#Demo" title="Permalink to this headline">¶</a></h1>
+<h1>Demo<a class="headerlink" href="#Demo" title="Permalink to this headline">#</a></h1>
 <section id="Vortex-dynamics">
-<h2>Vortex dynamics<a class="headerlink" href="#Vortex-dynamics" title="Permalink to this headline">¶</a></h2>
+<h2>Vortex dynamics<a class="headerlink" href="#Vortex-dynamics" title="Permalink to this headline">#</a></h2>
 <p>In this example, we are going to simulate vortex core dynamics. After creating a vortex structure, we are first going to displace it by applying an external magnetic field. We will then turn off the external field, and compute the time-development of the system, and then be able to see the dynamics of the vortex core.</p>
 <p>The sample is a two-dimensional Permalloy square sample with <span class="math notranslate nohighlight">\(d=100 \,\text{nm}\)</span> edge length and <span class="math notranslate nohighlight">\(5\,\text{nm}\)</span> thickness. Its energy equation consists of ferromagnetic exchange, Zeeman, and demagnetisation energy terms:</p>
 <div class="math notranslate nohighlight">
@@ -533,7 +530,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="System-initialisation">
-<h2>System initialisation<a class="headerlink" href="#System-initialisation" title="Permalink to this headline">¶</a></h2>
+<h2>System initialisation<a class="headerlink" href="#System-initialisation" title="Permalink to this headline">#</a></h2>
 <p>The Ubermag code for defining the micromagnetic system is:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -626,7 +623,7 @@ $-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\fra
 </div>
 </section>
 <section id="Energy-minimisation">
-<h2>Energy minimisation<a class="headerlink" href="#Energy-minimisation" title="Permalink to this headline">¶</a></h2>
+<h2>Energy minimisation<a class="headerlink" href="#Energy-minimisation" title="Permalink to this headline">#</a></h2>
 <p>To carry out micromagnetic simulation, we need to use a micromagnetic calulator. We are going to use OOMMF for this. We can now relax the system in the absence of external magnetic field using energy minimisation driver (<code class="docutils literal notranslate"><span class="pre">MinDriver</span></code>):</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -658,7 +655,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/03/02 13:23]... (0.8 s)
 </div>
 </section>
 <section id="Displacement-with-magnetic-field">
-<h2>Displacement with magnetic field<a class="headerlink" href="#Displacement-with-magnetic-field" title="Permalink to this headline">¶</a></h2>
+<h2>Displacement with magnetic field<a class="headerlink" href="#Displacement-with-magnetic-field" title="Permalink to this headline">#</a></h2>
 <p>Now, we have a relaxed vortex state, with its core at the centre of the sample. As the next step, we want to add an external magnetic field <span class="math notranslate nohighlight">\(H=10^{4}\,\text{Am}^{-1}\)</span> in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction to displace the vortex core. We do that by adding the Zeeman energy term to the energy equation:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -690,7 +687,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/03/02 13:23]... (0.7 s)
 </div>
 </section>
 <section id="Free-relaxation">
-<h2>Free relaxation<a class="headerlink" href="#Free-relaxation" title="Permalink to this headline">¶</a></h2>
+<h2>Free relaxation<a class="headerlink" href="#Free-relaxation" title="Permalink to this headline">#</a></h2>
 <p>The vortex core is now displaced in the positive <span class="math notranslate nohighlight">\(y\)</span>-direction. As the last step, we are going to turn off the external magnetic field and simulate dynamics using <code class="docutils literal notranslate"><span class="pre">TimeDriver</span></code>. We are going to run simulation for <span class="math notranslate nohighlight">\(5\,\text{ns}\)</span> and save the magnetisation in <span class="math notranslate nohighlight">\(500\)</span> steps.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -744,7 +741,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/03/02 13:23]... (5.8 s)
 </div>
 </section>
 <section id="Data-analysis">
-<h2>Data analysis<a class="headerlink" href="#Data-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Data analysis<a class="headerlink" href="#Data-analysis" title="Permalink to this headline">#</a></h2>
 <p>The table with scalar data saved during the simulation. Each row corresponds to one of the 500 saved configurations. We only show selected columns.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1024,8 +1021,9 @@ Running OOMMF (ExeOOMMFRunner)[2022/03/02 13:23]... (5.8 s)
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1036,7 +1034,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/03/02 13:23]... (5.8 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

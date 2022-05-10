@@ -8,29 +8,26 @@
 
     <title>Term parameters &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -979,10 +976,10 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Term-parameters">
-<h1>Term parameters<a class="headerlink" href="#Term-parameters" title="Permalink to this headline">¶</a></h1>
+<h1>Term parameters<a class="headerlink" href="#Term-parameters" title="Permalink to this headline">#</a></h1>
 <p>Every energy terms requires one or more input parameters for its definition. For example, (second order) uniaxial anisotropy energy requires the anisotropy constant <span class="math notranslate nohighlight">\(K\)</span> and the anisotropy axis <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>. There are three ways how these parameters can be defined:</p>
 <section id="1.-Constant-parameters">
-<h2>1. Constant parameters<a class="headerlink" href="#1.-Constant-parameters" title="Permalink to this headline">¶</a></h2>
+<h2>1. Constant parameters<a class="headerlink" href="#1.-Constant-parameters" title="Permalink to this headline">#</a></h2>
 <p>If the energy parameters do not vary in space, they can be defined using constant values.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -995,7 +992,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.-Parameters-defined-“per-region”">
-<h2>2. Parameters defined “per region”<a class="headerlink" href="#2.-Parameters-defined-“per-region”" title="Permalink to this headline">¶</a></h2>
+<h2>2. Parameters defined “per region”<a class="headerlink" href="#2.-Parameters-defined-“per-region”" title="Permalink to this headline">#</a></h2>
 <p>If different regions have different values of parameters, they can be defined “per region”. Let us say there are two regions: “region1” and “region2”. In “region1”, the anisotropy constant is <span class="math notranslate nohighlight">\(5\times10^{5} \text{J}/\text{m}^{3}\)</span> and the anisotropy axis is <span class="math notranslate nohighlight">\((1, 0, 0)\)</span>. On the other hand, in “region2”, these parameters are <span class="math notranslate nohighlight">\(3\times10^{5} \text{J}/\text{m}^{3}\)</span> and <span class="math notranslate nohighlight">\((0, 0, 1)\)</span>. These two parameters can then be defined using a dictionary:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -1017,7 +1014,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="3.-Parameters-defined-using-discretisedfield.Field-object">
-<h2>3. Parameters defined using <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object<a class="headerlink" href="#3.-Parameters-defined-using-discretisedfield.Field-object" title="Permalink to this headline">¶</a></h2>
+<h2>3. Parameters defined using <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object<a class="headerlink" href="#3.-Parameters-defined-using-discretisedfield.Field-object" title="Permalink to this headline">#</a></h2>
 <p>If it is not possible to define the energy parameter using a dictionary because ot varies in space in a non-trivial manner, a parameter can be defined using a field object. For instance:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -1069,8 +1066,9 @@ div.rendered_html tbody tr:hover {
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1081,7 +1079,7 @@ div.rendered_html tbody tr:hover {
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -8,29 +8,26 @@
 
     <title>Tutorial: Lorentz Transmission Electron Microscopy &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -985,7 +982,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Lorentz-Transmission-Electron-Microscopy">
-<h1>Tutorial: Lorentz Transmission Electron Microscopy<a class="headerlink" href="#Tutorial:-Lorentz-Transmission-Electron-Microscopy" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Lorentz Transmission Electron Microscopy<a class="headerlink" href="#Tutorial:-Lorentz-Transmission-Electron-Microscopy" title="Permalink to this headline">#</a></h1>
 <p>Lorentz Transmission Electron Microscopy (LTEM) is a technique to image magnetic structures in samples that are thinner than 500 nm. In this tutorial, the Ubermag micromagnetic software is used to create 3-dimensional magnetic structure, from which we simulate two types of image: defocused images and the phase shift that would be recovered from electron holography.</p>
 <p>In LTEM, a parallel beam of electrons with an energy of typically 200 - 300 kV is incident on a thin magnetic sample. As electrons are charged particles, they are deflected by the Lorentz force caused by the magnetic flux density (<span class="math notranslate nohighlight">\({\bf B}\)</span>) in the specimen. This causes a phase shift in the electron beam compared with a beam travelling through vacuum. An in-focus image corresponds to the state of the electron beam as it exits the specimen (called the exit-plane) and as shown in the LTEM
 reference frame figure, there is no excess or deficiency of electrons so the image is blank.</p>
@@ -993,11 +990,11 @@ reference frame figure, there is no excess or deficiency of electrons so the ima
 <p>An alternative method to obtain information on the magnetic structure is off-axis electron holography. It is the most direct way the to measure the phase shift the electrons experience. It is performed using a charged wire called an electron biprism to bring the electrons together and form an interference pattern from which the phase shift can then be calculated.</p>
 <p>It is worth noting that as the Lorentz force depends on <span class="math notranslate nohighlight">\({\bf v}\times {\bf B}\)</span> (where <span class="math notranslate nohighlight">\({\bf v}\)</span> is the velocity of the electrons) there is no force along direction of travel of the electron beam, hence Lorentz microscopy is only sensitive to the component of the magnetic flux density normal to the beam.</p>
 <section id="LTEM-Reference-frame">
-<h2>LTEM Reference frame<a class="headerlink" href="#LTEM-Reference-frame" title="Permalink to this headline">¶</a></h2>
+<h2>LTEM Reference frame<a class="headerlink" href="#LTEM-Reference-frame" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the coordinate system is defined by the electron beam propagating along the <span class="math notranslate nohighlight">\(z\)</span> direction. <img alt="image" class="no-scaled-link" src="../../../_images/LTEM_imaging.png" style="width: 500px; height: 600px;" /></p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-dimensional magntic structure.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1082,7 +1079,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 10:45]... (18.9 s)
 <p>From the magnetisation, we can compute the phase of the electron beam that would be recovered using off-axis holography and as well as defocused images.</p>
 </section>
 <section id="Computing-LTEM-images">
-<h2>Computing LTEM images<a class="headerlink" href="#Computing-LTEM-images" title="Permalink to this headline">¶</a></h2>
+<h2>Computing LTEM images<a class="headerlink" href="#Computing-LTEM-images" title="Permalink to this headline">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package to first calculate the phase shift <span class="math notranslate nohighlight">\(\phi_m\)</span> of the electron beam on passing through the specimen. The calculation of the phase is performed in Fourier space:</p>
 <p><span class="math">\begin{equation}
 \widetilde{\phi}_m (k_x,k_y)=\frac{i e \mu_0 k_\perp^2}{h} \frac{\left[ \widetilde{\bf M}_I(k_x,k_y)\times {\bf k}_\perp \right] _z}{\left( k_\perp^2 + k_c^2 \right)^2},
@@ -1186,7 +1183,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 10:45]... (18.9 s)
 </div>
 </div>
 <section id="Defocused-Imaging">
-<h3>Defocused Imaging<a class="headerlink" href="#Defocused-Imaging" title="Permalink to this headline">¶</a></h3>
+<h3>Defocused Imaging<a class="headerlink" href="#Defocused-Imaging" title="Permalink to this headline">#</a></h3>
 <p>The wavefunction of the electron beam as it exits the specimen can be calculated using the phase <span class="math">\begin{equation}
 \psi_0 = e^{i\phi_m}.
 \end{equation}</span></p>
@@ -1265,7 +1262,7 @@ Contrast: 57.6%
 </div>
 </section>
 <section id="Integrated-magnetic-flux-density">
-<h3>Integrated magnetic flux density<a class="headerlink" href="#Integrated-magnetic-flux-density" title="Permalink to this headline">¶</a></h3>
+<h3>Integrated magnetic flux density<a class="headerlink" href="#Integrated-magnetic-flux-density" title="Permalink to this headline">#</a></h3>
 <p>From the phase of the electrons other useful quantities can be calculated such as the integrated magnetic flux density <span class="math notranslate nohighlight">\({\bf B}_\perp\)</span>. <span class="math notranslate nohighlight">\({\bf B}_\perp\)</span> can be calculated Ref. [<a class="reference external" href="https://doi.org/10.1002/jemt.20671">Tanase 2009</a>] via <span class="math">\begin{equation}
 t{\bf B}_\perp =\frac{\Phi_0}{\pi}\begin{pmatrix} -\partial/\partial y \\ \partial/\partial x \end{pmatrix} \phi_m ,
 \end{equation}</span></p>
@@ -1361,8 +1358,9 @@ t{\bf B}_\perp =\frac{\Phi_0}{\pi}\begin{pmatrix} -\partial/\partial y \\ \parti
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1373,7 +1371,7 @@ t{\bf B}_\perp =\frac{\Phi_0}{\pi}\begin{pmatrix} -\partial/\partial y \\ \parti
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

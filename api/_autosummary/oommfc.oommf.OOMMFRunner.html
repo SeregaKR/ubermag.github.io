@@ -8,29 +8,26 @@
 
     <title>OOMMFRunner &#8212; ubermag  documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -52,7 +49,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1312,13 +1309,13 @@
               <div>
                 
   <section id="oommfrunner">
-<h1>OOMMFRunner<a class="headerlink" href="#oommfrunner" title="Permalink to this headline">¶</a></h1>
+<h1>OOMMFRunner<a class="headerlink" href="#oommfrunner" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oommfc.oommf.</span></span><span class="sig-name descname"><span class="pre">OOMMFRunner</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oommfc.oommf.</span></span><span class="sig-name descname"><span class="pre">OOMMFRunner</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner" title="Permalink to this definition">#</a></dt>
 <dd><p>Abstract class for running OOMMF.</p>
 <hr><p class="rubric">Methods</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1345,7 +1342,7 @@
 </tbody>
 </table>
 <p class="rubric">Properties</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1364,7 +1361,7 @@
 </table>
 <hr><dl class="py method">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.__del__">
-<span class="sig-name descname"><span class="pre">__del__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.__del__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__del__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.__del__" title="Permalink to this definition">#</a></dt>
 <dd><p>Kill all OOMMF applications when object goes out of scope.</p>
 <p>On Windows we must kill OOMMF after each call because file ownerships
 are otherwise not correct. As a consequence <code class="docutils literal notranslate"><span class="pre">oommfc.delete</span></code> does not
@@ -1373,13 +1370,13 @@ work without killing.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.__repr__">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.__repr__" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.__repr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Return repr(self).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.call">
-<span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argstr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">need_stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.call" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argstr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">need_stderr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.call" title="Permalink to this definition">#</a></dt>
 <dd><p>Call OOMMF by passing <code class="docutils literal notranslate"><span class="pre">argstr</span></code> to OOMMF.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1418,7 +1415,7 @@ stdout. Defaults is <code class="docutils literal notranslate"><span class="pre"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.errors">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">errors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.errors" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">errors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.errors" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the content of <code class="docutils literal notranslate"><span class="pre">boxsii.errors</span></code> OOMMF file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1432,7 +1429,7 @@ stdout. Defaults is <code class="docutils literal notranslate"><span class="pre"
 
 <dl class="py property">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.platform">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.platform" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">platform</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.platform" title="Permalink to this definition">#</a></dt>
 <dd><p>Return platform seen by OOMMF.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1458,7 +1455,7 @@ stdout. Defaults is <code class="docutils literal notranslate"><span class="pre"
 
 <dl class="py property">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.status">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.status" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.status" title="Permalink to this definition">#</a></dt>
 <dd><p>Run a macrospin example for 1 ps through oommfc and print the OOMMF
 status.</p>
 <dl class="field-list simple">
@@ -1486,7 +1483,7 @@ returned.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="oommfc.oommf.OOMMFRunner.version">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.version" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#oommfc.oommf.OOMMFRunner.version" title="Permalink to this definition">#</a></dt>
 <dd><p>Return the OOMMF version.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1542,8 +1539,9 @@ returned.</p>
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1554,7 +1552,7 @@ returned.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -8,29 +8,26 @@
 
     <title>Tutorial 02: Exchange energy term &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -990,14 +987,14 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial-02:-Exchange-energy-term">
-<h1>Tutorial 02: Exchange energy term<a class="headerlink" href="#Tutorial-02:-Exchange-energy-term" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial 02: Exchange energy term<a class="headerlink" href="#Tutorial-02:-Exchange-energy-term" title="Permalink to this headline">#</a></h1>
 <p>Exchange energy density is computed as</p>
 <div class="math notranslate nohighlight">
 \[w_\text{e} = A(\nabla\mathbf{m})^{2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> is the normalised (<span class="math notranslate nohighlight">\(|\mathbf{m}|=1\)</span>) magnetisation, and <span class="math notranslate nohighlight">\(A\)</span> is the exchange energy constant. Exchange energy term tends to align all magnetic moments parallel to each other. Direction in which they are going to point is not defined via exchange energy.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>, <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> is a part of the magnetisation field <code class="docutils literal notranslate"><span class="pre">system.m</span></code>. Therefore, only exchange energy constant <span class="math notranslate nohighlight">\(A\)</span> should be provided as an input parameter to uniquely define the Exchange energy term. <span class="math notranslate nohighlight">\(A\)</span> can be constant in space or spatially varying.</p>
 <section id="Spatially-constant-A">
-<h2>Spatially constant <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#Spatially-constant-A" title="Permalink to this headline">¶</a></h2>
+<h2>Spatially constant <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#Spatially-constant-A" title="Permalink to this headline">#</a></h2>
 <p>Let us start by assembling a simple simple simulation where <span class="math notranslate nohighlight">\(A\)</span> does not vary in space. The sample is a “one-dimensional” chain of magnetic moments.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1102,10 +1099,10 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:51]...  &lt;1&gt; mmarchive killed
 <p>Finally, we can delete the files created by <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>.</p>
 </section>
 <section id="Spatially-varying-A">
-<h2>Spatially varying <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#Spatially-varying-A" title="Permalink to this headline">¶</a></h2>
+<h2>Spatially varying <span class="math notranslate nohighlight">\(A\)</span><a class="headerlink" href="#Spatially-varying-A" title="Permalink to this headline">#</a></h2>
 <p>There are two different ways how a parameter can be made spatially varying, by using: 1. Dictionary 2. <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code></p>
 <section id="Dictionary">
-<h3>Dictionary<a class="headerlink" href="#Dictionary" title="Permalink to this headline">¶</a></h3>
+<h3>Dictionary<a class="headerlink" href="#Dictionary" title="Permalink to this headline">#</a></h3>
 <p>In order to define a parameter using a dictionary, regions must be defined in the mesh. Regions are defined as a dictionary, whose keys are the strings and values are <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code> objects, which take two corner points of the region as input parameters.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1211,7 +1208,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:51]...  &lt;1&gt; mmarchive killed
 </div>
 </section>
 <section id="discretisedfield.Field">
-<h3><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this headline">#</a></h3>
 <p>Let us now define the exchange energy in the similar way as in the previous example, but this time using <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>:</p>
 <p>$:nbsphinx-math:<cite>mathbf{A}`(x, y, z) = :nbsphinx-math:</cite>left`{</p>
 <p><span class="math">\right</span>. $</p>
@@ -1326,8 +1323,9 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:51]...  &lt;1&gt; mmarchive killed
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1338,7 +1336,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:51]...  &lt;1&gt; mmarchive killed
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

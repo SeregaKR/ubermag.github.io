@@ -8,29 +8,26 @@
 
     <title>ovf2vtk tool &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -725,7 +722,7 @@
               <div>
                 
   <section id="ovf2vtk-tool">
-<h1><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool<a class="headerlink" href="#ovf2vtk-tool" title="Permalink to this headline">¶</a></h1>
+<h1><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool<a class="headerlink" href="#ovf2vtk-tool" title="Permalink to this headline">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield.ovf2vtk</span></code> is a command line tool used to convert OVF to the VTK file format.</p>
 <p>Information about the tool and its usage can be accessed by typing:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --help
@@ -744,7 +741,7 @@ optional arguments:
 </div>
 <p>There are three main use cases how <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool can be used. In any case, specifying the output file name(s) is optional. More precisely, if the names of the output files are omitted, they are going to be the same as the input files, but with a different extension (<code class="docutils literal notranslate"><span class="pre">.vtk</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.ovf</span></code>).</p>
 <section id="1.-Single-file">
-<h2>1. Single file<a class="headerlink" href="#1.-Single-file" title="Permalink to this headline">¶</a></h2>
+<h2>1. Single file<a class="headerlink" href="#1.-Single-file" title="Permalink to this headline">#</a></h2>
 <p>Probably the simplest use case is the conversion of a single fie.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file.omf
 </pre></div>
@@ -755,14 +752,14 @@ optional arguments:
 </div>
 </section>
 <section id="2.-Multiple-files">
-<h2>2. Multiple files<a class="headerlink" href="#2.-Multiple-files" title="Permalink to this headline">¶</a></h2>
+<h2>2. Multiple files<a class="headerlink" href="#2.-Multiple-files" title="Permalink to this headline">#</a></h2>
 <p>To convert multiple OVF files, a list of files is passed to the <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file1.omf my-ovf-file2.omf my-ovf-file3.omf
 </pre></div>
 </div>
 </section>
 <section id="3.-Wildcard">
-<h2>3. Wildcard<a class="headerlink" href="#3.-Wildcard" title="Permalink to this headline">¶</a></h2>
+<h2>3. Wildcard<a class="headerlink" href="#3.-Wildcard" title="Permalink to this headline">#</a></h2>
 <p>Usually, the number of files which should be converted is very large. In that case, a filename with a wildcard can be passed.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --infile my-ovf-file*.omf
 </pre></div>
@@ -800,8 +797,9 @@ optional arguments:
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -812,7 +810,7 @@ optional arguments:
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

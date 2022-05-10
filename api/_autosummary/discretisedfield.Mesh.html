@@ -8,29 +8,26 @@
 
     <title>Mesh &#8212; ubermag  documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1314,10 +1311,10 @@
               <div>
                 
   <section id="mesh">
-<h1>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h1>
+<h1>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Mesh">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subregions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'unit':</span> <span class="pre">'m'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subregions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'unit':</span> <span class="pre">'m'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh" title="Permalink to this definition">#</a></dt>
 <dd><p>Finite-difference mesh.</p>
 <p>Mesh discretises cubic <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code>, passed as <code class="docutils literal notranslate"><span class="pre">region</span></code>,
 using a regular finite-difference mesh. Since cubic region spans between
@@ -1446,7 +1443,7 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 </pre></div>
 </div>
 <hr><p class="rubric">Methods</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1521,7 +1518,7 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 </tbody>
 </table>
 <p class="rubric">Properties</p>
-<table class="longtable table autosummary">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -1558,7 +1555,7 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 </table>
 <hr><dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__dir__">
-<span class="sig-name descname"><span class="pre">__dir__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__dir__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__dir__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__dir__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extension of the <code class="docutils literal notranslate"><span class="pre">dir(self)</span></code> list.</p>
 <p>Adds <code class="docutils literal notranslate"><span class="pre">'dx'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dy'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'dz'</span></code>.</p>
 <dl class="field-list simple">
@@ -1573,7 +1570,7 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__eq__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__eq__" title="Permalink to this definition">#</a></dt>
 <dd><p>Relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code>.</p>
 <p>Two meshes are considered to be equal if:</p>
 <blockquote>
@@ -1618,7 +1615,7 @@ necessary conditions for determining equality.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__getattr__">
-<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__getattr__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__getattr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extracting the discretisation in a particular direction.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">'dx'</span></code>, <code class="docutils literal notranslate"><span class="pre">'dy'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'dz'</span></code> is accessed, the discretisation cell
 size in that direction is returned.</p>
@@ -1656,7 +1653,7 @@ size in that direction is returned.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__getitem__">
-<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__getitem__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__getitem__" title="Permalink to this definition">#</a></dt>
 <dd><p>Extracts the mesh of a subregion.</p>
 <p>If subregions were defined by passing <code class="docutils literal notranslate"><span class="pre">subregions</span></code> dictionary when
 the mesh was created, this method returns a mesh defined on a subregion
@@ -1725,7 +1722,7 @@ object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__iter__">
-<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__iter__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__iter__" title="Permalink to this definition">#</a></dt>
 <dd><p>Generator yielding coordinates of discretisation cells.</p>
 <p>The discretisation cell’s coordinate corresponds to its centre point.</p>
 <dl class="field-list simple">
@@ -1756,7 +1753,7 @@ p_{z})\)</span>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__len__">
-<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__len__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__len__" title="Permalink to this definition">#</a></dt>
 <dd><p>Number of discretisation cells in the mesh.</p>
 <p>It is computed by multiplying all elements of <code class="docutils literal notranslate"><span class="pre">n</span></code>:</p>
 <div class="math notranslate nohighlight">
@@ -1789,7 +1786,7 @@ p_{z})\)</span>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__or__">
-<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__or__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__or__" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if meshes are aligned.</p>
 <p>Two meshes are considered to be aligned if and only if:</p>
 <blockquote>
@@ -1845,7 +1842,7 @@ p_{z})\)</span>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__repr__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.__repr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Representation string.</p>
 <p>Internally <cite>self._repr_html_()</cite> is called and all html tags are removed
 from this string.</p>
@@ -1876,7 +1873,7 @@ from this string.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.axis_points">
-<span class="sig-name descname"><span class="pre">axis_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_points" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">axis_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_points" title="Permalink to this definition">#</a></dt>
 <dd><p>Points (ticks) on <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
 <p>This method is a generator yielding points on <code class="docutils literal notranslate"><span class="pre">axis</span></code> at which
 discretisation cell coordinates are defined.</p>
@@ -1907,7 +1904,7 @@ discretisation cell coordinates are defined.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.axis_selector">
-<span class="sig-name descname"><span class="pre">axis_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dropdown'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'axis'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_selector" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">axis_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dropdown'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'axis'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_selector" title="Permalink to this definition">#</a></dt>
 <dd><p>Axis selector.</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">widget='dropdown'</span></code>, <code class="docutils literal notranslate"><span class="pre">ipywidgets.Dropdown</span></code> is returned, whereas
 for <code class="docutils literal notranslate"><span class="pre">widget='radiobuttons'</span></code>, <code class="docutils literal notranslate"><span class="pre">ipywidgets.RadioButtons</span></code> is returned.
@@ -1943,7 +1940,7 @@ Default widget description can be changed using <code class="docutils literal no
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.index2point">
-<span class="sig-name descname"><span class="pre">index2point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.index2point" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index2point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.index2point" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert cell’s index to its coordinate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1983,7 +1980,7 @@ Default widget description can be changed using <code class="docutils literal no
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.k3d">
-<span class="sig-name descname"><span class="pre">k3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5010096,</span> <span class="pre">14517330]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.k3d" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">k3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5010096,</span> <span class="pre">14517330]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.k3d" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">plot</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">k3d.Plot</span></code> object is created
 automatically. The color of the region and the discretisation cell can
@@ -2033,7 +2030,7 @@ default color palette.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.k3d_subregions">
-<span class="sig-name descname"><span class="pre">k3d_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5010096,</span> <span class="pre">14517330,</span> <span class="pre">5613672,</span> <span class="pre">12865106,</span> <span class="pre">8483507,</span> <span class="pre">9664608,</span> <span class="pre">14322627,</span> <span class="pre">9211020,</span> <span class="pre">13416820,</span> <span class="pre">6600141]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.k3d_subregions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">k3d_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5010096,</span> <span class="pre">14517330,</span> <span class="pre">5613672,</span> <span class="pre">12865106,</span> <span class="pre">8483507,</span> <span class="pre">9664608,</span> <span class="pre">14322627,</span> <span class="pre">9211020,</span> <span class="pre">13416820,</span> <span class="pre">6600141]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.k3d_subregions" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> subregions plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">plot</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">k3d.Plot</span></code> object is created
 automatically. The color of the subregions can be specified using
@@ -2082,7 +2079,7 @@ created internally.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.line">
-<span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.line" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.line" title="Permalink to this definition">#</a></dt>
 <dd><p>Line generator.</p>
 <p>Given two points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> line is defined and <code class="docutils literal notranslate"><span class="pre">n</span></code> points on
 that line are generated and yielded in <code class="docutils literal notranslate"><span class="pre">n</span></code> iterations:</p>
@@ -2128,7 +2125,7 @@ that line are generated and yielded in <code class="docutils literal notranslate
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.mpl">
-<span class="sig-name descname"><span class="pre">mpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">mpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> object is created
 automatically and the size of a figure can be specified using
@@ -2185,7 +2182,7 @@ Defaults to the default color palette.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.mpl_subregions">
-<span class="sig-name descname"><span class="pre">mpl_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452',</span> <span class="pre">'#55a868',</span> <span class="pre">'#c44e52',</span> <span class="pre">'#8172b3',</span> <span class="pre">'#937860',</span> <span class="pre">'#da8bc3',</span> <span class="pre">'#8c8c8c',</span> <span class="pre">'#ccb974',</span> <span class="pre">'#64b5cd']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl_subregions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">mpl_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452',</span> <span class="pre">'#55a868',</span> <span class="pre">'#c44e52',</span> <span class="pre">'#8172b3',</span> <span class="pre">'#937860',</span> <span class="pre">'#da8bc3',</span> <span class="pre">'#8c8c8c',</span> <span class="pre">'#ccb974',</span> <span class="pre">'#64b5cd']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl_subregions" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> subregions plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> object is created
 automatically and the size of a figure can be specified using
@@ -2241,7 +2238,7 @@ created internally.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.neighbours">
-<span class="sig-name descname"><span class="pre">neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.neighbours" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.neighbours" title="Permalink to this definition">#</a></dt>
 <dd><p>Indices of discretisation cell neighbours.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2277,7 +2274,7 @@ created internally.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.pad">
-<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pad_width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.pad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pad_width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.pad" title="Permalink to this definition">#</a></dt>
 <dd><p>Mesh padding.</p>
 <p>This method extends the mesh by adding (padding) discretisation cells
 in chosen direction(s). The way in which the mesh is going to be padded
@@ -2326,7 +2323,7 @@ added in the positive direction.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.plane">
-<span class="sig-name descname"><span class="pre">plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.plane" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.plane" title="Permalink to this definition">#</a></dt>
 <dd><p>Extracts plane mesh.</p>
 <p>If one of the axes (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) is passed as a
 string, a plane mesh perpendicular to that axis is extracted,
@@ -2382,7 +2379,7 @@ containing basic information about the plane mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.point2index">
-<span class="sig-name descname"><span class="pre">point2index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.point2index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">point2index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.point2index" title="Permalink to this definition">#</a></dt>
 <dd><p>Convert point to the index of a cell which contains that point.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2420,7 +2417,7 @@ containing basic information about the plane mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.region2slices">
-<span class="sig-name descname"><span class="pre">region2slices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.region2slices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">region2slices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.region2slices" title="Permalink to this definition">#</a></dt>
 <dd><p>Slices of indices that correspond to cells contained in the region.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2448,7 +2445,7 @@ containing basic information about the plane mesh.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.slider">
-<span class="sig-name descname"><span class="pre">slider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.slider" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">slider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.slider" title="Permalink to this definition">#</a></dt>
 <dd><p>Axis slider.</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">axis</span></code>, <code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code> is passed. Based on that
 value, <code class="docutils literal notranslate"><span class="pre">ipywidgets.SelectionSlider</span></code> is returned. Axis multiplier can
@@ -2487,12 +2484,12 @@ argument accepted by it can be passed.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Mesh.__hash__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#discretisedfield.Mesh.__hash__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.dS">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dS</span></span><a class="headerlink" href="#discretisedfield.Mesh.dS" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dS</span></span><a class="headerlink" href="#discretisedfield.Mesh.dS" title="Permalink to this definition">#</a></dt>
 <dd><p>Surface vector field.</p>
 <p>If the mesh is sliced, <code class="docutils literal notranslate"><span class="pre">dS</span></code> is a vector field with vectors
 perpendicular to the surface and with magnitude equal to the
@@ -2525,7 +2522,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.dV">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dV</span></span><a class="headerlink" href="#discretisedfield.Mesh.dV" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dV</span></span><a class="headerlink" href="#discretisedfield.Mesh.dV" title="Permalink to this definition">#</a></dt>
 <dd><p>Discretisation cell volume.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2554,7 +2551,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.indices">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">indices</span></span><a class="headerlink" href="#discretisedfield.Mesh.indices" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">indices</span></span><a class="headerlink" href="#discretisedfield.Mesh.indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Generator yielding indices of all mesh cells.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Yields</dt>
@@ -2583,7 +2580,7 @@ discretisation cell surface.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.subregions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subregions</span></span><a class="headerlink" href="#discretisedfield.Mesh.subregions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subregions</span></span><a class="headerlink" href="#discretisedfield.Mesh.subregions" title="Permalink to this definition">#</a></dt>
 <dd><p>“Subregions of the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2630,8 +2627,9 @@ Defaults to an empty dictionary.</p>
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -2642,7 +2640,7 @@ Defaults to an empty dictionary.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

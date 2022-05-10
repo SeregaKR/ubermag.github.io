@@ -8,29 +8,26 @@
 
     <title>Tutorial: Torque magnetometry &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -978,7 +975,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Torque-magnetometry">
-<h1>Tutorial: Torque magnetometry<a class="headerlink" href="#Tutorial:-Torque-magnetometry" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Torque magnetometry<a class="headerlink" href="#Tutorial:-Torque-magnetometry" title="Permalink to this headline">#</a></h1>
 <p>In this tutorial, the Ubermag micromagnetic simulation software is used to create 3-dimensional magnetic structure, on which torque magnetometry can be performed. Torque magnetometry is a technique where an external magnetic field is applied in a direction relative to a magnetic sample, an the torque produced measured. This technique can be used to obtain information on the characteristics of the magnetism in the sample like anisotropy.</p>
 <p>Torque arises from the cross product of the magnetic moment <span class="math notranslate nohighlight">\({\bf m}\)</span>, and the magnetic flux density <span class="math notranslate nohighlight">\({\bf B}\)</span>, <span class="math">\begin{equation}
 {\bf \tau} = {\bf m} \times {\bf B}.
@@ -991,11 +988,11 @@ div.rendered_html tbody tr:hover {
 {\bf m} &=  {\bf M} V,
 \end{align}</span> where <span class="math notranslate nohighlight">\({\bf M}\)</span> is magnetisation, <span class="math notranslate nohighlight">\({\bf m}\)</span> is the magnetic moment, and <span class="math notranslate nohighlight">\(V\)</span> is the volume.</p>
 <section id="Magnetometry-Reference-frame">
-<h2>Magnetometry Reference frame<a class="headerlink" href="#Magnetometry-Reference-frame" title="Permalink to this headline">¶</a></h2>
+<h2>Magnetometry Reference frame<a class="headerlink" href="#Magnetometry-Reference-frame" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental reference for magnetometry is defined to be congruent as the sample reference frame.</p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-dimensional magnetic structure.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1069,7 +1066,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (4.9 s)
 </div>
 </section>
 <section id="Computing-Torque-Magnetometry">
-<h2>Computing Torque Magnetometry<a class="headerlink" href="#Computing-Torque-Magnetometry" title="Permalink to this headline">¶</a></h2>
+<h2>Computing Torque Magnetometry<a class="headerlink" href="#Computing-Torque-Magnetometry" title="Permalink to this headline">#</a></h2>
 <p>The torque can be calculated using <span class="math">\begin{equation}
 {\bf \tau} = \mu_0 {\bf m} \times \left( {\bf H}_{\rm app} + {\bf H}_{\rm demag} \right).
 \end{equation}</span> This method is included as part of the <code class="docutils literal notranslate"><span class="pre">mag2exp.magnetometry</span></code> module.</p>
@@ -1121,7 +1118,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </div>
 </section>
 <section id="Recreating-experiments">
-<h2>Recreating experiments<a class="headerlink" href="#Recreating-experiments" title="Permalink to this headline">¶</a></h2>
+<h2>Recreating experiments<a class="headerlink" href="#Recreating-experiments" title="Permalink to this headline">#</a></h2>
 <p>A common experiment with torque magnetometry is to rotate the magnetic field relative to the sample and measure the torque. Doing this at high applied magnetic fields can reveal the magnetic anisotropy of the sample.</p>
 <p>Here we rotate the applied magnetic field a full <span class="math notranslate nohighlight">\(2\pi\)</span> perpendicular to the <span class="math notranslate nohighlight">\(x\)</span> axis, with our initial field in the <span class="math notranslate nohighlight">\(z\)</span> direction. The sample has uniaxial anisotropy in the <span class="math notranslate nohighlight">\(z\)</span> direction, hence the torque forms a periodic pattern.</p>
 <div class="nbinput nblast docutils container">
@@ -1192,8 +1189,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1204,7 +1202,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

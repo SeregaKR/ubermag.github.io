@@ -8,29 +8,26 @@
 
     <title>Field operations &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1191,7 +1188,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Field-operations">
-<h1>Field operations<a class="headerlink" href="#Field-operations" title="Permalink to this headline">¶</a></h1>
+<h1>Field operations<a class="headerlink" href="#Field-operations" title="Permalink to this headline">#</a></h1>
 <p>There are several convenience methods that can be used to analyse the field. Let us first define the mesh we are going to work with.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1232,7 +1229,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Sampling-the-field">
-<h2>Sampling the field<a class="headerlink" href="#Sampling-the-field" title="Permalink to this headline">¶</a></h2>
+<h2>Sampling the field<a class="headerlink" href="#Sampling-the-field" title="Permalink to this headline">#</a></h2>
 <p>As we have shown previously, a field can be sampled by calling it. The argument must be a 3-length iterable and it contains the coordinates of the point.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -1275,7 +1272,7 @@ Exception raised.
 </div>
 </section>
 <section id="Extracting-the-component-of-a-vector-field">
-<h2>Extracting the component of a vector field<a class="headerlink" href="#Extracting-the-component-of-a-vector-field" title="Permalink to this headline">¶</a></h2>
+<h2>Extracting the component of a vector field<a class="headerlink" href="#Extracting-the-component-of-a-vector-field" title="Permalink to this headline">#</a></h2>
 <p>A three-dimensional vector field can be understood as three separate scalar fields, where each scalar field is a component of a vector field value. A scalar field of a component can be extracted by accessing <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, or <code class="docutils literal notranslate"><span class="pre">z</span></code> attribute of the field.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -1459,7 +1456,7 @@ Object has no attribute x.
 </div>
 </section>
 <section id="Extracting-smaller-region">
-<h2>Extracting smaller region<a class="headerlink" href="#Extracting-smaller-region" title="Permalink to this headline">¶</a></h2>
+<h2>Extracting smaller region<a class="headerlink" href="#Extracting-smaller-region" title="Permalink to this headline">#</a></h2>
 <p>Let us say we are not interested in the entire field but only in its smaller portion - only some discretisation cells. In that case, we have two options. Before we discuss them, let us first define what we mean by “aligned” meshes:</p>
 <ul class="simple">
 <li><p>Mesh A is aligned to mesh B if and only if all cell coordinates of mesh A are also the coordinates of (some) cells in mesh B.</p></li>
@@ -1529,7 +1526,7 @@ False
 </pre></div></div>
 </div>
 <section id="Extracting-subfield-on-aligned-mesh">
-<h3>Extracting subfield on aligned mesh<a class="headerlink" href="#Extracting-subfield-on-aligned-mesh" title="Permalink to this headline">¶</a></h3>
+<h3>Extracting subfield on aligned mesh<a class="headerlink" href="#Extracting-subfield-on-aligned-mesh" title="Permalink to this headline">#</a></h3>
 <p>If we want to get a subfield whose mesh is aligned to the field we want to take part of, we use <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator. The resulting field is going to have a minimum-sized mesh which contains the region we pass as an argument.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -1576,7 +1573,7 @@ False
 <p>We can see that the resulting field’s mesh has the minimum dimesions aligned mesh should have in order to contain the <code class="docutils literal notranslate"><span class="pre">subregion</span></code>. The resulting field has the same discretisation cell as the original one.</p>
 </section>
 <section id="Extracting-field-on-any-mesh">
-<h3>Extracting field on any mesh<a class="headerlink" href="#Extracting-field-on-any-mesh" title="Permalink to this headline">¶</a></h3>
+<h3>Extracting field on any mesh<a class="headerlink" href="#Extracting-field-on-any-mesh" title="Permalink to this headline">#</a></h3>
 <p>If we want to extact part of the field on any mesh which is contained inside the field, we do that by “resampling”. We create a new field on a submesh and pass the field we want take subfield from as <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
@@ -1625,7 +1622,7 @@ False
 </section>
 </section>
 <section id="Computing-the-average">
-<h2>Computing the average<a class="headerlink" href="#Computing-the-average" title="Permalink to this headline">¶</a></h2>
+<h2>Computing the average<a class="headerlink" href="#Computing-the-average" title="Permalink to this headline">#</a></h2>
 <p>The average of the field can be obtained by calling <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.average</span></code> property.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
@@ -1664,7 +1661,7 @@ False
 </div>
 </section>
 <section id="Iterating-through-the-field">
-<h2>Iterating through the field<a class="headerlink" href="#Iterating-through-the-field" title="Permalink to this headline">¶</a></h2>
+<h2>Iterating through the field<a class="headerlink" href="#Iterating-through-the-field" title="Permalink to this headline">#</a></h2>
 <p>The field object itself is an iterable. That means that it can be iterated through. As a result it returns a tuple, where the first element is the coordinate of the mesh point, whereas the second one is its value.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
@@ -1692,7 +1689,7 @@ False
 </div>
 </section>
 <section id="Sampling-the-field-along-the-line">
-<h2>Sampling the field along the line<a class="headerlink" href="#Sampling-the-field-along-the-line" title="Permalink to this headline">¶</a></h2>
+<h2>Sampling the field along the line<a class="headerlink" href="#Sampling-the-field-along-the-line" title="Permalink to this headline">#</a></h2>
 <p>To sample the points of the field which are on a certain line, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.line</span></code> method is used. It takes two points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> that define the line and an integer <code class="docutils literal notranslate"><span class="pre">n</span></code> which defines how many mesh coordinates on that line are required. The default value of <code class="docutils literal notranslate"><span class="pre">n</span></code> is 100.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
@@ -1704,7 +1701,7 @@ False
 </div>
 </section>
 <section id="Intersecting-the-field-with-a-plane">
-<h2>Intersecting the field with a plane<a class="headerlink" href="#Intersecting-the-field-with-a-plane" title="Permalink to this headline">¶</a></h2>
+<h2>Intersecting the field with a plane<a class="headerlink" href="#Intersecting-the-field-with-a-plane" title="Permalink to this headline">#</a></h2>
 <p>If we intersect the field with a plane, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.plane</span></code> will return a new field object which contains only discretisation cells that belong to that plane. The planes allowed are the planes perpendicular to the axes of the Cartesian coordinate system. For instance, a plane parallel to the <span class="math notranslate nohighlight">\(yz\)</span>-plane (perpendicular to the <span class="math notranslate nohighlight">\(x\)</span>-axis) which intesects the <span class="math notranslate nohighlight">\(x\)</span>-axis at 1, can be written as</p>
 <div class="math notranslate nohighlight">
 \[x = 1\]</div>
@@ -1801,7 +1798,7 @@ False
 </div>
 </section>
 <section id="Cascading-the-operations">
-<h2>Cascading the operations<a class="headerlink" href="#Cascading-the-operations" title="Permalink to this headline">¶</a></h2>
+<h2>Cascading the operations<a class="headerlink" href="#Cascading-the-operations" title="Permalink to this headline">#</a></h2>
 <p>Let us say we want to compute the average of an <span class="math notranslate nohighlight">\(x\)</span> component of the field on the plane <span class="math notranslate nohighlight">\(y=10\)</span>. In order to do that, we can cascade several operation in a single line.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
@@ -1840,7 +1837,7 @@ False
 </div>
 </section>
 <section id="Complex-fields">
-<h2>Complex fields<a class="headerlink" href="#Complex-fields" title="Permalink to this headline">¶</a></h2>
+<h2>Complex fields<a class="headerlink" href="#Complex-fields" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> supports complex-valued fields.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
@@ -1958,7 +1955,7 @@ False
 </div>
 </section>
 <section id="Algebra-operations">
-<h2>Algebra operations<a class="headerlink" href="#Algebra-operations" title="Permalink to this headline">¶</a></h2>
+<h2>Algebra operations<a class="headerlink" href="#Algebra-operations" title="Permalink to this headline">#</a></h2>
 <p>Let us define two fields:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
@@ -2007,7 +2004,7 @@ False
 </pre></div></div>
 </div>
 <section id="+-operation">
-<h3><code class="docutils literal notranslate"><span class="pre">+</span></code> operation<a class="headerlink" href="#+-operation" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">+</span></code> operation<a class="headerlink" href="#+-operation" title="Permalink to this headline">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
@@ -2068,7 +2065,7 @@ False
 </div>
 </section>
 <section id="--operation">
-<h3><code class="docutils literal notranslate"><span class="pre">-</span></code> operation<a class="headerlink" href="#--operation" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">-</span></code> operation<a class="headerlink" href="#--operation" title="Permalink to this headline">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
@@ -2129,7 +2126,7 @@ False
 </div>
 </section>
 <section id="*-operation">
-<h3><code class="docutils literal notranslate"><span class="pre">*</span></code> operation<a class="headerlink" href="#*-operation" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">*</span></code> operation<a class="headerlink" href="#*-operation" title="Permalink to this headline">#</a></h3>
 <p>Basic multiplication is not defined between vector fields. In that case, we perform either dot or cross product, which we are going to discuss later.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
@@ -2241,7 +2238,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="/-operation">
-<h3><code class="docutils literal notranslate"><span class="pre">/</span></code> operation<a class="headerlink" href="#/-operation" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">/</span></code> operation<a class="headerlink" href="#/-operation" title="Permalink to this headline">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
@@ -2365,7 +2362,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="**-operator">
-<h3><code class="docutils literal notranslate"><span class="pre">**</span></code> operator<a class="headerlink" href="#**-operator" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">**</span></code> operator<a class="headerlink" href="#**-operator" title="Permalink to this headline">#</a></h3>
 <p>This operator is allowed only on scalar fields:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
@@ -2433,7 +2430,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Compund-operations">
-<h3>Compund operations<a class="headerlink" href="#Compund-operations" title="Permalink to this headline">¶</a></h3>
+<h3>Compund operations<a class="headerlink" href="#Compund-operations" title="Permalink to this headline">#</a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
@@ -2469,10 +2466,10 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </section>
 </section>
 <section id="Vector-products">
-<h2>Vector products<a class="headerlink" href="#Vector-products" title="Permalink to this headline">¶</a></h2>
+<h2>Vector products<a class="headerlink" href="#Vector-products" title="Permalink to this headline">#</a></h2>
 <p>As the title says, these products are applied between vector fields only.</p>
 <section id="Dot-product">
-<h3>Dot product<a class="headerlink" href="#Dot-product" title="Permalink to this headline">¶</a></h3>
+<h3>Dot product<a class="headerlink" href="#Dot-product" title="Permalink to this headline">#</a></h3>
 <p>Dot product is implemented through <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
@@ -2511,7 +2508,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Cross-product">
-<h3>Cross product<a class="headerlink" href="#Cross-product" title="Permalink to this headline">¶</a></h3>
+<h3>Cross product<a class="headerlink" href="#Cross-product" title="Permalink to this headline">#</a></h3>
 <p>Cross product between vector fields is performed using <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
@@ -2557,7 +2554,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </section>
 </section>
 <section id="Vector-calculus">
-<h2>Vector calculus<a class="headerlink" href="#Vector-calculus" title="Permalink to this headline">¶</a></h2>
+<h2>Vector calculus<a class="headerlink" href="#Vector-calculus" title="Permalink to this headline">#</a></h2>
 <p>### Directional derivative <span class="math notranslate nohighlight">\(\left(\frac{\partial}{\partial x_{i}}f\right)\)</span></p>
 <p>Defined on both scalar and vector fields:</p>
 <div class="nbinput docutils container">
@@ -2602,7 +2599,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
   </ul></div>
 </div>
 <section id="Gradient-(\nabla-f)">
-<h3>Gradient <span class="math notranslate nohighlight">\((\nabla f)\)</span><a class="headerlink" href="#Gradient-(\nabla-f)" title="Permalink to this headline">¶</a></h3>
+<h3>Gradient <span class="math notranslate nohighlight">\((\nabla f)\)</span><a class="headerlink" href="#Gradient-(\nabla-f)" title="Permalink to this headline">#</a></h3>
 <p>Defined on scalar fields:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
@@ -2647,7 +2644,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Divergence-(\nabla-\cdot-f)">
-<h3>Divergence <span class="math notranslate nohighlight">\((\nabla \cdot f)\)</span><a class="headerlink" href="#Divergence-(\nabla-\cdot-f)" title="Permalink to this headline">¶</a></h3>
+<h3>Divergence <span class="math notranslate nohighlight">\((\nabla \cdot f)\)</span><a class="headerlink" href="#Divergence-(\nabla-\cdot-f)" title="Permalink to this headline">#</a></h3>
 <p>Defined on vector fields:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
@@ -2686,7 +2683,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Curl-(\nabla-\times-f)">
-<h3>Curl <span class="math notranslate nohighlight">\((\nabla \times f)\)</span><a class="headerlink" href="#Curl-(\nabla-\times-f)" title="Permalink to this headline">¶</a></h3>
+<h3>Curl <span class="math notranslate nohighlight">\((\nabla \times f)\)</span><a class="headerlink" href="#Curl-(\nabla-\times-f)" title="Permalink to this headline">#</a></h3>
 <p>Defined on vector fields:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
@@ -2731,7 +2728,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Laplace-operator-(\nabla^{2}-f)">
-<h3>Laplace operator <span class="math notranslate nohighlight">\((\nabla^{2} f)\)</span><a class="headerlink" href="#Laplace-operator-(\nabla^{2}-f)" title="Permalink to this headline">¶</a></h3>
+<h3>Laplace operator <span class="math notranslate nohighlight">\((\nabla^{2} f)\)</span><a class="headerlink" href="#Laplace-operator-(\nabla^{2}-f)" title="Permalink to this headline">#</a></h3>
 <p>Defined on both vector and scalar fields:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
@@ -2812,7 +2809,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </section>
 </section>
 <section id="Integrals">
-<h2>Integrals<a class="headerlink" href="#Integrals" title="Permalink to this headline">¶</a></h2>
+<h2>Integrals<a class="headerlink" href="#Integrals" title="Permalink to this headline">#</a></h2>
 <p>In the most recent version of <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>, computing integrals is generalised to accomodate the calculation of different types of integrals. Instead of giving the “theory” behind how it was implemented, we are going to show several examples which hopefully are going to give you an idea how you can compute different integrals.</p>
 <p>Let us first create a field:</p>
 <div class="nbinput nblast docutils container">
@@ -2831,7 +2828,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </div>
 <section id="Volume-integral">
-<h3>Volume integral<a class="headerlink" href="#Volume-integral" title="Permalink to this headline">¶</a></h3>
+<h3>Volume integral<a class="headerlink" href="#Volume-integral" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\int_{V}\mathbf{f}(\mathbf{r})\text{d}V\]</div>
 <div class="nbinput docutils container">
@@ -2890,7 +2887,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Surface-integral">
-<h3>Surface integral<a class="headerlink" href="#Surface-integral" title="Permalink to this headline">¶</a></h3>
+<h3>Surface integral<a class="headerlink" href="#Surface-integral" title="Permalink to this headline">#</a></h3>
 <p>There is <code class="docutils literal notranslate"><span class="pre">disretisedfield.dS</span></code> value which is a vector field perpendicular to the surface with magnitude equal to the area of <span class="math notranslate nohighlight">\(\text{d}S\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\int_{S}\mathbf{f}(\mathbf{r}) \cdot \text{d}\mathbf{S}\]</div>
@@ -2953,7 +2950,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Line-integrals">
-<h3>Line integrals<a class="headerlink" href="#Line-integrals" title="Permalink to this headline">¶</a></h3>
+<h3>Line integrals<a class="headerlink" href="#Line-integrals" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\int_{0}^{x_\text{max}}\mathbf{f}(\mathbf{r}) \text{d}x\]</div>
 <div class="nbinput docutils container">
@@ -3044,7 +3041,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Improper-integrals">
-<h3>Improper integrals<a class="headerlink" href="#Improper-integrals" title="Permalink to this headline">¶</a></h3>
+<h3>Improper integrals<a class="headerlink" href="#Improper-integrals" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\int_{0}^{y}\mathbf{f}(\mathbf{r}) \text{d}y'\]</div>
 <div class="nbinput docutils container">
@@ -3084,7 +3081,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Example">
-<h3>Example<a class="headerlink" href="#Example" title="Permalink to this headline">¶</a></h3>
+<h3>Example<a class="headerlink" href="#Example" title="Permalink to this headline">#</a></h3>
 <p>We have showed how to compute an integral when integrand is just a field. It is important to have in mind that this can be any field after some operations have been applied on it. For instance:</p>
 <div class="math notranslate nohighlight">
 \[\int_{V}\nabla\cdot\mathbf{f}(\mathbf{r})\text{d}V\]</div>
@@ -3108,7 +3105,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </section>
 </section>
 <section id="Operation-pipelines">
-<h2>Operation pipelines<a class="headerlink" href="#Operation-pipelines" title="Permalink to this headline">¶</a></h2>
+<h2>Operation pipelines<a class="headerlink" href="#Operation-pipelines" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
@@ -3128,7 +3125,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="id4">
-<h2>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>Example<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>Here we implement skyrmion number calculations using operations on fields:</p>
 <div class="math notranslate nohighlight">
 \[S = \frac{1}{4\pi} \int \mathbf{m} \cdot \left(\frac{\partial \mathbf{m}}{\partial x} \times \frac{\partial \mathbf{m}}{\partial y}\right) dxdy\]</div>
@@ -3193,7 +3190,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Applying-numpys-universal-functions">
-<h2>Applying <code class="docutils literal notranslate"><span class="pre">numpys</span></code> universal functions<a class="headerlink" href="#Applying-numpys-universal-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Applying <code class="docutils literal notranslate"><span class="pre">numpys</span></code> universal functions<a class="headerlink" href="#Applying-numpys-universal-functions" title="Permalink to this headline">#</a></h2>
 <p>All numpy universal functions can be applied to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects. Below we show a different examples. For available functions please refer to the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> <a class="reference external" href="https://numpy.org/doc/stable/reference/ufuncs.html#available-ufuncs">documentation</a>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
@@ -3318,7 +3315,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 </section>
 <section id="Other">
-<h2>Other<a class="headerlink" href="#Other" title="Permalink to this headline">¶</a></h2>
+<h2>Other<a class="headerlink" href="#Other" title="Permalink to this headline">#</a></h2>
 <p>Full description of all existing functionality can be found in the <a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html">API Reference</a>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -3353,8 +3350,9 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -3365,7 +3363,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

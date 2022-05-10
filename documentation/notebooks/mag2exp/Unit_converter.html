@@ -8,29 +8,26 @@
 
     <title>Tutorial: Unit Conversions &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1055,11 +1052,11 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Unit-Conversions">
-<h1>Tutorial: Unit Conversions<a class="headerlink" href="#Tutorial:-Unit-Conversions" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Unit Conversions<a class="headerlink" href="#Tutorial:-Unit-Conversions" title="Permalink to this headline">#</a></h1>
 <p>Micromagnetic simulations provide a method of simulating the magnetic structure in real materials. However, in order to do this we need to be able to convert the information we have about the system into the parameters that micromagnetics use.</p>
 </section>
 <section id="CGS-to-SI">
-<h1>CGS to SI<a class="headerlink" href="#CGS-to-SI" title="Permalink to this headline">¶</a></h1>
+<h1>CGS to SI<a class="headerlink" href="#CGS-to-SI" title="Permalink to this headline">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">Ubermag</span></code> uses SI units for all of the system parameters. Experimentally, material parameters are can often be measured in CGS units SI units, or a mixture of the two. Firstly, we show a convinent way of converting from CGS to SI units and other useful quantities.</p>
 <p>To do this, we make use of <code class="docutils literal notranslate"><span class="pre">astropy.units</span></code>, a package aimed at the astrophysics community for its unit converting functionality. <code class="docutils literal notranslate"><span class="pre">astropy</span></code> is not installed by default. We can install it (e.g. with <code class="docutils literal notranslate"><span class="pre">pip</span></code>) directly from the notebook. Generally, you will not install <code class="docutils literal notranslate"><span class="pre">astropy</span></code> from inside the notebook (using either <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>) but for the sake of demonstration we run the command in here.</p>
 <div class="nbinput docutils container">
@@ -1198,7 +1195,7 @@ $0.001 \; \mathrm{m^{2}\,A}$</div></div>
 </pre></div></div>
 </div>
 <section id="Equivalencies">
-<h2>Equivalencies<a class="headerlink" href="#Equivalencies" title="Permalink to this headline">¶</a></h2>
+<h2>Equivalencies<a class="headerlink" href="#Equivalencies" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> also enables conversions of units with different equivalencies i.e. temperature and energy. To use this we can create a variable with the relevant units of temperature and use the <code class="docutils literal notranslate"><span class="pre">to</span></code> function to convert to the relevant units with the relevant equivalency.</p>
 <p>For example, if an exchange interaction has a temperature of 4.15 K we can calculate the equivalent energy in J.</p>
 <div class="nbinput docutils container">
@@ -1251,15 +1248,15 @@ $7957.7472 \; \mathrm{\frac{A}{m}}$</div></div>
 </section>
 </section>
 <section id="Parameters">
-<h1>Parameters<a class="headerlink" href="#Parameters" title="Permalink to this headline">¶</a></h1>
+<h1>Parameters<a class="headerlink" href="#Parameters" title="Permalink to this headline">#</a></h1>
 <p>Here we will describe some select methods for relating atomistic parameters, micromagnetic parameters, and experimental results.</p>
 <p>NOTE: Different definitions of the exchange Hamiltonian will lead to different conversion factors. Here, we use the atomistic exchange Hamiltonian <span class="math">\begin{equation}
 {\cal H}_{ex} = -\frac{1}{2}\sum_{i\neq j} J_{ij} {\bf S}_i \cdot {\bf S}_j,
 \end{equation}</span> where <span class="math notranslate nohighlight">\(\lvert{\bf S}_i \rvert = \lvert {\bf S}_j \rvert = 1\)</span> are the normaised spin vectors, and <span class="math notranslate nohighlight">\(J_{ij}\)</span> is the exchange between the.</p>
 <section id="Exchange">
-<h2>Exchange<a class="headerlink" href="#Exchange" title="Permalink to this headline">¶</a></h2>
+<h2>Exchange<a class="headerlink" href="#Exchange" title="Permalink to this headline">#</a></h2>
 <section id="Atomistic">
-<h3>Atomistic<a class="headerlink" href="#Atomistic" title="Permalink to this headline">¶</a></h3>
+<h3>Atomistic<a class="headerlink" href="#Atomistic" title="Permalink to this headline">#</a></h3>
 <p>The atomistic exchange <span class="math notranslate nohighlight">\(J\)</span> can be obtained from the Curie temperature <span class="math notranslate nohighlight">\(T_\text{C}\)</span> of a material by using <span class="math">\begin{equation}
 J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
 \end{equation}</span> where <span class="math notranslate nohighlight">\(k_\text{B}\)</span> is the Boltzmann constant, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbours, and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a structural depended correction factor. The values of this correction factor has been calculated in Table I of <a class="reference external" href="https://doi.org/10.1103/PhysRevB.53.11593">Garanin 1996</a>.</p>
@@ -1299,7 +1296,7 @@ J = \frac{3k_\text{B}T_\text{C}}{\epsilon z},
 </div>
 </section>
 <section id="Micromagnetic">
-<h3>Micromagnetic<a class="headerlink" href="#Micromagnetic" title="Permalink to this headline">¶</a></h3>
+<h3>Micromagnetic<a class="headerlink" href="#Micromagnetic" title="Permalink to this headline">#</a></h3>
 <p>The micromagnetic exchange correlation constant <span class="math notranslate nohighlight">\(A\)</span> can be related to atomistic exchange using <span class="math">\begin{equation}
 A = \frac{zJl^2}{12V},
 \end{equation}</span> where <span class="math notranslate nohighlight">\(J\)</span> is the Heisenberg exchange, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(l\)</span> is the distance between neighbor atoms and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
@@ -1365,15 +1362,15 @@ A = \frac{k_\text{B}T_\text{C}l^2}{4\epsilon V}.
 </section>
 </section>
 <section id="DMI">
-<h2>DMI<a class="headerlink" href="#DMI" title="Permalink to this headline">¶</a></h2>
+<h2>DMI<a class="headerlink" href="#DMI" title="Permalink to this headline">#</a></h2>
 <section id="id1">
-<h3>Atomistic<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Atomistic<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>The Dzyaloshinskii–Moriya interaction is given by <span class="math">\begin{equation}
 {\cal H}_{ex} = -\frac{1}{2}\sum_{i\neq j} {\bf d}_{ij} \cdot \left( {\bf S}_i \times {\bf S}_j \right),
 \end{equation}</span> where <span class="math notranslate nohighlight">\({\bf d}_{ij}\)</span> is the atomistic DMI vector.</p>
 </section>
 <section id="Micromagentic">
-<h3>Micromagentic<a class="headerlink" href="#Micromagentic" title="Permalink to this headline">¶</a></h3>
+<h3>Micromagentic<a class="headerlink" href="#Micromagentic" title="Permalink to this headline">#</a></h3>
 <p>The micromagnetic DMI constant <span class="math notranslate nohighlight">\(D\)</span> can be related to atomistic DMI using <span class="math">\begin{equation}
 D = \frac{zdl}{12V},
 \end{equation}</span> where <span class="math notranslate nohighlight">\(d\)</span> is the atomistic DMI, <span class="math notranslate nohighlight">\(z\)</span> is the number of nearest neighbour atoms, and <span class="math notranslate nohighlight">\(l\)</span> is the distance between neighbor atoms and <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
@@ -1446,9 +1443,9 @@ P = \frac{4\pi J l}{|d|},
 </section>
 </section>
 <section id="Saturation-Magnetisation">
-<h2>Saturation Magnetisation<a class="headerlink" href="#Saturation-Magnetisation" title="Permalink to this headline">¶</a></h2>
+<h2>Saturation Magnetisation<a class="headerlink" href="#Saturation-Magnetisation" title="Permalink to this headline">#</a></h2>
 <section id="Micromagnetics">
-<h3>Micromagnetics<a class="headerlink" href="#Micromagnetics" title="Permalink to this headline">¶</a></h3>
+<h3>Micromagnetics<a class="headerlink" href="#Micromagnetics" title="Permalink to this headline">#</a></h3>
 <p>The saturation magnetisation is often measured in <span class="math notranslate nohighlight">\(\mu_\text{B}/f.u.\)</span> but is needed in A/m in micromagnetics. A simple converstion can be used <span class="math">\begin{equation}
 M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 \end{equation}</span> where <span class="math notranslate nohighlight">\(M_s[\mu_\text{B}/f.u.]\)</span> is the saturation magnetisation in <span class="math notranslate nohighlight">\(\mu_B\)</span> per formula unit, <span class="math notranslate nohighlight">\(\mu_B\)</span> is the Bohr magneton in J/m, and <span class="math notranslate nohighlight">\(V\)</span> is the volume of the formula unit in m<span class="math notranslate nohighlight">\(^3\)</span>.</p>
@@ -1480,7 +1477,7 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 </div>
 </section>
 <section id="id2">
-<h3>Atomistic<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Atomistic<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>In atomistic simulations the saturation magnetisation <span class="math notranslate nohighlight">\(M_s\)</span> in micromagnetic simulations can be related to the magnetic moment <span class="math notranslate nohighlight">\(\mu\)</span> simply by <span class="math">\begin{equation}
 \mu = M_s V,
 \end{equation}</span> where <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom.</p>
@@ -1515,13 +1512,13 @@ M_s [ \text{A}/ \text{m}]= \frac{\mu_\text{B} M_s[\mu_\text{B}/f.u.]}{V},
 </section>
 </section>
 <section id="Anisotropy">
-<h2>Anisotropy<a class="headerlink" href="#Anisotropy" title="Permalink to this headline">¶</a></h2>
+<h2>Anisotropy<a class="headerlink" href="#Anisotropy" title="Permalink to this headline">#</a></h2>
 <section id="id3">
-<h3>Micromagnetic<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>Micromagnetic<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Anisotropy can can be measured experimentally in a variety of different ways. The results torque magnetometry, for example, can give correct value for the anisotropy in units of Jm<span class="math notranslate nohighlight">\(^{-3}\)</span>.</p>
 </section>
 <section id="id4">
-<h3>Atomistic<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>Atomistic<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>Similarly to the saturation magnetisation the conversion between micromagnetic <span class="math notranslate nohighlight">\(K\)</span> and atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> is simply volume weighted <span class="math">\begin{equation}
 k = K V,
 \end{equation}</span> where <span class="math notranslate nohighlight">\(V\)</span> is the crystal volume per magnetic atom. This atomistic anisotropy <span class="math notranslate nohighlight">\(k\)</span> can also be calculated from the difference in energy of <span class="math notranslate nohighlight">\(J\)</span> in different directions. i.e. <span class="math notranslate nohighlight">\(J_{\perp} = 6\times 10^{-23}\)</span> J and <span class="math notranslate nohighlight">\(J_{\parallel} = 5 \times 10^{-23}\)</span> J gives an atomistic anisotropy <span class="math notranslate nohighlight">\(k=1\times 10^{-23}\)</span> J.</p>
@@ -1557,7 +1554,7 @@ k = K V,
 </section>
 </section>
 <section id="Worked-Example">
-<h1>Worked Example<a class="headerlink" href="#Worked-Example" title="Permalink to this headline">¶</a></h1>
+<h1>Worked Example<a class="headerlink" href="#Worked-Example" title="Permalink to this headline">#</a></h1>
 <p>Here FeGe will be used as example for how to obtain micromagnetic parameters. FeGe has a cubic crystal structure with four Ge and four Fe atoms per unit cell with a lattice constant of <span class="math notranslate nohighlight">\(a= 4.6995\)</span> Å and the distance between Fe atoms is 2.881 Å [<a class="reference external" href="http://doi.org/10.1016/j.stam.2007.04.004">Wilhelm 2007</a>]. The saturation magnetisation is <span class="math notranslate nohighlight">\(1.07 \mu_\text{B}/f.u.\)</span> [<a class="reference external" href="https://doi.org/10.1016%2FS0921-4526%2802%2902471-7">Yamada 2003</a>] and magnetic ordering temperature is 278 K [<a class="reference external" href="https://iopscience.iop.org/article/10.1088/0953-8984/1/35/010/meta">Lebech
 1989</a>]. The helical period of FeGe is <span class="math notranslate nohighlight">\(\sim 70\)</span> nm [<a class="reference external" href="https://doi.org/10.1038/nmat2916">Yu 2011</a>].</p>
 <div class="nbinput nblast docutils container">
@@ -1681,8 +1678,9 @@ k = K V,
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1693,7 +1691,7 @@ k = K V,
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

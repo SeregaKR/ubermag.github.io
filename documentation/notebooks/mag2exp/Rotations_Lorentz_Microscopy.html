@@ -8,29 +8,26 @@
 
     <title>Tutorial: Using Rotations with mag2exp &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -963,7 +960,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Using-Rotations-with-mag2exp">
-<h1>Tutorial: Using Rotations with <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code><a class="headerlink" href="#Tutorial:-Using-Rotations-with-mag2exp" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Using Rotations with <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code><a class="headerlink" href="#Tutorial:-Using-Rotations-with-mag2exp" title="Permalink to this headline">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> objects have the functionality to be rotated. We can make use of this functionality with the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package.</p>
 <p>This is an example of how to use the rotation functionality with Lorentz Transmission Electron Microscopy (LTEM) in order to view Néel magentisation structures. This tutorial assumes knowledge of how to use the <code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code> class and <code class="docutils literal notranslate"><span class="pre">mag2exp.ltem</span></code>. Tutorials on both of these topics can be found in their relevant documentation.</p>
 <div class="nbinput docutils container">
@@ -1068,7 +1065,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
 </div>
 <p>Here we have a Néel Skyrmion in a box.</p>
 <section id="Computing-LTEM-images">
-<h2>Computing LTEM images<a class="headerlink" href="#Computing-LTEM-images" title="Permalink to this headline">¶</a></h2>
+<h2>Computing LTEM images<a class="headerlink" href="#Computing-LTEM-images" title="Permalink to this headline">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">quick_plots</span></code> functionality of the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package to plot a defocused image of this magnetisation structure.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -1239,8 +1236,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1251,7 +1249,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

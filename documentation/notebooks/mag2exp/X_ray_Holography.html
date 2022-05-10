@@ -8,29 +8,26 @@
 
     <title>Tutorial: X-ray Holography &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -983,18 +980,18 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-X-ray-Holography">
-<h1>Tutorial: X-ray Holography<a class="headerlink" href="#Tutorial:-X-ray-Holography" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: X-ray Holography<a class="headerlink" href="#Tutorial:-X-ray-Holography" title="Permalink to this headline">#</a></h1>
 <p>X-ray holography is a technique through which a sample’s magnetisation can be imaged. It uses the effect of magnetic circular dichroism, in which left and right circularly polarised light are absorbed differently in the presence of a magnetic field parallel to the propagation direction of the light. Due to this effect, only magnetisation parallel the beam direction is able to be imaged. The wavelengths of the X-rays can be tuned to the absorption edges of the different elements present in the
 sample allowing for element-specific magnetisation to be measured. However, in calculating X-ray holography images from micromagnetic simulations we can use the approximation that the images are non element specific.</p>
 <p>In X-ray holography, a coherent beam of circularly polarised X-rays are incident on the sample and a reference slit. The X-rays to scatter from both the sample and the slit which interfere and form a hologram which is incident on the detector. The hologram measured can then be combined with a differential filter and Fourier transformed to reconstruct the holographic image of out-of-plane magnetisation of the sample. For further information refer to Ref. [<a class="reference external" href="https://doi.org/10.1364/OE.19.016223">Duckworth
 2011</a>].</p>
 <section id="X-ray-holography-reference-frame">
-<h2>X-ray holography reference frame<a class="headerlink" href="#X-ray-holography-reference-frame" title="Permalink to this headline">¶</a></h2>
+<h2>X-ray holography reference frame<a class="headerlink" href="#X-ray-holography-reference-frame" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental reference for X-ray holography is defined by the X-ray beam propagating along the <span class="math notranslate nohighlight">\(z\)</span> direction. Figure is taken from Ref. [<a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/acsnano.0c07392">Turnbull 2020</a>].</p>
-<p><img alt="d7dfc753a3604599b1bae1f2eef0406d" class="no-scaled-link" src="../../../_images/Holo_2.png" style="width: 800px; height: 600px;" /></p>
+<p><img alt="79ed0fec2df844edb075dd12b68bc32e" class="no-scaled-link" src="../../../_images/Holo_2.png" style="width: 800px; height: 600px;" /></p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
 <p>A micromagnetic simulation can be set up using <code class="docutils literal notranslate"><span class="pre">Ubermag</span></code> to obtain a 3-dimensional magnetic structure.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1070,7 +1067,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 14:45]... (18.9 s)
 </div>
 </section>
 <section id="Computing-X-ray-holography-images">
-<h2>Computing X-ray holography images<a class="headerlink" href="#Computing-X-ray-holography-images" title="Permalink to this headline">¶</a></h2>
+<h2>Computing X-ray holography images<a class="headerlink" href="#Computing-X-ray-holography-images" title="Permalink to this headline">#</a></h2>
 <p>As X-ray beam is defined as propagating along the <span class="math notranslate nohighlight">\(z\)</span> direction, the results from the image reconstruction of the X-ray holograph is comparable to the integrated <span class="math notranslate nohighlight">\(z\)</span> component of magnetisation along the beam direction <span class="math notranslate nohighlight">\(m_z\)</span>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -1128,7 +1125,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 14:45]... (18.9 s)
 </div>
 </section>
 <section id="Quick-plots">
-<h2>Quick plots<a class="headerlink" href="#Quick-plots" title="Permalink to this headline">¶</a></h2>
+<h2>Quick plots<a class="headerlink" href="#Quick-plots" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> has an integrated <code class="docutils literal notranslate"><span class="pre">quick_plots</span></code> functionality which is designed to be easy to use and output figures of the desired quantities directly from the magnetisation texture with all the intermediary calculations performed under the hood. These figures are created with set themes by design, and only take arguments relevant to the quantities being calculated.</p>
 <p>Holographic images can be plotted using</p>
 <div class="nbinput docutils container">
@@ -1149,7 +1146,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 14:45]... (18.9 s)
 </div>
 </section>
 <section id="Rotations">
-<h2>Rotations<a class="headerlink" href="#Rotations" title="Permalink to this headline">¶</a></h2>
+<h2>Rotations<a class="headerlink" href="#Rotations" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> objects have the functionality to be rotated. We can make use of this functionality with the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package in order to look along any arbitrary direction with X-ray holography. This assumes knowledge of how to use the <code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code>. A tutorials on this topic can be found in the <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> documentation.</p>
 <p>Firstly we can create a <code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code> of our field. As the reference frame is defined along the <span class="math notranslate nohighlight">\(z\)</span> direction, if we want to image along the [111] direction we can use the <code class="docutils literal notranslate"><span class="pre">align_vector</span></code> method using <code class="docutils literal notranslate"><span class="pre">initial=(1,</span> <span class="pre">1,</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">final=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code>.</p>
 <div class="nbinput nblast docutils container">
@@ -1224,8 +1221,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 14:45]... (18.9 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1236,7 +1234,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 14:45]... (18.9 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

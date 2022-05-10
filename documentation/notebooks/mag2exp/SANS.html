@@ -8,29 +8,26 @@
 
     <title>Tutorial: Small Angle Neutron Scattering &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -973,19 +970,19 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Small-Angle-Neutron-Scattering">
-<h1>Tutorial: Small Angle Neutron Scattering<a class="headerlink" href="#Tutorial:-Small-Angle-Neutron-Scattering" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Small Angle Neutron Scattering<a class="headerlink" href="#Tutorial:-Small-Angle-Neutron-Scattering" title="Permalink to this headline">#</a></h1>
 <p>Small Angle Neutron Scattering (SANS) is a powerful reciprocal space technique that can be used to investigate magnetic structures on mesoscopic length scales. In SANS the atomic structure generally has a minimal impact hence the sample can be approximated by a continuous magnetisation vector field [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>].</p>
 <p>The differential scattering cross section <span class="math notranslate nohighlight">\(d\Sigma/d\Omega\)</span> can be used as a function of the scattering vector <span class="math notranslate nohighlight">\({\bf q}\)</span> to predict the scattering patterns produced.</p>
 <section id="SANS-Reference-frame">
-<h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this headline">¶</a></h2>
+<h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="6ce92860d323463eadc919f962c50c73" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="694ffdf807ec42488401bffca6ab92ca" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-Dimentional magntic structure with periodic boundary conditions in the <span class="math notranslate nohighlight">\(xy\)</span> plane.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1075,7 +1072,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
 <p>Now we have a magnetisation texture we can compute the SANS scattering cross sections.</p>
 </section>
 <section id="Computing-SANS-Cross-sections">
-<h2>Computing SANS Cross-sections<a class="headerlink" href="#Computing-SANS-Cross-sections" title="Permalink to this headline">¶</a></h2>
+<h2>Computing SANS Cross-sections<a class="headerlink" href="#Computing-SANS-Cross-sections" title="Permalink to this headline">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package to calculate the cross sections. The scattering can be calculated with the use of the magnetic interaction vector <span class="math notranslate nohighlight">\({\bf Q}\)</span> [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>] where</p>
 <p><span class="math">\begin{equation}
 {\bf Q} = \hat{\bf q} \times \left[ \widetilde{\bf M} \times \hat{\bf q} \right],
@@ -1356,8 +1353,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1368,7 +1366,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

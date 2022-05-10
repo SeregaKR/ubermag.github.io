@@ -8,29 +8,26 @@
 
     <title>Field rotation &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -1021,7 +1018,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Field-rotation">
-<h1>Field rotation<a class="headerlink" href="#Field-rotation" title="Permalink to this headline">¶</a></h1>
+<h1>Field rotation<a class="headerlink" href="#Field-rotation" title="Permalink to this headline">#</a></h1>
 <p>Finite-difference fields (in <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>) are always discretised in the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> direction and hence aligned with the coordinate axes. Several operations, such as cutting planes or computing integrals, are only possible along the coordinate axes. In this tutorial we demonstrate how to rotate a <code class="docutils literal notranslate"><span class="pre">field</span></code> in an arbitrary direction (multiple consecutive rotations are possible as well). Rotations can be applied to scalar (<code class="docutils literal notranslate"><span class="pre">dim==1</span></code>) and vector (<code class="docutils literal notranslate"><span class="pre">dim==3</span></code>) fields
 only. Periodict boundary conditions are currently not supported (ignored and lost during the rotation process).</p>
 <p>The rotation of a field allows for more flexibility:</p>
@@ -1038,9 +1035,9 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 <p>In general, multiple consecutive rotations of the same <code class="docutils literal notranslate"><span class="pre">field</span></code> would result in an accumultation of errors. To prevent this we use a special object to rotate the <code class="docutils literal notranslate"><span class="pre">field</span></code>. Consecutive rotations are collected and the actual rotation of a field is always computed starting from the unrotated original field.</p>
 <p>This tutorial is divided into two parts. In the first part we explain the different methods to rotate a field by looking at a few examples. The second part explains the different steps of the rotation process in more detail.</p>
 <section id="Rotating-a-field">
-<h2>Rotating a field<a class="headerlink" href="#Rotating-a-field" title="Permalink to this headline">¶</a></h2>
+<h2>Rotating a field<a class="headerlink" href="#Rotating-a-field" title="Permalink to this headline">#</a></h2>
 <section id="Original-field">
-<h3>Original field<a class="headerlink" href="#Original-field" title="Permalink to this headline">¶</a></h3>
+<h3>Original field<a class="headerlink" href="#Original-field" title="Permalink to this headline">#</a></h3>
 <p>Let us first define a field to work with.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1075,7 +1072,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 </div>
 </section>
 <section id="FieldRotator">
-<h3><code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code><a class="headerlink" href="#FieldRotator" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code><a class="headerlink" href="#FieldRotator" title="Permalink to this headline">#</a></h3>
 <p>Rotations of the <code class="docutils literal notranslate"><span class="pre">field</span></code> are handled by a special <code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code> object.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -1135,7 +1132,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 <p>The <code class="docutils literal notranslate"><span class="pre">field_rotator</span></code> is initialised with an identity rotation matrix (initially no rotation is applied). The rotation matrix is not directly accessible. Instead, it can be modified using the <code class="docutils literal notranslate"><span class="pre">rotate</span></code> method explained in the following.</p>
 </section>
 <section id="Rotation-methods">
-<h3>Rotation methods<a class="headerlink" href="#Rotation-methods" title="Permalink to this headline">¶</a></h3>
+<h3>Rotation methods<a class="headerlink" href="#Rotation-methods" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">field_rotator</span></code> can rotate the <code class="docutils literal notranslate"><span class="pre">field</span></code> using the <code class="docutils literal notranslate"><span class="pre">rotate</span></code> method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">field_rotator</span><span class="o">.</span><span class="n">rotate</span>
 </pre></div>
@@ -1155,7 +1152,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 <p>which is slightly different from the scipy method <code class="docutils literal notranslate"><span class="pre">align_vectors</span></code>. See below for more details on this method.</p>
 </section>
 <section id="Rotations-by-multiples-of-90°">
-<h3>Rotations by multiples of 90°<a class="headerlink" href="#Rotations-by-multiples-of-90°" title="Permalink to this headline">¶</a></h3>
+<h3>Rotations by multiples of 90°<a class="headerlink" href="#Rotations-by-multiples-of-90°" title="Permalink to this headline">#</a></h3>
 <p>We now show an example using Euler angles to rotate the <code class="docutils literal notranslate"><span class="pre">field</span></code> by 90° around the <span class="math notranslate nohighlight">\(x\)</span> axis:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -1260,7 +1257,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 </div>
 </section>
 <section id="Rotations-about-arbitrary-angles">
-<h3>Rotations about arbitrary angles<a class="headerlink" href="#Rotations-about-arbitrary-angles" title="Permalink to this headline">¶</a></h3>
+<h3>Rotations about arbitrary angles<a class="headerlink" href="#Rotations-about-arbitrary-angles" title="Permalink to this headline">#</a></h3>
 <p>We can rotate the field about an arbitrary angle. To keep this section simple we only show rotations about the z-axis that can be easily visualised on as single plane.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1358,7 +1355,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 </div>
 </section>
 <section id="Rotating-a-vector-to-point-in-a-certain-direction">
-<h3>Rotating a vector to point in a certain direction<a class="headerlink" href="#Rotating-a-vector-to-point-in-a-certain-direction" title="Permalink to this headline">¶</a></h3>
+<h3>Rotating a vector to point in a certain direction<a class="headerlink" href="#Rotating-a-vector-to-point-in-a-certain-direction" title="Permalink to this headline">#</a></h3>
 <p>Sometimes it is convenient to specify a certain vector in the old and new coordinate system instead of specifying a rotation axis and an angle. This can be achieved with the method <code class="docutils literal notranslate"><span class="pre">align_vector</span></code>. Two vectors <code class="docutils literal notranslate"><span class="pre">initial</span></code> and <code class="docutils literal notranslate"><span class="pre">final</span></code> have to be specified and the rotation rotates the vector <code class="docutils literal notranslate"><span class="pre">inital</span></code> to the vector <code class="docutils literal notranslate"><span class="pre">final</span></code>. The cross product is kept fixed and hence defines the rotation axis.</p>
 <p>To give an example, we can rotate one of the corners to point in the z-direction. We start with removing all rotations.</p>
 <div class="nbinput docutils container">
@@ -1457,7 +1454,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 </section>
 </section>
 <section id="Details-of-the-rotation-process">
-<h2>Details of the rotation process<a class="headerlink" href="#Details-of-the-rotation-process" title="Permalink to this headline">¶</a></h2>
+<h2>Details of the rotation process<a class="headerlink" href="#Details-of-the-rotation-process" title="Permalink to this headline">#</a></h2>
 <p>The rotation of a <code class="docutils literal notranslate"><span class="pre">field</span></code> can be separated into three different processes:</p>
 <ol class="arabic simple">
 <li><p>rotation of the <code class="docutils literal notranslate"><span class="pre">region</span></code></p></li>
@@ -1466,7 +1463,7 @@ only. Periodict boundary conditions are currently not supported (ignored and los
 </ol>
 <p>We discuss these processes in greater detail in the following subsections.</p>
 <section id="1.-Rotation-of-the-region">
-<h3>1. Rotation of the region<a class="headerlink" href="#1.-Rotation-of-the-region" title="Permalink to this headline">¶</a></h3>
+<h3>1. Rotation of the region<a class="headerlink" href="#1.-Rotation-of-the-region" title="Permalink to this headline">#</a></h3>
 <p>The first step of the rotation procces is rotation of the region. The rotated initial region is in general not anymore aligned with the coordinate axes. We need a new aligned region fully enclosing the rotated initial region. Therefore, this new region must be larger than the unrotated inital region in order to fully enclose the rotated initial region. The required size is obtained by rotating the three vectors pointing along the edges of the old region in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>
 direction. Then, the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> components of these rotated vectors in the new coordinate system are summed up to obtain the new edge lengths.</p>
 <p>The rotation in two dimensions is shown in the following figure. The original field is show in red, the region size for different rotations (0°, 15°, 45°, 60°) in blue.</p>
@@ -1474,7 +1471,7 @@ direction. Then, the <span class="math notranslate nohighlight">\(x\)</span>, <s
 <p>As an example, to make this clearer, we show the rotation of a field where non-zero values are inside a disk. In princible, this field would not need a larger region to be rotated. However, as only the region is taken into account, the new region is larger than theoretically needed.</p>
 <img alt="Rotation of a disk (non-zero part of the field) do demonstrate limitations" src="../../../_images/rotation_disk.svg" /></section>
 <section id="2.-Rotation-of-the-mesh">
-<h3>2. Rotation of the mesh<a class="headerlink" href="#2.-Rotation-of-the-mesh" title="Permalink to this headline">¶</a></h3>
+<h3>2. Rotation of the mesh<a class="headerlink" href="#2.-Rotation-of-the-mesh" title="Permalink to this headline">#</a></h3>
 <p>The second step of the rotation process is the rotation of the mesh. Since we already have the new region, this is basically the rotation of a cell to determine the new cell size/number of cells. This can be either done automatically or manually.</p>
 <p>If the new number of cells is either known or certain values are needed the user can specify an additional argument <code class="docutils literal notranslate"><span class="pre">n</span></code> in the <code class="docutils literal notranslate"><span class="pre">rotate</span></code> method to specify the number of cells in <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> direction:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>field_rotator.rotate(..., n=(&lt;nx&gt;, &lt;ny&gt;, &lt;nz&gt;), ...)
@@ -1489,7 +1486,7 @@ direction. Then, the <span class="math notranslate nohighlight">\(x\)</span>, <s
 </ol>
 </section>
 <section id="3.-Rotation-of-the-field-values">
-<h3>3. Rotation of the field values<a class="headerlink" href="#3.-Rotation-of-the-field-values" title="Permalink to this headline">¶</a></h3>
+<h3>3. Rotation of the field values<a class="headerlink" href="#3.-Rotation-of-the-field-values" title="Permalink to this headline">#</a></h3>
 <p>The last part of the rotation process is the rotation of the <code class="docutils literal notranslate"><span class="pre">field</span></code> values. This consists of two parts:</p>
 <ol class="arabic simple">
 <li><p>Rotation of the field values (for vector fields only)</p></li>
@@ -1531,8 +1528,9 @@ direction. Then, the <span class="math notranslate nohighlight">\(x\)</span>, <s
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1543,7 +1541,7 @@ direction. Then, the <span class="math notranslate nohighlight">\(x\)</span>, <s
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

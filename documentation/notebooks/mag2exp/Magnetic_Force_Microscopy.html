@@ -8,29 +8,26 @@
 
     <title>Tutorial: Magnetic Force Microscopy &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -988,18 +985,18 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial:-Magnetic-Force-Microscopy">
-<h1>Tutorial: Magnetic Force Microscopy<a class="headerlink" href="#Tutorial:-Magnetic-Force-Microscopy" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial: Magnetic Force Microscopy<a class="headerlink" href="#Tutorial:-Magnetic-Force-Microscopy" title="Permalink to this headline">#</a></h1>
 <p>Magnetic force microscopy (MFM) is a powerful technique for examining a sample’s stray magnetic field. The contrast in MFM images originates from the interaction between the magnetic tip of an oscillating cantilever and the stray field. It has a key role in the imaging of magnetism in thin films and samples with flat surfaces.</p>
 <p>The cantilever in a dual pass MFM mode rasters across the same line scan twice, firstly mapping the topography by tapping along the surface at the resonant frequency <span class="math notranslate nohighlight">\(\omega_0\)</span> [<a class="reference external" href="https://aip.scitation.org/doi/10.1063/1.5050712">Kazakova 2019</a>]. The second pass lifts the cantilever a set height <span class="math notranslate nohighlight">\(z_0\)</span> above the sample surface, which is determined by the first pass. The phase shift <span class="math notranslate nohighlight">\(\Delta \phi\)</span> of the resonance is then measured as the probe rasters across the sample. The tip
 of an MFM is a complicated magnetic object but usually it can be characterised by an effective magnetic dipole moment and an effective magnetic monopole moment. These moments interact with the stray field produced by the magnetisation of the sample, changing the force on the magnetic tip and hence its resonance. Due to the non-zero size of the tip, the resolution of this technique can be on the scale of tens of nanometres.</p>
 <p>MFM is most commonly used to probe the out-of-plane stray magnetic field of a sample but it has the potential to measure different quantities with the tip magnetised in different directions.</p>
 <section id="MFM-Reference-frame">
-<h2>MFM Reference frame<a class="headerlink" href="#MFM-Reference-frame" title="Permalink to this headline">¶</a></h2>
+<h2>MFM Reference frame<a class="headerlink" href="#MFM-Reference-frame" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental reference for MFM is defined by cantilever oscillating in the <span class="math notranslate nohighlight">\(z\)</span> direction.</p>
-<p><img alt="3c759febf4994e468a203b5b8077040a" class="no-scaled-link" src="../../../_images/MFM_1.png" style="width: 600px;" /></p>
+<p><img alt="a5e3f0d17f5c45fcb7883c41865db000" class="no-scaled-link" src="../../../_images/MFM_1.png" style="width: 600px;" /></p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
 <p>A micromagnetic simulation can be set up using <code class="docutils literal notranslate"><span class="pre">Ubermag</span></code> to obtain a 3-Dimentional magntic structure. As MFM is based on the field outside a sample, when simulating MFM we have to create an “airbox”. Simply put, this is an area outside of the sample where we wish to perform the MFM measurements, in which we have set the saturation magnetisation equal to zero. It is equivalent to simulating the empty space around the sample. The demagnetisation term must be used as part of the energy equation
 when defining and relaxing the system as this is the process by which the stray field is calculated.</p>
 <p>Here a simulation region is created with a 200 nm edge length and 150 nm in height which contains a magnetic sample which exists in the region with <span class="math notranslate nohighlight">\(z &lt; 0\)</span> nm with an “airbox” above.</p>
@@ -1121,7 +1118,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:19]... (49.7 s)
 <p>Now we have a magnetisation texture we can compute the MFM patterns.</p>
 </section>
 <section id="Computing-MFM-images">
-<h2>Computing MFM images<a class="headerlink" href="#Computing-MFM-images" title="Permalink to this headline">¶</a></h2>
+<h2>Computing MFM images<a class="headerlink" href="#Computing-MFM-images" title="Permalink to this headline">#</a></h2>
 <p>The phase shift of an MFM cantilever can be derived from the equation of simple harmonic motion with an external force and is given by</p>
 <p><span class="math">\begin{equation}
 \Delta \phi = \frac{Q\mu_0}{k} \left( q \frac{\partial {\bf H}_{sz}}{\partial z} + {\bf M}_t \cdot \frac{\partial^2{\bf H}_{s}}{\partial z^2} \right),
@@ -1226,7 +1223,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:20]... (3.1 s)
 </div>
 </section>
 <section id="The-finite-size-of-the-tip">
-<h2>The finite size of the tip<a class="headerlink" href="#The-finite-size-of-the-tip" title="Permalink to this headline">¶</a></h2>
+<h2>The finite size of the tip<a class="headerlink" href="#The-finite-size-of-the-tip" title="Permalink to this headline">#</a></h2>
 <p>Experimentally, the size of the tip limits the resolution of the images. To recreate this the phase shift can be convolved with a Gaussian with a width defined by the full width half maximum.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1254,7 +1251,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:20]... (3.1 s)
 </div>
 </section>
 <section id="Quick-plots">
-<h2>Quick plots<a class="headerlink" href="#Quick-plots" title="Permalink to this headline">¶</a></h2>
+<h2>Quick plots<a class="headerlink" href="#Quick-plots" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> has an integrated <code class="docutils literal notranslate"><span class="pre">quick_plots</span></code> functionality which is designed to be easy to use and output figures of the desired quantities directly from the magnetisation texture with all the intermediary calculations performed under the hood. These figures are created with set themes by design, and only take arguments relevant to the quantities being calculated.</p>
 <p><code class="docutils literal notranslate"><span class="pre">quick_plots.mfm_phase_shift</span></code> takes the arguments of <code class="docutils literal notranslate"><span class="pre">mfm.phase_shift</span></code> with an additional parameter <code class="docutils literal notranslate"><span class="pre">z0</span></code> for the height of the plane that will be plotted.</p>
 <div class="nbinput docutils container">
@@ -1283,7 +1280,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:21]... (3.1 s)
 </div>
 </section>
 <section id="Interactive-plotting">
-<h2>Interactive plotting<a class="headerlink" href="#Interactive-plotting" title="Permalink to this headline">¶</a></h2>
+<h2>Interactive plotting<a class="headerlink" href="#Interactive-plotting" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> package has the ability to use interactive plotting. As the phase shift changes with lift off height we can use the interactive plotting slider to visualize the phase shift.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1358,8 +1355,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:21]... (3.1 s)
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1370,7 +1368,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/09 11:21]... (3.1 s)
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

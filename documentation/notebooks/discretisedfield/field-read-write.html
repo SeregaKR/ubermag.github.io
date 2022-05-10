@@ -8,29 +8,26 @@
 
     <title>Reading and writing fields &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -968,7 +965,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Reading-and-writing-fields">
-<h1>Reading and writing fields<a class="headerlink" href="#Reading-and-writing-fields" title="Permalink to this headline">¶</a></h1>
+<h1>Reading and writing fields<a class="headerlink" href="#Reading-and-writing-fields" title="Permalink to this headline">#</a></h1>
 <p>There are three file formats to which a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object can be saved:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://vtk.org/">VTK</a> for visualisation using e.g., <a class="reference external" href="https://www.paraview.org/">ParaView</a> or <a class="reference external" href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a></p></li>
@@ -1016,7 +1013,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Writing-the-field-to-a-file">
-<h2>Writing the field to a file<a class="headerlink" href="#Writing-the-field-to-a-file" title="Permalink to this headline">¶</a></h2>
+<h2>Writing the field to a file<a class="headerlink" href="#Writing-the-field-to-a-file" title="Permalink to this headline">#</a></h2>
 <p>The main method used for saving field in different files is <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.write()</span></code>. It takes <code class="docutils literal notranslate"><span class="pre">filename</span></code> as an argument, which is a string with one of the following extensions: - <code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code> for saving in the VTK format - <code class="docutils literal notranslate"><span class="pre">'.ovf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.omf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.ohf'</span></code> for saving in the OVF format - <code class="docutils literal notranslate"><span class="pre">'.h5'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.hdf5'</span></code> for saving and HDF5 file</p>
 <p>Let us firstly save the field in the VTK file.</p>
 <div class="nbinput nblast docutils container">
@@ -1126,7 +1123,7 @@ True
 </div>
 </section>
 <section id="Reading-files">
-<h2>Reading files<a class="headerlink" href="#Reading-files" title="Permalink to this headline">¶</a></h2>
+<h2>Reading files<a class="headerlink" href="#Reading-files" title="Permalink to this headline">#</a></h2>
 <p>The method for reading OVF files is a class method <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.fromfile()</span></code>. By passing a <code class="docutils literal notranslate"><span class="pre">filename</span></code> argument, it reads the file and creates a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object. It is not required to pass the representation of the OVF file to the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.fromfile()</span></code> method, because it can retrieve it from the content of the file.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1194,8 +1191,9 @@ True
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1206,7 +1204,7 @@ True
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

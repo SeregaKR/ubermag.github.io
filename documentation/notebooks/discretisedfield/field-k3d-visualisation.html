@@ -8,29 +8,26 @@
 
     <title>Field visualisation using k3d &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -975,7 +972,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Field-visualisation-using-k3d">
-<h1>Field visualisation using <code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#Field-visualisation-using-k3d" title="Permalink to this headline">¶</a></h1>
+<h1>Field visualisation using <code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#Field-visualisation-using-k3d" title="Permalink to this headline">#</a></h1>
 <p><strong>Note:</strong> If you experience any problems in plotting with <code class="docutils literal notranslate"><span class="pre">k3d</span></code>, please make sure you run the Jupyter notebook in Google Chrome.</p>
 <p>There are two ways how a field can be visualised, using: - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> - <code class="docutils literal notranslate"><span class="pre">k3d</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">k3d</span></code> provides three-dimensional interactive plots of fields inside Jupyter notebook.</p>
@@ -1178,7 +1175,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 <p>To further modify the plot, keyword arguments for <code class="docutils literal notranslate"><span class="pre">k3d.factory.vectors()</span></code> function are accepted. Plese refer to its <a class="reference external" href="https://k3d-jupyter.org/k3d.html#k3d.factory.vectors">documentation</a>.</p>
 <section id="Multiple-visualisation-on-the-same-plot">
-<h2>Multiple visualisation on the same plot<a class="headerlink" href="#Multiple-visualisation-on-the-same-plot" title="Permalink to this headline">¶</a></h2>
+<h2>Multiple visualisation on the same plot<a class="headerlink" href="#Multiple-visualisation-on-the-same-plot" title="Permalink to this headline">#</a></h2>
 <p>Sometimes, it is necessary to show, for example, multiple planes of the sample on the same plot. This can be done by exposing the <code class="docutils literal notranslate"><span class="pre">k3d.plot</span></code> and passing it to different plotting methods. For instance.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1201,7 +1198,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "b781b518e50444da99386121c88c5e5e", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <section id="k3d-interactive-plots">
-<h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code> interactive plots<a class="headerlink" href="#k3d-interactive-plots" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code> interactive plots<a class="headerlink" href="#k3d-interactive-plots" title="Permalink to this headline">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -1338,8 +1335,9 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1350,7 +1348,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

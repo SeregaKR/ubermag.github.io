@@ -8,29 +8,26 @@
 
     <title>Controlling the default runner &#8212; ubermag  documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -54,7 +51,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -983,7 +980,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Controlling-the-default-runner">
-<h1>Controlling the default runner<a class="headerlink" href="#Controlling-the-default-runner" title="Permalink to this headline">¶</a></h1>
+<h1>Controlling the default runner<a class="headerlink" href="#Controlling-the-default-runner" title="Permalink to this headline">#</a></h1>
 <p>In this tutorial we show how to globally controll the default runner. First we import <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -995,7 +992,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">oommfc</span></code> has a special member <code class="docutils literal notranslate"><span class="pre">oommfc.runner</span></code> that provides information and control about the default runner and how it is chosen.</p>
 <section id="Different-runners">
-<h2>Different runners<a class="headerlink" href="#Different-runners" title="Permalink to this headline">¶</a></h2>
+<h2>Different runners<a class="headerlink" href="#Different-runners" title="Permalink to this headline">#</a></h2>
 <p>There are three different runners that can be used:</p>
 <ul class="simple">
 <li><p>Tcl runner: if we want to point ubermag to the particular <code class="docutils literal notranslate"><span class="pre">oommf.tcl</span></code> file</p></li>
@@ -1007,7 +1004,7 @@ it here: <a class="reference external" href="https://www.docker.com/products/doc
 <p><strong>IMPORTANT:</strong> On Windows, it is not possible to run multiple OOMMF simulations in parallel when using the <code class="docutils literal notranslate"><span class="pre">tcl</span></code> or <code class="docutils literal notranslate"><span class="pre">exe</span></code> runner. Use the <code class="docutils literal notranslate"><span class="pre">docker</span></code> runner if you want to run multiple simulations simultaneously.</p>
 </section>
 <section id="The-default-runner">
-<h2>The default runner<a class="headerlink" href="#The-default-runner" title="Permalink to this headline">¶</a></h2>
+<h2>The default runner<a class="headerlink" href="#The-default-runner" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -1084,7 +1081,7 @@ True
 </div>
 </section>
 <section id="Defaults-for-the-different-runner-types">
-<h2>Defaults for the different runner types<a class="headerlink" href="#Defaults-for-the-different-runner-types" title="Permalink to this headline">¶</a></h2>
+<h2>Defaults for the different runner types<a class="headerlink" href="#Defaults-for-the-different-runner-types" title="Permalink to this headline">#</a></h2>
 <p>The default values for the envvar <code class="docutils literal notranslate"><span class="pre">OOMMFTCL</span></code>, the executable <code class="docutils literal notranslate"><span class="pre">oommf</span></code>, and the <code class="docutils literal notranslate"><span class="pre">docker</span></code> executable can also be controlled via the <code class="docutils literal notranslate"><span class="pre">runner</span></code> object. They default to:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -1139,7 +1136,7 @@ True
 </div>
 </section>
 <section id="Changing-the-default-runner">
-<h2>Changing the default runner<a class="headerlink" href="#Changing-the-default-runner" title="Permalink to this headline">¶</a></h2>
+<h2>Changing the default runner<a class="headerlink" href="#Changing-the-default-runner" title="Permalink to this headline">#</a></h2>
 <p>Our current runner is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1233,7 +1230,7 @@ runner is cached: True
 </div>
 </section>
 <section id="Going-back-to-the-default-runner">
-<h2>Going back to the default runner<a class="headerlink" href="#Going-back-to-the-default-runner" title="Permalink to this headline">¶</a></h2>
+<h2>Going back to the default runner<a class="headerlink" href="#Going-back-to-the-default-runner" title="Permalink to this headline">#</a></h2>
 <p>We can change the default runner as demonstrated in the previous paragraph. If we later on decide that we want to go back to the default runner choosen by <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>, we can do so by calling:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1295,8 +1292,9 @@ runner is cached: True
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1307,7 +1305,7 @@ runner is cached: True
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

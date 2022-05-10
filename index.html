@@ -10,29 +10,26 @@
 
     <title>Ubermag &#8212; ubermag  documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -53,7 +50,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -257,7 +254,7 @@
               <div>
                 
   <section id="ubermag">
-<h1>Ubermag<a class="headerlink" href="#ubermag" title="Permalink to this headline">¶</a></h1>
+<h1>Ubermag<a class="headerlink" href="#ubermag" title="Permalink to this headline">#</a></h1>
 <p>With <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> you can drive your micromagnetic simulations from the Jupyter
 notebook. A single notebook can contain problem description, numerical solving,
 and data analysis in a self-consistent fashion. Using Python <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> defines
@@ -265,7 +262,7 @@ a domain-specific language to describe micromagnetic problems and automatically
 communicates with low-level simulation tools such as OOMMF.</p>
 <p><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-warning sd-shadow-sm reference external" href="https://mybinder.org/v2/gh/ubermag/tutorials/latest?urlpath=lab/tree/demo.ipynb"><span><strong>Try it in your browser</strong></span></a></p>
 <section id="features-and-packages">
-<h2>Features and packages<a class="headerlink" href="#features-and-packages" title="Permalink to this headline">¶</a></h2>
+<h2>Features and packages<a class="headerlink" href="#features-and-packages" title="Permalink to this headline">#</a></h2>
 <a class="reference external image-reference" href="https://anaconda.org/conda-forge/ubermag"><img alt="https://anaconda.org/conda-forge/ubermag/badges/version.svg" src="https://anaconda.org/conda-forge/ubermag/badges/version.svg" /></a>
 <a class="reference external image-reference" href="https://anaconda.org/conda-forge/ubermag"><img alt="https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg" src="https://anaconda.org/conda-forge/ubermag/badges/latest_release_date.svg" /></a>
 <p>Ubermag is a collection of several independent Python packages that can be used
@@ -376,7 +373,7 @@ magnetism models defined with <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <section id="what-is-ubermag">
-<h3>What is <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>?<a class="headerlink" href="#what-is-ubermag" title="Permalink to this headline">¶</a></h3>
+<h3>What is <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>?<a class="headerlink" href="#what-is-ubermag" title="Permalink to this headline">#</a></h3>
 <p>As a whole, <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> is a level of (Python) utilities sitting above (”<em>über</em>”)
 existing micromagnetic simulation packages, such as OOMMF and mumax3. We refer
 to packages such as OOMMF and mumax3 as the <em>computational backends</em>, or as
@@ -399,13 +396,13 @@ needs to be solved, the task is delegated to the computational backend.</p>
 <img alt="_images/interoperability.png" src="_images/interoperability.png" />
 <figcaption>
 <p><span class="caption-text">Magnetic systems (left-to-right): <a class="reference external" href="https://github.com/lang-m/ubermag-skyrmion-demo">Skyrmions</a>, vortex, Bloch point
-[renderings created with Blender]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+[renderings created with Blender]</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="documentation-and-tutorials">
-<h2>Documentation and tutorials<a class="headerlink" href="#documentation-and-tutorials" title="Permalink to this headline">¶</a></h2>
+<h2>Documentation and tutorials<a class="headerlink" href="#documentation-and-tutorials" title="Permalink to this headline">#</a></h2>
 <p>If you are new to <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> you should consider first looking at
 <a class="reference internal" href="getting-started/index.html"><span class="doc">Getting started</span></a> which will give a gentle introduction into all
 the packages inside <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>.</p>
@@ -421,7 +418,7 @@ functionality in Ubermag has been changed and extended since the workshop
 recording.</p>
 </section>
 <section id="ubermag-in-the-cloud">
-<h2><code class="docutils literal notranslate"><span class="pre">ubermag</span></code> in the cloud<a class="headerlink" href="#ubermag-in-the-cloud" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">ubermag</span></code> in the cloud<a class="headerlink" href="#ubermag-in-the-cloud" title="Permalink to this headline">#</a></h2>
 <p>If you do not want to install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> on your machine, you can use it in the
 cloud via Binder. This does not require you to have anything installed on your
 machine and no files will be created. To access it, please use the following
@@ -433,7 +430,7 @@ prepared previouly. Please remember to download the notebook after you are done,
 so that you can upload it again when you start a new online session.</p>
 </section>
 <section id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">#</a></h2>
 <p>Marijan Beg<sup>1, 2</sup>, Martin Lang<sup>2, 3</sup>, Samuel Holt<sup>2, 4</sup>,
 Ryan A. Pepper<sup>2</sup>, Thomas Kluyver<sup>5</sup>, James Loudon<sup>6</sup>,
 Thomas Hicken<sup>7</sup>, David Cortés Ortuño<sup>2</sup>, Jeroen Mulkers<sup>8</sup>, Jonathan Leliaert<sup>8</sup>, and Hans Fangohr<sup>2, 3, 9</sup></p>
@@ -458,7 +455,7 @@ Hamburg, Germany.</p></li>
 </ul>
 </section>
 <section id="how-to-cite">
-<h2>How to cite<a class="headerlink" href="#how-to-cite" title="Permalink to this headline">¶</a></h2>
+<h2>How to cite<a class="headerlink" href="#how-to-cite" title="Permalink to this headline">#</a></h2>
 <p>If you use Ubermag or any of its sub-packages for your research please cite:</p>
 <p>M. Beg, M. Lang and H. Fangohr, “Ubermag: Toward More Effective Micromagnetic
 Workflows,” in IEEE Transactions on Magnetics, vol. 58, no. 2, pp. 1-5, Feb.
@@ -477,12 +474,12 @@ Workflows,” in IEEE Transactions on Magnetics, vol. 58, no. 2, pp. 1-5, Feb.
 </div>
 </section>
 <section id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
 <p>Licensed under the BSD 3-Clause “New” or “Revised” License. For details, please
 refer to the <a class="reference external" href="https://github.com/ubermag/ubermag/blob/master/LICENSE">LICENSE file</a>.</p>
 </section>
 <section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
 <p>Ubermag is a part of the Horizon 2020 European Research Infrastructure
 <a class="reference external" href="https://opendreamkit.org">OpenDreamKit</a> project (Project ID 676541). This
 work was supported by the Fonds Wetenschappelijk Onderzoek (FWO-Vlaanderen)
@@ -514,8 +511,9 @@ through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -526,7 +524,7 @@ through Project No. G098917N (Jeroen Mulkers) and with a postdoctoral fellowship
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     
