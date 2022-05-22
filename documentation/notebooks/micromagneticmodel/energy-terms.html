@@ -278,6 +278,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/xarray-usage.html">
+     Importing/Exporting field from/to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray.DataArray
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-rotations.html">
      Field rotation
     </a>
@@ -316,22 +326,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/DC_magnetometry.html">
-     Tutorial: DC magnetometry
+     DC magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Torque_magnetometry.html">
-     Tutorial: Torque magnetometry
+     Torque magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Lorentz_TEM.html">
-     Tutorial: Lorentz Transmission Electron Microscopy
+     Lorentz Transmission Electron Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Rotations_Lorentz_Microscopy.html">
-     Tutorial: Using Rotations with
+     Using Rotations with
      <code class="docutils literal notranslate">
       <span class="pre">
        mag2exp
@@ -341,27 +351,27 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Magnetic_Force_Microscopy.html">
-     Tutorial: Magnetic Force Microscopy
+     Magnetic Force Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/X_ray_Holography.html">
-     Tutorial: X-ray Holography
+     X-ray Holography
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/SAXS.html">
-     Tutorial: Small Angle X-ray Scattering
+     Small Angle X-ray Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/SANS.html">
-     Tutorial: Small Angle Neutron Scattering
+     Small Angle Neutron Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Unit_converter.html">
-     Tutorial: Unit Conversions
+     Unit Conversions
     </a>
    </li>
   </ul>
@@ -377,8 +387,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../micromagneticdata/dev-test.html">
-     Dev test
+    <a class="reference internal" href="../micromagneticdata/documentation.html">
+     Analysing simulation results
     </a>
    </li>
   </ul>
@@ -517,6 +527,11 @@
      Running simulations in parallel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/verbosity_levels.html">
+     Verbosity levels
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -628,24 +643,17 @@
      Hysteresis values
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ubermag.html">
-   ubermag
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ubermag/logging.html">
+    <a class="reference internal" href="../ubermagutil/logging.html">
      Logging control
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
  </li>
 </ul>
 
@@ -1222,7 +1230,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sin</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sin</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s2">&quot;sin&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1249,7 +1257,7 @@ ubermagutil.typesystem.descriptors.Subset
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sinc</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeeman_sinc</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">),</span> <span class="n">func</span><span class="o">=</span><span class="s2">&quot;sinc&quot;</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mf">2e-12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1451,13 +1459,13 @@ $-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{m} \cdot \mathbf{H}_\text{d}$</div></div>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_x&#39;</span><span class="p">)</span>
-<span class="n">dmi_cnv_y</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_y&#39;</span><span class="p">)</span>
-<span class="n">dmi_cnv_z</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_z&#39;</span><span class="p">)</span>
-<span class="n">dmi_t</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
-<span class="n">dmi_d2d_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;D2d_x&#39;</span><span class="p">)</span>
-<span class="n">dmi_d2d_y</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;D2d_y&#39;</span><span class="p">)</span>
-<span class="n">dmi_d2d_z</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;D2d_z&#39;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dmi_cnv_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;Cnv_x&quot;</span><span class="p">)</span>
+<span class="n">dmi_cnv_y</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;Cnv_y&quot;</span><span class="p">)</span>
+<span class="n">dmi_cnv_z</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;Cnv_z&quot;</span><span class="p">)</span>
+<span class="n">dmi_t</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+<span class="n">dmi_d2d_x</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;D2d_x&quot;</span><span class="p">)</span>
+<span class="n">dmi_d2d_y</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;D2d_y&quot;</span><span class="p">)</span>
+<span class="n">dmi_d2d_z</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">5e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;D2d_z&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1715,7 +1723,7 @@ $-K [(\mathbf{m} \cdot \mathbf{u}_{1})^{2}(\mathbf{m} \cdot \mathbf{u}_{2})^{2}+
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">RKKY</span><span class="p">(</span><span class="n">sigma</span><span class="o">=-</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;subregion1&#39;</span><span class="p">,</span> <span class="s1">&#39;subregion2&#39;</span><span class="p">])</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rkky</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">RKKY</span><span class="p">(</span><span class="n">sigma</span><span class="o">=-</span><span class="mf">1e-4</span><span class="p">,</span> <span class="n">subregions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subregion1&quot;</span><span class="p">,</span> <span class="s2">&quot;subregion2&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

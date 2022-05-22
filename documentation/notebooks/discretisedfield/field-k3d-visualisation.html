@@ -278,6 +278,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="xarray-usage.html">
+     Importing/Exporting field from/to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray.DataArray
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-rotations.html">
      Field rotation
     </a>
@@ -316,22 +326,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/DC_magnetometry.html">
-     Tutorial: DC magnetometry
+     DC magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Torque_magnetometry.html">
-     Tutorial: Torque magnetometry
+     Torque magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Lorentz_TEM.html">
-     Tutorial: Lorentz Transmission Electron Microscopy
+     Lorentz Transmission Electron Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Rotations_Lorentz_Microscopy.html">
-     Tutorial: Using Rotations with
+     Using Rotations with
      <code class="docutils literal notranslate">
       <span class="pre">
        mag2exp
@@ -341,27 +351,27 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Magnetic_Force_Microscopy.html">
-     Tutorial: Magnetic Force Microscopy
+     Magnetic Force Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/X_ray_Holography.html">
-     Tutorial: X-ray Holography
+     X-ray Holography
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/SAXS.html">
-     Tutorial: Small Angle X-ray Scattering
+     Small Angle X-ray Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/SANS.html">
-     Tutorial: Small Angle Neutron Scattering
+     Small Angle Neutron Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../mag2exp/Unit_converter.html">
-     Tutorial: Unit Conversions
+     Unit Conversions
     </a>
    </li>
   </ul>
@@ -377,8 +387,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../micromagneticdata/dev-test.html">
-     Dev test
+    <a class="reference internal" href="../micromagneticdata/documentation.html">
+     Analysing simulation results
     </a>
    </li>
   </ul>
@@ -517,6 +527,11 @@
      Running simulations in parallel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/verbosity_levels.html">
+     Verbosity levels
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -628,24 +643,17 @@
      Hysteresis values
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ubermag.html">
-   ubermag
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ubermag/logging.html">
+    <a class="reference internal" href="../ubermagutil/logging.html">
      Logging control
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
  </li>
 </ul>
 
@@ -990,19 +998,22 @@ div.rendered_html tbody tr:hover {
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">3e-9</span><span class="p">,</span> <span class="mf">2e-9</span>
 <span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5e-9</span><span class="p">,</span> <span class="mf">0.5e-9</span><span class="p">,</span> <span class="mf">0.5e-9</span><span class="p">)</span>
 
-<span class="n">mesh</span> <span class="o">=</span>  <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">norm_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span><span class="o">/</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">a</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">/</span> <span class="n">c</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="mf">1e6</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
 
+
 <span class="k">def</span> <span class="nf">value_fun</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
     <span class="n">c</span> <span class="o">=</span> <span class="mf">1e9</span>
-    <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">c</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">c</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span>
+
 
 <span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value_fun</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">norm_fun</span><span class="p">)</span>
 </pre></div>
@@ -1028,7 +1039,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="mh">0x27ae60</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="mh">0x27AE60</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1102,7 +1113,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">field</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1185,7 +1196,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 
 <span class="n">plot</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="mf">3e-9</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">)</span>
+<span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;hsv&quot;</span><span class="p">)</span>
 <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">3e-9</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">,</span> <span class="n">color_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
@@ -1221,11 +1232,13 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 
 <span class="n">plot1</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
-<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span>
-                                  <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span>
-                                  <span class="n">plot</span><span class="o">=</span><span class="n">plot1</span><span class="p">)</span>
+    <span class="n">field</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span>
+        <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot1</span>
+    <span class="p">)</span>
+
 
 <span class="n">plot1</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
@@ -1249,12 +1262,15 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
-<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-             <span class="n">axis</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">())</span>
+
+<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span>
+    <span class="n">z</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">()</span>
+<span class="p">)</span>
 <span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
-    <span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span>
-                                               <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span>
-                                               <span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+    <span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span>
+        <span class="n">filter_field</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot</span>
+    <span class="p">)</span>
+
 
 <span class="n">plot</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>
@@ -1278,12 +1294,15 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/discretisedf
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">k3d</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
-<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-             <span class="n">axis</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">())</span>
+
+<span class="nd">@df</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">slider</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_selector</span><span class="p">()</span>
+<span class="p">)</span>
 <span class="k">def</span> <span class="nf">myplot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
-    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">color_field</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">axis</span><span class="p">),</span>
-                                <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span>
-                                <span class="n">plot</span><span class="o">=</span><span class="n">plot</span><span class="p">)</span>
+    <span class="n">field</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">k3d</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span>
+        <span class="n">color_field</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">axis</span><span class="p">),</span> <span class="n">interactive_field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">plot</span>
+    <span class="p">)</span>
+
 
 <span class="n">plot</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 </pre></div>

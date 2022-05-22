@@ -538,6 +538,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -928,6 +938,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1096,11 +1111,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1179,6 +1189,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1312,13 +1327,19 @@
 <h1>DockerOOMMFRunner<a class="headerlink" href="#dockeroommfrunner" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="oommfc.oommf.DockerOOMMFRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oommfc.oommf.</span></span><span class="sig-name descname"><span class="pre">DockerOOMMFRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docker_exe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'docker'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'oommf/oommf:20a2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.DockerOOMMFRunner" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oommfc.oommf.</span></span><span class="sig-name descname"><span class="pre">DockerOOMMFRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docker_exe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'docker'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'oommf/oommf:20a3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selinux</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.oommf.DockerOOMMFRunner" title="Permalink to this definition">#</a></dt>
 <dd><p>OOMMF runner using Docker.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>docker_exe</strong> (<em>str</em>) – Docker executable. Defaults to <code class="docutils literal notranslate"><span class="pre">docker</span></code>.</p></li>
-<li><p><strong>image</strong> (<em>str</em>) – Docker image on DockerHub. Defaults to <code class="docutils literal notranslate"><span class="pre">oommf/oommf:20a2</span></code>.</p></li>
+<li><p><strong>image</strong> (<em>str</em>) – Docker image on DockerHub. Defaults to <code class="docutils literal notranslate"><span class="pre">oommf/oommf:20a3</span></code>.</p></li>
+<li><p><strong>selinux</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> use additional <code class="docutils literal notranslate"><span class="pre">:z</span></code> flag for the mounted directories. This can be
+required to get read/write access when using SELinux. Use with caution and check
+the Docker documentation on SELinux:
+<a class="reference external" href="https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label">https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label</a>.
+Alternatively, you can set SELinux to Permissive Mode to get read/write access.
+Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd>
 </dl>

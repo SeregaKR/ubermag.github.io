@@ -540,6 +540,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -930,6 +940,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1098,11 +1113,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1181,6 +1191,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1314,7 +1329,7 @@
 <h1>Region<a class="headerlink" href="#region" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Region">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'m'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'m'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Region" title="Permalink to this definition">#</a></dt>
 <dd><p>Region.</p>
 <p>A cuboid region spans between two corner points <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span> and
 <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span>. Points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> can be any two
@@ -1322,8 +1337,17 @@ diagonally-opposite points. If any of the edge lengths of the cuboid region
 is zero, <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>p2</strong> (<em>p1 /</em>) – Diagonally-opposite corner points of the region <span class="math notranslate nohighlight">\(\mathbf{p}_i =
-(p_x, p_y, p_z)\)</span>.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p2</strong> (<em>p1 /</em>) – Diagonally-opposite corner points of the region <span class="math notranslate nohighlight">\(\mathbf{p}_i =
+(p_x, p_y, p_z)\)</span>.</p></li>
+<li><p><strong>unit</strong> (<em>str</em><em>, </em><em>optional</em>) – Physical unit of the region. This is mainly used for labelling plots.
+Defaults to <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p></li>
+<li><p><strong>tolerance_factor</strong> (<em>float</em><em>, </em><em>optional</em>) – This factor is used to obtain a tolerance for comparison operations,
+e.g. <code class="docutils literal notranslate"><span class="pre">region1</span> <span class="pre">in</span> <span class="pre">region2</span></code>. It is internally multiplied with the
+minimum of the edge lengths to adjust the tolerance to the region size
+and have more accurate floating-point comparisons. Defaults to
+<code class="docutils literal notranslate"><span class="pre">1e-12</span></code>.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>ValueError</strong> – If any of the region’s edge lengths is zero.</p>
@@ -1422,10 +1446,13 @@ is zero, <code class="docutils literal notranslate"><span class="pre">ValueError
 <tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.pmin" title="discretisedfield.Region.pmin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pmin</span></code></a></p></td>
 <td><p>Point with minimum coordinates in the region.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">tolerance_factor</span></code></p></td>
+<td><p>Descriptor allowing setting attributes only with scalars (<code class="docutils literal notranslate"><span class="pre">numbers.Real</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></p></td>
 <td><p>Python identifier descriptor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Region.volume" title="discretisedfield.Region.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Region.volume" title="discretisedfield.Region.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
 <td><p>Region's volume.</p></td>
 </tr>
 </tbody>

@@ -12,6 +12,8 @@
       :template: class-template.rst
       :nosignatures:
    
+      AbstractDrive
+      CombinedDrive
       Data
       Drive
 

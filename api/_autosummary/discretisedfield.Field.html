@@ -540,6 +540,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -930,6 +940,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1098,11 +1113,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1181,6 +1191,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1314,7 +1329,7 @@
 <h1>Field<a class="headerlink" href="#field" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="discretisedfield.Field">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">discretisedfield.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">components</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this definition">#</a></dt>
 <dd><p>Finite-difference field.</p>
 <p>This class specifies a finite-difference field and defines operations for
 its analysis and visualisation. The field is defined on a finite-difference
@@ -1342,6 +1357,7 @@ field.</p></li>
 type is automatically determined if <code class="docutils literal notranslate"><span class="pre">value</span></code> is  array_like, for
 callable and dict <code class="docutils literal notranslate"><span class="pre">value</span></code> the numpy default (currently
 <code class="docutils literal notranslate"><span class="pre">float64</span></code>) is used. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>optional</em>) – Physical unit of the field.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1472,8 +1488,14 @@ film.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.allclose" title="discretisedfield.Field.allclose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allclose</span></code></a></p></td>
 <td><p>Allclose method.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.derivative" title="discretisedfield.Field.derivative"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.coordinate_field" title="discretisedfield.Field.coordinate_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coordinate_field</span></code></a></p></td>
+<td><p>Create a field whose values are the mesh coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.derivative" title="discretisedfield.Field.derivative"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative</span></code></a></p></td>
 <td><p>Directional derivative.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.from_xarray" title="discretisedfield.Field.from_xarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_xarray</span></code></a></p></td>
+<td><p>Create <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> from <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.fromfile" title="discretisedfield.Field.fromfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromfile</span></code></a></p></td>
 <td><p>Read the field from an OVF (1.0 or 2.0), VTK, or HDF5 file.</p></td>
@@ -1492,6 +1514,12 @@ film.</p>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.project" title="discretisedfield.Field.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a></p></td>
 <td><p>Projects the field along one direction and averages it out along that direction.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.to_vtk" title="discretisedfield.Field.to_vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_vtk</span></code></a></p></td>
+<td><p>Convert field to vtk rectilinear grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.to_xarray" title="discretisedfield.Field.to_xarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_xarray</span></code></a></p></td>
+<td><p>Field value as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.write" title="discretisedfield.Field.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a></p></td>
 <td><p>Write the field to OVF, HDF5, or VTK file.</p></td>
@@ -1571,10 +1599,13 @@ film.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.rfftn" title="discretisedfield.Field.rfftn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rfftn</span></code></a></p></td>
 <td><p>Real Fourier transform.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.value" title="discretisedfield.Field.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">units</span></code></p></td>
+<td><p>Descriptor allowing setting attributes only with values of a certain type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.value" title="discretisedfield.Field.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
 <td><p>Field value representation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Field.zero" title="discretisedfield.Field.zero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zero</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Field.zero" title="discretisedfield.Field.zero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zero</span></code></a></p></td>
 <td><p>Zero field.</p></td>
 </tr>
 </tbody>
@@ -2529,6 +2560,47 @@ defined on the same mesh.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Field.coordinate_field">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coordinate_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.coordinate_field" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a field whose values are the mesh coordinates.</p>
+<p>This method can be used to create a 3d vector field with values equal to the
+coordinates of the cell midpoints. The result is equivalent to a mesh created
+with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="k">lambda</span> <span class="n">point</span><span class="p">:</span> <span class="n">point</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This class method should be preferred over the manual creation with a callable
+because it provides much better performance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="discretisedfield.Mesh.html#discretisedfield.Mesh" title="discretisedfield.Mesh"><em>discretisedfield.Mesh</em></a>) – Finite-difference rectangular mesh.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Field with coordinates as values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>1. Create a coordinate field.
+&gt;&gt;&gt; import discretisedfield as df
+…
+&gt;&gt;&gt; mesh = df.Mesh(p1=(0, 0, 0), p2=(4, 2, 1), cell=(1, 1, 1))
+&gt;&gt;&gt; cfield = df.Field.coordinate_field(mesh)
+&gt;&gt;&gt; cfield
+Field(…)</p>
+<p>2. Extract its value at position (0.5, 0.5, 0.5)
+&gt;&gt;&gt; cfield((0.5, 0.5, 0.5))
+(0.5, 0.5, 0.5)</p>
+<p>3. Compare with manually created coordinate field
+&gt;&gt;&gt; manually = df.Field(mesh, dim=3, value=lambda point: point)
+&gt;&gt;&gt; cfield.allclose(manually)
+True</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.derivative">
 <span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.derivative" title="Permalink to this definition">#</a></dt>
 <dd><p>Directional derivative.</p>
@@ -2608,6 +2680,87 @@ second-order derivatives in all directions are expected to be zero.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">average</span>  <span class="c1"># derivative cannot be calculated</span>
 <span class="go">(0.0, 0.0, 0.0)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># second-order derivatives</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Field.from_xarray">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_xarray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.from_xarray" title="Permalink to this definition">#</a></dt>
+<dd><p>Create <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> from <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
+<p>The class method accepts an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> as an argument to
+return a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object. The DataArray must have
+either three (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> for a scalar field) or four
+(additionally <code class="docutils literal notranslate"><span class="pre">comp</span></code> for a vector field) dimensions corresponding to
+geometric axes and components of the field, respectively. The
+coordinates of the <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> dimensions represent the
+discretisation along the respective axis and must have equally spaced
+values. The coordinates of <code class="docutils literal notranslate"><span class="pre">comp</span></code> represent the field components
+(e.g. [‘x’, ‘y’, ‘z’] for a 3D vector field).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> is expected to have <code class="docutils literal notranslate"><span class="pre">cell</span></code>, <code class="docutils literal notranslate"><span class="pre">p1</span></code>, and <code class="docutils literal notranslate"><span class="pre">p2</span></code>
+attributes for creating <code class="docutils literal notranslate"><span class="pre">discretisedfield.Mesh</span></code> required by the
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object. However, in the absence of these
+attributes, the coordinates of <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> dimensions are
+utilized. It should be noted that <code class="docutils literal notranslate"><span class="pre">cell</span></code> attribute is required if
+any of the geometric directions has only a single cell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xa</strong> (<em>xarray.DataArray</em>) – DataArray to create Field.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Field created from DataArray.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – If argument is not <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p></li>
+<li><p><strong>KeyError</strong> – If at least one of the geometric dimension coordinates has a single
+    value and <code class="docutils literal notranslate"><span class="pre">cell</span></code> attribute is missing.</p></li>
+<li><p><strong>ValueError</strong> – <ul>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">DataArray.ndim</span></code> is not 3 or 4.
+    - If <code class="docutils literal notranslate"><span class="pre">DataArray.dims</span></code> are not either <code class="docutils literal notranslate"><span class="pre">['x',</span> <span class="pre">'y',</span> <span class="pre">'z']</span></code> or
+      <code class="docutils literal notranslate"><span class="pre">['x',</span> <span class="pre">'y',</span> <span class="pre">'z',</span> <span class="pre">'comp']</span></code>
+    - If coordinates of <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, or <code class="docutils literal notranslate"><span class="pre">z</span></code> are not equally
+      spaced</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Create a DataArray</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xa</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span>
+<span class="gp">... </span>                  <span class="n">dims</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;comp&#39;</span><span class="p">],</span>
+<span class="gp">... </span>                  <span class="n">coords</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+<span class="gp">... </span>                                <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+<span class="gp">... </span>                                <span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+<span class="gp">... </span>                                <span class="n">comp</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">]),</span>
+<span class="gp">... </span>                  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;mag&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                  <span class="n">attrs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">cell</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+<span class="gp">... </span>                               <span class="n">p1</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span>
+<span class="gp">... </span>                               <span class="n">p2</span><span class="o">=</span><span class="p">[</span><span class="mf">21.</span><span class="p">,</span> <span class="mf">21.</span><span class="p">,</span> <span class="mf">21.</span><span class="p">]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xa</span>
+<span class="go">&lt;xarray.DataArray &#39;mag&#39; (x: 20, y: 20, z: 20, comp: 3)&gt;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create Field from DataArray</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="o">.</span><span class="n">from_xarray</span><span class="p">(</span><span class="n">xa</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field</span>
+<span class="go">Field(...)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field</span><span class="o">.</span><span class="n">average</span>
+<span class="go">(1.0, 1.0, 1.0)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2995,6 +3148,108 @@ the field which has only one discretisation cell in the z-direction.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Field.to_vtk">
+<span class="sig-name descname"><span class="pre">to_vtk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.to_vtk" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert field to vtk rectilinear grid.</p>
+<p>This method convers at <cite>discretisedfield.Field</cite> into a
+<cite>vtk.vtkRectilinearGrid</cite>. The field data (<code class="docutils literal notranslate"><span class="pre">field.array</span></code>) is stored as
+<code class="docutils literal notranslate"><span class="pre">CELL_DATA</span></code> of the <code class="docutils literal notranslate"><span class="pre">RECTILINEAR_GRID</span></code>. Scalar fields (<code class="docutils literal notranslate"><span class="pre">dim=1</span></code>)
+contain one VTK array called <code class="docutils literal notranslate"><span class="pre">field</span></code>. Vector fields (<code class="docutils literal notranslate"><span class="pre">dim&gt;1</span></code>)
+contain one VTK array called <code class="docutils literal notranslate"><span class="pre">field</span></code> containing vector data and
+scalar VTK arrays for each field component (called
+<code class="docutils literal notranslate"><span class="pre">&lt;component-name&gt;-component</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>VTK representation of the field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>vtk.vtkRectilinearGrid</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AttributeError</strong> – If the field has <code class="docutils literal notranslate"><span class="pre">dim&gt;1</span></code> and component labels are missing.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">p2</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f_vtk</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">to_vtk</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">f_vtk</span><span class="p">)</span>
+<span class="go">vtkRectilinearGrid (...)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f_vtk</span><span class="o">.</span><span class="n">GetNumberOfCells</span><span class="p">()</span>
+<span class="go">1000</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="discretisedfield.Field.to_xarray">
+<span class="sig-name descname"><span class="pre">to_xarray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'field'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.to_xarray" title="Permalink to this definition">#</a></dt>
+<dd><p>Field value as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>.</p>
+<p>The function returns an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with dimensions <code class="docutils literal notranslate"><span class="pre">x</span></code>,
+<code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and <code class="docutils literal notranslate"><span class="pre">comp</span></code> (<code class="docutils literal notranslate"><span class="pre">only</span> <span class="pre">if</span> <span class="pre">field.dim</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>). The coordinates
+of the geometric dimensions are derived from <code class="docutils literal notranslate"><span class="pre">self.mesh.midpoints</span></code>,
+and for vector field components from <code class="docutils literal notranslate"><span class="pre">self.components</span></code>. Addtionally,
+the values of <code class="docutils literal notranslate"><span class="pre">self.mesh.cell</span></code>, <code class="docutils literal notranslate"><span class="pre">self.mesh.region.p1</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">self.mesh.region.p2</span></code> are stored as <code class="docutils literal notranslate"><span class="pre">cell</span></code>, <code class="docutils literal notranslate"><span class="pre">p1</span></code>, and <code class="docutils literal notranslate"><span class="pre">p2</span></code>
+attributes of the DataArray. The <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute of geometric
+dimensions is set to <code class="docutils literal notranslate"><span class="pre">self.mesh.attributes['unit']</span></code>.</p>
+<p>The name and units of the field <code class="docutils literal notranslate"><span class="pre">DataArray</span></code> can be set by passing
+<code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">units</span></code>. If the type of value passed to any of the two
+arguments is not <code class="docutils literal notranslate"><span class="pre">str</span></code>, then a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – String to set name of the field <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>.</p></li>
+<li><p><strong>units</strong> (<em>str</em><em>, </em><em>optional</em>) – String to set units of the field <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Field values DataArray.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>xarray.DataArray</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>TypeError</strong> – If either <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">units</span></code> argument is not a string.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Create a field</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="o">=</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field</span>
+<span class="go">Field(...)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create <cite>xarray.DataArray</cite> from field</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xa</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xa</span>
+<span class="go">&lt;xarray.DataArray &#39;field&#39; (x: 10, y: 10, z: 10, comp: 3)&gt;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Select values of <cite>x</cite> component</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xa</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">comp</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="go">&lt;xarray.DataArray &#39;field&#39; (x: 10, y: 10, z: 10)&gt;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Field.write">
 <span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bin8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_scalar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Field.write" title="Permalink to this definition">#</a></dt>
 <dd><p>Write the field to OVF, HDF5, or VTK file.</p>
@@ -3012,9 +3267,11 @@ be written (<code class="xref py py-func docutils literal notranslate"><span cla
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em>) – Name of the file written.</p></li>
-<li><p><strong>representation</strong> (<em>str</em><em>, </em><em>optional</em>) – In the case of OVF files (<code class="docutils literal notranslate"><span class="pre">.ovf</span></code>, <code class="docutils literal notranslate"><span class="pre">.omf</span></code>, or <code class="docutils literal notranslate"><span class="pre">.ohf</span></code>),
-representation can be specified (<code class="docutils literal notranslate"><span class="pre">'bin4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bin8'</span></code>, or
-<code class="docutils literal notranslate"><span class="pre">'txt'</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">'bin8'</span></code>.</p></li>
+<li><p><strong>representation</strong> (<em>str</em><em>, </em><em>optional</em>) – Only supported for OVF and VTK files. In the case of OVF files
+(<code class="docutils literal notranslate"><span class="pre">.ovf</span></code>, <code class="docutils literal notranslate"><span class="pre">.omf</span></code>, or <code class="docutils literal notranslate"><span class="pre">.ohf</span></code>) the representation can be
+<code class="docutils literal notranslate"><span class="pre">'bin4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bin8'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'txt'</span></code>. For VTK files (<code class="docutils literal notranslate"><span class="pre">.vtk</span></code>) the
+representation can be <code class="docutils literal notranslate"><span class="pre">bin</span></code>, <code class="docutils literal notranslate"><span class="pre">xml</span></code>, or <code class="docutils literal notranslate"><span class="pre">txt</span></code>. Defaults to
+<code class="docutils literal notranslate"><span class="pre">'bin8'</span></code> (interpreted as <code class="docutils literal notranslate"><span class="pre">bin</span></code> for VTK files).</p></li>
 <li><p><strong>extend_scalar</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, a scalar field will be saved as a vector field. More
 precisely, if the value at a cell is 3, that cell will be saved as
 (3, 0, 0). This is valid only for the OVF file formats. Defaults to

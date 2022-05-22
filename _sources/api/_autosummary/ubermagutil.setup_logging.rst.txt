@@ -1,0 +1,6 @@
+ubermagutil.setup\_logging
+==========================
+
+.. currentmodule:: ubermagutil
+
+.. autofunction:: setup_logging

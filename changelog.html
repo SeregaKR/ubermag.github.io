@@ -187,13 +187,35 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-22-2022">
+   0.62.0 (May 22, 2022)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#added">
+     Added
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removed">
+     Removed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixed">
+     Fixed
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mar-17-2022">
    0.61.2 (Mar 17, 2022)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bug-fixes">
-     Bug fixes
+    <a class="reference internal nav-link" href="#id1">
+     Fixed
     </a>
    </li>
   </ul>
@@ -209,18 +231,18 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#new-functionality">
-     New functionality
+    <a class="reference internal nav-link" href="#id2">
+     Added
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#backwards-incompatible-changes">
-     Backwards-incompatible changes
+    <a class="reference internal nav-link" href="#changed">
+     Changed
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Bug fixes
+    <a class="reference internal nav-link" href="#id3">
+     Fixed
     </a>
    </li>
   </ul>
@@ -231,18 +253,18 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id4">
      General
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     New functionality
+    <a class="reference internal nav-link" href="#id5">
+     Added
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Bug fixes
+    <a class="reference internal nav-link" href="#id6">
+     Fixed
     </a>
    </li>
   </ul>
@@ -293,13 +315,122 @@
                 
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">#</a></h1>
+<section id="may-22-2022">
+<h2>0.62.0 (May 22, 2022)<a class="headerlink" href="#may-22-2022" title="Permalink to this headline">#</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Support for exporting <code class="docutils literal notranslate"><span class="pre">Field</span></code> object to the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with
+<code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> instance method (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/123">#123</a>).</p></li>
+<li><p>Support for initiating <code class="docutils literal notranslate"><span class="pre">Field</span></code> object from the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with
+<code class="docutils literal notranslate"><span class="pre">from_xarray</span></code> class method (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/123">#123</a>).</p></li>
+<li><p>New implementation for initialising a field from an other field with much
+better performance (example: initial field with <code class="docutils literal notranslate"><span class="pre">n=(100,</span> <span class="pre">100,</span> <span class="pre">10)</span></code>, new
+field with <code class="docutils literal notranslate"><span class="pre">n=(10,</span> <span class="pre">10,</span> <span class="pre">10)</span></code>, speedup ~1000). This method does e.g. also
+speed up the <code class="docutils literal notranslate"><span class="pre">Field.plane</span></code> method (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/135">#135</a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">__contains__</span></code> operator for the region (the <cite>in</cite> operator <code class="docutils literal notranslate"><span class="pre">region1</span> <span class="pre">in</span>
+<span class="pre">region2</span></code>) uses a new method to calculate the distance between the points to
+improve stability when edge points of the regions are very close and
+differences are mainly related to floating-point inaccuracies. This is done
+by introducing a new region property <code class="docutils literal notranslate"><span class="pre">tolerance_factor</span></code> (with a default
+value <code class="docutils literal notranslate"><span class="pre">1e-12</span></code>) that is internally multiplied with the minimum of the edge
+lengths to obtain values for relative and absolute tolerance (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/135">#135</a>).</p></li>
+<li><p>Refactoring of the matplotlib-based plotting methods for <code class="docutils literal notranslate"><span class="pre">df.Field</span></code>
+(<code class="docutils literal notranslate"><span class="pre">df.Field.mpl...</span></code>) improve performance of the plot creation (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/133">#133</a>).</p></li>
+<li><p>Refactoring of <code class="docutils literal notranslate"><span class="pre">df.Region.mpl</span></code> to show the correct aspect ratio of the
+region. This automatically also applies to the matplotlib-based plotting
+methods of <code class="docutils literal notranslate"><span class="pre">df.Mesh</span></code>. A new keyword <code class="docutils literal notranslate"><span class="pre">box_aspect</span></code> (default
+<code class="docutils literal notranslate"><span class="pre">box_aspect='auto'</span></code>) can be used to set an arbitrary aspect ratio by
+passing a tuple. For the default value <code class="docutils literal notranslate"><span class="pre">'auto'</span></code> the aspect of the region
+is used. You may run into problems with overlapping ticks or axis labels.
+These cannot currently be dealt with easily in an automatic fashion and
+require manual adjustment after the plot is created (by passing an axis
+object) if proper axis ticks and labels are required (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/134">#134</a>).</p></li>
+<li><p>New implementation for reading and writing <code class="docutils literal notranslate"><span class="pre">vtk</span></code> files. Files can now be
+written in textual (<code class="docutils literal notranslate"><span class="pre">txt</span></code>), binary (<code class="docutils literal notranslate"><span class="pre">bin</span></code>) or xml (<code class="docutils literal notranslate"><span class="pre">xml</span></code>)
+representation. The field data is now stored to vtk cell data (previously:
+point data). Some subsequent plotting operations in other tools (e.g.
+plotting isosurfaces) typically requires a conversion from cell data to
+point data in that tools first (e.g. by using a filter in Paraview).
+<code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> can still read the old vtk files (with the values
+stored as point data) and tries to do that automatically when the provided
+file can’t be read with the new method. In particular for writing huge
+speedups compared to the old implementation are possible (example: <code class="docutils literal notranslate"><span class="pre">n=(200,</span>
+<span class="pre">200,</span> <span class="pre">100)</span></code> written in binary representation, speedup &gt; 1000). By default
+data is written in binary format. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/129">#129</a>)</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">units</span></code> property has been added to the <code class="docutils literal notranslate"><span class="pre">Field</span></code> class to store the
+units of the field values. Note, that units are mostly used for plotting and
+are removed during all mathematical operations. Units are automatically read
+from <code class="docutils literal notranslate"><span class="pre">ovf</span></code> files if present. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/141">#141</a>)</p></li>
+<li><p>An additional class method <code class="docutils literal notranslate"><span class="pre">coordinate_field</span></code> has been added to the
+<code class="docutils literal notranslate"><span class="pre">Field</span></code> class. It takes a mesh and creates a 3d vector field with values
+equal to the coordinates of the respective cell midpoints. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/144">#144</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code></dt><dd><ul class="simple">
+<li><p>Support for converting all magnetisation data of a <code class="docutils literal notranslate"><span class="pre">Drive</span></code> into an
+<code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with <code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> instance method. (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/18">#18</a>)</p></li>
+<li><p>Multiple drives of the same type (with the same independent variable
+<code class="docutils literal notranslate"><span class="pre">drive.x</span></code> can be combined into a new <code class="docutils literal notranslate"><span class="pre">micromagneticdata.CombinedDrive</span></code>.
+Combining is also supported via <code class="docutils literal notranslate"><span class="pre">drive1</span> <span class="pre">&lt;&lt;</span> <span class="pre">drive2</span></code> which “appends”
+<code class="docutils literal notranslate"><span class="pre">drive1</span></code> to <code class="docutils literal notranslate"><span class="pre">drive2</span></code>. The combined drive allows iteration over all
+magnetisation snapshots of the individual drives. (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/22">#22</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>When using the <code class="docutils literal notranslate"><span class="pre">TimeDriver</span></code> with <code class="docutils literal notranslate"><span class="pre">verbose=2</span></code> a simple status bar is
+displayed to show the simulation progress. Note, that the shown information
+is only a rough hint as the progress is measured based on the total number
+of steps <code class="docutils literal notranslate"><span class="pre">n</span></code> and the number of files already written to disk. (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/100">#100</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code></dt><dd><ul class="simple">
+<li><p>Utility functionality for setting up basic logging moved to <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code>
+from <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>. (<a class="reference external" href="https://github.com/ubermag/ubermagutil/pull/27">#27</a>,
+<a class="reference external" href="https://github.com/ubermag/ubermag/pull/133">#133</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ubermag</span></code></dt><dd><ul class="simple">
+<li><p>Utility functionality for setting up basic logging moved to <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code>
+from <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>. (<a class="reference external" href="https://github.com/ubermag/ubermagutil/pull/27">#27</a>,
+<a class="reference external" href="https://github.com/ubermag/ubermag/pull/133">#133</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Changes in the calculation of the demag tensor to avoid zero-division problems
+and <code class="docutils literal notranslate"><span class="pre">nan</span></code> values in the demag field. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/137">#137</a>)</p></li>
+<li><p>Wrong normalisation of the lightness component in lightness plots if not all
+angles are covered. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/140/commits/2de6360ee23a2d59c4c710cbdb677794c4d44e31">commit 2de6360</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">DockerOOMMFRunner</span></code> did not work in combination with SELinux
+because the directiories inside the docker image were not readable/writable.
+The <code class="docutils literal notranslate"><span class="pre">DockerOOMMFRunner</span></code> now has an additional optional argument to enable
+read/write access with SELinux (<a class="reference external" href="https://github.com/ubermag/oommfc/issues/95">#95</a>).</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
 <section id="mar-17-2022">
 <h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Permalink to this headline">#</a></h2>
-<section id="bug-fixes">
-<h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">#</a></h3>
+<section id="id1">
+<h3>Fixed<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
-<li><p>The old docker image of oommf (2.0a2 was used by default (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/84">#84</a>).</p></li>
+<li><p>The old docker image of oommf (2.0a2) was used by default (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/84">#84</a>).</p></li>
 <li><p>Two time-dependent Zeeman terms have the same time dependence and/or result
 in a runtime error (<a class="reference external" href="https://github.com/ubermag/help/issues/198">#198</a>).</p></li>
 </ul>
@@ -317,8 +448,8 @@ in a runtime error (<a class="reference external" href="https://github.com/uberm
 and Linux.</p></li>
 </ul>
 </section>
-<section id="new-functionality">
-<h3>New functionality<a class="headerlink" href="#new-functionality" title="Permalink to this headline">#</a></h3>
+<section id="id2">
+<h3>Added<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul>
 <li><p>Support for <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> in plotting method <code class="docutils literal notranslate"><span class="pre">Field.mpl.lighness</span></code>.</p></li>
@@ -407,8 +538,8 @@ the old behaviour. (<a class="reference external" href="https://github.com/uberm
 </dd>
 </dl>
 </section>
-<section id="backwards-incompatible-changes">
-<h3>Backwards-incompatible changes<a class="headerlink" href="#backwards-incompatible-changes" title="Permalink to this headline">#</a></h3>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Keywords for <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> and <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code>
@@ -422,8 +553,8 @@ consistency reasons).</p></li>
 </dd>
 </dl>
 </section>
-<section id="id1">
-<h3>Bug fixes<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="id3">
+<h3>Fixed<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Simultaneous use of <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> and <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code> in
@@ -444,16 +575,16 @@ additional zeeman field.</p></li>
 </section>
 <section id="oct-1-2021">
 <h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this headline">#</a></h2>
-<section id="id2">
-<h3>General<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<section id="id4">
+<h3>General<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
 <li><p>Versions in sync across all packages</p></li>
 <li><p>Switch to Jupyter lab 3 (should improve situation with <code class="docutils literal notranslate"><span class="pre">K3d</span></code> inside Jupyter lab).</p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>New functionality<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
@@ -505,8 +636,8 @@ temperature.</p></li>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h3>Bug fixes<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<section id="id6">
+<h3>Fixed<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing

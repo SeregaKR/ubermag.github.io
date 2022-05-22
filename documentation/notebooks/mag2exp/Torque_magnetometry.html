@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial: Torque magnetometry &#8212; ubermag  documentation</title>
+    <title>Torque magnetometry &#8212; ubermag  documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -42,8 +42,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial: Lorentz Transmission Electron Microscopy" href="Lorentz_TEM.html" />
-    <link rel="prev" title="Tutorial: DC magnetometry" href="DC_magnetometry.html" />
+    <link rel="next" title="Lorentz Transmission Electron Microscopy" href="Lorentz_TEM.html" />
+    <link rel="prev" title="DC magnetometry" href="DC_magnetometry.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -278,6 +278,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/xarray-usage.html">
+     Importing/Exporting field from/to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray.DataArray
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-rotations.html">
      Field rotation
     </a>
@@ -316,22 +326,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="DC_magnetometry.html">
-     Tutorial: DC magnetometry
+     DC magnetometry
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Tutorial: Torque magnetometry
+     Torque magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Lorentz_TEM.html">
-     Tutorial: Lorentz Transmission Electron Microscopy
+     Lorentz Transmission Electron Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Rotations_Lorentz_Microscopy.html">
-     Tutorial: Using Rotations with
+     Using Rotations with
      <code class="docutils literal notranslate">
       <span class="pre">
        mag2exp
@@ -341,27 +351,27 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Magnetic_Force_Microscopy.html">
-     Tutorial: Magnetic Force Microscopy
+     Magnetic Force Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="X_ray_Holography.html">
-     Tutorial: X-ray Holography
+     X-ray Holography
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="SAXS.html">
-     Tutorial: Small Angle X-ray Scattering
+     Small Angle X-ray Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="SANS.html">
-     Tutorial: Small Angle Neutron Scattering
+     Small Angle Neutron Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Unit_converter.html">
-     Tutorial: Unit Conversions
+     Unit Conversions
     </a>
    </li>
   </ul>
@@ -377,8 +387,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../micromagneticdata/dev-test.html">
-     Dev test
+    <a class="reference internal" href="../micromagneticdata/documentation.html">
+     Analysing simulation results
     </a>
    </li>
   </ul>
@@ -517,6 +527,11 @@
      Running simulations in parallel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/verbosity_levels.html">
+     Verbosity levels
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -628,24 +643,17 @@
      Hysteresis values
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ubermag.html">
-   ubermag
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ubermag/logging.html">
+    <a class="reference internal" href="../ubermagutil/logging.html">
      Logging control
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
  </li>
 </ul>
 
@@ -974,8 +982,8 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<section id="Tutorial:-Torque-magnetometry">
-<h1>Tutorial: Torque magnetometry<a class="headerlink" href="#Tutorial:-Torque-magnetometry" title="Permalink to this headline">#</a></h1>
+<section id="Torque-magnetometry">
+<h1>Torque magnetometry<a class="headerlink" href="#Torque-magnetometry" title="Permalink to this headline">#</a></h1>
 <p>In this tutorial, the Ubermag micromagnetic simulation software is used to create 3-dimensional magnetic structure, on which torque magnetometry can be performed. Torque magnetometry is a technique where an external magnetic field is applied in a direction relative to a magnetic sample, an the torque produced measured. This technique can be used to obtain information on the characteristics of the magnetism in the sample like anisotropy.</p>
 <p>Torque arises from the cross product of the magnetic moment <span class="math notranslate nohighlight">\({\bf m}\)</span>, and the magnetic flux density <span class="math notranslate nohighlight">\({\bf B}\)</span>, <span class="math">\begin{equation}
 {\bf \tau} = {\bf m} \times {\bf B}.
@@ -1014,16 +1022,18 @@ div.rendered_html tbody tr:hover {
 <span class="n">Ms</span> <span class="o">=</span> <span class="mf">9.65e5</span>
 <span class="n">H_mag</span> <span class="o">=</span> <span class="mf">2.38e6</span>
 
-<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Box2&#39;</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Box2&quot;</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">8.78e-13</span><span class="p">)</span>
-                 <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1.18e6</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-                 <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span>
-                 <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">8.78e-13</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">UniaxialAnisotropy</span><span class="p">(</span><span class="n">K</span><span class="o">=</span><span class="mf">1.18e6</span><span class="p">,</span> <span class="n">u</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Demag</span><span class="p">()</span>
+    <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">)</span>
 
 <span class="c1"># create system with above geometry and initial magnetisation</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="o">.</span><span class="n">scalar</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1045,7 +1055,7 @@ div.rendered_html tbody tr:hover {
 <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
 
 <span class="c1"># Plot relaxed configuration: vectors in z-plane</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1126,15 +1136,17 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">71</span><span class="p">)</span>
+<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">71</span><span class="p">)</span>
 
 <span class="n">torque_val_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">torque_val_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">torque_val_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">angle</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">angles</span><span class="p">):</span>
-    <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span><span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">H_mag</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span><span class="n">H_mag</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+    <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">H_mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">H_mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
     <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
-    <span class="n">torque_val_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+    <span class="n">torque_val_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span>
+        <span class="n">system</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1171,13 +1183,13 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial: DC magnetometry</p>
+            <p class="prev-next-title">DC magnetometry</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Lorentz_TEM.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial: Lorentz Transmission Electron Microscopy</p>
+        <p class="prev-next-title">Lorentz Transmission Electron Microscopy</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

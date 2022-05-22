@@ -40,6 +40,9 @@ Drive
       
       
       
+         ~Drive.__lshift__
+      
+      
       
       
       
@@ -56,6 +59,9 @@ Drive
       
       
          ~Drive.slider
+      
+      
+         ~Drive.to_xarray
       
    
    

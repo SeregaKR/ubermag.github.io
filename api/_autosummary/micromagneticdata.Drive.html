@@ -538,6 +538,16 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -928,6 +938,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1096,11 +1111,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1179,6 +1189,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1354,20 +1369,26 @@ the driver used, one is found automatically.</p></li>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></p></td>
 <td><p>Return self==value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.__getitem__" title="micromagneticdata.Drive.__getitem__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getitem__</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getitem__</span></code></p></td>
 <td><p>Magnetisation field of an individual step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.__iter__" title="micromagneticdata.Drive.__iter__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__iter__</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__iter__</span></code></p></td>
 <td><p>Iterator.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.__repr__" title="micromagneticdata.Drive.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.__lshift__" title="micromagneticdata.Drive.__lshift__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lshift__</span></code></a></p></td>
+<td><p>Concatenate multiple drives of the same type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.__repr__" title="micromagneticdata.Drive.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
 <td><p>Representation string.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.ovf2vtk" title="micromagneticdata.Drive.ovf2vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ovf2vtk</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.ovf2vtk" title="micromagneticdata.Drive.ovf2vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ovf2vtk</span></code></a></p></td>
 <td><p>OVF to VTK conversion.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.slider" title="micromagneticdata.Drive.slider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slider</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.slider" title="micromagneticdata.Drive.slider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slider</span></code></a></p></td>
 <td><p>Widget for selecting individual steps.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_xarray</span></code></p></td>
+<td><p>Export <code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1384,13 +1405,13 @@ the driver used, one is found automatically.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.info" title="micromagneticdata.Drive.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info</span></code></a></p></td>
 <td><p>Drive information.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.m0" title="micromagneticdata.Drive.m0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">m0</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">m0</span></code></p></td>
 <td><p>Inital magnetisation.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.mif" title="micromagneticdata.Drive.mif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mif</span></code></a></p></td>
 <td><p>MIF file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.n" title="micromagneticdata.Drive.n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n</span></code></p></td>
 <td><p>Number of steps.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></p></td>
@@ -1402,65 +1423,43 @@ the driver used, one is found automatically.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.Drive.table" title="micromagneticdata.Drive.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">table</span></code></a></p></td>
 <td><p>Table object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.Drive.x" title="micromagneticdata.Drive.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></p></td>
 <td><p>Independent variable name.</p></td>
 </tr>
 </tbody>
 </table>
 <hr><dl class="py method">
-<dt class="sig sig-object py" id="micromagneticdata.Drive.__getitem__">
-<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.Drive.__getitem__" title="Permalink to this definition">#</a></dt>
-<dd><p>Magnetisation field of an individual step.</p>
+<dt class="sig sig-object py" id="micromagneticdata.Drive.__lshift__">
+<span class="sig-name descname"><span class="pre">__lshift__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.Drive.__lshift__" title="Permalink to this definition">#</a></dt>
+<dd><p>Concatenate multiple drives of the same type.</p>
+<p>Multiple drives with the same independent variable (typically drives of the same
+type, e.g. TimeDriver) can be concatenated into one combined drive. The
+resulting object has one large table with scalar values and allows iterating
+over all magnetisation files of the individual drives.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Step number.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#micromagneticdata.Drive" title="micromagneticdata.Drive"><em>micromagneticdata.Drive</em></a><em>, </em><a class="reference internal" href="micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive" title="micromagneticdata.CombinedDrive"><em>micromagneticdata.CombinedDrive</em></a>) – The drive to append to the current object.</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The concatenated drives.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive" title="micromagneticdata.CombinedDrive">micromagneticdata.CombinedDrive</a></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <ol class="arabic simple">
-<li><p>Getting the field of a particular step.</p></li>
+<li><p>Concatenating two drives</p></li>
 </ol>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
 <span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<span class="go">Field(...)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="micromagneticdata.Drive.__iter__">
-<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.Drive.__iter__" title="Permalink to this definition">#</a></dt>
-<dd><p>Iterator.</p>
-<p>This iterator iterates through all magnetisation field in drive and
-yields <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Magnetisation field.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="discretisedfield.Field.html#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Iterating drive.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
-<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">drive</span><span class="p">)</span>
-<span class="go">[...]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_0</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_1</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_0</span> <span class="o">&lt;&lt;</span> <span class="n">drive_1</span>
+<span class="go">CombinedDrive...</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1577,40 +1576,10 @@ argument accepted by it can be passed.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="micromagneticdata.Drive.m0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">m0</span></span><a class="headerlink" href="#micromagneticdata.Drive.m0" title="Permalink to this definition">#</a></dt>
-<dd><p>Inital magnetisation.</p>
-<p>This property returns a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object for the
-initial magnetisation field.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Initial magnetisation field.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="discretisedfield.Field.html#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Getting initial magnetisation field.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
-<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">m0</span>
-<span class="go">Field(...)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="micromagneticdata.Drive.mif">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mif</span></span><a class="headerlink" href="#micromagneticdata.Drive.mif" title="Permalink to this definition">#</a></dt>
-<dd><p>MIF file.</p>
-<p>This property returns a string with the content of MIF file.</p>
+<dd><p>MIF file.
+This property returns a string with the content of MIF file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>MIF file content.</p>
@@ -1620,48 +1589,15 @@ initial magnetisation field.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Getting MIF file.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
-<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">mif</span>
-<span class="go">&#39;# MIF 2...&#39;</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="micromagneticdata.Drive.n">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#micromagneticdata.Drive.n" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of steps.</p>
-<p>This property returns the number of rows in the drive table.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Number of steps.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Getting the number of steps.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
-<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">n</span>
-<span class="go">25</span>
-</pre></div>
-</div>
+<p>1. Getting MIF file.
+&gt;&gt;&gt; import os
+&gt;&gt;&gt; import micromagneticdata as md
+…
+&gt;&gt;&gt; dirname = dirname=os.path.join(os.path.dirname(__file__),
+…                                ‘tests’, ‘test_sample’)
+&gt;&gt;&gt; drive = md.Drive(name=’system_name’, number=6, dirname=dirname)
+&gt;&gt;&gt; drive.mif
+‘# MIF 2…’</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1691,41 +1627,6 @@ selected.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">table</span>
 <span class="go">               E...</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="micromagneticdata.Drive.x">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#micromagneticdata.Drive.x" title="Permalink to this definition">#</a></dt>
-<dd><p>Independent variable name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Independent variable name.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Representation string.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the column name does not exist in table.</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Getting and setting independent variable name.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
-<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">x</span>
-<span class="go">&#39;B_hysteresis&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Bx_hysteresis&#39;</span>
 </pre></div>
 </div>
 </dd></dl>

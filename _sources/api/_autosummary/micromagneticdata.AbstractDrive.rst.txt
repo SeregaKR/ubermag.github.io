@@ -1,0 +1,79 @@
+AbstractDrive
+=============
+
+.. currentmodule:: micromagneticdata
+
+.. autoclass:: AbstractDrive
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~AbstractDrive.__dir__
+      
+      
+         ~AbstractDrive.__eq__
+      
+      
+      
+      
+      
+         ~AbstractDrive.__getitem__
+      
+      
+      
+      
+      
+      
+         ~AbstractDrive.__iter__
+      
+      
+      
+         ~AbstractDrive.__lshift__
+      
+      
+      
+      
+      
+      
+      
+         ~AbstractDrive.__repr__
+      
+      
+      
+      
+      
+      
+         ~AbstractDrive.to_xarray
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~AbstractDrive.info
+      ~AbstractDrive.m0
+      ~AbstractDrive.n
+      ~AbstractDrive.table
+      ~AbstractDrive.x
+   
+   
+
+   .. raw:: html
+
+      <hr>

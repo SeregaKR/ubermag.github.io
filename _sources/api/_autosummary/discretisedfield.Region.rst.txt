@@ -79,6 +79,7 @@ Region
       ~Region.p2
       ~Region.pmax
       ~Region.pmin
+      ~Region.tolerance_factor
       ~Region.unit
       ~Region.volume
    

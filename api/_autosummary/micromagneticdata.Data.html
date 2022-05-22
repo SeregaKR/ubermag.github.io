@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Drive" href="micromagneticdata.Drive.html" />
-    <link rel="prev" title="micromagneticdata" href="micromagneticdata.html" />
+    <link rel="prev" title="CombinedDrive" href="micromagneticdata.CombinedDrive.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -537,6 +537,16 @@
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Data
@@ -928,6 +938,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1096,11 +1111,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1179,6 +1189,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1391,8 +1406,8 @@ the system was driven, it can be passed here via <code class="docutils literal n
 <dt class="sig sig-object py" id="micromagneticdata.Data.__getitem__">
 <span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.Data.__getitem__" title="Permalink to this definition">#</a></dt>
 <dd><p>Get drive with number <code class="docutils literal notranslate"><span class="pre">item</span></code>.</p>
-<p>If a negative value is passed as <code class="docutils literal notranslate"><span class="pre">item</span></code>, <code class="docutils literal notranslate"><span class="pre">item</span> <span class="pre">%</span> <span class="pre">self.n</span></code> frive is
-returned. For example, passing <code class="docutils literal notranslate"><span class="pre">-1</span></code> would return the last drive.</p>
+<p>If a negative value is passed as <code class="docutils literal notranslate"><span class="pre">item</span></code>, the count starts from the end. For
+example, passing <code class="docutils literal notranslate"><span class="pre">-1</span></code> would return the last drive.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>item</strong> (<em>int</em>) – Drive number.</p>
@@ -1582,11 +1597,11 @@ different drives found. If columns of different drives mismatch,
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="micromagneticdata.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="micromagneticdata.CombinedDrive.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">micromagneticdata</p>
+            <p class="prev-next-title">CombinedDrive</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="micromagneticdata.Drive.html" title="next page">

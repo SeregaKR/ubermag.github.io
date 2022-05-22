@@ -111,7 +111,13 @@ Field
          ~Field.allclose
       
       
+         ~Field.coordinate_field
+      
+      
          ~Field.derivative
+      
+      
+         ~Field.from_xarray
       
       
          ~Field.fromfile
@@ -130,6 +136,12 @@ Field
       
       
          ~Field.project
+      
+      
+         ~Field.to_vtk
+      
+      
+         ~Field.to_xarray
       
       
          ~Field.write
@@ -165,6 +177,7 @@ Field
       ~Field.phase
       ~Field.real
       ~Field.rfftn
+      ~Field.units
       ~Field.value
       ~Field.zero
    

@@ -538,6 +538,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -928,6 +938,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1096,11 +1111,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1179,6 +1189,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1312,7 +1327,7 @@
 <h1>oommfc.compute<a class="headerlink" href="#oommfc-compute" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="oommfc.compute">
-<span class="sig-prename descclassname"><span class="pre">oommfc.</span></span><span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.compute" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">oommfc.</span></span><span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oommfc.compute" title="Permalink to this definition">#</a></dt>
 <dd><p>Computes a particular value of an energy term or energy container
 (<code class="docutils literal notranslate"><span class="pre">energy</span></code>, <code class="docutils literal notranslate"><span class="pre">density</span></code>, or <code class="docutils literal notranslate"><span class="pre">effective_field</span></code>).</p>
 <dl class="field-list simple">
@@ -1320,6 +1335,9 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>func</strong> (<em>callable</em>) – A property of an energy term or an energy container.</p></li>
 <li><p><strong>system</strong> (<a class="reference internal" href="micromagneticmodel.System.html#micromagneticmodel.System" title="micromagneticmodel.System"><em>micromagneticmodel.System</em></a>) – Micromagnetic system for which the property is calculated.</p></li>
+<li><p><strong>verbose</strong> (<em>int</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">verbose=0</span></code>, no output is printed. For <code class="docutils literal notranslate"><span class="pre">verbose&gt;=1</span></code>
+information about the OOMMF runner and the runtime is printed to
+stdout. Defaults is <code class="docutils literal notranslate"><span class="pre">verbose=1</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

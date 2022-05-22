@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial: Using Rotations with mag2exp &#8212; ubermag  documentation</title>
+    <title>Using Rotations with mag2exp &#8212; ubermag  documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -42,8 +42,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial: Magnetic Force Microscopy" href="Magnetic_Force_Microscopy.html" />
-    <link rel="prev" title="Tutorial: Lorentz Transmission Electron Microscopy" href="Lorentz_TEM.html" />
+    <link rel="next" title="Magnetic Force Microscopy" href="Magnetic_Force_Microscopy.html" />
+    <link rel="prev" title="Lorentz Transmission Electron Microscopy" href="Lorentz_TEM.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -278,6 +278,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/xarray-usage.html">
+     Importing/Exporting field from/to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray.DataArray
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-rotations.html">
      Field rotation
     </a>
@@ -316,22 +326,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="DC_magnetometry.html">
-     Tutorial: DC magnetometry
+     DC magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Torque_magnetometry.html">
-     Tutorial: Torque magnetometry
+     Torque magnetometry
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Lorentz_TEM.html">
-     Tutorial: Lorentz Transmission Electron Microscopy
+     Lorentz Transmission Electron Microscopy
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Tutorial: Using Rotations with
+     Using Rotations with
      <code class="docutils literal notranslate">
       <span class="pre">
        mag2exp
@@ -341,27 +351,27 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Magnetic_Force_Microscopy.html">
-     Tutorial: Magnetic Force Microscopy
+     Magnetic Force Microscopy
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="X_ray_Holography.html">
-     Tutorial: X-ray Holography
+     X-ray Holography
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="SAXS.html">
-     Tutorial: Small Angle X-ray Scattering
+     Small Angle X-ray Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="SANS.html">
-     Tutorial: Small Angle Neutron Scattering
+     Small Angle Neutron Scattering
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Unit_converter.html">
-     Tutorial: Unit Conversions
+     Unit Conversions
     </a>
    </li>
   </ul>
@@ -377,8 +387,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../micromagneticdata/dev-test.html">
-     Dev test
+    <a class="reference internal" href="../micromagneticdata/documentation.html">
+     Analysing simulation results
     </a>
    </li>
   </ul>
@@ -517,6 +527,11 @@
      Running simulations in parallel
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../oommfc/verbosity_levels.html">
+     Verbosity levels
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -628,24 +643,17 @@
      Hysteresis values
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ubermag.html">
-   ubermag
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ubermag/logging.html">
+    <a class="reference internal" href="../ubermagutil/logging.html">
      Logging control
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ubermag.html">
+   ubermag
+  </a>
  </li>
 </ul>
 
@@ -959,8 +967,8 @@ div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
 </style>
-<section id="Tutorial:-Using-Rotations-with-mag2exp">
-<h1>Tutorial: Using Rotations with <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code><a class="headerlink" href="#Tutorial:-Using-Rotations-with-mag2exp" title="Permalink to this headline">#</a></h1>
+<section id="Using-Rotations-with-mag2exp">
+<h1>Using Rotations with <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code><a class="headerlink" href="#Using-Rotations-with-mag2exp" title="Permalink to this headline">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> objects have the functionality to be rotated. We can make use of this functionality with the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package.</p>
 <p>This is an example of how to use the rotation functionality with Lorentz Transmission Electron Microscopy (LTEM) in order to view Néel magentisation structures. This tutorial assumes knowledge of how to use the <code class="docutils literal notranslate"><span class="pre">FieldRotator</span></code> class and <code class="docutils literal notranslate"><span class="pre">mag2exp.ltem</span></code>. Tutorials on both of these topics can be found in their relevant documentation.</p>
 <div class="nbinput docutils container">
@@ -978,21 +986,28 @@ div.rendered_html tbody tr:hover {
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="p">(</span><span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">,</span> <span class="mf">5e-9</span><span class="p">))</span>
 
 
-<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Box2&#39;</span><span class="p">)</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">System</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Box2&quot;</span><span class="p">)</span>
 
-<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span>
-                 <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">4e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s1">&#39;Cnv_z&#39;</span><span class="p">)</span>
-                 <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">)))</span>
+<span class="n">system</span><span class="o">.</span><span class="n">energy</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1.6e-11</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">DMI</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="mf">4e-3</span><span class="p">,</span> <span class="n">crystalclass</span><span class="o">=</span><span class="s2">&quot;Cnv_z&quot;</span><span class="p">)</span>
+    <span class="o">+</span> <span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2e5</span><span class="p">))</span>
+<span class="p">)</span>
 
 <span class="n">Ms</span> <span class="o">=</span> <span class="mf">1.1e6</span>
 
+
 <span class="k">def</span> <span class="nf">rho_func</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">s_size</span><span class="p">):</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="o">/</span><span class="n">s_size</span><span class="p">)</span> <span class="c1"># Change this function for differnt out of plane functions</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
+        <span class="o">-</span><span class="n">r</span> <span class="o">/</span> <span class="n">s_size</span>
+    <span class="p">)</span>  <span class="c1"># Change this function for differnt out of plane functions</span>
     <span class="k">return</span> <span class="n">t</span>
 
-<span class="k">def</span> <span class="nf">phi_func</span><span class="p">(</span><span class="n">n_top</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">g</span><span class="p">):</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">n_top</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">g</span>
+
+<span class="k">def</span> <span class="nf">phi_func</span><span class="p">(</span><span class="n">n_top</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">n_top</span> <span class="o">*</span> <span class="n">a</span> <span class="o">+</span> <span class="n">g</span>
     <span class="k">return</span> <span class="n">p</span>
+
 
 <span class="k">def</span> <span class="nf">m_fun_2</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pos</span>
@@ -1000,13 +1015,14 @@ div.rendered_html tbody tr:hover {
     <span class="n">n_top</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">phi</span> <span class="o">=</span> <span class="n">phi_func</span><span class="p">(</span><span class="n">n_top</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">phase</span><span class="p">)</span>
+    <span class="n">phi</span> <span class="o">=</span> <span class="n">phi_func</span><span class="p">(</span><span class="n">n_top</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
     <span class="n">rho</span> <span class="o">=</span> <span class="n">rho_func</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mf">30e-9</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rho</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rho</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rho</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rho</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rho</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rho</span><span class="p">))</span>
+
 
 <span class="c1"># create system with above geometry and initial magnetisation</span>
 <span class="n">system</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">m_fun_2</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Ms</span><span class="p">)</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1028,7 +1044,7 @@ div.rendered_html tbody tr:hover {
 <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
 
 <span class="c1"># Plot relaxed configuration: vectors in z-plane</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1052,7 +1068,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
-<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
+<span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">plane</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mpl</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1103,9 +1119,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">field_rotator</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;from_euler&#39;</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">field_rotator</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s2">&quot;from_euler&quot;</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">angle</span> <span class="o">+=</span> <span class="mi">10</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">angle</span><span class="si">}</span><span class="s1"> degree rotation&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">angle</span><span class="si">}</span><span class="s2"> degree rotation&quot;</span><span class="p">)</span>
     <span class="n">mag2exp</span><span class="o">.</span><span class="n">quick_plots</span><span class="o">.</span><span class="n">ltem_defocus</span><span class="p">(</span><span class="n">field_rotator</span><span class="o">.</span><span class="n">field</span><span class="p">,</span> <span class="n">voltage</span><span class="o">=</span><span class="mf">300e3</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1193,7 +1209,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="n">field_rotator</span><span class="o">.</span><span class="n">clear_rotation</span><span class="p">()</span>
-<span class="n">field_rotator</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s1">&#39;align_vector&#39;</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">final</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">field_rotator</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="s2">&quot;align_vector&quot;</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">final</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">mag2exp</span><span class="o">.</span><span class="n">quick_plots</span><span class="o">.</span><span class="n">ltem_defocus</span><span class="p">(</span><span class="n">field_rotator</span><span class="o">.</span><span class="n">field</span><span class="p">,</span> <span class="n">voltage</span><span class="o">=</span><span class="mf">300e3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1218,13 +1234,13 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/23 10:53]... (8.4 s)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial: Lorentz Transmission Electron Microscopy</p>
+            <p class="prev-next-title">Lorentz Transmission Electron Microscopy</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Magnetic_Force_Microscopy.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial: Magnetic Force Microscopy</p>
+        <p class="prev-next-title">Magnetic Force Microscopy</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

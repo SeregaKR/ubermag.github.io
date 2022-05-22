@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ubermag.setup_logging &#8212; ubermag  documentation</title>
+    <title>AbstractDrive &#8212; ubermag  documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -40,8 +40,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ubermag.test" href="ubermag.test.html" />
-    <link rel="prev" title="ubermag" href="ubermag.html" />
+    <link rel="next" title="CombinedDrive" href="micromagneticdata.CombinedDrive.html" />
+    <link rel="prev" title="micromagneticdata" href="micromagneticdata.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -527,16 +527,26 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="micromagneticdata.html">
    micromagneticdata
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
   <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
@@ -928,6 +938,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1085,21 +1100,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ubermag.html">
    ubermag
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
   <label for="toctree-checkbox-21">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     ubermag.setup_logging
-    </a>
-   </li>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
@@ -1179,6 +1189,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1308,41 +1323,334 @@
               
               <div>
                 
-  <section id="ubermag-setup-logging">
-<h1>ubermag.setup_logging<a class="headerlink" href="#ubermag-setup-logging" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="ubermag.setup_logging">
-<span class="sig-prename descclassname"><span class="pre">ubermag.</span></span><span class="sig-name descname"><span class="pre">setup_logging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ubermag.setup_logging" title="Permalink to this definition">#</a></dt>
-<dd><p>Set up basic logging for Ubermag with per-package control.</p>
-<p>This function creates a basic logger (printing to stdout) and sets the log
-level for all packages in Ubermag to <code class="docutils literal notranslate"><span class="pre">level</span></code>. Additional, more fine-grain
-control is possible by passing a dictionary to <code class="docutils literal notranslate"><span class="pre">package_levels</span></code>. Keys
-must be ubermag subpackages, values log levels.</p>
+  <section id="abstractdrive">
+<h1>AbstractDrive<a class="headerlink" href="#abstractdrive" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">micromagneticdata.</span></span><span class="sig-name descname"><span class="pre">AbstractDrive</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive" title="Permalink to this definition">#</a></dt>
+<dd><p>Drive class.</p>
+<p>This class provides utility for the analysis of individual drives.</p>
+<hr><p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
+<td><p>Default dir() implementation.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></p></td>
+<td><p>Return self==value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.__getitem__" title="micromagneticdata.AbstractDrive.__getitem__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getitem__</span></code></a></p></td>
+<td><p>Magnetisation field of an individual step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.__iter__" title="micromagneticdata.AbstractDrive.__iter__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__iter__</span></code></a></p></td>
+<td><p>Iterator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.__lshift__" title="micromagneticdata.AbstractDrive.__lshift__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lshift__</span></code></a></p></td>
+<td><p>Concatenate multiple drives of the same type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.__repr__" title="micromagneticdata.AbstractDrive.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Representation string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.to_xarray" title="micromagneticdata.AbstractDrive.to_xarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_xarray</span></code></a></p></td>
+<td><p>Export <code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Properties</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.info" title="micromagneticdata.AbstractDrive.info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">info</span></code></a></p></td>
+<td><p>Drive information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.m0" title="micromagneticdata.AbstractDrive.m0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">m0</span></code></a></p></td>
+<td><p>Inital magnetisation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.n" title="micromagneticdata.AbstractDrive.n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n</span></code></a></p></td>
+<td><p>Number of steps.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.table" title="micromagneticdata.AbstractDrive.table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">table</span></code></a></p></td>
+<td><p>Table object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticdata.AbstractDrive.x" title="micromagneticdata.AbstractDrive.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<td><p>Independent variable name.</p></td>
+</tr>
+</tbody>
+</table>
+<hr><dl class="py method">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.AbstractDrive.__getitem__" title="Permalink to this definition">#</a></dt>
+<dd><p>Magnetisation field of an individual step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Step number.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting the field of a particular step.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">Field(...)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.AbstractDrive.__iter__" title="Permalink to this definition">#</a></dt>
+<dd><p>Iterator.</p>
+<p>This iterator iterates through all magnetisation field in drive and
+yields <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Magnetisation field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="discretisedfield.Field.html#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Iterating drive.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">drive</span><span class="p">)</span>
+<span class="go">[...]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.__lshift__">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__lshift__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.AbstractDrive.__lshift__" title="Permalink to this definition">#</a></dt>
+<dd><p>Concatenate multiple drives of the same type.</p>
+<p>Multiple drives with the same independent variable (typically drives of the same
+type, e.g. TimeDriver) can be concatenated into one combined drive. The
+resulting object has one large table with scalar values and allows iterating
+over all magnetisation files of the individual drives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="micromagneticdata.Drive.html#micromagneticdata.Drive" title="micromagneticdata.Drive"><em>micromagneticdata.Drive</em></a><em>, </em><a class="reference internal" href="micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive" title="micromagneticdata.CombinedDrive"><em>micromagneticdata.CombinedDrive</em></a>) – The drive to append to the current object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The concatenated drives.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive" title="micromagneticdata.CombinedDrive">micromagneticdata.CombinedDrive</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Concatenating two drives</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_0</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_1</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive_0</span> <span class="o">&lt;&lt;</span> <span class="n">drive_1</span>
+<span class="go">CombinedDrive...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.__repr__">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.AbstractDrive.__repr__" title="Permalink to this definition">#</a></dt>
+<dd><p>Representation string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.to_xarray">
+<span class="sig-name descname"><span class="pre">to_xarray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticdata.AbstractDrive.to_xarray" title="Permalink to this definition">#</a></dt>
+<dd><p>Export <code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
+<p>The method depends on <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code> and derives the
+last four dimensions <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and <code class="docutils literal notranslate"><span class="pre">comp</span></code> in the output
+<code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> from it. The arguments and named arguments to this method
+are passed on to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code>.</p>
+<p>Depending on type of driver, the dimensions and coordinates of the output may
+change. If the number of stored steps in the <code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> are
+more than one, the output contains an extra dimension named after
+<code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive.table.x</span></code> with proper coordinate values. For the case
+of <code class="docutils literal notranslate"><span class="pre">HysteresisDriver</span></code>,  the new dimension has four coordinates, namely
+<code class="docutils literal notranslate"><span class="pre">B_hysteresis</span></code>, <code class="docutils literal notranslate"><span class="pre">Bx_hysteresis</span></code>, <code class="docutils literal notranslate"><span class="pre">By_hysteresis</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">Bz_hysteresis</span></code>. The first represents the norm of the hysteresis field, while
+the rest three represents the components along the respective axes. For a
+<code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> with a single <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>, the value
+of the single <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code> is returned.</p>
+<p><code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive.info</span></code> is returned as the output <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>
+attributes, besides the ones derived from
+<code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>level</strong> (<em>str</em><em>, </em><em>int</em><em>, </em><em>logging.LEVEL</em>) – Log level used for all packages in Ubermag.</p></li>
-<li><p><strong>package_levels</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary with Ubermag subpackage names as keys and log-levels
-as values. It allows fine-grain control over logging for
-individual packages.</p></li>
+<li><p><strong>args</strong> (<em>any</em>) – Arguments to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code></p></li>
+<li><p><strong>kwargs</strong> (<em>any</em>) – Named arguments to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.to_xarray</span></code></p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">micromagneticdata.Drive</span></code> as <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>xarray.DataArray</p>
+</dd>
 </dl>
-<p class="rubric">Example</p>
+<p class="rubric">Examples</p>
 <ol class="arabic simple">
-<li><p>Setting up a basic logger with default log-level <code class="docutils literal notranslate"><span class="pre">logging.WARNING</span></code></p></li>
+<li><p>Drive to DataArray</p></li>
 </ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ubermag</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ubermag</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xr_drive</span> <span class="o">=</span> <span class="n">drive</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Mag&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xr_drive</span>
+<span class="go">&lt;xarray.DataArray &#39;Mag&#39; (t: 25, x: 20, y: 10, z: 4, comp: 3)&gt;</span>
+<span class="gp">...</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Setting up a basic logger with a higher log-level for <code class="docutils literal notranslate"><span class="pre">oommfc</span></code></p></li>
+<li><p>Magnetization in a cell over time for <code class="docutils literal notranslate"><span class="pre">TimeDriver</span></code></p></li>
 </ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ubermag</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ubermag</span><span class="o">.</span><span class="n">setup_logging</span><span class="p">(</span><span class="n">package_levels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;oommfc&#39;</span><span class="p">:</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">})</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xr_drive</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">&lt;xarray.DataArray &#39;Mag&#39; (t: 25, comp: 3)&gt;</span>
+<span class="gp">...</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.info">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive.info" title="Permalink to this definition">#</a></dt>
+<dd><p>Drive information.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.m0">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">m0</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive.m0" title="Permalink to this definition">#</a></dt>
+<dd><p>Inital magnetisation.</p>
+<p>This property returns a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object for the
+initial magnetisation field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Initial magnetisation field.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="discretisedfield.Field.html#discretisedfield.Field" title="discretisedfield.Field">discretisedfield.Field</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting initial magnetisation field.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">m0</span>
+<span class="go">Field(...)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.n">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive.n" title="Permalink to this definition">#</a></dt>
+<dd><p>Number of steps.</p>
+<p>This property returns the number of rows in the drive table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Number of steps.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting the number of steps.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">n</span>
+<span class="go">25</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.table">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">table</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive.table" title="Permalink to this definition">#</a></dt>
+<dd><p>Table object.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="micromagneticdata.AbstractDrive.x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#micromagneticdata.AbstractDrive.x" title="Permalink to this definition">#</a></dt>
+<dd><p>Independent variable name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – Independent variable name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Representation string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the column name does not exist in table.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting and setting independent variable name.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticdata</span> <span class="k">as</span> <span class="nn">md</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span> <span class="o">=</span> <span class="n">dirname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="s1">&#39;tests&#39;</span><span class="p">,</span> <span class="s1">&#39;test_sample&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;system_name&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">dirname</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">x</span>
+<span class="go">&#39;B_hysteresis&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drive</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Bx_hysteresis&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -1353,17 +1661,17 @@ individual packages.</p></li>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ubermag.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="micromagneticdata.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ubermag</p>
+            <p class="prev-next-title">micromagneticdata</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ubermag.test.html" title="next page">
+    <a class='right-next' id="next-link" href="micromagneticdata.CombinedDrive.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ubermag.test</p>
+        <p class="prev-next-title">CombinedDrive</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

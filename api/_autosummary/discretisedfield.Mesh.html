@@ -540,6 +540,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.AbstractDrive.html">
+     AbstractDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.CombinedDrive.html">
+     CombinedDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.Data.html">
      Data
     </a>
@@ -930,6 +940,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
+       micromagnetictests.calculatortests.test_skyrmion
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_stdprob3.html">
        micromagnetictests.calculatortests.test_stdprob3
       </a>
@@ -1098,11 +1113,6 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="ubermag.setup_logging.html">
-     ubermag.setup_logging
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="ubermag.test.html">
      ubermag.test
     </a>
@@ -1181,6 +1191,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.inherit_docs.html">
      ubermagutil.inherit_docs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.setup_logging.html">
+     ubermagutil.setup_logging
     </a>
    </li>
    <li class="toctree-l2">
@@ -1473,8 +1488,8 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Mesh.__repr__" title="discretisedfield.Mesh.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
 <td><p>Representation string.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Mesh.axis_points" title="discretisedfield.Mesh.axis_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis_points</span></code></a></p></td>
-<td><p>Points (ticks) on <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis_points</span></code></p></td>
+<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Mesh.axis_selector" title="discretisedfield.Mesh.axis_selector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis_selector</span></code></a></p></td>
 <td><p>Axis selector.</p></td>
@@ -1542,14 +1557,20 @@ discretisation cells in the <span class="math notranslate nohighlight">\(z\)</sp
 <tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Mesh.indices" title="discretisedfield.Mesh.indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indices</span></code></a></p></td>
 <td><p>Generator yielding indices of all mesh cells.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Mesh.midpoints" title="discretisedfield.Mesh.midpoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">midpoints</span></code></a></p></td>
+<td><p>Midpoints of the cells of the mesh along the three directions.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n</span></code></p></td>
 <td><p>Descriptor allowing setting attributes only with vectors (<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, or <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>), whose elements are of <code class="docutils literal notranslate"><span class="pre">numbers.Real</span></code> type.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">region</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">region</span></code></p></td>
 <td><p>Descriptor allowing setting attributes only with values of a certain type.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Mesh.subregions" title="discretisedfield.Mesh.subregions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subregions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#discretisedfield.Mesh.subregions" title="discretisedfield.Mesh.subregions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subregions</span></code></a></p></td>
 <td><p>&quot;Subregions of the mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#discretisedfield.Mesh.vertices" title="discretisedfield.Mesh.vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vertices</span></code></a></p></td>
+<td><p>Vertices of the cells of the mesh along the three directions.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1872,37 +1893,6 @@ from this string.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="discretisedfield.Mesh.axis_points">
-<span class="sig-name descname"><span class="pre">axis_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_points" title="Permalink to this definition">#</a></dt>
-<dd><p>Points (ticks) on <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
-<p>This method is a generator yielding points on <code class="docutils literal notranslate"><span class="pre">axis</span></code> at which
-discretisation cell coordinates are defined.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>axis</strong> (<em>str</em>) – Axis <code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>.</p>
-</dd>
-<dt class="field-even">Yields</dt>
-<dd class="field-even"><p><em>numbers.Real</em> – Point on <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<ol class="arabic simple">
-<li><p>Getting points (ticks) on the axis.</p></li>
-</ol>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
-<span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">axis_points</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">))</span>
-<span class="go">[1.0, 3.0, 5.0, 7.0, 9.0]</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.axis_selector">
 <span class="sig-name descname"><span class="pre">axis_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dropdown'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'axis'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.axis_selector" title="Permalink to this definition">#</a></dt>
 <dd><p>Axis selector.</p>
@@ -2125,7 +2115,7 @@ that line are generated and yielded in <code class="docutils literal notranslate
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.mpl">
-<span class="sig-name descname"><span class="pre">mpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">mpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> object is created
 automatically and the size of a figure can be specified using
@@ -2156,6 +2146,10 @@ created internally.</p></li>
 <li><p><strong>color</strong> (<em>(</em><em>2</em><em>,</em><em>) </em><em>array_like</em>) – A valid <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> color for lines depicting the region.
 Defaults to the default color palette.</p></li>
 <li><p><strong>multiplier</strong> (<em>numbers.Real</em><em>, </em><em>optional</em>) – Axes multiplier. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>box_aspect</strong> (<em>str</em><em>, </em><em>array_like</em><em> (</em><em>3</em><em>)</em><em>, </em><em>optional</em>) – Set the aspect-ratio of the plot. If set to <cite>‘auto’</cite> the aspect
+ratio is determined from the edge lengths of the region on which
+the mesh is defined. To set different aspect ratios a tuple can be
+passed. Defaults to <code class="docutils literal notranslate"><span class="pre">'auto'</span></code>.</p></li>
 <li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – If filename is passed, the plot is saved. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 </dd>
@@ -2182,7 +2176,7 @@ Defaults to the default color palette.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.mpl_subregions">
-<span class="sig-name descname"><span class="pre">mpl_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452',</span> <span class="pre">'#55a868',</span> <span class="pre">'#c44e52',</span> <span class="pre">'#8172b3',</span> <span class="pre">'#937860',</span> <span class="pre">'#da8bc3',</span> <span class="pre">'#8c8c8c',</span> <span class="pre">'#ccb974',</span> <span class="pre">'#64b5cd']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl_subregions" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">mpl_subregions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['#4c72b0',</span> <span class="pre">'#dd8452',</span> <span class="pre">'#55a868',</span> <span class="pre">'#c44e52',</span> <span class="pre">'#8172b3',</span> <span class="pre">'#937860',</span> <span class="pre">'#da8bc3',</span> <span class="pre">'#8c8c8c',</span> <span class="pre">'#ccb974',</span> <span class="pre">'#64b5cd']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_region</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#discretisedfield.Mesh.mpl_subregions" title="Permalink to this definition">#</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> subregions plot.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ax</span></code> is not passed, <code class="docutils literal notranslate"><span class="pre">matplotlib.axes.Axes</span></code> object is created
 automatically and the size of a figure can be specified using
@@ -2211,8 +2205,12 @@ created internally.</p></li>
 <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>color</strong> (<em>array_like</em>) – Subregion colours. Defaults to the default color palette.</p></li>
 <li><p><strong>multiplier</strong> (<em>numbers.Real</em><em>, </em><em>optional</em>) – Axes multiplier. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
-<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – If filename is passed, the plot is saved. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>show_region</strong> (<em>bool</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> also plot the whole region. Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>box_aspect</strong> (<em>str</em><em>, </em><em>array_like</em><em> (</em><em>3</em><em>)</em><em>, </em><em>optional</em>) – Set the aspect-ratio of the plot. If set to <cite>‘auto’</cite> the aspect
+ratio is determined from the edge lengths of the region on which
+the mesh is defined. To set different aspect ratios a tuple can be
+passed. Defaults to <code class="docutils literal notranslate"><span class="pre">'auto'</span></code>.</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – If filename is passed, the plot is saved. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2579,6 +2577,39 @@ discretisation cell surface.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Mesh.midpoints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">midpoints</span></span><a class="headerlink" href="#discretisedfield.Mesh.midpoints" title="Permalink to this definition">#</a></dt>
+<dd><p>Midpoints of the cells of the mesh along the three directions.</p>
+<p>This method returns a named tuple containing three numpy arrays with
+midpoints of the cells along the three spatial directions <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">z</span></code>. Individual directions can be accessed from the tuple.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Namedtuple with three elements <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code>, the cell
+midpoints along the three spatial directions as numpy arrays.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>collections.namedtuple</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting midpoints along the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">midpoints</span><span class="o">.</span><span class="n">x</span>
+<span class="go">array([1., 3., 5., 7., 9.])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="discretisedfield.Mesh.subregions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subregions</span></span><a class="headerlink" href="#discretisedfield.Mesh.subregions" title="Permalink to this definition">#</a></dt>
 <dd><p>“Subregions of the mesh.</p>
@@ -2593,6 +2624,39 @@ Defaults to an empty dictionary.</p>
 <dd class="field-even"><p>dict</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="discretisedfield.Mesh.vertices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vertices</span></span><a class="headerlink" href="#discretisedfield.Mesh.vertices" title="Permalink to this definition">#</a></dt>
+<dd><p>Vertices of the cells of the mesh along the three directions.</p>
+<p>This method returns a named tuple containing three numpy arrays with
+vertices of the cells along the three spatial directions <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">z</span></code>. Individual directions can be accessed from the tuple.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Namedtuple with three elements <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code>, the cell
+vertices along the three spatial directions as numpy arrays.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>collections.namedtuple</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Getting vertices along the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">discretisedfield</span> <span class="k">as</span> <span class="nn">df</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cell</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Region</span><span class="p">(</span><span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">),</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">x</span>
+<span class="go">array([ 0.,  2.,  4.,  6.,  8., 10.])</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
