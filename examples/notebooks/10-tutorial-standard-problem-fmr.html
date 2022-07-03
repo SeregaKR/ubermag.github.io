@@ -216,6 +216,16 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="choosing-runner.html">
+   Choosing runner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-term-computations.html">
+   Energy term computations
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="field-operations2.html">
    Field operations 2
   </a>
@@ -701,7 +711,7 @@ well-converged equilibrium magnetization configuration. We refer to this stage o
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (0.6 s)
+Running OOMMF (ExeOOMMFRunner)[2022/06/13 08:46]... (0.5 s)
 </pre></div></div>
 </div>
 <p>We can now load the relaxed state to the Field object and plot the <span class="math notranslate nohighlight">\(z\)</span> slice of magnetisation.</p>
@@ -752,7 +762,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (0.6 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (61.0 s)
+Running OOMMF (ExeOOMMFRunner)[2022/06/13 08:46]... (31.7 s)
 </pre></div></div>
 </div>
 </section>
@@ -789,10 +799,10 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:04]... (61.0 s)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.fftpack</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.fft</span>
 
-<span class="n">psd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">my</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">f_axis</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">20e-9</span><span class="o">/</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">psd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">my</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">f_axis</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mf">20e-9</span><span class="o">/</span><span class="mi">4000</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">f_axis</span><span class="o">/</span><span class="mf">1e9</span><span class="p">,</span> <span class="n">psd</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>

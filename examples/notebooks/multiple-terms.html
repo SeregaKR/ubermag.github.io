@@ -216,6 +216,16 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="choosing-runner.html">
+   Choosing runner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="energy-term-computations.html">
+   Energy term computations
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="field-operations2.html">
    Field operations 2
   </a>
@@ -627,7 +637,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "bf8ee52da3554f279fec12695caa34bf", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b563744001494ba29a38f4e32aba24a6", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>Let us say that the system has an energy equation, which consists of two Zeeman energy terms.</p>
 <div class="nbinput nblast docutils container">
@@ -657,22 +667,21 @@ div.rendered_html tbody tr:hover {
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span> system<span style="color: rgb(98,98,98)">.</span>energy <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">mm</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">Zeeman</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">H</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">1e5</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">+</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mm</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">Zeeman</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">H</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">1e5</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">)</span>
 
-File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/micromagneticmodel/micromagneticmodel/abstract/term.py:114</span>, in <span class="ansi-cyan-fg">Term.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    112</span> result <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">getattr</span>(mm, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_container_class)()
-<span class="ansi-green-intense-fg ansi-bold">    113</span> result <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span>
-<span class="ansi-green-fg">--&gt; 114</span> result <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> other
-<span class="ansi-green-intense-fg ansi-bold">    115</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> result
+File <span class="ansi-green-fg">~/repos/ubermag-devtools/repos/micromagneticmodel/micromagneticmodel/abstract/term.py:115</span>, in <span class="ansi-cyan-fg">Term.__add__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    113</span> result <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">getattr</span>(mm, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_container_class)()
+<span class="ansi-green-intense-fg ansi-bold">    114</span> result <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span>
+<span class="ansi-green-fg">--&gt; 115</span> result <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> other
+<span class="ansi-green-intense-fg ansi-bold">    116</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> result
 
-File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/micromagneticmodel/micromagneticmodel/abstract/container.py:335</span>, in <span class="ansi-cyan-fg">Container.__add__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">    332</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> other <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> result:
-<span class="ansi-green-intense-fg ansi-bold">    333</span>         msg <span style="color: rgb(98,98,98)">=</span> (<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Cannot have two </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> </span><span style="color: rgb(175,0,0)">&#39;</span>
-<span class="ansi-green-intense-fg ansi-bold">    334</span>                <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">terms in the container.</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-fg">--&gt; 335</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(msg)
-<span class="ansi-green-intense-fg ansi-bold">    336</span>     result<span style="color: rgb(98,98,98)">.</span>_terms<span style="color: rgb(98,98,98)">.</span>append(other)
-<span class="ansi-green-intense-fg ansi-bold">    337</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> <span style="color: rgb(0,135,0)">isinstance</span>(other, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span>):
+File <span class="ansi-green-fg">~/repos/ubermag-devtools/repos/micromagneticmodel/micromagneticmodel/abstract/container.py:333</span>, in <span class="ansi-cyan-fg">Container.__add__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">    331</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> other <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> result:
+<span class="ansi-green-intense-fg ansi-bold">    332</span>         msg <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Cannot have two </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>other<span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> terms in the container.</span><span style="color: rgb(175,0,0)">&#34;</span>
+<span class="ansi-green-fg">--&gt; 333</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(msg)
+<span class="ansi-green-intense-fg ansi-bold">    334</span>     result<span style="color: rgb(98,98,98)">.</span>_terms<span style="color: rgb(98,98,98)">.</span>append(other)
+<span class="ansi-green-intense-fg ansi-bold">    335</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> <span style="color: rgb(0,135,0)">isinstance</span>(other, <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span><span style="color: rgb(0,0,135)">__class__</span>):
 
 <span class="ansi-red-fg">ValueError</span>: Cannot have two &lt;class &#39;micromagneticmodel.energy.zeeman.Zeeman&#39;&gt; terms in the container.
 </pre></div></div>
@@ -717,7 +726,7 @@ File <span class="ansi-green-fg">~/PhD/repos/ubermag-devtools/repos/micromagneti
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:11]... (0.5 s)
+Running OOMMF (ExeOOMMFRunner)[2022/06/13 08:40]... (0.4 s)
 </pre></div></div>
 </div>
 <p>We expect that now all magnetic moments are aligned parallel or antiparallel to the anisotropy axis (in the <span class="math notranslate nohighlight">\(z\)</span>-direction).</p>

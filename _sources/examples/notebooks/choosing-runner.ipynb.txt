@@ -1,0 +1,349 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Choosing runner\n",
+    "\n",
+    "In this tutorial, we show how to choose different \"runners\" to run your simulations. This is helpful if you want to change OOMMF installation you want to use. This is in particular helpful if you want to run OOMMF inside Docker, which allows us to run simulations on a \"small linux machine\", which is automatically pulled from the cloud, simulations are run inside, and in the end it is destroyed automatically. This all happens in the background and requires no special assistance from the user. In order to use Docker, we need to have it installed on our machine - you can download it here: https://www.docker.com/products/docker-desktop.\n",
+    "\n",
+    "For that example, we simulate a skyrmion in a sample with periodic boundary conditions."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import oommfc as mc\n",
+    "import discretisedfield as df\n",
+    "import micromagneticmodel as mm"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We define mesh in cuboid through corner points `p1` and `p2`, and discretisation cell size `cell`. To define periodic boundary conditions, we pass an additional argument `bc`. Let us assume we want the periodic boundary conditions in $x$ and $y$ directions."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "region = df.Region(p1=(-50e-9, -50e-9, 0), p2=(50e-9, 50e-9, 10e-9))\n",
+    "mesh = df.Mesh(region=region, cell=(5e-9, 5e-9, 5e-9), bc='xy')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Now, we can define the system object:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "system = mm.System(name='skyrmion')\n",
+    "\n",
+    "system.energy = (mm.Exchange(A=1.6e-11)\n",
+    "               + mm.DMI(D=4e-3, crystalclass='Cnv_z') \n",
+    "               + mm.UniaxialAnisotropy(K=0.51e6, u=(0, 0, 1)) \n",
+    "               + mm.Zeeman(H=(0, 0, 0.2e5)))\n",
+    "\n",
+    "Ms = 1.1e6\n",
+    "\n",
+    "def m_init(pos):\n",
+    "    x, y, z = pos\n",
+    "    if (x**2 + y**2)**0.5 < 10e-9:\n",
+    "        return (0, 0, -1)\n",
+    "    else:\n",
+    "        return (0, 0, 1)\n",
+    "    \n",
+    "\n",
+    "# create system with above geometry and initial magnetisation\n",
+    "system.m = df.Field(mesh, dim=3, value=m_init, norm=Ms)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Now, we can define the runner object. There are three main runners you can use:\n",
+    "\n",
+    "- Tcl runner: if we want to point ubermag to the particular `oommf.tcl` file\n",
+    "- Exe runner: if we have OOMMF executable\n",
+    "- Docker runner: if we want to run simulations inside Docker container"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "tags": [
+     "nbval-ignore-output"
+    ]
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "couldn't read file \"path/to/my/oommf.tcl\": no such file or directory\n"
+     ]
+    }
+   ],
+   "source": [
+    "tcl_runner = mc.oommf.TclOOMMFRunner(oommf_tcl='path/to/my/oommf.tcl')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "exe_runner = mc.oommf.ExeOOMMFRunner(oommf_exe='oommf')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "docker_runner = mc.oommf.DockerOOMMFRunner(image='ubermag/oommf')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**IMPORTANT:** On Windows, if OOMMF does not support some energy terms, choosing runner happens automatically in the background and requires no assistance from the user. However, you can still be explicit and tell ubermag how you want to run the simulation.\n",
+    "\n",
+    "Now, when we drive the system, we can pass the runner to the `drive` method:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Running OOMMF (ExeOOMMFRunner)[2022/06/08 16:01]... (0.4 s)\n"
+     ]
+    },
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<Figure size 432x288 with 2 Axes>"
+      ]
+     },
+     "metadata": {
+      "needs_background": "light"
+     },
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "md = mc.MinDriver()\n",
+    "md.drive(system, runner=exe_runner)\n",
+    "\n",
+    "# Plot relaxed configuration: vectors in z-plane\n",
+    "system.m.plane('z').z.mpl()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The first time we run the simulation, it is going to take some time for docker to pull an image from the cloud, but after that, the image will be known by docker, so there will be no delays for any further runs."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.13"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {
+     "8ff66df849444027a09f2505c160d8e7": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "model_name": "LayoutModel",
+      "state": {}
+     },
+     "9ca076dd2f624d909f5ad3c00f9dba15": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "model_name": "LayoutModel",
+      "state": {}
+     },
+     "b103e5927d7040488e3e9c641e449e37": {
+      "model_module": "k3d",
+      "model_module_version": "2.8.2",
+      "model_name": "PlotModel",
+      "state": {
+       "_backend_version": "2.7.4",
+       "_dom_classes": [],
+       "_view_count": null,
+       "antialias": 3,
+       "auto_rendering": true,
+       "axes": [
+        "x (nm)",
+        "y (nm)",
+        "z (nm)"
+       ],
+       "axes_helper": 1,
+       "background_color": 16777215,
+       "camera": [
+        141.0506683940143,
+        -212.2010025072024,
+        18.880066776443996,
+        -0.2499999664723873,
+        -0.2499999664723873,
+        4.749999940395355,
+        0,
+        0,
+        1
+       ],
+       "camera_animation": [],
+       "camera_auto_fit": true,
+       "camera_fov": 60,
+       "camera_no_pan": false,
+       "camera_no_rotate": false,
+       "camera_no_zoom": false,
+       "clipping_planes": [],
+       "colorbar_object_id": -1,
+       "fps": 25,
+       "fps_meter": false,
+       "grid": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+       ],
+       "grid_auto_fit": true,
+       "grid_visible": true,
+       "height": 512,
+       "layout": "IPY_MODEL_9ca076dd2f624d909f5ad3c00f9dba15",
+       "lighting": 1.5,
+       "menu_visibility": true,
+       "mode": "view",
+       "name": null,
+       "object_ids": [
+        140045066807504
+       ],
+       "rendering_steps": 1,
+       "screenshot": "",
+       "screenshot_scale": 2,
+       "snapshot": "",
+       "time": 0,
+       "voxel_paint_color": 0
+      }
+     },
+     "b93f42b8060d44bb87e6ede0ba464673": {
+      "model_module": "k3d",
+      "model_module_version": "2.8.2",
+      "model_name": "ObjectModel",
+      "state": {
+       "_view_count": null,
+       "_view_module": null,
+       "_view_module_version": "",
+       "_view_name": null,
+       "colorLegend": false,
+       "color_map": {
+        "compressed_buffer": {},
+        "dtype": "uint32",
+        "shape": [
+         256
+        ]
+       },
+       "compression_level": 0,
+       "id": 140045066807504,
+       "model_matrix": {
+        "compressed_buffer": {},
+        "dtype": "float32",
+        "shape": [
+         4,
+         4
+        ]
+       },
+       "name": "Voxels #1",
+       "opacity": 1,
+       "outlines": false,
+       "outlines_color": 0,
+       "type": "Voxels",
+       "visible": true,
+       "voxels": {
+        "compressed_buffer": {},
+        "dtype": "uint8",
+        "shape": [
+         2,
+         20,
+         20
+        ]
+       },
+       "wireframe": false
+      }
+     },
+     "f92e416a943b432c8141e3f65c0959d1": {
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "model_name": "OutputModel",
+      "state": {
+       "layout": "IPY_MODEL_8ff66df849444027a09f2505c160d8e7",
+       "outputs": [
+        {
+         "data": {
+          "application/vnd.jupyter.widget-view+json": {
+           "model_id": "b103e5927d7040488e3e9c641e449e37",
+           "version_major": 2,
+           "version_minor": 0
+          },
+          "text/plain": "Plot(antialias=3, axes=['x', 'y', 'z'], axes_helper=1.0, background_color=16777215, camera=[2, -3, 0.2, 0.0, 0…"
+         },
+         "metadata": {},
+         "output_type": "display_data"
+        }
+       ]
+      }
+     }
+    },
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
