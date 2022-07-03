@@ -66,6 +66,7 @@ AbstractDrive
 
    .. autosummary::
    
+      ~AbstractDrive.hv
       ~AbstractDrive.info
       ~AbstractDrive.m0
       ~AbstractDrive.n

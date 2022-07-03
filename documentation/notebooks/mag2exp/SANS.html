@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Small Angle Neutron Scattering &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Unit Conversions" href="Unit_converter.html" />
     <link rel="prev" title="Small Angle X-ray Scattering" href="SAXS.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -996,19 +1023,19 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Small-Angle-Neutron-Scattering">
-<h1>Small Angle Neutron Scattering<a class="headerlink" href="#Small-Angle-Neutron-Scattering" title="Permalink to this headline">#</a></h1>
+<h1>Small Angle Neutron Scattering<a class="headerlink" href="#Small-Angle-Neutron-Scattering" title="Permalink to this heading">#</a></h1>
 <p>Small Angle Neutron Scattering (SANS) is a powerful reciprocal space technique that can be used to investigate magnetic structures on mesoscopic length scales. In SANS the atomic structure generally has a minimal impact hence the sample can be approximated by a continuous magnetisation vector field [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>].</p>
 <p>The differential scattering cross section <span class="math notranslate nohighlight">\(d\Sigma/d\Omega\)</span> can be used as a function of the scattering vector <span class="math notranslate nohighlight">\({\bf q}\)</span> to predict the scattering patterns produced.</p>
 <section id="SANS-Reference-frame">
-<h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this headline">#</a></h2>
+<h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Permalink to this heading">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="5838e020f0c14312984babbc07e793b5" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="0122aef9952048cc9a6b86a5c410ea3b" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this heading">#</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-Dimentional magntic structure with periodic boundary conditions in the <span class="math notranslate nohighlight">\(xy\)</span> plane.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1100,7 +1127,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
 <p>Now we have a magnetisation texture we can compute the SANS scattering cross sections.</p>
 </section>
 <section id="Computing-SANS-Cross-sections">
-<h2>Computing SANS Cross-sections<a class="headerlink" href="#Computing-SANS-Cross-sections" title="Permalink to this headline">#</a></h2>
+<h2>Computing SANS Cross-sections<a class="headerlink" href="#Computing-SANS-Cross-sections" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package to calculate the cross sections. The scattering can be calculated with the use of the magnetic interaction vector <span class="math notranslate nohighlight">\({\bf Q}\)</span> [<a class="reference external" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.91.015004">Mühlbauer 2019</a>] where</p>
 <p><span class="math">\begin{equation}
 {\bf Q} = \hat{\bf q} \times \left[ \widetilde{\bf M} \times \hat{\bf q} \right],
@@ -1435,13 +1462,13 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 11:32]... (149.7 s)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

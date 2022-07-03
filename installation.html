@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Installation &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -47,7 +49,7 @@
     <link rel="next" title="Demo" href="demo.html" />
     <link rel="prev" title="Ubermag" href="index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -275,13 +277,16 @@
               <article class="bd-article" role="main">
                 
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
 <p>All packages in Ubermag are available on both <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> and <code class="docutils literal notranslate"><span class="pre">PyPI</span></code>. All
 packages can be installed independently using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>. To simplify the
 installation for users doing micromagnetic simulations we provide a metapackage
 called <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>. During installation of this packages all individual
 subpackages and additionally <a class="reference external" href="https://math.nist.gov/oommf/">OOMMF</a> are
 installed.</p>
+<p>If you want to run simulations using Mumax<sup>3</sup> you have to install it
+manually and make sure that it can be found on the command line (i.e. adding it
+to the PATH variable).</p>
 <p>To install any of the packages please follow the guidelines below and replace
 <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> with one of the actual package names:</p>
 <ul class="simple">
@@ -296,7 +301,7 @@ installed.</p>
 <li><p>ubermagutil</p></li>
 </ul>
 <section id="standard-installation-recommended">
-<h2>Standard installation – recommended<a class="headerlink" href="#standard-installation-recommended" title="Permalink to this headline">#</a></h2>
+<h2>Standard installation – recommended<a class="headerlink" href="#standard-installation-recommended" title="Permalink to this heading">#</a></h2>
 <p>We recommend installation using <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. If you do not already
 have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python
 3.8+ for your operating system and follow the instructions to install it. After
@@ -308,26 +313,26 @@ Prompt (Windows), create a new conda environment and activate it.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate ENVIRONMENT_NAME
 </pre></div>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">ENVIRONMENT_NAME=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n ubermag <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8
 $ conda activate ubermag
 </pre></div>
 </div>
-</div>
+</aside>
 <p>Instead of <code class="docutils literal notranslate"><span class="pre">ENVIRONMENT_NAME</span></code>, choose the name you want. Finally, you can
 install any <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge PACKAGE
 </pre></div>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge ubermag
 </pre></div>
 </div>
-</div>
+</aside>
 <section id="additional-advice-for-windows-users-installing-the-ubermag-meta-package">
-<h3>Additional advice for Windows users installing the <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> meta-package<a class="headerlink" href="#additional-advice-for-windows-users-installing-the-ubermag-meta-package" title="Permalink to this headline">#</a></h3>
+<h3>Additional advice for Windows users installing the <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> meta-package<a class="headerlink" href="#additional-advice-for-windows-users-installing-the-ubermag-meta-package" title="Permalink to this heading">#</a></h3>
 <p>Some OOMMF extensions are not available on Windows. In order to use these
 extensions on Windows we recommend installing Docker - you can download it from:
 <a class="reference external" href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a>. Ubermag will automatically
@@ -335,35 +340,35 @@ recognise Docker and use it if required. More details can be found in the
 workshop: <a class="reference external" href="workshop/tutorials/choosing-runner.html">Choosing runner</a>.</p>
 </section>
 <section id="testing">
-<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">#</a></h3>
+<h3>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h3>
 <p>You can test the installation by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -c <span class="s2">&quot;import PACKAGE; PACKAGE.test()&quot;</span>
 </pre></div>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -c <span class="s2">&quot;import ubermag; ubermag.test()&quot;</span>
 </pre></div>
 </div>
-</div>
+</aside>
 <p>If no errors are reported, the installation was successful.</p>
 </section>
 <section id="update">
-<h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">#</a></h3>
+<h3>Update<a class="headerlink" href="#update" title="Permalink to this heading">#</a></h3>
 <p>Every <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> can be updated by running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda update PACKAGE
 </pre></div>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Example for <code class="docutils literal notranslate"><span class="pre">PACKAGE=ubermag</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda update ubermag
 </pre></div>
 </div>
-</div>
+</aside>
 </section>
 </section>
 <section id="advanced-installation">
-<h2>Advanced installation<a class="headerlink" href="#advanced-installation" title="Permalink to this headline">#</a></h2>
+<h2>Advanced installation<a class="headerlink" href="#advanced-installation" title="Permalink to this heading">#</a></h2>
 <p>To use <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> for micromagnetic computations, you need to:</p>
 <ol class="arabic simple">
 <li><p>Install Ubermag.</p></li>
@@ -375,7 +380,7 @@ automatically (for OOMMF). However, if for some reason you need more freedom in
 choosing the computational backend, please follow the steps explained
 subsequently for your operating system.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">#</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
 package manager. If you do not already have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python 3.8+ for your operating system
@@ -404,7 +409,7 @@ select <code class="docutils literal notranslate"><span class="pre">System</span
 </ol>
 </section>
 <section id="macos">
-<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">#</a></h3>
+<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
 package manager. If you do not already have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python 3.8+ for your operating system
@@ -446,7 +451,7 @@ your environment variables</strong> (<code class="docutils literal notranslate">
 window.</strong></p>
 </section>
 <section id="linux-ubuntu">
-<h3>Linux (Ubuntu)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this headline">#</a></h3>
+<h3>Linux (Ubuntu)<a class="headerlink" href="#linux-ubuntu" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>To install Ubermag, we first have to make sure you have <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed.
 <strong>Please note that this command requires root privileges (sudo).</strong></p></li>
@@ -502,7 +507,7 @@ your environment variables</strong> (<code class="docutils literal notranslate">
 window.</strong></p>
 </section>
 <section id="check-the-installation">
-<h3>Check the installation<a class="headerlink" href="#check-the-installation" title="Permalink to this headline">#</a></h3>
+<h3>Check the installation<a class="headerlink" href="#check-the-installation" title="Permalink to this heading">#</a></h3>
 <p>To check if Ubermag can communicate with your installed OOMMF, you can use these
 commands in a Python prompt on any operating system:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">oommfc</span>
@@ -516,7 +521,7 @@ commands in a Python prompt on any operating system:</p>
 <p>This will attempt to run a small simulation using OOMMF.</p>
 </section>
 <section id="how-does-ubermag-find-oommf">
-<h3>How does Ubermag find OOMMF?<a class="headerlink" href="#how-does-ubermag-find-oommf" title="Permalink to this headline">#</a></h3>
+<h3>How does Ubermag find OOMMF?<a class="headerlink" href="#how-does-ubermag-find-oommf" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">oommfc</span></code> checks for OOMMF in the following steps until the first method is
 successful:</p>
 <ol class="arabic simple">
@@ -531,7 +536,7 @@ if necessary.)</p></li>
 </section>
 </section>
 <section id="development-installation">
-<h2>Development installation<a class="headerlink" href="#development-installation" title="Permalink to this headline">#</a></h2>
+<h2>Development installation<a class="headerlink" href="#development-installation" title="Permalink to this heading">#</a></h2>
 <p>The above-explained installation methods are not suitable for the development of
 the <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> package collection. Detailed guidelines and additional helper
 scripts to clone and install all packages in a way that is feasible for package
@@ -581,13 +586,13 @@ recommended</a>.</p>
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Field tools &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Line object" href="line.html" />
     <link rel="prev" title="Field rotation" href="field-rotations.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1001,7 +1028,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Field-tools">
-<h1>Field tools<a class="headerlink" href="#Field-tools" title="Permalink to this headline">#</a></h1>
+<h1>Field tools<a class="headerlink" href="#Field-tools" title="Permalink to this heading">#</a></h1>
 <p>Class <code class="docutils literal notranslate"><span class="pre">Field</span></code> only contains general functionality useful for any type of field. <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> contains a number of more specialised convenicence functions required for certain usecases. Currently, most functions are focused on applications for micromagnetics.</p>
 <p>All functions need a <code class="docutils literal notranslate"><span class="pre">Field</span></code> object as first parameter.</p>
 <div class="nbinput nblast docutils container">
@@ -1025,7 +1052,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="1.-Topological-charge/topological-charge-density">
-<h2>1. Topological charge/topological charge density<a class="headerlink" href="#1.-Topological-charge/topological-charge-density" title="Permalink to this headline">#</a></h2>
+<h2>1. Topological charge/topological charge density<a class="headerlink" href="#1.-Topological-charge/topological-charge-density" title="Permalink to this heading">#</a></h2>
 <p>Topological charge and topological charge density can be computed for vector fields (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>) only. It is defined for two-dimensional samples only. Therefore, the field must be sliced.</p>
 <p>Two different methods are available and can be selected using <code class="docutils literal notranslate"><span class="pre">method</span></code>:</p>
 <ol class="arabic">
@@ -1192,7 +1219,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.-Angles-between-cells">
-<h2>2. Angles between cells<a class="headerlink" href="#2.-Angles-between-cells" title="Permalink to this headline">#</a></h2>
+<h2>2. Angles between cells<a class="headerlink" href="#2.-Angles-between-cells" title="Permalink to this heading">#</a></h2>
 <p>There are two functions to calculate angles between neighbouring cells. This is only possible for vector fields (<code class="docutils literal notranslate"><span class="pre">dim=3</span></code>).</p>
 <p>To visualise this, we use a field with a step function.</p>
 <div class="nbinput docutils container">
@@ -1360,11 +1387,11 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="3.-Emergent-magnetic-field-and-counting-of-BPs">
-<h2>3. Emergent magnetic field and counting of BPs<a class="headerlink" href="#3.-Emergent-magnetic-field-and-counting-of-BPs" title="Permalink to this headline">#</a></h2>
+<h2>3. Emergent magnetic field and counting of BPs<a class="headerlink" href="#3.-Emergent-magnetic-field-and-counting-of-BPs" title="Permalink to this heading">#</a></h2>
 <p>TODO</p>
 </section>
 <section id="4.-Demag-tensor">
-<h2>4. Demag tensor<a class="headerlink" href="#4.-Demag-tensor" title="Permalink to this headline">#</a></h2>
+<h2>4. Demag tensor<a class="headerlink" href="#4.-Demag-tensor" title="Permalink to this heading">#</a></h2>
 <p>TODO</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -1410,13 +1437,13 @@ div.rendered_html tbody tr:hover {
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

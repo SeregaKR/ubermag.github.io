@@ -51,7 +51,26 @@ MinDriver
       
       
       
+      
+      
+      
+      
+      
+      
+      
          ~MinDriver.drive
+      
+      
+         ~MinDriver.drive_kwargs_setup
+      
+      
+         ~MinDriver.schedule
+      
+      
+         ~MinDriver.schedule_kwargs_setup
+      
+      
+         ~MinDriver.write_mif
       
    
    

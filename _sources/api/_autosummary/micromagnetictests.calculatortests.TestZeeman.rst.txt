@@ -56,6 +56,15 @@ TestZeeman
          ~TestZeeman.test_field
       
       
+         ~TestZeeman.test_time_dict
+      
+      
+         ~TestZeeman.test_time_field
+      
+      
+         ~TestZeeman.test_time_vector
+      
+      
          ~TestZeeman.test_vector
       
    

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Table widgets &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Table interactive plot" href="table-interactive-plot.html" />
     <link rel="prev" title="Table visualisation" href="table-visualisation.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -991,7 +1018,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Table-widgets">
-<h1>Table widgets<a class="headerlink" href="#Table-widgets" title="Permalink to this headline">#</a></h1>
+<h1>Table widgets<a class="headerlink" href="#Table-widgets" title="Permalink to this heading">#</a></h1>
 <p>In order to control interactive plots, sometimes we need to vary certain parameters which depend on the data stored in the table. Therefore, table object has several widgets, which can be used for that purpose.</p>
 <p>The table we are going to use as an example is:</p>
 <div class="nbinput nblast docutils container">
@@ -1011,7 +1038,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Slider">
-<h2>Slider<a class="headerlink" href="#Slider" title="Permalink to this headline">#</a></h2>
+<h2>Slider<a class="headerlink" href="#Slider" title="Permalink to this heading">#</a></h2>
 <p>Slider widget allows us to restrict the time values shown in an interactive plot. Slider widget is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -1091,7 +1118,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Value-selector">
-<h2>Value selector<a class="headerlink" href="#Value-selector" title="Permalink to this headline">#</a></h2>
+<h2>Value selector<a class="headerlink" href="#Value-selector" title="Permalink to this heading">#</a></h2>
 <p>A simple widget, which allows us to select the columns from data table can be obtained using <code class="docutils literal notranslate"><span class="pre">selector</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1152,13 +1179,13 @@ div.rendered_html tbody tr:hover {
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

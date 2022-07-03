@@ -1,0 +1,6 @@
+micromagnetictests.calculatortests.test\_schedule
+=================================================
+
+.. currentmodule:: micromagnetictests.calculatortests
+
+.. autofunction:: test_schedule

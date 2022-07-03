@@ -1,0 +1,67 @@
+ExternalRunner
+==============
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: ExternalRunner
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~ExternalRunner.__dir__
+      
+      
+         ~ExternalRunner.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExternalRunner.__repr__
+      
+      
+      
+      
+      
+      
+      
+         ~ExternalRunner.call
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~ExternalRunner.package_name
+   
+   
+
+   .. raw:: html
+
+      <hr>

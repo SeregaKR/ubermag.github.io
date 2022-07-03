@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Spatially varying fields &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Field normalisation" href="field-normalisation.html" />
     <link rel="prev" title="Defining a uniform field" href="field-definition.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1013,7 +1040,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Spatially-varying-fields">
-<h1>Spatially varying fields<a class="headerlink" href="#Spatially-varying-fields" title="Permalink to this headline">#</a></h1>
+<h1>Spatially varying fields<a class="headerlink" href="#Spatially-varying-fields" title="Permalink to this heading">#</a></h1>
 <p>There are several different ways how a spatially varying field can be defined. Let us first define a mesh we are going to use to define the fields.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1029,7 +1056,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Using-a-Python-function">
-<h2>Using a Python function<a class="headerlink" href="#Using-a-Python-function" title="Permalink to this headline">#</a></h2>
+<h2>Using a Python function<a class="headerlink" href="#Using-a-Python-function" title="Permalink to this heading">#</a></h2>
 <p>One of the ways how a spatially varying field can be defined is by using a Python function, which can be passed as <code class="docutils literal notranslate"><span class="pre">value</span></code> argument to <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>. It should satisfy three main criteria: 1. It takes one argument. <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> is going to pass the coordinates of discertisation cells as tuples of length 3 to this argument. 2. Function should be able to return a value for any coordinate in the mesh 3. The value returned must be of the same dimension as the dimension
 of the field.</p>
 <p>Let us assume we want to have a scalar field which has a value 0 for all points with negative <span class="math notranslate nohighlight">\(x\)</span> coordinate and value 1 otherwise.</p>
@@ -1128,7 +1155,7 @@ array([[[[0.],
 </pre></div></div>
 </div>
 <section id="Value-property">
-<h3>Value property<a class="headerlink" href="#Value-property" title="Permalink to this headline">#</a></h3>
+<h3>Value property<a class="headerlink" href="#Value-property" title="Permalink to this heading">#</a></h3>
 <p>It is not very informative to look at <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.array</span></code> to understand what is the actual value of the field. Therefore, if a unique representation value exists, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.value</span></code> is going to return it. For instance:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1360,7 +1387,7 @@ array([[[[   -25.,    625., -15625.],
 </section>
 </section>
 <section id="Using-mesh-regions">
-<h2>Using mesh regions<a class="headerlink" href="#Using-mesh-regions" title="Permalink to this headline">#</a></h2>
+<h2>Using mesh regions<a class="headerlink" href="#Using-mesh-regions" title="Permalink to this heading">#</a></h2>
 <p>If regions were defined as a part of the mesh, and we want to set the value of the field differently in those regions, we can employ some of the functionality of regions. Let us assume that in the mesh we defined we want to have two regions. Region 1 is going to include all cells with negative <span class="math notranslate nohighlight">\(y\)</span> coordinate and region 2 cells with positive <span class="math notranslate nohighlight">\(y\)</span> coordinate. Our mesh would be:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -1568,7 +1595,7 @@ array([[[[   -25.,    625., -15625.],
 </div>
 </section>
 <section id="Using-another-Field-object">
-<h2>Using another Field object<a class="headerlink" href="#Using-another-Field-object" title="Permalink to this headline">#</a></h2>
+<h2>Using another Field object<a class="headerlink" href="#Using-another-Field-object" title="Permalink to this heading">#</a></h2>
 <p>Sometimes it is necessary to “resample” the field using a different mesh. Another field can be passed as a value to the new field. If our new mesh is:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
@@ -1673,7 +1700,7 @@ array([[[[2., 2., 1.],
 </div>
 </section>
 <section id="Creating-a-field-with-coordinate-values">
-<h2>Creating a field with coordinate values<a class="headerlink" href="#Creating-a-field-with-coordinate-values" title="Permalink to this headline">#</a></h2>
+<h2>Creating a field with coordinate values<a class="headerlink" href="#Creating-a-field-with-coordinate-values" title="Permalink to this heading">#</a></h2>
 <p>There is an additional class method to create a 3d vector field whose values are the coordinates of the cells.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
@@ -1769,7 +1796,7 @@ array([[[[2., 2., 1.],
 </div>
 </section>
 <section id="Other">
-<h2>Other<a class="headerlink" href="#Other" title="Permalink to this headline">#</a></h2>
+<h2>Other<a class="headerlink" href="#Other" title="Permalink to this heading">#</a></h2>
 <p>Full description of all existing functionality can be found in the <a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html">API Reference</a>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -1815,13 +1842,13 @@ array([[[[2., 2., 1.],
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

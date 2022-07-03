@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Torque magnetometry &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Lorentz Transmission Electron Microscopy" href="Lorentz_TEM.html" />
     <link rel="prev" title="DC magnetometry" href="DC_magnetometry.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1001,7 +1028,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Torque-magnetometry">
-<h1>Torque magnetometry<a class="headerlink" href="#Torque-magnetometry" title="Permalink to this headline">#</a></h1>
+<h1>Torque magnetometry<a class="headerlink" href="#Torque-magnetometry" title="Permalink to this heading">#</a></h1>
 <p>In this tutorial, the Ubermag micromagnetic simulation software is used to create 3-dimensional magnetic structure, on which torque magnetometry can be performed. Torque magnetometry is a technique where an external magnetic field is applied in a direction relative to a magnetic sample, an the torque produced measured. This technique can be used to obtain information on the characteristics of the magnetism in the sample like anisotropy.</p>
 <p>Torque arises from the cross product of the magnetic moment <span class="math notranslate nohighlight">\({\bf m}\)</span>, and the magnetic flux density <span class="math notranslate nohighlight">\({\bf B}\)</span>, <span class="math">\begin{equation}
 {\bf \tau} = {\bf m} \times {\bf B}.
@@ -1014,11 +1041,11 @@ div.rendered_html tbody tr:hover {
 {\bf m} &=  {\bf M} V,
 \end{align}</span> where <span class="math notranslate nohighlight">\({\bf M}\)</span> is magnetisation, <span class="math notranslate nohighlight">\({\bf m}\)</span> is the magnetic moment, and <span class="math notranslate nohighlight">\(V\)</span> is the volume.</p>
 <section id="Magnetometry-Reference-frame">
-<h2>Magnetometry Reference frame<a class="headerlink" href="#Magnetometry-Reference-frame" title="Permalink to this headline">#</a></h2>
+<h2>Magnetometry Reference frame<a class="headerlink" href="#Magnetometry-Reference-frame" title="Permalink to this heading">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental reference for magnetometry is defined to be congruent as the sample reference frame.</p>
 </section>
 <section id="The-micromagnetic-simulation">
-<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this headline">#</a></h2>
+<h2>The micromagnetic simulation<a class="headerlink" href="#The-micromagnetic-simulation" title="Permalink to this heading">#</a></h2>
 <p>A micromagnetic simulation can be set up using Ubermag to obtain a 3-dimensional magnetic structure.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1082,7 +1109,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (4.9 s)
+Running OOMMF (ExeOOMMFRunner)[2022/05/11 14:15]... (0.4 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1094,7 +1121,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (4.9 s)
 </div>
 </section>
 <section id="Computing-Torque-Magnetometry">
-<h2>Computing Torque Magnetometry<a class="headerlink" href="#Computing-Torque-Magnetometry" title="Permalink to this headline">#</a></h2>
+<h2>Computing Torque Magnetometry<a class="headerlink" href="#Computing-Torque-Magnetometry" title="Permalink to this heading">#</a></h2>
 <p>The torque can be calculated using <span class="math">\begin{equation}
 {\bf \tau} = \mu_0 {\bf m} \times \left( {\bf H}_{\rm app} + {\bf H}_{\rm demag} \right).
 \end{equation}</span> This method is included as part of the <code class="docutils literal notranslate"><span class="pre">mag2exp.magnetometry</span></code> module.</p>
@@ -1105,17 +1132,9 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (4.9 s)
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="kn">import</span> <span class="nn">mag2exp</span>
 
-<span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+<span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -1123,7 +1142,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(-1.7763568394002505e-14, -4.565237077258644e-13, 3.4938953516920993e-14)
+(-2.3803181647963356e-13, -1.1670664434859646e-12, -1.4494604241106688e-14)
 </pre></div></div>
 </div>
 <p>If the demagnetisation term is not required for any reason, then the use_demag=False argument can be passed.</p>
@@ -1131,7 +1150,7 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">use_demag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span><span class="p">,</span> <span class="n">use_demag</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1146,24 +1165,23 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </div>
 </section>
 <section id="Recreating-experiments">
-<h2>Recreating experiments<a class="headerlink" href="#Recreating-experiments" title="Permalink to this headline">#</a></h2>
+<h2>Recreating experiments<a class="headerlink" href="#Recreating-experiments" title="Permalink to this heading">#</a></h2>
 <p>A common experiment with torque magnetometry is to rotate the magnetic field relative to the sample and measure the torque. Doing this at high applied magnetic fields can reveal the magnetic anisotropy of the sample.</p>
 <p>Here we rotate the applied magnetic field a full <span class="math notranslate nohighlight">\(2\pi\)</span> perpendicular to the <span class="math notranslate nohighlight">\(x\)</span> axis, with our initial field in the <span class="math notranslate nohighlight">\(z\)</span> direction. The sample has uniaxial anisotropy in the <span class="math notranslate nohighlight">\(z\)</span> direction, hence the torque forms a periodic pattern.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">71</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">angles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">71</span><span class="p">)</span>
 
 <span class="n">torque_val_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">torque_val_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">torque_val_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">angle</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">angles</span><span class="p">):</span>
     <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">H_mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">H_mag</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
-    <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+    <span class="n">md</span><span class="o">.</span><span class="n">drive</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">torque_val_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">torque_val_z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mag2exp</span><span class="o">.</span><span class="n">magnetometry</span><span class="o">.</span><span class="n">torque</span><span class="p">(</span>
-        <span class="n">system</span>
+        <span class="n">system</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">zeeman</span><span class="o">.</span><span class="n">H</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -1174,9 +1192,22 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NBVAL_IGNORE_OUTPUT</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span>
+    <span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">K</span><span class="p">,</span>
+    <span class="n">xmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">angles</span><span class="p">),</span>
+    <span class="n">xmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">angles</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span>
+    <span class="o">-</span><span class="n">system</span><span class="o">.</span><span class="n">energy</span><span class="o">.</span><span class="n">uniaxialanisotropy</span><span class="o">.</span><span class="n">K</span><span class="p">,</span>
+    <span class="n">xmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">angles</span><span class="p">),</span>
+    <span class="n">xmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">angles</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">angles</span><span class="p">,</span> <span class="n">torque_val_x</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Angle (rad.)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Torque (Nm$^{-2}$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1186,6 +1217,14 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
 </div>
 <div class="output_area docutils container">
 <img alt="../../../_images/documentation_notebooks_mag2exp_Torque_magnetometry_13_0.png" src="../../../_images/documentation_notebooks_mag2exp_Torque_magnetometry_13_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </div>
 </section>
@@ -1230,13 +1269,13 @@ Running OOMMF (DockerOOMMFRunner) [2021/09/10 17:30]... (2.6 s)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

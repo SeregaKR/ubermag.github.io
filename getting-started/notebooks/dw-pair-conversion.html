@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise: Domain wall pair conversion &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Examples" href="../../examples/index.html" />
     <link rel="prev" title="Exercise: Current induced domain wall motion" href="driving-dw.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -545,9 +547,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Exercise:-Domain-wall-pair-conversion">
-<h1>Exercise: Domain wall pair conversion<a class="headerlink" href="#Exercise:-Domain-wall-pair-conversion" title="Permalink to this headline">#</a></h1>
+<h1>Exercise: Domain wall pair conversion<a class="headerlink" href="#Exercise:-Domain-wall-pair-conversion" title="Permalink to this heading">#</a></h1>
 <section id="Problem-description">
-<h2>Problem description<a class="headerlink" href="#Problem-description" title="Permalink to this headline">#</a></h2>
+<h2>Problem description<a class="headerlink" href="#Problem-description" title="Permalink to this heading">#</a></h2>
 <p>We want to simulate a domain wall conversion in a two-dimensional thin film sample with:</p>
 <ul class="simple">
 <li><p>exchange energy constant <span class="math notranslate nohighlight">\(A = 15 \,\text{pJ}\,\text{m}^{-1}\)</span>,</p></li>
@@ -559,7 +561,7 @@ div.rendered_html tbody tr:hover {
 <p>Please carry out the following steps:</p>
 <ol class="arabic">
 <li><p>Create the following geometry with discretisation cell size <span class="math notranslate nohighlight">\((2 \,\text{nm}, 2 \,\text{nm}, 2 \,\text{nm})\)</span>.</p>
-<p><img alt="09fb763994ba488494cf629d86004818" class="no-scaled-link" src="../../_images/dw_pair_conversion_geometry.png" style="width: 400px;" /></p>
+<p><img alt="5b97ebbd25db473893d3134354e1ecee" class="no-scaled-link" src="../../_images/dw_pair_conversion_geometry.png" style="width: 400px;" /></p>
 </li>
 <li><p>Initialise the magnetisation so that when relaxes, a domain pair is present in the narrower part of the geometry.</p></li>
 <li><p>Relax the system. Is a domain wall pair contained in the constrained part?</p></li>
@@ -568,11 +570,11 @@ div.rendered_html tbody tr:hover {
 </ol>
 </section>
 <section id="References">
-<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#References" title="Permalink to this heading">#</a></h2>
 <p>[1] Zhou, Y., &amp; Ezawa, M. (2014). A reversible conversion between a skyrmion and a domain-wall pair in a junction geometry. <em>Nature Communications</em> <strong>5</strong>, 8. <a class="reference external" href="https://doi.org/10.1038/ncomms5652">https://doi.org/10.1038/ncomms5652</a></p>
 </section>
 <section id="Solution">
-<h2>Solution<a class="headerlink" href="#Solution" title="Permalink to this headline">#</a></h2>
+<h2>Solution<a class="headerlink" href="#Solution" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -756,13 +758,13 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:51]... (3.1 s)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

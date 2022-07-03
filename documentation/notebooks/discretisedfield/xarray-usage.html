@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Importing/Exporting field from/to xarray.DataArray &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Field rotation" href="field-rotations.html" />
     <link rel="prev" title="Reading and writing fields" href="field-read-write.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1035,10 +1062,10 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Importing/Exporting-field-from/to-xarray.DataArray">
-<h1>Importing/Exporting field from/to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#Importing/Exporting-field-from/to-xarray.DataArray" title="Permalink to this headline">#</a></h1>
+<h1>Importing/Exporting field from/to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#Importing/Exporting-field-from/to-xarray.DataArray" title="Permalink to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">`xarray</span></code> &lt;<a class="reference external" href="https://docs.xarray.dev/en/stable/">https://docs.xarray.dev/en/stable/</a>&gt;`__ provides a convenient method to handle <em>labeled</em> multi-dimensional arrays. It integrates well with <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> for fast array manipulation, as well as <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> for visualization. This makes it a good candidate to carry <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> data and additional metadata such as field name and unit (which appear in the plots rendered by <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>).</p>
 <section id="Exporting-discretisedfield.Field-to-xarray.DataArray">
-<h2>Exporting <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#Exporting-discretisedfield.Field-to-xarray.DataArray" title="Permalink to this headline">#</a></h2>
+<h2>Exporting <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#Exporting-discretisedfield.Field-to-xarray.DataArray" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> method of the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object is utilised to export the field data to a DataArray.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1512,7 +1539,7 @@ Units of the DataArray is A/m.
 </pre></div></div>
 </div>
 <section id="Few-useful-xarray.DataArray-methods">
-<h3>Few useful <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> methods<a class="headerlink" href="#Few-useful-xarray.DataArray-methods" title="Permalink to this headline">#</a></h3>
+<h3>Few useful <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> methods<a class="headerlink" href="#Few-useful-xarray.DataArray-methods" title="Permalink to this heading">#</a></h3>
 <p>The underlying array can be accessed through:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -2714,7 +2741,7 @@ Attributes:
 <p>Notice that proper units and labels on the plot are displayed by default. The full list of <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> methods can be found in the <a class="reference external" href="https://docs.xarray.dev/en/stable/api.html">API reference</a>.</p>
 </section>
 <section id="to_xarray-exceptions">
-<h3><code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> exceptions<a class="headerlink" href="#to_xarray-exceptions" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> exceptions<a class="headerlink" href="#to_xarray-exceptions" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> method raises <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> if either <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">units</span></code> arguments are not <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 <p>## Importing <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> from <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
 <p>It is possible to create a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> from an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with the help of class method <code class="docutils literal notranslate"><span class="pre">from_xarray</span></code>. As a first step, we convert the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> created by <code class="docutils literal notranslate"><span class="pre">to_xarray</span></code> method to a new <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>.</p>
@@ -3218,7 +3245,7 @@ Attributes:
 </div>
 </section>
 <section id="from_xarray-exceptions-and-expected-properties-of-input-xarray.DataArray">
-<h3><code class="docutils literal notranslate"><span class="pre">from_xarray</span></code> exceptions and expected properties of input <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#from_xarray-exceptions-and-expected-properties-of-input-xarray.DataArray" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">from_xarray</span></code> exceptions and expected properties of input <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code><a class="headerlink" href="#from_xarray-exceptions-and-expected-properties-of-input-xarray.DataArray" title="Permalink to this heading">#</a></h3>
 <p>The input argument of <code class="docutils literal notranslate"><span class="pre">from_xarray</span></code> must be an <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code>, otherwise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised. Further, the input <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> must have following properties in order to obtain a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code>: 1. The dimensions must be either three or four depending on whether the field is scalar or vector. If not, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised. 2. The name of the dimensions must be <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>, and <code class="docutils literal notranslate"><span class="pre">comp</span></code> (if a vector field). If not, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised. 3. The
 coordinates of the <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and <code class="docutils literal notranslate"><span class="pre">z</span></code> dimensions must be equally spaced. If not, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p>
 <p>Lastly, <strong>it is strongly advised that the input ``xarray.DataArray`` should have ``p1``, ``p2``, and ``cell`` attributes</strong> required for the reconstruction of the mesh. The <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> in the <a class="reference external" href="#good_xarray">above example</a> has all these properties.</p>
@@ -3267,13 +3294,13 @@ coordinates of the <code class="docutils literal notranslate"><span class="pre">
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

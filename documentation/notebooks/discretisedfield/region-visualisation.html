@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Region visualisation &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Region facing surfaces" href="region-facing-surfaces.html" />
     <link rel="prev" title="Region basics" href="region-basics.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1011,7 +1038,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Region-visualisation">
-<h1>Region visualisation<a class="headerlink" href="#Region-visualisation" title="Permalink to this headline">#</a></h1>
+<h1>Region visualisation<a class="headerlink" href="#Region-visualisation" title="Permalink to this heading">#</a></h1>
 <p>It is sometimes useful to visualise the region we defined, either to make sure it is what we thought or to use it in more complex plots. In this tutorial, we show some basic as well as some more advanced ways of customising our plots.</p>
 <p>We are going to use the same region we used in the previous tutorial:</p>
 <div class="math notranslate nohighlight">
@@ -1038,7 +1065,7 @@ div.rendered_html tbody tr:hover {
 </ol>
 <p>All <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> method names start with <code class="docutils literal notranslate"><span class="pre">mpl</span></code>, whereas all <code class="docutils literal notranslate"><span class="pre">k3d</span></code> plots start with <code class="docutils literal notranslate"><span class="pre">k3d</span></code>. We will first have a look at simple plotting using both <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">k3d</span></code> and later look at how we can pass different parameters to change them.</p>
 <section id="Basic-plotting">
-<h2>Basic plotting<a class="headerlink" href="#Basic-plotting" title="Permalink to this headline">#</a></h2>
+<h2>Basic plotting<a class="headerlink" href="#Basic-plotting" title="Permalink to this heading">#</a></h2>
 <p>To get a quick <code class="docutils literal notranslate"><span class="pre">matploltlib</span></code> “3D” plot of the region, we call <code class="docutils literal notranslate"><span class="pre">mpl</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -1074,10 +1101,10 @@ div.rendered_html tbody tr:hover {
 <p>This is now an interactive plot, which we can zoom, rotate, etc. In addition, a small contol panel is shown in the top-right corner, where we can modify some of the plot’s properties. The region is now shown in right proportions.</p>
 </section>
 <section id="Advanced-plotting">
-<h2>Advanced plotting<a class="headerlink" href="#Advanced-plotting" title="Permalink to this headline">#</a></h2>
+<h2>Advanced plotting<a class="headerlink" href="#Advanced-plotting" title="Permalink to this heading">#</a></h2>
 <p>Here we explore what parameters we can pass to <code class="docutils literal notranslate"><span class="pre">mpl</span></code> and <code class="docutils literal notranslate"><span class="pre">k3d</span></code> functions. Let us start with <code class="docutils literal notranslate"><span class="pre">mpl</span></code>.</p>
 <section id="mpl">
-<h3><code class="docutils literal notranslate"><span class="pre">mpl</span></code><a class="headerlink" href="#mpl" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mpl</span></code><a class="headerlink" href="#mpl" title="Permalink to this heading">#</a></h3>
 <p>The default plot is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -1215,7 +1242,7 @@ Text(0.5, 0, &#39;height&#39;)
 <p>This way, by exposing the axes and passing any allowed <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code> argument, we can customise the plot any way we like (as long as it is allowed by <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>).</p>
 </section>
 <section id="k3d">
-<h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#k3d" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">k3d</span></code><a class="headerlink" href="#k3d" title="Permalink to this heading">#</a></h3>
 <p>Default k3d plot is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1347,13 +1374,13 @@ Text(0.5, 0, &#39;height&#39;)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

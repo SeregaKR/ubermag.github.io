@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise: Current induced domain wall motion &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Exercise: Domain wall pair conversion" href="dw-pair-conversion.html" />
     <link rel="prev" title="Dynamics equation" href="dynamics-equation.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -545,9 +547,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Exercise:-Current-induced-domain-wall-motion">
-<h1>Exercise: Current induced domain wall motion<a class="headerlink" href="#Exercise:-Current-induced-domain-wall-motion" title="Permalink to this headline">#</a></h1>
+<h1>Exercise: Current induced domain wall motion<a class="headerlink" href="#Exercise:-Current-induced-domain-wall-motion" title="Permalink to this heading">#</a></h1>
 <section id="Problem-description">
-<h2>Problem description<a class="headerlink" href="#Problem-description" title="Permalink to this headline">#</a></h2>
+<h2>Problem description<a class="headerlink" href="#Problem-description" title="Permalink to this heading">#</a></h2>
 <p>In this tutorial we show how Zhang-Li spin transfer torque (STT) can be included in micromagnetic simulations. To illustrate that, we will try to move a domain wall pair using spin-polarised current.</p>
 <p>Let us simulate a two-dimensional sample with length <span class="math notranslate nohighlight">\(L = 500 \,\text{nm}\)</span>, width <span class="math notranslate nohighlight">\(w = 20 \,\text{nm}\)</span> and discretisation cell <span class="math notranslate nohighlight">\((2.5 \,\text{nm}, 2.5 \,\text{nm}, 2.5 \,\text{nm})\)</span>. The material parameters are:</p>
 <ul class="simple">
@@ -559,7 +561,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 </section>
 <section id="Domain-wall-pair">
-<h2>Domain-wall pair<a class="headerlink" href="#Domain-wall-pair" title="Permalink to this headline">#</a></h2>
+<h2>Domain-wall pair<a class="headerlink" href="#Domain-wall-pair" title="Permalink to this heading">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -721,7 +723,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:51]... (3.1 s)
 </div>
 </section>
 <section id="Single-domain-wall">
-<h2>Single domain wall<a class="headerlink" href="#Single-domain-wall" title="Permalink to this headline">#</a></h2>
+<h2>Single domain wall<a class="headerlink" href="#Single-domain-wall" title="Permalink to this heading">#</a></h2>
 <p>Modify the previous code to obtain one domain wall instead of a domain wall pair and move it using the same current.</p>
 <p><strong>Solution</strong></p>
 <div class="nbinput docutils container">
@@ -876,13 +878,13 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:51]... (4.3 s)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

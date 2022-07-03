@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Container &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -47,7 +49,7 @@
     <link rel="next" title="Term" href="micromagneticmodel.abstract.Term.html" />
     <link rel="prev" title="Abstract" href="micromagneticmodel.abstract.Abstract.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -263,6 +265,11 @@
      </i>
     </label>
     <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="discretisedfield.plotting.Hv.html">
+       Hv
+      </a>
+     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="discretisedfield.plotting.K3dField.html">
        K3dField
@@ -569,6 +576,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.Mumax3Drive.html">
+     Mumax3Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticdata.OOMMFDrive.html">
+     OOMMFDrive
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="micromagneticdata.test.html">
      micromagneticdata.test
     </a>
@@ -638,6 +655,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="micromagneticmodel.Exchange.html">
      Exchange
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.ExternalDriver.html">
+     ExternalDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="micromagneticmodel.ExternalRunner.html">
+     ExternalRunner
     </a>
    </li>
    <li class="toctree-l2">
@@ -949,6 +976,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="micromagnetictests.calculatortests.test_schedule.html">
+       micromagnetictests.calculatortests.test_schedule
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="micromagnetictests.calculatortests.test_skyrmion.html">
        micromagnetictests.calculatortests.test_skyrmion
       </a>
@@ -973,11 +1005,90 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="oommfc.html">
-   oommfc
+  <a class="reference internal" href="mumax3c.html">
+   mumax3c
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
   <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.runner.html">
+     mumax3c.runner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.MinDriver.html">
+     MinDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.RelaxDriver.html">
+     RelaxDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.TimeDriver.html">
+     TimeDriver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.delete.html">
+     mumax3c.delete
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.test.html">
+     mumax3c.test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mumax3c.test_docker.html">
+     mumax3c.test_docker
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="mumax3c.mumax3.html">
+     mumax3c.mumax3
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mumax3c.mumax3.ExeMumax3Runner.html">
+       ExeMumax3Runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mumax3c.mumax3.Mumax3Runner.html">
+       Mumax3Runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mumax3c.mumax3.Runner.html">
+       Runner
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mumax3c.mumax3.overhead.html">
+       mumax3c.mumax3.overhead
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="oommfc.html">
+   oommfc
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1071,8 +1182,8 @@
     <a class="reference internal" href="oommfc.oommf.html">
      oommfc.oommf
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1115,8 +1226,8 @@
   <a class="reference internal" href="ubermag.html">
    ubermag
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1132,8 +1243,8 @@
   <a class="reference internal" href="ubermagtable.html">
    ubermagtable
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-  <label for="toctree-checkbox-22">
+  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+  <label for="toctree-checkbox-24">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1157,8 +1268,8 @@
     <a class="reference internal" href="ubermagtable.util.html">
      ubermagtable.util
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-    <label for="toctree-checkbox-23">
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1186,12 +1297,17 @@
   <a class="reference internal" href="ubermagutil.html">
    ubermagutil
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-  <label for="toctree-checkbox-24">
+  <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+  <label for="toctree-checkbox-26">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ubermagutil.changedir.html">
+     ubermagutil.changedir
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ubermagutil.hysteresis_values.html">
      ubermagutil.hysteresis_values
@@ -1216,8 +1332,8 @@
     <a class="reference internal" href="ubermagutil.typesystem.html">
      ubermagutil.typesystem
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-    <label for="toctree-checkbox-25">
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1273,8 +1389,8 @@
     <a class="reference internal" href="ubermagutil.units.html">
      ubermagutil.units
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
-    <label for="toctree-checkbox-26">
+    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
+    <label for="toctree-checkbox-28">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -1334,7 +1450,7 @@
               <article class="bd-article" role="main">
                 
   <section id="container">
-<h1>Container<a class="headerlink" href="#container" title="Permalink to this headline">#</a></h1>
+<h1>Container<a class="headerlink" href="#container" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="micromagneticmodel.abstract.Container">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">micromagneticmodel.abstract.</span></span><span class="sig-name descname"><span class="pre">Container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container" title="Permalink to this definition">#</a></dt>
@@ -1342,7 +1458,7 @@
 <p>Container can be initialised with a list of either energy or
 dynamics terms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>terms</strong> (<em>list</em><em>, </em><em>optional</em>) – A list of either energy or dynamics terms. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>. If
 <code class="docutils literal notranslate"><span class="pre">terms</span></code> is not passed, an empty container is initialised.</p>
 </dd>
@@ -1375,10 +1491,6 @@ dynamics terms.</p>
 </div>
 <hr><p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__add__" title="micromagneticmodel.abstract.Container.__add__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__add__</span></code></a></p></td>
 <td><p>Binary <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p></td>
@@ -1395,17 +1507,23 @@ dynamics terms.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__getattr__" title="micromagneticmodel.abstract.Container.__getattr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattr__</span></code></a></p></td>
 <td><p>Accessing an individual term from the container.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__iter__" title="micromagneticmodel.abstract.Container.__iter__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__iter__</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__getitem__" title="micromagneticmodel.abstract.Container.__getitem__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getitem__</span></code></a></p></td>
+<td><p>Access individual terms from the container by index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__iter__" title="micromagneticmodel.abstract.Container.__iter__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__iter__</span></code></a></p></td>
 <td><p>Generator yielding all terms in the container.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__len__" title="micromagneticmodel.abstract.Container.__len__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__len__</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__len__" title="micromagneticmodel.abstract.Container.__len__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__len__</span></code></a></p></td>
 <td><p>The number of terms in the container.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__repr__" title="micromagneticmodel.abstract.Container.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__repr__" title="micromagneticmodel.abstract.Container.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
 <td><p>Representation string.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__sub__" title="micromagneticmodel.abstract.Container.__sub__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sub__</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.__sub__" title="micromagneticmodel.abstract.Container.__sub__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sub__</span></code></a></p></td>
 <td><p>Binary <code class="docutils literal notranslate"><span class="pre">-</span></code> operator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#micromagneticmodel.abstract.Container.get" title="micromagneticmodel.abstract.Container.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a></p></td>
+<td><p>Return a list of all terms of type <code class="docutils literal notranslate"><span class="pre">type</span></code> in the container.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1418,16 +1536,16 @@ dynamics terms.</p>
 with the same name is already present in the container <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>
 is raised.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="micromagneticmodel.abstract.Term.html#micromagneticmodel.abstract.Term" title="micromagneticmodel.abstract.Term"><em>micromagneticmodel.abstract.Term</em></a><em>, </em><em>TermsContainer</em>) – Second operand.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Resulting container.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>micromagneticmodel.abstract.TermContainer</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>TypeError</strong> – If the operator cannot be applied.</p></li>
 <li><p><strong>ValueError</strong> – If the term with the same name is already present in the container.</p></li>
@@ -1455,14 +1573,14 @@ is raised.</p>
 <dd><p>Determine whether a term of the same type as <code class="docutils literal notranslate"><span class="pre">item</span></code> is in the
 container.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="micromagneticmodel.abstract.Term.html#micromagneticmodel.abstract.Term" title="micromagneticmodel.abstract.Term"><em>micromagneticmodel.abstract.Term</em></a>) – Energy or dynamics term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if term of the same type as <code class="docutils literal notranslate"><span class="pre">item</span></code> is in the container
 and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -1481,9 +1599,15 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mm</span><span class="o">.</span><span class="n">Zeeman</span><span class="p">(</span><span class="n">H</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="ow">in</span> <span class="n">energy</span>
 <span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Looks for a term of the same type only.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">5e-11</span><span class="p">)</span> <span class="ow">in</span> <span class="n">energy</span>
-<span class="go">True</span>
+</pre></div>
+</div>
+<p>A check with a different term is only <code class="docutils literal notranslate"><span class="pre">True</span></code> if all attributes
+(e.g. exchange constant <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>) match one of the terms in
+the energy equation</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">5e-11</span><span class="p">)</span> <span class="ow">in</span> <span class="n">energy</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mm</span><span class="o">.</span><span class="n">Exchange</span><span class="p">(</span><span class="n">A</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_exchange&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">energy</span>
+<span class="go">False</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1494,10 +1618,10 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 <dd><p>Extension of the <code class="docutils literal notranslate"><span class="pre">dir(self)</span></code> list.</p>
 <p>Adds the names of terms in the container to the list of attributes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Avalilable attributes.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list</p>
 </dd>
 </dl>
@@ -1529,14 +1653,14 @@ and <code class="docutils literal notranslate"><span class="pre">False</span></c
 <p>Two containers are considered to be equal if they have the same number
 of terms and the same types of terms in them.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> (<em>micromagneticmodel.TermsContainer</em>) – Second operand.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if two container have the same number of terms and the
 same types of terms in them and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -1568,16 +1692,16 @@ same types of terms in them and <code class="docutils literal notranslate"><span
 of the term is the same as the name of its class in lowercase. For
 example, for <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.DMI</span></code>, the name is <code class="docutils literal notranslate"><span class="pre">dmi</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>attr</strong> (<em>str</em>) – The name of the term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Term from the container.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>micromagneticmodel.Term</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>AttributeError</strong> – If <code class="docutils literal notranslate"><span class="pre">attr</span></code> is not in the container.</p>
 </dd>
 </dl>
@@ -1603,11 +1727,49 @@ example, for <code class="docutils literal notranslate"><span class="pre">microm
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="micromagneticmodel.abstract.Container.__getitem__">
+<span class="sig-name descname"><span class="pre">__getitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container.__getitem__" title="Permalink to this definition">#</a></dt>
+<dd><p>Access individual terms from the container by index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item</strong> (<em>int</em>) – Index of the term.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Term from the container.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>micromagneticmodel.Term</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ol class="arabic simple">
+<li><p>Accessing individual terms from the container.</p></li>
+</ol>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">micromagneticmodel</span> <span class="k">as</span> <span class="nn">mm</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span> <span class="o">=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Dynamics</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span> <span class="o">+=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Precession</span><span class="p">(</span><span class="n">gamma0</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span> <span class="o">+=</span> <span class="n">mm</span><span class="o">.</span><span class="n">Damping</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">Precession(gamma0=500)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">Damping(alpha=0.2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">Damping(alpha=0.2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dynamics</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">IndexError</span>: <span class="n">...</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="micromagneticmodel.abstract.Container.__iter__">
 <span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container.__iter__" title="Permalink to this definition">#</a></dt>
 <dd><p>Generator yielding all terms in the container.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Yields</dt>
+<dt class="field-odd">Yields<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>micromagneticmodel.abstract.Term</em> – Term in the container.</p>
 </dd>
 </dl>
@@ -1632,10 +1794,10 @@ example, for <code class="docutils literal notranslate"><span class="pre">microm
 <span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container.__len__" title="Permalink to this definition">#</a></dt>
 <dd><p>The number of terms in the container.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of terms.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int</p>
 </dd>
 </dl>
@@ -1663,10 +1825,10 @@ example, for <code class="docutils literal notranslate"><span class="pre">microm
 <span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container.__repr__" title="Permalink to this definition">#</a></dt>
 <dd><p>Representation string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Representation string.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -1694,16 +1856,16 @@ example, for <code class="docutils literal notranslate"><span class="pre">microm
 <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.abstract.Term</span></code>. It removes the term with the same
 name from the container.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="micromagneticmodel.abstract.Term.html#micromagneticmodel.abstract.Term" title="micromagneticmodel.abstract.Term"><em>micromagneticmodel.abstract.Term</em></a>) – Second operand.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Resulting container.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>micromagneticmodel.abstract.TermContainer</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>TypeError</strong> – If the operator cannot be applied.</p></li>
 <li><p><strong>ValueError</strong> – If the term with the same name is not present in the container.</p></li>
@@ -1731,6 +1893,12 @@ name from the container.</p>
 <span class="go">False</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="micromagneticmodel.abstract.Container.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#micromagneticmodel.abstract.Container.get" title="Permalink to this definition">#</a></dt>
+<dd><p>Return a list of all terms of type <code class="docutils literal notranslate"><span class="pre">type</span></code> in the container.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1781,13 +1949,13 @@ name from the container.</p>
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

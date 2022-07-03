@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Tutorial 01: Zeeman energy term &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Tutorial 02: Exchange energy term" href="exchange.html" />
     <link rel="prev" title="oommfc" href="../../oommfc.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1013,14 +1040,14 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial-01:-Zeeman-energy-term">
-<h1>Tutorial 01: Zeeman energy term<a class="headerlink" href="#Tutorial-01:-Zeeman-energy-term" title="Permalink to this headline">#</a></h1>
+<h1>Tutorial 01: Zeeman energy term<a class="headerlink" href="#Tutorial-01:-Zeeman-energy-term" title="Permalink to this heading">#</a></h1>
 <p>Zeeman energy density is computed as</p>
 <div class="math notranslate nohighlight">
 \[w_\text{z} = -\mu_{0}M_\text{s}\mathbf{m}\cdot\mathbf{H}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu_{0}\)</span> is the magnetic constant, <span class="math notranslate nohighlight">\(M_\text{s}\)</span> is the magnetisation saturation, <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> is the normalised (<span class="math notranslate nohighlight">\(|\mathbf{m}|=1\)</span>) magnetisation, and <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> is the external magnetic field. Zeeman energy term tends to align all magnetic moments parallel to the external magnetic field.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>, <span class="math notranslate nohighlight">\(M_\text{s}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> are part of the magnetisation field <code class="docutils literal notranslate"><span class="pre">system.m</span></code>. Therefore, only external magnetic field <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> should be provided as an input parameter to uniquely define the Zeeman energy term. <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> can be constant in space or spatially varying.</p>
 <section id="Spatially-constant-\mathbf{H}">
-<h2>Spatially constant <span class="math notranslate nohighlight">\(\mathbf{H}\)</span><a class="headerlink" href="#Spatially-constant-\mathbf{H}" title="Permalink to this headline">#</a></h2>
+<h2>Spatially constant <span class="math notranslate nohighlight">\(\mathbf{H}\)</span><a class="headerlink" href="#Spatially-constant-\mathbf{H}" title="Permalink to this heading">#</a></h2>
 <p>Let us start by assembling a simple simple simulation where <span class="math notranslate nohighlight">\(\mathbf{H}\)</span> does not vary in space. The sample is a “one-dimensional” chain of magnetic moments.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1125,10 +1152,10 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:44]...  &lt;1&gt; mmarchive killed
 </div>
 </section>
 <section id="Spatially-varying-\mathbf{H}">
-<h2>Spatially varying <span class="math notranslate nohighlight">\(\mathbf{H}\)</span><a class="headerlink" href="#Spatially-varying-\mathbf{H}" title="Permalink to this headline">#</a></h2>
+<h2>Spatially varying <span class="math notranslate nohighlight">\(\mathbf{H}\)</span><a class="headerlink" href="#Spatially-varying-\mathbf{H}" title="Permalink to this heading">#</a></h2>
 <p>There are two different ways how a parameter can be made spatially varying, by using: 1. Dictionary 2. <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code></p>
 <section id="Dictionary">
-<h3>Dictionary<a class="headerlink" href="#Dictionary" title="Permalink to this headline">#</a></h3>
+<h3>Dictionary<a class="headerlink" href="#Dictionary" title="Permalink to this heading">#</a></h3>
 <p>In order to define a parameter using a dictionary, regions must be defined in the mesh. Regions are defined as a dictionary, whose keys are the strings and values are <code class="docutils literal notranslate"><span class="pre">discretisedfield.Region</span></code> objects, which take two corner points of the region as input parameters.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1221,7 +1248,7 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:44]...  &lt;1&gt; mmarchive killed
 </div>
 </section>
 <section id="discretisedfield.Field">
-<h3><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code><a class="headerlink" href="#discretisedfield.Field" title="Permalink to this heading">#</a></h3>
 <p>Let us say that the magnetisation field varies in space as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{H}(x, y, z) = (c^{2}x, 0, c)\]</div>
@@ -1345,13 +1372,13 @@ Running OOMMF (ExeOOMMFRunner) [2021/09/22 13:44]...  &lt;1&gt; mmarchive killed
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

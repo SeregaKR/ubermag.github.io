@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Python basics &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Our first ubermag simulation" href="first-ubermag-simulation.html" />
     <link rel="prev" title="Getting started" href="../index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -693,10 +695,10 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Python-basics">
-<h1>Python basics<a class="headerlink" href="#Python-basics" title="Permalink to this headline">#</a></h1>
+<h1>Python basics<a class="headerlink" href="#Python-basics" title="Permalink to this heading">#</a></h1>
 <p>The purpose of this tutorial is to introduce some basic Python syntax, which can help understand ubermag simulations.</p>
 <section id="Variables">
-<h2>Variables<a class="headerlink" href="#Variables" title="Permalink to this headline">#</a></h2>
+<h2>Variables<a class="headerlink" href="#Variables" title="Permalink to this heading">#</a></h2>
 <p>Python is a dynamic language. That means that no type is associated to the variable at the definition and can be changed at any point by assigning a value of different type.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -789,7 +791,7 @@ list
 </pre></div></div>
 </div>
 <section id="Large/small-values,-e.g. a-=-2.1-\times-10^{6}">
-<h3>Large/small values, e.g. <span class="math notranslate nohighlight">\(a = 2.1 \times 10^{6}\)</span><a class="headerlink" href="#Large/small-values,-e.g. a-=-2.1-\times-10^{6}" title="Permalink to this headline">#</a></h3>
+<h3>Large/small values, e.g. <span class="math notranslate nohighlight">\(a = 2.1 \times 10^{6}\)</span><a class="headerlink" href="#Large/small-values,-e.g. a-=-2.1-\times-10^{6}" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
@@ -811,9 +813,9 @@ list
 </section>
 </section>
 <section id="Basic-operations">
-<h2>Basic operations<a class="headerlink" href="#Basic-operations" title="Permalink to this headline">#</a></h2>
+<h2>Basic operations<a class="headerlink" href="#Basic-operations" title="Permalink to this heading">#</a></h2>
 <section id="1.-Addition-c-=-a-+-b">
-<h3>1. Addition <span class="math notranslate nohighlight">\(c = a + b\)</span><a class="headerlink" href="#1.-Addition-c-=-a-+-b" title="Permalink to this headline">#</a></h3>
+<h3>1. Addition <span class="math notranslate nohighlight">\(c = a + b\)</span><a class="headerlink" href="#1.-Addition-c-=-a-+-b" title="Permalink to this heading">#</a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -861,7 +863,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="2.-Subtraction:-a---b">
-<h3>2. Subtraction: <span class="math notranslate nohighlight">\(a - b\)</span><a class="headerlink" href="#2.-Subtraction:-a---b" title="Permalink to this headline">#</a></h3>
+<h3>2. Subtraction: <span class="math notranslate nohighlight">\(a - b\)</span><a class="headerlink" href="#2.-Subtraction:-a---b" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -881,7 +883,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="3.-Multiplication:-a-\times-b">
-<h3>3. Multiplication: <span class="math notranslate nohighlight">\(a \times b\)</span><a class="headerlink" href="#3.-Multiplication:-a-\times-b" title="Permalink to this headline">#</a></h3>
+<h3>3. Multiplication: <span class="math notranslate nohighlight">\(a \times b\)</span><a class="headerlink" href="#3.-Multiplication:-a-\times-b" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
@@ -901,7 +903,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="4.-Division:-a-/-b">
-<h3>4. Division: <span class="math notranslate nohighlight">\(a / b\)</span><a class="headerlink" href="#4.-Division:-a-/-b" title="Permalink to this headline">#</a></h3>
+<h3>4. Division: <span class="math notranslate nohighlight">\(a / b\)</span><a class="headerlink" href="#4.-Division:-a-/-b" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
@@ -939,7 +941,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="5.-Power-a^{b}">
-<h3>5. Power <span class="math notranslate nohighlight">\(a^{b}\)</span><a class="headerlink" href="#5.-Power-a^{b}" title="Permalink to this headline">#</a></h3>
+<h3>5. Power <span class="math notranslate nohighlight">\(a^{b}\)</span><a class="headerlink" href="#5.-Power-a^{b}" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -961,7 +963,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="6.-More-complicated-operations">
-<h3>6. More complicated operations<a class="headerlink" href="#6.-More-complicated-operations" title="Permalink to this headline">#</a></h3>
+<h3>6. More complicated operations<a class="headerlink" href="#6.-More-complicated-operations" title="Permalink to this heading">#</a></h3>
 <p>Other “more complicated” operations generally live in <code class="docutils literal notranslate"><span class="pre">math</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. Before <code class="docutils literal notranslate"><span class="pre">math</span></code> can be used, it must be imported.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
@@ -1062,7 +1064,7 @@ The value of c is: 13
 </section>
 </section>
 <section id="Lists-and-tuples">
-<h2>Lists and tuples<a class="headerlink" href="#Lists-and-tuples" title="Permalink to this headline">#</a></h2>
+<h2>Lists and tuples<a class="headerlink" href="#Lists-and-tuples" title="Permalink to this heading">#</a></h2>
 <p>A collection of values can be represented using lists and tuples.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -1101,7 +1103,7 @@ The value of c is: 13
 </pre></div></div>
 </div>
 <section id="Indexing">
-<h3>Indexing<a class="headerlink" href="#Indexing" title="Permalink to this headline">#</a></h3>
+<h3>Indexing<a class="headerlink" href="#Indexing" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
@@ -1174,7 +1176,7 @@ The value of c is: 13
 </div>
 </section>
 <section id="Length-(the-number-of-elements)">
-<h3>Length (the number of elements)<a class="headerlink" href="#Length-(the-number-of-elements)" title="Permalink to this headline">#</a></h3>
+<h3>Length (the number of elements)<a class="headerlink" href="#Length-(the-number-of-elements)" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
@@ -1233,7 +1235,7 @@ Input <span class="ansi-green-fg">In [29]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Unpacking">
-<h3>Unpacking<a class="headerlink" href="#Unpacking" title="Permalink to this headline">#</a></h3>
+<h3>Unpacking<a class="headerlink" href="#Unpacking" title="Permalink to this heading">#</a></h3>
 <p>If we have a point which is defined as a tuple and want to unpack the values into x, y, and z, we can write:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
@@ -1295,7 +1297,7 @@ x=-1, y=2, z=0
 </section>
 </section>
 <section id="Dictionaries">
-<h2>Dictionaries<a class="headerlink" href="#Dictionaries" title="Permalink to this headline">#</a></h2>
+<h2>Dictionaries<a class="headerlink" href="#Dictionaries" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
@@ -1334,7 +1336,7 @@ x=-1, y=2, z=0
 </div>
 </section>
 <section id="Selection">
-<h2>Selection<a class="headerlink" href="#Selection" title="Permalink to this headline">#</a></h2>
+<h2>Selection<a class="headerlink" href="#Selection" title="Permalink to this heading">#</a></h2>
 <p>All lines belonging to a certain branch must be indented.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
@@ -1392,7 +1394,7 @@ C
 </div>
 </section>
 <section id="Iteration">
-<h2>Iteration<a class="headerlink" href="#Iteration" title="Permalink to this headline">#</a></h2>
+<h2>Iteration<a class="headerlink" href="#Iteration" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
@@ -1456,7 +1458,7 @@ C
 </div>
 </section>
 <section id="Functions">
-<h2>Functions<a class="headerlink" href="#Functions" title="Permalink to this headline">#</a></h2>
+<h2>Functions<a class="headerlink" href="#Functions" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
@@ -1503,7 +1505,7 @@ C
 </pre></div></div>
 </div>
 <section id="Keyword-arguments">
-<h3>Keyword arguments<a class="headerlink" href="#Keyword-arguments" title="Permalink to this headline">#</a></h3>
+<h3>Keyword arguments<a class="headerlink" href="#Keyword-arguments" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
@@ -1547,7 +1549,7 @@ C
 </section>
 </section>
 <section id="Imports">
-<h2>Imports<a class="headerlink" href="#Imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#Imports" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
@@ -1589,9 +1591,9 @@ C
 </div>
 </section>
 <section id="Common-mistakes">
-<h2>Common mistakes<a class="headerlink" href="#Common-mistakes" title="Permalink to this headline">#</a></h2>
+<h2>Common mistakes<a class="headerlink" href="#Common-mistakes" title="Permalink to this heading">#</a></h2>
 <section id="1.-No-colon">
-<h3>1. No colon<a class="headerlink" href="#1.-No-colon" title="Permalink to this headline">#</a></h3>
+<h3>1. No colon<a class="headerlink" href="#1.-No-colon" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
@@ -1615,7 +1617,7 @@ C
 </div>
 </section>
 <section id="2.-No-indentation">
-<h3>2. No indentation<a class="headerlink" href="#2.-No-indentation" title="Permalink to this headline">#</a></h3>
+<h3>2. No indentation<a class="headerlink" href="#2.-No-indentation" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
@@ -1639,7 +1641,7 @@ C
 </div>
 </section>
 <section id="3.-Mixing-types">
-<h3>3. Mixing types<a class="headerlink" href="#3.-Mixing-types" title="Permalink to this headline">#</a></h3>
+<h3>3. Mixing types<a class="headerlink" href="#3.-Mixing-types" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
@@ -1667,7 +1669,7 @@ Input <span class="ansi-green-fg">In [48]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="4.-Using-an-undefined-variable">
-<h3>4. Using an undefined variable<a class="headerlink" href="#4.-Using-an-undefined-variable" title="Permalink to this headline">#</a></h3>
+<h3>4. Using an undefined variable<a class="headerlink" href="#4.-Using-an-undefined-variable" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
@@ -1691,7 +1693,7 @@ Input <span class="ansi-green-fg">In [49]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="5.-Module-is-not-imported">
-<h3>5. Module is not imported<a class="headerlink" href="#5.-Module-is-not-imported" title="Permalink to this headline">#</a></h3>
+<h3>5. Module is not imported<a class="headerlink" href="#5.-Module-is-not-imported" title="Permalink to this heading">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
@@ -1718,7 +1720,7 @@ Input <span class="ansi-green-fg">In [50]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Object-oriented-programming-basics">
-<h2>Object oriented programming basics<a class="headerlink" href="#Object-oriented-programming-basics" title="Permalink to this headline">#</a></h2>
+<h2>Object oriented programming basics<a class="headerlink" href="#Object-oriented-programming-basics" title="Permalink to this heading">#</a></h2>
 <p>In Python, everything is an object. Each object contains attributes and methods (functions). When we define an object, using <code class="docutils literal notranslate"><span class="pre">.</span></code> we can access its different methods. For instance, if we define a string:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
@@ -1748,7 +1750,7 @@ Input <span class="ansi-green-fg">In [50]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Getting-help">
-<h2>Getting help<a class="headerlink" href="#Getting-help" title="Permalink to this headline">#</a></h2>
+<h2>Getting help<a class="headerlink" href="#Getting-help" title="Permalink to this heading">#</a></h2>
 <p>In Jupyter notebook, it is often enough to append a question mark to the function name.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
@@ -1923,13 +1925,13 @@ Specifying a where argument:
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

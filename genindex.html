@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -34,6 +35,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -44,7 +46,7 @@
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -251,6 +253,8 @@
       <ul>
         <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.__call__">(discretisedfield.Field method)</a>
 </li>
+        <li><a href="api/_autosummary/discretisedfield.plotting.Hv.html#discretisedfield.plotting.Hv.__call__">(discretisedfield.plotting.Hv method)</a>
+</li>
         <li><a href="api/_autosummary/discretisedfield.plotting.K3dRegion.html#discretisedfield.plotting.K3dRegion.__call__">(discretisedfield.plotting.K3dRegion method)</a>
 </li>
         <li><a href="api/_autosummary/discretisedfield.plotting.MplField.html#discretisedfield.plotting.MplField.__call__">(discretisedfield.plotting.MplField method)</a>
@@ -308,6 +312,8 @@
         <li><a href="api/_autosummary/micromagneticdata.AbstractDrive.html#micromagneticdata.AbstractDrive.__getitem__">(micromagneticdata.AbstractDrive method)</a>
 </li>
         <li><a href="api/_autosummary/micromagneticdata.Data.html#micromagneticdata.Data.__getitem__">(micromagneticdata.Data method)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticmodel.abstract.Container.html#micromagneticmodel.abstract.Container.__getitem__">(micromagneticmodel.abstract.Container method)</a>
 </li>
       </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.__hash__">__hash__ (discretisedfield.Field attribute)</a>
@@ -372,6 +378,8 @@
       </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.__neg__">__neg__() (discretisedfield.Field method)</a>
 </li>
+      <li><a href="api/_autosummary/micromagneticdata.Drive.html#micromagneticdata.Drive.__new__">__new__() (micromagneticdata.Drive static method)</a>
+</li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.__or__">__or__() (discretisedfield.Mesh method)</a>
 
       <ul>
@@ -399,7 +407,9 @@
 </li>
         <li><a href="api/_autosummary/micromagneticdata.Data.html#micromagneticdata.Data.__repr__">(micromagneticdata.Data method)</a>
 </li>
-        <li><a href="api/_autosummary/micromagneticdata.Drive.html#micromagneticdata.Drive.__repr__">(micromagneticdata.Drive method)</a>
+        <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive.__repr__">(micromagneticdata.Mumax3Drive method)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticdata.OOMMFDrive.html#micromagneticdata.OOMMFDrive.__repr__">(micromagneticdata.OOMMFDrive method)</a>
 </li>
         <li><a href="api/_autosummary/micromagneticmodel.abstract.Abstract.html#micromagneticmodel.abstract.Abstract.__repr__">(micromagneticmodel.abstract.Abstract method)</a>
 </li>
@@ -472,8 +482,12 @@
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.array">array (discretisedfield.Field property)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.autoselect_runner">autoselect_runner() (oommfc.oommf.Runner method)</a>
+      <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner.autoselect_runner">autoselect_runner() (mumax3c.mumax3.Runner method)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.autoselect_runner">(oommfc.oommf.Runner method)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.average">average (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.axis_selector">axis_selector() (discretisedfield.Mesh method)</a>
@@ -484,11 +498,21 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.call">call() (oommfc.oommf.OOMMFRunner method)</a>
+      <li><a href="api/_autosummary/micromagneticdata.Drive.html#micromagneticdata.Drive.calculator_script">calculator_script (micromagneticdata.Drive property)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive.calculator_script">(micromagneticdata.Mumax3Drive property)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticdata.OOMMFDrive.html#micromagneticdata.OOMMFDrive.calculator_script">(micromagneticdata.OOMMFDrive property)</a>
+</li>
+      </ul></li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalRunner.html#micromagneticmodel.ExternalRunner.call">call() (micromagneticmodel.ExternalRunner method)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Region.html#discretisedfield.Region.centre">centre (discretisedfield.Region property)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.CGEvolver.html#oommfc.CGEvolver">CGEvolver (class in oommfc)</a>
+</li>
+      <li><a href="api/_autosummary/ubermagutil.changedir.html#ubermagutil.changedir">changedir() (in module ubermagutil)</a>
 </li>
       <li><a href="api/_autosummary/mag2exp.sans.chiral_function.html#mag2exp.sans.chiral_function">chiral_function() (in module mag2exp.sans)</a>
 </li>
@@ -498,18 +522,22 @@
 </li>
       <li><a href="api/_autosummary/micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive">CombinedDrive (class in micromagneticdata)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.components">components (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.compute.html#oommfc.compute">compute() (in module oommfc)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.conjugate">conjugate (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.abstract.Container.html#micromagneticmodel.abstract.Container">Container (class in micromagneticmodel.abstract)</a>
 </li>
-      <li><a href="api/_autosummary/discretisedfield.plotting.MplField.html#discretisedfield.plotting.MplField.contour">contour() (discretisedfield.plotting.MplField method)</a>
+      <li><a href="api/_autosummary/discretisedfield.plotting.Hv.html#discretisedfield.plotting.Hv.contour">contour() (discretisedfield.plotting.Hv method)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/discretisedfield.plotting.MplField.html#discretisedfield.plotting.MplField.contour">(discretisedfield.plotting.MplField method)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.coordinate_field">coordinate_field() (discretisedfield.Field class method)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.tools.count_bps.html#discretisedfield.tools.count_bps">count_bps() (in module discretisedfield.tools)</a>
@@ -536,8 +564,12 @@
 </li>
       <li><a href="api/_autosummary/mag2exp.ltem.defocus_image.html#mag2exp.ltem.defocus_image">defocus_image() (in module mag2exp.ltem)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.delete.html#oommfc.delete">delete() (in module oommfc)</a>
+      <li><a href="api/_autosummary/mumax3c.delete.html#mumax3c.delete">delete() (in module mumax3c)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.delete.html#oommfc.delete">(in module oommfc)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/micromagneticmodel.Demag.html#micromagneticmodel.Demag">Demag (class in micromagneticmodel)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.tools.demag_field.html#discretisedfield.tools.demag_field">demag_field() (in module discretisedfield.tools)</a>
@@ -591,7 +623,13 @@
       <li><a href="api/_autosummary/micromagneticmodel.Driver.html#micromagneticmodel.Driver.drive">drive() (micromagneticmodel.Driver method)</a>
 
       <ul>
-        <li><a href="api/_autosummary/oommfc.Driver.html#oommfc.Driver.drive">(oommfc.Driver method)</a>
+        <li><a href="api/_autosummary/micromagneticmodel.ExternalDriver.html#micromagneticmodel.ExternalDriver.drive">(micromagneticmodel.ExternalDriver method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalDriver.html#micromagneticmodel.ExternalDriver.drive_kwargs_setup">drive_kwargs_setup() (micromagneticmodel.ExternalDriver method)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.Driver.html#oommfc.Driver.drive_kwargs_setup">(oommfc.Driver method)</a>
 </li>
       </ul></li>
       <li><a href="api/_autosummary/micromagneticmodel.Driver.html#micromagneticmodel.Driver">Driver (class in micromagneticmodel)</a>
@@ -650,7 +688,13 @@
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.Exchange.html#micromagneticmodel.Exchange">Exchange (class in micromagneticmodel)</a>
 </li>
+      <li><a href="api/_autosummary/mumax3c.mumax3.ExeMumax3Runner.html#mumax3c.mumax3.ExeMumax3Runner">ExeMumax3Runner (class in mumax3c.mumax3)</a>
+</li>
       <li><a href="api/_autosummary/oommfc.oommf.ExeOOMMFRunner.html#oommfc.oommf.ExeOOMMFRunner">ExeOOMMFRunner (class in oommfc.oommf)</a>
+</li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalDriver.html#micromagneticmodel.ExternalDriver">ExternalDriver (class in micromagneticmodel)</a>
+</li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalRunner.html#micromagneticmodel.ExternalRunner">ExternalRunner (class in micromagneticmodel)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -686,9 +730,11 @@
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.consts.gamma.html#micromagneticmodel.consts.gamma">gamma (in module micromagneticmodel.consts)</a>
 </li>
+      <li><a href="api/_autosummary/micromagneticmodel.consts.gamma0.html#micromagneticmodel.consts.gamma0">gamma0 (in module micromagneticmodel.consts)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/_autosummary/micromagneticmodel.consts.gamma0.html#micromagneticmodel.consts.gamma0">gamma0 (in module micromagneticmodel.consts)</a>
+      <li><a href="api/_autosummary/micromagneticmodel.abstract.Container.html#micromagneticmodel.abstract.Container.get">get() (micromagneticmodel.abstract.Container method)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.get_tests.html#micromagnetictests.get_tests">get_tests() (in module micromagnetictests)</a>
 </li>
@@ -704,10 +750,18 @@
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.consts.hbar.html#micromagneticmodel.consts.hbar">hbar (in module micromagneticmodel.consts)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/mag2exp.x_ray.holography.html#mag2exp.x_ray.holography">holography() (in module mag2exp.x_ray)</a>
 </li>
+      <li><a href="api/_autosummary/discretisedfield.plotting.Hv.html#discretisedfield.plotting.Hv">Hv (class in discretisedfield.plotting)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.hv">hv (discretisedfield.Field property)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/micromagneticdata.AbstractDrive.html#micromagneticdata.AbstractDrive.hv">(micromagneticdata.AbstractDrive property)</a>
+</li>
+      </ul></li>
       <li><a href="api/_autosummary/ubermagutil.hysteresis_values.html#ubermagutil.hysteresis_values">hysteresis_values() (in module ubermagutil)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.HysteresisDriver.html#oommfc.HysteresisDriver">HysteresisDriver (class in oommfc)</a>
@@ -930,12 +984,12 @@
       </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.midpoints">midpoints (discretisedfield.Mesh property)</a>
 </li>
-      <li><a href="api/_autosummary/micromagneticdata.Drive.html#micromagneticdata.Drive.mif">mif (micromagneticdata.Drive property)</a>
+      <li><a href="api/_autosummary/mumax3c.MinDriver.html#mumax3c.MinDriver">MinDriver (class in mumax3c)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.MinDriver.html#oommfc.MinDriver">(class in oommfc)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/_autosummary/oommfc.MinDriver.html#oommfc.MinDriver">MinDriver (class in oommfc)</a>
-</li>
+      </ul></li>
       <li>
     module
 
@@ -976,6 +1030,10 @@
 </li>
         <li><a href="api/_autosummary/micromagnetictests.calculatortests.html#module-micromagnetictests.calculatortests">micromagnetictests.calculatortests</a>
 </li>
+        <li><a href="api/_autosummary/mumax3c.html#module-mumax3c">mumax3c</a>
+</li>
+        <li><a href="api/_autosummary/mumax3c.mumax3.html#module-mumax3c.mumax3">mumax3c.mumax3</a>
+</li>
         <li><a href="api/_autosummary/oommfc.html#module-oommfc">oommfc</a>
 </li>
         <li><a href="api/_autosummary/oommfc.oommf.html#module-oommfc.oommf">oommfc.oommf</a>
@@ -993,6 +1051,8 @@
         <li><a href="api/_autosummary/ubermagutil.units.html#module-ubermagutil.units">ubermagutil.units</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.mpl">mpl (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Line.html#discretisedfield.Line.mpl">mpl() (discretisedfield.Line method)</a>
@@ -1014,6 +1074,24 @@
       <li><a href="api/_autosummary/micromagneticmodel.consts.muB.html#micromagneticmodel.consts.muB">muB (in module micromagneticmodel.consts)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Region.html#discretisedfield.Region.multiplier">multiplier (discretisedfield.Region property)</a>
+</li>
+      <li>
+    mumax3c
+
+      <ul>
+        <li><a href="api/_autosummary/mumax3c.html#module-mumax3c">module</a>
+</li>
+      </ul></li>
+      <li>
+    mumax3c.mumax3
+
+      <ul>
+        <li><a href="api/_autosummary/mumax3c.mumax3.html#module-mumax3c.mumax3">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive">Mumax3Drive (class in micromagneticdata)</a>
+</li>
+      <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner">Mumax3Runner (class in mumax3c.mumax3)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1061,14 +1139,20 @@
         <li><a href="api/_autosummary/oommfc.oommf.html#module-oommfc.oommf">module</a>
 </li>
       </ul></li>
+      <li><a href="api/_autosummary/micromagneticdata.OOMMFDrive.html#micromagneticdata.OOMMFDrive">OOMMFDrive (class in micromagneticdata)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner">OOMMFRunner (class in oommfc.oommf)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.orientation">orientation (discretisedfield.Field property)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.oommf.overhead.html#oommfc.oommf.overhead">overhead() (in module oommfc.oommf)</a>
+      <li><a href="api/_autosummary/mumax3c.mumax3.overhead.html#mumax3c.mumax3.overhead">overhead() (in module mumax3c.mumax3)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.oommf.overhead.html#oommfc.oommf.overhead">(in module oommfc.oommf)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.ovf2vtk.ovf2vtk.html#discretisedfield.ovf2vtk.ovf2vtk">ovf2vtk() (in module discretisedfield.ovf2vtk)</a>
 
       <ul>
@@ -1081,6 +1165,14 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalRunner.html#micromagneticmodel.ExternalRunner.package_name">package_name (micromagneticmodel.ExternalRunner property)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner.package_name">(mumax3c.mumax3.Mumax3Runner property)</a>
+</li>
+        <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.package_name">(oommfc.oommf.OOMMFRunner property)</a>
+</li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.pad">pad() (discretisedfield.Field method)</a>
 
       <ul>
@@ -1095,14 +1187,14 @@
 </li>
       <li><a href="api/_autosummary/mag2exp.mfm.phase_shift.html#mag2exp.mfm.phase_shift">phase_shift() (in module mag2exp.mfm)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.plane">plane() (discretisedfield.Field method)</a>
 
       <ul>
         <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.plane">(discretisedfield.Mesh method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.platform">platform (oommfc.oommf.OOMMFRunner property)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Region.html#discretisedfield.Region.pmax">pmax (discretisedfield.Region property)</a>
@@ -1133,23 +1225,33 @@
 </li>
       <li><a href="api/_autosummary/mag2exp.ltem.relativistic_wavelength.html#mag2exp.ltem.relativistic_wavelength">relativistic_wavelength() (in module mag2exp.ltem)</a>
 </li>
+      <li><a href="api/_autosummary/mumax3c.RelaxDriver.html#mumax3c.RelaxDriver">RelaxDriver (class in mumax3c)</a>
+</li>
       <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.rfft">rfft() (ubermagtable.Table method)</a>
+</li>
+      <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.rfftn">rfftn (discretisedfield.Field property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.rfftn">rfftn (discretisedfield.Field property)</a>
-</li>
       <li><a href="api/_autosummary/micromagneticmodel.RKKY.html#micromagneticmodel.RKKY">RKKY (class in micromagneticmodel)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.FieldRotator.html#discretisedfield.FieldRotator.rotate">rotate() (discretisedfield.FieldRotator method)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.RungeKuttaEvolver.html#oommfc.RungeKuttaEvolver">RungeKuttaEvolver (class in oommfc)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner">Runner (class in oommfc.oommf)</a>
-</li>
-      <li><a href="api/_autosummary/oommfc.runner.html#oommfc.runner">runner (in module oommfc)</a>
+      <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner">Runner (class in mumax3c.mumax3)</a>
 
       <ul>
+        <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner">(class in oommfc.oommf)</a>
+</li>
+      </ul></li>
+      <li><a href="api/_autosummary/mumax3c.runner.html#mumax3c.runner">runner (in module mumax3c)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.runner.html#oommfc.runner">(in module oommfc)</a>
+</li>
+        <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner.runner">(mumax3c.mumax3.Runner property)</a>
+</li>
         <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.runner">(oommfc.oommf.Runner property)</a>
 </li>
       </ul></li>
@@ -1171,10 +1273,20 @@
       </ul></li>
       <li><a href="api/_autosummary/ubermagutil.typesystem.Scalar.html#ubermagutil.typesystem.Scalar">Scalar (class in ubermagutil.typesystem)</a>
 </li>
-      <li><a href="api/_autosummary/discretisedfield.plotting.K3dField.html#discretisedfield.plotting.K3dField.scalar">scalar() (discretisedfield.plotting.K3dField method)</a>
+      <li><a href="api/_autosummary/discretisedfield.plotting.Hv.html#discretisedfield.plotting.Hv.scalar">scalar() (discretisedfield.plotting.Hv method)</a>
 
       <ul>
+        <li><a href="api/_autosummary/discretisedfield.plotting.K3dField.html#discretisedfield.plotting.K3dField.scalar">(discretisedfield.plotting.K3dField method)</a>
+</li>
         <li><a href="api/_autosummary/discretisedfield.plotting.MplField.html#discretisedfield.plotting.MplField.scalar">(discretisedfield.plotting.MplField method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalDriver.html#micromagneticmodel.ExternalDriver.schedule">schedule() (micromagneticmodel.ExternalDriver method)</a>
+</li>
+      <li><a href="api/_autosummary/micromagneticmodel.ExternalDriver.html#micromagneticmodel.ExternalDriver.schedule_kwargs_setup">schedule_kwargs_setup() (micromagneticmodel.ExternalDriver method)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.Driver.html#oommfc.Driver.schedule_kwargs_setup">(oommfc.Driver method)</a>
 </li>
       </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Line.html#discretisedfield.Line.selector">selector() (discretisedfield.Line method)</a>
@@ -1185,12 +1297,12 @@
         <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.selector">(ubermagtable.Table method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/ubermagutil.setup_logging.html#ubermagutil.setup_logging">setup_logging() (in module ubermagutil)</a>
 </li>
       <li><a href="api/_autosummary/ubermagutil.units.si_max_multiplier.html#ubermagutil.units.si_max_multiplier">si_max_multiplier() (in module ubermagutil.units)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/ubermagutil.units.si_multiplier.html#ubermagutil.units.si_multiplier">si_multiplier() (in module ubermagutil.units)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Line.html#discretisedfield.Line.slider">slider() (discretisedfield.Line method)</a>
@@ -1209,8 +1321,12 @@
 </li>
       <li><a href="api/_autosummary/oommfc.SpinXferEvolver.html#oommfc.SpinXferEvolver">SpinXferEvolver (class in oommfc)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.status">status (oommfc.oommf.OOMMFRunner property)</a>
+      <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner.status">status (mumax3c.mumax3.Mumax3Runner property)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.status">(oommfc.oommf.OOMMFRunner property)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.subregions">subregions (discretisedfield.Mesh property)</a>
 </li>
       <li><a href="api/_autosummary/ubermagutil.typesystem.Subset.html#ubermagutil.typesystem.Subset">Subset (class in ubermagutil.typesystem)</a>
@@ -1230,7 +1346,9 @@
       <ul>
         <li><a href="api/_autosummary/micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive.table">(micromagneticdata.CombinedDrive property)</a>
 </li>
-        <li><a href="api/_autosummary/micromagneticdata.Drive.html#micromagneticdata.Drive.table">(micromagneticdata.Drive property)</a>
+        <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive.table">(micromagneticdata.Mumax3Drive property)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticdata.OOMMFDrive.html#micromagneticdata.OOMMFDrive.table">(micromagneticdata.OOMMFDrive property)</a>
 </li>
       </ul></li>
       <li><a href="api/_autosummary/oommfc.oommf.TclOOMMFRunner.html#oommfc.oommf.TclOOMMFRunner">TclOOMMFRunner (class in oommfc.oommf)</a>
@@ -1248,6 +1366,8 @@
 </li>
         <li><a href="api/_autosummary/micromagnetictests.test.html#micromagnetictests.test">(in module micromagnetictests)</a>
 </li>
+        <li><a href="api/_autosummary/mumax3c.test.html#mumax3c.test">(in module mumax3c)</a>
+</li>
         <li><a href="api/_autosummary/oommfc.test.html#oommfc.test">(in module oommfc)</a>
 </li>
         <li><a href="api/_autosummary/ubermag.test.html#ubermag.test">(in module ubermag)</a>
@@ -1259,8 +1379,12 @@
       </ul></li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_dirname.html#micromagnetictests.calculatortests.test_dirname">test_dirname() (in module micromagnetictests.calculatortests)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.test_docker.html#oommfc.test_docker">test_docker() (in module oommfc)</a>
+      <li><a href="api/_autosummary/mumax3c.test_docker.html#mumax3c.test_docker">test_docker() (in module mumax3c)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.test_docker.html#oommfc.test_docker">(in module oommfc)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_format.html#micromagnetictests.calculatortests.test_format">test_format() (in module micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_info_file.html#micromagnetictests.calculatortests.test_info_file">test_info_file() (in module micromagnetictests.calculatortests)</a>
@@ -1268,6 +1392,8 @@
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_multiple_drives.html#micromagnetictests.calculatortests.test_multiple_drives">test_multiple_drives() (in module micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_outputstep.html#micromagnetictests.calculatortests.test_outputstep">test_outputstep() (in module micromagnetictests.calculatortests)</a>
+</li>
+      <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_schedule.html#micromagnetictests.calculatortests.test_schedule">test_schedule() (in module micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_skyrmion.html#micromagnetictests.calculatortests.test_skyrmion">test_skyrmion() (in module micromagnetictests.calculatortests)</a>
 </li>
@@ -1277,12 +1403,12 @@
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_stdprob5.html#micromagnetictests.calculatortests.test_stdprob5">test_stdprob5() (in module micromagnetictests.calculatortests)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestCompute.html#micromagnetictests.calculatortests.TestCompute">TestCompute (class in micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestCubicAnisotropy.html#micromagnetictests.calculatortests.TestCubicAnisotropy">TestCubicAnisotropy (class in micromagnetictests.calculatortests)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestDamping.html#micromagnetictests.calculatortests.TestDamping">TestDamping (class in micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestDemag.html#micromagnetictests.calculatortests.TestDemag">TestDemag (class in micromagnetictests.calculatortests)</a>
@@ -1319,8 +1445,12 @@
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestZhangLi.html#micromagnetictests.calculatortests.TestZhangLi">TestZhangLi (class in micromagnetictests.calculatortests)</a>
 </li>
-      <li><a href="api/_autosummary/oommfc.TimeDriver.html#oommfc.TimeDriver">TimeDriver (class in oommfc)</a>
+      <li><a href="api/_autosummary/mumax3c.TimeDriver.html#mumax3c.TimeDriver">TimeDriver (class in mumax3c)</a>
+
+      <ul>
+        <li><a href="api/_autosummary/oommfc.TimeDriver.html#oommfc.TimeDriver">(class in oommfc)</a>
 </li>
+      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.to_vtk">to_vtk() (discretisedfield.Field method)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.to_xarray">to_xarray() (discretisedfield.Field method)</a>
@@ -1407,9 +1537,11 @@
 </li>
       <li><a href="api/_autosummary/ubermagutil.typesystem.Vector.html#ubermagutil.typesystem.Vector">Vector (class in ubermagutil.typesystem)</a>
 </li>
-      <li><a href="api/_autosummary/discretisedfield.plotting.K3dField.html#discretisedfield.plotting.K3dField.vector">vector() (discretisedfield.plotting.K3dField method)</a>
+      <li><a href="api/_autosummary/discretisedfield.plotting.Hv.html#discretisedfield.plotting.Hv.vector">vector() (discretisedfield.plotting.Hv method)</a>
 
       <ul>
+        <li><a href="api/_autosummary/discretisedfield.plotting.K3dField.html#discretisedfield.plotting.K3dField.vector">(discretisedfield.plotting.K3dField method)</a>
+</li>
         <li><a href="api/_autosummary/discretisedfield.plotting.MplField.html#discretisedfield.plotting.MplField.vector">(discretisedfield.plotting.MplField method)</a>
 </li>
       </ul></li>
@@ -1430,6 +1562,10 @@
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.write">write() (discretisedfield.Field method)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/oommfc.Driver.html#oommfc.Driver.write_mif">write_mif() (oommfc.Driver method)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="X">X</h2>
@@ -1438,13 +1574,19 @@
       <li><a href="api/_autosummary/micromagneticdata.AbstractDrive.html#micromagneticdata.AbstractDrive.x">x (micromagneticdata.AbstractDrive property)</a>
 
       <ul>
+        <li><a href="api/_autosummary/micromagneticdata.CombinedDrive.html#micromagneticdata.CombinedDrive.x">(micromagneticdata.CombinedDrive property)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive.x">(micromagneticdata.Mumax3Drive property)</a>
+</li>
+        <li><a href="api/_autosummary/micromagneticdata.OOMMFDrive.html#micromagneticdata.OOMMFDrive.x">(micromagneticdata.OOMMFDrive property)</a>
+</li>
         <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.x">(ubermagtable.Table property)</a>
 </li>
       </ul></li>
-      <li><a href="api/_autosummary/mag2exp.quick_plots.x_ray_holography.html#mag2exp.quick_plots.x_ray_holography">x_ray_holography() (in module mag2exp.quick_plots)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/mag2exp.quick_plots.x_ray_holography.html#mag2exp.quick_plots.x_ray_holography">x_ray_holography() (in module mag2exp.quick_plots)</a>
+</li>
       <li><a href="api/_autosummary/oommfc.Xf_ThermHeunEvolver.html#oommfc.Xf_ThermHeunEvolver">Xf_ThermHeunEvolver (class in oommfc)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.Xf_ThermSpinXferEvolver.html#oommfc.Xf_ThermSpinXferEvolver">Xf_ThermSpinXferEvolver (class in oommfc)</a>
@@ -1502,13 +1644,13 @@
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

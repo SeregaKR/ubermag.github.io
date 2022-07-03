@@ -44,6 +44,7 @@ micromagnetictests.calculatortests
       test_info_file
       test_multiple_drives
       test_outputstep
+      test_schedule
       test_skyrmion
       test_stdprob3
       test_stdprob4

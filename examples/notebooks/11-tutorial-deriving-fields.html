@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Deriving energy values &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Calculating a stray field using an airbox method" href="12-tutorial-stray-field.html" />
     <link rel="prev" title="FMR standard problem" href="10-tutorial-standard-problem-fmr.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -618,10 +620,10 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Deriving-energy-values">
-<h1>Deriving energy values<a class="headerlink" href="#Deriving-energy-values" title="Permalink to this headline">#</a></h1>
+<h1>Deriving energy values<a class="headerlink" href="#Deriving-energy-values" title="Permalink to this heading">#</a></h1>
 <p>In this tutorial, we show how derived fields and values can be computed afetr the micromagnetic system is defined.</p>
 <section id="Simulation">
-<h2>Simulation<a class="headerlink" href="#Simulation" title="Permalink to this headline">#</a></h2>
+<h2>Simulation<a class="headerlink" href="#Simulation" title="Permalink to this heading">#</a></h2>
 <p>First of all, as usual, we import <code class="docutils literal notranslate"><span class="pre">oommfc</span></code> and <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -689,7 +691,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </div>
 </section>
 <section id="Effective-field">
-<h2>Effective field<a class="headerlink" href="#Effective-field" title="Permalink to this headline">#</a></h2>
+<h2>Effective field<a class="headerlink" href="#Effective-field" title="Permalink to this heading">#</a></h2>
 <p>All computations are performed using <code class="docutils literal notranslate"><span class="pre">mc.compute</span></code>, where <code class="docutils literal notranslate"><span class="pre">mc</span></code> is the micromagnetic calculator we choose at import. <code class="docutils literal notranslate"><span class="pre">compute</span></code> function takes two arguments:</p>
 <ol class="arabic simple">
 <li><p>Property we want to compute</p></li>
@@ -800,7 +802,7 @@ The energy of the system is 1.3470795322e-19 J.
 </div>
 </section>
 <section id="Relax-the-system">
-<h2>Relax the system<a class="headerlink" href="#Relax-the-system" title="Permalink to this headline">#</a></h2>
+<h2>Relax the system<a class="headerlink" href="#Relax-the-system" title="Permalink to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -848,7 +850,7 @@ The system&#39;s energy is 5.35285533145e-20 J.
 </div>
 </section>
 <section id="Computing-energies-of-individual-term">
-<h2>Computing energies of individual term<a class="headerlink" href="#Computing-energies-of-individual-term" title="Permalink to this headline">#</a></h2>
+<h2>Computing energies of individual term<a class="headerlink" href="#Computing-energies-of-individual-term" title="Permalink to this heading">#</a></h2>
 <p>For instance, the exchange energy is:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -947,13 +949,13 @@ The system&#39;s energy is 5.35285533145e-20 J.
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

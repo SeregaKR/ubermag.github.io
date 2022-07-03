@@ -53,10 +53,16 @@ TestDemag
          ~TestDemag.test_demag
       
       
+         ~TestDemag.test_demag_1_pbc
+      
+      
+         ~TestDemag.test_demag_2_pbc
+      
+      
+         ~TestDemag.test_demag_3_pbc
+      
+      
          ~TestDemag.test_demag_asymptotic_radius
-      
-      
-         ~TestDemag.test_demag_pbc
       
    
    

@@ -38,6 +38,9 @@ Dynamics
       
       
       
+         ~Dynamics.__getitem__
+      
+      
       
       
       
@@ -62,6 +65,9 @@ Dynamics
          ~Dynamics.__sub__
       
       
+      
+      
+         ~Dynamics.get
       
    
    

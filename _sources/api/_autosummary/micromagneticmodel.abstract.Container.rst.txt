@@ -38,6 +38,9 @@ Container
       
       
       
+         ~Container.__getitem__
+      
+      
       
       
       
@@ -62,6 +65,9 @@ Container
          ~Container.__sub__
       
       
+      
+      
+         ~Container.get
       
    
    

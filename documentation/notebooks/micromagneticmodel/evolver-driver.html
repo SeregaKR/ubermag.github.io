@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Deriving evolver and driver classes &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Defining micromagnetic system" href="system.html" />
     <link rel="prev" title="Multiple energy terms of the same class" href="same-class-terms.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -976,9 +1003,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Deriving-evolver-and-driver-classes">
-<h1>Deriving evolver and driver classes<a class="headerlink" href="#Deriving-evolver-and-driver-classes" title="Permalink to this headline">#</a></h1>
+<h1>Deriving evolver and driver classes<a class="headerlink" href="#Deriving-evolver-and-driver-classes" title="Permalink to this heading">#</a></h1>
 <p>In <code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code> package, base classes <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Driver</span></code> and <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Evolver</span></code> are defined. Their purpose is to build individual evolvers and drivers in a particular micromagnetic calculator. In this tutorial, we will demonstrate some of their basic properties, on an example of a <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Driver</span></code> class. The behaviour of the <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.Evolver</span></code> class is the same.</p>
-<p>Let us derive <code class="docutils literal notranslate"><span class="pre">MyDriver</span></code> class. In order to define it, <code class="docutils literal notranslate"><span class="pre">_allowed_attributes</span></code> list must be defined. It is a list of strings, which lists the kwargs which are allowed to be passed.</p>
+<p>Let us derive <code class="docutils literal notranslate"><span class="pre">MyDriver</span></code> class. In order to define it, <code class="docutils literal notranslate"><span class="pre">_allowed_attributes</span></code> list must be defined. It is a list of strings, which lists the kwargs which are allowed to be passed. Additionally, the driver must define a property <code class="docutils literal notranslate"><span class="pre">_x</span></code> for the independent variable (e.g. time).</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -988,6 +1015,10 @@ div.rendered_html tbody tr:hover {
 
 <span class="k">class</span> <span class="nc">MyDriver</span><span class="p">(</span><span class="n">mm</span><span class="o">.</span><span class="n">Driver</span><span class="p">):</span>
     <span class="n">_allowed_attributes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;arg1&quot;</span><span class="p">,</span> <span class="s2">&quot;arg2&quot;</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;t&quot;</span>
 
     <span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="n">system</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">system</span>
@@ -1070,6 +1101,9 @@ Exception raised.
 </pre></div>
 </div>
 </div>
+<p>To build a driver for an existing external package class <code class="docutils literal notranslate"><span class="pre">micromagneticmodel.ExternalDriver</span></code> should be used. This class provides an additional method <code class="docutils literal notranslate"><span class="pre">schedule</span></code> to submit a calculation job to a scheduling system.</p>
+<p>Furthermore, it has a generic implementation for <code class="docutils literal notranslate"><span class="pre">drive</span></code> and <code class="docutils literal notranslate"><span class="pre">schedule</span></code> that consists of the following steps: - Create a directory to save the input and output in. - Write the input files for the existing simulation package. - Call the existing simulation package to run the simulation. / Schedule a job to run the simulation. - Update the <code class="docutils literal notranslate"><span class="pre">system</span></code> object with the simulation results (<code class="docutils literal notranslate"><span class="pre">drive</span></code> only).</p>
+<p>Simulation-package specific things such as writing input files and reading results must be implemented in a number of pre-defined abstract methods inside the derived class. Refer to the API reference for more details.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
@@ -1113,13 +1147,13 @@ Exception raised.
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

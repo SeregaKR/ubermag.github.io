@@ -1,0 +1,84 @@
+ExternalDriver
+==============
+
+.. currentmodule:: micromagneticmodel
+
+.. autoclass:: ExternalDriver
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~ExternalDriver.__dir__
+      
+      
+         ~ExternalDriver.__eq__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExternalDriver.__iter__
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExternalDriver.__repr__
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         ~ExternalDriver.drive
+      
+      
+         ~ExternalDriver.drive_kwargs_setup
+      
+      
+         ~ExternalDriver.schedule
+      
+      
+         ~ExternalDriver.schedule_kwargs_setup
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~ExternalDriver.name
+   
+   
+
+   .. raw:: html
+
+      <hr>

@@ -72,10 +72,11 @@ Drive
 
    .. autosummary::
    
+      ~Drive.calculator_script
       ~Drive.dirname
+      ~Drive.hv
       ~Drive.info
       ~Drive.m0
-      ~Drive.mif
       ~Drive.n
       ~Drive.name
       ~Drive.number

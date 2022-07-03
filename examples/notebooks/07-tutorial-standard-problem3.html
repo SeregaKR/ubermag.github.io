@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Standard problem 3 &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Standard problem 4" href="08-tutorial-standard-problem4.html" />
     <link rel="prev" title="Examples" href="../index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -625,9 +627,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Standard-problem-3">
-<h1>Standard problem 3<a class="headerlink" href="#Standard-problem-3" title="Permalink to this headline">#</a></h1>
+<h1>Standard problem 3<a class="headerlink" href="#Standard-problem-3" title="Permalink to this heading">#</a></h1>
 <section id="Problem-specification">
-<h2>Problem specification<a class="headerlink" href="#Problem-specification" title="Permalink to this headline">#</a></h2>
+<h2>Problem specification<a class="headerlink" href="#Problem-specification" title="Permalink to this heading">#</a></h2>
 <p>This problem is to calculate a single domain limit of a cubic magnetic particle. This is the size <span class="math notranslate nohighlight">\(L\)</span> of equal energy for the so-called flower state (which one may also call a splayed state or a modified single-domain state) on the one hand, and the vortex or curling state on the other hand.</p>
 <p>Geometry:</p>
 <p>A cube with edge length, <span class="math notranslate nohighlight">\(L\)</span>, expressed in units of the intrinsic length scale, <span class="math notranslate nohighlight">\(l_\text{ex} = \sqrt{A/K_\text{m}}\)</span>, where <span class="math notranslate nohighlight">\(K_\text{m}\)</span> is a magnetostatic energy density, <span class="math notranslate nohighlight">\(K_\text{m} = \frac{1}{2}\mu_{0}M_\text{s}^{2}\)</span>.</p>
@@ -639,7 +641,7 @@ div.rendered_html tbody tr:hover {
 <p>More details about the standard problem 3 can be found in Ref. 1.</p>
 </section>
 <section id="Simulation">
-<h2>Simulation<a class="headerlink" href="#Simulation" title="Permalink to this headline">#</a></h2>
+<h2>Simulation<a class="headerlink" href="#Simulation" title="Permalink to this heading">#</a></h2>
 <p>Firstly, we import all necessary modules.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -723,7 +725,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Relaxed-magnetisation-states">
-<h3>Relaxed magnetisation states<a class="headerlink" href="#Relaxed-magnetisation-states" title="Permalink to this headline">#</a></h3>
+<h3>Relaxed magnetisation states<a class="headerlink" href="#Relaxed-magnetisation-states" title="Permalink to this heading">#</a></h3>
 <p>Now, we show the magnetisation configurations of two relaxed states.</p>
 <p><strong>Vortex</strong> state:</p>
 <div class="nbinput docutils container">
@@ -779,7 +781,7 @@ L=      8, m_init_flower Running OOMMF (ExeOOMMFRunner)[2022/02/25 17:58]... (0.
 </div>
 </section>
 <section id="Energy-crossing">
-<h3>Energy crossing<a class="headerlink" href="#Energy-crossing" title="Permalink to this headline">#</a></h3>
+<h3>Energy crossing<a class="headerlink" href="#Energy-crossing" title="Permalink to this heading">#</a></h3>
 <p>We can plot the energies of both vortex and flower states as a function of cube edge length <span class="math notranslate nohighlight">\(L\)</span>. This will give us an idea where the state transition occurrs. We can achieve that by simply looping over the edge lengths <span class="math notranslate nohighlight">\(L\)</span> of interest, computing the energy of both vortex and flower states, and finally, plotting the energy dependence.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -873,7 +875,7 @@ The energy crossing occurs at 8.4375*lex
 </section>
 </section>
 <section id="References">
-<h2>References<a class="headerlink" href="#References" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#References" title="Permalink to this heading">#</a></h2>
 <p>[1] µMAG Site Directory <a class="reference external" href="http://www.ctcms.nist.gov/~rdm/mumag.org.html">http://www.ctcms.nist.gov/~rdm/mumag.org.html</a></p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -919,13 +921,13 @@ The energy crossing occurs at 8.4375*lex
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

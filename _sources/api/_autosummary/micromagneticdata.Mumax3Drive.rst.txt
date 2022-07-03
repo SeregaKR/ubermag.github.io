@@ -1,0 +1,90 @@
+Mumax3Drive
+===========
+
+.. currentmodule:: micromagneticdata
+
+.. autoclass:: Mumax3Drive
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~Mumax3Drive.__dir__
+      
+      
+         ~Mumax3Drive.__eq__
+      
+      
+      
+      
+      
+         ~Mumax3Drive.__getitem__
+      
+      
+      
+      
+      
+      
+         ~Mumax3Drive.__iter__
+      
+      
+      
+         ~Mumax3Drive.__lshift__
+      
+      
+      
+      
+      
+      
+      
+         ~Mumax3Drive.__repr__
+      
+      
+      
+      
+      
+      
+         ~Mumax3Drive.ovf2vtk
+      
+      
+         ~Mumax3Drive.slider
+      
+      
+         ~Mumax3Drive.to_xarray
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~Mumax3Drive.calculator_script
+      ~Mumax3Drive.dirname
+      ~Mumax3Drive.hv
+      ~Mumax3Drive.info
+      ~Mumax3Drive.m0
+      ~Mumax3Drive.n
+      ~Mumax3Drive.name
+      ~Mumax3Drive.number
+      ~Mumax3Drive.table
+      ~Mumax3Drive.x
+   
+   
+
+   .. raw:: html
+
+      <hr>

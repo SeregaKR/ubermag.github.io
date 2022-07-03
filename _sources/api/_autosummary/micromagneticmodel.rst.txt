@@ -23,6 +23,8 @@
       EnergyTerm
       Evolver
       Exchange
+      ExternalDriver
+      ExternalRunner
       MagnetoElastic
       Precession
       RKKY

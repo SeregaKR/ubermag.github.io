@@ -13,6 +13,7 @@
       :toctree:
       :nosignatures:
    
+      changedir
       hysteresis_values
       inherit_docs
       setup_logging

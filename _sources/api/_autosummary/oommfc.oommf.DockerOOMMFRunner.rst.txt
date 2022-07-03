@@ -65,6 +65,7 @@ DockerOOMMFRunner
 
    .. autosummary::
    
+      ~DockerOOMMFRunner.package_name
       ~DockerOOMMFRunner.platform
       ~DockerOOMMFRunner.status
       ~DockerOOMMFRunner.version

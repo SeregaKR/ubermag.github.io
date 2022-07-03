@@ -12,6 +12,7 @@ discretisedfield.plotting
       :template: class-template.rst
       :nosignatures:
    
+      Hv
       K3dField
       K3dRegion
       MplField

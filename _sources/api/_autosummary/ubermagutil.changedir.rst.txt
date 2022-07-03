@@ -1,0 +1,6 @@
+ubermagutil.changedir
+=====================
+
+.. currentmodule:: ubermagutil
+
+.. autofunction:: changedir

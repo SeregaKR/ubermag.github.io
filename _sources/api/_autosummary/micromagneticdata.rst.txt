@@ -16,6 +16,8 @@
       CombinedDrive
       Data
       Drive
+      Mumax3Drive
+      OOMMFDrive
 
    .. rubric:: Functions
 

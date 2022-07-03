@@ -65,6 +65,7 @@ OOMMFRunner
 
    .. autosummary::
    
+      ~OOMMFRunner.package_name
       ~OOMMFRunner.platform
       ~OOMMFRunner.status
       ~OOMMFRunner.version

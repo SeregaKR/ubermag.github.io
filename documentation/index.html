@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Package documentation &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +49,7 @@
     <link rel="next" title="discretisedfield" href="discretisedfield.html" />
     <link rel="prev" title="Time-dependent fields and currents" href="../examples/notebooks/time-dependent-field-current.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -282,6 +284,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="notebooks/discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="notebooks/discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -400,6 +412,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="notebooks/micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -475,6 +492,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="oommfc.html">
@@ -664,6 +686,11 @@
    ubermag
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="compatibility.html">
+   Compatibility
+  </a>
+ </li>
 </ul>
 
   </div>
@@ -705,15 +732,18 @@
               <article class="bd-article" role="main">
                 
   <section id="package-documentation">
-<h1>Package documentation<a class="headerlink" href="#package-documentation" title="Permalink to this headline">#</a></h1>
-<p>The notebooks show here contain “technical” documentation for specific features
+<h1>Package documentation<a class="headerlink" href="#package-documentation" title="Permalink to this heading">#</a></h1>
+<p>The notebooks shown here contain “technical” documentation for specific features
 of the different packages. If you are new to <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> you should consider
 first looking at <a class="reference internal" href="../getting-started/index.html"><span class="doc">Getting started</span></a> which will give a gentle
 introduction into all the packages inside <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>.</p>
+<p>Different calculators (OOMMF and mumax<sup>3</sup>) support different feature sets. The
+<a class="reference internal" href="compatibility.html"><span class="doc">Compatibility: Ubermag - OOMMF - mumax3</span></a> page gives an overview over the different features. It also
+lists compatible versions for Ubermag, and OOMMF, and mumax<sup>3</sup>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <p>All packages are licensed under: <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause"><img alt="license" height="18px" src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" /></a></p>
-<table class="colwidths-given table">
+<table class="table">
 <colgroup>
 <col style="width: 18%" />
 <col style="width: 23%" />
@@ -770,7 +800,15 @@ introduction into all the packages inside <code class="docutils literal notransl
 <td><p><a class="reference external" href="https://codecov.io/gh/ubermag/micromagnetictests"><img alt="mt_coverage" src="https://codecov.io/gh/ubermag/micromagnetictests/branch/master/graph/badge.svg?token=hcK4fofmrL" style="height: 18px;" /></a></p></td>
 <td><p><a class="reference external" href="https://mybinder.org/v2/gh/ubermag/micromagnetictests/latest?urlpath=lab/tree/docs"><img alt="mt_binder" height="18px" src="https://mybinder.org/badge_logo.svg" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="oommfc.html"><span class="doc">oommfc</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="mumax3c.html"><span class="doc">mumax3c</span></a></p></td>
+<td><p><a class="reference external" href="https://badge.fury.io/py/mumax3c"><img alt="mc_pypi" height="18px" src="https://badge.fury.io/py/mumax3c.svg" /></a>
+<a class="reference external" href="https://anaconda.org/conda-forge/mumax3c"><img alt="mc_anaconda" height="18px" src="https://anaconda.org/conda-forge/mumax3c/badges/version.svg" /></a></p></td>
+<td><p><a class="reference external" href="https://github.com/ubermag/mumax3c/actions?query=workflow%3Aworkflow"><img alt="mc_workflow" height="18px" src="https://github.com/ubermag/mumax3c/workflows/workflow/badge.svg" /></a>
+<a class="reference external" href="https://github.com/ubermag/mumax3c/actions?query=workflow%3Aconda"><img alt="mc_conda" height="18px" src="https://github.com/ubermag/mumax3c/workflows/conda/badge.svg" /></a></p></td>
+<td><p><a class="reference external" href="https://codecov.io/gh/ubermag/mumax3c"><img alt="mc_coverage" src="https://codecov.io/gh/ubermag/mumax3c/branch/master/graph/badge.svg?token=hcK4fofmrL" style="height: 18px;" /></a></p></td>
+<td><p><a class="reference external" href="https://mybinder.org/v2/gh/ubermag/mumax3c/latest?urlpath=lab/tree/dmcs"><img alt="mc_binder" height="18px" src="https://mybinder.org/badge_logo.svg" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="oommfc.html"><span class="doc">oommfc</span></a></p></td>
 <td><p><a class="reference external" href="https://badge.fury.io/py/oommfc"><img alt="oc_pypi" height="18px" src="https://badge.fury.io/py/oommfc.svg" /></a>
 <a class="reference external" href="https://anaconda.org/conda-forge/oommfc"><img alt="oc_anaconda" height="18px" src="https://anaconda.org/conda-forge/oommfc/badges/version.svg" /></a></p></td>
 <td><p><a class="reference external" href="https://github.com/ubermag/oommfc/actions?query=workflow%3Aworkflow"><img alt="oc_workflow" height="18px" src="https://github.com/ubermag/oommfc/workflows/workflow/badge.svg" /></a>
@@ -778,7 +816,7 @@ introduction into all the packages inside <code class="docutils literal notransl
 <td><p><a class="reference external" href="https://codecov.io/gh/ubermag/oommfc"><img alt="oc_coverage" src="https://codecov.io/gh/ubermag/oommfc/branch/master/graph/badge.svg?token=hcK4fofmrL" style="height: 18px;" /></a></p></td>
 <td><p><a class="reference external" href="https://mybinder.org/v2/gh/ubermag/oommfc/latest?urlpath=lab/tree/docs"><img alt="oc_binder" height="18px" src="https://mybinder.org/badge_logo.svg" /></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ubermagtable.html"><span class="doc">ubermagtable</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ubermagtable.html"><span class="doc">ubermagtable</span></a></p></td>
 <td><p><a class="reference external" href="https://badge.fury.io/py/ubermagtable"><img alt="ut_pypi" height="18px" src="https://badge.fury.io/py/ubermagtable.svg" /></a>
 <a class="reference external" href="https://anaconda.org/conda-forge/ubermagtable"><img alt="ut_anaconda" height="18px" src="https://anaconda.org/conda-forge/ubermagtable/badges/version.svg" /></a></p></td>
 <td><p><a class="reference external" href="https://github.com/ubermag/ubermagtable/actions?query=workflow%3Aworkflow"><img alt="ut_workflow" height="18px" src="https://github.com/ubermag/ubermagtable/workflows/workflow/badge.svg" /></a>
@@ -786,7 +824,7 @@ introduction into all the packages inside <code class="docutils literal notransl
 <td><p><a class="reference external" href="https://codecov.io/gh/ubermag/ubermagtable"><img alt="ut_coverage" src="https://codecov.io/gh/ubermag/ubermagtable/branch/master/graph/badge.svg?token=hcK4fofmrL" style="height: 18px;" /></a></p></td>
 <td><p><a class="reference external" href="https://mybinder.org/v2/gh/ubermag/ubermagtable/latest?urlpath=lab/tree/docs"><img alt="ut_binder" height="18px" src="https://mybinder.org/badge_logo.svg" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ubermagutil.html"><span class="doc">ubermagutil</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ubermagutil.html"><span class="doc">ubermagutil</span></a></p></td>
 <td><p><a class="reference external" href="https://badge.fury.io/py/ubermagutil"><img alt="uu_pypi" height="18px" src="https://badge.fury.io/py/ubermagutil.svg" /></a>
 <a class="reference external" href="https://anaconda.org/conda-forge/ubermagutil"><img alt="uu_anaconda" height="18px" src="https://anaconda.org/conda-forge/ubermagutil/badges/version.svg" /></a></p></td>
 <td><p><a class="reference external" href="https://github.com/ubermag/ubermagutil/actions?query=workflow%3Aworkflow"><img alt="uu_workflow" height="18px" src="https://github.com/ubermag/ubermagutil/workflows/workflow/badge.svg" /></a>
@@ -794,7 +832,7 @@ introduction into all the packages inside <code class="docutils literal notransl
 <td><p><a class="reference external" href="https://codecov.io/gh/ubermag/ubermagutil"><img alt="uu_coverage" src="https://codecov.io/gh/ubermag/ubermagutil/branch/master/graph/badge.svg?token=hcK4fofmrL" style="height: 18px;" /></a></p></td>
 <td><p><a class="reference external" href="https://mybinder.org/v2/gh/ubermag/ubermagutil/latest?urlpath=lab/tree/docs"><img alt="uu_binder" height="18px" src="https://mybinder.org/badge_logo.svg" /></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ubermag.html"><span class="doc">ubermag</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ubermag.html"><span class="doc">ubermag</span></a></p></td>
 <td><p><a class="reference external" href="https://badge.fury.io/py/ubermag"><img alt="ub_pypi" height="18px" src="https://badge.fury.io/py/ubermag.svg" /></a>
 <a class="reference external" href="https://anaconda.org/conda-forge/ubermag"><img alt="ub_anaconda" height="18px" src="https://anaconda.org/conda-forge/ubermag/badges/version.svg" /></a></p></td>
 <td><p><a class="reference external" href="https://github.com/ubermag/ubermag/actions?query=workflow%3Aworkflow"><img alt="ub_workflow" height="18px" src="https://github.com/ubermag/ubermag/workflows/workflow/badge.svg" /></a>
@@ -845,13 +883,13 @@ introduction into all the packages inside <code class="docutils literal notransl
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

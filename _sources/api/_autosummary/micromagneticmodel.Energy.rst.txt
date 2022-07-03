@@ -38,6 +38,9 @@ Energy
       
       
       
+         ~Energy.__getitem__
+      
+      
       
       
       
@@ -71,6 +74,9 @@ Energy
       
       
          ~Energy.energy
+      
+      
+         ~Energy.get
       
    
    

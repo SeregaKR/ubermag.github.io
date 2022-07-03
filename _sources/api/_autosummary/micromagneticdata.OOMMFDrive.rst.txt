@@ -1,0 +1,90 @@
+OOMMFDrive
+==========
+
+.. currentmodule:: micromagneticdata
+
+.. autoclass:: OOMMFDrive
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      
+      
+         ~OOMMFDrive.__dir__
+      
+      
+         ~OOMMFDrive.__eq__
+      
+      
+      
+      
+      
+         ~OOMMFDrive.__getitem__
+      
+      
+      
+      
+      
+      
+         ~OOMMFDrive.__iter__
+      
+      
+      
+         ~OOMMFDrive.__lshift__
+      
+      
+      
+      
+      
+      
+      
+         ~OOMMFDrive.__repr__
+      
+      
+      
+      
+      
+      
+         ~OOMMFDrive.ovf2vtk
+      
+      
+         ~OOMMFDrive.slider
+      
+      
+         ~OOMMFDrive.to_xarray
+      
+   
+   
+
+   
+   
+   .. rubric:: Properties
+
+   .. autosummary::
+   
+      ~OOMMFDrive.calculator_script
+      ~OOMMFDrive.dirname
+      ~OOMMFDrive.hv
+      ~OOMMFDrive.info
+      ~OOMMFDrive.m0
+      ~OOMMFDrive.n
+      ~OOMMFDrive.name
+      ~OOMMFDrive.number
+      ~OOMMFDrive.table
+      ~OOMMFDrive.x
+   
+   
+
+   .. raw:: html
+
+      <hr>

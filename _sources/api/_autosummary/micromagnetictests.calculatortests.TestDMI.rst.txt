@@ -56,6 +56,9 @@ TestDMI
          ~TestDMI.test_crystalclass
       
       
+         ~TestDMI.test_crystalclass_init
+      
+      
          ~TestDMI.test_dict
       
       

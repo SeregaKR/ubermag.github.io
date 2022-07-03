@@ -66,6 +66,7 @@ CombinedDrive
 
    .. autosummary::
    
+      ~CombinedDrive.hv
       ~CombinedDrive.info
       ~CombinedDrive.m0
       ~CombinedDrive.n

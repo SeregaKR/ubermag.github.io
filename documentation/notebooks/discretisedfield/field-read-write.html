@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Reading and writing fields &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -47,9 +49,9 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Importing/Exporting field from/to xarray.DataArray" href="xarray-usage.html" />
-    <link rel="prev" title="Field visualisation using k3d" href="field-k3d-visualisation.html" />
+    <link rel="prev" title="Visualising field using holoviews" href="field-holoviews-visualisation.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -283,6 +285,16 @@
      </code>
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Reading and writing fields
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -991,7 +1018,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Reading-and-writing-fields">
-<h1>Reading and writing fields<a class="headerlink" href="#Reading-and-writing-fields" title="Permalink to this headline">#</a></h1>
+<h1>Reading and writing fields<a class="headerlink" href="#Reading-and-writing-fields" title="Permalink to this heading">#</a></h1>
 <p>There are three file formats to which a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object can be saved:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://vtk.org/">VTK</a> for visualisation using e.g., <a class="reference external" href="https://www.paraview.org/">ParaView</a> or <a class="reference external" href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a></p></li>
@@ -1042,7 +1069,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Writing-the-field-to-a-file">
-<h2>Writing the field to a file<a class="headerlink" href="#Writing-the-field-to-a-file" title="Permalink to this headline">#</a></h2>
+<h2>Writing the field to a file<a class="headerlink" href="#Writing-the-field-to-a-file" title="Permalink to this heading">#</a></h2>
 <p>The main method used for saving field in different files is <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.write()</span></code>. It takes <code class="docutils literal notranslate"><span class="pre">filename</span></code> as an argument, which is a string with one of the following extensions: - <code class="docutils literal notranslate"><span class="pre">'.vtk'</span></code> for saving in the VTK format - <code class="docutils literal notranslate"><span class="pre">'.ovf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.omf'</span></code>, <code class="docutils literal notranslate"><span class="pre">'.ohf'</span></code> for saving in the OVF format - <code class="docutils literal notranslate"><span class="pre">'.h5'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.hdf5'</span></code> for saving and HDF5 file</p>
 <p>Let us firstly save the field in the VTK file.</p>
 <div class="nbinput nblast docutils container">
@@ -1152,7 +1179,7 @@ True
 </div>
 </section>
 <section id="Reading-files">
-<h2>Reading files<a class="headerlink" href="#Reading-files" title="Permalink to this headline">#</a></h2>
+<h2>Reading files<a class="headerlink" href="#Reading-files" title="Permalink to this heading">#</a></h2>
 <p>The method for reading OVF files is a class method <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.fromfile()</span></code>. By passing a <code class="docutils literal notranslate"><span class="pre">filename</span></code> argument, it reads the file and creates a <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> object. It is not required to pass the representation of the OVF file to the <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.fromfile()</span></code> method, because it can retrieve it from the content of the file.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1200,11 +1227,11 @@ True
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="field-k3d-visualisation.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="field-holoviews-visualisation.html" title="previous page">
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Field visualisation using <code class="docutils literal notranslate"><span class="pre">k3d</span></code></p>
+          <p class="prev-next-title">Visualising field using <code class="docutils literal notranslate"><span class="pre">holoviews</span></code></p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="xarray-usage.html" title="next page">
@@ -1231,13 +1258,13 @@ True
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Time-dependent fields and currents &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Package documentation" href="../../documentation/index.html" />
     <link rel="prev" title="Time-varying field" href="time-dependent-field.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -661,7 +663,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Time-dependent-fields-and-currents">
-<h1>Time-dependent fields and currents<a class="headerlink" href="#Time-dependent-fields-and-currents" title="Permalink to this headline">#</a></h1>
+<h1>Time-dependent fields and currents<a class="headerlink" href="#Time-dependent-fields-and-currents" title="Permalink to this heading">#</a></h1>
 <p>It is possible to define an arbitrary time dependence for external Zeeman fields, Slonczewski and Zhang-Li currents. This is done via defining an additional time-dependent prefactor that is used to multiply the initial field/current values. Two different mechanisms can be used:</p>
 <ul class="simple">
 <li><p>Defining the time dependence in a Python function.</p></li>
@@ -688,12 +690,12 @@ dictionary <code class="docutils literal notranslate"><span class="pre">tcl_stri
 </div>
 </div>
 <section id="Zeeman-field">
-<h2>Zeeman field<a class="headerlink" href="#Zeeman-field" title="Permalink to this headline">#</a></h2>
+<h2>Zeeman field<a class="headerlink" href="#Zeeman-field" title="Permalink to this heading">#</a></h2>
 <section id="Python-function">
-<h3>Python function<a class="headerlink" href="#Python-function" title="Permalink to this headline">#</a></h3>
+<h3>Python function<a class="headerlink" href="#Python-function" title="Permalink to this heading">#</a></h3>
 <p>There are two differen options for time-dependent fields, either a scalar value can be used to define a field with varying amplitude or a matrix to define a field with varying amplitude and rotation.</p>
 <section id="Scalar">
-<h4>Scalar<a class="headerlink" href="#Scalar" title="Permalink to this headline">#</a></h4>
+<h4>Scalar<a class="headerlink" href="#Scalar" title="Permalink to this heading">#</a></h4>
 <p>To demonstrate a time-dependent field with varying amplitude we look at a toy example, a single macrospin in an exteral field. We define a system with only damping and neglect precession to simplify the motion. We initialise the magnetisation in <code class="docutils literal notranslate"><span class="pre">x</span></code> direction and apply a field pulse in <code class="docutils literal notranslate"><span class="pre">z</span></code> direction. We can observe the alignment with the external field.</p>
 <p><em>NOTE</em>: This system does not require a time-dependent field. It is much simpler to divide the process into two runs. First, we would apply a Zeeman field and drive the system for the duration of the pulse. Then we could remove the Zeeman field and drive the free system (see the end of this section). We only use this system with a time-dependent field (and a single run) because the motion is particularly easy to understand.</p>
 <p>For reference and comparison we first apply a static Zeeman field and drive the system for <span class="math notranslate nohighlight">\(5\,\mathrm{ns}\)</span>.</p>
@@ -829,7 +831,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (1.0 s)
 </div>
 <p>We can see that the macrospin starts to align with the external magnetic field. As the pulse is switched off at <span class="math notranslate nohighlight">\(1\,\mathrm{ns}\)</span> the motion stops and the system remains in the current state.</p>
 <section id="How-to-properly-simulate-this-field-pulse">
-<h5>How to properly simulate this field pulse<a class="headerlink" href="#How-to-properly-simulate-this-field-pulse" title="Permalink to this headline">#</a></h5>
+<h5>How to properly simulate this field pulse<a class="headerlink" href="#How-to-properly-simulate-this-field-pulse" title="Permalink to this heading">#</a></h5>
 <p>As already mentioned above the field pulse can be simulated without a time-dependent field. We briefly show how to do this. We first apply a constant field and drive the system for <span class="math notranslate nohighlight">\(1\,\mathrm{ns}\)</span>. Then we remove the field and drive the free system for <span class="math notranslate nohighlight">\(4\,\mathrm{ns}\)</span>. The main difference is that we end up with two separate runs (and tables).</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -906,7 +908,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (0.6 s)
 </section>
 </section>
 <section id="Pre-defined-functions">
-<h4>Pre-defined functions<a class="headerlink" href="#Pre-defined-functions" title="Permalink to this headline">#</a></h4>
+<h4>Pre-defined functions<a class="headerlink" href="#Pre-defined-functions" title="Permalink to this heading">#</a></h4>
 <p>Two of the most commonly used functions, <code class="docutils literal notranslate"><span class="pre">sin</span></code> and <code class="docutils literal notranslate"><span class="pre">sinc</span></code>, are available as pre-defined functions. These can be used as follows (again using the example of a macrospin). The user has to define:</p>
 <ul class="simple">
 <li><p>the <code class="docutils literal notranslate"><span class="pre">func</span></code>tion type (<code class="docutils literal notranslate"><span class="pre">sin</span></code> or <code class="docutils literal notranslate"><span class="pre">sinc</span></code>)</p></li>
@@ -991,7 +993,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (1.2 s)
 </div>
 </section>
 <section id="Experimentally-measured-time-dependence">
-<h4>Experimentally measured time-dependence<a class="headerlink" href="#Experimentally-measured-time-dependence" title="Permalink to this headline">#</a></h4>
+<h4>Experimentally measured time-dependence<a class="headerlink" href="#Experimentally-measured-time-dependence" title="Permalink to this heading">#</a></h4>
 <p>As a third example we assume that we have a list of values (with potentially non-uniform time stepping). This could for example be an experimentally measured time profile. Here, we generate some artifical data, an exponentially decaying sin wave with a constant offset.</p>
 <p><em>NOTE</em>: If your data contains noise you should apply some sort of smoothing.</p>
 <div class="nbinput docutils container">
@@ -1091,7 +1093,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (0.9 s)
 </div>
 </section>
 <section id="Vector">
-<h4>Vector<a class="headerlink" href="#Vector" title="Permalink to this headline">#</a></h4>
+<h4>Vector<a class="headerlink" href="#Vector" title="Permalink to this heading">#</a></h4>
 <p>The external magnetic field is a vector quantity and hence cannot only be modulated in amplitude but also rotated over time. Here we demonstrate a rotation in xy-plane (definition of the rotation following an example given on the OOMMF website <a class="reference external" href="https://math.nist.gov/oommf/doc/userguide20a2/userguide/Standard_Oxs_Ext_Child_Clas.html#TZ">https://math.nist.gov/oommf/doc/userguide20a2/userguide/Standard_Oxs_Ext_Child_Clas.html#TZ</a>). In the next section we use the same example, but with custom tcl.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
@@ -1186,7 +1188,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:19]... (6.7 s)
 </section>
 </section>
 <section id="Tcl">
-<h3>Tcl<a class="headerlink" href="#Tcl" title="Permalink to this headline">#</a></h3>
+<h3>Tcl<a class="headerlink" href="#Tcl" title="Permalink to this heading">#</a></h3>
 <p>If the above-presented ways of defining a time-dependence are not enough it is possible to pass several <code class="docutils literal notranslate"><span class="pre">tcl</span></code> strings that are directly forwarded to OOMMF. For any details on available options please refer to the relevant OOMMF documentation and check the generated <code class="docutils literal notranslate"><span class="pre">mif</span></code> file in case of problems or if additional information on certain parameters is required.</p>
 <p>To give an example we demonstrate the same rotation in xy-plane as shown in the section above.</p>
 <div class="nbinput nblast docutils container">
@@ -1287,10 +1289,10 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:20]... (3.3 s)
 </section>
 </section>
 <section id="Slonczewski-and-Zhang-Li-currents">
-<h2>Slonczewski and Zhang-Li currents<a class="headerlink" href="#Slonczewski-and-Zhang-Li-currents" title="Permalink to this headline">#</a></h2>
+<h2>Slonczewski and Zhang-Li currents<a class="headerlink" href="#Slonczewski-and-Zhang-Li-currents" title="Permalink to this heading">#</a></h2>
 <p>From the point of view of modelling time-dependent currents both Slonczewski and Zhang-Li behave the same. Examples here use <code class="docutils literal notranslate"><span class="pre">ZhangLi</span></code> but can be directly applied to <code class="docutils literal notranslate"><span class="pre">Slonczewski</span></code>.</p>
 <section id="id1">
-<h3>Python function<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Python function<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>The callable <code class="docutils literal notranslate"><span class="pre">time_dependence</span></code> must return a single number that is used to multiply the initial values. To demonstrate this we show an example of moving a domain wall with Zhang-Li current.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
@@ -1594,7 +1596,7 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:20]... (8.9 s)
 </div>
 </section>
 <section id="id2">
-<h3>Tcl<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3>Tcl<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>Custom <code class="docutils literal notranslate"><span class="pre">tcl</span></code> can be passed similar to the Zeeman field. The dictionary <code class="docutils literal notranslate"><span class="pre">tcl_strings</span></code> has to be passed to the energy term. It must contain the following keys (details on the OOMMF documentation pages):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">script</span></code>: the script for time-dependence</p></li>
@@ -1646,13 +1648,13 @@ Running OOMMF (ExeOOMMFRunner)[2022/02/25 18:20]... (8.9 s)
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

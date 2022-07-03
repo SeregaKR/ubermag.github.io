@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ovf2vtk tool &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="mag2exp" href="../../mag2exp.html" />
     <link rel="prev" title="Line object" href="line.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -666,6 +688,11 @@
    ubermag
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
+  </a>
+ </li>
 </ul>
 
   </div>
@@ -740,7 +767,7 @@
               <article class="bd-article" role="main">
                 
   <section id="ovf2vtk-tool">
-<h1><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool<a class="headerlink" href="#ovf2vtk-tool" title="Permalink to this headline">#</a></h1>
+<h1><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool<a class="headerlink" href="#ovf2vtk-tool" title="Permalink to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">discretisedfield.ovf2vtk</span></code> is a command line tool used to convert OVF to the VTK file format.</p>
 <p>Information about the tool and its usage can be accessed by typing:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --help
@@ -759,7 +786,7 @@ optional arguments:
 </div>
 <p>There are three main use cases how <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool can be used. In any case, specifying the output file name(s) is optional. More precisely, if the names of the output files are omitted, they are going to be the same as the input files, but with a different extension (<code class="docutils literal notranslate"><span class="pre">.vtk</span></code> instead of <code class="docutils literal notranslate"><span class="pre">.ovf</span></code>).</p>
 <section id="1.-Single-file">
-<h2>1. Single file<a class="headerlink" href="#1.-Single-file" title="Permalink to this headline">#</a></h2>
+<h2>1. Single file<a class="headerlink" href="#1.-Single-file" title="Permalink to this heading">#</a></h2>
 <p>Probably the simplest use case is the conversion of a single fie.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file.omf
 </pre></div>
@@ -770,14 +797,14 @@ optional arguments:
 </div>
 </section>
 <section id="2.-Multiple-files">
-<h2>2. Multiple files<a class="headerlink" href="#2.-Multiple-files" title="Permalink to this headline">#</a></h2>
+<h2>2. Multiple files<a class="headerlink" href="#2.-Multiple-files" title="Permalink to this heading">#</a></h2>
 <p>To convert multiple OVF files, a list of files is passed to the <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file1.omf my-ovf-file2.omf my-ovf-file3.omf
 </pre></div>
 </div>
 </section>
 <section id="3.-Wildcard">
-<h2>3. Wildcard<a class="headerlink" href="#3.-Wildcard" title="Permalink to this headline">#</a></h2>
+<h2>3. Wildcard<a class="headerlink" href="#3.-Wildcard" title="Permalink to this heading">#</a></h2>
 <p>Usually, the number of files which should be converted is very large. In that case, a filename with a wildcard can be passed.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --infile my-ovf-file*.omf
 </pre></div>
@@ -826,13 +853,13 @@ optional arguments:
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

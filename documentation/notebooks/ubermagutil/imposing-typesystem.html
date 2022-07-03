@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Imposing typesystem on a class &#8212; ubermag  documentation</title>
 <script>
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
 
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
@@ -35,6 +36,7 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
@@ -49,7 +51,7 @@
     <link rel="next" title="Constant attributes" href="constant-attributes.html" />
     <link rel="prev" title="ubermagutil" href="../../ubermagutil.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None">
+<meta name="docsearch:language" content="en">
   </head>
   
   
@@ -284,6 +286,16 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../discretisedfield/field-holoviews-visualisation.html">
+     Visualising field using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       holoviews
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../discretisedfield/field-read-write.html">
      Reading and writing fields
     </a>
@@ -402,6 +414,11 @@
      Analysing simulation results
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../micromagneticdata/interactive_plotting.html">
+     Interactive plots
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -477,6 +494,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mumax3c.html">
+   mumax3c
+  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../oommfc.html">
@@ -664,6 +686,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../ubermag.html">
    ubermag
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../compatibility.html">
+   Compatibility
   </a>
  </li>
 </ul>
@@ -1001,9 +1028,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Imposing-typesystem-on-a-class">
-<h1>Imposing <code class="docutils literal notranslate"><span class="pre">typesystem</span></code> on a class<a class="headerlink" href="#Imposing-typesystem-on-a-class" title="Permalink to this headline">#</a></h1>
+<h1>Imposing <code class="docutils literal notranslate"><span class="pre">typesystem</span></code> on a class<a class="headerlink" href="#Imposing-typesystem-on-a-class" title="Permalink to this heading">#</a></h1>
 <section id="Properties">
-<h2>Properties<a class="headerlink" href="#Properties" title="Permalink to this headline">#</a></h2>
+<h2>Properties<a class="headerlink" href="#Properties" title="Permalink to this heading">#</a></h2>
 <p>It is often necessary to allow only certain values to be assigned to an attribute of a class. That can be achieved using properties. For instance, if we want to implement class <code class="docutils literal notranslate"><span class="pre">Square</span></code> and allow only positive values for the square edge length <code class="docutils literal notranslate"><span class="pre">a</span></code>, the implementation would be:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -1050,7 +1077,7 @@ Exception raised.
 </div>
 </section>
 <section id="Imposing-typesystem-using-ubermagutil.typesystem">
-<h2>Imposing typesystem using <code class="docutils literal notranslate"><span class="pre">ubermagutil.typesystem</span></code><a class="headerlink" href="#Imposing-typesystem-using-ubermagutil.typesystem" title="Permalink to this headline">#</a></h2>
+<h2>Imposing typesystem using <code class="docutils literal notranslate"><span class="pre">ubermagutil.typesystem</span></code><a class="headerlink" href="#Imposing-typesystem-using-ubermagutil.typesystem" title="Permalink to this heading">#</a></h2>
 <p>In large projects with a large number of classes, a lot of input checks have to be performed. This makes the code grow and it causes a lot of code repetition. An example of the <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code> usage for the previously shown <code class="docutils literal notranslate"><span class="pre">Square</span></code> class is</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -1173,7 +1200,7 @@ mc.name: Exception raised.
 </div>
 </section>
 <section id="Deleting-an-attribute">
-<h2>Deleting an attribute<a class="headerlink" href="#Deleting-an-attribute" title="Permalink to this headline">#</a></h2>
+<h2>Deleting an attribute<a class="headerlink" href="#Deleting-an-attribute" title="Permalink to this heading">#</a></h2>
 <p>Deleting an attribute is never allowed and an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> is raised.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1239,13 +1266,13 @@ Exception raised.
   
   <div class="footer-item">
     <p class="copyright">
-    &copy; Copyright 2021, Marijan Beg and Hans Fangohr.<br>
+    &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
 </p>
   </div>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
 </p>
   </div>
   

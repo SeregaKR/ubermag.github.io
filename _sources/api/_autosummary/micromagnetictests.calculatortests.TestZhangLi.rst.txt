@@ -58,6 +58,9 @@ TestZhangLi
       
          ~TestZhangLi.test_scalar_scalar
       
+      
+         ~TestZhangLi.test_time_scalar_scalar
+      
    
    
 
