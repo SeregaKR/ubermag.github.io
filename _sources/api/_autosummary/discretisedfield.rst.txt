@@ -38,6 +38,5 @@
     :template: module-template.rst
     :recursive:
 
-    ovf2vtk
     plotting
     tools

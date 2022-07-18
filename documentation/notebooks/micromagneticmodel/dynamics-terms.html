@@ -1288,7 +1288,7 @@ $-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times 
 </div>
 <div class="output_area docutils container">
 <div class="math notranslate nohighlight">
-$-(\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m} + \beta\mathbf{m} \times \big[(\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}\big]$</div></div>
+$-\frac{1+\alpha\beta}{1+\alpha^{2}} \mathbf{m} \times (\mathbf{m} \times (\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}) - \frac{\beta - \alpha}{1+\alpha^{2}} \mathbf{m} \times (\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}$</div></div>
 </div>
 <p>For time-dependent current terms please refer to <a class="reference external" href="https://ubermag.github.io/documentation/ipynb/oommfc/timedependent-field-current.html">this notebook</a>.</p>
 </section>
@@ -1381,7 +1381,7 @@ $-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\fra
 </div>
 <div class="output_area docutils container">
 <div class="math notranslate nohighlight">
-$-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times \mathbf{H}_\text{eff})-(\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m} + \beta\mathbf{m} \times \big[(\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}\big]$</div></div>
+$-\frac{\gamma_{0}}{1 + \alpha^{2}} \mathbf{m} \times \mathbf{H}_\text{eff}-\frac{\gamma_{0} \alpha}{1 + \alpha^{2}} \mathbf{m} \times (\mathbf{m} \times \mathbf{H}_\text{eff})-\frac{1+\alpha\beta}{1+\alpha^{2}} \mathbf{m} \times (\mathbf{m} \times (\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}) - \frac{\beta - \alpha}{1+\alpha^{2}} \mathbf{m} \times (\mathbf{u} \cdot \boldsymbol\nabla)\mathbf{m}$</div></div>
 </div>
 <section id="Accesing-individual-dynamics-terms-from-the-dynamics-equation">
 <h3>Accesing individual dynamics terms from the dynamics equation<a class="headerlink" href="#Accesing-individual-dynamics-terms-from-the-dynamics-equation" title="Permalink to this heading">#</a></h3>
