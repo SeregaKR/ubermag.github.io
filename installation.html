@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Installation &#8212; ubermag  documentation</title>
 <script>
@@ -46,8 +46,8 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Demo" href="demo.html" />
-    <link rel="prev" title="Ubermag" href="index.html" />
+    <link rel="next" title="Documentation" href="documentation.html" />
+    <link rel="prev" title="Demo" href="demo.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -91,39 +91,21 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 current active nav-item">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="demo.html">
+  Demo
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
   Installation
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="demo.html">
-  Demo
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="getting-started/index.html">
-  Getting started
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="examples/index.html">
-  Examples
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="documentation/index.html">
-  Package documentation
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="api/index.html">
-  API
+ <a class="reference internal nav-link" href="documentation.html">
+  Documentation
  </a>
 </li>
 
@@ -136,6 +118,18 @@
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="help.html">
   Help
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="contributing.html">
+  Contributing
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="news.html">
+  News
  </a>
 </li>
 
@@ -206,6 +200,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-a-calculator">
+     Installing a calculator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#testing">
      Testing
     </a>
@@ -262,8 +261,8 @@
                 
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
-<p>All packages in Ubermag are available on both <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> and <code class="docutils literal notranslate"><span class="pre">PyPI</span></code>. All
-packages can be installed independently using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>. To simplify the
+<p>All packages in Ubermag are available on both <a class="reference external" href="https://conda-forge.org">conda forge</a> and <a class="reference external" href="https://pypi.org">PyPI</a>. All packages can
+be installed independently using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>. To simplify the
 installation for users doing micromagnetic simulations we provide a meta-package
 called <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>. During installation of this packages all individual
 subpackages and additionally <a class="reference external" href="https://math.nist.gov/oommf/">OOMMF</a> are
@@ -289,8 +288,8 @@ to the PATH variable).</p>
 <section id="installation-environment">
 <h3>Installation environment<a class="headerlink" href="#installation-environment" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6db53a5f-5fb8-4b49-b78f-72ee65635fb8" name="bdd70e69-7b7e-4853-9916-b3cabe2dd170" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="6db53a5f-5fb8-4b49-b78f-72ee65635fb8">
+<input checked="checked" id="3042a1a8-c19b-4879-a1d1-aaab83715134" name="3798c201-7d01-4f16-9784-dca3a09dbb1b" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="3042a1a8-c19b-4879-a1d1-aaab83715134">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <p>We recommend installation using <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. If you do not
 already have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python 3.8+ for your operating
@@ -305,8 +304,8 @@ $ conda activate ubermag
 </pre></div>
 </div>
 </div>
-<input id="b7da3e44-6539-4b64-b7f4-4e2e53a63395" name="bdd70e69-7b7e-4853-9916-b3cabe2dd170" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="b7da3e44-6539-4b64-b7f4-4e2e53a63395">
+<input id="554e55ba-2aa1-451a-b284-4ad6f42a9a52" name="3798c201-7d01-4f16-9784-dca3a09dbb1b" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="554e55ba-2aa1-451a-b284-4ad6f42a9a52">
 pip + venv</label><div class="sd-tab-content docutils">
 <p>If you do not want to use or cannot use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can also install
 <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> via <code class="docutils literal notranslate"><span class="pre">pip</span></code>. You have to manually install Python and pip for
@@ -336,19 +335,78 @@ show the installation of the <code class="docutils literal notranslate"><span cl
 packages, replace <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> with the name of the package that you want to
 install.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="44a1d6dc-8a1e-4e89-a0df-834f4715cd1a" name="e8b4e3ea-ae26-4052-95a6-93372c59c91b" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="44a1d6dc-8a1e-4e89-a0df-834f4715cd1a">
+<input checked="checked" id="7cfb20f3-413d-42dc-ac4f-071c0e705312" name="31c3235e-e2ec-448d-bb5f-52471f47c7fa" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="7cfb20f3-413d-42dc-ac4f-071c0e705312">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge ubermag
 </pre></div>
 </div>
 </div>
-<input id="adf7a73f-1c4b-4c60-8f63-20289b0fb535" name="e8b4e3ea-ae26-4052-95a6-93372c59c91b" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="adf7a73f-1c4b-4c60-8f63-20289b0fb535">
+<input id="cc7bc82a-bdeb-4491-94f6-14000bc24b7b" name="31c3235e-e2ec-448d-bb5f-52471f47c7fa" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="cc7bc82a-bdeb-4491-94f6-14000bc24b7b">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install ubermag
 </pre></div>
 </div>
+</div>
+</div>
+<p>If you want to use <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> in a Jupyter notebook we provide a short summary
+of how to run <a class="reference internal" href="getting-started/jupyter-basics.html"><span class="doc">Jupyter lab</span></a>.</p>
+</section>
+<section id="installing-a-calculator">
+<h3>Installing a calculator<a class="headerlink" href="#installing-a-calculator" title="Permalink to this heading">#</a></h3>
+<p>Ubermag can use different existing micromagnetic calculators (currently OOMMF
+and mumax<sup>3</sup>).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="b86d1098-7938-4ef8-ae8b-14827314ab6c" name="a637d503-e422-401c-98b8-6d792bcca753" type="radio">
+</input><label class="sd-tab-label" for="b86d1098-7938-4ef8-ae8b-14827314ab6c">
+OOMMF</label><div class="sd-tab-content docutils">
+<p>When you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> OOMMF will be automatically
+installed and <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> (more precisely <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>) knows how to find it. If
+you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">/pip</span></code> you have to install OOMMF manually and
+make sure that <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> can find it. This also allows you to use a custom
+version of OOMMF. If you have no OOMMF installed but Docker is available
+<code class="docutils literal notranslate"><span class="pre">ubermag</span></code> will automatically attempt to download and use a Docker image
+that contains OOMMF.</p>
+<p>For detailed instructions how to use a non-default OOMMF installation
+please refer to
+<a class="reference internal" href="documentation/notebooks/oommfc/controlling-default-runner.html"><span class="doc">Controlling the default runner</span></a>.</p>
+</div>
+<input id="130eebf5-52f3-429d-98e9-8696c9b88bae" name="a637d503-e422-401c-98b8-6d792bcca753" type="radio">
+</input><label class="sd-tab-label" for="130eebf5-52f3-429d-98e9-8696c9b88bae">
+mumax<sup>3</sup></label><div class="sd-tab-content docutils">
+<p>Mumax<sup>3</sup> does not directly come with <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> and you have to
+install it manually (following the instructions on the mumax<sup>3</sup>
+website). There are two different options how <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> (more precisely
+<code class="docutils literal notranslate"><span class="pre">mumax3c</span></code>) can use your custom mumax<sup>3</sup> installation.</p>
+<ol class="arabic">
+<li><p>You can add the directory containing the mumax<sup>3</sup> executable to
+your PATH variable. <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> by default looks for an executable called
+<code class="docutils literal notranslate"><span class="pre">mumax3</span></code> on PATH.</p></li>
+<li><p>You can change the name of the default executable in <code class="docutils literal notranslate"><span class="pre">mumax3c</span></code> when you
+import it as follows:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="3bc940b5-d293-4003-a1ba-93ed9cda4eb5" name="21a7ff17-4577-4cab-9037-eda62c8e887a" type="radio">
+</input><label class="sd-tab-label" for="3bc940b5-d293-4003-a1ba-93ed9cda4eb5">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
+<span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="s1">&#39;/full/path/to/mumax/executable&#39;</span>
+</pre></div>
+</div>
+</div>
+<input id="d2e5dc8e-5342-41b3-8c61-9b3d7542f77c" name="21a7ff17-4577-4cab-9037-eda62c8e887a" type="radio">
+</input><label class="sd-tab-label" for="d2e5dc8e-5342-41b3-8c61-9b3d7542f77c">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
+<span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\full\path\to\mumax\executable.exe&#39;</span>
+</pre></div>
+</div>
+<p>A raw string is required to avoid that backslash + next character are
+interpreted as escape sequences in the Python string.</p>
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </section>
@@ -366,15 +424,15 @@ the meta-package. If no errors are reported, the installation was successful.</p
 <p>Every <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> can be updated by running (if necessary replace <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>
 with the name of your package):</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="93462bcb-ed10-4fb2-bd61-b276e3f7a3c9" name="58478439-60f2-4349-84a9-5170a7c57c7d" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="93462bcb-ed10-4fb2-bd61-b276e3f7a3c9">
+<input checked="checked" id="b597450d-4e98-45b9-880b-63fab29b33ad" name="93bd13fb-9724-4dee-86b0-ce259d2a6516" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="b597450d-4e98-45b9-880b-63fab29b33ad">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda update ubermag
 </pre></div>
 </div>
 </div>
-<input id="3c0c4d2a-06fe-4447-97fd-dc7f078bfaba" name="58478439-60f2-4349-84a9-5170a7c57c7d" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="3c0c4d2a-06fe-4447-97fd-dc7f078bfaba">
+<input id="03216e94-4032-4f44-9408-dbe40d59b0f6" name="93bd13fb-9724-4dee-86b0-ce259d2a6516" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="03216e94-4032-4f44-9408-dbe40d59b0f6">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade ubermag
 </pre></div>
@@ -396,8 +454,8 @@ automatically (for OOMMF). However, if for some reason you need more freedom in
 choosing the computational backend, please follow the steps explained
 subsequently for your operating system.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6e58eb51-970b-4da8-97da-bf93724b20de" name="0a4b55ed-5416-4fdb-8205-6897f9624ff9" type="radio">
-</input><label class="sd-tab-label" for="6e58eb51-970b-4da8-97da-bf93724b20de">
+<input checked="checked" id="c6803db0-3952-4da3-ad1b-25c9407191ed" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
+</input><label class="sd-tab-label" for="c6803db0-3952-4da3-ad1b-25c9407191ed">
 Windows</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -428,8 +486,8 @@ select <code class="docutils literal notranslate"><span class="pre">System</span
 <code class="docutils literal notranslate"><span class="pre">C:\path\you\remembered\from\step2\oommf.tcl</span></code> to Variable value.</p></li>
 </ol>
 </div>
-<input id="918e498e-2f19-4a6a-ae9d-b0dbf166216f" name="0a4b55ed-5416-4fdb-8205-6897f9624ff9" type="radio">
-</input><label class="sd-tab-label" for="918e498e-2f19-4a6a-ae9d-b0dbf166216f">
+<input id="8caa2475-c32a-4bc5-91a4-3598d29b0dc5" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
+</input><label class="sd-tab-label" for="8caa2475-c32a-4bc5-91a4-3598d29b0dc5">
 MacOS</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -469,8 +527,8 @@ window.</strong></p>
 </li>
 </ol>
 </div>
-<input id="391167a7-9d55-4ce1-85aa-0c9d00f7487b" name="0a4b55ed-5416-4fdb-8205-6897f9624ff9" type="radio">
-</input><label class="sd-tab-label" for="391167a7-9d55-4ce1-85aa-0c9d00f7487b">
+<input id="697ad30f-d487-40a4-a5bb-53d4130a63b4" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
+</input><label class="sd-tab-label" for="697ad30f-d487-40a4-a5bb-53d4130a63b4">
 Linux (Ubuntu)</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>To install Ubermag, we first have to make sure you have <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed.
@@ -572,17 +630,17 @@ recommended</a>.</p>
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="demo.html" title="previous page">
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">Ubermag</p>
+          <p class="prev-next-title">Demo</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="demo.html" title="next page">
+  <a class='right-next' id="next-link" href="documentation.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Demo</p>
+      <p class="prev-next-title">Documentation</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>
@@ -609,7 +667,7 @@ recommended</a>.</p>
   
   <div class="footer-item">
     <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
   </div>
   
