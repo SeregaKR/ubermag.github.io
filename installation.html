@@ -7,31 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Installation &#8212; ubermag  documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+  <script>
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
 
-
+  
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="_static/vendor/fontawesome/6.1.2/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/colours.css" />
-
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -42,26 +42,46 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'installation';</script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Documentation" href="documentation.html" />
     <link rel="prev" title="Demo" href="demo.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
   </head>
   
   
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
       
-
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
     </div>
+  </div>
 
-    
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
-
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fas fa-bars"></span>
+  </label>
   <div id="navbar-start">
     
     
@@ -69,9 +89,15 @@
 
 
 <a class="navbar-brand logo" href="index.html">
+
   
   
   
+  
+  
+  
+  
+
   
     <img src="_static/logoL.png" class="logo__image only-light" alt="Logo image">
     <img src="_static/logoL.png" class="logo__image only-dark" alt="Logo image">
@@ -81,184 +107,267 @@
     
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
-  </button>
-
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div class="col-lg-9 navbar-header-items">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="demo.html">
-  Demo
- </a>
-</li>
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="demo.html">
+                        Demo
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
-  Installation
- </a>
-</li>
+                <li class="nav-item current active">
+                    <a class="nav-link" href="#">
+                        Installation
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="documentation.html">
-  Documentation
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="documentation.html">
+                        Documentation
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="changelog.html">
-  Changelog
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="changelog.html">
+                        Changelog
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="help.html">
-  Help
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">
+                        Help
+                    </a>
+                </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                <li class="nav-item">
+                    <a class="nav-link" href="contributing.html">
+                        Contributing
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="contributing.html">
-  Contributing
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="news.html">
-  News
- </a>
-</li>
-
-    
-</ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">
+                        News
+                    </a>
+                </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
       </div>
       
     </div>
 
     <div id="navbar-end">
+      <div class="navbar-end-item navbar-end__search-button-container">
+        
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
+  <i class="fas fa-search"></i>
+</button>
+      </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ubermag" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ubermag" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
       
       <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+        
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </div>
       
     </div>
   </div>
-</div>
-    </nav>
-    
-
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
-          
-
-<div class="sidebar-primary col-12 col-md-1 col-xl-2 bd-sidebar no-sidebar"></div>
 
 
-          
-
-
-<div class="bd-sidebar-secondary d-none d-md-block col-md-2 bd-toc">
   
-    
-    <div class="toc-item">
-      
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+  <div class="search-button-container--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
+  <i class="fas fa-search"></i>
+</button>
+  </div>
 
-<nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#standard-installation-recommended">
-   Standard installation – recommended
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation-environment">
-     Installation environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Installation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-a-calculator">
-     Installing a calculator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing">
-     Testing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update">
-     Update
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#advanced-installation">
-   Advanced installation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-the-installation">
-     Check the installation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-does-ubermag-find-oommf">
-     How does Ubermag find OOMMF?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#development-installation">
-   Development installation
-  </a>
- </li>
-</ul>
-
-</nav>
-
-
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
   
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fas fa-outdent"></span>
+  </label>
+  
+
 </div>
+  </nav>
+  
 
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-8">
-              
-              <article class="bd-article" role="main">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="demo.html">
+                        Demo
+                    </a>
+                </li>
                 
+
+                <li class="nav-item current active">
+                    <a class="nav-link" href="#">
+                        Installation
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="documentation.html">
+                        Documentation
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="changelog.html">
+                        Changelog
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">
+                        Help
+                    </a>
+                </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                <li class="nav-item">
+                    <a class="nav-link" href="contributing.html">
+                        Contributing
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">
+                        News
+                    </a>
+                </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ubermag" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+      </div>
+      <main class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
 <p>All packages in Ubermag are available on both <a class="reference external" href="https://conda-forge.org">conda forge</a> and <a class="reference external" href="https://pypi.org">PyPI</a>. All packages can
@@ -288,8 +397,8 @@ to the PATH variable).</p>
 <section id="installation-environment">
 <h3>Installation environment<a class="headerlink" href="#installation-environment" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="3042a1a8-c19b-4879-a1d1-aaab83715134" name="3798c201-7d01-4f16-9784-dca3a09dbb1b" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="3042a1a8-c19b-4879-a1d1-aaab83715134">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-0">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <p>We recommend installation using <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. If you do not
 already have it installed, download <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> Python 3.8+ for your operating
@@ -304,8 +413,8 @@ $ conda activate ubermag
 </pre></div>
 </div>
 </div>
-<input id="554e55ba-2aa1-451a-b284-4ad6f42a9a52" name="3798c201-7d01-4f16-9784-dca3a09dbb1b" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="554e55ba-2aa1-451a-b284-4ad6f42a9a52">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-1">
 pip + venv</label><div class="sd-tab-content docutils">
 <p>If you do not want to use or cannot use <code class="docutils literal notranslate"><span class="pre">conda</span></code> you can also install
 <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> via <code class="docutils literal notranslate"><span class="pre">pip</span></code>. You have to manually install Python and pip for
@@ -335,15 +444,15 @@ show the installation of the <code class="docutils literal notranslate"><span cl
 packages, replace <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> with the name of the package that you want to
 install.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="7cfb20f3-413d-42dc-ac4f-071c0e705312" name="31c3235e-e2ec-448d-bb5f-52471f47c7fa" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="7cfb20f3-413d-42dc-ac4f-071c0e705312">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-2">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install --channel conda-forge ubermag
 </pre></div>
 </div>
 </div>
-<input id="cc7bc82a-bdeb-4491-94f6-14000bc24b7b" name="31c3235e-e2ec-448d-bb5f-52471f47c7fa" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="cc7bc82a-bdeb-4491-94f6-14000bc24b7b">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-3">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install ubermag
 </pre></div>
@@ -358,8 +467,8 @@ of how to run <a class="reference internal" href="getting-started/jupyter-basics
 <p>Ubermag can use different existing micromagnetic calculators (currently OOMMF
 and mumax<sup>3</sup>).</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b86d1098-7938-4ef8-ae8b-14827314ab6c" name="a637d503-e422-401c-98b8-6d792bcca753" type="radio">
-</input><label class="sd-tab-label" for="b86d1098-7938-4ef8-ae8b-14827314ab6c">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 OOMMF</label><div class="sd-tab-content docutils">
 <p>When you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> OOMMF will be automatically
 installed and <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> (more precisely <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>) knows how to find it. If
@@ -372,8 +481,8 @@ that contains OOMMF.</p>
 please refer to
 <a class="reference internal" href="documentation/notebooks/oommfc/controlling-default-runner.html"><span class="doc">Controlling the default runner</span></a>.</p>
 </div>
-<input id="130eebf5-52f3-429d-98e9-8696c9b88bae" name="a637d503-e422-401c-98b8-6d792bcca753" type="radio">
-</input><label class="sd-tab-label" for="130eebf5-52f3-429d-98e9-8696c9b88bae">
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 mumax<sup>3</sup></label><div class="sd-tab-content docutils">
 <p>Mumax<sup>3</sup> does not directly come with <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> and you have to
 install it manually (following the instructions on the mumax<sup>3</sup>
@@ -386,16 +495,16 @@ your PATH variable. <code class="docutils literal notranslate"><span class="pre"
 <li><p>You can change the name of the default executable in <code class="docutils literal notranslate"><span class="pre">mumax3c</span></code> when you
 import it as follows:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="3bc940b5-d293-4003-a1ba-93ed9cda4eb5" name="21a7ff17-4577-4cab-9037-eda62c8e887a" type="radio">
-</input><label class="sd-tab-label" for="3bc940b5-d293-4003-a1ba-93ed9cda4eb5">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
 <span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="s1">&#39;/full/path/to/mumax/executable&#39;</span>
 </pre></div>
 </div>
 </div>
-<input id="d2e5dc8e-5342-41b3-8c61-9b3d7542f77c" name="21a7ff17-4577-4cab-9037-eda62c8e887a" type="radio">
-</input><label class="sd-tab-label" for="d2e5dc8e-5342-41b3-8c61-9b3d7542f77c">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mumax3c</span>
 <span class="n">mumax3c</span><span class="o">.</span><span class="n">runner</span><span class="o">.</span><span class="n">mumax3_exe</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\full\path\to\mumax\executable.exe&#39;</span>
@@ -424,15 +533,15 @@ the meta-package. If no errors are reported, the installation was successful.</p
 <p>Every <code class="docutils literal notranslate"><span class="pre">PACKAGE</span></code> can be updated by running (if necessary replace <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>
 with the name of your package):</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b597450d-4e98-45b9-880b-63fab29b33ad" name="93bd13fb-9724-4dee-86b0-ce259d2a6516" type="radio">
-</input><label class="sd-tab-label" data-sync-id="conda_install" for="b597450d-4e98-45b9-880b-63fab29b33ad">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="conda_install" for="sd-tab-item-8">
 conda (recommended)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda update ubermag
 </pre></div>
 </div>
 </div>
-<input id="03216e94-4032-4f44-9408-dbe40d59b0f6" name="93bd13fb-9724-4dee-86b0-ce259d2a6516" type="radio">
-</input><label class="sd-tab-label" data-sync-id="pip_install" for="03216e94-4032-4f44-9408-dbe40d59b0f6">
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="pip_install" for="sd-tab-item-9">
 pip + venv</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade ubermag
 </pre></div>
@@ -454,8 +563,8 @@ automatically (for OOMMF). However, if for some reason you need more freedom in
 choosing the computational backend, please follow the steps explained
 subsequently for your operating system.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="c6803db0-3952-4da3-ad1b-25c9407191ed" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
-</input><label class="sd-tab-label" for="c6803db0-3952-4da3-ad1b-25c9407191ed">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
 Windows</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -486,8 +595,8 @@ select <code class="docutils literal notranslate"><span class="pre">System</span
 <code class="docutils literal notranslate"><span class="pre">C:\path\you\remembered\from\step2\oommf.tcl</span></code> to Variable value.</p></li>
 </ol>
 </div>
-<input id="8caa2475-c32a-4bc5-91a4-3598d29b0dc5" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
-</input><label class="sd-tab-label" for="8caa2475-c32a-4bc5-91a4-3598d29b0dc5">
+<input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
 MacOS</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Before we install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code>, we need to install <code class="docutils literal notranslate"><span class="pre">Python3</span></code> Anaconda
@@ -527,8 +636,8 @@ window.</strong></p>
 </li>
 </ol>
 </div>
-<input id="697ad30f-d487-40a4-a5bb-53d4130a63b4" name="5b9370ec-017e-4d5b-9ee9-70e65d4b4fd4" type="radio">
-</input><label class="sd-tab-label" for="697ad30f-d487-40a4-a5bb-53d4130a63b4">
+<input id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
 Linux (Ubuntu)</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>To install Ubermag, we first have to make sure you have <code class="docutils literal notranslate"><span class="pre">pip</span></code> installed.
@@ -623,12 +732,12 @@ recommended</a>.</p>
 </section>
 
 
-              </article>
-              
-
-              
-              <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
   <a class='left-prev' id="prev-link" href="demo.html" title="previous page">
       <i class="fas fa-angle-left"></i>
@@ -645,33 +754,137 @@ recommended</a>.</p>
   <i class="fas fa-angle-right"></i>
   </a>
 </div>
-              </footer>
-              
+            </footer>
+            
           </div>
           
-      </div>
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#standard-installation-recommended">
+   Standard installation – recommended
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation-environment">
+     Installation environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-a-calculator">
+     Installing a calculator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing">
+     Testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update">
+     Update
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-installation">
+   Advanced installation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-the-installation">
+     Check the installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-ubermag-find-oommf">
+     How does Ubermag find OOMMF?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#development-installation">
+   Development installation
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="_sources/installation.rst.txt">
+        <i class="fas fa-file-alt"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
     </div>
+  </div>
 
   
-  
+    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b"></script>
 
-<footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer"><div class="bd-footer__inner container">
   
   <div class="footer-item">
-    <p class="copyright">
+    
+<p class="copyright">
+
     &copy; Copyright 2022, Marijan Beg and Hans Fangohr.<br>
+
 </p>
+
   </div>
   
   <div class="footer-item">
-    <p class="sphinx-version">
+    
+<p class="sphinx-version">
 Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.1.1.<br>
 </p>
+
   </div>
   
 </div>
-</footer>
+  </footer>
   </body>
 </html>
