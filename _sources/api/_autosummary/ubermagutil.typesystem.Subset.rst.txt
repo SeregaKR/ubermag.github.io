@@ -18,39 +18,11 @@ Subset
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Subset.__delete__
-      
-      
          ~Subset.__dir__
-      
-      
          ~Subset.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Subset.__repr__
-      
-      
          ~Subset.__set__
-      
-      
-      
-      
-      
    
    
 

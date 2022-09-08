@@ -18,42 +18,12 @@ K3dField
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~K3dField.__dir__
-      
-      
          ~K3dField.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~K3dField.__repr__
-      
-      
-      
-      
-      
-      
          ~K3dField.nonzero
-      
-      
          ~K3dField.scalar
-      
-      
          ~K3dField.vector
-      
    
    
 

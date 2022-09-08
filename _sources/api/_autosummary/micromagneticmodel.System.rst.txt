@@ -18,33 +18,9 @@ System
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~System.__dir__
-      
-      
          ~System.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~System.__repr__
-      
-      
-      
-      
-      
    
    
 

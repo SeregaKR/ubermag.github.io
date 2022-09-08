@@ -18,42 +18,12 @@ Damping
    .. autosummary::
       :nosignatures:
    
-      
          ~Damping.__add__
-      
-      
-      
          ~Damping.__dir__
-      
-      
          ~Damping.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Damping.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Damping.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Damping.dmdt
-      
    
    
 

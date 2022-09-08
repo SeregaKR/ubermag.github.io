@@ -18,36 +18,10 @@ Abstract
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Abstract.__dir__
-      
-      
          ~Abstract.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Abstract.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Abstract.__repr__
-      
-      
-      
-      
-      
    
    
 

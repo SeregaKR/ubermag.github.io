@@ -18,48 +18,14 @@ EnergyTerm
    .. autosummary::
       :nosignatures:
    
-      
          ~EnergyTerm.__add__
-      
-      
-      
          ~EnergyTerm.__dir__
-      
-      
          ~EnergyTerm.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~EnergyTerm.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~EnergyTerm.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~EnergyTerm.density
-      
-      
          ~EnergyTerm.effective_field
-      
-      
          ~EnergyTerm.energy
-      
    
    
 

@@ -18,44 +18,12 @@ OOMMFRunner
    .. autosummary::
       :nosignatures:
    
-      
          ~OOMMFRunner.__del__
-      
-      
-      
          ~OOMMFRunner.__dir__
-      
-      
          ~OOMMFRunner.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~OOMMFRunner.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
          ~OOMMFRunner.call
-      
-      
          ~OOMMFRunner.errors
-      
    
    
 

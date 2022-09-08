@@ -18,44 +18,11 @@ FieldRotator
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~FieldRotator.__dir__
-      
-      
          ~FieldRotator.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~FieldRotator.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~FieldRotator.clear_rotation
-      
-      
          ~FieldRotator.rotate
-      
    
    
 

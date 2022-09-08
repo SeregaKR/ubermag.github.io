@@ -18,57 +18,17 @@ Dynamics
    .. autosummary::
       :nosignatures:
    
-      
          ~Dynamics.__add__
-      
-      
          ~Dynamics.__contains__
-      
-      
-      
          ~Dynamics.__dir__
-      
-      
          ~Dynamics.__eq__
-      
-      
-      
-      
          ~Dynamics.__getattr__
-      
-      
-      
          ~Dynamics.__getitem__
-      
-      
-      
-      
-      
          ~Dynamics.__iter__
-      
-      
-      
          ~Dynamics.__len__
-      
-      
-      
-      
-      
-      
-      
          ~Dynamics.__repr__
-      
-      
-      
-      
-      
          ~Dynamics.__sub__
-      
-      
-      
-      
          ~Dynamics.get
-      
    
    
 

@@ -18,55 +18,14 @@ MplField
    .. autosummary::
       :nosignatures:
    
-      
          ~MplField.__call__
-      
-      
-      
          ~MplField.__dir__
-      
-      
          ~MplField.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~MplField.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~MplField.contour
-      
-      
          ~MplField.lightness
-      
-      
          ~MplField.scalar
-      
-      
          ~MplField.vector
-      
    
    
 

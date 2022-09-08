@@ -18,36 +18,10 @@ Runner
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Runner.__dir__
-      
-      
          ~Runner.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Runner.__repr__
-      
-      
-      
-      
-      
-      
          ~Runner.autoselect_runner
-      
    
    
 

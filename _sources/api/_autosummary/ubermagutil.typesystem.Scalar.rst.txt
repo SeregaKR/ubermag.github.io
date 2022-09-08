@@ -18,39 +18,11 @@ Scalar
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Scalar.__delete__
-      
-      
          ~Scalar.__dir__
-      
-      
          ~Scalar.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Scalar.__repr__
-      
-      
          ~Scalar.__set__
-      
-      
-      
-      
-      
    
    
 

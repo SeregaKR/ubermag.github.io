@@ -18,39 +18,11 @@ Descriptor
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Descriptor.__delete__
-      
-      
          ~Descriptor.__dir__
-      
-      
          ~Descriptor.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Descriptor.__repr__
-      
-      
          ~Descriptor.__set__
-      
-      
-      
-      
-      
    
    
 

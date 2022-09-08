@@ -18,39 +18,11 @@ Parameter
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Parameter.__delete__
-      
-      
          ~Parameter.__dir__
-      
-      
          ~Parameter.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Parameter.__repr__
-      
-      
          ~Parameter.__set__
-      
-      
-      
-      
-      
    
    
 

@@ -18,48 +18,14 @@ CubicAnisotropy
    .. autosummary::
       :nosignatures:
    
-      
          ~CubicAnisotropy.__add__
-      
-      
-      
          ~CubicAnisotropy.__dir__
-      
-      
          ~CubicAnisotropy.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~CubicAnisotropy.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~CubicAnisotropy.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~CubicAnisotropy.density
-      
-      
          ~CubicAnisotropy.effective_field
-      
-      
          ~CubicAnisotropy.energy
-      
    
    
 

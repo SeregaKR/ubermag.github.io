@@ -18,48 +18,14 @@ MagnetoElastic
    .. autosummary::
       :nosignatures:
    
-      
          ~MagnetoElastic.__add__
-      
-      
-      
          ~MagnetoElastic.__dir__
-      
-      
          ~MagnetoElastic.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~MagnetoElastic.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~MagnetoElastic.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~MagnetoElastic.density
-      
-      
          ~MagnetoElastic.effective_field
-      
-      
          ~MagnetoElastic.energy
-      
    
    
 

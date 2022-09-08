@@ -18,36 +18,10 @@ Xf\_ThermHeunEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Xf_ThermHeunEvolver.__dir__
-      
-      
          ~Xf_ThermHeunEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Xf_ThermHeunEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Xf_ThermHeunEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

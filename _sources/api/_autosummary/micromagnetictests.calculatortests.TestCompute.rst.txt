@@ -18,58 +18,17 @@ TestCompute
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestCompute.__dir__
-      
-      
          ~TestCompute.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestCompute.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestCompute.setup
-      
-      
          ~TestCompute.test_dmi
-      
-      
          ~TestCompute.test_effective_field
-      
-      
          ~TestCompute.test_energy
-      
-      
          ~TestCompute.test_energy_density
-      
-      
          ~TestCompute.test_invalid_func
-      
-      
          ~TestCompute.test_slonczewski
-      
-      
          ~TestCompute.test_zhang_li
-      
    
    
 

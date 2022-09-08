@@ -18,42 +18,12 @@ ZhangLi
    .. autosummary::
       :nosignatures:
    
-      
          ~ZhangLi.__add__
-      
-      
-      
          ~ZhangLi.__dir__
-      
-      
          ~ZhangLi.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~ZhangLi.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~ZhangLi.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~ZhangLi.dmdt
-      
    
    
 

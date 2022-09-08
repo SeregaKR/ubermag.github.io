@@ -18,51 +18,15 @@ Mumax3Drive
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Mumax3Drive.__dir__
-      
-      
          ~Mumax3Drive.__eq__
-      
-      
-      
-      
-      
          ~Mumax3Drive.__getitem__
-      
-      
-      
-      
-      
-      
          ~Mumax3Drive.__iter__
-      
-      
-      
          ~Mumax3Drive.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~Mumax3Drive.__repr__
-      
-      
-      
-      
-      
-      
          ~Mumax3Drive.ovf2vtk
-      
-      
          ~Mumax3Drive.slider
-      
-      
          ~Mumax3Drive.to_xarray
-      
    
    
 

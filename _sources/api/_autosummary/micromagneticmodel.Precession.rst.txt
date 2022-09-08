@@ -18,42 +18,12 @@ Precession
    .. autosummary::
       :nosignatures:
    
-      
          ~Precession.__add__
-      
-      
-      
          ~Precession.__dir__
-      
-      
          ~Precession.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Precession.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Precession.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Precession.dmdt
-      
    
    
 

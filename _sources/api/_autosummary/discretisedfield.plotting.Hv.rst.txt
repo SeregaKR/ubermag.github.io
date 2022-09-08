@@ -18,49 +18,13 @@ Hv
    .. autosummary::
       :nosignatures:
    
-      
          ~Hv.__call__
-      
-      
-      
          ~Hv.__dir__
-      
-      
          ~Hv.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Hv.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Hv.contour
-      
-      
          ~Hv.scalar
-      
-      
          ~Hv.vector
-      
    
    
 

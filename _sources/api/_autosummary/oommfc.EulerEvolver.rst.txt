@@ -18,36 +18,10 @@ EulerEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~EulerEvolver.__dir__
-      
-      
          ~EulerEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~EulerEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~EulerEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

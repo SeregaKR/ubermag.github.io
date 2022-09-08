@@ -18,66 +18,20 @@ Energy
    .. autosummary::
       :nosignatures:
    
-      
          ~Energy.__add__
-      
-      
          ~Energy.__contains__
-      
-      
-      
          ~Energy.__dir__
-      
-      
          ~Energy.__eq__
-      
-      
-      
-      
          ~Energy.__getattr__
-      
-      
-      
          ~Energy.__getitem__
-      
-      
-      
-      
-      
          ~Energy.__iter__
-      
-      
-      
          ~Energy.__len__
-      
-      
-      
-      
-      
-      
-      
          ~Energy.__repr__
-      
-      
-      
-      
-      
          ~Energy.__sub__
-      
-      
-      
-      
          ~Energy.density
-      
-      
          ~Energy.effective_field
-      
-      
          ~Energy.energy
-      
-      
          ~Energy.get
-      
    
    
 

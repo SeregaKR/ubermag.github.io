@@ -18,42 +18,12 @@ Data
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Data.__dir__
-      
-      
          ~Data.__eq__
-      
-      
-      
-      
-      
          ~Data.__getitem__
-      
-      
-      
-      
-      
-      
          ~Data.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Data.__repr__
-      
-      
-      
-      
-      
-      
          ~Data.selector
-      
    
    
 

@@ -18,43 +18,12 @@ TestRKKY
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestRKKY.__dir__
-      
-      
          ~TestRKKY.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestRKKY.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestRKKY.m_init
-      
-      
          ~TestRKKY.setup
-      
-      
          ~TestRKKY.test_scalar
-      
    
    
 

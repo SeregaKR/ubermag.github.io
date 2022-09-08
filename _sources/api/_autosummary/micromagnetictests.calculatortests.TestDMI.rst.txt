@@ -18,52 +18,15 @@ TestDMI
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestDMI.__dir__
-      
-      
          ~TestDMI.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestDMI.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestDMI.random_m
-      
-      
          ~TestDMI.setup
-      
-      
          ~TestDMI.test_crystalclass
-      
-      
          ~TestDMI.test_crystalclass_init
-      
-      
          ~TestDMI.test_dict
-      
-      
          ~TestDMI.test_scalar
-      
    
    
 

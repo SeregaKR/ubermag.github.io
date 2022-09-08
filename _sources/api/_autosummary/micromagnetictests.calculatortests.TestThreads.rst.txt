@@ -18,40 +18,11 @@ TestThreads
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestThreads.__dir__
-      
-      
          ~TestThreads.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestThreads.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestThreads.setup
-      
-      
          ~TestThreads.test_threads
-      
    
    
 

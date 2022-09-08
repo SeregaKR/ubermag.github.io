@@ -18,48 +18,14 @@ Zeeman
    .. autosummary::
       :nosignatures:
    
-      
          ~Zeeman.__add__
-      
-      
-      
          ~Zeeman.__dir__
-      
-      
          ~Zeeman.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Zeeman.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Zeeman.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Zeeman.density
-      
-      
          ~Zeeman.effective_field
-      
-      
          ~Zeeman.energy
-      
    
    
 

@@ -18,48 +18,14 @@ RKKY
    .. autosummary::
       :nosignatures:
    
-      
          ~RKKY.__add__
-      
-      
-      
          ~RKKY.__dir__
-      
-      
          ~RKKY.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~RKKY.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~RKKY.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~RKKY.density
-      
-      
          ~RKKY.effective_field
-      
-      
          ~RKKY.energy
-      
    
    
 

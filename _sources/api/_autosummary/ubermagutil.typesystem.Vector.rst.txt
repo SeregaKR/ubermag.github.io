@@ -18,39 +18,11 @@ Vector
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Vector.__delete__
-      
-      
          ~Vector.__dir__
-      
-      
          ~Vector.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Vector.__repr__
-      
-      
          ~Vector.__set__
-      
-      
-      
-      
-      
    
    
 

@@ -18,48 +18,14 @@ DMI
    .. autosummary::
       :nosignatures:
    
-      
          ~DMI.__add__
-      
-      
-      
          ~DMI.__dir__
-      
-      
          ~DMI.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~DMI.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~DMI.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~DMI.density
-      
-      
          ~DMI.effective_field
-      
-      
          ~DMI.energy
-      
    
    
 

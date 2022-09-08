@@ -18,36 +18,10 @@ SpinTEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~SpinTEvolver.__dir__
-      
-      
          ~SpinTEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~SpinTEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~SpinTEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

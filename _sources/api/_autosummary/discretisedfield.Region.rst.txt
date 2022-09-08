@@ -18,49 +18,14 @@ Region
    .. autosummary::
       :nosignatures:
    
-      
          ~Region.__contains__
-      
-      
-      
          ~Region.__dir__
-      
-      
          ~Region.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Region.__mul__
-      
-      
-      
-      
          ~Region.__or__
-      
-      
-      
-      
          ~Region.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Region.__truediv__
-      
-      
-      
          ~Region.random_point
-      
    
    
 

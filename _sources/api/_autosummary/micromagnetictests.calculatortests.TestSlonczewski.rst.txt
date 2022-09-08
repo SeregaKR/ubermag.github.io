@@ -18,49 +18,14 @@ TestSlonczewski
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestSlonczewski.__dir__
-      
-      
          ~TestSlonczewski.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestSlonczewski.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestSlonczewski.setup
-      
-      
          ~TestSlonczewski.test_dict_values
-      
-      
          ~TestSlonczewski.test_field_values
-      
-      
          ~TestSlonczewski.test_single_values
-      
-      
          ~TestSlonczewski.test_single_values_finite_temperature
-      
    
    
 

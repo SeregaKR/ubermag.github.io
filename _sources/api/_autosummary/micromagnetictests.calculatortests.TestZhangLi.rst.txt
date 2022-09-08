@@ -18,49 +18,14 @@ TestZhangLi
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestZhangLi.__dir__
-      
-      
          ~TestZhangLi.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestZhangLi.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestZhangLi.setup
-      
-      
          ~TestZhangLi.test_dict_scalar
-      
-      
          ~TestZhangLi.test_field_scalar
-      
-      
          ~TestZhangLi.test_scalar_scalar
-      
-      
          ~TestZhangLi.test_time_scalar_scalar
-      
    
    
 

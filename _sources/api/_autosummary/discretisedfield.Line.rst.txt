@@ -18,42 +18,12 @@ Line
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Line.__dir__
-      
-      
          ~Line.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Line.__repr__
-      
-      
-      
-      
-      
-      
          ~Line.mpl
-      
-      
          ~Line.selector
-      
-      
          ~Line.slider
-      
    
    
 

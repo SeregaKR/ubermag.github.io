@@ -18,36 +18,10 @@ SpinXferEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~SpinXferEvolver.__dir__
-      
-      
          ~SpinXferEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~SpinXferEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~SpinXferEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

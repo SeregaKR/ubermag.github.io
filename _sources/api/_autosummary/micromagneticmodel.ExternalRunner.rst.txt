@@ -18,37 +18,10 @@ ExternalRunner
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~ExternalRunner.__dir__
-      
-      
          ~ExternalRunner.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~ExternalRunner.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~ExternalRunner.call
-      
    
    
 

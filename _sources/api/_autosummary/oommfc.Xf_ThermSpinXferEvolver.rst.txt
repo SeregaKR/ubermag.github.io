@@ -18,36 +18,10 @@ Xf\_ThermSpinXferEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Xf_ThermSpinXferEvolver.__dir__
-      
-      
          ~Xf_ThermSpinXferEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Xf_ThermSpinXferEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Xf_ThermSpinXferEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

@@ -18,39 +18,11 @@ Term
    .. autosummary::
       :nosignatures:
    
-      
          ~Term.__add__
-      
-      
-      
          ~Term.__dir__
-      
-      
          ~Term.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Term.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Term.__repr__
-      
-      
-      
-      
-      
-      
    
    
 

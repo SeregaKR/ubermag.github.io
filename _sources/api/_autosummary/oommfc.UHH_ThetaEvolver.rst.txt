@@ -18,36 +18,10 @@ UHH\_ThetaEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~UHH_ThetaEvolver.__dir__
-      
-      
          ~UHH_ThetaEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~UHH_ThetaEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~UHH_ThetaEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

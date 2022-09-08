@@ -18,45 +18,13 @@ CombinedDrive
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~CombinedDrive.__dir__
-      
-      
          ~CombinedDrive.__eq__
-      
-      
-      
-      
-      
          ~CombinedDrive.__getitem__
-      
-      
-      
-      
-      
-      
          ~CombinedDrive.__iter__
-      
-      
-      
          ~CombinedDrive.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~CombinedDrive.__repr__
-      
-      
-      
-      
-      
-      
          ~CombinedDrive.to_xarray
-      
    
    
 

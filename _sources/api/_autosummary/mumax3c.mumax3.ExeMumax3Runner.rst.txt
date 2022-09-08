@@ -18,37 +18,10 @@ ExeMumax3Runner
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~ExeMumax3Runner.__dir__
-      
-      
          ~ExeMumax3Runner.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~ExeMumax3Runner.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~ExeMumax3Runner.call
-      
    
    
 

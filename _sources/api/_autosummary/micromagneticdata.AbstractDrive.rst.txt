@@ -18,45 +18,13 @@ AbstractDrive
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~AbstractDrive.__dir__
-      
-      
          ~AbstractDrive.__eq__
-      
-      
-      
-      
-      
          ~AbstractDrive.__getitem__
-      
-      
-      
-      
-      
-      
          ~AbstractDrive.__iter__
-      
-      
-      
          ~AbstractDrive.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~AbstractDrive.__repr__
-      
-      
-      
-      
-      
-      
          ~AbstractDrive.to_xarray
-      
    
    
 

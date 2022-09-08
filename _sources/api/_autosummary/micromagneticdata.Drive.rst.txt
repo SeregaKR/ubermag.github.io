@@ -18,51 +18,15 @@ Drive
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Drive.__dir__
-      
-      
          ~Drive.__eq__
-      
-      
-      
-      
-      
          ~Drive.__getitem__
-      
-      
-      
-      
-      
-      
          ~Drive.__iter__
-      
-      
-      
          ~Drive.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~Drive.__repr__
-      
-      
-      
-      
-      
-      
          ~Drive.ovf2vtk
-      
-      
          ~Drive.slider
-      
-      
          ~Drive.to_xarray
-      
    
    
 

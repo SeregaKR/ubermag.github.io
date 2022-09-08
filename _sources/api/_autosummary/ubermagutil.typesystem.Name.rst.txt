@@ -18,39 +18,11 @@ Name
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Name.__delete__
-      
-      
          ~Name.__dir__
-      
-      
          ~Name.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Name.__repr__
-      
-      
          ~Name.__set__
-      
-      
-      
-      
-      
    
    
 

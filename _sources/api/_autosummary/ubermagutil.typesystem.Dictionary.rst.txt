@@ -18,39 +18,11 @@ Dictionary
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Dictionary.__delete__
-      
-      
          ~Dictionary.__dir__
-      
-      
          ~Dictionary.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Dictionary.__repr__
-      
-      
          ~Dictionary.__set__
-      
-      
-      
-      
-      
    
    
 

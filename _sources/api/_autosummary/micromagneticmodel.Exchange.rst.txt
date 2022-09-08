@@ -18,48 +18,14 @@ Exchange
    .. autosummary::
       :nosignatures:
    
-      
          ~Exchange.__add__
-      
-      
-      
          ~Exchange.__dir__
-      
-      
          ~Exchange.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Exchange.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Exchange.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Exchange.density
-      
-      
          ~Exchange.effective_field
-      
-      
          ~Exchange.energy
-      
    
    
 

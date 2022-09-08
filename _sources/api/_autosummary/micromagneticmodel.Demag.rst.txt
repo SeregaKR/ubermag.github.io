@@ -18,48 +18,14 @@ Demag
    .. autosummary::
       :nosignatures:
    
-      
          ~Demag.__add__
-      
-      
-      
          ~Demag.__dir__
-      
-      
          ~Demag.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Demag.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Demag.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Demag.density
-      
-      
          ~Demag.effective_field
-      
-      
          ~Demag.energy
-      
    
    
 

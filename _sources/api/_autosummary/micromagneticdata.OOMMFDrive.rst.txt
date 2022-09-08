@@ -18,51 +18,15 @@ OOMMFDrive
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~OOMMFDrive.__dir__
-      
-      
          ~OOMMFDrive.__eq__
-      
-      
-      
-      
-      
          ~OOMMFDrive.__getitem__
-      
-      
-      
-      
-      
-      
          ~OOMMFDrive.__iter__
-      
-      
-      
          ~OOMMFDrive.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~OOMMFDrive.__repr__
-      
-      
-      
-      
-      
-      
          ~OOMMFDrive.ovf2vtk
-      
-      
          ~OOMMFDrive.slider
-      
-      
          ~OOMMFDrive.to_xarray
-      
    
    
 

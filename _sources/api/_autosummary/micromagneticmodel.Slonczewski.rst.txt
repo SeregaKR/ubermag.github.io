@@ -18,42 +18,12 @@ Slonczewski
    .. autosummary::
       :nosignatures:
    
-      
          ~Slonczewski.__add__
-      
-      
-      
          ~Slonczewski.__dir__
-      
-      
          ~Slonczewski.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Slonczewski.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Slonczewski.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~Slonczewski.dmdt
-      
    
    
 

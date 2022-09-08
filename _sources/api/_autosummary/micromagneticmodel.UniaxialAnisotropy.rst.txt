@@ -18,48 +18,14 @@ UniaxialAnisotropy
    .. autosummary::
       :nosignatures:
    
-      
          ~UniaxialAnisotropy.__add__
-      
-      
-      
          ~UniaxialAnisotropy.__dir__
-      
-      
          ~UniaxialAnisotropy.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
          ~UniaxialAnisotropy.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~UniaxialAnisotropy.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~UniaxialAnisotropy.density
-      
-      
          ~UniaxialAnisotropy.effective_field
-      
-      
          ~UniaxialAnisotropy.energy
-      
    
    
 

@@ -18,57 +18,17 @@ Table
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Table.__dir__
-      
-      
          ~Table.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Table.__lshift__
-      
-      
-      
-      
-      
-      
-      
          ~Table.__repr__
-      
-      
-      
-      
-      
-      
          ~Table.apply
-      
-      
          ~Table.fromfile
-      
-      
          ~Table.irfft
-      
-      
          ~Table.mpl
-      
-      
          ~Table.rfft
-      
-      
          ~Table.selector
-      
-      
          ~Table.slider
-      
    
    
 

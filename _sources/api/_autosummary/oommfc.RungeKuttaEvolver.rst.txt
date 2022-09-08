@@ -18,36 +18,10 @@ RungeKuttaEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~RungeKuttaEvolver.__dir__
-      
-      
          ~RungeKuttaEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~RungeKuttaEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~RungeKuttaEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

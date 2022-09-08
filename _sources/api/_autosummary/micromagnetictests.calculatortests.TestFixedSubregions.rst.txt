@@ -18,40 +18,11 @@ TestFixedSubregions
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestFixedSubregions.__dir__
-      
-      
          ~TestFixedSubregions.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestFixedSubregions.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestFixedSubregions.setup
-      
-      
          ~TestFixedSubregions.test_fixed_subregions
-      
    
    
 

@@ -18,36 +18,10 @@ Evolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~Evolver.__dir__
-      
-      
          ~Evolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~Evolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~Evolver.__repr__
-      
-      
-      
-      
-      
    
    
 

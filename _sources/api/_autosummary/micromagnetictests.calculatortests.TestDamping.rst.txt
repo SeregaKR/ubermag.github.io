@@ -18,46 +18,13 @@ TestDamping
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestDamping.__dir__
-      
-      
          ~TestDamping.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestDamping.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestDamping.setup
-      
-      
          ~TestDamping.test_dict
-      
-      
          ~TestDamping.test_field
-      
-      
          ~TestDamping.test_scalar
-      
    
    
 

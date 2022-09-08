@@ -18,60 +18,15 @@ TimeDriver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TimeDriver.__dir__
-      
-      
          ~TimeDriver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TimeDriver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~TimeDriver.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TimeDriver.drive
-      
-      
          ~TimeDriver.drive_kwargs_setup
-      
-      
          ~TimeDriver.schedule
-      
-      
          ~TimeDriver.schedule_kwargs_setup
-      
-      
          ~TimeDriver.write_mif
-      
    
    
 

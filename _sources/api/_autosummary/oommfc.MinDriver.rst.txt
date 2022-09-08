@@ -18,60 +18,15 @@ MinDriver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~MinDriver.__dir__
-      
-      
          ~MinDriver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~MinDriver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~MinDriver.__repr__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~MinDriver.drive
-      
-      
          ~MinDriver.drive_kwargs_setup
-      
-      
          ~MinDriver.schedule
-      
-      
          ~MinDriver.schedule_kwargs_setup
-      
-      
          ~MinDriver.write_mif
-      
    
    
 

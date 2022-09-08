@@ -18,36 +18,10 @@ CGEvolver
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~CGEvolver.__dir__
-      
-      
          ~CGEvolver.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~CGEvolver.__iter__
-      
-      
-      
-      
-      
-      
-      
-      
          ~CGEvolver.__repr__
-      
-      
-      
-      
-      
    
    
 

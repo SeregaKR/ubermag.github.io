@@ -18,52 +18,15 @@ TestDemag
    .. autosummary::
       :nosignatures:
    
-      
-      
          ~TestDemag.__dir__
-      
-      
          ~TestDemag.__eq__
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
          ~TestDemag.__repr__
-      
-      
-      
-      
-      
-      
-      
          ~TestDemag.setup
-      
-      
          ~TestDemag.test_demag
-      
-      
          ~TestDemag.test_demag_1_pbc
-      
-      
          ~TestDemag.test_demag_2_pbc
-      
-      
          ~TestDemag.test_demag_3_pbc
-      
-      
          ~TestDemag.test_demag_asymptotic_radius
-      
    
    
 
