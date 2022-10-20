@@ -25,6 +25,7 @@ Drive
          ~Drive.__lshift__
          ~Drive.__repr__
          ~Drive.ovf2vtk
+         ~Drive.register_callback
          ~Drive.slider
          ~Drive.to_xarray
    
@@ -37,6 +38,7 @@ Drive
    .. autosummary::
    
       ~Drive.calculator_script
+      ~Drive.callbacks
       ~Drive.dirname
       ~Drive.hv
       ~Drive.info
@@ -45,6 +47,7 @@ Drive
       ~Drive.name
       ~Drive.number
       ~Drive.table
+      ~Drive.use_cache
       ~Drive.x
    
    

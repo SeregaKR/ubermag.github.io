@@ -1,0 +1,6 @@
+discretisedfield.io.field\_from\_ovf
+====================================
+
+.. currentmodule:: discretisedfield.io
+
+.. autofunction:: field_from_ovf

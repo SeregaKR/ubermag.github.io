@@ -24,6 +24,7 @@ CombinedDrive
          ~CombinedDrive.__iter__
          ~CombinedDrive.__lshift__
          ~CombinedDrive.__repr__
+         ~CombinedDrive.register_callback
          ~CombinedDrive.to_xarray
    
    
@@ -34,6 +35,7 @@ CombinedDrive
 
    .. autosummary::
    
+      ~CombinedDrive.callbacks
       ~CombinedDrive.hv
       ~CombinedDrive.info
       ~CombinedDrive.m0

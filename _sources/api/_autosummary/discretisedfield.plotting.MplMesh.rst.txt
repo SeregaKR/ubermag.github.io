@@ -1,0 +1,35 @@
+MplMesh
+=======
+
+.. currentmodule:: discretisedfield.plotting
+
+.. autoclass:: MplMesh
+   :members:
+   :special-members:
+
+   .. raw:: html
+
+      <hr>
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+         ~MplMesh.__call__
+         ~MplMesh.__dir__
+         ~MplMesh.__eq__
+         ~MplMesh.__repr__
+         ~MplMesh.subregions
+   
+   
+
+   
+   
+   
+
+   .. raw:: html
+
+      <hr>

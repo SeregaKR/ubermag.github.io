@@ -29,16 +29,14 @@ Mesh
          ~Mesh.axis_points
          ~Mesh.axis_selector
          ~Mesh.index2point
-         ~Mesh.k3d
-         ~Mesh.k3d_subregions
          ~Mesh.line
-         ~Mesh.mpl
-         ~Mesh.mpl_subregions
+         ~Mesh.load_subregions
          ~Mesh.neighbours
          ~Mesh.pad
          ~Mesh.plane
          ~Mesh.point2index
          ~Mesh.region2slices
+         ~Mesh.save_subregions
          ~Mesh.slider
    
    
@@ -55,7 +53,9 @@ Mesh
       ~Mesh.dS
       ~Mesh.dV
       ~Mesh.indices
+      ~Mesh.k3d
       ~Mesh.midpoints
+      ~Mesh.mpl
       ~Mesh.n
       ~Mesh.region
       ~Mesh.subregions

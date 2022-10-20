@@ -1,0 +1,6 @@
+discretisedfield.io.field\_to\_hdf5
+===================================
+
+.. currentmodule:: discretisedfield.io
+
+.. autofunction:: field_to_hdf5

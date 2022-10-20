@@ -25,6 +25,7 @@ Mumax3Drive
          ~Mumax3Drive.__lshift__
          ~Mumax3Drive.__repr__
          ~Mumax3Drive.ovf2vtk
+         ~Mumax3Drive.register_callback
          ~Mumax3Drive.slider
          ~Mumax3Drive.to_xarray
    
@@ -37,6 +38,7 @@ Mumax3Drive
    .. autosummary::
    
       ~Mumax3Drive.calculator_script
+      ~Mumax3Drive.callbacks
       ~Mumax3Drive.dirname
       ~Mumax3Drive.hv
       ~Mumax3Drive.info
@@ -45,6 +47,7 @@ Mumax3Drive
       ~Mumax3Drive.name
       ~Mumax3Drive.number
       ~Mumax3Drive.table
+      ~Mumax3Drive.use_cache
       ~Mumax3Drive.x
    
    

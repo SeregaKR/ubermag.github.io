@@ -1,0 +1,6 @@
+discretisedfield.io.ovf2vtk.ovf2vtk
+===================================
+
+.. currentmodule:: discretisedfield.io.ovf2vtk
+
+.. autofunction:: ovf2vtk

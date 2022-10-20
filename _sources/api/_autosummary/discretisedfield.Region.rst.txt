@@ -26,6 +26,7 @@ Region
          ~Region.__repr__
          ~Region.__truediv__
          ~Region.random_point
+         ~Region.to_dict
    
    
 

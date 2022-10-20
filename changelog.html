@@ -155,12 +155,7 @@
                     </a>
                 </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                 <li class="nav-item">
                     <a class="nav-link" href="contributing.html">
                         Contributing
@@ -174,9 +169,6 @@
                     </a>
                 </li>
                 
-                </div>
-            </div>
-            
     </ul>
 </nav>
       </div>
@@ -280,12 +272,7 @@
                     </a>
                 </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
+
                 <li class="nav-item">
                     <a class="nav-link" href="contributing.html">
                         Contributing
@@ -299,9 +286,6 @@
                     </a>
                 </li>
                 
-                </div>
-            </div>
-            
     </ul>
 </nav>
       </div>
@@ -357,10 +341,64 @@
               
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
-<section id="jul-17-2022">
-<h2>0.65.0 (Jul 17, 2022)<a class="headerlink" href="#jul-17-2022" title="Permalink to this heading">#</a></h2>
+<section id="oct-20-2022">
+<h2>0.66.0 (Oct 20, 2022)<a class="headerlink" href="#oct-20-2022" title="Permalink to this heading">#</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Reading and writing for <code class="docutils literal notranslate"><span class="pre">Field</span></code> objects now supports <code class="docutils literal notranslate"><span class="pre">pathlib.Path</span></code>
+objects. Furthermore, the code has been reorganised (mostly invisible for
+end users, a new <code class="docutils literal notranslate"><span class="pre">io</span></code> submodule has been added). (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/158">#158</a>)</p></li>
+<li><p>Subregions are saved in a json file
+(<code class="docutils literal notranslate"><span class="pre">&lt;field-name&gt;.&lt;extension&gt;.subregions.json</span></code>) when saving a field and
+automatically loaded when a field is loaded from disk and the json file
+exists. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/158">#158</a>,
+<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/163">#163</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code></dt><dd><ul class="simple">
+<li><p>Subregion information is loaded when accessing magnetisation fields (if
+available). (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/35">#35</a>)</p></li>
+<li><p>Callbacks can be registered in the drive object to apply any sort of
+processing (e.g. calculating the normalised field or topological charge
+density) before returning individual fields in a drive. (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/35">#35</a>)</p></li>
+<li><p>Support for slicing in getitem in Drive, e.g. <code class="docutils literal notranslate"><span class="pre">drive[::2]</span></code> will return a
+new drive object that only contains every second magnetisation file. (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/35">#35</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Subregion information is loaded when using <code class="docutils literal notranslate"><span class="pre">compute</span></code> (if available).
+(<a class="reference external" href="https://github.com/ubermag/oommfc/pull/116">#116</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="changed">
 <h3>Changed<a class="headerlink" href="#changed" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
+<li><p>Plotting for <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> class moved to new submodule similar to <code class="docutils literal notranslate"><span class="pre">Region</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Field</span></code>. Therefore <code class="docutils literal notranslate"><span class="pre">mesh.mpl_subregions</span></code> has to be replaced with
+<code class="docutils literal notranslate"><span class="pre">mesh.mpl.subregions</span></code>. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/164">#164</a>)</p></li>
+<li><p>New implementation for Holoviews-based plotting to improve creation speed
+for large objects. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/194">#194</a>, <a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/196">#196</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticdata</span></code></dt><dd><ul class="simple">
+<li><p>Holoviews plotting now reads data from disk when it is accessed in the plot.
+This greatly improves the initial rendering of the plot and can avoid memory
+problems. Note that on slow file systems updating the plot when moving a
+slider might take more time. (<a class="reference external" href="https://github.com/ubermag/micromagneticdata/pull/35">#35</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="jul-17-2022">
+<h2>0.65.0 (Jul 17, 2022)<a class="headerlink" href="#jul-17-2022" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Changed<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Import <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> into <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/159">#159</a>)</p></li>
@@ -393,8 +431,8 @@ Mumax<sup>3</sup> as a new calculator in addition to OOMMF.</p>
 </section>
 <section id="jun-29-2022">
 <h2>0.63.0 (Jun 29, 2022)<a class="headerlink" href="#jun-29-2022" title="Permalink to this heading">#</a></h2>
-<section id="added">
-<h3>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>Added<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Support for interactive plots based on Holoviews with <code class="docutils literal notranslate"><span class="pre">Field.hv</span></code>
@@ -448,8 +486,8 @@ generally don’t use any of this functionality directly. (<a class="reference e
 </dd>
 </dl>
 </section>
-<section id="id1">
-<h3>Changed<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h3>Changed<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Vector fields with zero values can now be normalised. The rescaling of the
@@ -506,8 +544,8 @@ value instead of the maximum value. (<a class="reference external" href="https:/
 </section>
 <section id="jun-09-2022">
 <h2>0.62.1 (Jun 09, 2022)<a class="headerlink" href="#jun-09-2022" title="Permalink to this heading">#</a></h2>
-<section id="id2">
-<h3>Fixed<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Importing <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> fails on some platforms because <code class="docutils literal notranslate"><span class="pre">openh264</span></code> is
@@ -519,8 +557,8 @@ missing. (<a class="reference external" href="https://github.com/ubermag/discret
 </section>
 <section id="may-22-2022">
 <h2>0.62.0 (May 22, 2022)<a class="headerlink" href="#may-22-2022" title="Permalink to this heading">#</a></h2>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Support for exporting <code class="docutils literal notranslate"><span class="pre">Field</span></code> object to the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with
@@ -606,8 +644,8 @@ from <code class="docutils literal notranslate"><span class="pre">ubermag</span>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h3>Fixed<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id6">
+<h3>Fixed<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Changes in the calculation of the demag tensor to avoid zero-division problems
@@ -626,8 +664,8 @@ read/write access with SELinux (<a class="reference external" href="https://gith
 </section>
 <section id="mar-17-2022">
 <h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Permalink to this heading">#</a></h2>
-<section id="id5">
-<h3>Fixed<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>Fixed<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
 <li><p>The old docker image of oommf (2.0a2) was used by default (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/84">#84</a>).</p></li>
@@ -648,8 +686,8 @@ in a runtime error (<a class="reference external" href="https://github.com/uberm
 and Linux.</p></li>
 </ul>
 </section>
-<section id="id6">
-<h3>Added<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>Added<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul>
 <li><p>Support for <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> in plotting method <code class="docutils literal notranslate"><span class="pre">Field.mpl.lighness</span></code>.</p></li>
@@ -728,8 +766,8 @@ the old behaviour. (<a class="reference external" href="https://github.com/uberm
 </dd>
 </dl>
 </section>
-<section id="id7">
-<h3>Changed<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>Changed<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Keywords for <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> and <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code>
@@ -743,8 +781,8 @@ consistency reasons).</p></li>
 </dd>
 </dl>
 </section>
-<section id="id8">
-<h3>Fixed<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id10">
+<h3>Fixed<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Simultaneous use of <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> and <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code> in
@@ -765,16 +803,16 @@ additional zeeman field.</p></li>
 </section>
 <section id="oct-1-2021">
 <h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this heading">#</a></h2>
-<section id="id9">
-<h3>General<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>General<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
 <li><p>Versions in sync across all packages</p></li>
 <li><p>Switch to Jupyter lab 3 (should improve situation with <code class="docutils literal notranslate"><span class="pre">K3d</span></code> inside Jupyter lab).</p></li>
 </ul>
 </section>
-<section id="id10">
-<h3>Added<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id12">
+<h3>Added<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
@@ -826,8 +864,8 @@ temperature.</p></li>
 </dd>
 </dl>
 </section>
-<section id="id11">
-<h3>Fixed<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<section id="id13">
+<h3>Fixed<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing
@@ -906,12 +944,29 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oct-20-2022">
+   0.66.0 (Oct 20, 2022)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#added">
+     Added
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#changed">
+     Changed
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jul-17-2022">
    0.65.0 (Jul 17, 2022)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changed">
+    <a class="reference internal nav-link" href="#id1">
      Changed
     </a>
    </li>
@@ -928,12 +983,12 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#added">
+    <a class="reference internal nav-link" href="#id2">
      Added
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#id3">
      Changed
     </a>
    </li>
@@ -950,7 +1005,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id4">
      Fixed
     </a>
    </li>
@@ -962,7 +1017,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id5">
      Added
     </a>
    </li>
@@ -972,7 +1027,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
+    <a class="reference internal nav-link" href="#id6">
      Fixed
     </a>
    </li>
@@ -984,7 +1039,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
+    <a class="reference internal nav-link" href="#id7">
      Fixed
     </a>
    </li>
@@ -1001,17 +1056,17 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
+    <a class="reference internal nav-link" href="#id8">
      Added
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id7">
+    <a class="reference internal nav-link" href="#id9">
      Changed
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
+    <a class="reference internal nav-link" href="#id10">
      Fixed
     </a>
    </li>
@@ -1023,17 +1078,17 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id9">
+    <a class="reference internal nav-link" href="#id11">
      General
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id10">
+    <a class="reference internal nav-link" href="#id12">
      Added
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id11">
+    <a class="reference internal nav-link" href="#id13">
      Fixed
     </a>
    </li>

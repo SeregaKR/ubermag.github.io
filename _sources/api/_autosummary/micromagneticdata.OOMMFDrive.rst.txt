@@ -25,6 +25,7 @@ OOMMFDrive
          ~OOMMFDrive.__lshift__
          ~OOMMFDrive.__repr__
          ~OOMMFDrive.ovf2vtk
+         ~OOMMFDrive.register_callback
          ~OOMMFDrive.slider
          ~OOMMFDrive.to_xarray
    
@@ -37,6 +38,7 @@ OOMMFDrive
    .. autosummary::
    
       ~OOMMFDrive.calculator_script
+      ~OOMMFDrive.callbacks
       ~OOMMFDrive.dirname
       ~OOMMFDrive.hv
       ~OOMMFDrive.info
@@ -45,6 +47,7 @@ OOMMFDrive
       ~OOMMFDrive.name
       ~OOMMFDrive.number
       ~OOMMFDrive.table
+      ~OOMMFDrive.use_cache
       ~OOMMFDrive.x
    
    

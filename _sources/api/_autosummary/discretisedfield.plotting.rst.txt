@@ -14,8 +14,10 @@ discretisedfield.plotting
    
       Hv
       K3dField
+      K3dMesh
       K3dRegion
       MplField
+      MplMesh
       MplRegion
 
    .. rubric:: Functions

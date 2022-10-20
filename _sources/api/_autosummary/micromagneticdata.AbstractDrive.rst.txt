@@ -24,6 +24,7 @@ AbstractDrive
          ~AbstractDrive.__iter__
          ~AbstractDrive.__lshift__
          ~AbstractDrive.__repr__
+         ~AbstractDrive.register_callback
          ~AbstractDrive.to_xarray
    
    
@@ -34,6 +35,7 @@ AbstractDrive
 
    .. autosummary::
    
+      ~AbstractDrive.callbacks
       ~AbstractDrive.hv
       ~AbstractDrive.info
       ~AbstractDrive.m0

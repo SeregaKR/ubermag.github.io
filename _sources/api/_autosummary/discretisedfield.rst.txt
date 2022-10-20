@@ -38,5 +38,6 @@
     :template: module-template.rst
     :recursive:
 
+    io
     plotting
     tools
