@@ -1,6 +1,0 @@
-mumax3c.test\_docker
-====================
-
-.. currentmodule:: mumax3c
-
-.. autofunction:: test_docker

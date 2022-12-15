@@ -1,6 +1,0 @@
-mumax3c.delete
-==============
-
-.. currentmodule:: mumax3c
-
-.. autofunction:: delete

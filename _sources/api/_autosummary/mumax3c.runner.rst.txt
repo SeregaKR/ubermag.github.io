@@ -1,6 +1,0 @@
-mumax3c.runner
-==============
-
-.. currentmodule:: mumax3c
-
-.. autodata:: runner

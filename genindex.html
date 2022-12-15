@@ -6,24 +6,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; ubermag  documentation</title>
-  <script>
+  
+  
+  
+  <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
   
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/6.1.2/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -32,7 +32,8 @@
     <link rel="stylesheet" type="text/css" href="_static/css/colours.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -55,6 +56,10 @@
   
   
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   
   <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
@@ -118,53 +123,53 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="demo.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="demo.html">
                         Demo
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="installation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="installation.html">
                         Installation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="documentation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
                         Documentation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="changelog.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="changelog.html">
                         Changelog
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="help.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="help.html">
                         Help
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contributing.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
                         Contributing
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="news.html">
                         News
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
     </ul>
 </nav>
@@ -173,12 +178,14 @@
     </div>
 
     <div id="navbar-end">
-      <div class="navbar-end-item navbar-end__search-button-container">
-        
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
   <i class="fa-solid fa-magnifying-glass"></i>
 </button>
-      </div>
+        </div>
+      
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -201,11 +208,13 @@
 
 
   
-  <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
   <i class="fa-solid fa-magnifying-glass"></i>
 </button>
-  </div>
+    </div>
+  
 
   
   <label class="sidebar-toggle secondary-toggle" for="__secondary">
@@ -235,53 +244,53 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="demo.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="demo.html">
                         Demo
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="installation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="installation.html">
                         Installation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="documentation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="documentation.html">
                         Documentation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="changelog.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="changelog.html">
                         Changelog
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="help.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="help.html">
                         Help
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contributing.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="contributing.html">
                         Contributing
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="news.html">
                         News
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
     </ul>
 </nav>
@@ -322,8 +331,11 @@
     </div>
   </div>
 
+  
+  <div id="rtd-footer-container"></div>
+
       </div>
-      <main class="bd-main">
+      <main id="main-content" class="bd-main">
         
         
         <div class="bd-content">
@@ -627,12 +639,8 @@
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.array">array (discretisedfield.Field property)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner.autoselect_runner">autoselect_runner() (mumax3c.mumax3.Runner method)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.autoselect_runner">(oommfc.oommf.Runner method)</a>
+      <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.autoselect_runner">autoselect_runner() (oommfc.oommf.Runner method)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.average">average (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.axis_selector">axis_selector() (discretisedfield.Mesh method)</a>
@@ -711,12 +719,8 @@
 </li>
       <li><a href="api/_autosummary/mag2exp.ltem.defocus_image.html#mag2exp.ltem.defocus_image">defocus_image() (in module mag2exp.ltem)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.delete.html#mumax3c.delete">delete() (in module mumax3c)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.delete.html#oommfc.delete">(in module oommfc)</a>
+      <li><a href="api/_autosummary/oommfc.delete.html#oommfc.delete">delete() (in module oommfc)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/micromagneticmodel.Demag.html#micromagneticmodel.Demag">Demag (class in micromagneticmodel)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.tools.demag_field.html#discretisedfield.tools.demag_field">demag_field() (in module discretisedfield.tools)</a>
@@ -841,8 +845,6 @@
       <li><a href="api/_autosummary/micromagneticmodel.Evolver.html#micromagneticmodel.Evolver">Evolver (class in micromagneticmodel)</a>
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.Exchange.html#micromagneticmodel.Exchange">Exchange (class in micromagneticmodel)</a>
-</li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.ExeMumax3Runner.html#mumax3c.mumax3.ExeMumax3Runner">ExeMumax3Runner (class in mumax3c.mumax3)</a>
 </li>
       <li><a href="api/_autosummary/oommfc.oommf.ExeOOMMFRunner.html#oommfc.oommf.ExeOOMMFRunner">ExeOOMMFRunner (class in oommfc.oommf)</a>
 </li>
@@ -1156,12 +1158,8 @@
       </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.midpoints">midpoints (discretisedfield.Mesh property)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.MinDriver.html#mumax3c.MinDriver">MinDriver (class in mumax3c)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.MinDriver.html#oommfc.MinDriver">(class in oommfc)</a>
+      <li><a href="api/_autosummary/oommfc.MinDriver.html#oommfc.MinDriver">MinDriver (class in oommfc)</a>
 </li>
-      </ul></li>
       <li>
     module
 
@@ -1203,10 +1201,6 @@
         <li><a href="api/_autosummary/micromagnetictests.html#module-micromagnetictests">micromagnetictests</a>
 </li>
         <li><a href="api/_autosummary/micromagnetictests.calculatortests.html#module-micromagnetictests.calculatortests">micromagnetictests.calculatortests</a>
-</li>
-        <li><a href="api/_autosummary/mumax3c.html#module-mumax3c">mumax3c</a>
-</li>
-        <li><a href="api/_autosummary/mumax3c.mumax3.html#module-mumax3c.mumax3">mumax3c.mumax3</a>
 </li>
         <li><a href="api/_autosummary/oommfc.html#module-oommfc">oommfc</a>
 </li>
@@ -1253,23 +1247,7 @@
 </li>
       <li><a href="api/_autosummary/discretisedfield.Region.html#discretisedfield.Region.multiplier">multiplier (discretisedfield.Region property)</a>
 </li>
-      <li>
-    mumax3c
-
-      <ul>
-        <li><a href="api/_autosummary/mumax3c.html#module-mumax3c">module</a>
-</li>
-      </ul></li>
-      <li>
-    mumax3c.mumax3
-
-      <ul>
-        <li><a href="api/_autosummary/mumax3c.mumax3.html#module-mumax3c.mumax3">module</a>
-</li>
-      </ul></li>
       <li><a href="api/_autosummary/micromagneticdata.Mumax3Drive.html#micromagneticdata.Mumax3Drive">Mumax3Drive (class in micromagneticdata)</a>
-</li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner">Mumax3Runner (class in mumax3c.mumax3)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1325,12 +1303,8 @@
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.orientation">orientation (discretisedfield.Field property)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.overhead.html#mumax3c.mumax3.overhead">overhead() (in module mumax3c.mumax3)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.oommf.overhead.html#oommfc.oommf.overhead">(in module oommfc.oommf)</a>
+      <li><a href="api/_autosummary/oommfc.oommf.overhead.html#oommfc.oommf.overhead">overhead() (in module oommfc.oommf)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.io.ovf2vtk.ovf2vtk.html#discretisedfield.io.ovf2vtk.ovf2vtk">ovf2vtk() (in module discretisedfield.io.ovf2vtk)</a>
 
       <ul>
@@ -1346,8 +1320,6 @@
       <li><a href="api/_autosummary/micromagneticmodel.ExternalRunner.html#micromagneticmodel.ExternalRunner.package_name">package_name (micromagneticmodel.ExternalRunner property)</a>
 
       <ul>
-        <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner.package_name">(mumax3c.mumax3.Mumax3Runner property)</a>
-</li>
         <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.package_name">(oommfc.oommf.OOMMFRunner property)</a>
 </li>
       </ul></li>
@@ -1411,12 +1383,10 @@
       </ul></li>
       <li><a href="api/_autosummary/mag2exp.ltem.relativistic_wavelength.html#mag2exp.ltem.relativistic_wavelength">relativistic_wavelength() (in module mag2exp.ltem)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.RelaxDriver.html#mumax3c.RelaxDriver">RelaxDriver (class in mumax3c)</a>
-</li>
-      <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.rfft">rfft() (ubermagtable.Table method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.rfft">rfft() (ubermagtable.Table method)</a>
+</li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.rfftn">rfftn (discretisedfield.Field property)</a>
 </li>
       <li><a href="api/_autosummary/micromagneticmodel.RKKY.html#micromagneticmodel.RKKY">RKKY (class in micromagneticmodel)</a>
@@ -1425,19 +1395,11 @@
 </li>
       <li><a href="api/_autosummary/oommfc.RungeKuttaEvolver.html#oommfc.RungeKuttaEvolver">RungeKuttaEvolver (class in oommfc)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner">Runner (class in mumax3c.mumax3)</a>
+      <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner">Runner (class in oommfc.oommf)</a>
+</li>
+      <li><a href="api/_autosummary/oommfc.runner.html#oommfc.runner">runner (in module oommfc)</a>
 
       <ul>
-        <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner">(class in oommfc.oommf)</a>
-</li>
-      </ul></li>
-      <li><a href="api/_autosummary/mumax3c.runner.html#mumax3c.runner">runner (in module mumax3c)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.runner.html#oommfc.runner">(in module oommfc)</a>
-</li>
-        <li><a href="api/_autosummary/mumax3c.mumax3.Runner.html#mumax3c.mumax3.Runner.runner">(mumax3c.mumax3.Runner property)</a>
-</li>
         <li><a href="api/_autosummary/oommfc.oommf.Runner.html#oommfc.oommf.Runner.runner">(oommfc.oommf.Runner property)</a>
 </li>
       </ul></li>
@@ -1485,10 +1447,10 @@
         <li><a href="api/_autosummary/ubermagtable.Table.html#ubermagtable.Table.selector">(ubermagtable.Table method)</a>
 </li>
       </ul></li>
-      <li><a href="api/_autosummary/ubermagutil.setup_logging.html#ubermagutil.setup_logging">setup_logging() (in module ubermagutil)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/_autosummary/ubermagutil.setup_logging.html#ubermagutil.setup_logging">setup_logging() (in module ubermagutil)</a>
+</li>
       <li><a href="api/_autosummary/ubermagutil.units.si_max_multiplier.html#ubermagutil.units.si_max_multiplier">si_max_multiplier() (in module ubermagutil.units)</a>
 </li>
       <li><a href="api/_autosummary/ubermagutil.units.si_multiplier.html#ubermagutil.units.si_multiplier">si_multiplier() (in module ubermagutil.units)</a>
@@ -1509,12 +1471,8 @@
 </li>
       <li><a href="api/_autosummary/oommfc.SpinXferEvolver.html#oommfc.SpinXferEvolver">SpinXferEvolver (class in oommfc)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.mumax3.Mumax3Runner.html#mumax3c.mumax3.Mumax3Runner.status">status (mumax3c.mumax3.Mumax3Runner property)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.status">(oommfc.oommf.OOMMFRunner property)</a>
+      <li><a href="api/_autosummary/oommfc.oommf.OOMMFRunner.html#oommfc.oommf.OOMMFRunner.status">status (oommfc.oommf.OOMMFRunner property)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Mesh.html#discretisedfield.Mesh.subregions">subregions (discretisedfield.Mesh property)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.plotting.K3dMesh.html#discretisedfield.plotting.K3dMesh.subregions">subregions() (discretisedfield.plotting.K3dMesh method)</a>
@@ -1558,8 +1516,6 @@
 </li>
         <li><a href="api/_autosummary/micromagnetictests.test.html#micromagnetictests.test">(in module micromagnetictests)</a>
 </li>
-        <li><a href="api/_autosummary/mumax3c.test.html#mumax3c.test">(in module mumax3c)</a>
-</li>
         <li><a href="api/_autosummary/oommfc.test.html#oommfc.test">(in module oommfc)</a>
 </li>
         <li><a href="api/_autosummary/ubermag.test.html#ubermag.test">(in module ubermag)</a>
@@ -1571,12 +1527,8 @@
       </ul></li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_dirname.html#micromagnetictests.calculatortests.test_dirname">test_dirname() (in module micromagnetictests.calculatortests)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.test_docker.html#mumax3c.test_docker">test_docker() (in module mumax3c)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.test_docker.html#oommfc.test_docker">(in module oommfc)</a>
+      <li><a href="api/_autosummary/oommfc.test_docker.html#oommfc.test_docker">test_docker() (in module oommfc)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_format.html#micromagnetictests.calculatortests.test_format">test_format() (in module micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.test_info_file.html#micromagnetictests.calculatortests.test_info_file">test_info_file() (in module micromagnetictests.calculatortests)</a>
@@ -1597,10 +1549,10 @@
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestCompute.html#micromagnetictests.calculatortests.TestCompute">TestCompute (class in micromagnetictests.calculatortests)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestCubicAnisotropy.html#micromagnetictests.calculatortests.TestCubicAnisotropy">TestCubicAnisotropy (class in micromagnetictests.calculatortests)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestDamping.html#micromagnetictests.calculatortests.TestDamping">TestDamping (class in micromagnetictests.calculatortests)</a>
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestDemag.html#micromagnetictests.calculatortests.TestDemag">TestDemag (class in micromagnetictests.calculatortests)</a>
@@ -1637,12 +1589,8 @@
 </li>
       <li><a href="api/_autosummary/micromagnetictests.calculatortests.TestZhangLi.html#micromagnetictests.calculatortests.TestZhangLi">TestZhangLi (class in micromagnetictests.calculatortests)</a>
 </li>
-      <li><a href="api/_autosummary/mumax3c.TimeDriver.html#mumax3c.TimeDriver">TimeDriver (class in mumax3c)</a>
-
-      <ul>
-        <li><a href="api/_autosummary/oommfc.TimeDriver.html#oommfc.TimeDriver">(class in oommfc)</a>
+      <li><a href="api/_autosummary/oommfc.TimeDriver.html#oommfc.TimeDriver">TimeDriver (class in oommfc)</a>
 </li>
-      </ul></li>
       <li><a href="api/_autosummary/discretisedfield.Region.html#discretisedfield.Region.to_dict">to_dict() (discretisedfield.Region method)</a>
 </li>
       <li><a href="api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.to_vtk">to_vtk() (discretisedfield.Field method)</a>
@@ -1862,7 +1810,8 @@
   
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   <footer class="bd-footer"><div class="bd-footer__inner container">
   
@@ -1874,6 +1823,16 @@
 
 </p>
 
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
   </div>
   
   <div class="footer-item">

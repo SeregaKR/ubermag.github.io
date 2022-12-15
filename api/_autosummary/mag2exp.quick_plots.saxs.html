@@ -7,24 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>mag2exp.quick_plots.saxs &#8212; ubermag  documentation</title>
-  <script>
+  
+  
+  
+  <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
   
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
@@ -33,7 +33,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/colours.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -58,6 +59,10 @@
   
   
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   
   <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
@@ -121,53 +126,53 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="../../demo.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../demo.html">
                         Demo
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../installation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
                         Installation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="../../documentation.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../documentation.html">
                         Documentation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../changelog.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
                         Changelog
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../help.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../help.html">
                         Help
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../contributing.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing.html">
                         Contributing
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../news.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../news.html">
                         News
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
     </ul>
 </nav>
@@ -176,12 +181,14 @@
     </div>
 
     <div id="navbar-end">
-      <div class="navbar-end-item navbar-end__search-button-container">
-        
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
   <i class="fa-solid fa-magnifying-glass"></i>
 </button>
-      </div>
+        </div>
+      
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
@@ -204,11 +211,13 @@
 
 
   
-  <div class="search-button-container--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" data-toggle="tooltip">
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
   <i class="fa-solid fa-magnifying-glass"></i>
 </button>
-  </div>
+    </div>
+  
 
   
   <label class="sidebar-toggle secondary-toggle" for="__secondary">
@@ -238,53 +247,53 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                <li class="nav-item">
-                    <a class="nav-link" href="../../demo.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../demo.html">
                         Demo
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../installation.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
                         Installation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item current active">
-                    <a class="nav-link" href="../../documentation.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../documentation.html">
                         Documentation
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../changelog.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog.html">
                         Changelog
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../help.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../help.html">
                         Help
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../contributing.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../contributing.html">
                         Contributing
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="../../news.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../news.html">
                         News
-                    </a>
-                </li>
+                      </a>
+                    </li>
                 
     </ul>
 </nav>
@@ -650,24 +659,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="mumax3c.html">mumax3c</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.runner.html">mumax3c.runner</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.MinDriver.html">MinDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.RelaxDriver.html">RelaxDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.TimeDriver.html">TimeDriver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.delete.html">mumax3c.delete</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.test.html">mumax3c.test</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mumax3c.test_docker.html">mumax3c.test_docker</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="mumax3c.mumax3.html">mumax3c.mumax3</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.ExeMumax3Runner.html">ExeMumax3Runner</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.Mumax3Runner.html">Mumax3Runner</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.Runner.html">Runner</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mumax3c.mumax3.overhead.html">mumax3c.mumax3.overhead</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="oommfc.html">oommfc</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="oommfc.html">oommfc</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.runner.html">oommfc.runner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.CGEvolver.html">CGEvolver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.Driver.html">Driver</a></li>
@@ -685,7 +677,7 @@
 <li class="toctree-l3"><a class="reference internal" href="oommfc.delete.html">oommfc.delete</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.test.html">oommfc.test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="oommfc.test_docker.html">oommfc.test_docker</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="oommfc.oommf.html">oommfc.oommf</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="oommfc.oommf.html">oommfc.oommf</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.DockerOOMMFRunner.html">DockerOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.ExeOOMMFRunner.html">ExeOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="oommfc.oommf.OOMMFRunner.html">OOMMFRunner</a></li>
@@ -696,15 +688,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermag.test.html">ubermag.test</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.Table.html">Table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.interact.html">ubermagtable.interact</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagtable.test.html">ubermagtable.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagtable.util.html">ubermagtable.util</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagtable.util.html">ubermagtable.util</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.columns.html">ubermagtable.util.columns</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.data.html">ubermagtable.util.data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagtable.util.units.html">ubermagtable.util.units</a></li>
@@ -712,13 +704,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.changedir.html">ubermagutil.changedir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.hysteresis_values.html">ubermagutil.hysteresis_values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.inherit_docs.html">ubermagutil.inherit_docs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.setup_logging.html">ubermagutil.setup_logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ubermagutil.test.html">ubermagutil.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.typesystem.html">ubermagutil.typesystem</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.typesystem.html">ubermagutil.typesystem</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Descriptor.html">Descriptor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Dictionary.html">Dictionary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.Name.html">Name</a></li>
@@ -730,7 +722,7 @@
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.typesystem.typesystem.html">ubermagutil.typesystem.typesystem</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.units.html">ubermagutil.units</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="ubermagutil.units.html">ubermagutil.units</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.units.si_max_multiplier.html">ubermagutil.units.si_max_multiplier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ubermagutil.units.si_multiplier.html">ubermagutil.units.si_multiplier</a></li>
 </ul>
@@ -756,8 +748,11 @@
     </div>
   </div>
 
+  
+  <div id="rtd-footer-container"></div>
+
       </div>
-      <main class="bd-main">
+      <main id="main-content" class="bd-main">
         
         
         <div class="bd-content">
@@ -877,7 +872,8 @@
   
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   <footer class="bd-footer"><div class="bd-footer__inner container">
   
@@ -889,6 +885,16 @@
 
 </p>
 
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
   </div>
   
   <div class="footer-item">
