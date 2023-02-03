@@ -1,0 +1,6 @@
+ubermag.debug\_info
+===================
+
+.. currentmodule:: ubermag
+
+.. autofunction:: debug_info

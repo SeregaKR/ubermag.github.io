@@ -391,7 +391,7 @@ is complete, in Terminal (Linux and MacOS) or in Anaconda Prompt
 <p>Here, we show how to create and activate a new conda environment called
 <code class="docutils literal notranslate"><span class="pre">ubermag_env</span></code>. To use a different name, replace <code class="docutils literal notranslate"><span class="pre">ubermag_env</span></code> with
 your desired name.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n ubermag_env python=3.8
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n ubermag_env python=3.10
 $ conda activate ubermag_env
 </pre></div>
 </div>
@@ -455,7 +455,7 @@ and mumax<sup>3</sup>).</p>
 OOMMF</label><div class="sd-tab-content docutils">
 <p>When you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> OOMMF will be automatically
 installed and <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> (more precisely <code class="docutils literal notranslate"><span class="pre">oommfc</span></code>) knows how to find it. If
-you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">/pip</span></code> you have to install OOMMF manually and
+you install <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> using <code class="docutils literal notranslate"><span class="pre">pip</span></code> you have to install OOMMF manually and
 make sure that <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> can find it. This also allows you to use a custom
 version of OOMMF. If you have no OOMMF installed but Docker is available
 <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> will automatically attempt to download and use a Docker image
@@ -508,7 +508,7 @@ interpreted as escape sequences in the Python string.</p>
 <section id="testing">
 <h3>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h3>
 <p>You can test the installation by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python -c <span class="s2">&quot;import ubermag; ubermag.test()&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import ubermag; ubermag.test()&quot;</span>
 </pre></div>
 </div>
 <p>Again, replace <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> with the name of your package if you do not install
@@ -613,7 +613,7 @@ information, please refer to the OOMMF <a class="reference external" href="https
 Ubermag knows where to find OOMMF. Consequently, in your home directory, add
 the path to <code class="docutils literal notranslate"><span class="pre">oommf.tcl</span></code> file to the end of the <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file. More
 specifically, the line at the end of your file should look like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">OOMMFTCL</span><span class="o">=</span><span class="s2">&quot;/path/to/your/compiled/oommf.tcl&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OOMMFTCL</span><span class="o">=</span><span class="s2">&quot;/path/to/your/compiled/oommf.tcl&quot;</span>
 </pre></div>
 </div>
 <p><strong>Please note that after editing</strong> <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> <strong>file, you need to refresh
@@ -666,7 +666,7 @@ previously installed Ubermag knows where to find OOMMF. Consequently, in your
 home directory, add the path to <code class="docutils literal notranslate"><span class="pre">oommf.tcl</span></code> file to the end of the
 <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. More specifically, the line at the emd of your file should
 look like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">OOMMFTCL</span><span class="o">=</span><span class="s2">&quot;/path/to/your/oommf.tcl&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OOMMFTCL</span><span class="o">=</span><span class="s2">&quot;/path/to/your/oommf.tcl&quot;</span>
 </pre></div>
 </div>
 <p><strong>Please note that after editing</strong> <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> <strong>file, you need to refresh
@@ -685,7 +685,7 @@ commands in a Python prompt on any operating system:</p>
 </pre></div>
 </div>
 <p>or from the command line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 -c <span class="s2">&quot;import oommfc; oommfc.oommf.status()</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import oommfc; oommfc.oommf.status()</span>
 </pre></div>
 </div>
 <p>This will attempt to run a small simulation using OOMMF.</p>

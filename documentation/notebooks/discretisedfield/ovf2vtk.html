@@ -691,6 +691,7 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermag.debug_info.html">ubermag.debug_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermag.test.html">ubermag.test</a></li>
 </ul>
 </li>
@@ -769,9 +770,9 @@
               
   <section id="ovf2vtk-tool">
 <h1><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool<a class="headerlink" href="#ovf2vtk-tool" title="Permalink to this heading">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">discretisedfield.ovf2vtk</span></code> is a command line tool used to convert OVF to the VTK file format.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> (which is equivalent to <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">discretisedfield.io.ovf2vtk</span></code>) is a command line tool used to convert OVF to the VTK file format.</p>
 <p>Information about the tool and its usage can be accessed by typing:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --help
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ovf2vtk --help
 
 usage: ovf2vtk [-h] --input INPUT [INPUT ...] [--output OUTPUT [OUTPUT ...]]
 
@@ -789,25 +790,25 @@ optional arguments:
 <section id="1.-Single-file">
 <h2>1. Single file<a class="headerlink" href="#1.-Single-file" title="Permalink to this heading">#</a></h2>
 <p>Probably the simplest use case is the conversion of a single fie.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file.omf
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ovf2vtk -i my-ovf-file.omf
 </pre></div>
 </div>
 <p>This command is going to create the same output file as if we specified the output filename:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python discretisedfield.ovf2vtk -i my-ovf-file.omf -o my-ovf-file.vtk
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ovf2vtk -i my-ovf-file.omf -o my-ovf-file.vtk
 </pre></div>
 </div>
 </section>
 <section id="2.-Multiple-files">
 <h2>2. Multiple files<a class="headerlink" href="#2.-Multiple-files" title="Permalink to this heading">#</a></h2>
 <p>To convert multiple OVF files, a list of files is passed to the <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> tool.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk -i my-ovf-file1.omf my-ovf-file2.omf my-ovf-file3.omf
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ovf2vtk -i my-ovf-file1.omf my-ovf-file2.omf my-ovf-file3.omf
 </pre></div>
 </div>
 </section>
 <section id="3.-Wildcard">
 <h2>3. Wildcard<a class="headerlink" href="#3.-Wildcard" title="Permalink to this heading">#</a></h2>
-<p>Usually, the number of files which should be converted is very large. In that case, a filename with a wildcard can be passed.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python3 -m discretisedfield.ovf2vtk --infile my-ovf-file*.omf
+<p>Usually, the number of files which should be converted is very large. In that case, a filename with a wildcard can be used.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ovf2vtk --infile my-ovf-file*.omf
 </pre></div>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
