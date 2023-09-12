@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Defining a uniform field &#8212; ubermag  documentation</title>
   
@@ -29,32 +28,29 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css?v=f1e252c1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=fd10adb8"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'documentation/notebooks/discretisedfield/field-definition';</script>
-    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Spatially varying fields" href="field-spatially-varying.html" />
@@ -683,7 +679,24 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/oommfc.html">oommfc</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/mumax3c.html">mumax3c</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.runner.html">mumax3c.runner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.MinDriver.html">MinDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.RelaxDriver.html">RelaxDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.TimeDriver.html">TimeDriver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.delete.html">mumax3c.delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.test.html">mumax3c.test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/mumax3c.test_docker.html">mumax3c.test_docker</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/mumax3c.mumax3.html">mumax3c.mumax3</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/mumax3c.mumax3.ExeMumax3Runner.html">ExeMumax3Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/mumax3c.mumax3.Mumax3Runner.html">Mumax3Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/mumax3c.mumax3.Runner.html">Runner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/mumax3c.mumax3.overhead.html">mumax3c.mumax3.overhead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/oommfc.html">oommfc</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.runner.html">oommfc.runner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.CGEvolver.html">CGEvolver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.Driver.html">Driver</a></li>
@@ -701,7 +714,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.delete.html">oommfc.delete</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.test.html">oommfc.test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/oommfc.test_docker.html">oommfc.test_docker</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/oommfc.oommf.html">oommfc.oommf</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/oommfc.oommf.html">oommfc.oommf</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/oommfc.oommf.DockerOOMMFRunner.html">DockerOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/oommfc.oommf.ExeOOMMFRunner.html">ExeOOMMFRunner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/oommfc.oommf.OOMMFRunner.html">OOMMFRunner</a></li>
@@ -712,16 +725,16 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermag.html">ubermag</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermag.debug_info.html">ubermag.debug_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermag.test.html">ubermag.test</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.html">ubermagtable</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.Table.html">Table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.interact.html">ubermagtable.interact</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.test.html">ubermagtable.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.util.html">ubermagtable.util</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.util.html">ubermagtable.util</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.util.columns.html">ubermagtable.util.columns</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.util.data.html">ubermagtable.util.data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagtable.util.units.html">ubermagtable.util.units</a></li>
@@ -729,13 +742,13 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.html">ubermagutil</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.changedir.html">ubermagutil.changedir</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.hysteresis_values.html">ubermagutil.hysteresis_values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.inherit_docs.html">ubermagutil.inherit_docs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.setup_logging.html">ubermagutil.setup_logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.test.html">ubermagutil.test</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.html">ubermagutil.typesystem</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.html">ubermagutil.typesystem</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.Descriptor.html">Descriptor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.Dictionary.html">Dictionary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.Name.html">Name</a></li>
@@ -747,7 +760,7 @@ document.write(`
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.typesystem.typesystem.html">ubermagutil.typesystem.typesystem</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.units.html">ubermagutil.units</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.units.html">ubermagutil.units</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.units.si_max_multiplier.html">ubermagutil.units.si_max_multiplier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../api/_autosummary/ubermagutil.units.si_multiplier.html">ubermagutil.units.si_multiplier</a></li>
 </ul>
@@ -1265,7 +1278,7 @@ array([[[[ 1.,  0., -3.],
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     <br/>
   </p>
 </div>
