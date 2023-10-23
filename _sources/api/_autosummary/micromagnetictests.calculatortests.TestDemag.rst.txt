@@ -21,7 +21,7 @@ TestDemag
          ~TestDemag.__dir__
          ~TestDemag.__eq__
          ~TestDemag.__repr__
-         ~TestDemag.setup
+         ~TestDemag.setup_method
          ~TestDemag.test_demag
          ~TestDemag.test_demag_1_pbc
          ~TestDemag.test_demag_2_pbc

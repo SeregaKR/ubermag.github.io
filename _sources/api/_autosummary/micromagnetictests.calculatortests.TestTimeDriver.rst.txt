@@ -21,7 +21,7 @@ TestTimeDriver
          ~TestTimeDriver.__dir__
          ~TestTimeDriver.__eq__
          ~TestTimeDriver.__repr__
-         ~TestTimeDriver.setup
+         ~TestTimeDriver.setup_method
          ~TestTimeDriver.test_drive_exception
          ~TestTimeDriver.test_euler_evolver_nodriver
          ~TestTimeDriver.test_nodamping

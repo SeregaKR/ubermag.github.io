@@ -38,18 +38,29 @@ Field
          ~Field.__sub__
          ~Field.__truediv__
          ~Field.allclose
-         ~Field.coordinate_field
-         ~Field.derivative
+         ~Field.angle
+         ~Field.cross
+         ~Field.diff
+         ~Field.dot
+         ~Field.fftn
+         ~Field.from_file
          ~Field.from_xarray
          ~Field.fromfile
-         ~Field.integral
+         ~Field.ifftn
+         ~Field.integrate
+         ~Field.irfftn
+         ~Field.is_same_vectorspace
          ~Field.line
+         ~Field.mean
          ~Field.pad
-         ~Field.plane
-         ~Field.project
+         ~Field.resample
+         ~Field.rfftn
+         ~Field.rotate90
+         ~Field.sel
+         ~Field.to_file
          ~Field.to_vtk
          ~Field.to_xarray
-         ~Field.write
+         ~Field.update_field_values
    
    
 
@@ -59,32 +70,28 @@ Field
 
    .. autosummary::
    
-      ~Field.angle
+      ~Field.dtype
+      ~Field.abs
       ~Field.array
-      ~Field.average
-      ~Field.components
       ~Field.conjugate
       ~Field.curl
-      ~Field.dim
       ~Field.div
-      ~Field.fftn
       ~Field.grad
       ~Field.hv
-      ~Field.ifftn
       ~Field.imag
-      ~Field.irfftn
       ~Field.k3d
       ~Field.laplace
       ~Field.mesh
       ~Field.mpl
       ~Field.norm
+      ~Field.nvdim
       ~Field.orientation
       ~Field.phase
       ~Field.real
-      ~Field.rfftn
-      ~Field.units
-      ~Field.value
-      ~Field.zero
+      ~Field.unit
+      ~Field.valid
+      ~Field.vdim_mapping
+      ~Field.vdims
    
    
 

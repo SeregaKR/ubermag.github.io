@@ -21,7 +21,7 @@ TestFixedSubregions
          ~TestFixedSubregions.__dir__
          ~TestFixedSubregions.__eq__
          ~TestFixedSubregions.__repr__
-         ~TestFixedSubregions.setup
+         ~TestFixedSubregions.setup_method
          ~TestFixedSubregions.test_fixed_subregions
    
    

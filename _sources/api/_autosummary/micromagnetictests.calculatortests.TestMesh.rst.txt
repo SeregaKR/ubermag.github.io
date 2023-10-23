@@ -21,7 +21,7 @@ TestMesh
          ~TestMesh.__dir__
          ~TestMesh.__eq__
          ~TestMesh.__repr__
-         ~TestMesh.setup
+         ~TestMesh.setup_method
          ~TestMesh.test_multi_nopbc
          ~TestMesh.test_multi_pbc
          ~TestMesh.test_single_nopbc

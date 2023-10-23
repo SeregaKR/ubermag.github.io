@@ -1,6 +1,0 @@
-discretisedfield.integral
-=========================
-
-.. currentmodule:: discretisedfield
-
-.. autofunction:: integral

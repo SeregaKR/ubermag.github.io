@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,18 +35,20 @@
     <link rel="stylesheet" type="text/css" href="_static/css/colours.css?v=f1e252c1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=fd10adb8"></script>
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'changelog';</script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -211,8 +213,8 @@
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__kbd-shortcut">Search</span>
-    <span><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
    </button>
  `);
  </script>
@@ -245,8 +247,8 @@
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__kbd-shortcut">Search</span>
-    <span><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
    </button>
  `);
  </script>
@@ -410,11 +412,170 @@
                 <article class="bd-article" role="main">
                   
   <section id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
-<section id="feb-3-2023">
-<h2>0.66.1 (Feb 3, 2023)<a class="headerlink" href="#feb-3-2023" title="Permalink to this heading">#</a></h2>
+<h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<section id="oct-23-2023">
+<h2>2023.10 (Oct 23, 2023)<a class="headerlink" href="#oct-23-2023" title="Link to this heading">#</a></h2>
+<p>The meta-package <code class="docutils literal notranslate"><span class="pre">ubermag</span></code> now uses calendar-based versioning. We use a style
+that is broadly inspired by Ubuntu: we use the year and the month and optionally
+a patch (<code class="docutils literal notranslate"><span class="pre">YYYY.0M[.patch]</span></code>). We omit the number for patch <code class="docutils literal notranslate"><span class="pre">0</span></code> and only add
+and increase <code class="docutils literal notranslate"><span class="pre">patch</span></code> when there are two releases in a month. The versioning is
+not related to the type of changes (and a <code class="docutils literal notranslate"><span class="pre">patch</span></code> does not necessarily mean a
+bug fix). For the type of changes please refer to this changelog or the versions
+of the individual packages, which follow semantic versioning.</p>
+<section id="breaking-changes-in-discretisedfield">
+<h3>Breaking changes in <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code><a class="headerlink" href="#breaking-changes-in-discretisedfield" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> has been refactored to support scalar and (m-dimensional)
+vector fields on n-dimensional meshes. As part of this refactoring, several
+inconsistencies and ambiguities have been removed. These changes break existing
+code! The following summary lists all user-facing changes (removed, renamed,
+added functionality). Even though the list below is fairly long, most notebooks
+only require a few changes. The most common ones are the switch <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">-&gt;</span> <span class="pre">nvdim</span></code>
+and adding <code class="docutils literal notranslate"><span class="pre">valid='norm'</span></code> when creating a field, and the replacement
+<code class="docutils literal notranslate"><span class="pre">plane</span> <span class="pre">-&gt;</span> <span class="pre">sel</span></code>.</p>
+<p>The shape of the domain (i.e. the shape of the region/mesh) is now referred to
+as <code class="docutils literal notranslate"><span class="pre">dim</span></code>, the shape of the field values as <code class="docutils literal notranslate"><span class="pre">vdim</span></code> (vector/value dimension).</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Region</span></code></dt><dd><ul class="simple">
+<li><p>Modified: scaling a region is now done with the method <code class="docutils literal notranslate"><span class="pre">scale</span></code>, the option
+to scale a region by multiply it with a number has been removed. Scaling can
+optionally be done in-place.</p></li>
+<li><p>New: regions can be translated in space with <code class="docutils literal notranslate"><span class="pre">translate</span></code>. Translating can
+optionally be done in-place.</p></li>
+<li><p>Modified: a new method <code class="docutils literal notranslate"><span class="pre">allclose</span></code> checks if two regions are the same
+within numerical accuracy, the operator now <code class="docutils literal notranslate"><span class="pre">==</span></code> checks for exact
+equality.</p></li>
+<li><p>Modified: the operator <code class="docutils literal notranslate"><span class="pre">|</span></code> has been replaced with the new method
+<code class="docutils literal notranslate"><span class="pre">facing_surface</span></code></p></li>
+<li><p>Removed: properties <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code>, use <code class="docutils literal notranslate"><span class="pre">pmin</span></code> and <code class="docutils literal notranslate"><span class="pre">pmax</span></code></p></li>
+<li><p>Changed: the return type of points (e.g. <code class="docutils literal notranslate"><span class="pre">pmin</span></code>, <code class="docutils literal notranslate"><span class="pre">pmax</span></code>, <code class="docutils literal notranslate"><span class="pre">centre</span></code>) is
+now a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></p></li>
+<li><p>Changed: <code class="docutils literal notranslate"><span class="pre">unit</span></code> has been renamed to <code class="docutils literal notranslate"><span class="pre">units</span></code> and is a tuple to supports
+different units along different directions (only used as labels on plots,
+not for calculations).</p></li>
+<li><p>New: property <code class="docutils literal notranslate"><span class="pre">ndim</span></code> to get the number of dimensions of the space.</p></li>
+<li><p>New: property <code class="docutils literal notranslate"><span class="pre">dims</span></code>, names of the spatial dimensions.</p></li>
+<li><p>New: method <code class="docutils literal notranslate"><span class="pre">rotate90</span></code> to perform 90 degree rotations of the region.</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Mesh</span></code></dt><dd><ul class="simple">
+<li><p>Modified: a new method <code class="docutils literal notranslate"><span class="pre">allclose</span></code> checks if two regions are the same
+within numerical accuracy, the operator now <code class="docutils literal notranslate"><span class="pre">==</span></code> checks for exact
+equality.</p></li>
+<li><p>Modified: inconsistent behaviour of <code class="docutils literal notranslate"><span class="pre">mesh[subregion]</span></code>; this operator will
+now always use closed intervals, i.e. the returned submesh is now always
+inclusive of endpoints.</p></li>
+<li><p>Modified: the operator <code class="docutils literal notranslate"><span class="pre">|</span></code> has been replaced with a new method called
+<code class="docutils literal notranslate"><span class="pre">is_aligned</span></code>.</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">axispoints</span></code> (was deprecated), use <code class="docutils literal notranslate"><span class="pre">points</span></code> instead.</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">neighbours</span></code></p></li>
+<li><p>Renamed and modified: <code class="docutils literal notranslate"><span class="pre">plane</span></code> has been replaced with a new <code class="docutils literal notranslate"><span class="pre">sel</span></code> method.
+(for details refer to the Field <a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Intersecting-the-field-with-a-plane">documentation</a>)</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">attributes</span></code></p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">dS</span></code>; was used for integrals; the new syntax for integrals does
+not any longer use it (see below).</p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">midpoints</span></code> to <code class="docutils literal notranslate"><span class="pre">points</span></code></p></li>
+<li><p>Modified: new method <code class="docutils literal notranslate"><span class="pre">coordinate_field</span></code> that was previous part of the
+<code class="docutils literal notranslate"><span class="pre">Field</span></code> class.</p></li>
+<li><p>New: <code class="docutils literal notranslate"><span class="pre">scale</span></code> and <code class="docutils literal notranslate"><span class="pre">translate</span></code> similar to the <code class="docutils literal notranslate"><span class="pre">Region</span></code> class.</p></li>
+<li><p>New: method <code class="docutils literal notranslate"><span class="pre">rotate90</span></code> to perform 90 degree rotations of the mesh.</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Field</span></code></dt><dd><ul class="simple">
+<li><p>Modified: getting the value at a point (<code class="docutils literal notranslate"><span class="pre">field(...)</span></code>) now returns a
+<code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>.</p></li>
+<li><p>Modified: only field values are returned when iterating over a field.
+(<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Iterating-through-the-field">documentation</a>)</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">coordinate_field</span></code> is now part of the <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> class.</p></li>
+<li><p>Renamed and modified: <code class="docutils literal notranslate"><span class="pre">derivative</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">diff</span></code>; now supports holes inside
+the field. (<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Vector-calculus">documentation</a>)</p></li>
+<li><p>Modified: new integration syntax. (<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Integrals">documentation</a>)</p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">fromfile</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">from_file</span></code></p></li>
+<li><p>Renamed and modified: <code class="docutils literal notranslate"><span class="pre">plane</span></code> has been replaced with a new <code class="docutils literal notranslate"><span class="pre">sel</span></code> method.
+(<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-operations.html#Intersecting-the-field-with-a-plane">documentation</a>)</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">project</span></code> has been removed, use <code class="docutils literal notranslate"><span class="pre">mean</span></code> with the <code class="docutils literal notranslate"><span class="pre">axis</span></code>
+argument instead.</p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">write</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">to_file</span></code></p></li>
+<li><p>Modified: <code class="docutils literal notranslate"><span class="pre">angle</span></code> now takes a vector as reference and does not anymore
+require sliced fields.</p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">dim</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">nvdim</span></code> to avoid ambiguities, the new name is also
+required as an argument when creating a field.</p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">components</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">vdims</span></code></p></li>
+<li><p>Renamed: <code class="docutils literal notranslate"><span class="pre">units</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">unit</span></code></p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">value</span></code>, to update field values use the new method
+<code class="docutils literal notranslate"><span class="pre">update_field_values</span></code> instead, to read data use the <code class="docutils literal notranslate"><span class="pre">array</span></code> property.</p></li>
+<li><p>Removed: <code class="docutils literal notranslate"><span class="pre">zero</span></code> class method; omit the <code class="docutils literal notranslate"><span class="pre">value</span></code> argument to create a
+field filled with zeros (was already supported before).</p></li>
+<li><p>New: method <code class="docutils literal notranslate"><span class="pre">resample</span></code> to compute field values on a new mesh; the nearest
+points will be used, interpolation is not supported. (<a class="reference external" href="https://ubermag.github.io/notebooks/discretisedfield/field-operations.html#Resampling-the-field.html">documentation</a>)</p></li>
+<li><p>New: property <code class="docutils literal notranslate"><span class="pre">valid</span></code> to define parts that contain material; this can be
+set to the field norm on init using the optional <code class="docutils literal notranslate"><span class="pre">valid='norm'</span></code> argument.
+(<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-valid.html">documentation</a>)</p></li>
+<li><p>Modified: new hdf5 format to store all field information (e.g. subregions
+were missing before). (<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/ubermag/hdf5-file-specification.html">documentation</a>)</p></li>
+<li><p>New: Documentation for performing FFT on the <code class="docutils literal notranslate"><span class="pre">Field</span></code> class (<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-fft.html">documentation</a>).</p></li>
+<li><p>New: method <code class="docutils literal notranslate"><span class="pre">rotate90</span></code> to perform 90 degree rotations of the field.
+(<a class="reference external" href="https://ubermag.github.io/documentation/notebooks/discretisedfield/field-rotations.html#Rotations-by-multiples-of-90°">documentation</a>).</p></li>
+<li><p>Modified: Differential operators <code class="docutils literal notranslate"><span class="pre">grad</span></code>, <code class="docutils literal notranslate"><span class="pre">div</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">Laplacian</span></code> have been generalised to n dimensions.</p></li>
+<li><p>Plotting with holoviews now uses <code class="docutils literal notranslate"><span class="pre">field.valid</span></code> to hide data (e.g. based on
+their norm). The <code class="docutils literal notranslate"><span class="pre">norm_filter</span></code> property as well as the <code class="docutils literal notranslate"><span class="pre">Defaults</span></code> class
+for plotting have been removed. Use <code class="docutils literal notranslate"><span class="pre">valid=&quot;norm&quot;</span></code> when initialising the
+field. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/475">#475</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ubermag</span></code></dt><dd><ul class="simple">
+<li><p>Debug function to show versions of all ubermag subpackages and related
+information. (<a class="reference external" href="https://github.com/ubermag/ubermag/pull/147">#147</a>, <a class="reference external" href="https://github.com/ubermag/ubermag/pull/148">#148</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mumax3c</span></code></dt><dd><ul class="simple">
+<li><p>Support for multiple Zeeman fields in the energy equation. (<a class="reference external" href="https://github.com/ubermag/mumax3c/pull/49">#49</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code></dt><dd><ul class="simple">
+<li><p>An additional summary line is printed for the progress bar context manager.
+Users will see the additional line when using <code class="docutils literal notranslate"><span class="pre">oommfc</span></code> or <code class="docutils literal notranslate"><span class="pre">mumax3c</span></code> time
+drives or min drives with <code class="docutils literal notranslate"><span class="pre">verbose=2</span></code>. This was added because the progress
+bar in the notebook is not persistent across sessions. (<a class="reference external" href="https://github.com/ubermag/ubermagutil/pull/39">#39</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
 <section id="fixed">
-<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading">#</a></h3>
+<h3>Fixed<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">micromagneticmodel</span></code></dt><dd><ul class="simple">
+<li><p>Wrong value of <span class="math notranslate nohighlight">\(\mu_B\)</span>. (<a class="reference external" href="https://github.com/ubermag/micromagneticmodel/pull/79">#79</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mumax3c</span></code></dt><dd><ul class="simple">
+<li><p>Bug in mumax3 detection when passing the full path to the mumax3 executable.
+(<a class="reference external" href="https://github.com/ubermag/mumax3c/commit/b2c334d53657599ff6144da5771abc92810e9350">commit b2c334d</a>)</p></li>
+<li><p>Bug in current conversion for Zhang-Li. (<a class="reference external" href="https://github.com/ubermag/mumax3c/pull/73">#73</a>)</p></li>
+</ul>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
+<li><p>Bug in RKKY energy script when not defining sigma2. (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/142">#142</a>)</p></li>
+<li><p>Bug in time varying J and tcl injection script of Xf_ThermSpinXferEvolver. (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/136">#136</a>)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="feb-3-2023">
+<h2>0.66.1 (Feb 3, 2023)<a class="headerlink" href="#feb-3-2023" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Fixed<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">ovf2vtk</span></code> command line tool was not directly accessible. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/219">#219</a>)</p></li>
@@ -426,9 +587,9 @@ data when the mesh size exceeded 100,000 elements. (<a class="reference external
 </section>
 </section>
 <section id="oct-20-2022">
-<h2>0.66.0 (Oct 20, 2022)<a class="headerlink" href="#oct-20-2022" title="Permalink to this heading">#</a></h2>
-<section id="added">
-<h3>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h3>
+<h2>0.66.0 (Oct 20, 2022)<a class="headerlink" href="#oct-20-2022" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Added<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Reading and writing for <code class="docutils literal notranslate"><span class="pre">Field</span></code> objects now supports <code class="docutils literal notranslate"><span class="pre">pathlib.Path</span></code>
@@ -458,8 +619,8 @@ new drive object that only contains every second magnetisation file. (<a class="
 </dd>
 </dl>
 </section>
-<section id="changed">
-<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h3>Changed<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Plotting for <code class="docutils literal notranslate"><span class="pre">Mesh</span></code> class moved to new submodule similar to <code class="docutils literal notranslate"><span class="pre">Region</span></code> and
@@ -478,8 +639,8 @@ slider might take more time. (<a class="reference external" href="https://github
 </dd>
 </dl>
 </section>
-<section id="id1">
-<h3>Fixed<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Missing initialisation when computing <code class="docutils literal notranslate"><span class="pre">field.orientation</span></code> for a field with
@@ -490,9 +651,9 @@ zero norm in some cells. (<a class="reference external" href="https://github.com
 </section>
 </section>
 <section id="jul-17-2022">
-<h2>0.65.0 (Jul 17, 2022)<a class="headerlink" href="#jul-17-2022" title="Permalink to this heading">#</a></h2>
-<section id="id2">
-<h3>Changed<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h2>0.65.0 (Jul 17, 2022)<a class="headerlink" href="#jul-17-2022" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Changed<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Import <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> into <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>. (<a class="reference external" href="https://github.com/ubermag/discretisedfield/pull/159">#159</a>)</p></li>
@@ -516,7 +677,7 @@ presence of Zhang-Li and Slonczewski torque terms. (<a class="reference external
 </section>
 </section>
 <section id="jul-03-2022">
-<h2>0.64.0 (Jul 03, 2022)<a class="headerlink" href="#jul-03-2022" title="Permalink to this heading">#</a></h2>
+<h2>0.64.0 (Jul 03, 2022)<a class="headerlink" href="#jul-03-2022" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">mumax3c</span></code></dt><dd><p>A new package <code class="docutils literal notranslate"><span class="pre">mumax3c</span></code> has been added and allows users to use
 mumax<sup>3</sup> as a new calculator in addition to OOMMF.</p>
@@ -524,9 +685,9 @@ mumax<sup>3</sup> as a new calculator in addition to OOMMF.</p>
 </dl>
 </section>
 <section id="jun-29-2022">
-<h2>0.63.0 (Jun 29, 2022)<a class="headerlink" href="#jun-29-2022" title="Permalink to this heading">#</a></h2>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h2>0.63.0 (Jun 29, 2022)<a class="headerlink" href="#jun-29-2022" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Support for interactive plots based on Holoviews with <code class="docutils literal notranslate"><span class="pre">Field.hv</span></code>
@@ -580,8 +741,8 @@ generally don’t use any of this functionality directly. (<a class="reference e
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h3>Changed<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Vector fields with zero values can now be normalised. The rescaling of the
@@ -610,8 +771,8 @@ the two terms. Previously, only the names of the two terms were compared.
 </dd>
 </dl>
 </section>
-<section id="id5">
-<h3>Fixed<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h3>Fixed<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong normalisation of the lightness component in lightness plots if not all
@@ -637,9 +798,9 @@ value instead of the maximum value. (<a class="reference external" href="https:/
 </section>
 </section>
 <section id="jun-09-2022">
-<h2>0.62.1 (Jun 09, 2022)<a class="headerlink" href="#jun-09-2022" title="Permalink to this heading">#</a></h2>
-<section id="id6">
-<h3>Fixed<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h2>0.62.1 (Jun 09, 2022)<a class="headerlink" href="#jun-09-2022" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h3>Fixed<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Importing <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code> fails on some platforms because <code class="docutils literal notranslate"><span class="pre">openh264</span></code> is
@@ -650,9 +811,9 @@ missing. (<a class="reference external" href="https://github.com/ubermag/discret
 </section>
 </section>
 <section id="may-22-2022">
-<h2>0.62.0 (May 22, 2022)<a class="headerlink" href="#may-22-2022" title="Permalink to this heading">#</a></h2>
-<section id="id7">
-<h3>Added<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h2>0.62.0 (May 22, 2022)<a class="headerlink" href="#may-22-2022" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h3>Added<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Support for exporting <code class="docutils literal notranslate"><span class="pre">Field</span></code> object to the <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code> with
@@ -728,7 +889,7 @@ from <code class="docutils literal notranslate"><span class="pre">ubermag</span>
 </dl>
 </section>
 <section id="removed">
-<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this heading">#</a></h3>
+<h3>Removed<a class="headerlink" href="#removed" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">ubermag</span></code></dt><dd><ul class="simple">
 <li><p>Utility functionality for setting up basic logging moved to <code class="docutils literal notranslate"><span class="pre">ubermagutil</span></code>
@@ -738,8 +899,8 @@ from <code class="docutils literal notranslate"><span class="pre">ubermag</span>
 </dd>
 </dl>
 </section>
-<section id="id8">
-<h3>Fixed<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="id11">
+<h3>Fixed<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Changes in the calculation of the demag tensor to avoid zero-division problems
@@ -757,9 +918,9 @@ read/write access with SELinux (<a class="reference external" href="https://gith
 </section>
 </section>
 <section id="mar-17-2022">
-<h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Permalink to this heading">#</a></h2>
-<section id="id9">
-<h3>Fixed<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h2>0.61.2 (Mar 17, 2022)<a class="headerlink" href="#mar-17-2022" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h3>Fixed<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">oommfc</span></code></dt><dd><ul class="simple">
 <li><p>The old docker image of oommf (2.0a2) was used by default (<a class="reference external" href="https://github.com/ubermag/oommfc/pull/84">#84</a>).</p></li>
@@ -771,17 +932,17 @@ in a runtime error (<a class="reference external" href="https://github.com/uberm
 </section>
 </section>
 <section id="feb-22-2022">
-<h2>0.61.0 (Feb 22, 2022)<a class="headerlink" href="#feb-22-2022" title="Permalink to this heading">#</a></h2>
+<h2>0.61.0 (Feb 22, 2022)<a class="headerlink" href="#feb-22-2022" title="Link to this heading">#</a></h2>
 <section id="general">
-<h3>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h3>
+<h3>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Support Cnv, D2d, and T(O) crystallographic class DMI and magneto-elastic
 (MEL) extensions in conda-installed Ubermag on Windows, in addition to MacOS
 and Linux.</p></li>
 </ul>
 </section>
-<section id="id10">
-<h3>Added<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<section id="id13">
+<h3>Added<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <dl>
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul>
 <li><p>Support for <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> in plotting method <code class="docutils literal notranslate"><span class="pre">Field.mpl.lighness</span></code>.</p></li>
@@ -860,8 +1021,8 @@ the old behaviour. (<a class="reference external" href="https://github.com/uberm
 </dd>
 </dl>
 </section>
-<section id="id11">
-<h3>Changed<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<section id="id14">
+<h3>Changed<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Keywords for <code class="docutils literal notranslate"><span class="pre">Field.mpl()</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">scalar_kw</span></code> and <code class="docutils literal notranslate"><span class="pre">vector_kw</span></code>
@@ -875,8 +1036,8 @@ consistency reasons).</p></li>
 </dd>
 </dl>
 </section>
-<section id="id12">
-<h3>Fixed<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<section id="id15">
+<h3>Fixed<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Simultaneous use of <code class="docutils literal notranslate"><span class="pre">filter_field</span></code> and <code class="docutils literal notranslate"><span class="pre">symmetric_clim</span></code> in
@@ -896,17 +1057,17 @@ additional zeeman field.</p></li>
 </section>
 </section>
 <section id="oct-1-2021">
-<h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Permalink to this heading">#</a></h2>
-<section id="id13">
-<h3>General<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h2>0.60.0 (Oct 1, 2021)<a class="headerlink" href="#oct-1-2021" title="Link to this heading">#</a></h2>
+<section id="id16">
+<h3>General<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Unified website containing all documentation: <a class="reference external" href="https://ubermag.github.io">https://ubermag.github.io</a></p></li>
 <li><p>Versions in sync across all packages</p></li>
 <li><p>Switch to Jupyter lab 3 (should improve situation with <code class="docutils literal notranslate"><span class="pre">K3d</span></code> inside Jupyter lab).</p></li>
 </ul>
 </section>
-<section id="id14">
-<h3>Added<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<section id="id17">
+<h3>Added<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Fourier transform for <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> (<a class="reference external" href="https://ubermag.github.io/api/_autosummary/discretisedfield.Field.html#discretisedfield.Field.fftn">reference</a>).</p></li>
@@ -958,8 +1119,8 @@ temperature.</p></li>
 </dd>
 </dl>
 </section>
-<section id="id15">
-<h3>Fixed<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<section id="id18">
+<h3>Fixed<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></dt><dd><ul class="simple">
 <li><p>Wrong colourbar positioning in <code class="docutils literal notranslate"><span class="pre">discretisedfield.mpl*</span></code> in figures containing
@@ -989,7 +1150,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
 </section>
 </section>
 <section id="feb-10-2021">
-<h2>0.51 (Feb 10, 2021)<a class="headerlink" href="#feb-10-2021" title="Permalink to this heading">#</a></h2>
+<h2>0.51 (Feb 10, 2021)<a class="headerlink" href="#feb-10-2021" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>New subpackage <code class="docutils literal notranslate"><span class="pre">discretisedfield.tools</span></code> containing functions to operate on
 <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field</span></code> objects.</p></li>
@@ -1042,52 +1203,59 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-3-2023">0.66.1 (Feb 3, 2023)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oct-23-2023">2023.10 (Oct 23, 2023)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-changes-in-discretisedfield">Breaking changes in <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oct-20-2022">0.66.0 (Oct 20, 2022)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-3-2023">0.66.1 (Feb 3, 2023)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fixed</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oct-20-2022">0.66.0 (Oct 20, 2022)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Fixed</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jul-17-2022">0.65.0 (Jul 17, 2022)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Changed</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jul-03-2022">0.64.0 (Jul 03, 2022)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jun-29-2022">0.63.0 (Jun 29, 2022)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Changed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Fixed</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jun-09-2022">0.62.1 (Jun 09, 2022)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Fixed</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#may-22-2022">0.62.0 (May 22, 2022)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removed">Removed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Changed</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Fixed</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2022">0.61.2 (Mar 17, 2022)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jun-09-2022">0.62.1 (Jun 09, 2022)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#may-22-2022">0.62.0 (May 22, 2022)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removed">Removed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Fixed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-17-2022">0.61.2 (Mar 17, 2022)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Fixed</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-22-2022">0.61.0 (Feb 22, 2022)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Changed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Fixed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Fixed</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oct-1-2021">0.60.0 (Oct 1, 2021)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">General</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Added</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Fixed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Fixed</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-10-2021">0.51 (Feb 10, 2021)</a></li>
@@ -1117,8 +1285,8 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1136,7 +1304,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
@@ -1148,7 +1316,7 @@ dictionary for <code class="docutils literal notranslate"><span class="pre">P</s
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

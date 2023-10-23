@@ -18,7 +18,6 @@ ExeOOMMFRunner
    .. autosummary::
       :nosignatures:
    
-         ~ExeOOMMFRunner.__del__
          ~ExeOOMMFRunner.__dir__
          ~ExeOOMMFRunner.__eq__
          ~ExeOOMMFRunner.__repr__

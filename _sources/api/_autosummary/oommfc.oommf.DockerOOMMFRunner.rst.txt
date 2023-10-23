@@ -18,7 +18,6 @@ DockerOOMMFRunner
    .. autosummary::
       :nosignatures:
    
-         ~DockerOOMMFRunner.__del__
          ~DockerOOMMFRunner.__dir__
          ~DockerOOMMFRunner.__eq__
          ~DockerOOMMFRunner.__repr__

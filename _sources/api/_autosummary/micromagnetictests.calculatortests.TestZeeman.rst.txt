@@ -21,7 +21,7 @@ TestZeeman
          ~TestZeeman.__dir__
          ~TestZeeman.__eq__
          ~TestZeeman.__repr__
-         ~TestZeeman.setup
+         ~TestZeeman.setup_method
          ~TestZeeman.test_dict
          ~TestZeeman.test_field
          ~TestZeeman.test_time_dict

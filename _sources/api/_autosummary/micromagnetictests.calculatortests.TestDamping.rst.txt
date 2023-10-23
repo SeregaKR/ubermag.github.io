@@ -21,7 +21,7 @@ TestDamping
          ~TestDamping.__dir__
          ~TestDamping.__eq__
          ~TestDamping.__repr__
-         ~TestDamping.setup
+         ~TestDamping.setup_method
          ~TestDamping.test_dict
          ~TestDamping.test_field
          ~TestDamping.test_scalar

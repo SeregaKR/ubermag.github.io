@@ -21,7 +21,7 @@ TestZhangLi
          ~TestZhangLi.__dir__
          ~TestZhangLi.__eq__
          ~TestZhangLi.__repr__
-         ~TestZhangLi.setup
+         ~TestZhangLi.setup_method
          ~TestZhangLi.test_dict_scalar
          ~TestZhangLi.test_field_scalar
          ~TestZhangLi.test_scalar_scalar

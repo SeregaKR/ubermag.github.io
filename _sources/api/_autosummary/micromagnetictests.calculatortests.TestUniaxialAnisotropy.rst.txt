@@ -21,7 +21,7 @@ TestUniaxialAnisotropy
          ~TestUniaxialAnisotropy.__dir__
          ~TestUniaxialAnisotropy.__eq__
          ~TestUniaxialAnisotropy.__repr__
-         ~TestUniaxialAnisotropy.setup
+         ~TestUniaxialAnisotropy.setup_method
          ~TestUniaxialAnisotropy.test_dict_vector
          ~TestUniaxialAnisotropy.test_field_dict
          ~TestUniaxialAnisotropy.test_field_field

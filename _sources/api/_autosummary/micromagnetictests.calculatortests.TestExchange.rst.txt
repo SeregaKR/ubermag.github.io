@@ -22,7 +22,7 @@ TestExchange
          ~TestExchange.__eq__
          ~TestExchange.__repr__
          ~TestExchange.m_init
-         ~TestExchange.setup
+         ~TestExchange.setup_method
          ~TestExchange.test_dict
          ~TestExchange.test_field
          ~TestExchange.test_scalar

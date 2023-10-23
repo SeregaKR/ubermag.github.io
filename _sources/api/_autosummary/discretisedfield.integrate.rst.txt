@@ -1,0 +1,6 @@
+discretisedfield.integrate
+==========================
+
+.. currentmodule:: discretisedfield
+
+.. autofunction:: integrate

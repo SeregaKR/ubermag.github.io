@@ -21,7 +21,7 @@ TestCubicAnisotropy
          ~TestCubicAnisotropy.__dir__
          ~TestCubicAnisotropy.__eq__
          ~TestCubicAnisotropy.__repr__
-         ~TestCubicAnisotropy.setup
+         ~TestCubicAnisotropy.setup_method
          ~TestCubicAnisotropy.test_dict_vector_vector
          ~TestCubicAnisotropy.test_field_field_field
          ~TestCubicAnisotropy.test_field_vector_vector

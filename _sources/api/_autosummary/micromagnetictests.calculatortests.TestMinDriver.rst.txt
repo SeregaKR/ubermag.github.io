@@ -21,7 +21,7 @@ TestMinDriver
          ~TestMinDriver.__dir__
          ~TestMinDriver.__eq__
          ~TestMinDriver.__repr__
-         ~TestMinDriver.setup
+         ~TestMinDriver.setup_method
          ~TestMinDriver.test_evolver_driver
          ~TestMinDriver.test_evolver_nodriver
          ~TestMinDriver.test_noevolver_driver

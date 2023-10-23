@@ -21,7 +21,7 @@ TestHysteresisDriver
          ~TestHysteresisDriver.__dir__
          ~TestHysteresisDriver.__eq__
          ~TestHysteresisDriver.__repr__
-         ~TestHysteresisDriver.setup
+         ~TestHysteresisDriver.setup_method
          ~TestHysteresisDriver.test_noevolver_nodriver
    
    

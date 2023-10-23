@@ -21,7 +21,7 @@ TestDynamics
          ~TestDynamics.__dir__
          ~TestDynamics.__eq__
          ~TestDynamics.__repr__
-         ~TestDynamics.setup
+         ~TestDynamics.setup_method
          ~TestDynamics.test_field_field
          ~TestDynamics.test_scalar_dict
          ~TestDynamics.test_scalar_scalar

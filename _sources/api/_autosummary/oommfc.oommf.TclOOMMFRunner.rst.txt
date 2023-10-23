@@ -18,7 +18,6 @@ TclOOMMFRunner
    .. autosummary::
       :nosignatures:
    
-         ~TclOOMMFRunner.__del__
          ~TclOOMMFRunner.__dir__
          ~TclOOMMFRunner.__eq__
          ~TclOOMMFRunner.__repr__

@@ -21,7 +21,7 @@ TestEnergy
          ~TestEnergy.__dir__
          ~TestEnergy.__eq__
          ~TestEnergy.__repr__
-         ~TestEnergy.setup
+         ~TestEnergy.setup_method
          ~TestEnergy.test_exchange_cubicanisotropy
          ~TestEnergy.test_exchange_dmi_zeeman
          ~TestEnergy.test_exchange_dmi_zeeman_uniaxialanisotropy_demag

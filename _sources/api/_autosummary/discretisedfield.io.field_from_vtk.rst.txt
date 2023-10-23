@@ -1,6 +1,0 @@
-discretisedfield.io.field\_from\_vtk
-====================================
-
-.. currentmodule:: discretisedfield.io
-
-.. autofunction:: field_from_vtk

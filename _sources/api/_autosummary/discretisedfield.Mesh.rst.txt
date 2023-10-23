@@ -26,18 +26,24 @@ Mesh
          ~Mesh.__len__
          ~Mesh.__or__
          ~Mesh.__repr__
-         ~Mesh.axis_points
+         ~Mesh.allclose
          ~Mesh.axis_selector
+         ~Mesh.coordinate_field
+         ~Mesh.fftn
+         ~Mesh.ifftn
          ~Mesh.index2point
+         ~Mesh.is_aligned
          ~Mesh.line
          ~Mesh.load_subregions
-         ~Mesh.neighbours
          ~Mesh.pad
-         ~Mesh.plane
          ~Mesh.point2index
          ~Mesh.region2slices
+         ~Mesh.rotate90
          ~Mesh.save_subregions
+         ~Mesh.scale
+         ~Mesh.sel
          ~Mesh.slider
+         ~Mesh.translate
    
    
 
@@ -47,16 +53,14 @@ Mesh
 
    .. autosummary::
    
-      ~Mesh.attributes
       ~Mesh.bc
       ~Mesh.cell
-      ~Mesh.dS
       ~Mesh.dV
       ~Mesh.indices
       ~Mesh.k3d
-      ~Mesh.midpoints
       ~Mesh.mpl
       ~Mesh.n
+      ~Mesh.points
       ~Mesh.region
       ~Mesh.subregions
       ~Mesh.vertices

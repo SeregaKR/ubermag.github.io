@@ -1,0 +1,6 @@
+discretisedfield.tools.neighbouring\_cell\_angle
+================================================
+
+.. currentmodule:: discretisedfield.tools
+
+.. autofunction:: neighbouring_cell_angle

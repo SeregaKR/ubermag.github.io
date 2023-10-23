@@ -12,7 +12,6 @@
       :template: class-template.rst
       :nosignatures:
    
-      DValue
       Field
       FieldRotator
       Line
@@ -25,7 +24,7 @@
       :toctree:
       :nosignatures:
    
-      integral
+      integrate
       interact
       test
 

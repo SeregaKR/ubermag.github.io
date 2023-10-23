@@ -22,7 +22,7 @@ TestDMI
          ~TestDMI.__eq__
          ~TestDMI.__repr__
          ~TestDMI.random_m
-         ~TestDMI.setup
+         ~TestDMI.setup_method
          ~TestDMI.test_crystalclass
          ~TestDMI.test_crystalclass_init
          ~TestDMI.test_dict
