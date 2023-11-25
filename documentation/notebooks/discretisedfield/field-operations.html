@@ -1228,7 +1228,7 @@ False
 </section>
 <section id="Extracting-field-on-any-mesh">
 <h3>Extracting field on any mesh<a class="headerlink" href="#Extracting-field-on-any-mesh" title="Link to this heading">#</a></h3>
-<p>If we want to extact part of the field on any mesh which is contained inside the field, we do that by “resampling”. We create a new field on a submesh and pass the field we want take subfield from as <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<p>If we want to extract part of the field on any mesh which is contained inside the field, we do that by “resampling”. We create a new field on a submesh and pass the field we want take subfield from as <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -1438,7 +1438,7 @@ array([0.])
 </section>
 <section id="Selecting-part-of-the-field">
 <h2>Selecting part of the field<a class="headerlink" href="#Selecting-part-of-the-field" title="Link to this heading">#</a></h2>
-<p>We can also select part of the field using, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.sel</span></code>. This will can be used to return a new field object which contains only discretisation cells in the specific region. The dimensionality of the field remains the same. The selections hat are allowed are the geometric axes. For instance, for a three-dimensional geometry, we can select the <span class="math notranslate nohighlight">\(x\)</span>-axis between -10 and 30. This can be written as</p>
+<p>We can also select part of the field using, <code class="docutils literal notranslate"><span class="pre">discretisedfield.Field.sel</span></code>. This can be used to return a new field object which contains only discretisation cells in the specific region. The dimensionality of the field remains the same. The selections hat are allowed are the geometric axes. For instance, for a three-dimensional geometry, we can select the <span class="math notranslate nohighlight">\(x\)</span>-axis between -10 and 30. This can be written as</p>
 <div class="math notranslate nohighlight">
 \[x = (-10, 30)\]</div>
 <p>This will return three cells in the <span class="math notranslate nohighlight">\(x\)</span> direction that between <span class="math notranslate nohighlight">\(-25\)</span> and <span class="math notranslate nohighlight">\(50\)</span>. This is as there are originally four cells which have boundaries:</p>
@@ -1447,7 +1447,7 @@ array([0.])
 -50       -25         0         25         50
 </pre></div>
 </div>
-<p>If we select our lower point at <span class="math notranslate nohighlight">\(-10\)</span> then the whole of <code class="docutils literal notranslate"><span class="pre">Cell</span> <span class="pre">1</span></code> will be selected and if we select our upper point at <span class="math notranslate nohighlight">\(+10\)</span> then the whole of <code class="docutils literal notranslate"><span class="pre">Cell</span> <span class="pre">3</span></code> will be selected. All the cells between these teo points will also be selected.</p>
+<p>If we select our lower point at <span class="math notranslate nohighlight">\(-10\)</span> then the whole of <code class="docutils literal notranslate"><span class="pre">Cell</span> <span class="pre">1</span></code> will be selected and if we select our upper point at <span class="math notranslate nohighlight">\(+10\)</span> then the whole of <code class="docutils literal notranslate"><span class="pre">Cell</span> <span class="pre">3</span></code> will be selected. All the cells between these two points will also be selected.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>

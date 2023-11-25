@@ -849,7 +849,7 @@
                   
   <section id="Calculating-a-stray-field-using-an-airbox-method">
 <h1>Calculating a stray field using an airbox method<a class="headerlink" href="#Calculating-a-stray-field-using-an-airbox-method" title="Link to this heading">#</a></h1>
-<p>In order to calculate the stray field outside the sample, we have to define an “airbox” which is going to contain our sample. In this example we define a box with 100 nm edgle length as a mesh which then contains a magnetic sample which is a cube with 50 nm dimensions. We achieve this by implementing a Python fuction for defining the Ms (<code class="docutils literal notranslate"><span class="pre">norm_fun</span></code>). Outside our sample the value of saturation magnetisation is zero.</p>
+<p>In order to calculate the stray field outside the sample, we have to define an “airbox” which is going to contain our sample. In this example we define a box with 100 nm edgle length as a mesh which then contains a magnetic sample which is a cube with 50 nm dimensions. We achieve this by implementing a Python function for defining the Ms (<code class="docutils literal notranslate"><span class="pre">norm_fun</span></code>). Outside our sample the value of saturation magnetisation is zero.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -908,7 +908,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:07]... (2.8 s)
+Running OOMMF (ExeOOMMFRunner)[2023/11/10 15:52]... (2.6 s)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -932,7 +932,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:07]... (2.8 s)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:07]... (0.6 s)
+Running OOMMF (ExeOOMMFRunner)[2023/11/10 15:52]... (0.6 s)
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">stray_field</span></code> is a <code class="docutils literal notranslate"><span class="pre">df.Field</span></code> and all operations characteristic to vector fields can be performed.</p>

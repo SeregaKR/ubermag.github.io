@@ -849,7 +849,7 @@
                   
   <section id="Deriving-energy-values">
 <h1>Deriving energy values<a class="headerlink" href="#Deriving-energy-values" title="Link to this heading">#</a></h1>
-<p>In this tutorial, we show how derived fields and values can be computed afetr the micromagnetic system is defined.</p>
+<p>In this tutorial, we show how derived fields and values can be computed after the micromagnetic system is defined.</p>
 <section id="Simulation">
 <h2>Simulation<a class="headerlink" href="#Simulation" title="Link to this heading">#</a></h2>
 <p>First of all, as usual, we import <code class="docutils literal notranslate"><span class="pre">oommfc</span></code> and <code class="docutils literal notranslate"><span class="pre">discretisedfield</span></code>.</p>
@@ -921,7 +921,7 @@ $- A \mathbf{m} \cdot \nabla^{2} \mathbf{m}-\frac{1}{2}\mu_{0}M_\text{s}\mathbf{
 </section>
 <section id="Effective-field">
 <h2>Effective field<a class="headerlink" href="#Effective-field" title="Link to this heading">#</a></h2>
-<p>All computations are performed using <code class="docutils literal notranslate"><span class="pre">mc.compute</span></code>, where <code class="docutils literal notranslate"><span class="pre">mc</span></code> is the micromagnetic calculator we choose at import. <code class="docutils literal notranslate"><span class="pre">compute</span></code> function takes two arguments:</p>
+<p>All computations are performed using <code class="docutils literal notranslate"><span class="pre">oc.compute</span></code>, where <code class="docutils literal notranslate"><span class="pre">oc</span></code> is the micromagnetic calculator we choose at import. <code class="docutils literal notranslate"><span class="pre">compute</span></code> function takes two arguments:</p>
 <ol class="arabic simple">
 <li><p>Property we want to compute</p></li>
 <li><p>System object</p></li>
@@ -1106,7 +1106,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/23 16:06]... (0.4 s)
 1.12170191751e-21
 </pre></div></div>
 </div>
-<p>We can also chack the sum of all individual energy terms and check if it the same as the total energy.</p>
+<p>We can also check the sum of all individual energy terms and check if it the same as the total energy.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
