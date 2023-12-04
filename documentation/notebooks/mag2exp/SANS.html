@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -36,9 +36,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/colours.css?v=f1e252c1" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
@@ -119,6 +119,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../../../index.html">
@@ -144,7 +145,8 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -211,6 +213,7 @@
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -245,6 +248,7 @@
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -278,7 +282,8 @@
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -365,7 +370,8 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
@@ -859,7 +865,7 @@
 <section id="SANS-Reference-frame">
 <h2>SANS Reference frame<a class="headerlink" href="#SANS-Reference-frame" title="Link to this heading">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> the experimental SANS reference frame is the same as that defined to be congruent with the sample reference frame. The neutron polarisation direction can then be defined relative to the sample reference frame along with the desired scattering plane.</p>
-<p><img alt="da9434793b1f47cea5ff0defb8d6e799" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
+<p><img alt="5c04ca8500604ba19bb0670976565788" class="no-scaled-link" src="../../../_images/SANS.png" style="width: 900px; height: 600px;" /></p>
 <p>There are common scattering geometries defined in SANS, namely with a magnetic field applied to the incoming neutron beam in either a perpendicular or and parallel geometry to polarise the neutrons. The <code class="docutils literal notranslate"><span class="pre">mag2exp</span></code> package gives a more general set up with the ability to have the polarisation pointing in any arbitrary direction. We can recreate the standard scattering geometries</p>
 <p><strong>Perpendicular geometry</strong>: the magnetic field is applied along the <span class="math notranslate nohighlight">\(z\)</span> direction while the incoming neutron beam propagates along the <span class="math notranslate nohighlight">\(x\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 <p><strong>Parallel geometry</strong>: both the magnetic field and the incoming neutron beam are along the <span class="math notranslate nohighlight">\(z\)</span> direction. This is the same as <code class="docutils literal notranslate"><span class="pre">polarisation=(0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> and cutting the scattering plane along <code class="docutils literal notranslate"><span class="pre">z=0</span></code>.</p>
@@ -1253,7 +1259,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="SAXS.html"
@@ -1311,6 +1317,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
 </div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../../_sources/documentation/notebooks/mag2exp/SANS.ipynb.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1331,8 +1338,8 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1340,6 +1347,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2022, Marijan Beg and Hans Fangohr.
@@ -1349,6 +1357,7 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
@@ -1361,8 +1370,9 @@ Running OOMMF (ExeOOMMFRunner)[2023/10/18 12:10]... (70.0 s)
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>
