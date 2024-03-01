@@ -12,8 +12,7 @@ Changed
     (`#85 <https://github.com/ubermag/micromagneticmodel/pull/85>`__)
 
 ``mumax3c``
-  - Added support for simulations with temperature (pass system.T to mx3 file, so mumax3 can deal with it).
-(`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
+  - Added support for simulations with temperature (pass system.T to mx3 file, so mumax3 can deal with it). (`#81 <https://github.com/ubermag/mumax3c/pull/81>`__)
 
 2023.11 (Nov 25, 2023)
 ======================
