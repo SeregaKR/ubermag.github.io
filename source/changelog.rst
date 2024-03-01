@@ -13,7 +13,7 @@ Changed
 
 ``mumax3c``
   - Added limited support for RunWhile simulations.
-   (`#84 <https://github.com/ubermag/mumax3c/pull/84>`__)
+ (`#84 <https://github.com/ubermag/mumax3c/pull/84>`__)
 
 2023.11 (Nov 25, 2023)
 ======================
